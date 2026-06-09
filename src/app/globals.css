@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  color: #17202a;
-  background: #fffaf2;
+  color: #1f1a17;
+  background: #fff8ed;
 }
 
 * {
@@ -17,14 +17,14 @@ html {
 
 body {
   margin: 0;
-  color: #17202a;
-  background: #fffaf2;
+  color: #1f1a17;
+  background: #fff8ed;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 ::selection {
   color: #ffffff;
-  background: #126c74;
+  background: #0e6f68;
 }
 
 a {

@@ -8,14 +8,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#17202a",
-        lagoon: "#126c74",
-        coral: "#e86452",
-        sunshine: "#f7c948",
-        paper: "#fffaf2",
+        ink: "#1f1a17",
+        paper: "#fff8ed",
+        cream: "#f4e6d0",
+        teal: "#0e6f68",
+        coral: "#e85d4f",
+        beat: "#f4b942",
+        plum: "#3b243b",
+        sky: "#bfe5e0",
+      },
+      fontFamily: {
+        heading: ["Georgia", "Times New Roman", "serif"],
+        sans: ["Arial", "Helvetica", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 24px 70px rgba(23, 32, 42, 0.12)",
+        soft: "0 20px 50px rgba(31, 26, 23, 0.12)",
       },
     },
   },

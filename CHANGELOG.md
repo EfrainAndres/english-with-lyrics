@@ -4,6 +4,10 @@ All notable changes to English with Lyrics will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Added warm Phase 0 landing redesign with ebook-first CTA, creator-led copy, micro-lesson demo, method section, polished waitlist placeholder, and legal-safe positioning.
+
 ### Added
 
 - Added Phase 0 landing UX audit documentation with redesign direction, copy recommendations, accessibility notes, and implementation plan.
@@ -15,6 +19,14 @@ All notable changes to English with Lyrics will be documented in this file.
 - Added legal and content rules for educational use of short song fragments.
 - Added Escríbelo como suena content guidance.
 - Added validation metrics, launch plan, backlog, and Codex collaboration rules.
+
+## [2026-06-09] Phase 0 Warm Landing Redesign
+
+### Changed
+
+- Redesigned the Phase 0 landing page to feel warmer, more musical, creator-led, and mobile-first.
+- Made the free ebook the primary CTA and reframed founder access as the first group.
+- Added a legal-safe micro-lesson demo using a short educational example.
 
 ## [2026-06-09] Phase 0 Landing UX Audit
 
