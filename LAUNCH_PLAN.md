@@ -13,6 +13,7 @@ Validate demand for English with Lyrics before building a full platform.
 - Waitlist and channel CTA copy in `docs/validation/PHASE_0_COPY_ASSETS.md`.
 - Ebook lead magnet plan in `docs/validation/PHASE_0_EBOOK_LEAD_MAGNET.md`.
 - Tally form links documented in `docs/validation/PHASE_0_FORM_INTEGRATION.md`.
+- Email delivery plan documented in `docs/validation/PHASE_0_EMAIL_DELIVERY_PLAN.md`.
 - Waitlist form currently reusing the ebook interest form.
 - First group interest copy.
 - Basic analytics.
@@ -43,7 +44,8 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 4. Collect survey responses.
 5. Review song requests and learner pain points.
 6. Test first group interest without collecting payments.
-7. Decide whether to create the free ebook or move directly toward MVP planning.
+7. Send manual or semi-manual confirmation emails if signup volume is low.
+8. Decide whether to create the free ebook or move directly toward MVP planning.
 
 ## Phase 0.5 Launch: Ebook
 
@@ -51,7 +53,9 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 
 - Free ebook with 3 songs.
 - Email capture page.
-- Delivery email.
+- Download page at `/ebook-gratis`.
+- Future PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- Delivery email that links to the download page instead of attaching the PDF by default.
 - Follow-up email sequence.
 - Founder offer invitation.
 
@@ -60,10 +64,11 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 1. Select 3 songs based on audience interest.
 2. Create short educational lessons for each song.
 3. Review content against legal and content guides.
-4. Publish lead capture page.
-5. Promote through YouTube, social, and email.
-6. Measure downloads, replies, and founder offer conversions.
-7. Compare demand across Románticas, Rock / pop clásicos, and Principiantes paths.
+4. Publish the ebook download page.
+5. Send the delivery email with a link to `/ebook-gratis`.
+6. Promote through YouTube, social, and email.
+7. Measure downloads, replies, survey clicks, and first-group interest.
+8. Compare demand across Románticas, Rock / pop clásicos, and Principiantes paths.
 
 ## Phase 1 Launch: Paid MVP
 

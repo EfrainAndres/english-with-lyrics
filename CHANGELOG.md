@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added Phase 0 email delivery planning documentation for ebook delivery, follow-up emails, segmentation, privacy, and provider timing.
 - Added Phase 0 Tally form link integration with environment-variable configuration and safe local anchor fallbacks.
 - Added documentation for Phase 0 external form setup, local testing, recommended fields, and privacy guardrails.
 - Added official brand color palette documentation for black, yellow, pink, and purple usage.
@@ -25,6 +26,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Updated backlog, launch, and metrics docs to prefer a future `/ebook-gratis` download page over default PDF email attachments.
 - Updated landing CTAs to open ebook, survey, and first-group Tally forms when configured.
 - Updated validation copy to explain that Phase 0 uses short external forms instead of local data capture.
 - Aligned the Phase 0 landing visual system with the official brand color palette.

@@ -17,6 +17,9 @@ Primary metrics:
 - Waitlist conversion rate.
 - First group interest clicks.
 - First group form submissions.
+- Email delivery rate.
+- Email open rate.
+- Email click rate to ebook page.
 - Founder offer click-through rate.
 - Founder offer purchase or reservation rate.
 
@@ -51,6 +54,10 @@ Primary metrics:
 - Email capture rate.
 - Ebook download rate.
 - Email open rate.
+- Click rate to `/ebook-gratis`.
+- PDF download clicks.
+- Click rate from ebook page to survey.
+- Click rate from ebook page to first group interest.
 - Click-through to founder offer.
 - Replies or qualitative feedback.
 
@@ -115,6 +122,9 @@ For early work, a simple spreadsheet is enough. Track:
 - Survey completions.
 - Waitlist signups.
 - Ebook downloads.
+- Email sent status.
+- Email click status.
+- PDF download clicks.
 - Selected ebook path.
 - Founder offer clicks.
 - First group interest clicks.
