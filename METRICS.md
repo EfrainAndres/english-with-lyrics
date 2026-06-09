@@ -11,6 +11,7 @@ Primary metrics:
 - Landing page visits.
 - Ebook interest clicks.
 - Ebook form submissions.
+- Visits to `/ebook-gratis`.
 - Survey starts.
 - Survey completion rate.
 - Survey form submissions.
@@ -55,6 +56,7 @@ Primary metrics:
 - Ebook download rate.
 - Email open rate.
 - Click rate to `/ebook-gratis`.
+- Waiting-page CTA clicks.
 - PDF download clicks.
 - Click rate from ebook page to survey.
 - Click rate from ebook page to first group interest.
@@ -118,6 +120,8 @@ For early work, a simple spreadsheet is enough. Track:
 - Visits.
 - Ebook CTA clicks.
 - Ebook Tally submissions.
+- `/ebook-gratis` visits.
+- `/ebook-gratis` CTA clicks.
 - Survey starts.
 - Survey completions.
 - Waitlist signups.

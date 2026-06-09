@@ -12,7 +12,7 @@ The goal is to support validation with a simple, honest delivery flow:
 - Invite high-intent learners to signal interest in the first group.
 - Ask for feedback after they receive the guide.
 
-Do not integrate an email provider yet. Do not create the ebook download page or PDF in this branch.
+Do not integrate an email provider yet. The ebook download page can exist as a waiting page, but do not add a PDF until the guide is ready.
 
 ## Recommended Ebook Delivery Approach
 
@@ -308,7 +308,7 @@ The future page should include:
 Esta guía usa fragmentos educativos cortos y explicaciones propias. No reemplaza letras completas ni plataformas oficiales de música.
 ```
 
-The page should not be created until the ebook PDF is ready or close to ready.
+The page can exist as a waiting page before the PDF is ready. Do not add a download button until the ebook PDF is ready or close to ready.
 
 ## Segmentation Plan
 

@@ -93,14 +93,15 @@ Acceptance criteria:
 
 ### Ebook Download Page
 
-- Create a future `/ebook-gratis` route after the ebook PDF is ready or close to ready.
+- Maintain `/ebook-gratis` as a waiting page until the ebook PDF is ready.
 - Store the future PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 - Include CTAs for PDF download, survey, and first group interest.
 - Include the legal-safe educational note.
 
 Acceptance criteria:
 
-- The page delivers the guide without email attachments.
+- The current page does not fake a download before the PDF exists.
+- The future page delivers the guide without email attachments.
 - The page supports click tracking for download, survey, and first group interest.
 - The page does not include full commercial lyrics or full translated lyrics.
 

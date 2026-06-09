@@ -14,6 +14,7 @@ Validate demand for English with Lyrics before building a full platform.
 - Ebook lead magnet plan in `docs/validation/PHASE_0_EBOOK_LEAD_MAGNET.md`.
 - Tally form links documented in `docs/validation/PHASE_0_FORM_INTEGRATION.md`.
 - Email delivery plan documented in `docs/validation/PHASE_0_EMAIL_DELIVERY_PLAN.md`.
+- Ebook waiting/download page documented in `docs/validation/PHASE_0_EBOOK_DOWNLOAD_PAGE.md`.
 - Waitlist form currently reusing the ebook interest form.
 - First group interest copy.
 - Basic analytics.
@@ -53,7 +54,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 
 - Free ebook with 3 songs.
 - Email capture page.
-- Download page at `/ebook-gratis`.
+- Waiting page at `/ebook-gratis`, later converted into the real download page.
 - Future PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 - Delivery email that links to the download page instead of attaching the PDF by default.
 - Follow-up email sequence.
@@ -64,7 +65,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 1. Select 3 songs based on audience interest.
 2. Create short educational lessons for each song.
 3. Review content against legal and content guides.
-4. Publish the ebook download page.
+4. Convert `/ebook-gratis` from waiting page to real download page.
 5. Send the delivery email with a link to `/ebook-gratis`.
 6. Promote through YouTube, social, and email.
 7. Measure downloads, replies, survey clicks, and first-group interest.
