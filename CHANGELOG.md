@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Aligned the Phase 0 landing visual identity with the channel-inspired dark music style, neon accents, logo placeholder, learning-mode badges, and karaoke-style micro-lesson card.
 - Aligned public brand copy around Sing Pronounce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
 - Added warm Phase 0 landing redesign with ebook-first CTA, brand-led copy, micro-lesson demo, method section, polished waitlist placeholder, and legal-safe positioning.
 
@@ -20,6 +21,14 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 - Added legal and content rules for educational use of short song fragments.
 - Added Escríbelo como suena content guidance.
 - Added validation metrics, launch plan, backlog, and Codex collaboration rules.
+
+## [2026-06-09] Channel Visual Identity Alignment
+
+### Changed
+
+- Updated the Phase 0 landing UI to use a dark music-style background with pink, purple, blue, and cream accents.
+- Added a logo placeholder, visual learning-mode badges, and karaoke-inspired micro-lesson treatment.
+- Refreshed ebook, form, footer, and legal-note styling to better match the channel identity.
 
 ## [2026-06-09] Public Brand Copy Alignment
 

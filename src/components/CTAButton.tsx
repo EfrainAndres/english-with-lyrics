@@ -7,11 +7,11 @@ type CTAButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 const variantClasses = {
   primary:
-    "bg-teal text-white hover:bg-ink focus:ring-coral focus:ring-offset-paper",
+    "bg-pink text-white shadow-neon hover:bg-cream hover:text-ink focus:ring-cream focus:ring-offset-ink",
   secondary:
-    "border border-ink/15 bg-white text-ink hover:border-coral hover:text-coral focus:ring-coral focus:ring-offset-paper",
+    "border border-blue/45 bg-white/5 text-paper hover:border-pink hover:text-cream focus:ring-blue focus:ring-offset-ink",
   light:
-    "bg-cream text-ink hover:bg-beat focus:ring-beat focus:ring-offset-plum",
+    "bg-cream text-ink hover:bg-blue hover:text-ink focus:ring-pink focus:ring-offset-midnight",
 };
 
 export function CTAButton({
