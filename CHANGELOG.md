@@ -22,6 +22,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Polished the real logo integration with clearer desktop sizing, a cleaner sticky header, and softer validation copy.
 - Replaced the Phase 0 landing logo placeholder with the real Sing Pronounce Repeat / English with Lyrics logo.
 - Updated app metadata to use the real favicon assets.
 - Updated the landing waitlist area to point to validation placeholders for ebook interest, survey, and first group interest.
