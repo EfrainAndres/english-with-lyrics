@@ -20,12 +20,14 @@ Logo and favicon files live in `public/brand/`. Usage rules are documented in `d
 Phase 0 validation foundation:
 
 - Responsive landing page.
+- Ebook waiting page at `/ebook-gratis`.
 - Value proposition.
 - Social problem.
 - Escríbelo como suena method explanation.
 - Free ebook lead magnet CTA.
+- External Tally form links for ebook interest, survey, and first group interest.
 - Founder access CTA.
-- Waitlist and survey CTA placeholder.
+- Waitlist and survey CTA cards.
 - Legal-safe note about short educational fragments.
 
 This phase does not include Supabase, auth, payments, AI, mobile app work, or full lyrics.
@@ -52,6 +54,11 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+Useful local routes:
+
+- `/`
+- `/ebook-gratis`
 
 ## Environment Variables
 
@@ -101,3 +108,4 @@ For local form-link testing:
 - `LAUNCH_PLAN.md`
 - `AGENTS.md`
 - `docs/validation/PHASE_0_FORM_INTEGRATION.md`
+- `docs/validation/PHASE_0_EBOOK_DOWNLOAD_PAGE.md`

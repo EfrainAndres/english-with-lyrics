@@ -6,6 +6,8 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added `/ebook-gratis` as a Phase 0 ebook waiting page with Tally CTAs, guide preview content, path options, and a legal-safe note.
+- Added Phase 0 ebook download page documentation for current waiting-page behavior and future PDF delivery.
 - Added Phase 0 email delivery planning documentation for ebook delivery, follow-up emails, segmentation, privacy, and provider timing.
 - Added Phase 0 Tally form link integration with environment-variable configuration and safe local anchor fallbacks.
 - Added documentation for Phase 0 external form setup, local testing, recommended fields, and privacy guardrails.
@@ -26,6 +28,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Updated README, backlog, launch, and metrics docs to include the `/ebook-gratis` waiting/download route.
 - Updated backlog, launch, and metrics docs to prefer a future `/ebook-gratis` download page over default PDF email attachments.
 - Updated landing CTAs to open ebook, survey, and first-group Tally forms when configured.
 - Updated validation copy to explain that Phase 0 uses short external forms instead of local data capture.
