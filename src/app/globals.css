@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  color: #f8f4ff;
-  background: #070817;
+  color: #fff9fe;
+  background: #010101;
 }
 
 * {
@@ -17,17 +17,17 @@ html {
 
 body {
   margin: 0;
-  color: #f8f4ff;
+  color: #fff9fe;
   background:
-    radial-gradient(circle at 14% 12%, rgba(255, 79, 184, 0.24), transparent 24rem),
-    radial-gradient(circle at 84% 8%, rgba(53, 183, 255, 0.2), transparent 24rem),
-    linear-gradient(180deg, #070817 0%, #0b0b1f 48%, #111332 100%);
+    radial-gradient(circle at 14% 12%, rgba(254, 156, 225, 0.22), transparent 24rem),
+    radial-gradient(circle at 84% 8%, rgba(204, 157, 234, 0.18), transparent 24rem),
+    linear-gradient(180deg, #010101 0%, #100b10 48%, #010101 100%);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  color: #070817;
-  background: #fff1b8;
+  color: #010101;
+  background: #fee296;
 }
 
 a {

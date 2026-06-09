@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added official brand color palette documentation for black, yellow, pink, and purple usage.
 - Added real brand logo and favicon assets under `public/brand/`.
 - Added brand asset usage documentation for logos, favicons, and future social images.
 - Added Phase 0 validation assets for survey questions, waitlist/social CTA copy, and the free ebook lead magnet plan.
@@ -22,6 +23,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Aligned the Phase 0 landing visual system with the official brand color palette.
 - Polished the real logo integration with clearer desktop sizing, a cleaner sticky header, and softer validation copy.
 - Replaced the Phase 0 landing logo placeholder with the real Sing Pronounce Repeat / English with Lyrics logo.
 - Updated app metadata to use the real favicon assets.

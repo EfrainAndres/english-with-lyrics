@@ -70,7 +70,7 @@ const validationActions = [
     text: "Cuéntanos tu nivel, tus bloqueos al escuchar y las canciones que te gustaría practicar.",
     href: "#survey-placeholder",
     id: "survey-placeholder",
-    accent: "border-blue/35 bg-blue/10 text-blue",
+    accent: "border-purple/35 bg-purple/10 text-purple",
   },
   {
     title: "Quiero saber del primer grupo",
@@ -127,7 +127,7 @@ function MicroLessonCard() {
     <article className="overflow-hidden rounded-lg border border-pink/30 bg-panel shadow-soft">
       <div className="flex items-center justify-between gap-4 border-b border-white/10 bg-ink px-5 py-4 text-paper">
         <div>
-          <p className="text-xs font-bold uppercase text-blue">
+          <p className="text-xs font-bold uppercase text-purple">
             Tarjeta de práctica musical
           </p>
           <h2 className="mt-1 font-heading text-2xl font-black">
@@ -153,8 +153,8 @@ function MicroLessonCard() {
         </div>
 
         <div className="grid gap-3 border-b border-white/10 py-5 sm:grid-cols-3">
-          <div className="border border-blue/35 bg-blue/10 p-4">
-            <p className="text-xs font-bold uppercase text-blue">Inglés</p>
+          <div className="border border-purple/35 bg-purple/10 p-4">
+            <p className="text-xs font-bold uppercase text-purple">Inglés</p>
             <p className="mt-2 text-xl font-black text-paper">I found you</p>
           </div>
           <div className="border border-pink/35 bg-pink/10 p-4">
@@ -222,7 +222,7 @@ export default function Home() {
               </a>
             </div>
             <a
-              className="inline-flex min-h-10 items-center rounded-md bg-pink px-4 text-sm font-black text-white transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+              className="inline-flex min-h-10 items-center rounded-md bg-pink px-4 text-sm font-black text-ink transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
               href="#ebook"
             >
               Ebook gratis
@@ -234,7 +234,7 @@ export default function Home() {
       <section id="top" className="bg-ink px-5 py-12 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
-            <p className="inline-flex rounded-full border border-blue/35 bg-blue/10 px-4 py-2 text-sm font-black text-blue">
+            <p className="inline-flex rounded-full border border-purple/35 bg-purple/10 px-4 py-2 text-sm font-black text-purple">
               English with Lyrics
             </p>
             <h1 className="mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
@@ -303,7 +303,7 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-3">
           {benefits.map((benefit) => (
             <article className="border border-white/10 bg-white/5 p-6" key={benefit.title}>
-              <div className="mb-5 h-2 w-20 rounded-full bg-blue" />
+              <div className="mb-5 h-2 w-20 rounded-full bg-purple" />
               <h3 className="font-heading text-2xl font-black">
                 {benefit.title}
               </h3>
@@ -323,7 +323,7 @@ export default function Home() {
               className="relative border border-white/10 bg-white/5 p-6"
               key={step.title}
             >
-              <p className="flex h-10 w-10 items-center justify-center rounded-full bg-purple text-sm font-black text-white">
+              <p className="flex h-10 w-10 items-center justify-center rounded-full bg-purple text-sm font-black text-ink">
                 {index + 1}
               </p>
               <p className="mt-6 text-sm font-black uppercase text-pink">
@@ -360,7 +360,7 @@ export default function Home() {
             <div className="mt-6 flex items-end gap-1" aria-hidden="true">
               {[24, 34, 18, 44, 28, 38, 20, 32, 26].map((height, index) => (
                 <span
-                  className="w-2 rounded-full bg-blue"
+                  className="w-2 rounded-full bg-purple"
                   key={`${height}-${index}`}
                   style={{ height }}
                 />
@@ -399,12 +399,12 @@ export default function Home() {
       >
         <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="border border-white/10 bg-white/5 p-6">
-            <p className="text-sm font-black uppercase text-blue">
+            <p className="text-sm font-black uppercase text-purple">
               Frase de práctica
             </p>
             <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              <div className="border border-blue/35 bg-blue/10 p-4">
-                <p className="text-xs font-black uppercase text-blue">
+              <div className="border border-purple/35 bg-purple/10 p-4">
+                <p className="text-xs font-black uppercase text-purple">
                   Inglés
                 </p>
                 <p className="mt-2 text-2xl font-black">I found you</p>
@@ -467,7 +467,7 @@ export default function Home() {
       >
         <div className="border border-white/10 bg-panel p-5 shadow-soft sm:p-6">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-            <div className="border-l-4 border-blue pl-5">
+            <div className="border-l-4 border-purple pl-5">
               <h3 className="font-heading text-3xl font-black">
                 Queremos construir esto con estudiantes reales.
               </h3>
@@ -499,7 +499,7 @@ export default function Home() {
                   </h3>
                   <p className="mt-2 leading-7 text-soft">{action.text}</p>
                   <a
-                    className="mt-4 inline-flex min-h-11 items-center rounded-md border border-blue/40 bg-white/5 px-4 text-sm font-black text-paper transition hover:border-pink hover:text-cream focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-panel"
+                    className="mt-4 inline-flex min-h-11 items-center rounded-md border border-cream bg-cream px-4 text-sm font-black text-ink transition hover:border-pink hover:bg-pink hover:text-ink focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-panel"
                     href={action.href}
                   >
                     Ver esta opción
