@@ -20,14 +20,14 @@ Prompts should help with:
 - Do not ask AI tools to output full commercial song lyrics.
 - Use only short educational fragments supplied by the user or approved source.
 - Ask for original teaching explanations.
-- Ask for pronunciation guidance in Tania's Spanish-friendly style.
+- Ask for pronunciation guidance in the Escríbelo como suena Spanish-friendly style.
 - Ask for natural Spanish translation only for the short fragment being taught.
 - Include a reminder that the output must not function as a lyrics replacement.
 
 ## Suggested Prompt Template
 
 ```text
-You are helping Tania create an English with Lyrics micro-lesson for Spanish speakers.
+You are helping create a Sing Pronounce Repeat / English with Lyrics micro-lesson for Spanish speakers.
 
 Use the Escríbelo como suena method:
 - Spanish-friendly pronunciation guidance.

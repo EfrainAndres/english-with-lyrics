@@ -1,18 +1,22 @@
-# English with Lyrics Project Brief
+# Sing Pronounce Repeat / English with Lyrics Project Brief
 
 ## Project Vision
 
-English with Lyrics is a web-first educational product based on Tania's YouTube channel. The project helps Spanish speakers learn English through songs, easy pronunciation, natural translation, short educational fragments, quizzes, and micro-lessons.
+Sing Pronounce Repeat is a web-first educational product connected to the English with Lyrics channel brand. The project helps Spanish speakers learn English through songs, easy pronunciation, natural translation, short educational fragments, quizzes, and micro-lessons.
 
-The long-term vision is to turn a trusted creator-led channel into a practical learning platform where students can understand real English in music without needing IPA, formal grammar first, or full-song lyric memorization.
+The long-term vision is to turn a trusted educational channel brand into a practical learning platform where students can understand real English in music without needing IPA, formal grammar first, or full-song lyric memorization.
 
 ## Brand
 
-- Product name: English with Lyrics
-- Creator: Tania
+- Main public brand: Sing Pronounce Repeat
+- Secondary brand: English with Lyrics
 - Core method: Escríbelo como suena
 - Initial platform: Web app
 - Future possibility: Mobile app after validation
+
+## Public Brand Rule
+
+Do not mention any personal creator name in public-facing UI copy. Public copy should use Sing Pronounce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
 
 ## Core Method
 
@@ -26,7 +30,7 @@ Primary audience:
 
 - Spanish speakers learning English at beginner to intermediate levels.
 - Learners who enjoy music and want a less intimidating way to practice listening and pronunciation.
-- Followers of Tania's YouTube channel who already trust her teaching style.
+- Followers of the English with Lyrics channel who already trust the teaching style.
 
 Secondary audience:
 
@@ -38,11 +42,11 @@ Secondary audience:
 
 Many Spanish-speaking learners want to understand English but feel blocked by pronunciation, fast audio, fear of speaking, and expensive formal courses. Music is motivating, but raw lyrics alone do not teach pronunciation, listening strategy, or meaning in a structured way.
 
-English with Lyrics addresses this by turning familiar songs into short, guided educational practice with pronunciation support, natural translation, and quizzes.
+Sing Pronounce Repeat addresses this by turning familiar songs into short, guided educational practice with pronunciation support, natural translation, and quizzes.
 
 ## Value Proposition
 
-English with Lyrics helps Spanish speakers understand and pronounce real English through songs, using Tania's simple Escríbelo como suena method, short lessons, and practical quizzes.
+Sing Pronounce Repeat helps Spanish speakers understand and pronounce real English through songs, using the simple Escríbelo como suena method, short lessons, and practical quizzes.
 
 The first validation offer should be narrow and concrete:
 
@@ -58,7 +62,7 @@ The first validation offer should be narrow and concrete:
 - Validate before building a full platform.
 - Start web-first with a simple, useful experience.
 - Teach through short educational fragments, not full commercial lyrics.
-- Keep Tania's voice and method central.
+- Keep the Escríbelo como suena method central.
 - Make progress visible and achievable.
 - Prefer simple tools until real demand is proven.
 - Build legally cautious content practices from day one.

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "English with Lyrics",
+  title: "Sing Pronounce Repeat | English with Lyrics",
   description:
-    "Aprende ingles con canciones, pronunciacion facil, frases utiles y explicaciones naturales de Tania.",
+    "Aprende ingles con canciones, pronunciacion facil, frases utiles y explicaciones naturales con el metodo Escríbelo como suena.",
 };
 
 export default function RootLayout({

@@ -17,13 +17,13 @@ Validate demand for English with Lyrics before building a full platform.
 
 ### Audience
 
-- Existing followers of Tania's YouTube channel.
+- Existing followers of the English with Lyrics channel.
 - Spanish-speaking English learners.
 - Learners who comment about pronunciation, translation, or song understanding.
 
 ### Message
 
-English with Lyrics helps Spanish speakers learn English through songs using Tania's Escríbelo como suena method, short educational fragments, natural translation, and practical micro-lessons.
+Sing Pronounce Repeat helps Spanish speakers learn English through songs using the Escríbelo como suena method, short educational fragments, natural translation, and practical micro-lessons.
 
 ### Calls To Action
 
@@ -34,7 +34,7 @@ English with Lyrics helps Spanish speakers learn English through songs using Tan
 ### Launch Steps
 
 1. Publish the landing page.
-2. Share with Tania's existing audience.
+2. Share with the existing English with Lyrics audience.
 3. Collect survey responses.
 4. Review song requests and learner pain points.
 5. Test founder offer interest.

@@ -2,20 +2,20 @@
 
 ## Purpose
 
-This document proposes a warmer, more musical, more creator-led direction for the English with Lyrics Phase 0 landing page.
+This document proposes a warmer, more musical, brand-led direction for the English with Lyrics Phase 0 landing page.
 
-The current landing page works as a functional validation page, but it should feel less like a generic SaaS page and more like a friendly learning experience connected to Tania, songs, and Spanish-speaking learners.
+The current landing page works as a functional validation page, but it should feel less like a generic SaaS page and more like a friendly learning experience connected to Sing Pronounce Repeat, English with Lyrics, songs, and Spanish-speaking learners.
 
 This is a documentation-only audit. Do not change the landing code in this branch.
 
 ## Product Context
 
-English with Lyrics helps Spanish speakers learn English through songs, short educational fragments, natural translation, and Tania's method: **Escríbelo como suena**.
+Sing Pronounce Repeat / English with Lyrics helps Spanish speakers learn English through songs, short educational fragments, natural translation, and the **Escríbelo como suena** method.
 
 The page should validate:
 
 - Whether learners understand the promise.
-- Whether Tania's method feels useful and trustworthy.
+- Whether the Escríbelo como suena method feels useful and trustworthy.
 - Whether visitors want the free ebook.
 - Whether visitors want founder access.
 - Which learners are strong candidates for the first MVP.
@@ -34,7 +34,7 @@ The current layout uses familiar SaaS patterns:
 - Repeated boxed sections.
 - Metric cards for `3`, `5`, and `25`.
 
-These patterns are clear, but they do not yet express music, learning, Tania's personality, or the emotional pain of not understanding songs.
+These patterns are clear, but they do not yet express music, learning, brand personality, or the emotional pain of not understanding songs.
 
 ### The Hero Does Not Show The Learning Moment
 
@@ -42,7 +42,7 @@ The hero says what the product does, but it does not immediately help the learne
 
 - "This is for me."
 - "I have had this exact problem."
-- "Tania can make this easier."
+- "This method can make this easier."
 - "I can learn with songs without feeling lost."
 
 The current mock lesson preview is useful but too abstract. It looks like a product dashboard instead of a warm educational sample.
@@ -51,16 +51,16 @@ The current mock lesson preview is useful but too abstract. It looks like a prod
 
 The current palette is clean, but the combination of `ink`, `lagoon`, `coral`, `sunshine`, and `paper` is applied in a restrained way that reads more operational than musical. The page needs more human warmth, rhythm, and educational friendliness.
 
-### Tania Is Not Present Enough
+### The Brand Method Is Not Present Enough
 
-The product is based on Tania's YouTube channel, but the current page mentions her only in copy. The design should make Tania's creator-led teaching style a first-viewport signal.
+The product is connected to the English with Lyrics channel brand, but the current page does not make the method memorable enough. The design should make Sing Pronounce Repeat and Escríbelo como suena first-viewport signals.
 
 This does not require a photo immediately if none is ready, but the layout should reserve space for:
 
-- Tania's name and role.
-- A friendly creator note.
+- Sing Pronounce Repeat as the main brand.
+- English with Lyrics as the secondary brand.
 - A future photo or still from the channel.
-- A "learn with Tania" trust marker.
+- An Escríbelo como suena trust marker.
 
 ### The Spanish-Speaking Learner Is Not Specific Enough
 
@@ -116,7 +116,7 @@ The page should feel:
 - Musical, but not like a karaoke app.
 - Warm, but not childish.
 - Educational, but not academic.
-- Creator-led, but not influencer-heavy.
+- Method-led, but not academic.
 - Trustworthy, but not corporate.
 - Mobile-first, quick to scan, and friendly.
 
@@ -125,11 +125,11 @@ The page should feel:
 Use the idea of a guided listening session:
 
 1. The learner hears a short fragment.
-2. Tania writes how it sounds.
+2. The method shows how it sounds.
 3. The learner sees the natural meaning.
 4. The learner practices one tiny step.
 
-The UI should feel like opening a small lesson from Tania, not entering a SaaS dashboard.
+The UI should feel like opening a small guided lesson, not entering a SaaS dashboard.
 
 ### Visual Motifs
 
@@ -141,7 +141,7 @@ Use subtle, functional music and learning cues:
 - Phrase cards.
 - Handwritten-style pronunciation callouts.
 - Highlighted word chips for sound, meaning, and practice.
-- A creator note block from Tania.
+- A brand/method note block.
 
 Avoid:
 
@@ -156,12 +156,12 @@ Avoid:
 
 Preferred future asset:
 
-- A real image of Tania from the channel or a planned brand photo.
+- A real channel-aligned brand image or planned educational brand photo.
 
 Fallback before real assets:
 
 - A warm editorial-style lesson mockup with audio/phrase/pronunciation elements.
-- A simple creator badge: "Con Tania".
+- A simple method badge: "Escríbelo como suena".
 - A small "YouTube channel inspired" trust note without embedding video yet.
 
 Do not add stock-looking generic music photos unless they clearly improve trust and learning context.
@@ -235,8 +235,8 @@ Avoid:
 
 Recommended order for the next implementation branch:
 
-1. **Hero: Learn English With Songs, Guided By Tania**
-   - Promise, creator-led trust, primary CTA, secondary CTA.
+1. **Hero: Sing Pronounce Repeat / English with Lyrics**
+   - Brand promise, method trust, primary CTA, secondary CTA.
    - Include a warm lesson preview that shows sound, meaning, and practice.
 
 2. **The Familiar Problem**
@@ -274,7 +274,7 @@ Recommended order for the next implementation branch:
    - Keep the legal note respectful and not fear-based.
 
 9. **Footer**
-   - Brand, Tania, legal/content summary.
+   - Sing Pronounce Repeat, English with Lyrics, method, and legal/content summary.
 
 ## 7. Recommended Copy Changes
 
@@ -290,7 +290,7 @@ Recommended:
 
 Supporting copy:
 
-> Tania te guia con el metodo Escríbelo como suena: una forma simple de leer, escuchar y repetir sonidos en ingles sin usar simbolos raros.
+> Aprende a escuchar, pronunciar y repetir sonidos en ingles con el metodo Escríbelo como suena, sin usar simbolos raros.
 
 Primary CTA:
 
@@ -316,7 +316,7 @@ Recommended bullets:
 
 Recommended headline:
 
-> Tania lo escribe como suena para que puedas escucharlo mejor.
+> Convertimos el ingles a una guia de sonido para que puedas escucharlo mejor.
 
 Recommended body:
 
@@ -330,7 +330,7 @@ Recommended headline:
 
 Recommended body:
 
-> Recibe un ebook con fragmentos educativos cortos, pronunciacion escrita por Tania, traduccion natural y una practica simple por cancion.
+> Recibe un ebook con fragmentos educativos cortos, pronunciacion sencilla, traduccion natural y una practica simple por cancion.
 
 ### Founder Access
 
@@ -354,7 +354,7 @@ The primary audience will likely arrive from YouTube, Instagram, TikTok, WhatsAp
 
 Recommendations:
 
-- Hero should fit the value proposition, creator signal, and primary CTA in the first mobile viewport.
+- Hero should fit the value proposition, brand signal, and primary CTA in the first mobile viewport.
 - Avoid desktop-first two-column complexity above the fold.
 - Use one main CTA at a time on small screens.
 - Keep the lesson preview short and tappable-looking, but do not fake interactivity unless implemented.
@@ -371,7 +371,7 @@ Recommendations:
 
 Replace the generic product-preview card with a "micro-lesson moment":
 
-- Small creator label: "Con Tania".
+- Small method label: "Escríbelo como suena".
 - A fake audio strip with a play marker.
 - A short, original placeholder phrase.
 - A pronunciation callout.
@@ -382,12 +382,12 @@ Keep all text original and generic. Do not use commercial lyrics.
 
 ### Navigation
 
-Make nav lighter and more creator-led:
+Make nav lighter and more brand-led:
 
 - Brand left.
 - Mobile-friendly CTA right.
 - Reduce section links on mobile.
-- Consider "Con Tania" as a trust item.
+- Consider "English with Lyrics" as a secondary trust item.
 
 ### Problem Cards
 
@@ -452,7 +452,7 @@ For now, the UI can show:
 - Ensure touch targets are at least 44px high.
 - Avoid autoplaying audio or video.
 - If future audio controls are added, provide captions or text equivalents.
-- If Tania's image is added, use meaningful alt text.
+- If a channel or brand image is added, use meaningful alt text.
 - Avoid text embedded inside images for critical content.
 
 ## 11. Legal-Safe UI And Content Considerations
@@ -496,7 +496,7 @@ design/phase-0-landing-warm-redesign
 
 ### Step 3: Redesign Hero
 
-- Rework the first viewport around Tania, the learner problem, and a micro-lesson preview.
+- Rework the first viewport around Sing Pronounce Repeat, English with Lyrics, the learner problem, and a micro-lesson preview.
 - Make the primary CTA the waitlist or ebook based on the validation priority.
 
 ### Step 4: Redesign Core Sections
@@ -526,7 +526,7 @@ design/phase-0-landing-warm-redesign
 
 The redesigned landing should:
 
-- Feel clearly connected to Tania and music learning.
+- Feel clearly connected to Sing Pronounce Repeat, English with Lyrics, and music learning.
 - Speak directly to Spanish-speaking learners.
 - Explain Escríbelo como suena in a memorable way.
 - Make the free ebook and founder access easier to understand.

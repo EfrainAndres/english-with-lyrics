@@ -1,8 +1,15 @@
-# English with Lyrics
+# Sing Pronounce Repeat / English with Lyrics
 
-English with Lyrics is a web-first educational product based on Tania's YouTube channel. It helps Spanish speakers learn English through songs, easy pronunciation, useful phrases, natural Spanish explanations, quizzes, and micro-lessons.
+Sing Pronounce Repeat is a web-first educational product connected to the English with Lyrics channel brand. It helps Spanish speakers learn English through songs, easy pronunciation, useful phrases, natural Spanish explanations, quizzes, and micro-lessons.
 
 The core method is **Escríbelo como suena**: English pronunciation written in a simple Spanish-friendly way, without IPA symbols.
+
+## Brand Rules
+
+- Main public brand: Sing Pronounce Repeat.
+- Secondary brand: English with Lyrics.
+- Core method: Escríbelo como suena.
+- Do not mention any personal creator name in public-facing UI copy.
 
 ## Current Phase
 
