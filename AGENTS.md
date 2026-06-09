@@ -1,8 +1,8 @@
-# English with Lyrics Agent Guide
+# Sing Pronounce Repeat / English with Lyrics Agent Guide
 
 ## Purpose
 
-This file gives Codex and other coding agents the operating rules for English with Lyrics.
+This file gives Codex and other coding agents the operating rules for Sing Pronounce Repeat / English with Lyrics.
 
 ## Project Status
 
@@ -10,11 +10,13 @@ This repository is currently documentation-only. Do not create the app until a t
 
 ## Brand Rules
 
-- Product name: English with Lyrics.
-- Creator: Tania.
+- Main public brand: Sing Pronounce Repeat.
+- Secondary brand: English with Lyrics.
 - Core method: Escríbelo como suena.
 - Audience: Spanish speakers learning English.
 - First product surface: Web app.
+
+Do not mention any personal creator name in public-facing UI copy. Use brand-led wording instead.
 
 ## Current Technical Direction
 
@@ -53,7 +55,7 @@ Not allowed until explicitly requested:
 - Use short educational fragments only.
 - Do not include full translated lyrics.
 - Embed official YouTube videos when needed.
-- Use original pronunciation guidance created by Tania.
+- Use original Escríbelo como suena pronunciation guidance.
 - Use natural translation and educational explanations.
 - Make the product transformative and educational.
 - Avoid presenting the platform as a lyrics replacement.

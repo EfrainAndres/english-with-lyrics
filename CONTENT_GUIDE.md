@@ -2,7 +2,15 @@
 
 ## Purpose
 
-This guide defines how English with Lyrics should create educational song-based content while keeping Tania's method clear, useful, and legally cautious.
+This guide defines how Sing Pronounce Repeat / English with Lyrics should create educational song-based content while keeping the Escríbelo como suena method clear, useful, and legally cautious.
+
+## Public Brand Rule
+
+Do not mention any personal creator name in public-facing UI copy. Public copy should use:
+
+- Main brand: Sing Pronounce Repeat.
+- Secondary brand: English with Lyrics.
+- Method: Escríbelo como suena.
 
 ## Core Teaching Format
 
@@ -21,7 +29,7 @@ Recommended lesson structure:
 
 ## Escríbelo Como Suena Rules
 
-Escríbelo como suena is Tania's Spanish-friendly pronunciation method. It should help Spanish speakers approximate English sounds without IPA symbols.
+Escríbelo como suena is the Spanish-friendly pronunciation method. It should help Spanish speakers approximate English sounds without IPA symbols.
 
 Rules:
 
@@ -31,7 +39,7 @@ Rules:
 - Prioritize useful approximation over perfect phonetic precision.
 - Explain when a sound does not exist naturally in Spanish.
 - Use hyphens, spacing, or emphasis only when they improve readability.
-- Keep Tania's teaching voice human, direct, and encouraging.
+- Keep the teaching voice human, direct, and encouraging.
 - Do not present the guide as the only correct pronunciation.
 - Encourage learners to listen to the official audio.
 
@@ -65,7 +73,7 @@ English with Lyrics should feel:
 - Warm.
 - Practical.
 - Friendly to beginners.
-- Creator-led.
+- Brand-led.
 - Clear and motivating.
 - Respectful of learner effort.
 

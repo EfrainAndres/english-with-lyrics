@@ -6,7 +6,7 @@ This guide sets working rules for legally cautious product and content decisions
 
 ## Core Legal Position
 
-English with Lyrics should be a transformative educational product. It should teach pronunciation, listening, meaning, and English learning skills through short song fragments, original commentary, and Tania's original guidance.
+Sing Pronounce Repeat / English with Lyrics should be a transformative educational product. It should teach pronunciation, listening, meaning, and English learning skills through short song fragments, original commentary, and original Escríbelo como suena guidance.
 
 The platform must not be designed or presented as a lyrics replacement.
 
@@ -26,7 +26,7 @@ The platform must not be designed or presented as a lyrics replacement.
 
 Every song-based lesson should include original educational value, such as:
 
-- Pronunciation guidance created by Tania.
+- Original Escríbelo como suena pronunciation guidance.
 - Natural translation of the short fragment.
 - Listening explanation.
 - Vocabulary or grammar explanation.
@@ -41,7 +41,7 @@ Fragments should support teaching. They should not be the main product by themse
 Allowed positioning:
 
 - Learn English through songs.
-- Practice pronunciation with Tania's Escríbelo como suena method.
+- Practice pronunciation with the Escríbelo como suena method.
 - Understand short song fragments with natural Spanish explanations.
 - Improve listening confidence through micro-lessons.
 

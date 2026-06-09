@@ -1,12 +1,13 @@
 # Changelog
 
-All notable changes to English with Lyrics will be documented in this file.
+All notable changes to Sing Pronounce Repeat / English with Lyrics will be documented in this file.
 
 ## [Unreleased]
 
 ### Changed
 
-- Added warm Phase 0 landing redesign with ebook-first CTA, creator-led copy, micro-lesson demo, method section, polished waitlist placeholder, and legal-safe positioning.
+- Aligned public brand copy around Sing Pronounce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
+- Added warm Phase 0 landing redesign with ebook-first CTA, brand-led copy, micro-lesson demo, method section, polished waitlist placeholder, and legal-safe positioning.
 
 ### Added
 
@@ -20,11 +21,18 @@ All notable changes to English with Lyrics will be documented in this file.
 - Added Escríbelo como suena content guidance.
 - Added validation metrics, launch plan, backlog, and Codex collaboration rules.
 
+## [2026-06-09] Public Brand Copy Alignment
+
+### Changed
+
+- Removed personal-name references from public-facing landing copy.
+- Updated docs to require Sing Pronounce Repeat as the main public brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
+
 ## [2026-06-09] Phase 0 Warm Landing Redesign
 
 ### Changed
 
-- Redesigned the Phase 0 landing page to feel warmer, more musical, creator-led, and mobile-first.
+- Redesigned the Phase 0 landing page to feel warmer, more musical, brand-led, and mobile-first.
 - Made the free ebook the primary CTA and reframed founder access as the first group.
 - Added a legal-safe micro-lesson demo using a short educational example.
 

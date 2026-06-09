@@ -63,7 +63,7 @@ Acceptance criteria:
 
 - Select 3 songs for the free ebook.
 - Choose short educational fragments from each song.
-- Create Tania's original pronunciation guidance.
+- Create original Escríbelo como suena pronunciation guidance.
 - Add natural translation and teaching notes.
 - Add legal disclaimer and YouTube listening guidance.
 

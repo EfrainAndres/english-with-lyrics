@@ -4,7 +4,7 @@ import { Section } from "@/components/Section";
 const benefits = [
   {
     title: "Pronunciacion sin simbolos raros",
-    text: "Tania escribe el sonido de una forma cercana al espanol para que puedas repetir con mas confianza.",
+    text: "Convertimos el sonido en una guia cercana al espanol para que puedas repetir con mas confianza.",
   },
   {
     title: "Frases utiles, no listas eternas",
@@ -83,7 +83,7 @@ function MicroLessonCard() {
     <article className="overflow-hidden rounded-lg border border-ink/10 bg-cream shadow-soft">
       <div className="flex items-center justify-between gap-4 border-b border-ink/10 bg-plum px-5 py-4 text-cream">
         <div>
-          <p className="text-xs font-bold uppercase">Micro-leccion con Tania</p>
+          <p className="text-xs font-bold uppercase">Micro-leccion guiada</p>
           <h2 className="mt-1 font-heading text-2xl font-black">
             Escríbelo como suena
           </h2>
@@ -141,7 +141,12 @@ export default function Home() {
       <nav className="sticky top-0 z-20 border-b border-ink/10 bg-paper/95 px-5 py-3 backdrop-blur sm:px-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <a href="#top" className="font-heading text-lg font-black">
-            English with Lyrics
+            <span className="block font-heading text-lg leading-5">
+              Sing Pronounce Repeat
+            </span>
+            <span className="block text-xs font-bold text-ink/60">
+              English with Lyrics
+            </span>
           </a>
           <div className="flex items-center gap-3">
             <div className="hidden items-center gap-5 text-sm font-bold text-ink/75 md:flex">
@@ -169,14 +174,17 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="inline-flex rounded-full border border-coral/25 bg-coral/10 px-4 py-2 text-sm font-black text-coral">
-              Aprende con Tania y canciones
+              English with Lyrics
             </p>
             <h1 className="mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-ink sm:text-6xl lg:text-7xl">
-              Aprende inglés cantando tus canciones favoritas
+              Sing Pronounce Repeat
             </h1>
+            <p className="mt-4 max-w-3xl font-heading text-3xl font-black leading-tight text-coral sm:text-4xl">
+              Aprende inglés cantando tus canciones favoritas
+            </p>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-ink/80">
-              Tania te ayuda a entender, pronunciar y usar frases reales en
-              inglés con el método Escríbelo como suena.
+              Aprende a entender, pronunciar y usar frases reales en inglés con
+              el método Escríbelo como suena.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CTAButton href="#ebook">Quiero mi ebook gratis</CTAButton>
@@ -203,8 +211,8 @@ export default function Home() {
         <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="border-l-4 border-coral bg-coral/10 p-6">
             <p className="font-heading text-3xl font-black">
-              Lees una frase. Tania te muestra como suena. Luego entiendes por
-              que significa eso.
+              Lees una frase. Convertimos el sonido en una guia simple. Luego
+              entiendes por que significa eso.
             </p>
             <p className="mt-4 leading-8 text-ink/70">
               Este formato usa fragmentos breves con valor educativo. No busca
@@ -219,7 +227,7 @@ export default function Home() {
         tone="cream"
         eyebrow="Beneficios"
         title="Para cuando lees una cosa, pero escuchas otra."
-        intro="English with Lyrics habla directo al bloqueo real: entender ingles cantado cuando las palabras se unen, cambian de sonido o no se traducen literal."
+        intro="Sing Pronounce Repeat habla directo al bloqueo real: entender ingles cantado cuando las palabras se unen, cambian de sonido o no se traducen literal."
       >
         <div className="grid gap-5 md:grid-cols-3">
           {benefits.map((benefit) => (
@@ -264,12 +272,12 @@ export default function Home() {
         tone="plum"
         eyebrow="Guia gratis"
         title="Descarga tu guía gratis"
-        intro="3 canciones para empezar a entender inglés real, con fragmentos educativos cortos, pronunciación escrita por Tania y explicación natural."
+        intro="3 canciones para empezar a entender inglés real, con fragmentos educativos cortos, pronunciación sencilla y explicación natural."
       >
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="border border-cream/20 bg-cream p-6 text-ink">
             <p className="text-sm font-black uppercase text-coral">
-              English with Lyrics
+              Sing Pronounce Repeat
             </p>
             <h3 className="mt-3 font-heading text-4xl font-black">
               Guía de práctica
@@ -443,8 +451,8 @@ export default function Home() {
             Nota legal y de contenido
           </h2>
           <p className="mt-3 leading-7 text-ink/70">
-            English with Lyrics ensena con fragmentos educativos cortos,
-            pronunciacion original de Tania, traduccion natural y explicaciones
+            Sing Pronounce Repeat ensena con fragmentos educativos cortos,
+            pronunciacion original del metodo, traduccion natural y explicaciones
             transformativas. No publica letras completas ni funciona como
             reemplazo de plataformas oficiales de lyrics, musica o video.
           </p>
@@ -455,10 +463,10 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-heading text-xl font-black">
-              English with Lyrics
+              Sing Pronounce Repeat
             </p>
             <p className="mt-1 text-sm text-cream/70">
-              Creado alrededor del metodo de Tania: Escríbelo como suena.
+              English with Lyrics · Metodo Escríbelo como suena.
             </p>
           </div>
           <a
