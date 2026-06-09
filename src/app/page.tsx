@@ -57,6 +57,28 @@ const methodHighlights = [
 
 const learningModes = ["Inglés", "Pronunciación", "Español"];
 
+const validationActions = [
+  {
+    title: "Quiero la guía gratis",
+    text: "Indica interés en el ebook de 3 canciones y elige el camino que más te motiva.",
+    href: "#ebook",
+    accent: "border-pink/35 bg-pink/10 text-pink",
+  },
+  {
+    title: "Responder la encuesta",
+    text: "Cuéntanos tu nivel, tus bloqueos al escuchar y las canciones que te gustaría practicar.",
+    href: "#survey-placeholder",
+    id: "survey-placeholder",
+    accent: "border-blue/35 bg-blue/10 text-blue",
+  },
+  {
+    title: "Quiero saber del primer grupo",
+    text: "Recibe información cuando abramos cupos para practicar con canciones seleccionadas.",
+    href: "#waitlist",
+    accent: "border-cream/35 bg-cream/10 text-cream",
+  },
+];
+
 function AudioBars() {
   return (
     <div className="flex h-10 items-end gap-1" aria-hidden="true">
@@ -427,56 +449,50 @@ export default function Home() {
         id="waitlist"
         tone="paper"
         title="Únete a la lista de espera"
-        intro="Deja tus datos para recibir la guía gratis cuando esté lista y responder la encuesta de canciones, nivel y formato."
+        intro="Elige cómo quieres participar en la validación: guía gratis, encuesta de canciones o interés en el primer grupo."
       >
         <div className="border border-white/10 bg-panel p-5 shadow-soft sm:p-6">
-          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
             <div className="border-l-4 border-blue pl-5">
               <h3 className="font-heading text-3xl font-black">
                 Queremos construir esto con estudiantes reales.
               </h3>
               <p className="mt-4 leading-8 text-soft">
-                El formulario final se conectará cuando elijamos la herramienta
-                de captura. Por ahora, esta área define el flujo visual para la
-                lista y la encuesta.
+                La próxima versión conectará una herramienta simple de captura.
+                Por ahora, estos botones marcan los caminos de validación que
+                vamos a medir.
               </p>
               <p className="mt-4 text-sm font-bold text-cream">
-                Sin spam. Sin pagos en esta fase. Solo validación y aprendizaje.
+                Formulario de validación pendiente de conexión. Sin pagos en
+                esta fase.
               </p>
             </div>
 
-            <form className="grid gap-4" aria-label="Formulario de lista de espera">
-              <label className="grid gap-2 text-sm font-bold">
-                Nombre
-                <input
-                  className="min-h-12 rounded-md border border-white/15 bg-ink px-4 text-base font-normal text-paper outline-none transition placeholder:text-soft/60 focus:border-blue focus:ring-2 focus:ring-pink/40"
-                  placeholder="Tu nombre"
-                  type="text"
-                />
-              </label>
-              <label className="grid gap-2 text-sm font-bold">
-                Email
-                <input
-                  className="min-h-12 rounded-md border border-white/15 bg-ink px-4 text-base font-normal text-paper outline-none transition placeholder:text-soft/60 focus:border-blue focus:ring-2 focus:ring-pink/40"
-                  placeholder="tu@email.com"
-                  type="email"
-                />
-              </label>
-              <div className="grid gap-3 sm:grid-cols-2">
-                <button
-                  className="min-h-12 rounded-md bg-pink px-5 py-3 text-sm font-black text-white transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-panel"
-                  type="button"
+            <div className="grid gap-3">
+              {validationActions.map((action) => (
+                <article
+                  className="border border-white/10 bg-white/5 p-4"
+                  id={action.id}
+                  key={action.title}
                 >
-                  Quiero la guía
-                </button>
-                <button
-                  className="min-h-12 rounded-md border border-blue/40 bg-white/5 px-5 py-3 text-sm font-black text-paper transition hover:border-pink hover:text-cream focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-panel"
-                  type="button"
-                >
-                  Responder encuesta
-                </button>
-              </div>
-            </form>
+                  <div
+                    className={`mb-3 inline-flex rounded-full border px-3 py-1 text-xs font-black uppercase ${action.accent}`}
+                  >
+                    Validación
+                  </div>
+                  <h3 className="font-heading text-2xl font-black">
+                    {action.title}
+                  </h3>
+                  <p className="mt-2 leading-7 text-soft">{action.text}</p>
+                  <a
+                    className="mt-4 inline-flex min-h-11 items-center rounded-md border border-blue/40 bg-white/5 px-4 text-sm font-black text-paper transition hover:border-pink hover:text-cream focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-panel"
+                    href={action.href}
+                  >
+                    Ver esta opción
+                  </a>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </Section>

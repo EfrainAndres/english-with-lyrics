@@ -9,9 +9,11 @@ Validate demand for English with Lyrics before building a full platform.
 ### Assets
 
 - Landing page.
-- Survey.
-- Waitlist form.
-- Founder offer copy.
+- Survey copy and interpretation guide in `docs/validation/PHASE_0_SURVEY.md`.
+- Waitlist and channel CTA copy in `docs/validation/PHASE_0_COPY_ASSETS.md`.
+- Ebook lead magnet plan in `docs/validation/PHASE_0_EBOOK_LEAD_MAGNET.md`.
+- Waitlist form placeholder.
+- First group interest copy.
 - Basic analytics.
 - Manual contact process.
 
@@ -29,16 +31,18 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 
 - Join the waitlist.
 - Complete the survey.
-- Reserve founder access.
+- Request the free ebook.
+- Signal interest in the first group.
 
 ### Launch Steps
 
 1. Publish the landing page.
 2. Share with the existing English with Lyrics audience.
-3. Collect survey responses.
-4. Review song requests and learner pain points.
-5. Test founder offer interest.
-6. Decide whether to create the free ebook or move directly toward MVP planning.
+3. Connect a lightweight survey tool such as Tally, Typeform, or Google Forms.
+4. Collect survey responses.
+5. Review song requests and learner pain points.
+6. Test first group interest without collecting payments.
+7. Decide whether to create the free ebook or move directly toward MVP planning.
 
 ## Phase 0.5 Launch: Ebook
 
@@ -58,6 +62,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 4. Publish lead capture page.
 5. Promote through YouTube, social, and email.
 6. Measure downloads, replies, and founder offer conversions.
+7. Compare demand across Románticas, Rock / pop clásicos, and Principiantes paths.
 
 ## Phase 1 Launch: Paid MVP
 

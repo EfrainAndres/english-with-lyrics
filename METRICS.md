@@ -9,8 +9,11 @@ Use metrics to validate demand, learning value, and willingness to pay before bu
 Primary metrics:
 
 - Landing page visits.
+- Ebook interest clicks.
+- Survey starts.
 - Survey completion rate.
 - Waitlist conversion rate.
+- First group interest clicks.
 - Founder offer click-through rate.
 - Founder offer purchase or reservation rate.
 
@@ -22,12 +25,20 @@ Useful secondary metrics:
 - Favorite music genres.
 - Biggest pronunciation pain point.
 - Preferred price range in COP.
+- Preferred validation format: PDF, web, email/WhatsApp, video, or app later.
+- Selected ebook path: Románticas, Rock / pop clásicos, or Principiantes.
 
 Decision signals:
 
 - Strong signal: users join the waitlist and express willingness to pay.
 - Medium signal: users download or request content but avoid payment.
 - Weak signal: users visit but do not join, answer, or click.
+
+Survey interpretation:
+
+- Strong signal: learners identify a repeated pain point and choose the free guide plus first group interest.
+- Medium signal: learners want the free guide but need clearer proof before joining a group.
+- Red flag: learners mainly ask for full lyrics, complete translations, or a karaoke replacement.
 
 ## Phase 0.5: Ebook Metrics
 
@@ -95,10 +106,14 @@ For early work, a simple spreadsheet is enough. Track:
 - Date.
 - Campaign/source.
 - Visits.
+- Ebook CTA clicks.
+- Survey starts.
 - Survey completions.
 - Waitlist signups.
 - Ebook downloads.
+- Selected ebook path.
 - Founder offer clicks.
+- First group interest clicks.
 - Paid founder customers.
 - Notes from user conversations.
 

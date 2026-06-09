@@ -4,14 +4,10 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ## [Unreleased]
 
-### Changed
-
-- Aligned the Phase 0 landing visual identity with the channel-inspired dark music style, neon accents, logo placeholder, learning-mode badges, and karaoke-style micro-lesson card.
-- Aligned public brand copy around Sing Pronounce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
-- Added warm Phase 0 landing redesign with ebook-first CTA, brand-led copy, micro-lesson demo, method section, polished waitlist placeholder, and legal-safe positioning.
-
 ### Added
 
+- Added Phase 0 validation assets for survey questions, waitlist/social CTA copy, and the free ebook lead magnet plan.
+- Documented how to interpret survey responses, track ebook interest, and evaluate first group demand without adding real integrations.
 - Added Phase 0 landing UX audit documentation with redesign direction, copy recommendations, accessibility notes, and implementation plan.
 - Added Phase 0 validation foundation with a Next.js App Router app, TypeScript, Tailwind CSS, and responsive landing page.
 - Added setup and validation instructions in `README.md`.
@@ -21,6 +17,14 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 - Added legal and content rules for educational use of short song fragments.
 - Added Escríbelo como suena content guidance.
 - Added validation metrics, launch plan, backlog, and Codex collaboration rules.
+
+### Changed
+
+- Updated the landing waitlist area to point to validation placeholders for ebook interest, survey, and first group interest.
+- Updated launch, metrics, and backlog docs to reference Phase 0 validation assets.
+- Aligned the Phase 0 landing visual identity with the channel-inspired dark music style, neon accents, logo placeholder, learning-mode badges, and karaoke-style micro-lesson card.
+- Aligned public brand copy around Sing Pronounce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
+- Added warm Phase 0 landing redesign with ebook-first CTA, brand-led copy, micro-lesson demo, method section, polished waitlist placeholder, and legal-safe positioning.
 
 ## [2026-06-09] Channel Visual Identity Alignment
 

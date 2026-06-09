@@ -27,24 +27,28 @@ Acceptance criteria:
 
 ### Survey
 
-- Draft validation survey questions.
+- Draft validation survey questions. See `docs/validation/PHASE_0_SURVEY.md`.
 - Ask about learner level, goals, music preferences, price sensitivity, and biggest pronunciation problems.
 - Include consent for follow-up contact.
+- Create the survey in Tally, Typeform, or Google Forms after the copy is approved.
 
 Acceptance criteria:
 
 - Survey can identify strong early adopters.
 - Survey results can guide the first 5-song MVP.
+- Survey does not collect unnecessary sensitive data.
 
 ### Waitlist
 
 - Define fields: name, email, country, English level, interest level.
 - Decide where waitlist data will be stored for Phase 0.
 - Draft confirmation message.
+- Use `docs/validation/PHASE_0_COPY_ASSETS.md` for waitlist, social, and channel CTA copy.
 
 Acceptance criteria:
 
 - Waitlist can measure demand before app development.
+- Waitlist copy makes clear that the validation form is pending connection until a tool is selected.
 
 ### Founder Offer
 
@@ -52,6 +56,7 @@ Acceptance criteria:
 - Define what founders receive.
 - Define limited availability or early access terms.
 - Draft refund and delivery expectations.
+- Use first-group interest copy from `docs/validation/PHASE_0_COPY_ASSETS.md` until real payments are approved.
 
 Acceptance criteria:
 
@@ -66,6 +71,7 @@ Acceptance criteria:
 - Create original Escríbelo como suena pronunciation guidance.
 - Add natural translation and teaching notes.
 - Add legal disclaimer and YouTube listening guidance.
+- Use `docs/validation/PHASE_0_EBOOK_LEAD_MAGNET.md` for ebook structure, paths, CTA, and legal-safe rules.
 
 Acceptance criteria:
 
