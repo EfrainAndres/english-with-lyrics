@@ -12,7 +12,8 @@ Validate demand for English with Lyrics before building a full platform.
 - Survey copy and interpretation guide in `docs/validation/PHASE_0_SURVEY.md`.
 - Waitlist and channel CTA copy in `docs/validation/PHASE_0_COPY_ASSETS.md`.
 - Ebook lead magnet plan in `docs/validation/PHASE_0_EBOOK_LEAD_MAGNET.md`.
-- Waitlist form placeholder.
+- Tally form links documented in `docs/validation/PHASE_0_FORM_INTEGRATION.md`.
+- Waitlist form currently reusing the ebook interest form.
 - First group interest copy.
 - Basic analytics.
 - Manual contact process.
@@ -38,7 +39,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 
 1. Publish the landing page.
 2. Share with the existing English with Lyrics audience.
-3. Connect a lightweight survey tool such as Tally, Typeform, or Google Forms.
+3. Confirm Tally links for ebook interest, survey responses, and first group interest.
 4. Collect survey responses.
 5. Review song requests and learner pain points.
 6. Test first group interest without collecting payments.

@@ -104,9 +104,9 @@ Aprende inglés con tus canciones favoritas, pronunciación fácil y traducción
 
 ## Waitlist Form Intro
 
-Déjanos tus datos para recibir la guía gratis cuando esté lista, responder la encuesta de canciones y enterarte si abrimos el primer grupo de práctica.
+Elige una opción para abrir un formulario corto: recibir la guía gratis, responder la encuesta de canciones o enterarte si abrimos el primer grupo de práctica.
 
-Formulario de validación pendiente de conexión. Por ahora no hay pagos activos.
+Estamos validando interés antes de abrir cupos o pagos. Cada formulario pide solo la información necesaria para hacer seguimiento.
 
 ## Ebook CTA
 

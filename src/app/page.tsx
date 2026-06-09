@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
+import {
+  ebookFormUrl,
+  firstGroupFormUrl,
+  getLinkProps,
+  surveyFormUrl,
+} from "@/lib/links";
 
 const benefits = [
   {
@@ -61,21 +67,24 @@ const learningModes = ["Inglés", "Pronunciación", "Español"];
 const validationActions = [
   {
     title: "Quiero la guía gratis",
-    text: "Indica interés en el ebook de 3 canciones y elige el camino que más te motiva.",
-    href: "#ebook",
+    text: "Abre un formulario corto para pedir la guía de 3 canciones y elegir el camino que más te motiva.",
+    href: ebookFormUrl,
+    cta: "Quiero la guía gratis",
     accent: "border-pink/35 bg-pink/10 text-pink",
   },
   {
     title: "Responder la encuesta",
-    text: "Cuéntanos tu nivel, tus bloqueos al escuchar y las canciones que te gustaría practicar.",
-    href: "#survey-placeholder",
+    text: "Abre una encuesta breve sobre tu nivel, tus bloqueos al escuchar y las canciones que te gustaría practicar.",
+    href: surveyFormUrl,
+    cta: "Responder la encuesta",
     id: "survey-placeholder",
     accent: "border-purple/35 bg-purple/10 text-purple",
   },
   {
     title: "Quiero saber del primer grupo",
-    text: "Recibe información cuando abramos cupos para practicar con canciones seleccionadas.",
-    href: "#waitlist",
+    text: "Abre un formulario corto para recibir información cuando preparemos el primer grupo de práctica.",
+    href: firstGroupFormUrl,
+    cta: "Quiero saber del primer grupo",
     accent: "border-cream/35 bg-cream/10 text-cream",
   },
 ];
@@ -223,7 +232,7 @@ export default function Home() {
             </div>
             <a
               className="inline-flex min-h-10 items-center rounded-md bg-pink px-4 text-sm font-black text-ink transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href="#ebook"
+              {...getLinkProps(ebookFormUrl)}
             >
               Ebook gratis
             </a>
@@ -258,7 +267,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton href="#ebook">Quiero mi ebook gratis</CTAButton>
+              <CTAButton href={ebookFormUrl}>Quiero mi ebook gratis</CTAButton>
               <CTAButton href="#demo" variant="secondary">
                 Ver cómo funciona
               </CTAButton>
@@ -383,7 +392,11 @@ export default function Home() {
                 </div>
               </article>
             ))}
-            <CTAButton className="mt-2 w-full sm:w-fit" href="#waitlist" variant="light">
+            <CTAButton
+              className="mt-2 w-full sm:w-fit"
+              href={ebookFormUrl}
+              variant="light"
+            >
               Elegir mi guía gratis
             </CTAButton>
           </div>
@@ -436,6 +449,7 @@ export default function Home() {
       </Section>
 
       <Section
+        id="first-group"
         title="Únete al primer grupo"
         intro="Cuando la guía gratis esté lista, abriremos un grupo pequeño para practicar con canciones seleccionadas y avanzar con acompañamiento paso a paso."
       >
@@ -463,7 +477,7 @@ export default function Home() {
         id="waitlist"
         tone="paper"
         title="Únete a la lista de espera"
-        intro="Elige cómo quieres participar en la validación: guía gratis, encuesta de canciones o interés en el primer grupo."
+        intro="Elige cómo quieres participar en la validación. Cada botón abre un formulario externo corto para registrar tu interés."
       >
         <div className="border border-white/10 bg-panel p-5 shadow-soft sm:p-6">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
@@ -472,13 +486,12 @@ export default function Home() {
                 Queremos construir esto con estudiantes reales.
               </h3>
               <p className="mt-4 leading-8 text-soft">
-                La próxima versión conectará una herramienta simple de captura.
-                Por ahora, estos botones marcan los caminos de validación que
-                vamos a medir.
+                Usamos formularios externos para medir interés sin crear una
+                cuenta ni guardar datos dentro de esta página.
               </p>
               <p className="mt-4 text-sm font-bold text-cream">
-                Formulario de validación pendiente de conexión. Primero
-                validamos interés y claridad del formato.
+                Validación en curso: guía gratis, encuesta y primer grupo se
+                registran por formularios cortos de Tally.
               </p>
             </div>
 
@@ -500,9 +513,9 @@ export default function Home() {
                   <p className="mt-2 leading-7 text-soft">{action.text}</p>
                   <a
                     className="mt-4 inline-flex min-h-11 items-center rounded-md border border-cream bg-cream px-4 text-sm font-black text-ink transition hover:border-pink hover:bg-pink hover:text-ink focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-panel"
-                    href={action.href}
+                    {...getLinkProps(action.href)}
                   >
-                    Ver esta opción
+                    {action.cta}
                   </a>
                 </article>
               ))}
@@ -535,7 +548,7 @@ export default function Home() {
           </div>
           <a
             className="text-sm font-black text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-            href="#ebook"
+            {...getLinkProps(ebookFormUrl)}
           >
             Quiero mi ebook gratis
           </a>
