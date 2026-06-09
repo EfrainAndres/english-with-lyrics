@@ -6,6 +6,7 @@ All notable changes to English with Lyrics will be documented in this file.
 
 ### Added
 
+- Added Phase 0 landing UX audit documentation with redesign direction, copy recommendations, accessibility notes, and implementation plan.
 - Added Phase 0 validation foundation with a Next.js App Router app, TypeScript, Tailwind CSS, and responsive landing page.
 - Added setup and validation instructions in `README.md`.
 - Added initial project documentation foundation for English with Lyrics.
@@ -14,6 +15,12 @@ All notable changes to English with Lyrics will be documented in this file.
 - Added legal and content rules for educational use of short song fragments.
 - Added Escríbelo como suena content guidance.
 - Added validation metrics, launch plan, backlog, and Codex collaboration rules.
+
+## [2026-06-09] Phase 0 Landing UX Audit
+
+### Added
+
+- Created `docs/design/PHASE_0_LANDING_UX_AUDIT.md` with a documentation-only redesign proposal for the Phase 0 landing page.
 
 ## [2026-06-09] Phase 0 Validation Foundation
 
