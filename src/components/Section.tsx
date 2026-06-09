@@ -6,13 +6,15 @@ type SectionProps = {
   title: string;
   intro?: string;
   children: ReactNode;
-  tone?: "light" | "paper" | "ink";
+  tone?: "light" | "paper" | "cream" | "plum" | "ink";
 };
 
 const toneClasses = {
   light: "bg-white",
   paper: "bg-paper",
-  ink: "bg-ink text-white",
+  cream: "bg-cream",
+  plum: "bg-plum text-cream",
+  ink: "bg-ink text-cream",
 };
 
 export function Section({
@@ -24,7 +26,7 @@ export function Section({
   tone = "light",
 }: SectionProps) {
   return (
-    <section id={id} className={`${toneClasses[tone]} px-5 py-16 sm:px-8 lg:py-24`}>
+    <section id={id} className={`${toneClasses[tone]} px-5 py-14 sm:px-8 lg:py-20`}>
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
           {eyebrow ? (
@@ -32,7 +34,9 @@ export function Section({
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="mt-3 text-3xl font-black sm:text-4xl">{title}</h2>
+          <h2 className="mt-3 font-heading text-3xl font-black sm:text-4xl">
+            {title}
+          </h2>
           {intro ? (
             <p className="mt-5 text-lg leading-8 text-inherit opacity-80">{intro}</p>
           ) : null}

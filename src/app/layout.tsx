@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "English with Lyrics",
   description:
-    "Learn English with songs, easy pronunciation, useful phrases, and natural Spanish explanations from Tania.",
+    "Aprende ingles con canciones, pronunciacion facil, frases utiles y explicaciones naturales de Tania.",
 };
 
 export default function RootLayout({
