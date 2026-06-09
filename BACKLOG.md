@@ -82,11 +82,40 @@ Acceptance criteria:
 
 - Use the Tally ebook form to capture guide interest.
 - Add email capture in Tally.
-- Add follow-up message sequence.
+- Use `docs/validation/PHASE_0_EMAIL_DELIVERY_PLAN.md` to plan confirmation, ebook delivery, survey reminder, first-group interest, and feedback emails.
+- Plan ebook delivery through a future `/ebook-gratis` download page instead of a default PDF attachment.
 
 Acceptance criteria:
 
 - Downloads and email conversions are measurable.
+- Email delivery does not require a provider until the ebook page/PDF and consent approach are ready.
+- Email copy stays brand-led, legal-safe, and free of personal-name references.
+
+### Ebook Download Page
+
+- Create a future `/ebook-gratis` route after the ebook PDF is ready or close to ready.
+- Store the future PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- Include CTAs for PDF download, survey, and first group interest.
+- Include the legal-safe educational note.
+
+Acceptance criteria:
+
+- The page delivers the guide without email attachments.
+- The page supports click tracking for download, survey, and first group interest.
+- The page does not include full commercial lyrics or full translated lyrics.
+
+### Email Provider Setup
+
+- Choose MailerLite, Brevo, ConvertKit, or a manual workflow after validation volume is clearer.
+- Define sender email/domain.
+- Define unsubscribe and privacy approach.
+- Import or connect Tally contacts only after consent fields are confirmed.
+
+Acceptance criteria:
+
+- No provider is integrated before the ebook delivery page or PDF exists.
+- Emails are sent only to learners who consented.
+- The provider supports basic tracking for opens, clicks, unsubscribes, and replies.
 
 ## Phase 1: MVP
 
