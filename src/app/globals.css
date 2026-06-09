@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #17202a;
+  background: #fffaf2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #17202a;
+  background: #fffaf2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  color: #ffffff;
+  background: #126c74;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
