@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sing Pronounce Repeat | English with Lyrics",
   description:
-    "Aprende ingles con canciones, pronunciacion facil, frases utiles y explicaciones naturales con el metodo Escríbelo como suena.",
+    "Aprende inglés con canciones, pronunciación fácil, frases útiles y explicaciones naturales con el método Escríbelo como suena.",
 };
 
 export default function RootLayout({

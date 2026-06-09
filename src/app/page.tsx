@@ -3,16 +3,16 @@ import { Section } from "@/components/Section";
 
 const benefits = [
   {
-    title: "Pronunciacion sin simbolos raros",
-    text: "Convertimos el sonido en una guia cercana al espanol para que puedas repetir con mas confianza.",
+    title: "Pronunciación sin símbolos raros",
+    text: "Convertimos el sonido en una guía cercana al español para que puedas repetir con más confianza.",
   },
   {
-    title: "Frases utiles, no listas eternas",
-    text: "Cada practica se enfoca en un fragmento breve para entender sonido, significado y uso real.",
+    title: "Frases útiles, no listas eternas",
+    text: "Cada práctica se enfoca en una frase breve para entender sonido, significado y uso real.",
   },
   {
-    title: "Aprende con musica, paso a paso",
-    text: "Empiezas con canciones conocidas como motivacion, pero con una guia educativa clara.",
+    title: "Aprende con música, paso a paso",
+    text: "Empiezas con canciones conocidas como motivación, pero con una guía educativa clara.",
   },
 ];
 
@@ -20,24 +20,24 @@ const lessonSteps = [
   {
     label: "Escucha",
     title: "Una frase corta",
-    text: "Primero identificas un fragmento breve y seguro para practicar.",
+    text: "Primero identificas una frase breve y segura para practicar.",
   },
   {
     label: "Repite",
-    title: "Como suena",
-    text: "Lees una guia de pronunciacion pensada para hispanohablantes.",
+    title: "Cómo suena",
+    text: "Lees una guía de pronunciación pensada para hispanohablantes.",
   },
   {
     label: "Entiende",
-    title: "Que quiere decir",
-    text: "Ves la traduccion natural y una explicacion simple para recordarla.",
+    title: "Qué quiere decir",
+    text: "Ves la traducción natural y una explicación simple para recordarla.",
   },
 ];
 
 const guidePaths = [
   {
     name: "Románticas",
-    text: "Frases emocionales, lentas y faciles de repetir.",
+    text: "Frases emocionales, lentas y fáciles de repetir.",
   },
   {
     name: "Rock / pop clásicos",
@@ -50,8 +50,8 @@ const guidePaths = [
 ];
 
 const methodHighlights = [
-  "No usa IPA ni simbolos tecnicos.",
-  "No promete una transcripcion perfecta.",
+  "No usa IPA ni símbolos técnicos.",
+  "No promete una transcripción perfecta.",
   "Sí te ayuda a escuchar, repetir y comparar con el audio real.",
 ];
 
@@ -99,7 +99,7 @@ function MicroLessonCard() {
       <div className="flex items-center justify-between gap-4 border-b border-white/10 bg-ink px-5 py-4 text-paper">
         <div>
           <p className="text-xs font-bold uppercase text-blue">
-            Karaoke learning card
+            Tarjeta de práctica musical
           </p>
           <h2 className="mt-1 font-heading text-2xl font-black">
             Escríbelo como suena
@@ -114,7 +114,7 @@ function MicroLessonCard() {
         <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
           <div>
             <p className="text-xs font-bold uppercase text-cream">
-              Fragmento seguro
+              Frase de práctica
             </p>
             <p className="mt-2 font-heading text-4xl font-black text-paper">
               I found you
@@ -183,7 +183,7 @@ export default function Home() {
                 Ebook
               </a>
               <a href="#metodo" className="hover:text-cream focus:text-cream">
-                Metodo
+                Método
               </a>
             </div>
             <a
@@ -240,19 +240,19 @@ export default function Home() {
 
       <Section
         id="demo"
-        eyebrow="Micro-leccion demo"
+        eyebrow="Microlección demo"
         title="Una frase pequeña puede desbloquear mejor la escucha."
-        intro="La experiencia se siente como una guia de escucha: ves la frase, la forma facil de pronunciarla y la traduccion natural antes de practicar."
+        intro="La experiencia se siente como una guía de escucha: ves la frase, la forma fácil de pronunciarla y la traducción natural antes de practicar."
       >
         <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="border-l-4 border-pink bg-white/5 p-6">
             <p className="font-heading text-3xl font-black">
-              Lees una frase. Convertimos el sonido en una guia simple. Luego
-              entiendes por que significa eso.
+              Lees una frase. Convertimos el sonido en una guía simple. Luego
+              entiendes por qué significa eso.
             </p>
             <p className="mt-4 leading-8 text-soft">
               Este formato usa fragmentos breves con valor educativo. No busca
-              reemplazar letras completas ni plataformas oficiales de musica.
+              reemplazar letras completas ni plataformas oficiales de música.
             </p>
           </div>
           <MicroLessonCard />
@@ -263,7 +263,7 @@ export default function Home() {
         tone="panel"
         eyebrow="Beneficios"
         title="Para cuando lees una cosa, pero escuchas otra."
-        intro="Sing Pronounce Repeat habla directo al bloqueo real: entender ingles cantado cuando las palabras se unen, cambian de sonido o no se traducen literal."
+        intro="Sing Pronounce Repeat habla directo al bloqueo real: entender inglés cantado cuando las palabras se unen, cambian de sonido o no se traducen literal."
       >
         <div className="grid gap-5 md:grid-cols-3">
           {benefits.map((benefit) => (
@@ -280,7 +280,7 @@ export default function Home() {
 
       <Section
         title="Cómo funciona en 3 pasos"
-        intro="La primera experiencia sera corta, clara y medible para validar si el metodo realmente ayuda."
+        intro="La primera experiencia será corta, clara y medible para validar si el método realmente ayuda."
       >
         <div className="grid gap-5 md:grid-cols-3">
           {lessonSteps.map((step, index) => (
@@ -306,7 +306,7 @@ export default function Home() {
       <Section
         id="ebook"
         tone="ink"
-        eyebrow="Guia gratis"
+        eyebrow="Guía gratis"
         title="Descarga tu guía gratis"
         intro="3 canciones para empezar a entender inglés real, con fragmentos educativos cortos, pronunciación sencilla y explicación natural."
       >
@@ -319,7 +319,7 @@ export default function Home() {
               Guía de práctica
             </h3>
             <p className="mt-4 leading-8 text-soft">
-              Elige el tipo de canciones que mas te motivan y ayudanos a
+              Elige el tipo de canciones que más te motivan y ayúdanos a
               validar el primer recurso gratuito.
             </p>
             <div className="mt-6 flex items-end gap-1" aria-hidden="true">
@@ -358,14 +358,14 @@ export default function Home() {
       <Section
         id="metodo"
         tone="panel"
-        eyebrow="El metodo"
+        eyebrow="El método"
         title="Escríbelo como suena"
-        intro="La idea no es memorizar simbolos. Es acercarte al sonido real con una guia practica para escuchar, repetir y ganar confianza."
+        intro="La idea no es memorizar símbolos. Es acercarte al sonido real con una guía práctica para escuchar, repetir y ganar confianza."
       >
         <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="border border-white/10 bg-white/5 p-6">
             <p className="text-sm font-black uppercase text-blue">
-              Ejemplo seguro
+              Frase de práctica
             </p>
             <div className="mt-5 grid gap-4 sm:grid-cols-3">
               <div className="border border-blue/35 bg-blue/10 p-4">
@@ -401,12 +401,12 @@ export default function Home() {
       </Section>
 
       <Section
-        title="Sé parte del primer grupo"
-        intro="Si la guia gratis te ayuda, el siguiente paso sera abrir un grupo pequeno para validar 5 canciones convertidas en 25 micro-lecciones."
+        title="Únete al primer grupo"
+        intro="Cuando la guía gratis esté lista, abriremos un grupo pequeño para practicar con canciones seleccionadas y avanzar con acompañamiento paso a paso."
       >
         <div className="grid gap-5 lg:grid-cols-3">
           {[
-            "Ayudanos a elegir las primeras canciones.",
+            "Elige canciones que te motiven a practicar.",
             "Recibe acceso temprano cuando abramos cupos.",
             "Comparte tu nivel y tus mayores bloqueos al escuchar.",
           ].map((item) => (
@@ -418,8 +418,8 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-6 max-w-3xl text-sm font-bold leading-6 text-soft">
-          Todavia no hay pagos activos. La oferta fundadora se definira cuando
-          el alcance, precio en COP y condiciones esten claros.
+          Todavía no hay pagos activos. La oferta fundadora se definirá cuando
+          el alcance, precio en COP y condiciones estén claros.
         </p>
       </Section>
 
@@ -427,7 +427,7 @@ export default function Home() {
         id="waitlist"
         tone="paper"
         title="Únete a la lista de espera"
-        intro="Deja tus datos para recibir la guia gratis cuando este lista y responder la encuesta de canciones, nivel y formato."
+        intro="Deja tus datos para recibir la guía gratis cuando esté lista y responder la encuesta de canciones, nivel y formato."
       >
         <div className="border border-white/10 bg-panel p-5 shadow-soft sm:p-6">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -436,12 +436,12 @@ export default function Home() {
                 Queremos construir esto con estudiantes reales.
               </h3>
               <p className="mt-4 leading-8 text-soft">
-                El formulario final se conectara cuando elijamos la herramienta
-                de captura. Por ahora, esta area define el flujo visual para la
+                El formulario final se conectará cuando elijamos la herramienta
+                de captura. Por ahora, esta área define el flujo visual para la
                 lista y la encuesta.
               </p>
               <p className="mt-4 text-sm font-bold text-cream">
-                Sin spam. Sin pagos en esta fase. Solo validacion y aprendizaje.
+                Sin spam. Sin pagos en esta fase. Solo validación y aprendizaje.
               </p>
             </div>
 
@@ -467,7 +467,7 @@ export default function Home() {
                   className="min-h-12 rounded-md bg-pink px-5 py-3 text-sm font-black text-white transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-panel"
                   type="button"
                 >
-                  Quiero la guia
+                  Quiero la guía
                 </button>
                 <button
                   className="min-h-12 rounded-md border border-blue/40 bg-white/5 px-5 py-3 text-sm font-black text-paper transition hover:border-pink hover:text-cream focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-panel"
@@ -487,10 +487,10 @@ export default function Home() {
             Nota legal y de contenido
           </h2>
           <p className="mt-3 leading-7 text-soft">
-            Sing Pronounce Repeat ensena con fragmentos educativos cortos,
-            pronunciacion original del metodo, traduccion natural y explicaciones
+            Sing Pronounce Repeat enseña con fragmentos educativos cortos,
+            pronunciación original del método, traducción natural y explicaciones
             transformativas. No publica letras completas ni funciona como
-            reemplazo de plataformas oficiales de lyrics, musica o video.
+            reemplazo de plataformas oficiales de lyrics, música o video.
           </p>
         </div>
       </section>
@@ -502,7 +502,7 @@ export default function Home() {
               Sing Pronounce Repeat
             </p>
             <p className="mt-1 text-sm text-soft">
-              English with Lyrics · Metodo Escríbelo como suena.
+              English with Lyrics · Método Escríbelo como suena.
             </p>
           </div>
           <a
