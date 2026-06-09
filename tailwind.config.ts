@@ -8,16 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#070817",
-        night: "#0b0b1f",
-        midnight: "#111332",
-        panel: "#181a3f",
-        pink: "#ff4fb8",
-        purple: "#8c5cff",
-        blue: "#35b7ff",
-        cream: "#fff1b8",
-        soft: "#d7d9ea",
-        paper: "#f8f4ff",
+        ink: "#010101",
+        night: "#010101",
+        midnight: "#100B10",
+        panel: "#191119",
+        pink: "#FE9CE1",
+        purple: "#CC9DEA",
+        cream: "#FEE296",
+        soft: "#F7EEF8",
+        paper: "#FFF9FE",
       },
       fontFamily: {
         heading: ["Georgia", "Times New Roman", "serif"],
@@ -25,7 +24,7 @@ const config: Config = {
       },
       boxShadow: {
         soft: "0 24px 70px rgba(0, 0, 0, 0.28)",
-        neon: "0 0 36px rgba(255, 79, 184, 0.28)",
+        neon: "0 0 36px rgba(254, 156, 225, 0.28)",
       },
     },
   },

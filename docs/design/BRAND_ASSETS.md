@@ -27,6 +27,17 @@ Use the SVG files for UI whenever possible because they scale cleanly.
 
 The current Phase 0 landing uses `logo-claro.svg` in the navbar and footer because the page background is dark.
 
+## Official Colors
+
+The official brand palette is documented in `docs/design/COLOR_PALETTE.md`.
+
+- Black: `#010101`
+- Yellow: `#FEE296`
+- Pink: `#FE9CE1`
+- Purple: `#CC9DEA`
+
+Do not recolor logo files in code. Use the appropriate light or dark logo asset instead.
+
 ## Favicon Usage
 
 Use:
