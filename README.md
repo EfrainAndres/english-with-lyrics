@@ -53,12 +53,34 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Environment Variables
+
+Phase 0 form links are configured with public environment variables. Copy `.env.example` to `.env.local` for local testing:
+
+```bash
+NEXT_PUBLIC_EBOOK_FORM_URL=https://tally.so/r/q4z8l9
+NEXT_PUBLIC_SURVEY_FORM_URL=https://tally.so/r/eqzgbe
+NEXT_PUBLIC_WAITLIST_FORM_URL=https://tally.so/r/q4z8l9
+NEXT_PUBLIC_FIRST_GROUP_FORM_URL=https://tally.so/r/D4a6NE
+```
+
+Do not commit `.env.local`; it is ignored by git.
+
+When these variables are missing, CTA links fall back to local anchors so the page can still be checked without external forms. When the values start with `https://`, form links open in a new tab with safe external-link attributes.
+
 ## Validation Commands
 
 ```bash
 npm run lint
 npm run build
 ```
+
+For local form-link testing:
+
+1. Run without `.env.local` and confirm fallback anchors work.
+2. Add `.env.local` with the Tally URLs.
+3. Restart `npm run dev`.
+4. Confirm the ebook, survey, and first-group CTAs open Tally forms in a new tab.
 
 ## Content And Legal Guardrails
 
@@ -78,3 +100,4 @@ npm run build
 - `METRICS.md`
 - `LAUNCH_PLAN.md`
 - `AGENTS.md`
+- `docs/validation/PHASE_0_FORM_INTEGRATION.md`

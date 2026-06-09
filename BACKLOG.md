@@ -30,7 +30,7 @@ Acceptance criteria:
 - Draft validation survey questions. See `docs/validation/PHASE_0_SURVEY.md`.
 - Ask about learner level, goals, music preferences, price sensitivity, and biggest pronunciation problems.
 - Include consent for follow-up contact.
-- Create the survey in Tally, Typeform, or Google Forms after the copy is approved.
+- Use the Phase 0 Tally survey link documented in `docs/validation/PHASE_0_FORM_INTEGRATION.md`.
 
 Acceptance criteria:
 
@@ -41,14 +41,14 @@ Acceptance criteria:
 ### Waitlist
 
 - Define fields: name, email, country, English level, interest level.
-- Decide where waitlist data will be stored for Phase 0.
+- Use the Phase 0 Tally ebook form as the temporary waitlist capture.
 - Draft confirmation message.
 - Use `docs/validation/PHASE_0_COPY_ASSETS.md` for waitlist, social, and channel CTA copy.
 
 Acceptance criteria:
 
 - Waitlist can measure demand before app development.
-- Waitlist copy makes clear that the validation form is pending connection until a tool is selected.
+- Waitlist copy makes clear that users are opening short external validation forms.
 
 ### Founder Offer
 
@@ -80,8 +80,8 @@ Acceptance criteria:
 
 ### Lead Capture
 
-- Create ebook download flow.
-- Add email capture.
+- Use the Tally ebook form to capture guide interest.
+- Add email capture in Tally.
 - Add follow-up message sequence.
 
 Acceptance criteria:

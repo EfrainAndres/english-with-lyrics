@@ -10,10 +10,13 @@ Primary metrics:
 
 - Landing page visits.
 - Ebook interest clicks.
+- Ebook form submissions.
 - Survey starts.
 - Survey completion rate.
+- Survey form submissions.
 - Waitlist conversion rate.
 - First group interest clicks.
+- First group form submissions.
 - Founder offer click-through rate.
 - Founder offer purchase or reservation rate.
 
@@ -107,6 +110,7 @@ For early work, a simple spreadsheet is enough. Track:
 - Campaign/source.
 - Visits.
 - Ebook CTA clicks.
+- Ebook Tally submissions.
 - Survey starts.
 - Survey completions.
 - Waitlist signups.

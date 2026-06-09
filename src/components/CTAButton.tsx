@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes, ReactNode } from "react";
+import { getLinkProps } from "@/lib/links";
 
 type CTAButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
@@ -18,12 +19,14 @@ export function CTAButton({
   children,
   variant = "primary",
   className = "",
+  href = "#",
   ...props
 }: CTAButtonProps) {
   return (
     <a
       className={`inline-flex min-h-12 items-center justify-center rounded-md px-5 py-3 text-sm font-black transition focus:outline-none focus:ring-2 focus:ring-offset-2 ${variantClasses[variant]} ${className}`}
       {...props}
+      {...getLinkProps(href)}
     >
       {children}
     </a>
