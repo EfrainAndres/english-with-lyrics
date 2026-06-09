@@ -52,7 +52,7 @@ const guidePaths = [
 
 const methodHighlights = [
   "No usa IPA ni símbolos técnicos.",
-  "No promete una transcripción perfecta.",
+  "Te da una referencia simple para practicar con claridad.",
   "Sí te ayuda a escuchar, repetir y comparar con el audio real.",
 ];
 
@@ -99,6 +99,25 @@ function PlayMarker() {
     <span
       aria-hidden="true"
       className="inline-block h-0 w-0 border-y-[7px] border-l-[11px] border-y-transparent border-l-cream"
+    />
+  );
+}
+
+function BrandLogo({
+  className = "",
+  height = "4rem",
+}: {
+  className?: string;
+  height?: string;
+}) {
+  return (
+    <Image
+      alt="Sing Pronounce Repeat / English with Lyrics logo"
+      className={className}
+      height={515}
+      src="/brand/logo-claro.svg"
+      style={{ height, width: "auto" }}
+      width={401}
     />
   );
 }
@@ -171,20 +190,24 @@ function MicroLessonCard() {
 export default function Home() {
   return (
     <main>
-      <nav className="sticky top-0 z-20 border-b border-white/10 bg-ink/88 px-5 py-3 backdrop-blur sm:px-8">
+      <nav className="sticky top-0 z-20 border-b border-white/15 bg-ink px-5 py-2 shadow-[0_1px_0_rgba(255,255,255,0.04)] sm:px-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <a
-            className="flex shrink-0 items-center focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+            className="flex shrink-0 items-center gap-3 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
             href="#top"
           >
-            <Image
-              alt="Sing Pronounce Repeat / English with Lyrics logo"
-              className="h-14 w-auto sm:h-16"
-              height={515}
-              priority
-              src="/brand/logo-claro.svg"
-              width={401}
+            <BrandLogo
+              className="shrink-0"
+              height="clamp(3.5rem, 7vw, 5.5rem)"
             />
+            <span className="hidden lg:block">
+              <span className="block font-heading text-xl font-black leading-5 text-paper">
+                Sing Pronounce Repeat
+              </span>
+              <span className="mt-1 block text-xs font-bold uppercase text-soft">
+                English with Lyrics
+              </span>
+            </span>
           </a>
           <div className="flex items-center gap-3">
             <div className="hidden items-center gap-5 text-sm font-bold text-soft md:flex">
@@ -430,8 +453,9 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-6 max-w-3xl text-sm font-bold leading-6 text-soft">
-          Todavía no hay pagos activos. La oferta fundadora se definirá cuando
-          el alcance, precio en COP y condiciones estén claros.
+          Estamos validando interés antes de abrir cupos. Cuando el formato,
+          precio en COP y condiciones estén claros, compartiremos todos los
+          detalles.
         </p>
       </Section>
 
@@ -453,8 +477,8 @@ export default function Home() {
                 vamos a medir.
               </p>
               <p className="mt-4 text-sm font-bold text-cream">
-                Formulario de validación pendiente de conexión. Sin pagos en
-                esta fase.
+                Formulario de validación pendiente de conexión. Primero
+                validamos interés y claridad del formato.
               </p>
             </div>
 
@@ -504,13 +528,7 @@ export default function Home() {
       <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <Image
-              alt="Sing Pronounce Repeat / English with Lyrics logo"
-              className="h-16 w-auto"
-              height={515}
-              src="/brand/logo-claro.svg"
-              width={401}
-            />
+            <BrandLogo className="shrink-0" />
             <p className="mt-1 text-sm text-soft">
               Método Escríbelo como suena.
             </p>
