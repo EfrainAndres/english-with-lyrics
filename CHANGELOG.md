@@ -6,6 +6,8 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added real brand logo and favicon assets under `public/brand/`.
+- Added brand asset usage documentation for logos, favicons, and future social images.
 - Added Phase 0 validation assets for survey questions, waitlist/social CTA copy, and the free ebook lead magnet plan.
 - Documented how to interpret survey responses, track ebook interest, and evaluate first group demand without adding real integrations.
 - Added Phase 0 landing UX audit documentation with redesign direction, copy recommendations, accessibility notes, and implementation plan.
@@ -20,6 +22,8 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Replaced the Phase 0 landing logo placeholder with the real Sing Pronounce Repeat / English with Lyrics logo.
+- Updated app metadata to use the real favicon assets.
 - Updated the landing waitlist area to point to validation placeholders for ebook interest, survey, and first group interest.
 - Updated launch, metrics, and backlog docs to reference Phase 0 validation assets.
 - Aligned the Phase 0 landing visual identity with the channel-inspired dark music style, neon accents, logo placeholder, learning-mode badges, and karaoke-style micro-lesson card.

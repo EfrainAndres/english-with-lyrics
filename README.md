@@ -11,6 +11,10 @@ The core method is **Escríbelo como suena**: English pronunciation written in a
 - Core method: Escríbelo como suena.
 - Do not mention any personal creator name in public-facing UI copy.
 
+## Brand Assets
+
+Logo and favicon files live in `public/brand/`. Usage rules are documented in `docs/design/BRAND_ASSETS.md`.
+
 ## Current Phase
 
 Phase 0 validation foundation:

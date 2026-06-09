@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
 
@@ -102,19 +103,6 @@ function PlayMarker() {
   );
 }
 
-function LogoMark() {
-  return (
-    <span
-      aria-hidden="true"
-      className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-pink/50 bg-ink shadow-neon"
-    >
-      <span className="absolute h-8 w-8 rounded-full border-2 border-blue" />
-      <span className="h-6 w-3 rounded-full bg-pink" />
-      <span className="absolute bottom-2 h-1.5 w-5 rounded-full bg-cream" />
-    </span>
-  );
-}
-
 function MicroLessonCard() {
   return (
     <article className="overflow-hidden rounded-lg border border-pink/30 bg-panel shadow-soft">
@@ -185,16 +173,18 @@ export default function Home() {
     <main>
       <nav className="sticky top-0 z-20 border-b border-white/10 bg-ink/88 px-5 py-3 backdrop-blur sm:px-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
-          <a className="flex items-center gap-3" href="#top">
-            <LogoMark />
-            <span>
-              <span className="block font-heading text-lg font-black leading-5 text-paper">
-                Sing Pronounce Repeat
-              </span>
-              <span className="block text-xs font-bold text-soft">
-                English with Lyrics
-              </span>
-            </span>
+          <a
+            className="flex shrink-0 items-center focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+            href="#top"
+          >
+            <Image
+              alt="Sing Pronounce Repeat / English with Lyrics logo"
+              className="h-14 w-auto sm:h-16"
+              height={515}
+              priority
+              src="/brand/logo-claro.svg"
+              width={401}
+            />
           </a>
           <div className="flex items-center gap-3">
             <div className="hidden items-center gap-5 text-sm font-bold text-soft md:flex">
@@ -513,12 +503,16 @@ export default function Home() {
 
       <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="font-heading text-xl font-black">
-              Sing Pronounce Repeat
-            </p>
+          <div className="flex items-center gap-4">
+            <Image
+              alt="Sing Pronounce Repeat / English with Lyrics logo"
+              className="h-16 w-auto"
+              height={515}
+              src="/brand/logo-claro.svg"
+              width={401}
+            />
             <p className="mt-1 text-sm text-soft">
-              English with Lyrics · Método Escríbelo como suena.
+              Método Escríbelo como suena.
             </p>
           </div>
           <a
