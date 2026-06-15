@@ -89,22 +89,22 @@ Status: done.
 
 ### Ebook Fragment Review
 
-- Review candidate short phrases for each of the nine fragment slots.
-- Confirm non-sequential placement, educational necessity, and conservative length (3–7 words target).
-- Draft Escríbelo como suena pronunciation using the internal consistency checklist.
-- Draft natural meanings and vocabulary notes.
-- Create original exercises from the exercise draft library in `docs/content/PHASE_0_EBOOK_DRAFT.md` Section 8.
-- Approve or reject each fragment using the legal-safe checklist from `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md` Section 9.
-- Replace a song if suitable fragments cannot be identified conservatively.
+- Review framework complete. See `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`.
+- Nine-slot register created. All nine fragment text fields remain [PENDING_MANUAL_INPUT].
+- Intake rules, review statuses, editorial scoring model, pronunciation template, natural meaning template, vocabulary template, exercise template, cross-fragment reconstruction check, and song replacement gate are all defined.
+- Manual fragment input from the project owner is required before any slot can advance.
 
 Branch: `content/phase-0-ebook-fragment-review`
 
-Acceptance criteria:
+Status: In progress — framework complete, manual fragment input pending.
 
-- All nine fragment slots approved or a replaced song's slots are approved.
+Remaining acceptance criteria:
+
+- All nine fragment slots receive a final decision (Approved or Replaced).
 - No fragment reconstructs a verse or chorus when combined sequentially.
-- Pronunciation, natural meaning, vocabulary, and exercises are finalized for all nine slots.
+- Pronunciation, natural meaning, vocabulary, and exercises are finalized for all nine approved slots.
 - Legal-safe review completed for each approved fragment.
+- Ebook draft placeholders updated after each slot is approved.
 
 ### Ebook PDF Template
 

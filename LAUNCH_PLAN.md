@@ -68,7 +68,8 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Ebook content plan | Complete — `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` |
 | Provisional song selection | Complete — `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md` (A Thousand Years, Still Loving You, The Reason) |
 | Editorial draft | Complete — `docs/content/PHASE_0_EBOOK_DRAFT.md` (nine fragment placeholders; publication blocked on fragment review) |
-| Fragment review | Pending — `content/phase-0-ebook-fragment-review` |
+| Fragment review framework | Complete — `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` (nine slots defined; manual fragment input pending; 0 of 9 approved) |
+| Fragment approval | In progress — manual fragment input required; PDF design blocked until all 9 slots approved |
 | PDF template | Pending — `design/phase-0-ebook-pdf-template` |
 | PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery` |
 | Email provider setup | Pending — after PDF and consent approach confirmed |
