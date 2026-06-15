@@ -236,14 +236,14 @@ Solo escucha. No trates de entender todo. Nota qué partes reconoces o qué sien
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_1] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **One step closer** |
+| Como suena | **uán · estép · clóuzer** *(el "ou" en "clóuzer" desliza como una sola vocal — no lo separes en "o" y "u")* |
+| Español natural | **Un paso más cerca** — se usa para decir que estás progresando hacia una meta, sueño o logro. |
+| Vocabulario útil | **step** = paso (literal o figurado) · **closer** = más cerca (comparativo de "close") |
+| Úsalo así | "Every lesson puts me one step closer to my goal." *(Cada lección me pone un paso más cerca de mi meta.)* |
+| Ejercicio | Escribe una frase usando "one step closer" o "one step" sobre algo que quieres lograr — puede ser aprender inglés, un trabajo, un viaje, o cualquier meta tuya. |
 
-**Repite:** Escucha nuevamente, repite lentamente y luego intenta decirlo sin mirar la guía.
+**Repite:** Escucha el fragmento en la fuente oficial, repítelo lentamente y después intenta decirlo sin mirar la guía.
 
 - [ ] Completé este fragmento
 
@@ -255,14 +255,14 @@ Solo escucha. No trates de entender todo. Nota qué partes reconoces o qué sien
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_2] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **Heart beats fast** |
+| Como suena | **jart · bíts · fast** *(la "j" en "jart" es un sonido de aire suave — no la "j" gutural del español)* |
+| Español natural | **El corazón late rápido** — para describir nervios, emoción, miedo o actividad física intensa. |
+| Vocabulario útil | **heart** = corazón · **beat/beats** = latir (para el corazón) / ritmo (en música) · **fast** = rápido |
+| Úsalo así | "My heart beats fast before an important exam." *(Mi corazón late rápido antes de un examen importante.)* |
+| Ejercicio | Nombra dos situaciones en las que tu corazón late rápido. Puedes escribirlas en español o en inglés. |
 
-**Repite:** Escucha el fragmento, sigue el ritmo con la guía de pronunciación y repite tres veces.
+**Repite:** Escucha el fragmento en la fuente oficial, sigue el ritmo con la guía de pronunciación y repite tres veces.
 
 - [ ] Completé este fragmento
 
@@ -274,14 +274,14 @@ Solo escucha. No trates de entender todo. Nota qué partes reconoces o qué sien
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_3] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **Time stands still** |
+| Como suena | **taim · stanz · estil** *(en "taim," la "ai" desliza suavemente — es un solo sonido; los grupos "st" en "stanz" y "estil" son el mayor reto de pronunciación)* |
+| Español natural | **El tiempo se detiene** — expresión figurada para un momento tan especial que parece que el tiempo se para. Importante: aquí "still" significa *inmóvil*, no *todavía*. |
+| Vocabulario útil | **time** = tiempo · **stand still / stands still** = quedarse quieto / detenerse · **still** = inmóvil (no confundir con "still" = todavía) |
+| Úsalo así | "When I heard that song for the first time, time stood still." *(Cuando escuché esa canción por primera vez, sentí que el tiempo se detuvo.)* |
+| Ejercicio | ¿Es "time stands still" literal o figurada? Elige la respuesta correcta: A) Un reloj sin batería · B) Un momento tan hermoso que parece que el tiempo se para · C) Una clase de física. Luego describe en una frase un momento en que sentiste que el tiempo se detuvo. |
 
-**Repite:** Lee el fragmento una vez en silencio, luego en voz alta. Escucha el audio oficial y compara.
+**Repite:** Lee el fragmento una vez en silencio, luego en voz alta. Escucha el audio oficial y compara tu pronunciación.
 
 - [ ] Completé este fragmento
 
@@ -304,15 +304,20 @@ Después de practicar esta canción, tómate un momento para responder:
 
 #### [INTERNAL] Editorial notes — Song 1 — Remove before publication
 
-**Fragment-selection risk:** A Thousand Years is a slow ballad with clear diction. The main fragment-selection risk is that the most memorable phrases may be part of the main chorus, which is repeated several times. Selecting fragments from non-chorus sections reduces sequential reconstruction risk but may reduce learner recognition. The fragment review phase must evaluate both verse and bridge options.
+**Fragment status:** All three fragments reviewed and approved in `content/phase-0-ebook-fragments-a-thousand-years`. See `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` for full review records (ATY-01, ATY-02, ATY-03).
 
-**Pronunciation risk:** The song is in standard American English. Vowel sounds and connected speech are generally accessible. Risk level: low. The main difficulty for Spanish speakers will be diphthongs and final consonant sounds. These are good teaching targets.
+**Fragments approved:**
+- ATY-01: "One step closer" — score 87/100
+- ATY-02: "Heart beats fast" — score 91/100
+- ATY-03: "Time stands still" — score 86/100
 
-**Learner-level risk:** Low. This is the most accessible song in the set. If learners find it too easy, the subsequent songs will provide more challenge.
+**Remaining publication requirements:**
+- Manual adjacency verification by the project owner (all three fragments require confirmation they are not adjacent in the song).
+- Official media link (YouTube or Spotify) must be confirmed and inserted before PDF export.
+- Pronunciation consistency check across all nine ebook fragments (SLY and TR fragments pending).
+- Final legal-safe review of the complete PDF before publication.
 
-**Potential replacement condition:** If fragment analysis shows that no three independently educational short phrases can be selected without sequential reconstruction or that all usable fragments are too song-specific to teach practical language, consider replacing with Until I Found You (Stephen Sanchez) for similar romantic-ballad positioning at the beginner level.
-
-**Backup song if needed:** Until I Found You — Stephen Sanchez.
+**Replacement condition:** No longer required. Three suitable fragments have been approved.
 
 ---
 

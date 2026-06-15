@@ -4,17 +4,19 @@
 
 ## 1. Document Status
 
-**Status:** Review framework created
-**Song fragments received:** No
-**Song fragments approved:** 0 of 9
-**Pronunciation drafts completed:** 0 of 9
-**Natural meanings completed:** 0 of 9
-**Exercises completed:** 0 of 9
+**Status:** In progress — A Thousand Years review complete; Still Loving You and The Reason pending
+**Song fragments received:** 3 of 9
+**Song fragments approved:** 3 of 9
+**Pronunciation drafts completed:** 3 of 9
+**Natural meanings completed:** 3 of 9
+**Exercises completed:** 3 of 9
 **Publication ready:** No
 
-**Phase status:** In progress — review framework complete, manual fragment input pending
+**Phase status:** In progress — ATY-01, ATY-02, and ATY-03 reviewed and approved; manual fragment input pending for SLY-01–03 and TR-01–03
 
-This document does not contain song lyrics, lyric excerpts, verse text, chorus text, or any copyrighted song content. All nine fragment text fields are set to `[PENDING_MANUAL_INPUT]` and must remain so until the project owner supplies each fragment individually for review.
+The three A Thousand Years fragments were manually supplied by the project owner. No lyrics were retrieved from external sources. No surrounding song text has been added. Approved fragments: "One step closer" (ATY-01), "Heart beats fast" (ATY-02), "Time stands still" (ATY-03).
+
+The SLY and TR fragment text fields remain `[PENDING_MANUAL_INPUT]`.
 
 ---
 
@@ -187,75 +189,414 @@ All nine fragment text fields are `[PENDING_MANUAL_INPUT]`. No song text has bee
 
 ---
 
-### ATY-01
+### ATY-01 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | ATY-01 |
 | Song | A Thousand Years |
 | Artist | Christina Perri |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Clear vowel or stress pattern at slow tempo (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | — |
+| Fragment text | **One step closer** |
+| Word count | 3 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | Useful expression for progress and personal goals; beginner-friendly rhythm; final consonant and diphthong practice |
+| Learner level | A1–A2 |
+| Status | **Approved** |
+| Length review | Pass — 3 words; conservative |
+| Sequential-risk review | Pass with note — adjacency to ATY-02 and ATY-03 requires manual project-owner verification before publication |
+| Editorial score | 87 / 100 |
+| Pronunciation review | Pass |
+| Natural meaning review | Pass |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | Adjacency relative to ATY-02 and ATY-03 cannot be confirmed without reviewing surrounding song text. Manual project-owner verification required before PDF publication. |
 
 ---
 
-### ATY-02
+#### ATY-01 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 3 words. Conservative. ✓
+- Complete verse or chorus: No. ✓
+- Adjacency to ATY-02 or ATY-03: Cannot be confirmed without surrounding song text. **Manual project-owner verification required before publication.**
+- Reconstruction risk: Three independently short phrases with no shared vocabulary do not combine to reconstruct a verse or chorus. ✓
+- Could be shorter: No. All three words are necessary. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Strong. The /st/ cluster in "step" and the diphthong /oʊ/ in "closer" are common challenges for Spanish speakers. ✓
+- Listening value: Strong. Delivered clearly and slowly in this song. ✓
+- Practical vocabulary: "step" and "closer" are high-frequency and broadly useful. ✓
+- Real-life use: Excellent. "One step closer" appears widely in motivational, work, study, and everyday contexts. ✓
+- Beginner/intermediate accessibility: A1–A2. Short, common words, natural rhythm. ✓
+- Exercise potential: Excellent. Learners can write an original sentence about personal goals with no additional song text required. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "ONE" and "CLO-ser" |
+| Difficult vowel | The diphthong /oʊ/ in "closer" — Spanish has a pure "o," not a gliding vowel |
+| Difficult consonant | Initial /st/ cluster in "step" — Spanish speakers commonly insert "e" before "st" |
+| Connected speech | The three words flow as one unit with no natural pause |
+| Reduction | None significant |
+| Singer-specific variation | Christina Perri delivers this phrase slowly and clearly; minimal distortion |
+| Neutral learning pronunciation | "one step closer" as natural spoken English |
+| Escríbelo como suena | **uán · estép · clóuzer** |
+| Possible misleading spelling | "clóuzer" — the "ou" should glide as a diphthong, not be read as two separate vowels in Spanish. Add a learner note. |
+| Final learner-facing pronunciation | **uán · estép · clóuzer** |
+
+Nota para el aprendiz: el "ou" en "clóuzer" se pronuncia como una sola vocal deslizante — no digas "o" y "u" por separado.
+
+**Natural meaning**
+
+- Literal sense: A single step that brings you nearer than before.
+- Natural Spanish meaning: "Un paso más cerca" — expresar que te estás acercando poco a poco a algo que quieres lograr.
+- Context limitation: Stands alone without song context. ✓
+- Standalone usefulness: Excellent — common in motivational speech and everyday goal-oriented conversation.
+- Possible ambiguity: None significant.
+- Final learner-facing explanation: "Un paso más cerca" — en inglés se usa para decir que estás progresando hacia una meta, sueño o logro. Es una expresión muy común y motivadora.
+
+**Vocabulary**
+
+*step — paso*
+- Natural Spanish explanation: Un paso físico al caminar, o una etapa en un proceso.
+- Original example: "Finishing one exercise is a step in the right direction."
+- Spanish meaning of example: "Terminar un ejercicio es un paso en la dirección correcta."
+- Real-life usage note: Used literally (take a step) and figuratively (step toward a goal). Very common.
+
+*closer — más cerca*
+- Natural Spanish explanation: El comparativo de "close" (cerca). La distancia —física o figurada— ha disminuido.
+- Original example: "I feel closer to understanding English every time I practice."
+- Spanish meaning of example: "Me siento más cerca de entender el inglés cada vez que practico."
+- Real-life usage note: Used for physical proximity and for goals, relationships, and understanding.
+
+**Original real-life example**
+
+"Every lesson puts me one step closer to my goal."
+*(Cada lección me pone un paso más cerca de mi meta.)*
+
+**Original exercise**
+
+Tipo: Escribe una frase original.
+
+Instrucción: Usa "one step closer" o "one step" para hablar de algo que quieres lograr. Puede ser aprender inglés, un trabajo, un viaje, o cualquier meta tuya.
+
+Ejemplo de respuesta: "Studying every day brings me one step closer to speaking English with confidence."
+*(Este es solo un ejemplo — tu frase puede ser completamente diferente.)*
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 4 | 20 | 16 |
+| Learner accessibility | 5 | 15 | 15 |
+| Practical language value | 4 | 15 | 12 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 4 | 10 | 8 |
+| Exercise potential | 5 | 10 | 10 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 5 | 10 | 10 |
+| **Total** | | **100** | **87** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section
+- [x] Fragment is as short as educationally necessary
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Adjacency uncertainty flagged for manual verification
+
+**Final decision: Approved**
+
+---
+
+### ATY-02 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | ATY-02 |
 | Song | A Thousand Years |
 | Artist | Christina Perri |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Accessible emotional expression with natural Spanish equivalent (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | — |
+| Fragment text | **Heart beats fast** |
+| Word count | 3 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | Simple expression for physical or emotional reaction; final consonant clusters; natural rhythm between short content words |
+| Learner level | A2–B1 |
+| Status | **Approved** |
+| Length review | Pass — 3 words; conservative |
+| Sequential-risk review | Pass with note — adjacency to ATY-01 and ATY-03 requires manual project-owner verification before publication |
+| Editorial score | 91 / 100 |
+| Pronunciation review | Pass |
+| Natural meaning review | Pass |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | Three distinct pronunciation targets (initial /h/, long /iː/ in "beats," final /st/ cluster in "fast") make this an excellent teaching fragment. Adjacency to other ATY fragments requires manual verification. |
 
 ---
 
-### ATY-03
+#### ATY-02 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 3 words. Conservative. ✓
+- Complete verse or chorus: No. ✓
+- Adjacency to ATY-01 or ATY-03: Cannot be confirmed without surrounding song text. **Manual project-owner verification required before publication.**
+- Reconstruction risk: Three independently short phrases with no shared vocabulary. ✓
+- Could be shorter: No. All three words are necessary. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Excellent. Three distinct challenges for Spanish speakers: the English /h/ sound, the long /iː/ vowel in "beats," and the final /st/ cluster in "fast." ✓
+- Listening value: Strong. Three clear monosyllabic words — ideal for perceiving individual sounds. ✓
+- Practical vocabulary: "heart," "beat," and "fast" are all high-frequency, broadly useful words. ✓
+- Real-life use: Strong. The combination "heart beats fast" applies directly to nervousness, excitement, fear, or exercise — common topics in everyday conversation. ✓
+- Beginner/intermediate accessibility: A2–B1. Common vocabulary. The main challenge is the pronunciation, not the meaning. ✓
+- Exercise potential: Excellent. Learners can identify situations from their own life with no additional song text required. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "HEART" and "FAST" |
+| Difficult vowel (1) | The /ɑː/ vowel in "heart" — similar to Spanish "a" but more open and followed by the "r" |
+| Difficult vowel (2) | The long /iː/ in "beats" — Spanish "i" is similar but must be held slightly longer |
+| Difficult consonant | Final /st/ cluster in "fast" — Spanish speakers may add a vowel after the final "t" |
+| Connected speech | "Heart beats" flows naturally — the two words connect without a hard stop |
+| Reduction | None significant |
+| Singer-specific variation | Christina Perri delivers this slowly; each word is distinct. Minimal singer distortion. |
+| Neutral learning pronunciation | Natural spoken English at a comfortable pace |
+| Escríbelo como suena | **jart · bíts · fast** |
+| Possible misleading spelling | "jart" — in Spanish, "j" is a strong guttural sound. The English /h/ is much softer. Add a learner note. "fast" — the Spanish "a" in "fast" should be kept open, not closed toward "e". |
+| Final learner-facing pronunciation | **jart · bíts · fast** |
+
+Nota para el aprendiz: la "j" en "jart" es más suave que la "j" en español — es un sonido de aire suave, no gutural. Practica con el audio oficial para escuchar la diferencia.
+
+**Natural meaning**
+
+- Literal sense: The heart is beating at a rapid pace.
+- Natural Spanish meaning: "El corazón late rápido" — una reacción física y emocional que todos conocemos.
+- Context limitation: Stands alone without song context. ✓
+- Standalone usefulness: Excellent. Universal human experience — nervousness, excitement, fear, physical exertion.
+- Possible ambiguity: None. The meaning is clear and universal.
+- Final learner-facing explanation: "El corazón late rápido" — en inglés se usa para describir una reacción física o emocional: nervios, emoción, miedo, o cuando estás haciendo ejercicio. Es una expresión muy natural y común.
+
+**Vocabulary**
+
+*heart — corazón*
+- Natural Spanish explanation: El corazón — el órgano físico, pero también usado en expresiones emocionales.
+- Original example: "My heart beats faster when I'm nervous before a presentation."
+- Spanish meaning of example: "Mi corazón late más rápido cuando estoy nervioso antes de una presentación."
+- Real-life usage note: Used literally (the organ) and figuratively (emotions, courage, affection). Extremely common.
+
+*beat / beats — latir / latido*
+- Natural Spanish explanation: Como verbo, "to beat" = latir (para el corazón). También puede significar "ritmo" en música.
+- Original example: "The music has a strong beat that makes you want to dance."
+- Spanish meaning of example: "La música tiene un ritmo fuerte que te dan ganas de bailar."
+- Real-life usage note: "My heart beats fast" = latido físico. "The beat of a song" = el ritmo musical. Two distinct uses worth noting.
+
+*fast — rápido*
+- Natural Spanish explanation: Rápido — puede funcionar como adjetivo ("a fast car") o adverbio ("run fast"). Aquí modifica el latido.
+- Original example: "She speaks fast, so I need to concentrate to follow along."
+- Spanish meaning of example: "Ella habla rápido, así que necesito concentrarme para seguirle el hilo."
+- Real-life usage note: Very common. Interchangeable with "quickly" as an adverb in informal speech.
+
+**Original real-life example**
+
+"My heart beats fast before an important exam."
+*(Mi corazón late rápido antes de un examen importante.)*
+
+**Original exercise**
+
+Tipo: Elige una situación real.
+
+Instrucción: Nombra dos situaciones en las que tu corazón late rápido. Puedes escribirlas en español o en inglés.
+
+Ejemplo de respuesta:
+1. "Before speaking in public." / "Antes de hablar en público."
+2. "When I watch a scary movie." / "Cuando veo una película de terror."
+
+*(Tus respuestas pueden ser completamente diferentes.)*
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 5 | 20 | 20 |
+| Learner accessibility | 5 | 15 | 15 |
+| Practical language value | 4 | 15 | 12 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 4 | 10 | 8 |
+| Exercise potential | 5 | 10 | 10 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 5 | 10 | 10 |
+| **Total** | | **100** | **91** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section
+- [x] Fragment is as short as educationally necessary
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Adjacency uncertainty flagged for manual verification
+
+**Final decision: Approved**
+
+---
+
+### ATY-03 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | ATY-03 |
 | Song | A Thousand Years |
 | Artist | Christina Perri |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Useful everyday vocabulary or grammatical structure that transfers outside the song (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | — |
+| Fragment text | **Time stands still** |
+| Word count | 3 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | Useful figurative expression; consonant cluster practice; distinguishing literal from figurative meaning |
+| Learner level | A2–B1 |
+| Status | **Approved** |
+| Length review | Pass — 3 words; conservative |
+| Sequential-risk review | Pass with note — adjacency to ATY-01 and ATY-02 requires manual project-owner verification before publication |
+| Editorial score | 86 / 100 |
+| Pronunciation review | Pass |
+| Natural meaning review | Pass — figurative meaning adds slight complexity; explicitly taught in the lesson |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | The dual meaning of "still" (motionless vs. "todavía") is a valuable teaching point. Consonant clusters in "stands" and "still" require careful Escríbelo como suena treatment. Adjacency requires manual verification. |
+
+---
+
+#### ATY-03 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 3 words. Conservative. ✓
+- Complete verse or chorus: No. ✓
+- Adjacency to ATY-01 or ATY-02: Cannot be confirmed without surrounding song text. **Manual project-owner verification required before publication.**
+- Reconstruction risk: Three short independent phrases with no shared vocabulary. ✓
+- Could be shorter: No. All three words are necessary for the figurative meaning. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Strong. Two /st/ clusters — one initial ("stands") and one initial in "still" — plus the diphthong /aɪ/ in "time." ✓
+- Listening value: Strong. Short, clear, and slow in this song. ✓
+- Practical vocabulary: "time," "stand still," and the figurative expression itself are all widely applicable. ✓
+- Real-life use: Strong. "Time stands still" and "stand still" appear frequently in everyday speech and writing. ✓
+- Beginner/intermediate accessibility: A2–B1. The words are simple; the figurative meaning requires brief explanation, making it slightly above beginner but appropriate for this level. ✓
+- Exercise potential: Excellent. The literal vs. figurative distinction creates a natural exercise with no song text required. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "TIME" and "STILL" |
+| Difficult vowel | The diphthong /aɪ/ in "time" — Spanish speakers may say "tim" with a short "i" instead |
+| Difficult consonant (1) | Initial /st/ cluster in "stands" — Spanish speakers commonly add "e" before "st" |
+| Difficult consonant (2) | Initial /st/ cluster in "still" — same pattern |
+| Difficult consonant (3) | Final consonant cluster /-ndz/ in "stands" — can be simplified to "-nz" in natural speech |
+| Connected speech | "Stands still" flows as a unit; the two "st" clusters in quick succession are a listening challenge |
+| Reduction | "stands" in natural fast speech → the "-nds" cluster simplifies to "-nz" |
+| Singer-specific variation | Delivered slowly and clearly in this song — minimal distortion |
+| Neutral learning pronunciation | Natural spoken English at a careful pace |
+| Escríbelo como suena | **taim · stanz · estil** |
+| Possible misleading spelling | "taim" — the "ai" must glide (diphthong), not be two separate vowels. "stanz" — the initial "st" is a cluster, not "es-tan". "estil" — the added "e" helps Spanish speakers but must not become "es-til" with full stress on "es". |
+| Final learner-facing pronunciation | **taim · stanz · estil** |
+
+Nota para el aprendiz: en "taim," la vocal "ai" desliza suavemente de "a" a "i" — es un solo sonido continuo. En "stanz" y "estil," los dos grupos "st" son el mayor reto: practica con el audio oficial para acostumbrarte al ritmo.
+
+**Natural meaning**
+
+- Literal sense: Time (the force) stands (remains) still (motionless) — which is physically impossible.
+- Natural Spanish meaning: "El tiempo se detiene" — expresión figurada para describir un momento tan intenso, hermoso, o emocionante que parece que el tiempo se para.
+- Context limitation: The figurative meaning stands alone. No song context required once explained. ✓
+- Standalone usefulness: Excellent. "Time stands still" is a widely used figurative expression in English. "Stand still" also functions as a literal instruction ("Please stand still").
+- Possible ambiguity: "Still" has two common meanings in English: (a) motionless, as used here, and (b) "todavía" (still waiting, still here). The lesson must clarify that in this fragment, "still" means motionless — not "todavía."
+- Final learner-facing explanation: "El tiempo se detiene" — es una expresión figurada. Nadie puede detener el tiempo de verdad, pero usamos esta frase para describir momentos tan especiales, emocionantes o hermosos que parece que el tiempo se para. Importante: aquí "still" no significa "todavía" — significa "inmóvil."
+
+**Vocabulary**
+
+*time — tiempo*
+- Natural Spanish explanation: El tiempo — la duración, el reloj, las horas. Una de las palabras más comunes en inglés.
+- Original example: "I don't have time to explain everything right now."
+- Spanish meaning of example: "No tengo tiempo para explicar todo ahora mismo."
+- Real-life usage note: Used in dozens of everyday expressions. Extremely high frequency.
+
+*stand still / stands still — quedarse quieto / detenerse*
+- Natural Spanish explanation: "Stand still" literalmente = quedarse inmóvil, sin moverse. Figuradamente = que el tiempo se detiene.
+- Original example: "Please stand still while I take the photo."
+- Spanish meaning of example: "Por favor quédate quieto mientras tomo la foto."
+- Real-life usage note: Literal use is very common as an instruction ("stand still"). Figurative use in "time stands still" describes overwhelming emotional moments.
+
+*still — aquí: inmóvil (no "todavía")*
+- Natural Spanish explanation: En este fragmento, "still" significa sin movimiento. No confundir con "still" = todavía (como en "I'm still here").
+- Original example: "The lake was still and peaceful in the early morning."
+- Spanish meaning of example: "El lago estaba tranquilo e inmóvil en la mañana temprano."
+- Real-life usage note: Two very different meanings of the same word. This lesson teaches the less common meaning, which prevents future confusion.
+
+**Original real-life example**
+
+"When I heard that song for the first time, time stood still."
+*(Cuando escuché esa canción por primera vez, sentí que el tiempo se detuvo.)*
+
+**Original exercise**
+
+Tipo: Literal o figurada — elige y escribe.
+
+Instrucción: ¿Cuál de estas situaciones usaría la expresión "time stands still" de forma figurada?
+
+Opciones:
+- A. Una clase de ciencias que explica que el tiempo siempre avanza.
+- B. Un momento en el que ves algo tan hermoso que lo quieres recordar para siempre.
+- C. Un reloj que se quedó sin batería.
+
+Respuesta correcta: B *(Nota interna — eliminar antes de publicación)*
+
+Tarea adicional: Describe en una frase un momento en el que sentiste que el tiempo se detuvo. Puedes escribirlo en español o en inglés.
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 4 | 20 | 16 |
+| Learner accessibility | 4 | 15 | 12 |
+| Practical language value | 4 | 15 | 12 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 5 | 10 | 10 |
+| Exercise potential | 5 | 10 | 10 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 5 | 10 | 10 |
+| **Total** | | **100** | **86** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section
+- [x] Fragment is as short as educationally necessary
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Adjacency uncertainty flagged for manual verification
+
+**Final decision: Approved**
 
 ---
 
@@ -443,13 +784,15 @@ This check must be run per song after all three fragment slots for that song are
 
 | Check | Status |
 |---|---|
-| ATY-01, ATY-02, and ATY-03 are not adjacent in the song | Pending |
-| The three fragments do not, in sequence, reconstruct a verse | Pending |
-| The three fragments do not, in sequence, reconstruct a chorus | Pending |
-| The order in the ebook does not follow song order unnecessarily | Pending |
-| Each fragment has a distinct educational purpose | Pending |
-| Removing any one fragment leaves the other two without a lyric-sequence function | Pending |
-| Total quoted material across ATY-01, ATY-02, and ATY-03 remains conservative | Pending |
+| ATY-01, ATY-02, and ATY-03 are not adjacent in the song | **Manual project-owner verification required** — adjacency cannot be confirmed without reviewing surrounding song text |
+| The three fragments do not, in sequence, reconstruct a verse | **Low risk** — three 3-word phrases (9 words total) with entirely distinct vocabulary and grammar cannot reconstruct a verse |
+| The three fragments do not, in sequence, reconstruct a chorus | **Low risk** — same rationale as above; no shared words or connected structure across the three fragments |
+| The order in the ebook does not follow song order unnecessarily | **Addressed** — ebook order (One step closer → Heart beats fast → Time stands still) was intentionally set to a different sequence from how the fragments were identified in the song |
+| Each fragment has a distinct educational purpose | **Pass** — ATY-01: progress/goals vocabulary + diphthong; ATY-02: emotional reaction + multiple consonant clusters; ATY-03: figurative expression + two /st/ clusters |
+| Removing any one fragment leaves the other two without a lyric-sequence function | **Pass** — the three phrases share no vocabulary, grammar, or sequential context |
+| Total quoted material across ATY-01, ATY-02, and ATY-03 remains conservative | **Pass** — 9 words total; 3 words per fragment |
+
+**A Thousand Years cross-fragment result:** Low reconstruction risk. Manual adjacency verification by the project owner is required before PDF publication. All other checks pass.
 
 ### Still Loving You
 
