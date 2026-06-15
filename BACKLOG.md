@@ -94,19 +94,22 @@ Status: done.
   - ATY-01 "One step closer" — Approved (score 87/100)
   - ATY-02 "Heart beats fast" — Approved (score 91/100)
   - ATY-03 "Time stands still" — Approved (score 86/100)
-- Ebook draft phrase blocks for A Thousand Years updated with approved content.
-- Adjacency verification pending — project owner must confirm fragments are not adjacent in the song before publication.
-- Official media link for A Thousand Years pending verification.
+- Still Loving You review complete (branch: `content/phase-0-ebook-fragments-still-loving-you`):
+  - SLY-01 "I will be there" — Approved (score 90/100)
+  - SLY-02 "All the way from the start" — Approved (score 81/100)
+  - SLY-03 "I can't get through" — Approved (score 91/100)
+  - Non-adjacency confirmed by project owner. Vocalist accent documented; neutral pronunciation prioritized.
+- Ebook draft phrase blocks for A Thousand Years and Still Loving You updated with approved content.
+- Official media links for all songs pending verification before PDF export.
 
 Branch: `content/phase-0-ebook-fragment-review`
 
-Status: In progress — 3 of 9 fragments approved; 6 slots pending manual input.
+Status: In progress — 6 of 9 fragments approved; 3 slots pending manual input.
 
 Remaining work:
 
-- Still Loving You fragments: 3 slots pending manual input (SLY-01, SLY-02, SLY-03).
 - The Reason fragments: 3 slots pending manual input (TR-01, TR-02, TR-03).
-- Cross-song final review: pending.
+- Cross-song final review: pending (after TR approved).
 - Final content integration: pending.
 - PDF design and delivery: blocked until all 9 fragments approved.
 

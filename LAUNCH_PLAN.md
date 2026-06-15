@@ -69,10 +69,10 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Provisional song selection | Complete — `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md` (A Thousand Years, Still Loving You, The Reason) |
 | Editorial draft | Complete — `docs/content/PHASE_0_EBOOK_DRAFT.md` (nine fragment placeholders; publication blocked on fragment review) |
 | Fragment review framework | Complete — `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` (nine slots defined) |
-| Fragment approval — A Thousand Years | Complete — ATY-01 "One step closer" (87/100), ATY-02 "Heart beats fast" (91/100), ATY-03 "Time stands still" (86/100). All approved. Adjacency verification pending project owner. |
-| Fragment approval — Still Loving You | Pending — manual fragment input required (SLY-01, SLY-02, SLY-03) |
+| Fragment approval — A Thousand Years | Complete — ATY-01 "One step closer" (87/100), ATY-02 "Heart beats fast" (91/100), ATY-03 "Time stands still" (86/100). All approved. |
+| Fragment approval — Still Loving You | Complete — SLY-01 "I will be there" (90/100), SLY-02 "All the way from the start" (81/100), SLY-03 "I can't get through" (91/100). All approved. Vocalist accent documented; neutral pronunciation prioritized. |
 | Fragment approval — The Reason | Pending — manual fragment input required (TR-01, TR-02, TR-03) |
-| PDF design | Blocked — 6 of 9 fragment slots pending |
+| PDF design | Blocked — 3 of 9 fragment slots pending |
 | PDF template | Pending — `design/phase-0-ebook-pdf-template` |
 | PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery` |
 | Email provider setup | Pending — after PDF and consent approach confirmed |

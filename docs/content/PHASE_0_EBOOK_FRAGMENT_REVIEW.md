@@ -4,19 +4,21 @@
 
 ## 1. Document Status
 
-**Status:** In progress — A Thousand Years review complete; Still Loving You and The Reason pending
-**Song fragments received:** 3 of 9
-**Song fragments approved:** 3 of 9
-**Pronunciation drafts completed:** 3 of 9
-**Natural meanings completed:** 3 of 9
-**Exercises completed:** 3 of 9
+**Status:** In progress — A Thousand Years and Still Loving You reviews complete; The Reason pending
+**Song fragments received:** 6 of 9
+**Song fragments approved:** 6 of 9
+**Pronunciation drafts completed:** 6 of 9
+**Natural meanings completed:** 6 of 9
+**Exercises completed:** 6 of 9
 **Publication ready:** No
 
-**Phase status:** In progress — ATY-01, ATY-02, and ATY-03 reviewed and approved; manual fragment input pending for SLY-01–03 and TR-01–03
+**Phase status:** In progress — ATY-01/02/03 and SLY-01/02/03 reviewed and approved; manual fragment input pending for TR-01–03
 
-The three A Thousand Years fragments were manually supplied by the project owner. No lyrics were retrieved from external sources. No surrounding song text has been added. Approved fragments: "One step closer" (ATY-01), "Heart beats fast" (ATY-02), "Time stands still" (ATY-03).
+The A Thousand Years fragments were manually supplied in `content/phase-0-ebook-fragments-a-thousand-years`. Approved: "One step closer" (ATY-01), "Heart beats fast" (ATY-02), "Time stands still" (ATY-03). No lyrics were retrieved from external sources.
 
-The SLY and TR fragment text fields remain `[PENDING_MANUAL_INPUT]`.
+The Still Loving You fragments were manually supplied in `content/phase-0-ebook-fragments-still-loving-you`. Project owner confirmed non-adjacency and absence of verse/chorus reconstruction. Vocalist accent documented; neutral English pronunciation prioritized. Approved: "I will be there" (SLY-01), "All the way from the start" (SLY-02), "I can't get through" (SLY-03). No surrounding song text was stored.
+
+The TR fragment text fields remain `[PENDING_MANUAL_INPUT]`.
 
 ---
 
@@ -600,75 +602,433 @@ Tarea adicional: Describe en una frase un momento en el que sentiste que el tiem
 
 ---
 
-### SLY-01
+### SLY-01 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | SLY-01 |
 | Song | Still Loving You |
 | Artist | Scorpions |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Rock-vocal listening challenge from a slower ballad section (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending — singer accent requires special attention in pronunciation drafting |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | The vocalist's non-native English accent must be documented in the Escríbelo como suena draft. Fragments must come from slower ballad sections only. |
+| Fragment text | **I will be there** |
+| Word count | 4 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | Common promise and availability expression; "will" for future/intention; voiced TH in "there"; beginner-accessible rhythm |
+| Learner level | A1–A2 |
+| Status | **Approved** |
+| Length review | Pass — 4 words; conservative |
+| Sequential-risk review | Pass — project owner confirmed non-adjacency to SLY-02 and SLY-03; fragments do not reconstruct a verse or chorus |
+| Editorial score | 90 / 100 |
+| Pronunciation review | Pass — vocalist accent documented; neutral pronunciation prioritized |
+| Natural meaning review | Pass |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | The vocalist's non-native English delivery is noted but does not impair this fragment's teachability. "There" is an excellent entry point for the voiced TH sound. "Will" introduces a core grammar point (future intention) suitable for A1–A2 learners. |
 
 ---
 
-### SLY-02
+#### SLY-01 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 4 words. Conservative. ✓
+- Complete verse or chorus: No. ✓
+- Adjacency to SLY-02 or SLY-03: **Project owner confirmed non-adjacent. Verification complete.** ✓
+- Reconstruction risk: Three independent short phrases with distinct vocabulary confirmed non-adjacent. Low risk. ✓
+- Could be shorter: No. All four words are necessary to communicate the promise. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Strong. The voiced TH in "there" is one of the most common pronunciation challenges for Spanish speakers. The /w/ onset in "will" and the reduced or connected speech across "I will be" also offer listening value. ✓
+- Listening value: Strong. Delivered clearly in the ballad section. Short, slow, and isolatable. ✓
+- Practical vocabulary: "will," "be there," and "there" are all extremely high-frequency. ✓
+- Real-life use: Excellent. "I will be there" is a universal promise of presence or support — used daily in personal and professional contexts. ✓
+- Beginner/intermediate accessibility: A1–A2. Four common words, natural subject–auxiliary–verb structure. ✓
+- Exercise potential: Excellent. A situation-choice exercise lets learners identify when this promise fits without needing additional song text. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "WILL" and "THERE" |
+| Difficult vowel | The /ɛ/ in "there" — closer to "e" in Spanish but paired with "r" (vowel + r combination) |
+| Difficult consonant | The voiced TH /ð/ in "there" — does not exist in Spanish; approximated with "d" |
+| Connected speech | "I will be" flows as a natural unit; in fast speech can reduce to "I'll be" |
+| Reduction | "I will" commonly contracts to "I'll" /aɪl/ in informal speech — worth noting as a listening point |
+| Singer-specific variation | The vocalist's non-native English accent means the "th" in "there" may be rendered closer to "d" or "z." This aligns with the Escríbelo como suena convention (voiced TH → d). The difference between singer delivery and neutral English is minimal for this fragment. |
+| Neutral learning pronunciation | "I will be there" as natural spoken American or British English |
+| Escríbelo como suena | **ai · wil · bi · dér** |
+| Possible misleading spelling | "wil" — Spanish speakers may over-stress the "i." The English /w/ is softer than Spanish "v" — closer to a "u" glide. "dér" — the "d" represents the voiced TH, not a Spanish "d." Add learner notes for both. |
+| Final learner-facing pronunciation | **ai · wil · bi · dér** |
+
+Nota para el aprendiz: la "d" en "dér" no es la "d" del español — es el sonido "th" del inglés, que se hace apoyando levemente la lengua en los dientes y dejando salir el aire con voz. Practica con el audio oficial. También nota que en inglés informal "I will be" se contrae a "I'll be" — es muy común escucharla así en conversaciones.
+
+**Natural meaning**
+
+- Literal sense: I + will (future marker) + be + there (that place) = I will be present in that place.
+- Natural Spanish meaning: "Estaré ahí" / "Puedes contar conmigo" — una promesa de presencia física o de apoyo emocional.
+- Context limitation: Stands alone completely without song context. ✓
+- Standalone usefulness: Excellent. One of the most common English reassurances in personal and professional life.
+- Possible ambiguity: "There" can mean a physical location or abstract availability ("I'm here for you"). The lesson teaches both.
+- Final learner-facing explanation: "Estaré ahí" — una promesa directa de presencia o apoyo. En inglés se usa tanto para compromisos físicos ("voy a ir") como para apoyo emocional ("puedes contar conmigo"). Es una frase muy común en mensajes, conversaciones y compromisos del día a día.
+
+**Vocabulary**
+
+*will — auxiliar de futuro / promesa*
+- Natural Spanish explanation: "Will" convierte un verbo en futuro o promesa. "I will go" = voy a ir / iré. Es una de las palabras más importantes del inglés.
+- Original example: "I will call you as soon as I finish the meeting."
+- Spanish meaning of example: "Te llamaré en cuanto termine la reunión."
+- Real-life usage note: Used in formal and informal speech for future plans, promises, and offers. Contracts to "'ll" in informal speech: "I'll call you."
+
+*be there — estar ahí / estar presente*
+- Natural Spanish explanation: La combinación "be there" = estar en ese lugar o estar disponible para alguien.
+- Original example: "Whatever happens, I will be there to support you."
+- Spanish meaning of example: "Pase lo que pase, estaré ahí para apoyarte."
+- Real-life usage note: Common in both literal (I'll be at the event) and figurative (I'll support you) contexts.
+
+*there — ahí / allí*
+- Natural Spanish explanation: "There" = ahí o allí, un lugar diferente de donde estás. También aparece en "there is / there are" para indicar que algo existe.
+- Original example: "The library is over there, next to the park."
+- Spanish meaning of example: "La biblioteca está por allá, al lado del parque."
+- Real-life usage note: Extremely common in directions and instructions. Also in idioms: "be there for someone" = apoyar a alguien.
+
+**Original real-life example**
+
+"Don't worry about the presentation — I will be there to help you."
+*(No te preocupes por la presentación — estaré ahí para ayudarte.)*
+
+**Original exercise**
+
+Tipo: Elige la situación real.
+
+Instrucción: ¿En cuál de estas situaciones sería natural decir "I will be there"?
+
+Opciones:
+- A. Un amigo te invita a su cumpleaños y tú confirmas que vas a ir.
+- B. Estás describiendo el tiempo que hace hoy.
+- C. Estás explicando cómo se prepara una receta.
+
+Respuesta correcta: A *(Nota interna — eliminar antes de publicación)*
+
+Tarea adicional: Escribe tu propia promesa usando "I will be there" o "I will be there for you." Puede ser real o imaginaria.
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 4 | 20 | 16 |
+| Learner accessibility | 5 | 15 | 15 |
+| Practical language value | 5 | 15 | 15 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 5 | 10 | 10 |
+| Exercise potential | 4 | 10 | 8 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 5 | 10 | 10 |
+| **Total** | | **100** | **90** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section (project owner confirmed)
+- [x] Fragment is as short as educationally necessary
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Singer-specific accent documented; neutral pronunciation prioritized
+
+**Final decision: Approved**
+
+---
+
+### SLY-02 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | SLY-02 |
 | Song | Still Loving You |
 | Artist | Scorpions |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Connected speech or vowel clarity pattern useful for beginner/intermediate learners (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending — singer accent requires special attention in pronunciation drafting |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | Confirm fragment comes from a slower section. Document if pronunciation differs significantly from standard American or British English. |
+| Fragment text | **All the way from the start** |
+| Word count | 6 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | "All the way" and "from the start" as high-frequency expressions; connected speech across six short words; consonant clusters in "from" and "start" |
+| Learner level | A2–B1 |
+| Status | **Approved** |
+| Length review | Pass — 6 words; at upper end of target but justified as an indivisible phrase unit |
+| Sequential-risk review | Pass — project owner confirmed non-adjacency to SLY-01 and SLY-03; fragments do not reconstruct a verse or chorus |
+| Editorial score | 81 / 100 |
+| Pronunciation review | Pass — multiple challenges documented; singer delivery noted |
+| Natural meaning review | Pass |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | At 6 words, this fragment is at the upper end of the conservative target. The educational justification is strong: both "all the way" and "from the start" are independently common and useful, and together they form a single natural phrase unit. The consonant cluster in "start" and the connected speech across 6 short words provide clear pronunciation teaching opportunities. The singer's non-native delivery adds a listening-contrast teaching point. |
 
 ---
 
-### SLY-03
+#### SLY-02 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 6 words. At the upper end of the 3–7 word target. ✓ (Justified — the phrase unit cannot be shortened without losing the educational value of both "all the way" and "from the start.")
+- Complete verse or chorus: No. ✓
+- Adjacency to SLY-01 or SLY-03: **Project owner confirmed non-adjacent. Verification complete.** ✓
+- Reconstruction risk: Three independent phrases from different points in the song, confirmed non-adjacent. Low risk. ✓
+- Could be shorter: "From the start" (4 words) is a standalone expression. However, "All the way from the start" as a complete phrase unit adds additional teaching value ("all the way" as a separate high-frequency expression). Decision: keep at 6 words for richer teaching content; length justification documented here.
+
+**Educational value**
+
+- Pronunciation opportunity: Strong. Five distinct challenges across 6 words: the open /ɔː/ in "all," the /w/ onset in "way," the /eɪ/ diphthong in "way," the /fr/ cluster in "from," and the /st/ cluster in "start." ✓
+- Listening value: Acceptable. Six short words flow together as a natural phrase. The pace in a rock ballad section may make isolation slightly harder than a 3–4 word fragment, but the phrase is still conservative. ✓
+- Practical vocabulary: Excellent. "From the start" is one of the most commonly used time expressions in English. "All the way" is widely used to indicate completeness or the full distance of a process. ✓
+- Real-life use: Excellent. Both sub-expressions appear constantly in everyday conversation, writing, and media. ✓
+- Beginner/intermediate accessibility: A2–B1. Individual words are simple; the phrase requires context explanation to distinguish "all the way" from "the way," but this is part of the educational value. ✓
+- Exercise potential: Excellent. Writing an original sentence with "from the start" produces a practical and personal exercise. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "ALL" and "START" |
+| Difficult vowel (1) | The /ɔː/ in "all" — more open and longer than Spanish "o" |
+| Difficult vowel (2) | The /eɪ/ diphthong in "way" — Spanish speakers may produce a flat "e" instead of gliding |
+| Difficult consonant (1) | The /fr/ cluster in "from" — Spanish allows "fr" (frío, frente) but the vowel /ʌ/ after it is unfamiliar |
+| Difficult consonant (2) | The /st/ cluster in "start" — Spanish speakers commonly insert "e" before "st" |
+| Connected speech | "All the way" flows as a single rhythmic unit; both instances of "the" are weak/reduced |
+| Reduction | Both instances of "the" reduce to a brief, unstressed "de" |
+| Singer-specific variation | The vocalist's non-native English delivery may affect the /ɔː/ in "all" and the "r" coloring in "from" and "start." Learners should use neutral English as the pronunciation target, not the singer's exact delivery. |
+| Neutral learning pronunciation | Careful spoken American or British English at a moderate pace |
+| Escríbelo como suena | **ól · de · uéi · from · de · estárt** |
+| Possible misleading spelling | "ól" — must be an open, long sound; not the closed Spanish "o." "uéi" — the "u" starts the diphthong and does not produce a strong "u" vowel. "from" — the vowel after "fr" is short and central; avoid over-pronouncing the "o." "estárt" — the added "e" helps Spanish speakers but must not become "es-tárt" with full stress on "es." |
+| Final learner-facing pronunciation | **ól · de · uéi · from · de · estárt** |
+
+Nota para el aprendiz: en "ól," la vocal es más abierta que la "o" del español — imagina que abres un poco más la boca. Las dos "de" son muy suaves y rápidas, casi no se notan al hablar. En "estárt," el grupo "st" es un reto clásico para hispanohablantes; practica con el audio oficial para escuchar cómo suena en inglés.
+
+**Natural meaning**
+
+- Literal sense: All (complete) + the way (the path/distance) + from (starting point) + the start (the beginning).
+- Natural Spanish meaning: "Desde el principio" / "Desde el comienzo mismo" / "De principio a fin." Used to emphasize that something has been consistent or present from the very first moment.
+- Context limitation: Stands alone without song context. ✓
+- Standalone usefulness: Excellent. "From the start" is one of the most common time-anchoring expressions in English. "All the way" as an intensifier appears in countless everyday sentences.
+- Possible ambiguity: "All the way" can mean "the entire physical distance" (we walked all the way to the station) or completeness/duration (I supported you all the way). The lesson teaches both.
+- Final learner-facing explanation: "Desde el principio" / "De punta a punta, desde el comienzo" — "from the start" se usa para decir que algo comenzó en el primer momento y ha continuado. "All the way" añade énfasis: no solo desde el principio, sino completamente, sin interrupciones. Juntas, estas expresiones son muy comunes en inglés para hablar de procesos, relaciones o esfuerzos que empezaron desde cero.
+
+**Vocabulary**
+
+*all the way — todo el camino / completamente*
+- Natural Spanish explanation: "All the way" = de principio a fin, sin parar, en toda su extensión. Puede ser literal (caminamos todo el camino) o figurado (te apoyé en todo el proceso).
+- Original example: "She ran all the way to the station without stopping."
+- Spanish meaning of example: "Corrió hasta la estación sin parar."
+- Real-life usage note: Used literally for distance and figuratively for completeness or unwavering support. Very common in informal speech.
+
+*from the start — desde el principio*
+- Natural Spanish explanation: "From the start" = desde el principio, desde el primer momento. Se usa para decir que algo estuvo presente o fue cierto desde el comienzo.
+- Original example: "I knew from the start that this project would take months."
+- Spanish meaning of example: "Supe desde el principio que este proyecto tomaría meses."
+- Real-life usage note: Extremely common in English for time references, personal stories, and explanations. Used in formal and informal contexts.
+
+*start — comienzo / inicio / empezar*
+- Natural Spanish explanation: "Start" como sustantivo = el comienzo. Como verbo = empezar. Aquí funciona como sustantivo en "from the start."
+- Original example: "A good start makes the rest of the journey easier."
+- Spanish meaning of example: "Un buen comienzo hace el resto del camino más fácil."
+- Real-life usage note: Extremely versatile — appears in "from the start," "fresh start," "start over," "head start." One of the most common words in English.
+
+**Original real-life example**
+
+"I believed in this idea from the start — all the way from the first conversation."
+*(Creí en esta idea desde el principio — desde la primera conversación.)*
+
+**Original exercise**
+
+Tipo: Escribe una frase original.
+
+Instrucción: Usa "from the start" para escribir una frase sobre algo que empezaste desde cero — puede ser aprender inglés, un proyecto, una amistad, o cualquier proceso tuyo.
+
+Ejemplo de respuesta: "From the start, I knew that learning English would take time and practice."
+*(Desde el principio, supe que aprender inglés iba a tomar tiempo y práctica.)*
+
+*(Este es solo un ejemplo — tu frase puede ser completamente diferente.)*
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 4 | 20 | 16 |
+| Learner accessibility | 4 | 15 | 12 |
+| Practical language value | 5 | 15 | 15 |
+| Listening value | 3 | 10 | 6 |
+| Standalone meaning | 4 | 10 | 8 |
+| Exercise potential | 4 | 10 | 8 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 4 | 10 | 8 |
+| **Total** | | **100** | **81** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section (project owner confirmed)
+- [x] Fragment is as short as educationally necessary (6 words is the minimum for this phrase unit)
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Singer-specific accent documented; neutral pronunciation prioritized
+
+**Final decision: Approved**
+
+---
+
+### SLY-03 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | SLY-03 |
 | Song | Still Loving You |
 | Artist | Scorpions |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Useful expression that remains understandable outside the song context (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending — singer accent requires special attention in pronunciation drafting |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | After SLY-01 and SLY-02 are received, run the sequential-risk check before accepting SLY-03. Three fragments from Still Loving You must not, in combination, reconstruct any verse or recognizable section of the song. |
+| Fragment text | **I can't get through** |
+| Word count | 4 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | "can't" vs "can" distinction; phrasal verb "get through" with context-dependent meaning; unvoiced TH in "through"; consecutive consonant sounds |
+| Learner level | A2–B1 |
+| Status | **Approved** |
+| Length review | Pass — 4 words; conservative |
+| Sequential-risk review | Pass — project owner confirmed non-adjacency to SLY-01 and SLY-02; fragments do not reconstruct a verse or chorus |
+| Editorial score | 91 / 100 |
+| Pronunciation review | Pass — "through" requires special learner note on the TH + r combination; singer delivery noted |
+| Natural meaning review | Pass — multiple meanings of "get through" are an explicit teaching point |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | The unvoiced TH in "through" is the most challenging sound in this fragment — neither the exact sound nor the letter combination exists in Spanish. The Escríbelo como suena approximation ("zrú") is the closest readable option using the convention table but requires a clear learner note. The multiple meanings of "get through" are an excellent teaching opportunity. Singer delivery of "through" may differ from neutral English due to the vocalist's accent — learners should use a neutral model as their pronunciation target. |
+
+---
+
+#### SLY-03 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 4 words. Conservative. ✓
+- Complete verse or chorus: No. ✓
+- Adjacency to SLY-01 or SLY-02: **Project owner confirmed non-adjacent. Verification complete.** ✓
+- Reconstruction risk: Three independent phrases from different points in the song, confirmed non-adjacent. Low risk. ✓
+- Could be shorter: No. All four words are necessary to produce the phrasal verb "get through" with subject and negation. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Excellent. Four distinct challenges: the /æ/ vowel in "can't," the final /t/ of "can't" (distinguishing it from "can"), the hard /ɡ/ and final consonant in "get," and the unvoiced TH /θ/ + /r/ cluster in "through." ✓
+- Listening value: Strong. The audible difference between "can" and "can't" is a genuine listening skill that many Spanish-speaking learners find difficult. ✓
+- Practical vocabulary: Excellent. "Can't" is one of the most essential contractions. "Get through" is one of the most versatile and common phrasal verbs in everyday English. ✓
+- Real-life use: Excellent. Both the "communication" meaning and the "overcoming difficulty" meaning of "get through" appear constantly in everyday conversation. ✓
+- Beginner/intermediate accessibility: A2–B1. "Can't" is beginner-level; "get through" as a phrasal verb is intermediate but explained clearly. ✓
+- Exercise potential: Excellent. Matching different meanings of "get through" to different contexts is a natural, original exercise with no song text needed. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "CAN'T" and "THROUGH" |
+| Difficult vowel | The /æ/ in "can't" — more open than Spanish "a"; positioned between "a" and "e" |
+| Difficult consonant (1) | The final /t/ in "can't" — essential for distinguishing from "can"; must be audible even when soft |
+| Difficult consonant (2) | The unvoiced TH /θ/ in "through" — does not exist in Spanish; approximated with "z" or "s" |
+| Difficult consonant (3) | The /θr/ cluster in "through" — unvoiced TH immediately followed by "r" creates a cluster with no Spanish equivalent |
+| Connected speech | "Get through" flows as one unit in natural speech; the final /t/ of "get" may soften before "through" |
+| Reduction | In fast speech, "can't" may reduce its vowel but the final /t/ remains the key distinguishing feature |
+| Singer-specific variation | The vocalist's non-native English accent may render the TH in "through" as "d," "z," or "t." This does not invalidate the teaching opportunity — it is a useful contrast for learners to compare with neutral English. |
+| Neutral learning pronunciation | Careful spoken English: "can't" with audible final /t/; "get" clearly articulated; "through" with tongue between teeth for TH |
+| Escríbelo como suena | **ai · cant · guet · zrú** |
+| Possible misleading spelling | "cant" — in Spanish, this could be read like the start of "canto." The /æ/ is slightly more open than Spanish "a." "guet" — the "gu" before "e/i" is needed to represent the hard /g/; without it, "get" would sound like "jet." "zrú" — "zr" is not a natural Spanish cluster; it is a compromise to represent TH + r + long U. Clear learner note required. |
+| Final learner-facing pronunciation | **ai · cant · guet · zrú** |
+
+Nota para el aprendiz: el sonido "th" en "through" no existe en español. En "zrú," la "z" es solo una aproximación — para el sonido real, coloca la punta de la lengua levemente entre los dientes y deja salir el aire sin voz, luego pasa a la "r" y a la "u" larga. Practica con el audio oficial de un hablante neutro de inglés. La "t" al final de "cant" es importante — sin ella suena como "can" (puedo), que tiene el significado opuesto.
+
+**Natural meaning**
+
+- Literal sense: I (subject) + can't (cannot) + get through (phrasal verb with contextual meaning).
+- Natural Spanish meaning: "No puedo comunicarme" / "No puedo superar esto" / "No puedo pasar" — the meaning depends on context:
+  - Emotional/relational: "No puedo superarlo" / "No puedo salir de esto"
+  - Communication: "No puedo comunicarme" / "No puedo contactar a alguien"
+  - Physical: "No puedo pasar" (through a crowd, obstacle, etc.)
+- Context limitation: No surrounding song text is needed to explain the phrase — the ambiguity itself is the teaching point. ✓
+- Standalone usefulness: Excellent. "Get through" is one of the most versatile phrasal verbs in English, and learners encounter it constantly.
+- Possible ambiguity: Three common meanings exist. The lesson teaches all three and lets learners identify which applies in different real-life situations.
+- Final learner-facing explanation: "No puedo comunicarme / No puedo superar esto" — "get through" es un phrasal verb con varios significados según el contexto: (1) superar un momento difícil ("I got through the exam" = pasé el examen), (2) comunicarse con alguien ("I can't get through to her" = no puedo comunicarme con ella), (3) pasar físicamente por algo. La ambigüedad es parte de la lección — aprender a reconocer el contexto es la habilidad clave.
+
+**Vocabulary**
+
+*can't — no puedo / no es posible*
+- Natural Spanish explanation: "Can't" = contracción de "cannot." Se usa para expresar incapacidad, imposibilidad o negativa. La diferencia entre "can" y "can't" es crítica — solo la "t" final las distingue al escuchar.
+- Original example: "I can't find my keys anywhere — I've looked in every room."
+- Spanish meaning of example: "No encuentro mis llaves en ningún lado — busqué en cada habitación."
+- Real-life usage note: One of the most common contractions in English. In American English, the final /t/ is often a quick glottal stop, not a full "t."
+
+*get through — superar / comunicarse / pasar*
+- Natural Spanish explanation: Un phrasal verb con tres sentidos principales: (1) superar algo difícil, (2) comunicarse con alguien, (3) pasar físicamente por algo. El significado cambia completamente según el contexto.
+- Original example: "Somehow, we got through the most difficult year of our lives."
+- Spanish meaning of example: "De alguna manera, superamos el año más difícil de nuestras vidas."
+- Real-life usage note: Extremely common in everyday conversation and writing. All three meanings appear regularly. Recognizing the context is the key skill for using this phrasal verb correctly.
+
+*through — a través de / por*
+- Natural Spanish explanation: "Through" = a través de, por dentro, de un lado al otro. Aparece en muchas expresiones del inglés cotidiano.
+- Original example: "She walked through the crowd to reach the front."
+- Spanish meaning of example: "Caminó entre la multitud para llegar al frente."
+- Real-life usage note: Used in physical (through the door) and figurative (get through a challenge) contexts. The TH sound is one of the most important and distinctive sounds to learn in English.
+
+**Original real-life example**
+
+"I've been trying to call the office all morning but I can't get through."
+*(He estado llamando a la oficina toda la mañana pero no puedo comunicarme.)*
+
+**Original exercise**
+
+Tipo: Elige el significado correcto.
+
+Instrucción: ¿Qué significa "get through" en cada situación? Elige: superar algo / comunicarse / pasar físicamente.
+
+A. "I finally got through to the doctor after three hours on hold."
+→ _______________
+
+B. "I don't know how she got through such a difficult loss."
+→ _______________
+
+C. "We couldn't get through the traffic — the road was completely blocked."
+→ _______________
+
+Respuestas correctas: A → comunicarse · B → superar algo · C → pasar físicamente *(Nota interna — eliminar antes de publicación)*
+
+Tarea adicional: Describe una situación de tu vida real donde usarías "I can't get through" — en cualquiera de sus significados.
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 5 | 20 | 20 |
+| Learner accessibility | 4 | 15 | 12 |
+| Practical language value | 5 | 15 | 15 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 4 | 10 | 8 |
+| Exercise potential | 5 | 10 | 10 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 5 | 10 | 10 |
+| **Total** | | **100** | **91** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section (project owner confirmed)
+- [x] Fragment is as short as educationally necessary
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Singer-specific accent documented; neutral pronunciation prioritized
+
+**Final decision: Approved**
 
 ---
 
@@ -798,13 +1158,15 @@ This check must be run per song after all three fragment slots for that song are
 
 | Check | Status |
 |---|---|
-| SLY-01, SLY-02, and SLY-03 are not adjacent in the song | Pending |
-| The three fragments do not, in sequence, reconstruct a verse | Pending |
-| The three fragments do not, in sequence, reconstruct a chorus | Pending |
-| The order in the ebook does not follow song order unnecessarily | Pending |
-| Each fragment has a distinct educational purpose | Pending |
-| Removing any one fragment leaves the other two without a lyric-sequence function | Pending |
-| Total quoted material across SLY-01, SLY-02, and SLY-03 remains conservative | Pending |
+| SLY-01, SLY-02, and SLY-03 are not adjacent in the song | **Project owner verified** — non-adjacency confirmed manually outside the repository |
+| The three fragments do not, in sequence, reconstruct a verse | **Pass** — three phrases (4 + 6 + 4 = 14 words total) with distinct vocabulary and grammar; confirmed non-adjacent; cannot reconstruct a verse |
+| The three fragments do not, in sequence, reconstruct a chorus | **Pass** — same rationale; confirmed non-adjacent by project owner |
+| The order in the ebook does not follow song order unnecessarily | **Addressed** — ebook order (I will be there → All the way from the start → I can't get through) was set independently of song sequence to reduce sequential reconstruction risk |
+| Each fragment has a distinct educational purpose | **Pass** — SLY-01: promise/availability + "will" + voiced TH; SLY-02: "all the way" + "from the start" + connected speech + consonant clusters; SLY-03: "can't" vs "can" + phrasal verb "get through" + unvoiced TH |
+| Removing any one fragment leaves the other two without a lyric-sequence function | **Pass** — the three phrases share no vocabulary, grammar, or sequential context |
+| Total quoted material across SLY-01, SLY-02, and SLY-03 remains conservative | **Pass** — 14 words total; 4 / 6 / 4 words per fragment |
+
+**Still Loving You cross-fragment result:** Low reconstruction risk. Non-adjacency confirmed by project owner. Vocalist accent documented — neutral English pronunciation prioritized in all three Escríbelo como suena drafts. Still Loving You remains suitable for the ebook. All three fragments approved.
 
 ### The Reason
 
@@ -1217,9 +1579,9 @@ This phase may only be marked complete when all of the following are true:
 - [ ] All ebook draft placeholders corresponding to approved fragments have been updated in `docs/content/PHASE_0_EBOOK_DRAFT.md`.
 - [ ] Final legal-safe review remains acknowledged as a publication requirement.
 
-**Current status:** In progress — review framework complete, manual fragment input pending.
+**Current status:** In progress — 6 of 9 fragments approved (ATY-01/02/03 and SLY-01/02/03). The Reason fragments pending manual input.
 
-No fragments have been received. No completion criteria can be checked off at this time.
+No completion criteria can be checked off until all nine slots receive a final decision.
 
 ---
 

@@ -370,14 +370,14 @@ No necesitas entender todo. Solo escucha con curiosidad.
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_1] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **I will be there** |
+| Como suena | **ai · wil · bi · dér** *(la "d" en "dér" representa el sonido "th" del inglés — apoya la lengua cerca de los dientes y deja salir el aire con voz; en inglés informal "I will be" se contrae a "I'll be")* |
+| Español natural | **Estaré ahí / Puedes contar conmigo** — una promesa directa de presencia o apoyo, usada en situaciones personales y profesionales. |
+| Vocabulario útil | **will** = futuro / promesa (auxiliar) · **be there** = estar ahí / estar presente · **there** = ahí / allí |
+| Úsalo así | "Whatever happens, I will be there to support you." *(Pase lo que pase, estaré ahí para apoyarte.)* |
+| Ejercicio | Elige la situación donde "I will be there" sería natural: A) Un amigo te invita a su cumpleaños y confirmas que irás · B) Estás describiendo el tiempo que hace · C) Estás explicando una receta. |
 
-**Repite:** Escucha nuevamente, repite lentamente y luego intenta decirlo sin mirar la guía.
+**Repite:** Escucha el fragmento en la fuente oficial, repítelo lentamente con una pronunciación clara y después compáralo con la interpretación del cantante.
 
 - [ ] Completé este fragmento
 
@@ -389,14 +389,14 @@ No necesitas entender todo. Solo escucha con curiosidad.
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_2] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **All the way from the start** |
+| Como suena | **ól · de · uéi · from · de · estárt** *(en "ól" la vocal es más abierta que la "o" en español; las dos "de" son suaves y rápidas; en "estárt" el grupo "st" es el mayor reto)* |
+| Español natural | **Desde el principio / De punta a punta, desde el comienzo** — para decir que algo estuvo presente o fue cierto desde el primer momento. |
+| Vocabulario útil | **all the way** = todo el camino / completamente / de punta a punta · **from the start** = desde el principio / desde el comienzo |
+| Úsalo así | "I supported her from the start — all the way to graduation day." *(La apoyé desde el principio, hasta el día de su graduación.)* |
+| Ejercicio | Escribe una frase original usando "from the start" sobre algo que empezaste desde cero — puede ser aprender inglés, un proyecto, o cualquier proceso tuyo. |
 
-**Repite:** Lee en voz alta siguiendo la guía de pronunciación. Luego escucha el audio oficial y nota las diferencias.
+**Repite:** Escucha el fragmento en la fuente oficial, repítelo lentamente con una pronunciación clara y después compáralo con la interpretación del cantante.
 
 - [ ] Completé este fragmento
 
@@ -408,14 +408,14 @@ No necesitas entender todo. Solo escucha con curiosidad.
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_3] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **I can't get through** |
+| Como suena | **ai · cant · guet · zrú** *(la "t" al final de "cant" es importante — sin ella suena como "can" que significa lo contrario; "zrú" aproxima el sonido "th + r + u" — practica con el audio oficial para escuchar la diferencia)* |
+| Español natural | **No puedo comunicarme / No puedo superar esto** — el significado cambia según el contexto: puede ser dificultad para comunicarse, para superar algo difícil, o para pasar físicamente. |
+| Vocabulario útil | **can't** = no puedo (negación de "can") · **get through** = superar / comunicarse / pasar (según el contexto) |
+| Úsalo así | "I've been trying to call the office all morning but I can't get through." *(He estado llamando a la oficina toda la mañana pero no puedo comunicarme.)* |
+| Ejercicio | ¿Qué significa "get through" en cada caso? A) "I can't get through to my doctor" → comunicarse · B) "I can't get through this exam" → superar algo. Describe una situación tuya donde usarías "I can't get through." |
 
-**Repite:** Repite el fragmento tres veces. En la tercera vez, intenta usar la entonación del cantante como referencia.
+**Repite:** Escucha el fragmento en la fuente oficial, repítelo lentamente con una pronunciación clara y después compáralo con la interpretación del cantante.
 
 - [ ] Completé este fragmento
 
@@ -438,15 +438,22 @@ Después de practicar esta canción, tómate un momento para responder:
 
 #### [INTERNAL] Editorial notes — Song 2 — Remove before publication
 
-**Fragment-selection risk:** Still Loving You has recognizable slower ballad sections and a faster, more intense rock section. Fragments must be selected from the slower sections only. The main risk is that the most pedagogically useful phrases may appear close together in the song, creating a sequential reconstruction risk. Fragment selection must ensure non-sequential placement and genuine independence of each phrase.
+**Fragment status:** All three fragments reviewed and approved in `content/phase-0-ebook-fragments-still-loving-you`. See `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` for full review records (SLY-01, SLY-02, SLY-03).
 
-**Pronunciation risk:** The Scorpions vocalist has a non-native English accent (German). This is not a disqualifier — many learners encounter accented English in real life — but the Escríbelo como suena guide must be drafted carefully to reflect the actual sounds in the recording rather than standard American English pronunciation. Note to the fragment reviewer: accent differences must be documented for the learner.
+**Fragments approved:**
+- SLY-01: "I will be there" — score 90/100
+- SLY-02: "All the way from the start" — score 81/100
+- SLY-03: "I can't get through" — score 91/100
 
-**Learner-level risk:** Medium. Some sections of the song move faster than the beginner standard. If the selected fragments come from the faster rock sections, the lesson difficulty will be higher than planned. Fragments must come from the slower ballad sections.
+**Vocalist accent:** The Scorpions vocalist's non-native English delivery is documented in each SLY review record. Neutral spoken English pronunciation was prioritized in all three Escríbelo como suena drafts. Learner notes address where singer delivery may differ from neutral English — particularly the voiced TH in "there" (SLY-01) and the unvoiced TH in "through" (SLY-03).
 
-**Potential replacement condition:** If the fragment review phase finds that no three suitable non-sequential short fragments exist in the slower ballad sections, or that the accent creates too much Escríbelo como suena complexity, replace with Nothing Else Matters (Metallica) for a harder rock classic, or with The Reason as the second song and introduce a third different option. Primary backup: Nothing Else Matters — Metallica.
+**Remaining publication requirements:**
+- Non-adjacency confirmed by project owner — no surrounding song text was stored.
+- Official media link (YouTube or Spotify) must be confirmed and inserted before PDF export.
+- Pronunciation consistency check across all nine ebook fragments (TR fragments pending).
+- Final legal-safe review of the complete PDF before publication.
 
-**Backup song if needed:** Nothing Else Matters — Metallica.
+**Replacement condition:** No longer required. Three suitable fragments have been approved.
 
 ---
 
