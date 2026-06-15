@@ -66,7 +66,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Asset | Status |
 |---|---|
 | Ebook content plan | Complete — `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` |
-| Song selection | Pending — `content/phase-0-ebook-song-selection` |
+| Provisional song selection | Complete — `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md` (A Thousand Years, Still Loving You, The Reason) |
 | Ebook draft | Pending — `content/phase-0-ebook-draft` |
 | PDF template | Pending — `design/phase-0-ebook-pdf-template` |
 | PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery` |
@@ -74,7 +74,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 
 ### Launch Steps
 
-1. Select 3 songs based on audience interest using the framework in `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md`.
+1. Provisional song set selected: A Thousand Years, Still Loving You, The Reason. Confirm or revise based on survey and channel evidence before drafting. See `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md`.
 2. Create short educational lessons for each song following the micro-lesson template and editorial rules in the content plan.
 3. Review content against `CONTENT_GUIDE.md`, `LEGAL_GUIDE.md`, and the quality gates in Section 19 of the content plan.
 4. Create the PDF template using the design handoff requirements in Section 17 of the content plan.

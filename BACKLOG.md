@@ -72,17 +72,12 @@ Status: done.
 
 ### Ebook Song Selection
 
-- Review survey and channel evidence.
-- Apply the song-selection framework from `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` Section 7.
-- Select 3 final songs from the candidate shortlist in Section 8.
-- Confirm short phrase candidates for each song.
+- Provisional selection complete. See `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md`.
+- Provisional set: A Thousand Years (Christina Perri), Still Loving You (Scorpions), The Reason (Hoobastank).
+- Primary backup: Nothing Else Matters (Metallica). Secondary backup: Thank You (Dido).
+- Selection is provisional; survey and channel evidence may change it before drafting.
 
-Branch: `content/phase-0-ebook-song-selection`
-
-Acceptance criteria:
-
-- Three songs selected with supporting evidence from survey or channel data.
-- Candidate phrases identified and flagged for legal-safe review.
+Status: done.
 
 ### Ebook Draft
 
