@@ -143,7 +143,7 @@ li + li {
   min-height: var(--page-h);
   padding: var(--page-py) var(--page-px);
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* visible on screen so long cards don't clip silently; print sets hidden */
   break-after: page;
   page-break-after: always;
   box-shadow: var(--shadow-page);
@@ -244,7 +244,7 @@ li + li {
 }
 
 .cover-logo {
-  height: 36px;
+  height: 54px;
   width: auto;
   display: block;
   margin-bottom: var(--sp-8);
@@ -943,6 +943,23 @@ li + li {
   accent-color: var(--c-purple);
 }
 
+/* Page modifier for the challenge page — tighter spacing to fit 3 day cards in A5 */
+.page--challenge .challenge-intro {
+  margin-bottom: var(--sp-2);
+}
+
+.page--challenge .challenge-days {
+  gap: var(--sp-2);
+}
+
+.page--challenge .challenge-day {
+  padding: var(--sp-2) var(--sp-3);
+}
+
+.page--challenge .challenge-day li {
+  margin-bottom: 2px;
+}
+
 /* =============================================================================
    15. SELF-ASSESSMENT PAGE
    ============================================================================= */
@@ -1012,6 +1029,13 @@ li + li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   color: var(--c-text-muted);
   font-size: 0.7rem;
+}
+
+/* Rating cells: larger circle markers, clearly markable on paper */
+.confidence-table td:not(:first-child) {
+  font-size: 1rem;
+  line-height: 1;
+  color: rgba(204, 157, 234, 0.5);
 }
 
 .confidence-table td:first-child {
@@ -1311,10 +1335,13 @@ li + li {
     word-break: break-all;
   }
 
-  /* Suppress URL expansion for buttons and internal anchors */
+  /* Suppress URL expansion for buttons, internal anchors, and elements
+     where the URL is already visible as the link text */
   .cta-button--primary::after,
   .cta-button--secondary::after,
-  a[href^="#"]::after {
+  .cta-link--tertiary::after,
+  a[href^="#"]::after,
+  .no-print-url::after {
     content: none;
   }
 
