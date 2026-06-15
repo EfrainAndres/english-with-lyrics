@@ -140,17 +140,14 @@ Remaining pre-publication work:
 
 ### Ebook PDF Template
 
-- Create the PDF visual template using the design handoff requirements from Section 17 of the content plan.
-- Use official brand colors and logo assets from `public/brand/`.
-- Target A5 or equivalent mobile-first vertical format.
-- Aim for 8–14 pages.
+- Design specification: `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md` — 21-section specification covering format, brand, typography, components, accessibility, QA checklists, and handoff instructions.
+- Static prototype: `docs/design/prototypes/phase-0-ebook-template.html` (9 representative pages) and `docs/design/prototypes/phase-0-ebook-template.css` (full design system with tokens, print styles, narrow-screen styles).
+- A5 portrait format (148 × 210 mm), dark brand identity, 15 reusable components, mobile-first and print-safe.
+- Recommended final page count: 14–16 pages.
 
 Branch: `design/phase-0-ebook-pdf-template`
 
-Acceptance criteria:
-
-- Template is readable on a phone without zooming.
-- All brand checklist items from Section 19 pass.
+Status: Complete.
 
 ### Ebook PDF Delivery
 

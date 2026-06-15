@@ -74,7 +74,8 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Fragment approval — The Reason | Complete — TR-01 "Before I go" (86/100), TR-02 "I'm not a perfect person" (91/100), TR-03 "Start over new" (87/100). All approved. Non-adjacency and source-order distinction confirmed by project owner. |
 | Nine-fragment review phase | Complete — all 9 of 9 fragments approved; cross-song consistency review done |
 | Final content integration | Complete — `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md` (branch `content/phase-0-ebook-final-content`); official media links verified; design handoff markers in place; publication blocked by legal-safe review and PDF design |
-| PDF design | Pending — `design/phase-0-ebook-pdf-template`; blocked by final publication-level legal-safe review |
+| PDF design template | Complete — `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md`; A5 portrait, 15 reusable components, static prototype at `docs/design/prototypes/`; recommended 14–16 pages |
+| Full PDF layout population | Pending — `feat/phase-0-ebook-pdf-delivery`; blocked by final publication-level legal-safe review |
 | PDF template | Pending — `design/phase-0-ebook-pdf-template` |
 | PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery` |
 | Email provider setup | Pending — after PDF and consent approach confirmed |

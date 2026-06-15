@@ -12,7 +12,8 @@
 **Revisión de fragmentos:** Completa — véase `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`
 **Verificación de derechos (project owner):** Completa para las tres canciones — ATY, SLY y TR confirmadas no adyacentes, sin reconstrucción de verso o coro, con orden de ebook distinto al orden en la fuente
 **Revisión legal-safe final:** Pendiente
-**Diseño PDF:** No iniciado
+**Plantilla PDF:** Completa — véase `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md` y `docs/design/prototypes/`
+**Layout PDF completo:** No iniciado
 **Listo para publicación:** No
 
 ### Estado de verificación de enlaces oficiales
