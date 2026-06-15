@@ -64,19 +64,70 @@ Acceptance criteria:
 
 ## Phase 0.5: Ebook Lead Magnet
 
-### Ebook Content
+### Ebook Content Plan
 
-- Select 3 songs for the free ebook.
-- Choose short educational fragments from each song.
-- Create original Escríbelo como suena pronunciation guidance.
-- Add natural translation and teaching notes.
-- Add legal disclaimer and YouTube listening guidance.
-- Use `docs/validation/PHASE_0_EBOOK_LEAD_MAGNET.md` for ebook structure, paths, CTA, and legal-safe rules.
+- Content plan complete. See `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` for strategic, editorial, legal-safe, and design-ready guidance.
+
+Status: done.
+
+### Ebook Song Selection
+
+- Review survey and channel evidence.
+- Apply the song-selection framework from `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` Section 7.
+- Select 3 final songs from the candidate shortlist in Section 8.
+- Confirm short phrase candidates for each song.
+
+Branch: `content/phase-0-ebook-song-selection`
+
+Acceptance criteria:
+
+- Three songs selected with supporting evidence from survey or channel data.
+- Candidate phrases identified and flagged for legal-safe review.
+
+### Ebook Draft
+
+- Write the full ebook content using the micro-lesson template in Section 9 of the content plan.
+- Apply Escríbelo como suena editorial rules from Section 10.
+- Apply translation and vocabulary rules from Section 11.
+- Apply legal-safe rules from Section 12.
+- Include the three-day challenge, self-assessment, CTA section, and copyright note.
+
+Branch: `content/phase-0-ebook-draft`
 
 Acceptance criteria:
 
 - Ebook teaches with short fragments only.
 - Ebook is not usable as a lyrics replacement.
+- All quality gates from Section 19 of the content plan pass.
+
+### Ebook PDF Template
+
+- Create the PDF visual template using the design handoff requirements from Section 17 of the content plan.
+- Use official brand colors and logo assets from `public/brand/`.
+- Target A5 or equivalent mobile-first vertical format.
+- Aim for 8–14 pages.
+
+Branch: `design/phase-0-ebook-pdf-template`
+
+Acceptance criteria:
+
+- Template is readable on a phone without zooming.
+- All brand checklist items from Section 19 pass.
+
+### Ebook PDF Delivery
+
+- Upload the final PDF to `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- Convert `/ebook-gratis` from waiting page to real download page.
+- Confirm all Tally CTAs link correctly.
+- Configure email delivery per `docs/validation/PHASE_0_EMAIL_DELIVERY_PLAN.md`.
+
+Branch: `feat/phase-0-ebook-pdf-delivery`
+
+Acceptance criteria:
+
+- PDF is downloadable from `/ebook-gratis`.
+- Delivery email links to `/ebook-gratis`, not a PDF attachment.
+- No provider integration before PDF and consent approach are confirmed.
 
 ### Lead Capture
 

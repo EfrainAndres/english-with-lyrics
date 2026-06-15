@@ -69,6 +69,44 @@ Learning metrics:
 - Which pronunciation explanations users mention as useful.
 - Which learners ask for more lessons.
 
+### Ebook validation signal categories
+
+These categories align with the signal framework in `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` Section 16.
+
+Interest signals:
+
+- Ebook form submissions.
+- Visits to `/ebook-gratis`.
+- Delivery email open rate.
+- Click rate from delivery email to `/ebook-gratis`.
+
+Engagement signals:
+
+- PDF download clicks.
+- Survey click-through from ebook or delivery page.
+- Survey completion rate.
+- First-group interest clicks.
+- Preferred song category (from survey, form field, or reply).
+- Completion self-report.
+
+High-intent signals:
+
+- Survey completion after downloading.
+- First-group form submission.
+- Direct replies requesting more lessons or specific songs.
+- Reported pronunciation or listening improvement.
+
+Monetization signals (not validated by the free ebook alone):
+
+- Survey responses indicating willingness to pay in COP.
+- First-group form submissions asking about pricing.
+- Founder offer click-through if mentioned in the ebook.
+- Direct pricing inquiries.
+
+### Important note
+
+Ebook download volume alone is not a strong validation signal. Survey completion and first-group interest are required to confirm real demand.
+
 ## Phase 1: MVP Metrics
 
 Acquisition:

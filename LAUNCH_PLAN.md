@@ -53,6 +53,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 ### Assets
 
 - Free ebook with 3 songs.
+- Ebook content plan at `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md`. Status: complete.
 - Email capture page.
 - Waiting page at `/ebook-gratis`, later converted into the real download page.
 - Future PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
@@ -60,16 +61,28 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 - Follow-up email sequence.
 - Founder offer invitation.
 
+### Phase 0.5 Status
+
+| Asset | Status |
+|---|---|
+| Ebook content plan | Complete — `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` |
+| Song selection | Pending — `content/phase-0-ebook-song-selection` |
+| Ebook draft | Pending — `content/phase-0-ebook-draft` |
+| PDF template | Pending — `design/phase-0-ebook-pdf-template` |
+| PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery` |
+| Email provider setup | Pending — after PDF and consent approach confirmed |
+
 ### Launch Steps
 
-1. Select 3 songs based on audience interest.
-2. Create short educational lessons for each song.
-3. Review content against legal and content guides.
-4. Convert `/ebook-gratis` from waiting page to real download page.
-5. Send the delivery email with a link to `/ebook-gratis`.
-6. Promote through YouTube, social, and email.
-7. Measure downloads, replies, survey clicks, and first-group interest.
-8. Compare demand across Románticas, Rock / pop clásicos, and Principiantes paths.
+1. Select 3 songs based on audience interest using the framework in `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md`.
+2. Create short educational lessons for each song following the micro-lesson template and editorial rules in the content plan.
+3. Review content against `CONTENT_GUIDE.md`, `LEGAL_GUIDE.md`, and the quality gates in Section 19 of the content plan.
+4. Create the PDF template using the design handoff requirements in Section 17 of the content plan.
+5. Convert `/ebook-gratis` from waiting page to real download page.
+6. Send the delivery email with a link to `/ebook-gratis`.
+7. Promote through YouTube, social, and email.
+8. Measure downloads, replies, survey clicks, and first-group interest.
+9. Compare demand across Románticas, Rock / pop clásicos, and Principiantes paths.
 
 ## Phase 1 Launch: Paid MVP
 

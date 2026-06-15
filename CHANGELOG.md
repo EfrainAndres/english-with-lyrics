@@ -6,6 +6,10 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added Phase 0 ebook content plan at `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` covering purpose, positioning, target reader, benchmark and reference analysis, recommended scope, section-by-section structure, song-selection framework, candidate shortlist, micro-lesson template, Escríbelo como suena editorial rules, translation and vocabulary rules, legal-safe and copyright rules, exercise library, three-day practice challenge, CTA plan, validation signal categories, design handoff requirements, content production workflow, and quality gate checklists.
+- Added benchmark and reference analysis of ESL song worksheets, English-with-songs workbooks, pronunciation guides, educational PDF lead magnets, mobile-first learning guides, and music-based lesson resources — identifying patterns to adopt and patterns to avoid.
+- Added song-selection framework with weighted criteria and a candidate shortlist of eight songs for evaluation.
+- Added editorial, legal, and design handoff guidance aligned with `CONTENT_GUIDE.md`, `LEGAL_GUIDE.md`, and `docs/design/BRAND_ASSETS.md`.
 - Added repository-level Claude Code instructions in `CLAUDE.md` and coordination guidance in `AGENTS.md`.
 - Added `/ebook-gratis` as a Phase 0 ebook waiting page with Tally CTAs, guide preview content, path options, and a legal-safe note.
 - Added Phase 0 ebook download page documentation for current waiting-page behavior and future PDF delivery.
