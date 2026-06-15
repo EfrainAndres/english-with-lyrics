@@ -81,19 +81,30 @@ Status: done.
 
 ### Ebook Draft
 
-- Write the full ebook content using the micro-lesson template in Section 9 of the content plan.
-- Apply Escríbelo como suena editorial rules from Section 10.
-- Apply translation and vocabulary rules from Section 11.
-- Apply legal-safe rules from Section 12.
-- Include the three-day challenge, self-assessment, CTA section, and copyright note.
+- Editorial draft complete. See `docs/content/PHASE_0_EBOOK_DRAFT.md`.
+- Nine fragment placeholders exist across three songs. No lyrics inserted.
+- All learner-facing sections written. Publication is blocked on fragment review and approval.
 
-Branch: `content/phase-0-ebook-draft`
+Status: done.
+
+### Ebook Fragment Review
+
+- Review candidate short phrases for each of the nine fragment slots.
+- Confirm non-sequential placement, educational necessity, and conservative length (3–7 words target).
+- Draft Escríbelo como suena pronunciation using the internal consistency checklist.
+- Draft natural meanings and vocabulary notes.
+- Create original exercises from the exercise draft library in `docs/content/PHASE_0_EBOOK_DRAFT.md` Section 8.
+- Approve or reject each fragment using the legal-safe checklist from `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md` Section 9.
+- Replace a song if suitable fragments cannot be identified conservatively.
+
+Branch: `content/phase-0-ebook-fragment-review`
 
 Acceptance criteria:
 
-- Ebook teaches with short fragments only.
-- Ebook is not usable as a lyrics replacement.
-- All quality gates from Section 19 of the content plan pass.
+- All nine fragment slots approved or a replaced song's slots are approved.
+- No fragment reconstructs a verse or chorus when combined sequentially.
+- Pronunciation, natural meaning, vocabulary, and exercises are finalized for all nine slots.
+- Legal-safe review completed for each approved fragment.
 
 ### Ebook PDF Template
 
