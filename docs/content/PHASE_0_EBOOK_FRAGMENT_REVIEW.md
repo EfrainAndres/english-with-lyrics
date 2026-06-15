@@ -12,9 +12,9 @@
 **Exercises completed:** 9 of 9
 **Publication ready:** No — final legal-safe review and PDF design still required
 
-**Phase status:** Fragment-review phase complete — ATY-01/02/03, SLY-01/02/03, and TR-01/02/03 reviewed and approved. Final publication-level legal-safe review pending. ATY adjacency requires manual project-owner confirmation before PDF export.
+**Phase status:** Fragment-review phase complete — ATY-01/02/03, SLY-01/02/03, and TR-01/02/03 reviewed and approved. Project-owner adjacency and reconstruction verification complete for all three songs. Final publication-level legal-safe review pending.
 
-The A Thousand Years fragments were manually supplied in `content/phase-0-ebook-fragments-a-thousand-years`. Approved: "One step closer" (ATY-01), "Heart beats fast" (ATY-02), "Time stands still" (ATY-03). No lyrics were retrieved from external sources.
+The A Thousand Years fragments were manually supplied in `content/phase-0-ebook-fragments-a-thousand-years`. Approved: "One step closer" (ATY-01), "Heart beats fast" (ATY-02), "Time stands still" (ATY-03). No lyrics were retrieved from external sources. Project owner reviewed the complete song text outside the repository and confirmed: the fragments are not adjacent, they do not reconstruct a verse or chorus, their ebook order differs from their source order, each has a distinct educational purpose, and their combined use is conservative. No surrounding lyrics or complete song text is stored in the repository.
 
 The Still Loving You fragments were manually supplied in `content/phase-0-ebook-fragments-still-loving-you`. Project owner confirmed non-adjacency and absence of verse/chorus reconstruction. Vocalist accent documented; neutral English pronunciation prioritized. Approved: "I will be there" (SLY-01), "All the way from the start" (SLY-02), "I can't get through" (SLY-03). No surrounding song text was stored.
 
@@ -1615,11 +1615,11 @@ All learner-facing pronunciation content is consistent. No IPA appears in any le
 
 1. "Start" appears in SLY-02 ("from the start") and TR-03 ("start over"). Record as a deliberate reinforcement design note in the final-content integration branch.
 2. "Write a sentence" and "choose a situation" each appear three times. Consider varying introductory language slightly across the PDF to avoid structural repetition for the learner.
-3. ATY adjacency verification remains the only outstanding pre-publication manual verification item. Must be completed before PDF export.
+3. ATY adjacency and reconstruction verification complete — project owner confirmed outside the repository. No outstanding fragment-level verification items remain.
 
 #### Final nine-fragment cross-song result
 
-All nine fragments from three songs are approved. Reconstruction safety is confirmed for SLY and TR (project-owner verified) and assessed as low risk for ATY (manual verification required before PDF publication). Educational variety, vocabulary coverage, exercise distribution, and Escríbelo como suena consistency are strong across the full set. No serious issues require correction in this branch.
+All nine fragments from three songs are approved. Reconstruction safety is project-owner verified for all three songs: ATY (confirmed outside the repository — non-adjacent, no verse or chorus reconstruction, distinct educational purposes, conservative combined use), SLY (confirmed), and TR (confirmed). Educational variety, vocabulary coverage, exercise distribution, and Escríbelo como suena consistency are strong across the full set. No serious issues require correction in this branch.
 
 **The nine-fragment educational review phase is complete.**
 
@@ -2015,7 +2015,7 @@ This phase may only be marked complete when all of the following are true:
 
 - [x] All nine fragment slots have a final decision (Approved or Replaced).
 - [x] Every approved fragment has completed content: pronunciation, natural meaning, vocabulary, and exercise.
-- [x] Every song has passed the cross-fragment reconstruction check in Section 9. *(Note: ATY adjacency requires manual project-owner confirmation before PDF publication — all other ATY checks pass.)*
+- [x] Every song has passed the cross-fragment reconstruction check in Section 9. *(ATY adjacency and reconstruction confirmed by project owner outside the repository — all three songs fully verified.)*
 - [x] At least three approved fragments exist per final selected song.
 - [x] No fragments were rejected — not applicable.
 - [x] No replacement decisions were needed — not applicable.
@@ -2034,12 +2034,12 @@ PDF design must not begin until this phase is complete.
 
 **`content/phase-0-ebook-final-content`**
 
-That branch will run a final editorial and legal-safe consistency review across the complete ebook draft, confirm ATY adjacency with the project owner, verify official media links, and confirm the document is ready for PDF design.
+That branch will run a final editorial and legal-safe consistency review across the complete ebook draft, verify official media links, remove internal editorial notes, and confirm the document is ready for PDF design.
 
 **Remaining pre-publication requirements before that branch:**
 
-1. Manual project-owner confirmation of ATY fragment adjacency (cannot be completed without reviewing the full song text).
-2. Official media link verification (YouTube or Spotify official channel) for all three songs.
+1. Official media link verification (YouTube or Spotify official channel) for all three songs.
+2. Final content cleanup and internal editorial note removal.
 3. Final legal-safe review of the complete ebook text.
 4. PDF design and mobile readability QA.
 
