@@ -68,8 +68,11 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Ebook content plan | Complete — `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` |
 | Provisional song selection | Complete — `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md` (A Thousand Years, Still Loving You, The Reason) |
 | Editorial draft | Complete — `docs/content/PHASE_0_EBOOK_DRAFT.md` (nine fragment placeholders; publication blocked on fragment review) |
-| Fragment review framework | Complete — `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` (nine slots defined; manual fragment input pending; 0 of 9 approved) |
-| Fragment approval | In progress — manual fragment input required; PDF design blocked until all 9 slots approved |
+| Fragment review framework | Complete — `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` (nine slots defined) |
+| Fragment approval — A Thousand Years | Complete — ATY-01 "One step closer" (87/100), ATY-02 "Heart beats fast" (91/100), ATY-03 "Time stands still" (86/100). All approved. Adjacency verification pending project owner. |
+| Fragment approval — Still Loving You | Pending — manual fragment input required (SLY-01, SLY-02, SLY-03) |
+| Fragment approval — The Reason | Pending — manual fragment input required (TR-01, TR-02, TR-03) |
+| PDF design | Blocked — 6 of 9 fragment slots pending |
 | PDF template | Pending — `design/phase-0-ebook-pdf-template` |
 | PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery` |
 | Email provider setup | Pending — after PDF and consent approach confirmed |

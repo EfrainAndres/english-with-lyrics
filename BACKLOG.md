@@ -90,21 +90,25 @@ Status: done.
 ### Ebook Fragment Review
 
 - Review framework complete. See `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`.
-- Nine-slot register created. All nine fragment text fields remain [PENDING_MANUAL_INPUT].
-- Intake rules, review statuses, editorial scoring model, pronunciation template, natural meaning template, vocabulary template, exercise template, cross-fragment reconstruction check, and song replacement gate are all defined.
-- Manual fragment input from the project owner is required before any slot can advance.
+- A Thousand Years review complete (branch: `content/phase-0-ebook-fragments-a-thousand-years`):
+  - ATY-01 "One step closer" — Approved (score 87/100)
+  - ATY-02 "Heart beats fast" — Approved (score 91/100)
+  - ATY-03 "Time stands still" — Approved (score 86/100)
+- Ebook draft phrase blocks for A Thousand Years updated with approved content.
+- Adjacency verification pending — project owner must confirm fragments are not adjacent in the song before publication.
+- Official media link for A Thousand Years pending verification.
 
 Branch: `content/phase-0-ebook-fragment-review`
 
-Status: In progress — framework complete, manual fragment input pending.
+Status: In progress — 3 of 9 fragments approved; 6 slots pending manual input.
 
-Remaining acceptance criteria:
+Remaining work:
 
-- All nine fragment slots receive a final decision (Approved or Replaced).
-- No fragment reconstructs a verse or chorus when combined sequentially.
-- Pronunciation, natural meaning, vocabulary, and exercises are finalized for all nine approved slots.
-- Legal-safe review completed for each approved fragment.
-- Ebook draft placeholders updated after each slot is approved.
+- Still Loving You fragments: 3 slots pending manual input (SLY-01, SLY-02, SLY-03).
+- The Reason fragments: 3 slots pending manual input (TR-01, TR-02, TR-03).
+- Cross-song final review: pending.
+- Final content integration: pending.
+- PDF design and delivery: blocked until all 9 fragments approved.
 
 ### Ebook PDF Template
 
