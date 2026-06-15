@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added Phase 0 ebook song-selection document at `docs/content/PHASE_0_EBOOK_SONG_SELECTION.md` with a weighted 100-point evaluation of eight candidates, set-level comparison of three song combinations, provisional selection of A Thousand Years, Still Loving You, and The Reason, primary and secondary backup songs, an evidence gap register, and a song approval checklist.
 - Added Phase 0 ebook content plan at `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` covering purpose, positioning, target reader, benchmark and reference analysis, recommended scope, section-by-section structure, song-selection framework, candidate shortlist, micro-lesson template, Escríbelo como suena editorial rules, translation and vocabulary rules, legal-safe and copyright rules, exercise library, three-day practice challenge, CTA plan, validation signal categories, design handoff requirements, content production workflow, and quality gate checklists.
 - Added benchmark and reference analysis of ESL song worksheets, English-with-songs workbooks, pronunciation guides, educational PDF lead magnets, mobile-first learning guides, and music-based lesson resources — identifying patterns to adopt and patterns to avoid.
 - Added song-selection framework with weighted criteria and a candidate shortlist of eight songs for evaluation.
