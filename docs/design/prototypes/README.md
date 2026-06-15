@@ -61,6 +61,22 @@ This prototype uses only:
 
 Small orange labels reading "Prototipo" or similar appear at the top-right of each page in the browser view. These are suppressed automatically in print mode and must be removed from the final PDF production file.
 
+## Manual verification checklist
+
+After any design change, open the prototype in a browser and check the following:
+
+- [ ] Cover logo is clearly visible and proportionate — currently `height: 54px`.
+- [ ] Page 7 (challenge): all three day cards fit within the A5 page boundary. Uses `.page--challenge` modifier.
+- [ ] Confidence table (page 8): `○` circles are visible and large enough to mark with a pen.
+- [ ] No URL appears twice: the song-listen link shows "Abrir video oficial — youtube.com" (once, via `.print-url` span); the challenge survey link shows `tally.so/r/eqzgbe` (once, as running text); no `::after` appends any URL.
+- [ ] No full YouTube watch URL (`youtube.com/watch?v=…`) is printed anywhere.
+- [ ] CTA labels (`→ Responder encuesta`, `→ Quiero saber del primer grupo`) remain clickable with no URL appended beside them.
+- [ ] `/ebook-gratis` appears at most once in its CTA area (inside the tertiary link text).
+- [ ] Fragment cards on page 6 ("I'm not a perfect person"): the Repítelo footer is visible and not clipped. Page `overflow` is `visible` on screen to surface any clipping during review.
+- [ ] No long card extends into the footer area of the next page in print preview.
+- [ ] Print preview at A5 shows background colors (enable "Background graphics").
+- [ ] Internal prototype labels (purple uppercase, top-right) are hidden in print preview.
+
 ## Recommended next step
 
 When the final PDF is ready to produce, duplicate `phase-0-ebook-template.html`, populate all content from `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md`, verify all links, perform the QA checklist in `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md`, and export to PDF.

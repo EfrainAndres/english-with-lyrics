@@ -264,6 +264,12 @@ Challenge title in yellow serif. Intro paragraph. Three day cards (dark surface,
 purple border). Each card: pink day label, bold day title, numbered steps,
 italic objective, Completé el día N checkbox. CTA link on Day 3.
 
+**Challenge-page density rule:** Use the `.page--challenge` modifier class on this page.
+The modifier reduces challenge-intro bottom margin to 8px, card padding to 8px/12px,
+and card gap to 8px. This is the minimum spacing that keeps the three day cards within
+A5 height. Do not add extra content to this page. If the three-day challenge expands
+beyond three items per day, move Day 3 to a second challenge page.
+
 ### L. Self-assessment page
 Yellow-serif title. "Lo que hice" checklist with purple checkboxes. Confidence
 table with four skills and five-point scale. Optional note area.
@@ -272,7 +278,10 @@ table with four skills and five-point scale. Optional note area.
 Title + brief intro. Primary CTA: full-width yellow button with black bold text.
 Secondary CTA: purple-outlined button. Tertiary: underlined text link.
 Only one visually dominant CTA (yellow button). No competing primary actions.
-Print-safe: links show full URL via CSS `::after` content in print mode.
+Print-safe: short human-readable destinations appear only via explicit `.print-url` spans
+inside the link element; full URLs remain embedded as clickable targets. No automatic
+`a[href]::after` expansion — prevents full YouTube watch URLs and Tally query strings
+from appearing in the printed output.
 
 ### N. Educational and rights note
 Purple-uppercase title. Four labeled sections: fragments, rights, audio, educational
@@ -372,6 +381,7 @@ At desktop browser widths:
 | Line length | 50–60 ch — comfortable for prose reading |
 | Adequate spacing | 4-point grid minimum spacing between elements |
 | QR code not the only access path | Official link always present alongside QR placeholder |
+| Confidence table rating cells are markable on paper | `○` (U+25CB) characters at 1rem — large enough to circle or tick with a pen |
 | `lang="es"` on `<html>` | Set — document language is Spanish |
 | Viewport meta | Set — `width=device-width, initial-scale=1.0` |
 
@@ -397,6 +407,23 @@ These are template rules to preserve readability. Apply them during full PDF pop
 
 **Do not** reduce typography to force overflowing content onto fewer pages.
 Move overflow to a new page instead.
+
+**Long fragment card rule:** The `.page` base style uses `overflow: visible` on screen
+so that long cards surface visually during layout review. In print mode the `@media print`
+block enforces `overflow: hidden` with a fixed `height: 210mm`. If the fragment-footer
+(Repítelo + Listo) is not visible in print preview, the card is too tall for the page.
+Assign it to its own page and ensure no other shared content (header, footer, method card)
+competes for vertical space. This applies particularly to "I'm not a perfect person"
+and any future 5–6 word card with a rating exercise.
+
+**Print URL rule:** No automatic `a[href]::after` URL expansion is used. The print CSS
+does not append any URL behind anchor elements. Short human-readable destinations are
+shown only via explicit `<span class="print-url">` elements placed inside the anchor.
+The `.print-url` span is `display: none` on screen and `display: inline` in print.
+Currently only the song-listen link uses this pattern, showing `youtube.com`.
+CTA buttons and the tertiary ebook link show their visible label only. The inline
+survey URL on the challenge page (`tally.so/r/eqzgbe`) is already legible as running
+text and needs no additional printed destination.
 
 ---
 

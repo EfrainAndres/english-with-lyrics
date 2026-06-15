@@ -143,7 +143,7 @@ li + li {
   min-height: var(--page-h);
   padding: var(--page-py) var(--page-px);
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* visible on screen so long cards don't clip silently; print sets hidden */
   break-after: page;
   page-break-after: always;
   box-shadow: var(--shadow-page);
@@ -244,7 +244,7 @@ li + li {
 }
 
 .cover-logo {
-  height: 36px;
+  height: 54px;
   width: auto;
   display: block;
   margin-bottom: var(--sp-8);
@@ -943,6 +943,23 @@ li + li {
   accent-color: var(--c-purple);
 }
 
+/* Page modifier for the challenge page — tighter spacing to fit 3 day cards in A5 */
+.page--challenge .challenge-intro {
+  margin-bottom: var(--sp-2);
+}
+
+.page--challenge .challenge-days {
+  gap: var(--sp-2);
+}
+
+.page--challenge .challenge-day {
+  padding: var(--sp-2) var(--sp-3);
+}
+
+.page--challenge .challenge-day li {
+  margin-bottom: 2px;
+}
+
 /* =============================================================================
    15. SELF-ASSESSMENT PAGE
    ============================================================================= */
@@ -1012,6 +1029,13 @@ li + li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   color: var(--c-text-muted);
   font-size: 0.7rem;
+}
+
+/* Rating cells: larger circle markers, clearly markable on paper */
+.confidence-table td:not(:first-child) {
+  font-size: 1rem;
+  line-height: 1;
+  color: rgba(204, 157, 234, 0.5);
 }
 
 .confidence-table td:first-child {
@@ -1159,6 +1183,11 @@ li + li {
    18. UTILITY CLASSES
    ============================================================================= */
 
+/* Short print destination — hidden on screen, shown in print next to its link */
+.print-url {
+  display: none;
+}
+
 .section-title {
   font-family: var(--font-serif);
   font-size: var(--fs-section-title);
@@ -1303,19 +1332,15 @@ li + li {
     page-break-inside: avoid;
   }
 
-  /* Ensure links show their URL in print */
-  a[href]::after {
-    content: ' (' attr(href) ')';
+  /* Short print destinations: shown only where explicitly marked with .print-url.
+     No automatic a[href]::after expansion — prevents full watch URLs, Tally query
+     strings, and /ebook-gratis from being duplicated beside visible link text. */
+  .print-url {
+    display: inline;
     font-size: 0.6rem;
     color: #888;
+    margin-left: 3px;
     word-break: break-all;
-  }
-
-  /* Suppress URL expansion for buttons and internal anchors */
-  .cta-button--primary::after,
-  .cta-button--secondary::after,
-  a[href^="#"]::after {
-    content: none;
   }
 
   /* Suppress prototype design labels */
