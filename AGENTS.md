@@ -107,6 +107,14 @@ git push origin <branch>
 
 Update `CHANGELOG.md` for every meaningful change.
 
+## Claude Code Coordination
+
+- Claude Code follows `CLAUDE.md`.
+- Codex follows `AGENTS.md`.
+- Both must use the same canonical project documents: `PROJECT_BRIEF.md`, `ROADMAP.md`, `BACKLOG.md`, `CONTENT_GUIDE.md`, `LEGAL_GUIDE.md`, `METRICS.md`, `LAUNCH_PLAN.md`, and `CHANGELOG.md`.
+- `AGENTS.md` and `CLAUDE.md` must stay aligned on scope, brand rules, legal rules, Git workflow, and validation expectations.
+- Do not duplicate the full project brief in either file.
+
 ## Agent Working Style
 
 - Read existing docs before changing direction.

@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added repository-level Claude Code instructions in `CLAUDE.md` and coordination guidance in `AGENTS.md`.
 - Added `/ebook-gratis` as a Phase 0 ebook waiting page with Tally CTAs, guide preview content, path options, and a legal-safe note.
 - Added Phase 0 ebook download page documentation for current waiting-page behavior and future PDF delivery.
 - Added Phase 0 email delivery planning documentation for ebook delivery, follow-up emails, segmentation, privacy, and provider timing.
