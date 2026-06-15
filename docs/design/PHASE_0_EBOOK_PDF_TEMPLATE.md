@@ -278,7 +278,10 @@ table with four skills and five-point scale. Optional note area.
 Title + brief intro. Primary CTA: full-width yellow button with black bold text.
 Secondary CTA: purple-outlined button. Tertiary: underlined text link.
 Only one visually dominant CTA (yellow button). No competing primary actions.
-Print-safe: links show full URL via CSS `::after` content in print mode.
+Print-safe: short human-readable destinations appear only via explicit `.print-url` spans
+inside the link element; full URLs remain embedded as clickable targets. No automatic
+`a[href]::after` expansion — prevents full YouTube watch URLs and Tally query strings
+from appearing in the printed output.
 
 ### N. Educational and rights note
 Purple-uppercase title. Four labeled sections: fragments, rights, audio, educational
@@ -413,11 +416,14 @@ Assign it to its own page and ensure no other shared content (header, footer, me
 competes for vertical space. This applies particularly to "I'm not a perfect person"
 and any future 5–6 word card with a rating exercise.
 
-**Print URL duplication rule:** Use `.no-print-url` on any link element where the URL
-is already visible as the link text (e.g., `song-listen-link`). The print CSS suppresses
-the `::after` URL expansion for `.no-print-url`, `.cta-link--tertiary`, `.cta-button--primary`,
-and `.cta-button--secondary`. CTA buttons show their label only. Short URLs in the
-challenge and self-assessment pages are intentionally visible as running text.
+**Print URL rule:** No automatic `a[href]::after` URL expansion is used. The print CSS
+does not append any URL behind anchor elements. Short human-readable destinations are
+shown only via explicit `<span class="print-url">` elements placed inside the anchor.
+The `.print-url` span is `display: none` on screen and `display: inline` in print.
+Currently only the song-listen link uses this pattern, showing `youtube.com`.
+CTA buttons and the tertiary ebook link show their visible label only. The inline
+survey URL on the challenge page (`tally.so/r/eqzgbe`) is already legible as running
+text and needs no additional printed destination.
 
 ---
 

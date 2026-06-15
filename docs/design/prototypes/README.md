@@ -68,7 +68,10 @@ After any design change, open the prototype in a browser and check the following
 - [ ] Cover logo is clearly visible and proportionate — currently `height: 54px`.
 - [ ] Page 7 (challenge): all three day cards fit within the A5 page boundary. Uses `.page--challenge` modifier.
 - [ ] Confidence table (page 8): `○` circles are visible and large enough to mark with a pen.
-- [ ] Song listen links show the YouTube URL as text only once in print preview (no duplicate from `::after`).
+- [ ] No URL appears twice: the song-listen link shows "Abrir video oficial — youtube.com" (once, via `.print-url` span); the challenge survey link shows `tally.so/r/eqzgbe` (once, as running text); no `::after` appends any URL.
+- [ ] No full YouTube watch URL (`youtube.com/watch?v=…`) is printed anywhere.
+- [ ] CTA labels (`→ Responder encuesta`, `→ Quiero saber del primer grupo`) remain clickable with no URL appended beside them.
+- [ ] `/ebook-gratis` appears at most once in its CTA area (inside the tertiary link text).
 - [ ] Fragment cards on page 6 ("I'm not a perfect person"): the Repítelo footer is visible and not clipped. Page `overflow` is `visible` on screen to surface any clipping during review.
 - [ ] No long card extends into the footer area of the next page in print preview.
 - [ ] Print preview at A5 shows background colors (enable "Background graphics").
