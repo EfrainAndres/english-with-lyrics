@@ -4,7 +4,7 @@
 
 ## 1. Document Status
 
-**Status:** Complete — all nine fragments reviewed and approved
+**Status:** Complete — all nine fragments reviewed and approved. Clean design source: `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md`.
 **Song fragments received:** 9 of 9
 **Song fragments approved:** 9 of 9
 **Pronunciation drafts completed:** 9 of 9

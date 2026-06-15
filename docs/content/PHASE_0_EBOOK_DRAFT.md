@@ -2,11 +2,14 @@
 
 ---
 
-**Status:** Editorial draft
-**Songs:** Provisional
-**Song fragments:** Pending editorial and legal-safe review
+**Status:** Editorial draft — audit trail only
+**Songs:** Provisional (confirmed: A Thousand Years, Still Loving You, The Reason)
+**Song fragments:** All nine approved — see `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`
+**Clean design source:** `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md` (created in `content/phase-0-ebook-final-content`)
 **PDF design:** Not started
 **Publication ready:** No
+
+This document preserves the full editorial working history including internal notes, placeholders, and structural scaffolding. Do not use it as the PDF source. Use `PHASE_0_EBOOK_FINAL_CONTENT.md` for design handoff.
 
 ---
 
