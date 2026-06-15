@@ -71,8 +71,10 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Fragment review framework | Complete — `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` (nine slots defined) |
 | Fragment approval — A Thousand Years | Complete — ATY-01 "One step closer" (87/100), ATY-02 "Heart beats fast" (91/100), ATY-03 "Time stands still" (86/100). All approved. |
 | Fragment approval — Still Loving You | Complete — SLY-01 "I will be there" (90/100), SLY-02 "All the way from the start" (81/100), SLY-03 "I can't get through" (91/100). All approved. Vocalist accent documented; neutral pronunciation prioritized. |
-| Fragment approval — The Reason | Pending — manual fragment input required (TR-01, TR-02, TR-03) |
-| PDF design | Blocked — 3 of 9 fragment slots pending |
+| Fragment approval — The Reason | Complete — TR-01 "Before I go" (86/100), TR-02 "I'm not a perfect person" (91/100), TR-03 "Start over new" (87/100). All approved. Non-adjacency and source-order distinction confirmed by project owner. |
+| Nine-fragment review phase | Complete — all 9 of 9 fragments approved; cross-song consistency review done |
+| Final content integration | Pending — branch `content/phase-0-ebook-final-content` |
+| PDF design | Pending — no longer blocked by fragment input; blocked by final-content integration and legal-safe QA |
 | PDF template | Pending — `design/phase-0-ebook-pdf-template` |
 | PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery` |
 | Email provider setup | Pending — after PDF and consent approach confirmed |

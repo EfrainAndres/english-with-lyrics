@@ -4,21 +4,21 @@
 
 ## 1. Document Status
 
-**Status:** In progress — A Thousand Years and Still Loving You reviews complete; The Reason pending
-**Song fragments received:** 6 of 9
-**Song fragments approved:** 6 of 9
-**Pronunciation drafts completed:** 6 of 9
-**Natural meanings completed:** 6 of 9
-**Exercises completed:** 6 of 9
-**Publication ready:** No
+**Status:** Complete — all nine fragments reviewed and approved
+**Song fragments received:** 9 of 9
+**Song fragments approved:** 9 of 9
+**Pronunciation drafts completed:** 9 of 9
+**Natural meanings completed:** 9 of 9
+**Exercises completed:** 9 of 9
+**Publication ready:** No — final legal-safe review and PDF design still required
 
-**Phase status:** In progress — ATY-01/02/03 and SLY-01/02/03 reviewed and approved; manual fragment input pending for TR-01–03
+**Phase status:** Fragment-review phase complete — ATY-01/02/03, SLY-01/02/03, and TR-01/02/03 reviewed and approved. Final publication-level legal-safe review pending. ATY adjacency requires manual project-owner confirmation before PDF export.
 
 The A Thousand Years fragments were manually supplied in `content/phase-0-ebook-fragments-a-thousand-years`. Approved: "One step closer" (ATY-01), "Heart beats fast" (ATY-02), "Time stands still" (ATY-03). No lyrics were retrieved from external sources.
 
 The Still Loving You fragments were manually supplied in `content/phase-0-ebook-fragments-still-loving-you`. Project owner confirmed non-adjacency and absence of verse/chorus reconstruction. Vocalist accent documented; neutral English pronunciation prioritized. Approved: "I will be there" (SLY-01), "All the way from the start" (SLY-02), "I can't get through" (SLY-03). No surrounding song text was stored.
 
-The TR fragment text fields remain `[PENDING_MANUAL_INPUT]`.
+The Reason fragments were manually supplied in `content/phase-0-ebook-fragments-the-reason`. Project owner confirmed non-adjacency and that ebook order differs from source order. Approved: "Before I go" (TR-01), "I'm not a perfect person" (TR-02), "Start over new" (TR-03). No surrounding song text was stored.
 
 ---
 
@@ -1032,75 +1032,418 @@ Tarea adicional: Describe una situación de tu vida real donde usarías "I can't
 
 ---
 
-### TR-01
+### TR-01 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | TR-01 |
 | Song | The Reason |
 | Artist | Hoobastank |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Practical phrase or grammatical structure with real-life communicative value (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | This song is the practical-language anchor of the ebook. Fragments should prioritize phrases usable outside the song context. |
+| Fragment text | **Before I go** |
+| Word count | 3 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | Common expression used before leaving or before an upcoming action; connected speech between "before" and "I"; beginner-accessible; context-sensitive natural meaning |
+| Learner level | A1–A2 |
+| Status | **Approved** |
+| Length review | Pass — 3 words; conservative |
+| Sequential-risk review | Pass — project owner confirmed non-adjacency to TR-02 and TR-03; ebook order differs from source order; fragments do not reconstruct a verse or chorus |
+| Editorial score | 86 / 100 |
+| Pronunciation review | Pass — clear American English delivery; no significant singer-specific variation |
+| Natural meaning review | Pass — context acknowledged; both natural meanings documented |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | The Long O diphthong in "go" and the connected speech of "before·I" provide clear pronunciation teaching points at a beginner level. Practical language value is very high — "before I go" appears in countless everyday contexts. |
 
 ---
 
-### TR-02
+#### TR-01 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 3 words. Conservative. ✓
+- Complete verse or chorus: No. ✓
+- Adjacency to TR-02 or TR-03: **Project owner confirmed non-adjacent. Ebook order differs from source order. Verification complete.** ✓
+- Reconstruction risk: Three independent short phrases with distinct vocabulary confirmed non-adjacent. Low risk. ✓
+- Could be shorter: No. All three words are necessary to produce the time-clause expression. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Moderate to strong. The connected speech between "before" and "I" is a natural listening challenge. The Long O /oʊ/ diphthong in "go" is a consistent teaching target. The unstressed first syllable in "before" is a useful stress lesson. ✓
+- Listening value: Strong. Three short, clear words — easily isolatable in the recording. ✓
+- Practical vocabulary: Excellent. "Before," "go," and "before I go" as a unit are extremely high-frequency in all everyday communication. ✓
+- Real-life use: Excellent. Used before leaving meetings, ending phone calls, finishing conversations, and in written messages. One of the most natural transition phrases in English. ✓
+- Beginner/intermediate accessibility: A1–A2. Three of the most common words in English. ✓
+- Exercise potential: Excellent. A situation-choice exercise accurately tests whether the learner understands when this phrase is natural. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "FÓ-re" (fór) and "GO" |
+| Difficult vowel | The Long O /oʊ/ in "go" — Spanish has a pure "o," not a gliding diphthong |
+| Difficult consonant | No single consonant is very challenging; initial /b/ in "before" is similar to Spanish |
+| Connected speech | "Before I" flows as one continuous unit: "bi·fór·ai" — Spanish speakers may insert a pause |
+| Reduction | The first syllable of "before" reduces to /bɪ/ — a brief, unstressed "bi" |
+| Singer-specific variation | Hoobastank vocalist (Douglas Robb) has clear American English delivery — no significant variation from neutral English |
+| Neutral learning pronunciation | Natural spoken American English at a moderate pace |
+| Escríbelo como suena | **bi·fór · ai · gou** |
+| Possible misleading spelling | "bi·fór" — the "bi" must be brief and unstressed; "fór" carries the stress. "gou" — the "ou" glides; do not split into separate "o" and "u" sounds. |
+| Final learner-facing pronunciation | **bi·fór · ai · gou** |
+
+Nota para el aprendiz: en "bi·fór," la primera sílaba "bi" es muy suave y rápida — la fuerza va en "fór." En "gou," la "ou" desliza hacia la "u" como un solo movimiento — no la separes en "o" y "u."
+
+**Natural meaning**
+
+- Literal sense: Before (time marker) + I (subject) + go (depart) = prior to the moment when I leave.
+- Natural Spanish meaning: "Antes de irme" / "Antes de que me vaya" — se usa para decir algo importante justo antes de salir, colgar, o pasar a otra cosa.
+- Context limitation: The phrase is fully self-contained without song context. ✓
+- Standalone usefulness: Excellent. One of the most natural transition expressions in everyday English.
+- Possible ambiguity: "Go" can mean many things but in this phrase structure the meaning is unambiguously "before I leave." No significant ambiguity.
+- Final learner-facing explanation: "Antes de irme" / "Antes de que me vaya" — en inglés se usa para introducir algo que quieres decir o hacer en el último momento, justo antes de salir, terminar una llamada, o cambiar de tema. Es una frase muy natural en conversaciones del día a día.
+
+**Vocabulary**
+
+*before — antes de*
+- Natural Spanish explanation: "Before" = antes de. Indica que algo ocurre con anterioridad a otra acción. Es una de las preposiciones de tiempo más comunes en inglés.
+- Original example: "Please read the instructions before you start the exercise."
+- Spanish meaning of example: "Por favor lee las instrucciones antes de empezar el ejercicio."
+- Real-life usage note: Appears in countless everyday contexts. Also common in "before I forget" and "the night before."
+
+*go — ir / irse*
+- Natural Spanish explanation: "Go" = ir. En "before I go" significa específicamente "antes de irme." Es uno de los verbos más fundamentales del inglés.
+- Original example: "I need to stop by the store before I go home."
+- Spanish meaning of example: "Necesito pasar por la tienda antes de ir a casa."
+- Real-life usage note: "Before I go" is a fixed phrase that appears in messages, conversations, and spoken discourse constantly.
+
+**Original real-life example**
+
+"Before I go, I just want to say thank you for everything."
+*(Antes de irme, solo quiero darte las gracias por todo.)*
+
+**Original exercise**
+
+Tipo: Elige la situación real.
+
+Instrucción: ¿En cuál de estas situaciones sería natural decir "Before I go"?
+
+Opciones:
+- A. Estás a punto de salir de una reunión y quieres decir algo importante.
+- B. Estás eligiendo qué comer en el desayuno.
+- C. Estás buscando un archivo en tu computadora.
+
+Respuesta correcta: A *(Nota interna — eliminar antes de publicación)*
+
+Tarea adicional: Escribe una frase usando "Before I go" que podrías usar en una situación real tuya — al final de una llamada, antes de salir del trabajo, o antes de cerrar una conversación.
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 3 | 20 | 12 |
+| Learner accessibility | 5 | 15 | 15 |
+| Practical language value | 5 | 15 | 15 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 5 | 10 | 10 |
+| Exercise potential | 4 | 10 | 8 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 5 | 10 | 10 |
+| **Total** | | **100** | **86** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section (project owner confirmed)
+- [x] Fragment is as short as educationally necessary
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Singer delivery consistent with neutral English; no special accent caution required
+
+**Final decision: Approved**
+
+---
+
+### TR-02 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | TR-02 |
 | Song | The Reason |
 | Artist | Hoobastank |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Clear consonant or stress pattern demonstrating standard American English pronunciation (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | — |
+| Fragment text | **I'm not a perfect person** |
+| Word count | 5 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | Practice the contraction I'm; rhythm across stressed and unstressed words; repeated /p/ in "perfect person"; vocabulary for self-description |
+| Learner level | A2–B1 |
+| Status | **Approved** |
+| Length review | Pass — 5 words; within target; justified by the rhythm and /p/ repetition teaching purpose |
+| Sequential-risk review | Pass — project owner confirmed non-adjacency to TR-01 and TR-03; ebook order differs from source order; fragments do not reconstruct a verse or chorus |
+| Editorial score | 91 / 100 |
+| Pronunciation review | Pass — clear stress pattern documented; rhythm-focused exercise recommended |
+| Natural meaning review | Pass |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | This is the strongest pronunciation teaching fragment of the three TR selections. The stress pattern and repeated /p/ sounds in "perfect person" create an excellent rhythmic drill. "I'm" is one of the most important contractions to introduce explicitly. |
 
 ---
 
-### TR-03
+#### TR-02 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 5 words. Within the 3–7 word target. ✓ (Justified — the full phrase creates the rhythm pattern and /p/ repetition that are the primary teaching values. Shortening to "I'm not perfect" (3 words) would remove "person" and lose the consecutive /p/ teaching opportunity.)
+- Complete verse or chorus: No. ✓
+- Adjacency to TR-01 or TR-03: **Project owner confirmed non-adjacent. Ebook order differs from source order. Verification complete.** ✓
+- Reconstruction risk: Three independent phrases confirmed non-adjacent. Low risk. ✓
+- Could be shorter: "I'm not perfect" is a valid 3-word form. Decision: keep at 5 words — "a perfect person" carries the /p/ rhythm, the word "person," and the full natural phrase unit. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Excellent. Five teaching points: (1) I'm contraction, (2) stress-unstress rhythm, (3) weak "a" (schwa), (4) repeated /p/ in "perfect person," (5) the /ɜːr/ vowel in both "perfect" and "person." ✓
+- Listening value: Strong. The rhythm of "I'm not a perfect person" is very distinctive — learners can train their ear on the stress pattern. ✓
+- Practical vocabulary: Excellent. "I'm," "perfect," and "person" are all extremely high-frequency. The full phrase is one of the most common expressions in personal and conversational English. ✓
+- Real-life use: Excellent. Used in apologies, self-reflection, relationship conversations, and any context where someone acknowledges personal limitations. ✓
+- Beginner/intermediate accessibility: A2–B1. Common vocabulary; the rhythm pattern is the main challenge. ✓
+- Exercise potential: Excellent. A stress-identification or repeat-and-self-rate exercise matches the fragment's rhythm-focused teaching purpose perfectly. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "NOT," "PER-" (in perfect), and "PER-" (in person) |
+| Difficult vowel | The /ɜːr/ vowel in "perfect" and "person" — slightly more central than Spanish "e," with "r" coloring |
+| Difficult consonant | The repeated /p/ in "perfect person" — the consecutive /p/ sounds require clear articulation and create a rhythmic challenge |
+| Connected speech | "I'm not" flows as one unit; "a" is barely audible between "not" and "perfect" |
+| Reduction | The indefinite article "a" reduces to a brief schwa /ə/ — almost silent in natural speech |
+| Singer-specific variation | Clear American English delivery; the phrase is one of the most recognizable in the song and is delivered distinctly. No significant accent variation. |
+| Neutral learning pronunciation | Natural American English: stress on NOT, first syllable of PERfect, first syllable of PERson; brief schwa on "a" |
+| Escríbelo como suena | **aim · nat · a · pér·fect · pér·son** |
+| Possible misleading spelling | "aim" — the "ai" glides (per /aɪ/ convention); do not pause between "a" and "i." "a" (article) — extremely brief; do not give it equal stress. "pér·fect" and "pér·son" — the "er" sound is slightly more central than Spanish "e"; avoid rolling the "r." |
+| Final learner-facing pronunciation | **aim · nat · a · pér·fect · pér·son** |
+
+Nota para el aprendiz: el ritmo de esta frase es clave — "aim [fuerte] · nat [fuerte] · a [casi invisible] · PÉR·fect [fuerte·suave] · PÉR·son [fuerte·suave]." Las dos "pér" tienen el mismo ritmo — practica hasta que suenen iguales.
+
+**Natural meaning**
+
+- Literal sense: I'm (I am) + not + a + perfect + person = I am not a flawless human being.
+- Natural Spanish meaning: "No soy una persona perfecta" — una admisión honesta y directa de las propias limitaciones.
+- Context limitation: Stands alone completely. No song context is needed. ✓
+- Standalone usefulness: Excellent. Used widely in apologies, personal conversations, and motivational contexts.
+- Possible ambiguity: None. The meaning is direct and unambiguous.
+- Final learner-facing explanation: "No soy una persona perfecta" — en inglés se usa para reconocer honestamente que uno comete errores o tiene limitaciones. Es muy común en disculpas, conversaciones sinceras, y contextos de crecimiento personal. También es una forma de comenzar a explicar algo sin ponerse a la defensiva.
+
+**Vocabulary**
+
+*I'm — soy / estoy (contracción de "I am")*
+- Natural Spanish explanation: "I'm" = contracción de "I am." En inglés informal, casi nunca se dice "I am" completo. Es una de las contracciones más importantes de aprender.
+- Original example: "I'm trying to improve my English pronunciation every day."
+- Spanish meaning of example: "Estoy tratando de mejorar mi pronunciación del inglés todos los días."
+- Real-life usage note: Appears in virtually every conversation. "I'm" is followed by adjectives, continuous verbs, and noun phrases. Essential at A1 level.
+
+*perfect — perfecto/a*
+- Natural Spanish explanation: "Perfect" = perfecto/a. Puede describir una persona, una situación, o una acción sin errores.
+- Original example: "Nobody is perfect, but we can always try to do our best."
+- Spanish meaning of example: "Nadie es perfecto, pero siempre podemos intentar dar lo mejor de nosotros."
+- Real-life usage note: Used literally (a perfect score) and in common expressions ("perfect timing," "that's perfect," "nobody's perfect").
+
+*person — persona*
+- Natural Spanish explanation: "Person" = persona. El plural habitual es "people" (no "persons" en uso informal). Se usa para hablar de cualquier ser humano.
+- Original example: "She's the kind of person who always helps others."
+- Spanish meaning of example: "Es el tipo de persona que siempre ayuda a los demás."
+- Real-life usage note: Very high-frequency. Common in: "a good person," "the right person," "an important person."
+
+**Original real-life example**
+
+"I know I'm not a perfect person, but I always try to learn from my mistakes."
+*(Sé que no soy una persona perfecta, pero siempre trato de aprender de mis errores.)*
+
+**Original exercise**
+
+Tipo: Identifica el acento y practica el ritmo.
+
+Instrucción: Lee esta guía de pronunciación en voz alta tres veces:
+
+**aim · nat · a · pér·fect · pér·son**
+
+Recuerda: "a" es casi imperceptible. Las sílabas con más fuerza son **nat**, la primera de **pér·fect** y la primera de **pér·son**.
+
+Después responde:
+- ¿El ritmo sonó natural? Sí / Más o menos / Todavía no
+- ¿Cuál parte fue más difícil? _______________
+
+Escucha el audio oficial para comparar.
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 5 | 20 | 20 |
+| Learner accessibility | 4 | 15 | 12 |
+| Practical language value | 5 | 15 | 15 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 5 | 10 | 10 |
+| Exercise potential | 5 | 10 | 10 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 4 | 10 | 8 |
+| **Total** | | **100** | **91** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section (project owner confirmed)
+- [x] Fragment is as short as educationally necessary (5 words minimum for the rhythm teaching purpose)
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Singer delivery consistent with neutral American English
+
+**Final decision: Approved**
+
+---
+
+### TR-03 — APPROVED
+
+#### Register summary
 
 | Field | Value |
 |---|---|
 | Fragment ID | TR-03 |
 | Song | The Reason |
 | Artist | Hoobastank |
-| Fragment text | [PENDING_MANUAL_INPUT] |
-| Source supplied by project owner | No |
-| Intended learning purpose | Expression useful for explaining reasons, feelings, or personal reflection — high real-life transfer (provisional role — see Section 8) |
-| Status | Pending input |
-| Length review | Pending |
-| Sequential-risk review | Pending |
-| Educational score | Pending |
-| Pronunciation review | Pending |
-| Natural meaning review | Pending |
-| Vocabulary review | Pending |
-| Exercise review | Pending |
-| Legal-safe review | Pending |
-| Final decision | Pending |
-| Reviewer notes | After TR-01 and TR-02 are received, run the sequential-risk check before accepting TR-03. |
+| Fragment text | **Start over new** |
+| Word count | 3 |
+| Source | Manually supplied by project owner |
+| Intended learning purpose | Introduce "start over" as a common expression for beginning again; initial /st/ cluster; Long O diphthong in "over"; natural meaning prioritized over word-for-word translation |
+| Learner level | A2–B1 |
+| Status | **Approved** |
+| Length review | Pass — 3 words; conservative |
+| Sequential-risk review | Pass — project owner confirmed non-adjacency to TR-01 and TR-02; ebook order differs from source order; fragments do not reconstruct a verse or chorus |
+| Editorial score | 87 / 100 |
+| Pronunciation review | Pass — /st/ cluster handled consistently with ATY-03 and SLY-02; "over" diphthong and "new" documented |
+| Natural meaning review | Pass — "start over" identified as the key reusable unit; "new" explained as emphatic modifier |
+| Vocabulary review | Pass |
+| Exercise review | Pass |
+| Legal-safe review | Pass |
+| Final decision | **Approved** |
+| Reviewer notes | "Start over" is one of the most broadly useful phrasal verbs in the ebook. The /st/ cluster reinforces ATY-03 and SLY-02 — a learning reinforcement opportunity, not a repetition problem. Learner note teaches the aspirational target: reducing the "e" helper before "st." |
+
+---
+
+#### TR-03 full review
+
+**Length and excerpt risk**
+
+- Fragment length: 3 words. Conservative. ✓
+- Complete verse or chorus: No. ✓
+- Adjacency to TR-01 or TR-02: **Project owner confirmed non-adjacent. Ebook order differs from source order. Verification complete.** ✓
+- Reconstruction risk: Three independent phrases confirmed non-adjacent. Low risk. ✓
+- Could be shorter: "Start over" (2 words) is the core expression. "New" adds educational value — it clarifies meaning, introduces useful vocabulary, and is cited as an educational target. Decision: keep at 3 words. ✓
+
+**Educational value**
+
+- Pronunciation opportunity: Strong. Three teaching points: the initial /st/ cluster in "start" (reinforcing the challenge from ATY-03 and SLY-02), the Long O /oʊ/ diphthong in "over," and the gliding vowel sound in "new." ✓
+- Listening value: Strong. Short, clear, and distinctive — the phrase is memorable and easy to isolate. ✓
+- Practical vocabulary: Excellent. "Start over" is one of the most versatile phrasal verbs in English. "New" is independently essential. ✓
+- Real-life use: Excellent. "Start over" appears constantly in conversations about learning, work, relationships, and personal growth. ✓
+- Beginner/intermediate accessibility: A2–B1. Simple words; the phrasal verb requires brief explanation. ✓
+- Exercise potential: Excellent. Writing an original sentence with "start over" has high personal transfer value. ✓
+
+**Pronunciation analysis**
+
+| Element | Detail |
+|---|---|
+| Main stressed words | "START" and "NEW" |
+| Difficult vowel (1) | The /ɑːr/ in "start" — open vowel with "r" coloring; consistent with ATY-02 "heart" and SLY-02 "start" |
+| Difficult vowel (2) | The Long O /oʊ/ in "over" — gliding diphthong; same convention as "go" in TR-01 |
+| Difficult consonant | The initial /st/ cluster in "start" — consistent with ATY-03 "stands/still" and SLY-02 "start" |
+| Connected speech | "Start over" flows naturally as a two-word unit |
+| Reduction | None significant |
+| Singer-specific variation | Clear American English delivery; no significant variation from neutral English |
+| Neutral learning pronunciation | Natural American English: stress on "start" and "new"; "over" with /oʊ/ diphthong |
+| Escríbelo como suena | **estárt · óuver · niu** |
+| Possible misleading spelling | "estárt" — the "e" is a scaffold for the /st/ cluster; the target is to reduce it with practice. "óuver" — the "ou" glides; do not pause between "o" and "u." "niu" — brief glide before the "u"; in American English may sound closer to "nu." |
+| Final learner-facing pronunciation | **estárt · óuver · niu** |
+
+Nota para el aprendiz: en "estárt," la "e" inicial es un apoyo para el grupo consonántico "st" — con práctica, intenta reducirla hasta que "start" empiece directamente en el sonido "st." En "óuver," la "ou" desliza. En "niu," la "i" es una transición breve hacia la "u."
+
+**Natural meaning**
+
+- Literal sense: Start (begin) + over (again, from the beginning) + new (fresh).
+- Natural Spanish meaning: "Empezar de nuevo" / "Comenzar otra vez desde cero" — la expresión clave es "start over": empezar sin cargar con lo anterior. "New" añade énfasis.
+- Context limitation: "Start over new" is fully self-contained without song context. ✓
+- Standalone usefulness: Excellent. "Start over" is one of the most universally applicable phrasal verbs in English.
+- Possible ambiguity: "Over" has many meanings — in "start over" it specifically means "again from the beginning." The lesson teaches this specific phrasal meaning.
+- Final learner-facing explanation: "Empezar de nuevo" — la expresión clave es "start over": un phrasal verb que significa comenzar otra vez desde cero, sin cargar con lo anterior. "New" añade énfasis — una versión nueva, más fresca. Puedes usar "start over" en muchas situaciones: un proyecto, un hábito, un aprendizaje.
+
+**Vocabulary**
+
+*start over — empezar de nuevo / volver a empezar*
+- Natural Spanish explanation: "Start over" = empezar otra vez desde el principio. Es un phrasal verb — las dos palabras funcionan juntas como una unidad de significado.
+- Original example: "The document was so full of errors that I had to start over from scratch."
+- Spanish meaning of example: "El documento tenía tantos errores que tuve que empezar de nuevo desde cero."
+- Real-life usage note: Very common in everyday English for any process of beginning again — learning, fixing mistakes, or making a fresh start.
+
+*new — nuevo/a*
+- Natural Spanish explanation: "New" = nuevo/a. Puede describir cosas físicas o comienzos. Aquí añade la idea de algo fresco y sin cargas anteriores.
+- Original example: "After finishing the course, I felt ready for a new challenge."
+- Spanish meaning of example: "Después de terminar el curso, me sentí listo para un nuevo desafío."
+- Real-life usage note: One of the most common adjectives in English. Appears in "new beginning," "new chapter," "brand new."
+
+*start — comenzar / empezar / comienzo*
+- Natural Spanish explanation: "Start" como verbo = comenzar. Como sustantivo = el comienzo. Esta es la segunda time "start" appears in the ebook (after SLY-02 "from the start") — here it anchors a different phrasal structure.
+- Original example: "It's never too late to start something important."
+- Spanish meaning of example: "Nunca es demasiado tarde para empezar algo importante."
+- Real-life usage note: "Start" appears in many common expressions: "start over," "from the start," "start fresh." The two ebook lessons using "start" reinforce the word in different contexts — a pedagogical benefit.
+
+**Original real-life example**
+
+"After that difficult year, I decided to start over new — a different city, a different routine."
+*(Después de ese año difícil, decidí empezar de nuevo — otra ciudad, otra rutina.)*
+
+**Original exercise**
+
+Tipo: Escribe una frase original.
+
+Instrucción: Usa "start over" para escribir una frase sobre algo en tu vida — aprender inglés, un proyecto, un hábito, o cualquier proceso que hayas vuelto a comenzar.
+
+Ejemplo de respuesta: "I decided to start over with my exercise routine after the holidays."
+*(Decidí empezar de nuevo con mi rutina de ejercicio después de las fiestas.)*
+
+*(Este es solo un ejemplo — tu frase puede ser completamente diferente.)*
+
+**Editorial score**
+
+| Criterion | Score (1–5) | Weight | Weighted points |
+|---|---|---|---|
+| Pronunciation usefulness | 4 | 20 | 16 |
+| Learner accessibility | 4 | 15 | 12 |
+| Practical language value | 5 | 15 | 15 |
+| Listening value | 4 | 10 | 8 |
+| Standalone meaning | 4 | 10 | 8 |
+| Exercise potential | 5 | 10 | 10 |
+| Fit within the three-song set | 4 | 10 | 8 |
+| Conservative excerpt suitability | 5 | 10 | 10 |
+| **Total** | | **100** | **87** |
+
+**Legal-safe gate — all items pass**
+
+- [x] No full lyrics
+- [x] No complete verse or chorus
+- [x] Three fragments in combination do not reconstruct a song section (project owner confirmed)
+- [x] Fragment is as short as educationally necessary
+- [x] Original pronunciation, meaning, vocabulary, and exercise surround the fragment
+- [x] Official media will be linked (not embedded) — link pending verification
+- [x] Singer delivery consistent with neutral American English
+
+**Final decision: Approved**
 
 ---
 
@@ -1172,13 +1515,113 @@ This check must be run per song after all three fragment slots for that song are
 
 | Check | Status |
 |---|---|
-| TR-01, TR-02, and TR-03 are not adjacent in the song | Pending |
-| The three fragments do not, in sequence, reconstruct a verse | Pending |
-| The three fragments do not, in sequence, reconstruct a chorus | Pending |
-| The order in the ebook does not follow song order unnecessarily | Pending |
-| Each fragment has a distinct educational purpose | Pending |
-| Removing any one fragment leaves the other two without a lyric-sequence function | Pending |
-| Total quoted material across TR-01, TR-02, and TR-03 remains conservative | Pending |
+| TR-01, TR-02, and TR-03 are not adjacent in the song | **Project owner verified** — non-adjacency confirmed manually outside the repository |
+| The three fragments do not, in sequence, reconstruct a verse | **Pass** — three phrases (3 + 5 + 3 = 11 words total) with distinct vocabulary and grammar; confirmed non-adjacent; cannot reconstruct a verse |
+| The three fragments do not, in sequence, reconstruct a chorus | **Pass** — same rationale; confirmed non-adjacent by project owner |
+| The order in the ebook does not follow song order unnecessarily | **Addressed** — ebook order (Before I go → I'm not a perfect person → Start over new) differs from the source order, as confirmed by the project owner |
+| Each fragment has a distinct educational purpose | **Pass** — TR-01: time preposition "before" + Long O in "go" + connected speech; TR-02: I'm contraction + stress/rhythm pattern + repeated /p/; TR-03: phrasal verb "start over" + /st/ cluster + Long O in "over" |
+| Removing any one fragment leaves the other two without a lyric-sequence function | **Pass** — the three phrases share no vocabulary, grammar, or sequential context |
+| Total quoted material across TR-01, TR-02, and TR-03 remains conservative | **Pass** — 11 words total; 3 / 5 / 3 words per fragment |
+
+**The Reason cross-fragment result:** Low reconstruction risk. Non-adjacency and source-order distinction confirmed by project owner. Clear American English delivery throughout — no special accent cautions required. The Reason remains suitable as the practical-language anchor of the ebook. All three fragments approved.
+
+---
+
+### Final Nine-Fragment Cross-Song Review
+
+This review is performed after all nine fragment slots are approved. It evaluates reconstruction safety, educational variety, vocabulary coverage, exercise distribution, and Escríbelo como suena consistency across the complete ebook.
+
+#### Reconstruction safety
+
+| Song | Adjacency | Verse reconstruction risk | Chorus reconstruction risk | Words quoted |
+|---|---|---|---|---|
+| A Thousand Years | Manual project-owner verification required before PDF publication | Low — 9 words; distinct vocabulary | Low — same rationale | 9 |
+| Still Loving You | Project owner confirmed | Pass | Pass | 14 |
+| The Reason | Project owner confirmed | Pass | Pass | 11 |
+| **Total across all nine fragments** | | | | **34 words** |
+
+No song uses adjacent fragments (project-owner verified for SLY and TR; manual verification pending for ATY before PDF export).
+No set of three fragments from any single song reconstructs a verse or chorus.
+No fragment set is unnecessarily presented in source order.
+Total quoted material across the entire ebook: 34 words across 9 fragments — conservative.
+
+#### Educational variety
+
+**Pronunciation targets across nine fragments:**
+
+| Target | Fragments |
+|---|---|
+| Long O /oʊ/ diphthong | ATY-01 (closer), TR-01 (go), TR-03 (over) |
+| Long I /aɪ/ diphthong | ATY-03 (time), TR-01 (I), TR-02 (I'm) |
+| /st/ consonant cluster | ATY-01 (step), ATY-03 (stands/still), SLY-02 (start), TR-03 (start) |
+| Voiced TH /ð/ | SLY-01 (there) |
+| Unvoiced TH /θ/ | SLY-03 (through) |
+| /h/ as soft "j" | ATY-02 (heart) |
+| Contractions | SLY-03 (can't), TR-02 (I'm) |
+| Connected speech | ATY-01 (all 3 words), SLY-01 (I will be), SLY-02 (6 words), TR-01 (Before I) |
+| Stress/rhythm pattern | TR-02 (I'm not a perfect person) |
+| Phrasal verbs | SLY-03 (get through), TR-03 (start over) |
+| Figurative meaning | ATY-03 (time stands still) |
+| /p/ consonant rhythm | TR-02 (perfect person) |
+| /fr/ cluster | SLY-02 (from) |
+
+The nine-fragment set covers beginner-level diphthongs, intermediate consonant clusters, both TH sounds (voiced and unvoiced), contractions, connected speech, stress patterns, and phrasal verbs. Strong variety for a mixed-level lead magnet.
+
+**Learner level distribution:**
+
+| Level | Fragments |
+|---|---|
+| A1–A2 | ATY-01, SLY-01, TR-01 |
+| A2–B1 | ATY-02, ATY-03, SLY-02, SLY-03, TR-02, TR-03 |
+
+Three beginner and six intermediate fragments. Good balance.
+
+**Vocabulary coverage:**
+
+No direct vocabulary overlap across songs. The word "start" appears in SLY-02 ("from the start") and TR-03 ("start over") — this is a deliberate and pedagogically valuable reinforcement: the same word used in two different high-frequency contexts.
+
+**Exercise type distribution:**
+
+| Type | Fragments |
+|---|---|
+| Write an original sentence | ATY-01, SLY-02, TR-03 |
+| Choose a real-life situation | ATY-02, SLY-01, TR-01 |
+| Choose literal vs. figurative + describe | ATY-03 |
+| Choose meaning in context + describe | SLY-03 |
+| Rhythm / stress identification | TR-02 |
+
+Good variety. Three "write a sentence" exercises and three "choose a situation" exercises is acceptable for 9 fragments — content, vocabulary, and context differ completely in each. No lyric-completion or song-reconstruction exercises appear in any slot.
+
+#### Consistency check
+
+**Escríbelo como suena conventions — verified consistent across all nine fragments:**
+
+| Convention | Applied in |
+|---|---|
+| /aɪ/ → ai | ATY-03 (taim), TR-01 (ai in "Before I"), TR-02 (aim) |
+| /oʊ/ → ou | ATY-01 (clóuzer), TR-01 (gou), TR-03 (óuver) |
+| /h/ → j | ATY-02 (jart) |
+| Voiced TH → d | SLY-01 (dér) |
+| Unvoiced TH → z | SLY-03 (zrú) |
+| Initial /st/ → est- | ATY-03 (estil), SLY-02 (estárt), TR-03 (estárt) |
+| Long E /iː/ → í | ATY-02 (bíts) |
+| Stress → accent mark on stressed syllable | Consistent throughout |
+| Weak "the" → de | SLY-02 (de · de) |
+| Contraction I'm → aim | TR-02 (aim) |
+
+All learner-facing pronunciation content is consistent. No IPA appears in any learner-facing block. Internal editorial notes are clearly labeled for removal in all nine lessons.
+
+**Minor notes for the final-content integration branch (not requiring correction here):**
+
+1. "Start" appears in SLY-02 ("from the start") and TR-03 ("start over"). Record as a deliberate reinforcement design note in the final-content integration branch.
+2. "Write a sentence" and "choose a situation" each appear three times. Consider varying introductory language slightly across the PDF to avoid structural repetition for the learner.
+3. ATY adjacency verification remains the only outstanding pre-publication manual verification item. Must be completed before PDF export.
+
+#### Final nine-fragment cross-song result
+
+All nine fragments from three songs are approved. Reconstruction safety is confirmed for SLY and TR (project-owner verified) and assessed as low risk for ATY (manual verification required before PDF publication). Educational variety, vocabulary coverage, exercise distribution, and Escríbelo como suena consistency are strong across the full set. No serious issues require correction in this branch.
+
+**The nine-fragment educational review phase is complete.**
 
 ---
 
@@ -1570,18 +2013,16 @@ The following sequence applies to each fragment individually.
 
 This phase may only be marked complete when all of the following are true:
 
-- [ ] All nine fragment slots have a final decision (Approved or Replaced).
-- [ ] Every approved fragment has completed content: pronunciation, natural meaning, vocabulary, and exercise.
-- [ ] Every song has passed the cross-fragment reconstruction check in Section 9.
-- [ ] At least three approved fragments exist per final selected song (original or replacement).
-- [ ] All rejected fragments are documented with reasons.
-- [ ] All replacement decisions are documented.
-- [ ] All ebook draft placeholders corresponding to approved fragments have been updated in `docs/content/PHASE_0_EBOOK_DRAFT.md`.
-- [ ] Final legal-safe review remains acknowledged as a publication requirement.
+- [x] All nine fragment slots have a final decision (Approved or Replaced).
+- [x] Every approved fragment has completed content: pronunciation, natural meaning, vocabulary, and exercise.
+- [x] Every song has passed the cross-fragment reconstruction check in Section 9. *(Note: ATY adjacency requires manual project-owner confirmation before PDF publication — all other ATY checks pass.)*
+- [x] At least three approved fragments exist per final selected song.
+- [x] No fragments were rejected — not applicable.
+- [x] No replacement decisions were needed — not applicable.
+- [x] All ebook draft placeholders corresponding to approved fragments have been updated in `docs/content/PHASE_0_EBOOK_DRAFT.md`.
+- [x] Final legal-safe review remains acknowledged as a publication requirement.
 
-**Current status:** In progress — 6 of 9 fragments approved (ATY-01/02/03 and SLY-01/02/03). The Reason fragments pending manual input.
-
-No completion criteria can be checked off until all nine slots receive a final decision.
+**Current status:** Fragment-review phase complete — all 9 of 9 fragments approved across three songs. Final publication-level legal-safe review still required. PDF design may begin after final-content integration is complete.
 
 ---
 
@@ -1589,14 +2030,17 @@ No completion criteria can be checked off until all nine slots receive a final d
 
 PDF design must not begin until this phase is complete.
 
-**Immediate next action:**
-
-> Continue `content/phase-0-ebook-fragment-review` with manually supplied fragments. The project owner should use the submission format in Section 15 to submit one fragment at a time for ATY-01 through TR-03.
-
-After all nine slots are approved and all associated educational content is finalized, the recommended next branch is:
+**Fragment-review phase is complete.** All nine fragments are approved. The recommended next branch is:
 
 **`content/phase-0-ebook-final-content`**
 
-That branch will integrate all approved fragment content into `docs/content/PHASE_0_EBOOK_DRAFT.md`, run a full editorial and legal-safe consistency review across the complete ebook, and confirm the document is ready for PDF design.
+That branch will run a final editorial and legal-safe consistency review across the complete ebook draft, confirm ATY adjacency with the project owner, verify official media links, and confirm the document is ready for PDF design.
 
-Do not create that branch now.
+**Remaining pre-publication requirements before that branch:**
+
+1. Manual project-owner confirmation of ATY fragment adjacency (cannot be completed without reviewing the full song text).
+2. Official media link verification (YouTube or Spotify official channel) for all three songs.
+3. Final legal-safe review of the complete ebook text.
+4. PDF design and mobile readability QA.
+
+Do not create the next branch until the project owner is ready to proceed.

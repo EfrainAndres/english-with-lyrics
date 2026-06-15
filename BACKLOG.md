@@ -102,16 +102,26 @@ Status: done.
 - Ebook draft phrase blocks for A Thousand Years and Still Loving You updated with approved content.
 - Official media links for all songs pending verification before PDF export.
 
-Branch: `content/phase-0-ebook-fragment-review`
+Branch: `content/phase-0-ebook-fragments-the-reason` (final fragment branch)
 
-Status: In progress — 6 of 9 fragments approved; 3 slots pending manual input.
+Status: Complete — 9 of 9 fragments approved. Nine-fragment review phase done.
 
-Remaining work:
+- The Reason review complete (branch: `content/phase-0-ebook-fragments-the-reason`):
+  - TR-01 "Before I go" — Approved (score 86/100)
+  - TR-02 "I'm not a perfect person" — Approved (score 91/100)
+  - TR-03 "Start over new" — Approved (score 87/100)
+  - Non-adjacency confirmed by project owner. Ebook order confirmed to differ from source order.
+- Nine-fragment educational review phase: Complete.
+- Final nine-fragment cross-song review: Complete. See Section 9 of `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`.
 
-- The Reason fragments: 3 slots pending manual input (TR-01, TR-02, TR-03).
-- Cross-song final review: pending (after TR approved).
-- Final content integration: pending.
-- PDF design and delivery: blocked until all 9 fragments approved.
+Remaining pre-publication work:
+
+- ATY adjacency: manual project-owner confirmation required before PDF export (only outstanding verification item).
+- Official media link verification for all three songs.
+- Final legal-safe review of the complete ebook text.
+- Final content integration: branch `content/phase-0-ebook-final-content`.
+- PDF design: branch `design/phase-0-ebook-pdf-template` (no longer blocked by fragment input; blocked by final-content integration and legal-safe QA).
+- PDF delivery and email setup: pending.
 
 ### Ebook PDF Template
 

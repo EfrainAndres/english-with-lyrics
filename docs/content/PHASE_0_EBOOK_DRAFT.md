@@ -504,14 +504,14 @@ Escucha la canción entera antes de leer. Esta vez, intenta identificar una sola
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_1] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **Before I go** |
+| Como suena | **bi·fór · ai · gou** *(en "bi·fór," la primera sílaba "bi" es breve y suave — la fuerza va en "fór"; en "gou," la "ou" desliza hacia la "u" como un solo movimiento)* |
+| Español natural | **Antes de irme / Antes de que me vaya** — para decir algo importante justo antes de salir, terminar una llamada, o pasar a otra cosa. |
+| Vocabulario útil | **before** = antes de · **go** = ir(me) / irse |
+| Úsalo así | "Before I go, I just want to say thank you for everything." *(Antes de irme, solo quiero darte las gracias por todo.)* |
+| Ejercicio | Elige la situación donde "Before I go" es natural: A) Estás a punto de salir de una reunión y quieres decir algo importante · B) Estás eligiendo qué comer en el desayuno · C) Estás buscando un archivo en tu computadora. |
 
-**Repite:** Escucha nuevamente, repite lentamente y luego intenta decirlo sin mirar la guía.
+**Repite:** Escucha el fragmento en la fuente oficial, repítelo lentamente con una pronunciación clara y después intenta decirlo sin mirar la guía.
 
 - [ ] Completé este fragmento
 
@@ -523,14 +523,14 @@ Escucha la canción entera antes de leer. Esta vez, intenta identificar una sola
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_2] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **I'm not a perfect person** |
+| Como suena | **aim · nat · a · pér·fect · pér·son** *(en "aim," la "ai" desliza; "a" es casi imperceptible — muy débil y rápida; las dos "pér" tienen el mismo ritmo fuerte-suave)* |
+| Español natural | **No soy una persona perfecta** — una admisión honesta de las propias limitaciones; muy usada en disculpas y conversaciones personales. |
+| Vocabulario útil | **I'm** = soy / estoy (contracción de "I am") · **perfect** = perfecto/a · **person** = persona |
+| Úsalo así | "I know I'm not a perfect person, but I always try to learn from my mistakes." *(Sé que no soy una persona perfecta, pero siempre trato de aprender de mis errores.)* |
+| Ejercicio | Practica el ritmo: lee "aim · nat · a · pér·fect · pér·son" tres veces en voz alta. Las sílabas con más fuerza son "nat," la primera de "pér·fect" y la primera de "pér·son." ¿El ritmo sonó natural? Sí / Más o menos / Todavía no. |
 
-**Repite:** Lee el fragmento con la guía de pronunciación. Luego cúbrela y repite de memoria.
+**Repite:** Escucha el fragmento en la fuente oficial, repítelo lentamente con una pronunciación clara y después intenta decirlo sin mirar la guía.
 
 - [ ] Completé este fragmento
 
@@ -542,14 +542,14 @@ Escucha la canción entera antes de leer. Esta vez, intenta identificar una sola
 
 | Elemento | Contenido |
 |---|---|
-| Inglés | [SHORT_FRAGMENT_PENDING_REVIEW_3] |
-| Como suena | [PRONUNCIATION_PENDING_FRAGMENT_APPROVAL] |
-| Español natural | [NATURAL_MEANING_PENDING_FRAGMENT_APPROVAL] |
-| Vocabulario útil | [VOCABULARY_PENDING_FRAGMENT_APPROVAL] |
-| Úsalo así | [REAL_LIFE_USE_PENDING_FRAGMENT_APPROVAL] |
-| Ejercicio | [EXERCISE_PENDING_FRAGMENT_APPROVAL] |
+| Inglés | **Start over new** |
+| Como suena | **estárt · óuver · niu** *(en "estárt," la "e" inicial ayuda con el grupo "st" — con práctica, intenta reducirla; en "óuver," la "ou" desliza; en "niu," hay una "i" breve antes de la "u")* |
+| Español natural | **Empezar de nuevo** — la expresión clave es "start over": un phrasal verb que significa comenzar otra vez desde cero. "New" añade énfasis — una versión nueva y sin cargas anteriores. |
+| Vocabulario útil | **start over** = empezar de nuevo / volver a empezar (phrasal verb) · **new** = nuevo/a |
+| Úsalo así | "After that difficult year, I decided to start over new — a different city, a different routine." *(Después de ese año difícil, decidí empezar de nuevo — otra ciudad, otra rutina.)* |
+| Ejercicio | Escribe una frase original usando "start over" sobre algo en tu vida — aprender inglés, un proyecto, un hábito, o cualquier proceso que hayas vuelto a comenzar. |
 
-**Repite:** Repite tres veces. Intenta usar una entonación natural — no es necesario sonar como el cantante, solo claro.
+**Repite:** Escucha el fragmento en la fuente oficial, repítelo lentamente con una pronunciación clara y después intenta decirlo sin mirar la guía.
 
 - [ ] Completé este fragmento
 
@@ -572,15 +572,22 @@ Después de practicar esta canción, tómate un momento para responder:
 
 #### [INTERNAL] Editorial notes — Song 3 — Remove before publication
 
-**Fragment-selection risk:** The Reason has a moderate verse tempo and a slightly more energetic chorus. The verse sections contain the most naturally spoken-style delivery and are the preferred source for fragments. Risk level: medium. The main risk is that practical vocabulary phrases may appear in the chorus, which is the most repeated section. Chorus fragments require stricter sequential-reconstruction assessment.
+**Fragment status:** All three fragments reviewed and approved in `content/phase-0-ebook-fragments-the-reason`. See `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md` for full review records (TR-01, TR-02, TR-03).
 
-**Pronunciation risk:** The song is in clear standard American English. Risk level: low. This is the easiest song in the set from a pronunciation-teaching standpoint. The fragment reviewer should prioritize fragments that demonstrate connected speech, common reductions (e.g., "gonna," "wanna" equivalents if present), and natural sentence stress.
+**Fragments approved:**
+- TR-01: "Before I go" — score 86/100
+- TR-02: "I'm not a perfect person" — score 91/100
+- TR-03: "Start over new" — score 87/100
 
-**Learner-level risk:** Low to medium. Vocabulary is accessible and practical. The main risk is that the song may feel less emotionally resonant than Songs 1 and 2 for some learners. The practical language angle is the key motivation for including it.
+**Cross-song note:** "Start" appears in both SLY-02 ("from the start") and TR-03 ("start over"). This is a deliberate reinforcement — same word, different phrasal contexts. The final-content integration branch should note this as a learning-reinforcement design choice.
 
-**Potential replacement condition:** If the fragment review phase finds that key vocabulary is too idiomatic or song-specific to transfer to real-life use, or if survey evidence shows low familiarity with this song, replace with Thank You (Dido) for higher practical language value, or with Nothing Else Matters (Metallica) if the set needs stronger rock identity.
+**Remaining publication requirements:**
+- Non-adjacency confirmed by project owner — ebook order confirmed to differ from source order — no surrounding song text was stored.
+- Official media link (YouTube or Spotify) must be confirmed and inserted before PDF export.
+- Pronunciation consistency check across all nine ebook fragments is complete (see Section 9 cross-song review in fragment review document).
+- Final legal-safe review of the complete PDF before publication.
 
-**Backup song if needed:** Thank You — Dido (for practical language strength); Nothing Else Matters — Metallica (for stronger rock identity).
+**Replacement condition:** No longer required. Three suitable fragments have been approved.
 
 ---
 
@@ -609,8 +616,8 @@ Fragments must satisfy all of the following conditions before insertion into any
 | TR-F3 | The Reason | Pending | 3–7 words | TBD in fragment review phase | TBD | TBD | Assess in fragment review | Pending | Pending | Pending |
 
 **Total fragment slots: 9**
-**Approved fragments: 0**
-**Pending review: 9**
+**Approved fragments: 9**
+**Pending review: 0**
 
 ---
 
