@@ -99,29 +99,44 @@ Status: done.
   - SLY-02 "All the way from the start" — Approved (score 81/100)
   - SLY-03 "I can't get through" — Approved (score 91/100)
   - Non-adjacency confirmed by project owner. Vocalist accent documented; neutral pronunciation prioritized.
-- Ebook draft phrase blocks for A Thousand Years and Still Loving You updated with approved content.
-- Official media links for all songs pending verification before PDF export.
+- Ebook draft phrase blocks for all three songs updated with approved content.
+- ATY adjacency and reconstruction verification: complete — project owner confirmed outside the repository.
+- Official media links verified (YouTube) for all three songs — 2026-06-15.
 
 Branch: `content/phase-0-ebook-fragments-the-reason` (final fragment branch)
 
 Status: Complete — 9 of 9 fragments approved. Nine-fragment review phase done.
 
 - The Reason review complete (branch: `content/phase-0-ebook-fragments-the-reason`):
-  - TR-01 "Before I go" — Approved (score 86/100)
-  - TR-02 "I'm not a perfect person" — Approved (score 91/100)
-  - TR-03 "Start over new" — Approved (score 87/100)
+  - TR-01 "Before I go" — Approved
+  - TR-02 "I'm not a perfect person" — Approved
+  - TR-03 "Start over new" — Approved
   - Non-adjacency confirmed by project owner. Ebook order confirmed to differ from source order.
 - Nine-fragment educational review phase: Complete.
 - Final nine-fragment cross-song review: Complete. See Section 9 of `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`.
 
+### Ebook Final Content
+
+- Clean learner-facing ebook source created at `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md`.
+- All nine approved fragments integrated with standardized labels, design handoff markers, and explicit publication blockers.
+- Cross-song editorial consistency pass complete.
+- Official media links (YouTube) verified and included for all three songs.
+- Internal editorial notes removed from learner-facing flow.
+- Audit trail preserved in `docs/content/PHASE_0_EBOOK_DRAFT.md` and `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`.
+
+Branch: `content/phase-0-ebook-final-content`
+
+Status: Complete.
+
 Remaining pre-publication work:
 
-- ATY adjacency and reconstruction verification: complete — project owner confirmed outside the repository.
-- Official media link verification for all three songs.
-- Final legal-safe review of the complete ebook text.
-- Final content integration: branch `content/phase-0-ebook-final-content`.
-- PDF design: branch `design/phase-0-ebook-pdf-template` (no longer blocked by fragment input; blocked by final-content integration and legal-safe QA).
-- PDF delivery and email setup: pending.
+- Confirm official media links are still active before PDF export.
+- Final publication-level legal-safe review of the complete ebook text.
+- PDF design: branch `design/phase-0-ebook-pdf-template`.
+- Mobile readability QA.
+- PDF upload: `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- `/ebook-gratis` page conversion from waiting page to real download page.
+- Email provider setup and delivery automation.
 
 ### Ebook PDF Template
 
