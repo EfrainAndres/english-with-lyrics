@@ -116,7 +116,7 @@ Status: Complete — 9 of 9 fragments approved. Nine-fragment review phase done.
 
 Remaining pre-publication work:
 
-- ATY adjacency: manual project-owner confirmation required before PDF export (only outstanding verification item).
+- ATY adjacency and reconstruction verification: complete — project owner confirmed outside the repository.
 - Official media link verification for all three songs.
 - Final legal-safe review of the complete ebook text.
 - Final content integration: branch `content/phase-0-ebook-final-content`.
