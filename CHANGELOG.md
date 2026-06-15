@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added the reusable Phase 0 ebook PDF design specification and static HTML/CSS prototype, including mobile-first A5 page templates, 15 reusable components (cover, song divider, learning cards, pronunciation treatment, vocabulary, exercises, challenge, self-assessment, CTA, rights note), design tokens, print-export styles, accessibility notes, and a 14–16 page count recommendation. Prototype at `docs/design/prototypes/`; specification at `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md`.
 - Added the clean Phase 0 ebook final-content source at `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md` with standardized learner-facing micro-lessons, verified official YouTube links for all three songs, a three-day practice challenge, self-assessment, CTAs, rights guidance, design handoff markers, and explicit publication blockers. PDF design, mobile QA, final legal-safe review, upload, and delivery remain pending.
 - Completed the nine-fragment educational review for A Thousand Years, Still Loving You, and The Reason, including Escríbelo como suena guidance, natural meanings, original examples and exercises, reconstruction safeguards, and cross-song consistency checks. Project-owner adjacency and reconstruction verification complete for all three songs.
 - Added the controlled editorial draft at `docs/content/PHASE_0_EBOOK_DRAFT.md` and the nine-slot fragment-review framework at `docs/content/PHASE_0_EBOOK_FRAGMENT_REVIEW.md`.

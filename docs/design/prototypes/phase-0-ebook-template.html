@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prototipo de plantilla PDF — Aprende inglés con 3 canciones — Sing Pronounce Repeat">
+  <title>Prototipo de plantilla ebook — Sing Pronounce Repeat</title>
+  <link rel="stylesheet" href="./phase-0-ebook-template.css">
+</head>
+
+<!--
+  INTERNAL PROTOTYPE — No publicar como ebook final.
+  Este archivo demuestra los componentes y el sistema visual reutilizable.
+  El contenido completo del ebook está en:
+    docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md
+  Especificación completa de diseño:
+    docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md
+-->
+
+<body>
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 1 — PORTADA                                       -->
+  <!-- ======================================================== -->
+  <section class="page page--cover" data-page-label="Portada">
+
+    <img
+      src="../../../public/brand/logo-claro.svg"
+      alt="Sing Pronounce Repeat / English with Lyrics logo"
+      class="cover-logo"
+    >
+
+    <div>
+      <p class="cover-eyebrow">Guía de práctica gratuita</p>
+
+      <h1 class="cover-title">Aprende inglés<br>con 3 canciones</h1>
+
+      <p class="cover-subtitle">
+        Pronunciación fácil, frases útiles y traducción natural<br>
+        para hispanohablantes
+      </p>
+
+      <div class="cover-brand-block">
+        <p class="cover-brand">Sing Pronounce Repeat / English with Lyrics</p>
+        <span class="cover-method">Con el método Escríbelo como suena</span>
+      </div>
+    </div>
+
+    <p class="cover-promise">
+      En esta guía vas a practicar pronunciación, escucha activa y frases de
+      inglés real — con canciones que ya conoces o que vas a querer conocer.
+    </p>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 2 — BIENVENIDA Y PROPÓSITO                        -->
+  <!-- ======================================================== -->
+  <section class="page page--welcome" data-page-label="Bienvenida">
+
+    <header class="page-header">
+      <span class="header-method">Escríbelo como suena</span>
+      <span class="header-section">Bienvenida</span>
+    </header>
+
+    <h2 class="section-title">Bienvenido a tu guía de práctica</h2>
+
+    <p class="text-body">
+      Esta es una guía corta para practicar inglés con canciones de una forma
+      clara y sin complicaciones. No es un curso. No es un libro de gramática.
+      No tiene letras completas.
+    </p>
+
+    <p class="text-body">
+      Es una práctica guiada con fragmentos cortos, pronunciación escrita en
+      español y frases que puedes usar en la vida real.
+    </p>
+
+    <p class="text-small mb-md" style="font-weight:700; color:var(--c-yellow);">¿Qué vas a practicar?</p>
+
+    <ul class="welcome-list">
+      <li>Cómo suenan ciertas frases en inglés cuando las cantamos o escuchamos.</li>
+      <li>Pronunciación escrita de una forma que puedas leer en voz alta.</li>
+      <li>El significado natural de esas frases en español.</li>
+      <li>Vocabulario útil que aparece en las canciones.</li>
+    </ul>
+
+    <div class="welcome-note mt-sm">
+      <strong style="color:var(--c-text); display:block; margin-bottom:4px;">Lo que esta guía no incluye</strong>
+      Esta guía no publica letras completas ni traducciones totales. Su propósito
+      es enseñar con fragmentos educativos cortos. Para escuchar las canciones,
+      usa plataformas oficiales. En cada sección encontrarás el enlace oficial.
+    </div>
+
+    <div class="welcome-note mt-sm">
+      <strong style="color:var(--c-text); display:block; margin-bottom:4px;">Tiempo estimado</strong>
+      20–40 minutos en una sola sesión, o dividida en tres sesiones cortas —
+      una por canción.
+    </div>
+
+    <footer class="page-footer">
+      <span class="footer-brand">Sing Pronounce Repeat</span>
+      <span class="footer-page-num">2</span>
+    </footer>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 3 — MÉTODO + CUATRO PASOS                         -->
+  <!-- ======================================================== -->
+  <section class="page" data-page-label="Método y pasos">
+
+    <header class="page-header">
+      <span class="header-method">Escríbelo como suena</span>
+      <span class="header-section">Método</span>
+    </header>
+
+    <h2 class="method-section-title">¿Qué es Escríbelo como suena?</h2>
+
+    <p class="text-small mb-md">
+      Escríbelo como suena escribe la pronunciación del inglés en letras que
+      un hispanohablante puede leer directamente. No es IPA. No hay símbolos
+      raros. Es un puente, no una transcripción perfecta.
+    </p>
+
+    <!-- Method card (non-song example from final-content source) -->
+    <div class="method-card mb-md">
+      <p class="text-small mb-sm" style="color:var(--c-text-muted);">Ejemplo fuera de cualquier canción:</p>
+      <div class="method-card-example">
+        <span class="me-lang">Inglés:</span>
+        <span class="me-english">I need to talk to you</span>
+        <span class="me-lang">Como suena:</span>
+        <span class="me-pronunciation">ai níd tu tók tu iú</span>
+      </div>
+      <p class="method-note">
+        Eso te da un punto de partida para intentarlo. Después escuchas el
+        audio oficial y ajustas. El cantante, su acento y la velocidad siempre
+        van a cambiar lo que se escucha.
+      </p>
+    </div>
+
+    <!-- Four-step flow -->
+    <h3 class="steps-title">Cómo usar esta guía</h3>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-name">Escucha</div>
+        <p class="step-desc">Escucha la canción completa una vez, sin leer nada todavía.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-name">Lee</div>
+        <p class="step-desc">Lee el fragmento con su pronunciación y significado. Despacio.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-name">Repite</div>
+        <p class="step-desc">Repite en voz alta y compara con el audio oficial.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-name">Úsalo</div>
+        <p class="step-desc">Usa la expresión en una frase tuya. Ese es el paso más importante.</p>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <span class="footer-brand">Sing Pronounce Repeat</span>
+      <span class="footer-page-num">3</span>
+    </footer>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 4 — SEPARADOR DE CANCIÓN                          -->
+  <!-- ======================================================== -->
+  <section class="page page--song-divider" data-page-label="Canción 1">
+
+    <header class="page-header">
+      <span class="header-method">Escríbelo como suena</span>
+      <span class="header-section">Canciones</span>
+    </header>
+
+    <div class="song-divider-bar"></div>
+
+    <p class="song-num-label">Canción 1 de 3</p>
+
+    <h2 class="song-title">A Thousand<br>Years</h2>
+    <p class="song-artist">Christina Perri</p>
+
+    <div class="song-meta">
+      <div class="song-meta-row">
+        <span class="song-meta-label">Nivel sugerido</span>
+        <span class="song-meta-value">Principiante — Intermedio</span>
+      </div>
+      <div class="song-meta-row">
+        <span class="song-meta-label">Por qué ayuda</span>
+        <span class="song-meta-value">
+          Tempo lento y pronunciación muy clara. Puedes escuchar cada sílaba
+          con calma. Ideal para primera práctica.
+        </span>
+      </div>
+      <div class="song-meta-row">
+        <span class="song-meta-label">Qué notar</span>
+        <span class="song-meta-value">
+          Sonidos vocálicos largos, speech conectado, ritmo suave.
+        </span>
+      </div>
+    </div>
+
+    <div class="song-listen-cta">
+      <p class="song-listen-label">Escucha oficial</p>
+      <a href="https://www.youtube.com/watch?v=rtOvBOTyX00" class="song-listen-link">
+        youtube.com/watch?v=rtOvBOTyX00
+      </a>
+      <div class="song-qr-placeholder">
+        QR opcional — generar y probar en producción
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <span class="footer-brand">Sing Pronounce Repeat</span>
+      <span class="footer-page-num">4</span>
+    </footer>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 5 — TARJETA DE APRENDIZAJE (contenido corto)      -->
+  <!-- Heart beats fast — fragmento de 3 palabras               -->
+  <!-- ======================================================== -->
+  <section class="page" data-page-label="Fragmento corto">
+
+    <header class="page-header">
+      <span class="header-method">A Thousand Years</span>
+      <span class="header-section">Fragmento 2</span>
+    </header>
+
+    <article class="fragment-card">
+
+      <div class="fragment-card-title">
+        Fragmento 2 — A Thousand Years
+        <span class="prototype-label">Tarjeta corta</span>
+      </div>
+
+      <!-- Fragment text -->
+      <div class="frag-row frag-row--fragment">
+        <span class="frag-label">Fragmento corto</span>
+        <span class="frag-value">Heart beats fast</span>
+      </div>
+
+      <!-- Pronunciation -->
+      <div class="frag-row frag-row--pronunciation">
+        <span class="frag-label">Escríbelo como suena</span>
+        <div class="frag-value">
+          <span class="pronunciation-text">jart · bíts · fast</span>
+          <em class="pronunciation-note">
+            la "j" en "jart" es un sonido de aire suave — no la "j" gutural del español
+          </em>
+        </div>
+      </div>
+
+      <!-- Meaning -->
+      <div class="frag-row">
+        <span class="frag-label">Significado natural</span>
+        <span class="frag-value">
+          <strong style="color:var(--c-text);">El corazón late rápido</strong> —
+          para describir nervios, emoción, miedo o actividad física intensa.
+        </span>
+      </div>
+
+      <!-- Vocabulary -->
+      <div class="frag-row">
+        <span class="frag-label">Vocabulario útil</span>
+        <ul class="vocab-list frag-value">
+          <li><strong>heart</strong> = corazón</li>
+          <li><strong>beat / beats</strong> = latir (corazón) / ritmo (música)</li>
+          <li><strong>fast</strong> = rápido</li>
+        </ul>
+      </div>
+
+      <!-- Example -->
+      <div class="frag-row">
+        <span class="frag-label">Ejemplo fuera de la canción</span>
+        <div class="frag-value">
+          <span class="example-quote">"My heart beats fast before an important exam."</span>
+          <span class="example-translation">Mi corazón late rápido antes de un examen importante.</span>
+        </div>
+      </div>
+
+      <!-- Exercise -->
+      <div class="frag-row frag-row--exercise">
+        <span class="frag-label">Practica</span>
+        <p class="exercise-text frag-value">
+          Nombra dos situaciones en las que tu corazón late rápido.
+          Puedes escribirlas en español o en inglés.
+        </p>
+      </div>
+
+      <!-- Footer: Repítelo + checkbox -->
+      <div class="fragment-footer">
+        <span class="repite-label">Repítelo</span>
+        <p class="repite-text">
+          Escucha el fragmento, sigue el ritmo con la guía y repite tres veces.
+        </p>
+        <label class="progress-check">
+          <input type="checkbox" aria-label="Listo"> Listo
+        </label>
+      </div>
+
+    </article>
+
+    <footer class="page-footer">
+      <span class="footer-brand">Sing Pronounce Repeat</span>
+      <span class="footer-page-num">5</span>
+    </footer>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 6 — TARJETA DE APRENDIZAJE (contenido medio/largo) -->
+  <!-- I'm not a perfect person — 5 palabras, ejercicio de ritmo -->
+  <!-- ======================================================== -->
+  <section class="page" data-page-label="Fragmento medio">
+
+    <header class="page-header">
+      <span class="header-method">The Reason</span>
+      <span class="header-section">Fragmento 2</span>
+    </header>
+
+    <article class="fragment-card">
+
+      <div class="fragment-card-title">
+        Fragmento 2 — The Reason
+        <span class="prototype-label">Tarjeta media</span>
+      </div>
+
+      <div class="frag-row frag-row--fragment">
+        <span class="frag-label">Fragmento corto</span>
+        <span class="frag-value">I'm not a perfect person</span>
+      </div>
+
+      <div class="frag-row frag-row--pronunciation">
+        <span class="frag-label">Escríbelo como suena</span>
+        <div class="frag-value">
+          <span class="pronunciation-text">aim · nat · a · pér·fect · pér·son</span>
+          <em class="pronunciation-note">
+            "aim" desliza la "ai"; "a" es casi imperceptible — muy débil y rápida;
+            las dos sílabas "pér" tienen el mismo ritmo fuerte-suave
+          </em>
+        </div>
+      </div>
+
+      <div class="frag-row">
+        <span class="frag-label">Significado natural</span>
+        <span class="frag-value">
+          <strong style="color:var(--c-text);">No soy una persona perfecta</strong> —
+          admisión honesta de las propias limitaciones; muy usada en disculpas
+          y conversaciones personales.
+        </span>
+      </div>
+
+      <div class="frag-row">
+        <span class="frag-label">Vocabulario útil</span>
+        <ul class="vocab-list frag-value">
+          <li><strong>I'm</strong> = soy / estoy (contracción de "I am")</li>
+          <li><strong>perfect</strong> = perfecto/a</li>
+          <li><strong>person</strong> = persona</li>
+        </ul>
+      </div>
+
+      <div class="frag-row">
+        <span class="frag-label">Ejemplo fuera de la canción</span>
+        <div class="frag-value">
+          <span class="example-quote">
+            "I know I'm not a perfect person, but I always try to learn from my mistakes."
+          </span>
+          <span class="example-translation">
+            Sé que no soy una persona perfecta, pero siempre trato de aprender de mis errores.
+          </span>
+        </div>
+      </div>
+
+      <div class="frag-row frag-row--exercise">
+        <span class="frag-label">Practica</span>
+        <div class="frag-value">
+          <p class="exercise-text">
+            Lee "aim · nat · a · pér·fect · pér·son" tres veces en voz alta.
+            Las sílabas con más fuerza son "nat," la primera de "pér·fect"
+            y la primera de "pér·son." ¿El ritmo sonó natural?
+          </p>
+          <div class="exercise-rating-row mt-sm">
+            <div class="rating-option">Sí</div>
+            <div class="rating-option">Más o menos</div>
+            <div class="rating-option">Todavía no</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fragment-footer">
+        <span class="repite-label">Repítelo</span>
+        <p class="repite-text">
+          Escucha el fragmento, repítelo lentamente con pronunciación clara
+          y después intenta decirlo sin mirar la guía.
+        </p>
+        <label class="progress-check">
+          <input type="checkbox" aria-label="Listo"> Listo
+        </label>
+      </div>
+
+    </article>
+
+    <footer class="page-footer">
+      <span class="footer-brand">Sing Pronounce Repeat</span>
+      <span class="footer-page-num">6</span>
+    </footer>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 7 — RETO DE TRES DÍAS                             -->
+  <!-- ======================================================== -->
+  <section class="page" data-page-label="Reto 3 días">
+
+    <header class="page-header">
+      <span class="header-method">Escríbelo como suena</span>
+      <span class="header-section">Reto</span>
+    </header>
+
+    <h2 class="challenge-title">Reto de tres días</h2>
+
+    <p class="challenge-intro">
+      Ya practicaste las tres canciones. Estas prácticas cortas están
+      diseñadas para 10–15 minutos por día.
+    </p>
+
+    <div class="challenge-days">
+
+      <div class="challenge-day">
+        <p class="challenge-day-label">Día 1</p>
+        <h3 class="challenge-day-title">Escucha y comprende</h3>
+        <ol>
+          <li>Escucha las tres canciones en sus fuentes oficiales.</li>
+          <li>Intenta identificar los fragmentos que practicaste.</li>
+          <li>Lee nuevamente los significados naturales de cada fragmento.</li>
+          <li>Anota un sonido que todavía te resulte difícil.</li>
+        </ol>
+        <p class="challenge-day-goal">
+          Objetivo: conectar el texto de la guía con el sonido real de la canción.
+        </p>
+        <label class="challenge-day-check">
+          <input type="checkbox" aria-label="Completé el día 1"> Completé el día 1
+        </label>
+      </div>
+
+      <div class="challenge-day">
+        <p class="challenge-day-label">Día 2</p>
+        <h3 class="challenge-day-title">Pronuncia y practica</h3>
+        <ol>
+          <li>Repite cada fragmento tres veces en voz alta.</li>
+          <li>Si puedes, grábate diciendo uno de los fragmentos de cada canción.</li>
+          <li>Escucha tu grabación y el audio oficial. Nota una diferencia.</li>
+        </ol>
+        <p class="challenge-day-goal">
+          Objetivo: ganar confianza con el sonido de los fragmentos, no perfección.
+        </p>
+        <label class="challenge-day-check">
+          <input type="checkbox" aria-label="Completé el día 2"> Completé el día 2
+        </label>
+      </div>
+
+      <div class="challenge-day">
+        <p class="challenge-day-label">Día 3</p>
+        <h3 class="challenge-day-title">Repasa y actúa</h3>
+        <ol>
+          <li>Sin mirar la guía, recuerda los tres fragmentos — uno por canción.</li>
+          <li>Completa el autochequeo.</li>
+          <li>Usa una expresión en una frase propia — escríbela o dila en voz alta.</li>
+          <li>Responde la encuesta del proyecto: <a href="https://tally.so/r/eqzgbe">tally.so/r/eqzgbe</a></li>
+        </ol>
+        <p class="challenge-day-goal">
+          Objetivo: consolidar lo aprendido y convertirte en parte activa del proyecto.
+        </p>
+        <label class="challenge-day-check">
+          <input type="checkbox" aria-label="Completé el día 3"> Completé el día 3
+        </label>
+      </div>
+
+    </div>
+
+    <footer class="page-footer">
+      <span class="footer-brand">Sing Pronounce Repeat</span>
+      <span class="footer-page-num">7</span>
+    </footer>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 8 — AUTOCHEQUEO + CTA                             -->
+  <!-- ======================================================== -->
+  <section class="page" data-page-label="Autochequeo y CTA">
+
+    <header class="page-header">
+      <span class="header-method">Escríbelo como suena</span>
+      <span class="header-section">Autochequeo</span>
+    </header>
+
+    <h2 class="selfcheck-title">Autochequeo rápido</h2>
+
+    <p class="selfcheck-section-label">Lo que hice</p>
+    <ul class="selfcheck-list">
+      <li><input type="checkbox" aria-label="Escuché antes de leer"> Escuché antes de leer</li>
+      <li><input type="checkbox" aria-label="Practiqué en voz alta"> Practiqué en voz alta</li>
+      <li><input type="checkbox" aria-label="Identifiqué expresiones útiles"> Identifiqué expresiones útiles</li>
+      <li><input type="checkbox" aria-label="Noté un reto de pronunciación"> Noté al menos un reto de pronunciación</li>
+      <li><input type="checkbox" aria-label="Usé vocabulario en una oración"> Usé vocabulario en una oración propia</li>
+      <li><input type="checkbox" aria-label="Sé qué practicar después"> Sé qué quiero seguir practicando</li>
+    </ul>
+
+    <p class="selfcheck-section-label">Mi nivel de confianza ahora</p>
+    <table class="confidence-table">
+      <thead>
+        <tr>
+          <th>Habilidad</th>
+          <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Escucha</td>
+          <td>·</td><td>·</td><td>·</td><td>·</td><td>·</td>
+        </tr>
+        <tr>
+          <td>Pronunciación</td>
+          <td>·</td><td>·</td><td>·</td><td>·</td><td>·</td>
+        </tr>
+        <tr>
+          <td>Vocabulario</td>
+          <td>·</td><td>·</td><td>·</td><td>·</td><td>·</td>
+        </tr>
+        <tr>
+          <td>Confianza hablando</td>
+          <td>·</td><td>·</td><td>·</td><td>·</td><td>·</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="cta-divider">
+
+    <h2 class="cta-title">¿Qué sigue?</h2>
+
+    <div class="cta-block">
+      <p class="cta-block-desc">
+        Cuéntanos qué canciones te gustaría practicar. La encuesta es corta.
+      </p>
+      <a href="https://tally.so/r/eqzgbe" class="cta-button--primary">
+        → Responder encuesta
+      </a>
+    </div>
+
+    <div class="cta-block mt-sm">
+      <a href="https://tally.so/r/D4a6NE" class="cta-button--secondary">
+        → Quiero saber del primer grupo
+      </a>
+    </div>
+
+    <a href="/ebook-gratis" class="cta-link--tertiary mt-sm">
+      Visitar la página del ebook: /ebook-gratis
+    </a>
+
+    <footer class="page-footer">
+      <span class="footer-brand">Sing Pronounce Repeat</span>
+      <span class="footer-page-num">8</span>
+    </footer>
+
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- PÁGINA 9 — NOTA EDUCATIVA Y DE DERECHOS                  -->
+  <!-- ======================================================== -->
+  <section class="page" data-page-label="Nota de derechos">
+
+    <header class="page-header">
+      <span class="header-method">Escríbelo como suena</span>
+      <span class="header-section">Derechos</span>
+    </header>
+
+    <h2 class="rights-title">Nota educativa y de derechos</h2>
+
+    <div class="rights-section">
+      <p class="rights-section-label">Sobre los fragmentos</p>
+      <p class="rights-body">
+        Esta guía utiliza únicamente fragmentos educativos cortos seleccionados
+        para enseñar pronunciación, vocabulario y comprensión de frases en inglés.
+        Los fragmentos son el punto de partida del análisis, no el contenido principal.
+        Esta guía no reproduce letras completas, versos enteros ni coros.
+        No es un reemplazo de servicios oficiales de letra, audio o video.
+      </p>
+    </div>
+
+    <div class="rights-section">
+      <p class="rights-section-label">Sobre los derechos</p>
+      <p class="rights-body">
+        Los títulos de las canciones y los nombres de los artistas mencionados
+        pertenecen a sus respectivos titulares de derechos.
+        La pronunciación original, las explicaciones, los ejercicios, los ejemplos
+        de vocabulario y el método Escríbelo como suena son contenido educativo
+        original de Sing Pronounce Repeat / English with Lyrics.
+      </p>
+    </div>
+
+    <div class="rights-section">
+      <p class="rights-section-label">Sobre el audio</p>
+      <p class="rights-body">
+        Para escuchar las canciones, usa plataformas oficiales o autorizadas.
+        Esta guía no distribuye ni embebe audio comercial.
+      </p>
+    </div>
+
+    <div class="rights-section">
+      <p class="rights-section-label">Intención educativa</p>
+      <p class="rights-body">
+        La intención educativa de esta guía no implica propiedad sobre las
+        canciones mencionadas, ni garantiza protección legal. El propósito es
+        la enseñanza de pronunciación y comprensión del inglés, no la
+        reproducción o distribución de obras protegidas.
+      </p>
+    </div>
+
+    <footer class="page-footer" style="margin-top:auto;">
+      <span class="footer-brand">Sing Pronounce Repeat / English with Lyrics</span>
+      <span class="footer-page-num">9</span>
+    </footer>
+
+  </section>
+
+
+</body>
+</html>
