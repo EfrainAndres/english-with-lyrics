@@ -36,10 +36,18 @@ for public delivery.
 - **Status:** Superseded — replaced by QA-corrected layout export below.
 - **Reason superseded:** Manual visual QA identified overflow on pages 7, 11, 15 (Fragment 3 + quick-review shared page caused content to be pushed off A5 boundary); challenge page footer not visible; self-assessment footer and /ebook-gratis reference not visible.
 
-### QA-corrected export (current)
+### QA-corrected export (2026-06-16, pre-TR03-fix)
 
 - **Date:** 2026-06-16
 - **File size:** 1,223,741 bytes
+- **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
+- **Status:** Superseded — replaced by TR-03 fix export below.
+- **Reason superseded:** Manual visual QA identified the TR-03 (page 17) repeat instruction was clipped at "después intenta"; the full phrase "decirlo sin mirar la guía." was cut by `overflow: hidden` on the fixed-height A5 page.
+
+### TR-03 fix export (current)
+
+- **Date:** 2026-06-15
+- **File size:** 1,224,339 bytes
 - **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
 - **PDF title:** "Aprende inglés con 3 canciones — Sing Pronounce Repeat" (UTF-16BE metadata)
 - **Network-error check:** PASSED
@@ -48,6 +56,7 @@ for public delivery.
 - **All 9 fragments present:** PASSED
 - **Three dedicated quick-review pages:** PASSED (pages 8, 13, 18)
 - **Footer on every non-cover page:** PASSED (pages 2–21)
+- **TR-03 structural check:** PASSED — full repeat instruction "decirlo sin mirar la guía" present in HTML source
 - **/ebook-gratis visible text count:** 1 (page 20 CTA section)
 - **Challenge page footer:** Structurally present (page 19) — visual confirmation pending manual QA
 - **Export method:** Chrome headless (`--headless=new`, `--virtual-time-budget=10000`), Python 3 HTTP server with curl readiness loop, temporary PDF validated before move
@@ -95,7 +104,7 @@ for public delivery.
 | Brand palette | Black, yellow, pink, purple used consistently | |
 | System fonts | No missing fonts; text readable without custom font installation | |
 | Print backgrounds | Background colors visible in PDF (requires "Background graphics" on) | |
-| Page numbers | Sequential 1–18 in the footer of each page | |
+| Page numbers | Sequential 1–21 in the footer of each page | |
 
 ---
 
@@ -189,4 +198,4 @@ Use this table to record any issues found during QA.
 
 | Page | Issue | Severity | Fixed? |
 |---|---|---|---|
-| | | | |
+| 17 | TR-03 repeat instruction clipped — "decirlo sin mirar la guía." not visible in PDF | High | Yes — `.page--tr3` CSS modifier reduces page-header margin-bottom, fragment-card margin-bottom, and fragment-footer padding to recover ~24px; structural check added to export script |

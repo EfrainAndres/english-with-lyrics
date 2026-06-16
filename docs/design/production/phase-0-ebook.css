@@ -1008,6 +1008,17 @@ li + li {
   margin-bottom: var(--sp-2);
 }
 
+/* TR-03 page-specific density — keeps the full repítelo sentence within A5 */
+.page--tr3 .page-header {
+  margin-bottom: var(--sp-3);
+}
+.page--tr3 .fragment-card {
+  margin-bottom: var(--sp-2);
+}
+.page--tr3 .fragment-footer {
+  padding: var(--sp-2) var(--sp-4);
+}
+
 /* =============================================================================
    16. SELF-ASSESSMENT PAGE
    ============================================================================= */

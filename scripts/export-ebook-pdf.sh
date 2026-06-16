@@ -141,6 +141,19 @@ fi
 echo "Manual server test passed."
 
 # ------------------------------------------------------------------ #
+# Structural content check: TR-03 full repeat instruction              #
+# ------------------------------------------------------------------ #
+
+TR03_REQUIRED="decirlo sin mirar la guía"
+if ! grep -qF "$TR03_REQUIRED" "$REPO_ROOT/$SOURCE_HTML_REL"; then
+  echo "ERROR: TR-03 repeat instruction is incomplete in HTML source."
+  echo "  Required phrase: \"$TR03_REQUIRED\""
+  echo "  Check page 17 in $SOURCE_HTML_REL."
+  exit 1
+fi
+echo "TR-03 structural check: PASSED (full repeat instruction present)"
+
+# ------------------------------------------------------------------ #
 # Export to temporary PDF                                              #
 # ------------------------------------------------------------------ #
 
@@ -334,7 +347,7 @@ echo "  Pages:      $PAGE_COUNT"
 echo "========================================================"
 echo ""
 echo "IMPORTANT — manual QA required before publishing:"
-echo "  1. Open the PDF and verify all 18 pages render correctly."
+echo "  1. Open the PDF and verify all 21 pages render correctly."
 echo "  2. Verify background colors appear (requires 'Background graphics')."
 echo "  3. Check that no URLs appear twice."
 echo "  4. Verify all links (YouTube, Tally, /ebook-gratis)."
