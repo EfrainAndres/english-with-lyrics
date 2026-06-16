@@ -151,18 +151,18 @@ Status: Complete.
 
 ### Ebook PDF Production Draft
 
-- 18-page production HTML at `docs/design/production/phase-0-ebook.html`.
+- 21-page production HTML at `docs/design/production/phase-0-ebook.html`.
 - Production CSS at `docs/design/production/phase-0-ebook.css` (23 sections, derived from prototype).
-- PDF export script at `scripts/export-ebook-pdf.sh` (Chrome headless, Python 3 HTTP server).
+- PDF export script at `scripts/export-ebook-pdf.sh` (Chrome headless, Python 3 HTTP server, structural and link annotation validation).
 - QA checklist at `docs/validation/PHASE_0_EBOOK_PDF_QA.md`.
-- Production draft exported to `docs/design/production/phase-0-ebook-production-draft.pdf` — pending manual QA.
-- All 9 approved fragments (ATY-01/02/03, SLY-01/02/03, TR-01/02/03) populated with exercises.
+- Publication readiness review at `docs/validation/PHASE_0_EBOOK_PUBLICATION_READINESS.md`.
+- Production draft at `docs/design/production/phase-0-ebook-production-draft.pdf` — 21 pages, 1,223,965 bytes, all 9 fragments, 6 embedded links, no localhost annotations.
 
 Branch: `design/phase-0-ebook-pdf-production`
 
-Status: Draft exported. Pending manual visual QA before public delivery.
+Status: Complete — structural QA passed. Visual QA: pending owner sign-off. Link QA: passed. Legal-safe review: conservative review passed. Metadata: incomplete (Author/Subject/Keywords). Publication readiness decision: CONDITIONAL GO.
 
-Next: Run manual QA against `docs/validation/PHASE_0_EBOOK_PDF_QA.md`, then proceed to `fix/phase-0-ebook-pdf-qa` if corrections are needed, then `feat/phase-0-ebook-pdf-delivery`.
+Next: Owner completes visual QA; approve production domain; open `feat/phase-0-ebook-pdf-delivery`. If visual QA finds layout issues, open `fix/phase-0-ebook-pdf-qa` first.
 
 ### Ebook PDF Delivery
 
