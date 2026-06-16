@@ -935,6 +935,10 @@ li + li {
 }
 
 /* Tighter spacing on challenge page to fit all three cards in A5 */
+.page--challenge .challenge-title {
+  margin-bottom: var(--sp-1);
+}
+
 .page--challenge .challenge-intro {
   margin-bottom: var(--sp-2);
 }
@@ -947,8 +951,61 @@ li + li {
   padding: var(--sp-2) var(--sp-3);
 }
 
+.page--challenge .challenge-day-title {
+  margin-bottom: var(--sp-1);
+}
+
 .page--challenge .challenge-day li {
   margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.page--challenge .challenge-day-goal {
+  margin-top: var(--sp-1);
+}
+
+.page--challenge .challenge-day-check {
+  margin-top: var(--sp-1);
+}
+
+/* Selfcheck + CTA page tighter spacing */
+.page--selfcheck .selfcheck-title {
+  margin-bottom: var(--sp-2);
+}
+
+.page--selfcheck .selfcheck-section-label {
+  margin-bottom: var(--sp-1);
+}
+
+.page--selfcheck .selfcheck-list {
+  margin-bottom: var(--sp-2);
+}
+
+.page--selfcheck .selfcheck-list li {
+  padding: 2px 0;
+}
+
+.page--selfcheck .confidence-table {
+  margin-bottom: var(--sp-2);
+}
+
+.page--selfcheck .cta-divider {
+  margin: var(--sp-2) 0;
+}
+
+.page--selfcheck .cta-title {
+  font-size: 1.05rem;
+  margin-bottom: var(--sp-1);
+}
+
+.page--selfcheck .cta-intro {
+  font-size: 0.7rem;
+  margin-bottom: var(--sp-2);
+  line-height: 1.5;
+}
+
+.page--selfcheck .cta-block {
+  margin-bottom: var(--sp-2);
 }
 
 /* =============================================================================

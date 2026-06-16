@@ -234,13 +234,18 @@ if not failed:
 pages = re.findall(rb'/Type\s*/Page[^s]', data)
 page_count = len(pages)
 print(f'Page count: {page_count}')
-if page_count < 10:
-    print(f'VALIDATION FAILED — expected >= 10 pages, found {page_count}.')
+MIN_PAGES = 18
+MAX_PAGES = 25
+if page_count < MIN_PAGES:
+    print(f'VALIDATION FAILED — expected >= {MIN_PAGES} pages, found {page_count}.')
     failed = True
-elif page_count != 18:
-    print(f'WARNING — expected 18 pages, found {page_count}. Verify manually.')
+elif page_count > MAX_PAGES:
+    print(f'VALIDATION FAILED — expected <= {MAX_PAGES} pages, found {page_count}. Layout may have broken.')
+    failed = True
+elif not (21 <= page_count <= 23):
+    print(f'WARNING — expected 21–23 pages (justified range after QA corrections), found {page_count}. Verify manually.')
 else:
-    print('Page count: PASSED (18 pages)')
+    print(f'Page count: PASSED ({page_count} pages, within expected range 21–23)')
 
 # --- c) Title metadata (UTF-16BE hex) ----------------------------------------
 # Chrome stores the HTML <title> as a UTF-16BE hex string in /Title <FEFF...>

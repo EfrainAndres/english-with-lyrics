@@ -28,15 +28,29 @@ for public delivery.
 - **Action:** Export script rewritten with curl readiness loop, temporary-file validation,
   and content checks. Invalid PDF replaced.
 
-### Corrected export
+### Corrected export (2026-06-16, pre-QA layout)
 
 - **Date:** 2026-06-16
 - **File size:** 1,154,555 bytes
 - **Page count:** 18 (confirmed via PDF `/Type /Page` objects)
+- **Status:** Superseded — replaced by QA-corrected layout export below.
+- **Reason superseded:** Manual visual QA identified overflow on pages 7, 11, 15 (Fragment 3 + quick-review shared page caused content to be pushed off A5 boundary); challenge page footer not visible; self-assessment footer and /ebook-gratis reference not visible.
+
+### QA-corrected export (current)
+
+- **Date:** 2026-06-16
+- **File size:** 1,223,741 bytes
+- **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
 - **PDF title:** "Aprende inglés con 3 canciones — Sing Pronounce Repeat" (UTF-16BE metadata)
-- **Network-error check:** PASSED — no `ERR_CONNECTION_REFUSED`, `No connection`, or `net::ERR` phrases
+- **Network-error check:** PASSED
 - **Brand colors:** PASSED — yellow #FEE296 detected in shading functions
-- **Export method:** Chrome headless (`--headless=new`, `--virtual-time-budget=10000`), Python 3 HTTP server with curl readiness loop, temporary PDF validated before move to output path
+- **All 9 learning blocks:** PASSED (deterministic structural validation via Python script)
+- **All 9 fragments present:** PASSED
+- **Three dedicated quick-review pages:** PASSED (pages 8, 13, 18)
+- **Footer on every non-cover page:** PASSED (pages 2–21)
+- **/ebook-gratis visible text count:** 1 (page 20 CTA section)
+- **Challenge page footer:** Structurally present (page 19) — visual confirmation pending manual QA
+- **Export method:** Chrome headless (`--headless=new`, `--virtual-time-budget=10000`), Python 3 HTTP server with curl readiness loop, temporary PDF validated before move
 - **Manual visual QA:** Pending
 - **Publication readiness:** No
 
@@ -46,22 +60,25 @@ for public delivery.
 
 | Check | Expected | Pass? |
 |---|---|---|
-| Total page count | 18 A5 pages | |
+| Total page count | 21 A5 pages | |
 | Page 1 | Cover | |
 | Page 2 | Bienvenida | |
 | Page 3 | Método (4 pasos) | |
 | Page 4 | Separador — A Thousand Years | |
 | Pages 5–6 | ATY Fragmentos 1–2 | |
-| Page 7 | ATY Fragmento 3 + Revisión rápida | |
-| Page 8 | Separador — Still Loving You | |
-| Pages 9–10 | SLY Fragmentos 1–2 | |
-| Page 11 | SLY Fragmento 3 + Revisión rápida | |
-| Page 12 | Separador — The Reason | |
-| Pages 13–14 | TR Fragmentos 1–2 | |
-| Page 15 | TR Fragmento 3 + Revisión rápida | |
-| Page 16 | Reto de tres días | |
-| Page 17 | Autochequeo + ¿Qué sigue? | |
-| Page 18 | Nota educativa y de derechos | |
+| Page 7 | ATY Fragmento 3 (complete, dedicated) | |
+| Page 8 | ATY Revisión rápida (dedicated) | |
+| Page 9 | Separador — Still Loving You | |
+| Pages 10–11 | SLY Fragmentos 1–2 | |
+| Page 12 | SLY Fragmento 3 (complete, dedicated) | |
+| Page 13 | SLY Revisión rápida (dedicated) | |
+| Page 14 | Separador — The Reason | |
+| Pages 15–16 | TR Fragmentos 1–2 | |
+| Page 17 | TR Fragmento 3 (complete, dedicated) | |
+| Page 18 | TR Revisión rápida (dedicated) | |
+| Page 19 | Reto de tres días | |
+| Page 20 | Autochequeo + ¿Qué sigue? | |
+| Page 21 | Nota educativa y de derechos | |
 
 ---
 
@@ -71,7 +88,7 @@ for public delivery.
 |---|---|---|
 | Cover logo | Clearly visible, proportionate, `height: 54px` | |
 | Cover background | Dark background with yellow, pink, or black brand color | |
-| Page 16 (challenge) | All 3 day cards fit within the A5 boundary | |
+| Page 19 (challenge) | All 3 day cards fit within the A5 boundary | |
 | Fragment cards | No card extends into the footer area in print | |
 | Confidence table | `○` circles visible and large enough to mark with a pen | |
 | Song divider bars | Colored horizontal bars appear on each song separator | |
