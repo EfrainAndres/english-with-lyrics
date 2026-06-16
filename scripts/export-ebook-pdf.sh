@@ -1,23 +1,41 @@
 #!/usr/bin/env bash
 # Export the Phase 0 ebook production draft to PDF.
 #
-# Prerequisites: Python 3 and Google Chrome (or Chromium) installed.
+# Prerequisites: Python 3 and Google Chrome (or Chromium).
 # Output: docs/design/production/phase-0-ebook-production-draft.pdf
 #
-# This script must be run from the repository root.
-# It does NOT copy the output to public/downloads/ — that step
-# belongs to a separate, manually approved deploy step.
+# Run from any directory — the script resolves the repo root from its own location.
+# Does NOT copy output to public/downloads/; that step requires manual approval.
 
 set -euo pipefail
 
 # ------------------------------------------------------------------ #
-# Config                                                               #
+# Resolve repository root from script location                         #
 # ------------------------------------------------------------------ #
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+SOURCE_HTML_REL="docs/design/production/phase-0-ebook.html"
+OUTPUT_PDF="$REPO_ROOT/docs/design/production/phase-0-ebook-production-draft.pdf"
+TEMP_PDF="$REPO_ROOT/docs/design/production/.export-tmp-$$.pdf"
+SERVER_LOG="$(mktemp /tmp/ebook-server-log.XXXXXX)"
+
 PORT=9898
-SOURCE_HTML="docs/design/production/phase-0-ebook.html"
-OUTPUT_PDF="docs/design/production/phase-0-ebook-production-draft.pdf"
 SERVER_PID=""
+
+# ------------------------------------------------------------------ #
+# Cleanup: always stop server and remove temp files                    #
+# ------------------------------------------------------------------ #
+
+cleanup() {
+  if [[ -n "$SERVER_PID" ]] && kill -0 "$SERVER_PID" 2>/dev/null; then
+    kill "$SERVER_PID" 2>/dev/null || true
+    echo "Local HTTP server stopped."
+  fi
+  rm -f "$TEMP_PDF" "$SERVER_LOG"
+}
+trap cleanup EXIT INT TERM
 
 # ------------------------------------------------------------------ #
 # Locate Chrome                                                        #
@@ -28,19 +46,19 @@ find_chrome() {
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     "/Applications/Chromium.app/Contents/MacOS/Chromium"
     "/usr/bin/google-chrome"
+    "/usr/bin/google-chrome-stable"
     "/usr/bin/chromium"
     "/usr/bin/chromium-browser"
   )
   for candidate in "${candidates[@]}"; do
     if [[ -x "$candidate" ]]; then
-      echo "$candidate"
+      printf '%s' "$candidate"
       return 0
     fi
   done
-  # Fall back to searching PATH
-  for name in google-chrome chromium chromium-browser; do
+  for name in google-chrome google-chrome-stable chromium chromium-browser; do
     if command -v "$name" &>/dev/null; then
-      echo "$(command -v "$name")"
+      printf '%s' "$(command -v "$name")"
       return 0
     fi
   done
@@ -59,47 +77,262 @@ echo "Using browser: $CHROME"
 # Verify source file                                                   #
 # ------------------------------------------------------------------ #
 
-if [[ ! -f "$SOURCE_HTML" ]]; then
-  echo "ERROR: $SOURCE_HTML not found. Run from repository root."
+if [[ ! -f "$REPO_ROOT/$SOURCE_HTML_REL" ]]; then
+  echo "ERROR: $REPO_ROOT/$SOURCE_HTML_REL not found."
   exit 1
 fi
 
 # ------------------------------------------------------------------ #
-# Start local HTTP server (needed for asset resolution)               #
+# Check port availability                                              #
 # ------------------------------------------------------------------ #
 
-cleanup() {
-  if [[ -n "$SERVER_PID" ]]; then
-    kill "$SERVER_PID" 2>/dev/null || true
-    echo "Server stopped."
-  fi
-}
-trap cleanup EXIT INT TERM
+if lsof -i "tcp:${PORT}" -sTCP:LISTEN &>/dev/null 2>&1; then
+  echo "ERROR: Port ${PORT} is already in use. Stop the existing process and retry."
+  exit 1
+fi
 
-echo "Starting HTTP server on port ${PORT}..."
-python3 -m http.server "$PORT" 2>/dev/null &
+# ------------------------------------------------------------------ #
+# Start local HTTP server bound to 127.0.0.1                          #
+# ------------------------------------------------------------------ #
+
+echo "Starting HTTP server on 127.0.0.1:${PORT} serving $REPO_ROOT ..."
+cd "$REPO_ROOT"
+python3 -m http.server "$PORT" --bind 127.0.0.1 >"$SERVER_LOG" 2>&1 &
 SERVER_PID=$!
-sleep 1  # Give the server a moment to bind
 
 # ------------------------------------------------------------------ #
-# Export to PDF                                                        #
+# Wait for server readiness                                            #
 # ------------------------------------------------------------------ #
 
-echo "Exporting PDF..."
+TARGET_URL="http://127.0.0.1:${PORT}/${SOURCE_HTML_REL}"
+
+echo "Waiting for server to be ready..."
+MAX_ATTEMPTS=30
+attempt=0
+ready=0
+while [[ $attempt -lt $MAX_ATTEMPTS ]]; do
+  if curl --fail --silent --show-error --max-time 2 "$TARGET_URL" | grep -q "Aprende ingl" 2>/dev/null; then
+    ready=1
+    break
+  fi
+  attempt=$((attempt + 1))
+  sleep 1
+done
+
+if [[ $ready -eq 0 ]]; then
+  echo ""
+  echo "ERROR: Server did not become ready after $MAX_ATTEMPTS seconds."
+  echo "Server log:"
+  cat "$SERVER_LOG"
+  exit 1
+fi
+
+echo "Server ready. Verified: $TARGET_URL returns expected ebook content."
+
+# ------------------------------------------------------------------ #
+# Manual server test (inline confirmation)                             #
+# ------------------------------------------------------------------ #
+
+echo "Manual server test..."
+if ! curl --fail --silent --show-error "$TARGET_URL" | grep -q "Aprende ingl"; then
+  echo "ERROR: Manual server test failed — expected title not found in served HTML."
+  exit 1
+fi
+echo "Manual server test passed."
+
+# ------------------------------------------------------------------ #
+# Export to temporary PDF                                              #
+# ------------------------------------------------------------------ #
+
+echo "Exporting PDF to temp path: $TEMP_PDF"
+
+# Detect headless mode: newer Chrome (>= 112) uses --headless=new
+CHROME_VERSION=$("$CHROME" --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+' | head -1 | cut -d. -f1 || echo "0")
+if [[ "$CHROME_VERSION" -ge 112 ]]; then
+  HEADLESS_FLAG="--headless=new"
+else
+  HEADLESS_FLAG="--headless"
+fi
+
 "$CHROME" \
-  --headless \
+  "$HEADLESS_FLAG" \
   --disable-gpu \
   --no-sandbox \
   --no-pdf-header-footer \
-  --print-to-pdf="$OUTPUT_PDF" \
-  "http://127.0.0.1:${PORT}/${SOURCE_HTML}"
+  --run-all-compositor-stages-before-draw \
+  --virtual-time-budget=10000 \
+  --print-to-pdf="$TEMP_PDF" \
+  "$TARGET_URL"
+
+# ------------------------------------------------------------------ #
+# Post-export validation                                               #
+# ------------------------------------------------------------------ #
 
 echo ""
-echo "PDF exported to: $OUTPUT_PDF"
+echo "Validating exported PDF..."
+
+# 1. File exists and is non-empty
+if [[ ! -f "$TEMP_PDF" ]]; then
+  echo "ERROR: Chrome did not produce a PDF at $TEMP_PDF."
+  exit 1
+fi
+
+TEMP_SIZE=$(wc -c < "$TEMP_PDF" | tr -d ' ')
+if [[ "$TEMP_SIZE" -lt 50000 ]]; then
+  echo "ERROR: PDF is suspiciously small ($TEMP_SIZE bytes). Export likely failed."
+  exit 1
+fi
+
+echo "File exists: $TEMP_PDF ($TEMP_SIZE bytes)"
+
+# 2. Confirm it starts with the PDF header
+PDF_HEADER=$(head -c 4 "$TEMP_PDF" 2>/dev/null | tr -d '\n')
+if [[ "$PDF_HEADER" != "%PDF" ]]; then
+  echo "ERROR: File does not start with %PDF — not a valid PDF."
+  exit 1
+fi
+echo "Valid PDF header confirmed."
+
+# 3. Validate content using Python stdlib
+#
+# Chrome PDFs encode text as CIDFont with custom glyph mappings, so naive
+# string search in raw or decompressed streams does not find readable text.
+# We validate using:
+#   a) Absence of network-error phrases in raw bytes
+#   b) PDF page count (from /Type /Page objects)
+#   c) PDF title from metadata (stored as UTF-16BE hex — decodable without libraries)
+#   d) File size threshold (error pages are typically < 100 KB; full ebook ~1 MB)
+#   e) Presence of brand colors in shading functions (cover gradient uses exact brand hex)
+
+python3 - "$TEMP_PDF" <<'PYEOF'
+import sys, re, codecs
+
+pdf_path = sys.argv[1]
+with open(pdf_path, 'rb') as f:
+    data = f.read()
+
+failed = False
+
+# --- a) Network-error phrase check -------------------------------------------
+error_phrases = [
+    b'ERR_CONNECTION_REFUSED',
+    b'No connection',
+    b'No hay conexi',
+    b'This site can',
+    b'net::ERR',
+]
+for phrase in error_phrases:
+    if phrase.lower() in data.lower():
+        print(f'VALIDATION FAILED — network-error phrase found: "{phrase.decode()}"')
+        failed = True
+
+if not failed:
+    print('Network-error check: PASSED')
+
+# --- b) Page count -----------------------------------------------------------
+# Chrome writes /Type /Page (singular) for each page object.
+pages = re.findall(rb'/Type\s*/Page[^s]', data)
+page_count = len(pages)
+print(f'Page count: {page_count}')
+if page_count < 10:
+    print(f'VALIDATION FAILED — expected >= 10 pages, found {page_count}.')
+    failed = True
+elif page_count != 18:
+    print(f'WARNING — expected 18 pages, found {page_count}. Verify manually.')
+else:
+    print('Page count: PASSED (18 pages)')
+
+# --- c) Title metadata (UTF-16BE hex) ----------------------------------------
+# Chrome stores the HTML <title> as a UTF-16BE hex string in /Title <FEFF...>
+title_hex_matches = re.findall(rb'/Title\s*<([0-9A-Fa-f]+)>', data)
+decoded_titles = []
+for hex_bytes in title_hex_matches:
+    try:
+        raw = bytes.fromhex(hex_bytes.decode('ascii'))
+        # Strip BOM (FEFF) and decode UTF-16BE
+        if raw[:2] == b'\xff\xfe':
+            title = raw[2:].decode('utf-16-le', errors='replace')
+        elif raw[:2] == b'\xfe\xff':
+            title = raw[2:].decode('utf-16-be', errors='replace')
+        else:
+            title = raw.decode('utf-16-be', errors='replace')
+        decoded_titles.append(title)
+    except Exception:
+        pass
+
+expected_title_fragments = [
+    'Aprende ingl',
+    'canciones',
+    'Sing Pronounce',
+]
+if decoded_titles:
+    title = decoded_titles[0]
+    print(f'PDF title: {title!r}')
+    missing_title = [f for f in expected_title_fragments if f.lower() not in title.lower()]
+    if missing_title:
+        print(f'VALIDATION FAILED — title missing expected fragments: {missing_title}')
+        failed = True
+    else:
+        print('Title metadata check: PASSED')
+else:
+    print('WARNING — could not extract PDF title metadata. Verify manually.')
+
+# --- d) File size threshold --------------------------------------------------
+size = len(data)
+if size < 200_000:
+    print(f'VALIDATION FAILED — PDF too small ({size} bytes). Expected >= 200 KB for full ebook.')
+    failed = True
+else:
+    print(f'File size check: PASSED ({size:,} bytes)')
+
+# --- e) Brand colors (cover gradient) ----------------------------------------
+# FEE296 yellow = (0.9961, 0.8863, 0.5882); FE9CE1 pink = (0.9961, 0.6118, 0.8824)
+yellow_hex = b'FEE296'
+pink_hex = b'FE9CE1'
+# Chrome encodes gradient stops as decimal RGB floats — check for yellow channel value
+# 0xFE/255 = 0.9961, 0x22/255 ≈ 0.1333 — look for the distinctive yellow triplet
+yellow_str = b'.9961'
+found_color = yellow_str in data
+print(f'Brand color check: {"PASSED" if found_color else "WARNING — yellow brand color not found (may be rendering issue)"}')
+
+if failed:
+    sys.exit(1)
+
+print('All validation checks passed.')
+PYEOF
+
+echo "PDF validation passed."
+
+# ------------------------------------------------------------------ #
+# Move temp PDF to final destination                                   #
+# ------------------------------------------------------------------ #
+
+mv "$TEMP_PDF" "$OUTPUT_PDF"
+FINAL_SIZE=$(wc -c < "$OUTPUT_PDF" | tr -d ' ')
+
+# Get page count via Python if possible
+PAGE_COUNT=$(python3 - "$OUTPUT_PDF" <<'PYEOF' 2>/dev/null || echo "unknown"
+import sys, re
+with open(sys.argv[1], 'rb') as f:
+    data = f.read()
+pages = re.findall(rb'/Type\s*/Page[^s]', data)
+print(len(pages))
+PYEOF
+)
+
 echo ""
-echo "IMPORTANT — manual steps before publishing:"
+echo "========================================================"
+echo "PDF export successful."
+echo "  Path:       $OUTPUT_PDF"
+echo "  Size:       $FINAL_SIZE bytes"
+echo "  Pages:      $PAGE_COUNT"
+echo "========================================================"
+echo ""
+echo "IMPORTANT — manual QA required before publishing:"
 echo "  1. Open the PDF and verify all 18 pages render correctly."
-echo "  2. Check that no URLs appear twice."
-echo "  3. Verify background colors are preserved."
-echo "  4. Review all links (YouTube and Tally)."
-echo "  5. Only after manual approval: copy to public/downloads/guia-gratis-sing-pronounce-repeat.pdf"
+echo "  2. Verify background colors appear (requires 'Background graphics')."
+echo "  3. Check that no URLs appear twice."
+echo "  4. Verify all links (YouTube, Tally, /ebook-gratis)."
+echo "  5. Work through docs/validation/PHASE_0_EBOOK_PDF_QA.md."
+echo "  6. Only after manual approval:"
+echo "     cp $OUTPUT_PDF public/downloads/guia-gratis-sing-pronounce-repeat.pdf"

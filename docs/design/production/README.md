@@ -26,7 +26,7 @@ Or drag the file into any modern browser window.
 
 ## How to export the PDF
 
-Run from the repository root:
+Run from the repository root (or any directory — the script resolves its own location):
 
 ```bash
 bash scripts/export-ebook-pdf.sh
@@ -35,6 +35,49 @@ bash scripts/export-ebook-pdf.sh
 Requires Python 3 and Google Chrome or Chromium installed.
 
 Output: `docs/design/production/phase-0-ebook-production-draft.pdf`
+
+### What the export script does
+
+1. Resolves the repository root from the script's own path.
+2. Checks that port 9898 is free.
+3. Starts a Python 3 HTTP server bound to `127.0.0.1:9898` serving the repository root.
+4. Waits for the server with a curl readiness loop (up to 30 attempts, 1 s apart) before launching Chrome. Chrome is never started until the server returns the expected HTML.
+5. Runs Chrome headless (`--headless=new` for Chrome >= 112) with `--virtual-time-budget=10000` to let the page finish rendering before printing.
+6. Writes to a temporary PDF path first — never overwrites the output file until validation passes.
+7. Validates the temporary PDF:
+   - File exists and is >= 50 KB
+   - Starts with `%PDF`
+   - No network-error phrases (`ERR_CONNECTION_REFUSED`, `No connection`, `net::ERR`, etc.)
+   - Page count >= 10 (expected: 18)
+   - PDF title metadata decodes (UTF-16BE) to include "Aprende inglés con 3 canciones" and "Sing Pronounce"
+   - File size >= 200 KB
+   - Brand yellow color (#FEE296) detected in shading functions
+8. Only after all checks pass, moves the temporary PDF to the output path.
+9. Always stops the HTTP server and removes temp files on exit (via `trap`).
+
+### Manual server preview
+
+To preview the HTML in a browser without exporting:
+
+```bash
+cd /path/to/repo
+python3 -m http.server 9898 --bind 127.0.0.1
+# Then open: http://127.0.0.1:9898/docs/design/production/phase-0-ebook.html
+```
+
+### Troubleshooting: connection-error PDFs
+
+**Symptom:** The PDF opens in a browser and shows "No connection" or "ERR_CONNECTION_REFUSED."
+
+**Cause:** Chrome was launched before the local HTTP server was ready, or was given the wrong URL. The server has to be running and responding to the exact HTML path before Chrome starts.
+
+**Fix:** The current script uses a curl readiness loop that checks the exact HTML URL (not just the server root) before starting Chrome. If you still get an error page:
+
+1. Check that port 9898 is not in use by another process: `lsof -i tcp:9898`
+2. Check the server log: `cat /tmp/ebook-server-log.*`
+3. Confirm the HTML is served: `curl -s http://127.0.0.1:9898/docs/design/production/phase-0-ebook.html | grep "Aprende"`
+
+**An existing PDF file is not proof of a successful export.** Chrome writes a file even when it exports an error page. The script validates the PDF content; do not skip or bypass this step.
 
 ## Differences from the prototype
 

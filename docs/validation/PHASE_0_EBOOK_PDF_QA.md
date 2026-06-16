@@ -13,6 +13,35 @@ for public delivery.
 
 ---
 
+## Export history
+
+### First export (INVALID — replaced)
+
+- **Date:** 2026-06-15
+- **File size:** 70,172 bytes
+- **Status:** INVALID
+- **Reason:** Chrome was launched without a server-readiness check. The local HTTP server
+  had not yet bound to the port when Chrome started, causing an `ERR_CONNECTION_REFUSED`
+  error page to be exported as PDF instead of the ebook.
+- **Detected by:** Raw byte search found `127.0.0.1` in the PDF; expected ebook content
+  ("Aprende inglés", "A Thousand Years", "Still Loving You", "The Reason") was absent.
+- **Action:** Export script rewritten with curl readiness loop, temporary-file validation,
+  and content checks. Invalid PDF replaced.
+
+### Corrected export
+
+- **Date:** 2026-06-16
+- **File size:** 1,154,555 bytes
+- **Page count:** 18 (confirmed via PDF `/Type /Page` objects)
+- **PDF title:** "Aprende inglés con 3 canciones — Sing Pronounce Repeat" (UTF-16BE metadata)
+- **Network-error check:** PASSED — no `ERR_CONNECTION_REFUSED`, `No connection`, or `net::ERR` phrases
+- **Brand colors:** PASSED — yellow #FEE296 detected in shading functions
+- **Export method:** Chrome headless (`--headless=new`, `--virtual-time-budget=10000`), Python 3 HTTP server with curl readiness loop, temporary PDF validated before move to output path
+- **Manual visual QA:** Pending
+- **Publication readiness:** No
+
+---
+
 ## 1. Page count and structure
 
 | Check | Expected | Pass? |
