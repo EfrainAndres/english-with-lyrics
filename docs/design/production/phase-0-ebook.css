@@ -1,0 +1,1384 @@
+/*
+ * Phase 0 Ebook — Production Stylesheet
+ * Sing Pronounce Repeat / English with Lyrics
+ *
+ * Production version of the approved design system.
+ * Source template: docs/design/prototypes/phase-0-ebook-template.css
+ * Design specification: docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md
+ *
+ * NOT imported by the Next.js application.
+ * For production PDF export only.
+ */
+
+/* =============================================================================
+   1. DESIGN TOKENS
+   ============================================================================= */
+
+:root {
+  /* --- Brand colors --- */
+  --c-black:  #010101;
+  --c-yellow: #FEE296;
+  --c-pink:   #FE9CE1;
+  --c-purple: #CC9DEA;
+
+  /* --- Surface layers --- */
+  --c-bg:          #070307;
+  --c-page:        #010101;
+  --c-surface:     #140D14;
+  --c-card:        #1C121C;
+  --c-card-accent: #221522;
+
+  /* --- Text --- */
+  --c-text:        #FFF9FE;
+  --c-text-sub:    #C8BAC8;
+  --c-text-muted:  #8A7E8A;
+
+  /* --- Accent semantics --- */
+  --c-accent-fragment:      var(--c-yellow);
+  --c-accent-pronunciation: var(--c-pink);
+  --c-accent-label:         var(--c-purple);
+  --c-accent-cta-primary:   var(--c-yellow);
+  --c-accent-cta-secondary: var(--c-purple);
+
+  /* --- Spacing (4-point grid) --- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* --- Border radius --- */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 14px;
+
+  /* --- Typography --- */
+  --font-serif: Georgia, 'Times New Roman', 'Palatino Linotype', Palatino, serif;
+  --font-sans:  system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* --- Font-size scale (screen baseline) --- */
+  --fs-cover-title:    2.1rem;
+  --fs-cover-subtitle: 1.0rem;
+  --fs-section-title:  1.4rem;
+  --fs-card-label:     0.6rem;
+  --fs-card-title:     1.05rem;
+  --fs-body:           0.875rem;
+  --fs-small:          0.75rem;
+  --fs-legal:          0.68rem;
+
+  /* --- Shadows --- */
+  --shadow-page: 0 6px 32px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 2px 10px rgba(204, 157, 234, 0.10);
+
+  /* --- Page geometry (A5 portrait) --- */
+  --page-w:  148mm;
+  --page-h:  210mm;
+  --page-px: 11mm;
+  --page-py: 13mm;
+
+  /* --- Line lengths --- */
+  --line-body: 56ch;
+}
+
+/* =============================================================================
+   2. BASE RESET
+   ============================================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--c-bg);
+  font-family: var(--font-sans);
+  color: var(--c-text);
+  line-height: 1.55;
+  padding: var(--sp-6) 0 var(--sp-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-6);
+}
+
+a {
+  color: var(--c-yellow);
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--c-yellow);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  padding-left: var(--sp-4);
+}
+
+li + li {
+  margin-top: var(--sp-1);
+}
+
+/* =============================================================================
+   3. PAGE CONTAINER
+   ============================================================================= */
+
+.page {
+  background: var(--c-page);
+  width: var(--page-w);
+  min-height: var(--page-h);
+  padding: var(--page-py) var(--page-px);
+  position: relative;
+  overflow: visible; /* visible on screen so content is never silently clipped */
+  break-after: page;
+  page-break-after: always;
+  box-shadow: var(--shadow-page);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============================================================================
+   4. PAGE FOOTER
+   ============================================================================= */
+
+.page-footer {
+  margin-top: auto;
+  padding-top: var(--sp-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(204, 157, 234, 0.15);
+  font-size: var(--fs-legal);
+  color: var(--c-text-muted);
+  font-family: var(--font-sans);
+}
+
+.page-footer .footer-brand {
+  color: var(--c-text-muted);
+  font-style: italic;
+}
+
+.page-footer .footer-page-num {
+  color: var(--c-purple);
+}
+
+/* =============================================================================
+   5. INTERNAL PAGE HEADER
+   ============================================================================= */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-5);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid rgba(254, 156, 225, 0.18);
+}
+
+.page-header .header-method {
+  font-size: 0.62rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--c-pink);
+}
+
+.page-header .header-section {
+  font-size: 0.62rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.05em;
+  color: var(--c-text-muted);
+  text-align: right;
+}
+
+/* =============================================================================
+   6. COVER PAGE
+   ============================================================================= */
+
+.page--cover {
+  background: var(--c-black);
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.page--cover::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(254, 156, 225, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cover-logo {
+  height: 54px;
+  width: auto;
+  display: block;
+  margin-bottom: var(--sp-8);
+}
+
+.cover-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-pink);
+  margin-bottom: var(--sp-3);
+}
+
+.cover-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-cover-title);
+  font-weight: 700;
+  color: var(--c-yellow);
+  line-height: 1.15;
+  margin-bottom: var(--sp-4);
+}
+
+.cover-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--fs-cover-subtitle);
+  color: var(--c-text);
+  line-height: 1.45;
+  margin-bottom: var(--sp-6);
+  max-width: 56ch;
+}
+
+.cover-brand-block {
+  margin-bottom: var(--sp-5);
+}
+
+.cover-brand {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--c-text);
+  margin-bottom: var(--sp-1);
+}
+
+.cover-method {
+  display: inline-block;
+  background: var(--c-pink);
+  color: var(--c-black);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--r-sm);
+}
+
+.cover-promise {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--c-text-sub);
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: var(--sp-5);
+  padding-top: var(--sp-5);
+  border-top: 1px solid rgba(254, 146, 225, 0.2);
+}
+
+/* =============================================================================
+   7. WELCOME PAGE
+   ============================================================================= */
+
+.welcome-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: var(--sp-4);
+}
+
+.welcome-list li {
+  font-size: var(--fs-body);
+  color: var(--c-text-sub);
+  padding: var(--sp-1) 0;
+  padding-left: var(--sp-4);
+  position: relative;
+}
+
+.welcome-list li::before {
+  content: '♩';
+  position: absolute;
+  left: 0;
+  color: var(--c-pink);
+  font-size: 0.75rem;
+}
+
+.welcome-note {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.55;
+  background: var(--c-surface);
+  border-left: 3px solid var(--c-purple);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+
+/* =============================================================================
+   8. METHOD CARD
+   ============================================================================= */
+
+.method-section-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--c-pink);
+  margin-bottom: var(--sp-3);
+}
+
+.method-card {
+  background: var(--c-card);
+  border: 1px solid rgba(204, 157, 234, 0.25);
+  border-radius: var(--r-lg);
+  padding: var(--sp-4) var(--sp-5);
+  margin-bottom: var(--sp-4);
+  box-shadow: var(--shadow-card);
+  break-inside: avoid;
+}
+
+.method-card-example {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-1) var(--sp-3);
+  font-size: var(--fs-body);
+  margin-bottom: var(--sp-3);
+}
+
+.method-card-example .me-lang {
+  color: var(--c-text-muted);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.method-card-example .me-english {
+  color: var(--c-text);
+}
+
+.method-card-example .me-pronunciation {
+  color: var(--c-pink);
+  font-family: var(--font-serif);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.method-note {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.55;
+}
+
+/* =============================================================================
+   9. FOUR-STEP PRACTICE FLOW
+   ============================================================================= */
+
+.steps-title {
+  font-family: var(--font-serif);
+  font-size: 1.0rem;
+  color: var(--c-yellow);
+  margin-bottom: var(--sp-3);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
+
+.step-card {
+  background: var(--c-card);
+  border: 1px solid rgba(204, 157, 234, 0.18);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+}
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--c-yellow);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--sp-1);
+}
+
+.step-name {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: var(--sp-1);
+}
+
+.step-desc {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.5;
+}
+
+/* =============================================================================
+   10. SONG DIVIDER PAGE
+   ============================================================================= */
+
+.page--song-divider {
+  background: var(--c-page);
+}
+
+.song-divider-bar {
+  height: 3px;
+  background: linear-gradient(to right, var(--c-pink), var(--c-purple));
+  border-radius: 2px;
+  margin-bottom: var(--sp-6);
+}
+
+.song-num-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-purple);
+  margin-bottom: var(--sp-2);
+}
+
+.song-title {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  color: var(--c-yellow);
+  line-height: 1.15;
+  margin-bottom: var(--sp-2);
+}
+
+.song-artist {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--c-pink);
+  margin-bottom: var(--sp-5);
+}
+
+.song-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.song-meta-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--sp-2);
+  font-size: var(--fs-small);
+}
+
+.song-meta-label {
+  color: var(--c-purple);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.6rem;
+  padding-top: 2px;
+}
+
+.song-meta-value {
+  color: var(--c-text-sub);
+  line-height: 1.5;
+}
+
+.song-listen-cta {
+  background: var(--c-surface);
+  border: 1px solid rgba(254, 226, 150, 0.25);
+  border-radius: var(--r-md);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: var(--fs-small);
+}
+
+.song-listen-label {
+  color: var(--c-text-muted);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--sp-1);
+}
+
+.song-listen-link {
+  color: var(--c-yellow);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.song-before-note {
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--c-surface);
+  border-left: 3px solid var(--c-pink);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.55;
+}
+
+/* =============================================================================
+   11. ACCENT NOTE (SLY-specific learner note)
+   ============================================================================= */
+
+.accent-note {
+  background: var(--c-surface);
+  border: 1px solid rgba(254, 156, 225, 0.2);
+  border-radius: var(--r-md);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.6;
+  margin-bottom: var(--sp-4);
+}
+
+.accent-note-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--c-pink);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+/* =============================================================================
+   12. LEARNING FRAGMENT CARD
+   ============================================================================= */
+
+.fragment-card {
+  background: var(--c-card);
+  border: 1px solid rgba(204, 157, 234, 0.22);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  margin-bottom: var(--sp-4);
+  break-inside: avoid;
+  page-break-inside: avoid;
+  box-shadow: var(--shadow-card);
+}
+
+.fragment-card-title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--c-purple);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: var(--sp-2) var(--sp-4);
+  border-bottom: 1px solid rgba(204, 157, 234, 0.12);
+}
+
+.frag-row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  border-bottom: 1px solid rgba(255, 249, 254, 0.05);
+  align-items: start;
+}
+
+.frag-row:last-of-type {
+  border-bottom: none;
+}
+
+.frag-label {
+  font-size: 0.58rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--c-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-top: 2px;
+  line-height: 1.4;
+}
+
+.frag-value {
+  font-size: var(--fs-body);
+  color: var(--c-text);
+  line-height: 1.5;
+}
+
+.frag-row--fragment {
+  background: rgba(254, 226, 150, 0.05);
+}
+
+.frag-row--fragment .frag-value {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-yellow);
+}
+
+.frag-row--pronunciation {
+  background: rgba(254, 156, 225, 0.07);
+}
+
+.frag-row--pronunciation .frag-value {
+  color: var(--c-text);
+}
+
+.pronunciation-text {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--c-pink);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--sp-1);
+}
+
+.pronunciation-note {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--c-text-sub);
+  line-height: 1.5;
+}
+
+.vocab-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.vocab-list li {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.4;
+}
+
+.vocab-list strong {
+  color: var(--c-text);
+}
+
+.example-quote {
+  font-size: var(--fs-small);
+  color: var(--c-text);
+  font-style: italic;
+  display: block;
+  margin-bottom: var(--sp-1);
+}
+
+.example-translation {
+  font-size: var(--fs-small);
+  color: var(--c-text-muted);
+  font-style: italic;
+  display: block;
+}
+
+.frag-row--exercise {
+  background: rgba(204, 157, 234, 0.04);
+}
+
+.exercise-text {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.55;
+}
+
+.fragment-footer {
+  padding: var(--sp-3) var(--sp-4);
+  background: rgba(1, 1, 1, 0.4);
+  border-top: 1px solid rgba(204, 157, 234, 0.1);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.repite-text {
+  font-size: 0.68rem;
+  color: var(--c-text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.repite-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--c-pink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-right: var(--sp-2);
+  flex-shrink: 0;
+}
+
+.progress-check {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-size: 0.65rem;
+  color: var(--c-purple);
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.progress-check input[type="checkbox"] {
+  accent-color: var(--c-purple);
+  width: 12px;
+  height: 12px;
+}
+
+/* =============================================================================
+   13. EXERCISE VARIANTS
+   ============================================================================= */
+
+.exercise-options {
+  list-style: upper-alpha;
+  padding-left: var(--sp-5);
+  margin-top: var(--sp-2);
+}
+
+.exercise-options li {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  margin-bottom: var(--sp-1);
+  line-height: 1.5;
+}
+
+.exercise-write-line {
+  border-bottom: 1px solid rgba(204, 157, 234, 0.3);
+  margin-top: var(--sp-3);
+  height: 22px;
+}
+
+.exercise-rating-row {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.rating-option {
+  background: var(--c-card);
+  border: 1px solid rgba(204, 157, 234, 0.2);
+  border-radius: var(--r-sm);
+  padding: var(--sp-1) var(--sp-3);
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  font-family: var(--font-sans);
+}
+
+/* =============================================================================
+   14. QUICK REVIEW
+   ============================================================================= */
+
+.quick-review {
+  background: var(--c-surface);
+  border: 1px solid rgba(254, 226, 150, 0.15);
+  border-radius: var(--r-md);
+  padding: var(--sp-3) var(--sp-4);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.quick-review-title {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--c-yellow);
+  margin-bottom: var(--sp-3);
+}
+
+.quick-review ol {
+  padding-left: var(--sp-4);
+}
+
+.quick-review li {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  margin-bottom: var(--sp-2);
+  line-height: 1.5;
+}
+
+.confidence-scale {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.confidence-label {
+  font-size: 0.62rem;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: var(--sp-1);
+}
+
+.confidence-pip {
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(204, 157, 234, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--c-purple);
+  font-family: var(--font-sans);
+}
+
+.quick-review-check {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+  font-size: 0.65rem;
+  color: var(--c-purple);
+  cursor: pointer;
+}
+
+.quick-review-check input {
+  accent-color: var(--c-purple);
+}
+
+/* =============================================================================
+   15. THREE-DAY CHALLENGE
+   ============================================================================= */
+
+.challenge-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--c-yellow);
+  margin-bottom: var(--sp-2);
+}
+
+.challenge-intro {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  margin-bottom: var(--sp-5);
+  line-height: 1.55;
+}
+
+.challenge-days {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.challenge-day {
+  background: var(--c-card);
+  border: 1px solid rgba(204, 157, 234, 0.18);
+  border-radius: var(--r-md);
+  padding: var(--sp-3) var(--sp-4);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.challenge-day-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--c-pink);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: var(--sp-1);
+}
+
+.challenge-day-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: var(--sp-2);
+}
+
+.challenge-day ol {
+  padding-left: var(--sp-4);
+}
+
+.challenge-day li {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  margin-bottom: var(--sp-1);
+  line-height: 1.5;
+}
+
+.challenge-day-goal {
+  font-size: 0.65rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  margin-top: var(--sp-2);
+}
+
+.challenge-day-check {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  margin-top: var(--sp-2);
+  font-size: 0.65rem;
+  color: var(--c-purple);
+  cursor: pointer;
+}
+
+.challenge-day-check input {
+  accent-color: var(--c-purple);
+}
+
+/* Tighter spacing on challenge page to fit all three cards in A5 */
+.page--challenge .challenge-title {
+  margin-bottom: var(--sp-1);
+}
+
+.page--challenge .challenge-intro {
+  margin-bottom: var(--sp-2);
+}
+
+.page--challenge .challenge-days {
+  gap: var(--sp-2);
+}
+
+.page--challenge .challenge-day {
+  padding: var(--sp-2) var(--sp-3);
+}
+
+.page--challenge .challenge-day-title {
+  margin-bottom: var(--sp-1);
+}
+
+.page--challenge .challenge-day li {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.page--challenge .challenge-day-goal {
+  margin-top: var(--sp-1);
+}
+
+.page--challenge .challenge-day-check {
+  margin-top: var(--sp-1);
+}
+
+/* Selfcheck + CTA page tighter spacing */
+.page--selfcheck .selfcheck-title {
+  margin-bottom: var(--sp-2);
+}
+
+.page--selfcheck .selfcheck-section-label {
+  margin-bottom: var(--sp-1);
+}
+
+.page--selfcheck .selfcheck-list {
+  margin-bottom: var(--sp-2);
+}
+
+.page--selfcheck .selfcheck-list li {
+  padding: 2px 0;
+}
+
+.page--selfcheck .confidence-table {
+  margin-bottom: var(--sp-2);
+}
+
+.page--selfcheck .cta-divider {
+  margin: var(--sp-2) 0;
+}
+
+.page--selfcheck .cta-title {
+  font-size: 1.05rem;
+  margin-bottom: var(--sp-1);
+}
+
+.page--selfcheck .cta-intro {
+  font-size: 0.7rem;
+  margin-bottom: var(--sp-2);
+  line-height: 1.5;
+}
+
+.page--selfcheck .cta-block {
+  margin-bottom: var(--sp-2);
+}
+
+/* TR-03 page-specific density — keeps the full repítelo sentence within A5 */
+.page--tr3 .page-header {
+  margin-bottom: var(--sp-3);
+}
+.page--tr3 .fragment-card {
+  margin-bottom: var(--sp-2);
+}
+.page--tr3 .fragment-footer {
+  padding: var(--sp-2) var(--sp-4);
+}
+
+/* =============================================================================
+   16. SELF-ASSESSMENT PAGE
+   ============================================================================= */
+
+.selfcheck-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--c-yellow);
+  margin-bottom: var(--sp-4);
+}
+
+.selfcheck-section-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--c-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--sp-2);
+}
+
+.selfcheck-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: var(--sp-3);
+}
+
+.selfcheck-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  padding: var(--sp-1) 0;
+  line-height: 1.45;
+}
+
+.selfcheck-list input[type="checkbox"] {
+  accent-color: var(--c-purple);
+  flex-shrink: 0;
+}
+
+.confidence-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-small);
+  margin-bottom: var(--sp-3);
+}
+
+.confidence-table th {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--c-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: var(--sp-1);
+  border-bottom: 1px solid rgba(204, 157, 234, 0.2);
+}
+
+.confidence-table th:first-child {
+  text-align: left;
+}
+
+.confidence-table td {
+  text-align: center;
+  padding: var(--sp-1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--c-text-muted);
+  font-size: 0.7rem;
+}
+
+/* Rating cells: larger ○ markers, clearly markable on paper */
+.confidence-table td:not(:first-child) {
+  font-size: 1rem;
+  line-height: 1;
+  color: rgba(204, 157, 234, 0.5);
+}
+
+.confidence-table td:first-child {
+  text-align: left;
+  color: var(--c-text-sub);
+  font-size: var(--fs-small);
+}
+
+/* =============================================================================
+   17. CTA SECTION
+   ============================================================================= */
+
+.cta-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--c-text);
+  margin-bottom: var(--sp-2);
+}
+
+.cta-intro {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  margin-bottom: var(--sp-3);
+  line-height: 1.55;
+}
+
+.cta-block {
+  margin-bottom: var(--sp-3);
+}
+
+.cta-block-desc {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.5;
+  margin-bottom: var(--sp-2);
+}
+
+.cta-button--primary {
+  display: block;
+  background: var(--c-yellow);
+  color: var(--c-black);
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  border: none;
+  letter-spacing: 0.02em;
+}
+
+.cta-button--primary:focus-visible {
+  outline: 2px solid var(--c-yellow);
+  outline-offset: 3px;
+}
+
+.cta-button--secondary {
+  display: block;
+  background: transparent;
+  color: var(--c-purple);
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-purple);
+  letter-spacing: 0.02em;
+}
+
+.cta-button--secondary:focus-visible {
+  outline: 2px solid var(--c-purple);
+  outline-offset: 3px;
+}
+
+.cta-link--tertiary {
+  display: block;
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  text-align: center;
+  padding: var(--sp-2) 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cta-divider {
+  border: none;
+  border-top: 1px solid rgba(204, 157, 234, 0.12);
+  margin: var(--sp-3) 0;
+}
+
+/* =============================================================================
+   18. RIGHTS NOTE PAGE
+   ============================================================================= */
+
+.rights-title {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-purple);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-4);
+}
+
+.rights-section {
+  margin-bottom: var(--sp-3);
+}
+
+.rights-section-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--sp-1);
+}
+
+.rights-body {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.6;
+}
+
+/* =============================================================================
+   19. UTILITY CLASSES
+   ============================================================================= */
+
+/* Short print destination — hidden on screen, shown in print */
+.print-url {
+  display: none;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-section-title);
+  color: var(--c-yellow);
+  margin-bottom: var(--sp-4);
+  line-height: 1.2;
+}
+
+.text-body {
+  font-size: var(--fs-body);
+  color: var(--c-text);
+  line-height: 1.6;
+  margin-bottom: var(--sp-3);
+}
+
+.text-small {
+  font-size: var(--fs-small);
+  color: var(--c-text-sub);
+  line-height: 1.55;
+}
+
+.mt-sm  { margin-top: var(--sp-3); }
+.mt-md  { margin-top: var(--sp-4); }
+.mt-lg  { margin-top: var(--sp-6); }
+.mb-sm  { margin-bottom: var(--sp-3); }
+.mb-md  { margin-bottom: var(--sp-4); }
+.mb-lg  { margin-bottom: var(--sp-6); }
+
+/* =============================================================================
+   20. NARROW SCREEN STYLES
+   ============================================================================= */
+
+@media screen and (max-width: 600px) {
+  :root {
+    --page-px: 5vw;
+    --page-py: 6vw;
+  }
+
+  body {
+    padding: var(--sp-3) 0 var(--sp-8);
+    gap: var(--sp-3);
+  }
+
+  .page {
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frag-row {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .song-meta-row {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .cover-title {
+    font-size: 1.6rem;
+  }
+
+  .fragment-footer {
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+  }
+
+  .exercise-rating-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* =============================================================================
+   21. PRINT STYLES
+   ============================================================================= */
+
+@page {
+  size: A5 portrait;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: none;
+    padding: 0;
+    gap: 0;
+    display: block;
+    align-items: initial;
+  }
+
+  .page {
+    width: 148mm;
+    height: 210mm;
+    min-height: unset;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* Force brand colors in print */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  /* Protect cards from page splits */
+  .fragment-card,
+  .challenge-day,
+  .quick-review,
+  .method-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Short print destinations: shown only where explicitly marked with .print-url.
+     No automatic a[href]::after expansion. */
+  .print-url {
+    display: inline;
+    font-size: 0.6rem;
+    color: #888;
+    margin-left: 3px;
+    word-break: break-all;
+  }
+}
+
+/* =============================================================================
+   22. REDUCED MOTION
+   ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =============================================================================
+   23. HIGH-CONTRAST FOCUS
+   ============================================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--c-yellow);
+  outline-offset: 3px;
+}
