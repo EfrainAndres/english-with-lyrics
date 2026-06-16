@@ -44,10 +44,18 @@ for public delivery.
 - **Status:** Superseded — replaced by TR-03 fix export below.
 - **Reason superseded:** Manual visual QA identified the TR-03 (page 17) repeat instruction was clipped at "después intenta"; the full phrase "decirlo sin mirar la guía." was cut by `overflow: hidden` on the fixed-height A5 page.
 
-### TR-03 fix export (current)
+### TR-03 fix export (2026-06-15, pre-link-fix)
 
 - **Date:** 2026-06-15
 - **File size:** 1,224,339 bytes
+- **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
+- **Status:** Superseded — replaced by localhost-link fix export below.
+- **Reason superseded:** PDF annotation scan found that the `/ebook-gratis` relative href resolved to `http://127.0.0.1:9898/ebook-gratis` in the exported PDF because Chrome resolved it against the local export server.
+
+### Localhost-link fix export (current)
+
+- **Date:** 2026-06-16
+- **File size:** 1,223,965 bytes
 - **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
 - **PDF title:** "Aprende inglés con 3 canciones — Sing Pronounce Repeat" (UTF-16BE metadata)
 - **Network-error check:** PASSED
@@ -56,10 +64,18 @@ for public delivery.
 - **All 9 fragments present:** PASSED
 - **Three dedicated quick-review pages:** PASSED (pages 8, 13, 18)
 - **Footer on every non-cover page:** PASSED (pages 2–21)
+- **TR-03 visual review:** PASSED — full repeat instruction visible; Listo visible; footer and page number 17 visible (confirmed by user on prior export)
 - **TR-03 structural check:** PASSED — full repeat instruction "decirlo sin mirar la guía" present in HTML source
-- **/ebook-gratis visible text count:** 1 (page 20 CTA section)
+- **YouTube links embedded:** PASSED — 3 annotations (ATY, SLY, TR official YouTube)
+- **Survey and first-group links embedded:** PASSED — 2 Tally annotations (tally.so/r/eqzgbe, tally.so/r/D4a6NE)
+- **Challenge page Tally link:** PASSED — 1 Tally annotation (tally.so/r/eqzgbe)
+- **Total link annotations:** 6 (expected 6 — /ebook-gratis is intentionally non-clickable)
+- **Localhost annotation scan:** PASSED — no `http://127.0.0.1` or `http://localhost` URIs in PDF annotations
+- **/ebook-gratis:** Visible text only (non-clickable `<span>`); absolute production URL must be inserted during the public-delivery phase when the production domain is approved
 - **Challenge page footer:** Structurally present (page 19) — visual confirmation pending manual QA
-- **Export method:** Chrome headless (`--headless=new`, `--virtual-time-budget=10000`), Python 3 HTTP server with curl readiness loop, temporary PDF validated before move
+- **Challenge and self-assessment pages:** Within A5 safe area (confirmed by user on prior export)
+- **Final publication-level legal-safe review:** Pending
+- **Export method:** Chrome headless (`--headless=new`, `--virtual-time-budget=10000`), Python 3 HTTP server with curl readiness loop, temporary PDF validated before move, PDF annotation URI scan
 - **Manual visual QA:** Pending
 - **Publication readiness:** No
 
@@ -199,3 +215,4 @@ Use this table to record any issues found during QA.
 | Page | Issue | Severity | Fixed? |
 |---|---|---|---|
 | 17 | TR-03 repeat instruction clipped — "decirlo sin mirar la guía." not visible in PDF | High | Yes — `.page--tr3` CSS modifier reduces page-header margin-bottom, fragment-card margin-bottom, and fragment-footer padding to recover ~24px; structural check added to export script |
+| 20 | `/ebook-gratis` link embedded as `http://127.0.0.1:9898/ebook-gratis` in PDF annotations — Chrome resolved relative href against local export server | High | Yes — changed `<a href="/ebook-gratis">` to non-clickable `<span>`; annotation URI scan added to export script; absolute production URL to be inserted during public-delivery phase |

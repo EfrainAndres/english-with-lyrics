@@ -313,6 +313,42 @@ yellow_str = b'.9961'
 found_color = yellow_str in data
 print(f'Brand color check: {"PASSED" if found_color else "WARNING — yellow brand color not found (may be rendering issue)"}')
 
+# --- f) Annotation URI scan — no localhost links allowed ---------------------
+# Chrome writes /URI (URI) for hyperlinks; extract each URI value and check.
+uri_matches = re.findall(rb'/URI\s*\(([^)]+)\)', data)
+# Also handle hex-encoded URI entries
+uri_hex_matches = re.findall(rb'/URI\s*<([0-9A-Fa-f]+)>', data)
+for hex_bytes in uri_hex_matches:
+    try:
+        raw = bytes.fromhex(hex_bytes.decode('ascii'))
+        uri_matches.append(raw)
+    except Exception:
+        pass
+
+BAD_PREFIXES = [b'http://127.0.0.1', b'https://127.0.0.1',
+                b'http://localhost',  b'https://localhost']
+EXPECTED_LINK_COUNT = 6  # 3 YouTube + 2 Tally CTAs + 1 Tally challenge; /ebook-gratis is non-clickable
+
+print(f'Embedded annotation URIs ({len(uri_matches)} found):')
+for uri in uri_matches:
+    print(f'  {uri.decode("latin-1", errors="replace")}')
+
+localhost_found = False
+for uri in uri_matches:
+    for bad in BAD_PREFIXES:
+        if uri.lower().startswith(bad.lower()):
+            print(f'VALIDATION FAILED — localhost URI in PDF annotation: {uri.decode("latin-1", errors="replace")}')
+            failed = True
+            localhost_found = True
+
+if not localhost_found:
+    print('Localhost annotation scan: PASSED')
+
+if len(uri_matches) != EXPECTED_LINK_COUNT:
+    print(f'WARNING — expected {EXPECTED_LINK_COUNT} embedded link annotations, found {len(uri_matches)}. Verify manually.')
+else:
+    print(f'Link annotation count: PASSED ({len(uri_matches)} annotations)')
+
 if failed:
     sys.exit(1)
 
@@ -350,7 +386,7 @@ echo "IMPORTANT — manual QA required before publishing:"
 echo "  1. Open the PDF and verify all 21 pages render correctly."
 echo "  2. Verify background colors appear (requires 'Background graphics')."
 echo "  3. Check that no URLs appear twice."
-echo "  4. Verify all links (YouTube, Tally, /ebook-gratis)."
+echo "  4. Verify all links (YouTube, Tally). /ebook-gratis is intentionally non-clickable pending production URL."
 echo "  5. Work through docs/validation/PHASE_0_EBOOK_PDF_QA.md."
 echo "  6. Only after manual approval:"
 echo "     cp $OUTPUT_PDF public/downloads/guia-gratis-sing-pronounce-repeat.pdf"
