@@ -149,6 +149,21 @@ Branch: `design/phase-0-ebook-pdf-template`
 
 Status: Complete.
 
+### Ebook PDF Production Draft
+
+- 18-page production HTML at `docs/design/production/phase-0-ebook.html`.
+- Production CSS at `docs/design/production/phase-0-ebook.css` (23 sections, derived from prototype).
+- PDF export script at `scripts/export-ebook-pdf.sh` (Chrome headless, Python 3 HTTP server).
+- QA checklist at `docs/validation/PHASE_0_EBOOK_PDF_QA.md`.
+- Production draft exported to `docs/design/production/phase-0-ebook-production-draft.pdf` — pending manual QA.
+- All 9 approved fragments (ATY-01/02/03, SLY-01/02/03, TR-01/02/03) populated with exercises.
+
+Branch: `design/phase-0-ebook-pdf-production`
+
+Status: Draft exported. Pending manual visual QA before public delivery.
+
+Next: Run manual QA against `docs/validation/PHASE_0_EBOOK_PDF_QA.md`, then proceed to `fix/phase-0-ebook-pdf-qa` if corrections are needed, then `feat/phase-0-ebook-pdf-delivery`.
+
 ### Ebook PDF Delivery
 
 - Upload the final PDF to `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
