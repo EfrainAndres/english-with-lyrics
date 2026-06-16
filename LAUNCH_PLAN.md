@@ -75,9 +75,9 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Nine-fragment review phase | Complete — all 9 of 9 fragments approved; cross-song consistency review done |
 | Final content integration | Complete — `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md` (branch `content/phase-0-ebook-final-content`); official media links verified; design handoff markers in place; publication blocked by legal-safe review and PDF design |
 | PDF design template | Complete — `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md`; A5 portrait, 15 reusable components, static prototype at `docs/design/prototypes/`; recommended 14–16 pages |
-| PDF production draft | Draft exported — 18-page HTML + CSS at `docs/design/production/`; draft PDF at `docs/design/production/phase-0-ebook-production-draft.pdf`; pending manual QA (`docs/validation/PHASE_0_EBOOK_PDF_QA.md`) |
-| Full PDF layout population | In progress — production draft exported; blocked by manual visual QA and final legal-safe review before public delivery |
-| PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery`; unblocked after QA and legal-safe review complete |
+| PDF production draft | CONDITIONAL GO — 21-page production PDF (`docs/design/production/phase-0-ebook-production-draft.pdf`); structural and link QA passed; conservative legal-safe review passed; pending owner visual sign-off and production domain approval before delivery |
+| PDF publication readiness review | Complete — `docs/validation/PHASE_0_EBOOK_PUBLICATION_READINESS.md`; decision: CONDITIONAL GO; critical blockers: visual sign-off (BLK-01) and production domain approval (BLK-02) |
+| PDF delivery and page conversion | Pending — `feat/phase-0-ebook-pdf-delivery`; unblocked after owner visual sign-off and production domain approval |
 | Email provider setup | Pending — after PDF and consent approach confirmed |
 
 ### Launch Steps
