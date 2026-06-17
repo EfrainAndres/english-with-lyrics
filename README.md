@@ -58,7 +58,22 @@ Open `http://localhost:3000`.
 Useful local routes:
 
 - `/`
-- `/ebook-gratis`
+- `/ebook-gratis` — ebook download page (download CTA active; PDF at `/downloads/guia-gratis-sing-pronounce-repeat.pdf`)
+
+## Free ebook PDF
+
+Public file: `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`
+
+Local URL: `http://localhost:3000/downloads/guia-gratis-sing-pronounce-repeat.pdf`
+
+To verify the file after cloning:
+
+```bash
+shasum -a 256 public/downloads/guia-gratis-sing-pronounce-repeat.pdf
+# Expected: ebd1745feba55b15cf1d698e890c1ac26b01ffb2ba6c1aac38f1e428a43daf19
+```
+
+Email automation is not configured. Direct web download through `/ebook-gratis` is the current delivery method.
 
 ## Environment Variables
 

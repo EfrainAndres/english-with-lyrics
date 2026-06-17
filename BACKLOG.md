@@ -156,28 +156,30 @@ Status: Complete.
 - PDF export script at `scripts/export-ebook-pdf.sh` (Chrome headless, Python 3 HTTP server, structural and link annotation validation).
 - QA checklist at `docs/validation/PHASE_0_EBOOK_PDF_QA.md`.
 - Publication readiness review at `docs/validation/PHASE_0_EBOOK_PUBLICATION_READINESS.md`.
-- Production draft at `docs/design/production/phase-0-ebook-production-draft.pdf` — 21 pages, 1,223,965 bytes, all 9 fragments, 6 embedded links, no localhost annotations.
+- Production draft at `docs/design/production/phase-0-ebook-production-draft.pdf` — 21 pages, 1,225,508 bytes, all 9 fragments, 6 embedded links, complete metadata.
 
 Branch: `design/phase-0-ebook-pdf-production`
 
-Status: Complete — structural QA passed. Visual QA: pending owner sign-off. Link QA: passed. Legal-safe review: conservative review passed. Metadata: incomplete (Author/Subject/Keywords). Publication readiness decision: CONDITIONAL GO.
-
-Next: Owner completes visual QA; approve production domain; open `feat/phase-0-ebook-pdf-delivery`. If visual QA finds layout issues, open `fix/phase-0-ebook-pdf-qa` first.
+Status: Complete — structural QA passed. Visual QA: approved by project owner. Link QA: passed. Legal-safe review: conservative review passed. Metadata: complete (corrected in `feat/phase-0-ebook-pdf-delivery`). Publication readiness decision: CONDITIONAL GO.
 
 ### Ebook PDF Delivery
 
-- Upload the final PDF to `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
-- Convert `/ebook-gratis` from waiting page to real download page.
-- Confirm all Tally CTAs link correctly.
-- Configure email delivery per `docs/validation/PHASE_0_EMAIL_DELIVERY_PLAN.md`.
+- [x] Public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` (1,225,508 bytes, SHA-256 `ebd1745f...`).
+- [x] `/ebook-gratis` converted from waiting page to active download page.
+- [x] Download CTA with `download` attribute and correct filename.
+- [x] Survey and first-group CTAs preserved with correct Tally destinations.
+- [x] PDF metadata corrected (Author, Subject, Keywords, Creator) via `scripts/patch-pdf-metadata.py`.
+- [x] Owner visual review approved.
+- [x] Source-to-public integrity documented in `docs/validation/PHASE_0_EBOOK_PDF_DELIVERY.md`.
+- [ ] Deployed-environment smoke test — pending deployment.
+- [ ] Production domain approval — needed to restore `/ebook-gratis` clickable backlink inside PDF.
+- [ ] Mobile browser QA — pending manual check.
+- [ ] Download analytics — pending; see backlog.
+- [ ] Email delivery automation — pending provider selection.
 
 Branch: `feat/phase-0-ebook-pdf-delivery`
 
-Acceptance criteria:
-
-- PDF is downloadable from `/ebook-gratis`.
-- Delivery email links to `/ebook-gratis`, not a PDF attachment.
-- No provider integration before PDF and consent approach are confirmed.
+Status: Locally complete. Deployment verification pending.
 
 ### Lead Capture
 
