@@ -176,7 +176,7 @@ Status: Complete — structural QA passed. Visual QA: approved by project owner.
 - [ ] Deployed-environment smoke test — pending deployment.
 - [ ] Production domain approval — needed to restore `/ebook-gratis` clickable backlink inside PDF.
 - [ ] Mobile browser QA — pending manual check.
-- [ ] Download analytics — pending; see backlog.
+- [x] Download analytics — Vercel Web Analytics code integration complete (`feat/phase-0-download-analytics`). Dashboard activation and production verification pending.
 - [ ] Email delivery automation — pending provider selection.
 
 Branch: `feat/phase-0-ebook-pdf-delivery`

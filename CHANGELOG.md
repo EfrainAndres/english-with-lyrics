@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added privacy-conscious Vercel Web Analytics page-view tracking and Phase 0 ebook-funnel documentation, while keeping exact download-click events pending because custom events are unavailable on the current hosting plan.
 - Completed the Phase 0 ebook validation and delivery flow for **Aprende inglés con 3 canciones**, including the three-song content strategy, nine approved educational fragments, `Escríbelo como suena` guidance, natural meanings, original examples, exercises, reconstruction safeguards, and final learner-facing content.
 - Added the reusable A5 ebook design system, production HTML/CSS, reproducible Chrome-based export tooling, metadata patching, structural PDF validation, visual QA corrections, publication-readiness review, and the final validated 21-page PDF artifact.
 - Enabled direct ebook delivery through `/ebook-gratis`, added the approved public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`, aligned the home landing with the active download flow, and preserved survey and first-group actions as optional follow-ups.

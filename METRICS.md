@@ -49,25 +49,23 @@ Survey interpretation:
 
 ## Phase 0.5: Ebook Metrics
 
-Primary metrics:
+### Available now (Vercel Web Analytics — Hobby plan)
 
-- Ebook landing page conversion rate.
-- Email capture rate.
-- Ebook download rate.
-- Email open rate.
-- Click rate to `/ebook-gratis`.
-- Waiting-page CTA clicks.
-- PDF download clicks.
-- Click rate from ebook page to survey.
-- Click rate from ebook page to first group interest.
-- Click-through to founder offer.
-- Replies or qualitative feedback.
+- Landing page (`/`) visitors and page views.
+- Ebook page (`/ebook-gratis`) visitors and page views.
+- Traffic referrers and source channels.
+- Device type and geographic aggregates.
+- Survey submissions via Tally (`https://tally.so/r/eqzgbe`).
+- First-group form submissions via Tally (`https://tally.so/r/D4a6NE`).
 
-Learning metrics:
+Do not use "ebook downloads" as a metric — only ebook-page visits are currently measurable. See `docs/validation/PHASE_0_DOWNLOAD_ANALYTICS.md` for the funnel model and calculations.
 
-- Which song attracts the most interest.
-- Which pronunciation explanations users mention as useful.
-- Which learners ask for more lessons.
+### Pending exact instrumentation
+
+- PDF download-click count (requires Vercel Pro or alternative provider).
+- Open-in-browser click count.
+- CTA-specific click events (`ebook_download_clicked`, `ebook_survey_clicked`, `ebook_first_group_clicked`).
+- Email delivery rate, open rate, and click rate (requires email provider setup).
 
 ### Ebook validation signal categories
 
@@ -75,23 +73,21 @@ These categories align with the signal framework in `docs/content/PHASE_0_EBOOK_
 
 Interest signals:
 
-- Ebook form submissions.
 - Visits to `/ebook-gratis`.
-- Delivery email open rate.
-- Click rate from delivery email to `/ebook-gratis`.
+- Delivery email open rate (pending email provider).
+- Click rate from delivery email to `/ebook-gratis` (pending email provider).
 
 Engagement signals:
 
-- PDF download clicks.
-- Survey click-through from ebook or delivery page.
-- Survey completion rate.
-- First-group interest clicks.
+- Survey click-through from ebook page (via Tally).
+- Survey completion rate (via Tally).
+- First-group interest submissions (via Tally).
 - Preferred song category (from survey, form field, or reply).
 - Completion self-report.
 
 High-intent signals:
 
-- Survey completion after downloading.
+- Survey completion after visiting the ebook page.
 - First-group form submission.
 - Direct replies requesting more lessons or specific songs.
 - Reported pronunciation or listening improvement.
@@ -105,7 +101,7 @@ Monetization signals (not validated by the free ebook alone):
 
 ### Important note
 
-Ebook download volume alone is not a strong validation signal. Survey completion and first-group interest are required to confirm real demand.
+Ebook page visit volume alone is not a strong validation signal. Survey completion and first-group interest are required to confirm real demand.
 
 ## Phase 1: MVP Metrics
 

@@ -112,6 +112,21 @@ For local form-link testing:
 - Use original pronunciation guidance and natural translation.
 - Embed official YouTube videos only in later phases when needed.
 
+## Analytics
+
+Provider: Vercel Web Analytics (`@vercel/analytics`).
+
+`<Analytics />` is rendered in `src/app/layout.tsx` and tracks page views on all routes automatically.
+
+To enable the dashboard, open the Vercel project → **Analytics** → **Enable**. This is a manual step separate from the code integration.
+
+**Current limitation:** Custom events (e.g. `ebook_download_clicked`) require the Vercel Pro plan. Exact PDF download clicks are not measured on the current Hobby plan. Use `/ebook-gratis` page views as a proxy for download intent. See `docs/validation/PHASE_0_DOWNLOAD_ANALYTICS.md`.
+
+Production routes to verify after enabling:
+
+- `https://english-with-lyrics.vercel.app/`
+- `https://english-with-lyrics.vercel.app/ebook-gratis`
+
 ## Useful Docs
 
 - `PROJECT_BRIEF.md`
