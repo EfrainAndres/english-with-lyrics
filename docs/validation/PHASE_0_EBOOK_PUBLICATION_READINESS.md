@@ -5,16 +5,20 @@
 | Field | Value |
 |---|---|
 | Review date | 2026-06-16 |
-| Branch | `review/phase-0-ebook-publication-readiness` |
+| Delivery implementation date | 2026-06-17 |
+| Branch | `review/phase-0-ebook-publication-readiness` / `feat/phase-0-ebook-pdf-delivery` |
 | Ebook title | Aprende inglés con 3 canciones — Sing Pronounce Repeat |
 | PDF source path | `docs/design/production/phase-0-ebook-production-draft.pdf` |
+| Public PDF path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
 | Current PDF page count | 21 |
-| Current PDF file size | 1,223,965 bytes |
-| Publication status | Not published |
-| Delivery status | Not activated |
+| Current PDF file size | 1,225,508 bytes (after metadata correction) |
+| Public SHA-256 | `ebd1745feba55b15cf1d698e890c1ac26b01ffb2ba6c1aac38f1e428a43daf19` |
+| Publication status | Public PDF prepared — deployed-environment smoke test pending |
+| Delivery status | Download route active locally — deployment verification pending |
+| **Project-owner visual review** | **Approved** |
 | **Final decision** | **CONDITIONAL GO** |
 
-**Rationale:** The PDF content is structurally complete, legally conservative, brand-consistent, and passes all automated structural and link checks. Delivery remains blocked on three items: (1) manual owner visual sign-off, (2) approved production domain needed to restore the `/ebook-gratis` link, and (3) PDF metadata completion (Author, Subject, Keywords not set). No content, legal-safe, or link-quality blocker prevents the delivery branch from starting once the owner completes visual sign-off.
+**Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes all automated checks. PDF metadata (Author, Subject, Keywords, Creator) corrected in this branch via incremental update. Public file prepared at `public/downloads/`. Download page live locally. Delivery remains conditionally blocked on: (1) deployed-environment smoke test, and (2) production domain approval to restore the `/ebook-gratis` clickable backlink inside the PDF. Neither condition blocks the download button on the website.
 
 ---
 
@@ -398,10 +402,10 @@ Do not guess, invent, or use a preview deployment URL.
 
 | Field | Value |
 |---|---|
-| Name / initials | (pending) |
-| Date | (pending) |
-| Decision | (pending) |
-| Notes | Open `phase-0-ebook-production-draft.pdf`, review all 21 pages, confirm no clipping, overflow, missing footer, or layout error; complete section 2 of `PHASE_0_EBOOK_PDF_QA.md` |
+| Name / initials | Project owner |
+| Date | 2026-06-17 |
+| Decision | Approved |
+| Notes | Project-owner visual review completed. 21-page PDF approved for delivery implementation. No additional visual correction branch required. |
 
 ### Legal-safe review
 
@@ -438,9 +442,9 @@ Do not guess, invent, or use a preview deployment URL.
 |---|---|---|---|---|---|---|
 | BLK-01 | Visual QA not signed off — all 21 pages require project-owner review | High | Project owner | Open PDF, work through `PHASE_0_EBOOK_PDF_QA.md` section 2, record pass/fail per page | Owner records sign-off date and initials in this document and in QA doc | Before delivery |
 | BLK-02 | Production domain not approved — `/ebook-gratis` is non-clickable in PDF | High | Project owner | Approve and document the production base URL; update HTML anchor to `https://<domain>/ebook-gratis`; regenerate PDF | Verify PDF annotation count rises to 7; confirm new URL is HTTPS and points to live route | Before delivery |
-| BLK-03 | PDF metadata incomplete — Author, Subject, Keywords not set | Medium | Delivery branch | Add Python incremental-update post-processing step to `export-ebook-pdf.sh` to write Author, Subject, Keywords to PDF Info dictionary without a new library dependency; or add `pikepdf` as a dev-only dependency | Re-run export; confirm Author/Subject/Keywords appear in PDF metadata extraction | Delivery branch |
-| BLK-04 | PDF Creator field exposes Chrome user-agent string | Low | Delivery branch | Override Creator in the same post-processing step used for BLK-03; set to `Sing Pronounce Repeat / English with Lyrics` | Confirm Creator field shows brand name after re-export | Delivery branch |
-| BLK-05 | `/ebook-gratis` page is still a waiting page — not a real download page | High | Delivery branch | Follow `PHASE_0_EBOOK_DOWNLOAD_PAGE.md` spec; convert page to real download page with PDF CTA | Manually verify download link resolves to the PDF; confirm survey and first-group CTAs still work | `feat/phase-0-ebook-pdf-delivery` |
+| BLK-03 | PDF metadata incomplete — Author, Subject, Keywords not set | Medium | ~~Delivery branch~~ **RESOLVED** | Corrected via `scripts/patch-pdf-metadata.py` (Python stdlib incremental update) in `feat/phase-0-ebook-pdf-delivery`. All five fields now set. | Metadata extraction confirms Author, Subject, Keywords, Creator all present. | Resolved |
+| BLK-04 | PDF Creator field exposes Chrome user-agent string | Low | ~~Delivery branch~~ **RESOLVED** | Creator updated to `Sing Pronounce Repeat / English with Lyrics` in same patch. | Confirmed in metadata extraction. | Resolved |
+| BLK-05 | `/ebook-gratis` page is still a waiting page — not a real download page | High | ~~Delivery branch~~ **RESOLVED** | Page converted in `feat/phase-0-ebook-pdf-delivery`; download CTA, open-in-browser link, content breakdown, and how-to section added; waiting-state copy removed. | Build passes; route renders as static. | Resolved locally — deployed smoke test pending |
 | BLK-06 | Email delivery not configured | Medium | Post-delivery | Select provider (MailerLite or Brevo recommended for Phase 0 volume), configure sender identity, unsubscribe handling, and import consent-confirmed contacts from Tally | Send a test delivery email; confirm link opens `/ebook-gratis` | After delivery |
 | BLK-07 | No analytics on PDF download or page visits | Low | Post-delivery | Add basic click tracking on `/ebook-gratis`; no third-party analytics required until Phase 1 | Confirm download click events are logged | After delivery |
 | BLK-08 | Professional legal review not completed | Advisory | Project owner | Before broad public distribution or paid MVP launch, consult a copyright attorney familiar with educational fair-use context and relevant jurisdictions | Attorney review documented | Before Phase 1 scale |

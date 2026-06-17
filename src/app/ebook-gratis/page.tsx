@@ -3,60 +3,49 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
 import {
-  ebookFormUrl,
+  ebookDownloadFilename,
+  ebookDownloadPath,
+  ebookFileSizeKB,
+  ebookPageCount,
   firstGroupFormUrl,
-  getLinkProps,
   surveyFormUrl,
 } from "@/lib/links";
 
 export const metadata: Metadata = {
-  title: "Guía gratis en preparación | Sing Pronounce Repeat",
+  title: "Guía gratis disponible | Sing Pronounce Repeat",
   description:
-    "La guía gratis de Sing Pronounce Repeat / English with Lyrics está en preparación. Regístrate para recibirla y ayudar a elegir las próximas canciones.",
+    "Descarga gratis la guía de práctica de Sing Pronounce Repeat / English with Lyrics. 3 canciones, 9 frases, pronunciación con Escríbelo como suena y ejercicios originales.",
 };
 
-const guideItems = [
+const contentItems = [
   {
     title: "3 canciones seleccionadas",
-    text: "Una entrada corta para practicar sin sentir que estás tomando un curso pesado.",
+    text: "A Thousand Years, Still Loving You y The Reason — fragmentos cortos pensados para practicar sin sobrecargar.",
     accent: "bg-pink",
   },
   {
-    title: "Pronunciación fácil con Escríbelo como suena",
-    text: "Guías de sonido pensadas para hispanohablantes, sin símbolos raros ni IPA.",
+    title: "9 prácticas de pronunciación",
+    text: "Escríbelo como suena para cada fragmento: guías de sonido pensadas para hispanohablantes, sin IPA.",
     accent: "bg-purple",
   },
   {
-    title: "Traducción natural y frases útiles",
-    text: "Explicaciones en español para entender significado, uso y contexto.",
+    title: "Significados naturales y vocabulario",
+    text: "Explicaciones en español del significado real, el uso en contexto y las palabras clave de cada frase.",
     accent: "bg-cream",
   },
   {
-    title: "Mini ejercicios para practicar",
-    text: "Pequeñas acciones para escuchar, repetir y recordar cada frase.",
+    title: "Ejercicios y reto de tres días",
+    text: "Ejercicios originales por fragmento, un reto de práctica y una escala de confianza para seguir tu progreso.",
     accent: "bg-pink",
   },
 ];
 
-const paths = [
-  {
-    title: "Románticas",
-    text: "Frases emocionales, ritmo más fácil de seguir y práctica para conectar sonido con significado.",
-    className: "border-pink/35 bg-pink/10",
-    labelClassName: "text-pink",
-  },
-  {
-    title: "Rock / pop clásicos",
-    text: "Canciones conocidas, expresiones frecuentes y práctica con palabras que cambian al cantarse.",
-    className: "border-purple/35 bg-purple/10",
-    labelClassName: "text-purple",
-  },
-  {
-    title: "Principiantes",
-    text: "Fragmentos muy cortos, pronunciación guiada y pasos simples para ganar confianza.",
-    className: "border-cream/35 bg-cream/10",
-    labelClassName: "text-cream",
-  },
+const howToUse = [
+  "Descarga la guía y ábrela en cualquier dispositivo.",
+  "Abre los enlaces oficiales de cada canción dentro de la guía.",
+  "Escucha el fragmento, lee la guía y repítelo en voz alta.",
+  "Completa los ejercicios escritos y el reto de tres días.",
+  "Responde la encuesta para ayudar a elegir las próximas canciones.",
 ];
 
 function BrandLogo({
@@ -96,6 +85,7 @@ function AudioBars() {
 export default function EbookGratisPage() {
   return (
     <main className="min-h-screen bg-ink text-paper">
+      {/* ── Navigation ─────────────────────────────────────────────────── */}
       <nav className="border-b border-white/15 bg-ink px-5 py-3 sm:px-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <Link
@@ -116,46 +106,57 @@ export default function EbookGratisPage() {
         </div>
       </nav>
 
+      {/* ── Hero / Download CTA ─────────────────────────────────────────── */}
       <section className="bg-ink px-5 py-12 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.75fr]">
           <div>
             <p className="inline-flex rounded-full border border-purple/35 bg-purple/10 px-4 py-2 text-sm font-black text-purple">
-              Guía gratis
+              Guía gratuita disponible
             </p>
             <h1 className="mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
-              Tu guía gratis está en preparación
+              Aprende inglés con 3 canciones
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-soft">
-              Estamos preparando una guía con 3 canciones para practicar inglés
-              con pronunciación fácil, frases útiles y traducción natural.
+              9 frases cortas, pronunciación con Escríbelo como suena,
+              significados naturales, vocabulario útil y ejercicios originales.
+              Incluye un reto de tres días y autoevaluación.
             </p>
             <p className="mt-4 max-w-xl text-lg font-black text-cream">
               Con el método Escríbelo como suena.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton href={ebookFormUrl}>
-                Avisarme cuando esté lista
+              <CTAButton
+                href={ebookDownloadPath}
+                download={ebookDownloadFilename}
+                aria-label="Descargar guía gratis en PDF"
+              >
+                Descargar guía gratis
               </CTAButton>
-              <CTAButton href={surveyFormUrl} variant="secondary">
-                Responder encuesta
+              <CTAButton
+                href={ebookDownloadPath}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                aria-label="Abrir guía en el navegador"
+              >
+                Abrir en el navegador
               </CTAButton>
             </div>
-            <p className="mt-5 max-w-xl text-sm font-bold leading-6 text-soft">
-              No hay PDF disponible todavía. Si dejas tus datos, te avisaremos
-              cuando la guía esté lista.
+            <p className="mt-5 text-sm font-bold text-soft">
+              PDF · {ebookPageCount} páginas · Español · Formato A5 · {ebookFileSizeKB} KB aprox.
             </p>
           </div>
 
           <aside className="border border-pink/25 bg-panel p-6 shadow-neon">
             <p className="text-sm font-black uppercase text-pink">
-              Próxima entrega
+              Incluye
             </p>
             <h2 className="mt-3 font-heading text-4xl font-black">
               Escucha, repite, entiende
             </h2>
             <p className="mt-4 leading-8 text-soft">
-              La guía será una puerta de entrada a prácticas cortas, claras y
-              enfocadas en inglés real.
+              3 canciones seleccionadas, 9 prácticas de pronunciación, vocabulario
+              útil y ejercicios para practicar en cualquier momento.
             </p>
             <div className="mt-6">
               <AudioBars />
@@ -174,18 +175,19 @@ export default function EbookGratisPage() {
         </div>
       </section>
 
+      {/* ── Content breakdown ──────────────────────────────────────────────── */}
       <section className="bg-night px-5 py-14 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase text-pink">
-              Contenido previsto
+              Contenido de la guía
             </p>
             <h2 className="mt-3 font-heading text-3xl font-black sm:text-4xl">
-              Qué incluirá la guía
+              Qué incluye la guía
             </h2>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {guideItems.map((item) => (
+            {contentItems.map((item) => (
               <article
                 className="border border-white/10 bg-white/5 p-5"
                 key={item.title}
@@ -203,53 +205,46 @@ export default function EbookGratisPage() {
         </div>
       </section>
 
+      {/* ── How to use ─────────────────────────────────────────────────────── */}
       <section className="bg-panel px-5 py-14 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase text-purple">
-              Elige tu camino
+              Cómo usarla
             </p>
             <h2 className="mt-3 font-heading text-3xl font-black sm:text-4xl">
-              Ayúdanos a decidir por dónde empezar
+              Cinco pasos para practicar
             </h2>
-            <p className="mt-5 text-lg leading-8 text-soft">
-              La guía puede organizarse por estilos y niveles. Tu respuesta nos
-              ayuda a elegir el camino más útil para la primera versión.
-            </p>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {paths.map((path) => (
-              <article
-                className={`border p-6 ${path.className}`}
-                key={path.title}
+          <ol className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {howToUse.map((step, i) => (
+              <li
+                className="flex gap-4 border border-white/10 bg-white/5 p-5"
+                key={i}
               >
-                <p
-                  className={`text-sm font-black uppercase ${path.labelClassName}`}
-                >
-                  Camino
-                </p>
-                <h3 className="mt-3 font-heading text-3xl font-black">
-                  {path.title}
-                </h3>
-                <p className="mt-4 leading-8 text-soft">{path.text}</p>
-              </article>
+                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-purple/20 text-sm font-black text-purple">
+                  {i + 1}
+                </span>
+                <p className="leading-7 text-soft">{step}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
+      {/* ── Survey and first-group CTAs ────────────────────────────────────── */}
       <section className="bg-midnight px-5 py-14 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="text-sm font-bold uppercase text-cream">
-              Mientras la guía está lista
+              Después de la guía
             </p>
             <h2 className="mt-3 font-heading text-3xl font-black sm:text-4xl">
-              Participa en la validación
+              Ayúdanos a mejorar
             </h2>
             <p className="mt-5 text-lg leading-8 text-soft">
-              Puedes responder la encuesta, pedir información del primer grupo
-              o volver al inicio para ver el método completo.
+              Puedes responder la encuesta para elegir las próximas canciones,
+              pedir información del primer grupo de práctica o volver al inicio.
             </p>
           </div>
 
@@ -267,19 +262,22 @@ export default function EbookGratisPage() {
         </div>
       </section>
 
+      {/* ── Legal note ─────────────────────────────────────────────────────── */}
       <section className="bg-night px-5 py-10 sm:px-8">
         <div className="mx-auto max-w-6xl border border-white/10 bg-white/5 p-5">
           <h2 className="font-heading text-xl font-black">
             Nota legal y de contenido
           </h2>
           <p className="mt-3 leading-7 text-soft">
-            Esta guía usará fragmentos educativos cortos y explicaciones
-            propias. No reemplaza letras completas ni plataformas oficiales de
-            música o video.
+            Esta guía usa fragmentos educativos cortos y explicaciones propias.
+            No reproduce letras completas ni reemplaza plataformas oficiales de
+            música o video. Escucha cada canción a través de las fuentes
+            oficiales enlazadas dentro de la guía.
           </p>
         </div>
       </section>
 
+      {/* ── Footer ─────────────────────────────────────────────────────────── */}
       <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
@@ -288,9 +286,11 @@ export default function EbookGratisPage() {
           </div>
           <a
             className="text-sm font-black text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-            {...getLinkProps(ebookFormUrl)}
+            href={ebookDownloadPath}
+            download={ebookDownloadFilename}
+            aria-label="Descargar guía gratis en PDF"
           >
-            Avisarme cuando esté lista
+            Descargar guía gratis
           </a>
         </div>
       </footer>
