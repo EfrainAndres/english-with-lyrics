@@ -8,13 +8,16 @@
 | Browser URL | `/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
 | Filename | `guia-gratis-sing-pronounce-repeat.pdf` |
 | Page count | 21 |
-| File size | 1,225,508 bytes (approx. 1,197 KB) |
-| SHA-256 | `ebd1745feba55b15cf1d698e890c1ac26b01ffb2ba6c1aac38f1e428a43daf19` |
+| File size | 1,225,899 bytes (approx. 1,197 KB) |
+| SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
 | Visual review | Project-owner visual review: Approved |
 | Legal-safe review | Conservative review passed — see `PHASE_0_EBOOK_PUBLICATION_READINESS.md` |
-| Public-origin status | Pending — no production domain approved yet; `/ebook-gratis` backlink in PDF is non-clickable |
+| Production origin | Approved — `https://english-with-lyrics.vercel.app` |
+| PDF backlink | Restored — `https://english-with-lyrics.vercel.app/ebook-gratis` (7th annotation) |
+| Embedded annotations | 7 (3 YouTube + 2 Tally survey + 1 Tally first-group + 1 ebook backlink) |
 | Email automation | Pending — direct web download enabled; no email provider configured |
-| Branch | `feat/phase-0-ebook-pdf-delivery` |
+| Production redeploy | Required — new PDF must be deployed to make backlink live |
+| Branch | `fix/phase-0-production-origin-and-pdf-backlink` |
 
 ---
 
@@ -24,11 +27,11 @@
 |---|---|
 | Source review path | `docs/design/production/phase-0-ebook-production-draft.pdf` |
 | Public path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
-| Source SHA-256 (pre-metadata patch) | `25c9adb3ff947a13cbb9a127db70904e72252c43f7b12b34d409a7a2bdfb9517` |
-| Source SHA-256 (post-metadata patch) | `ebd1745feba55b15cf1d698e890c1ac26b01ffb2ba6c1aac38f1e428a43daf19` |
-| Public SHA-256 | `ebd1745feba55b15cf1d698e890c1ac26b01ffb2ba6c1aac38f1e428a43daf19` |
+| Source SHA-256 (pre-metadata patch) | `5339c70f3dd1d101cc6f644a2179694383e17a0fc1729fdde934a2aeb23fbecc` |
+| Source SHA-256 (post-metadata patch) | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
+| Public SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
 | Files identical | Yes — source and public file are byte-identical after the metadata correction |
-| Transformation applied | PDF incremental update via `scripts/patch-pdf-metadata.py` — appends corrected Info dictionary (Author, Subject, Keywords, Creator) to the PDF without modifying existing page content, links, or colors. Page count, visual layout, and all 6 annotation URIs are unchanged. |
+| Transformation applied | PDF incremental update via `scripts/patch-pdf-metadata.py` — appends corrected Info dictionary (Author, Subject, Keywords, Creator) to the PDF without modifying existing page content, links, or colors. Page count, visual layout, and all 7 annotation URIs are intact. |
 
 **Transformation details:**
 
@@ -80,13 +83,14 @@ Verified from `docs/design/production/phase-0-ebook-production-draft.pdf` and `p
 | Check | Status |
 |---|---|
 | Public PDF exists | Pass — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` created |
-| Non-zero size | Pass — 1,225,508 bytes |
+| Non-zero size | Pass — 1,225,899 bytes |
 | Page count | Pass — 21 pages |
 | Nine approved fragments | Pass — all 9 structurally confirmed (ATY-01/02/03, SLY-01/02/03, TR-01/02/03) |
 | No internal markers | Pass — no `[DESIGN: ...]`, production status, or review scores |
 | No placeholders | Pass |
-| No localhost annotations | Pass — localhost annotation scan passed in export script |
-| Annotation count | Pass — 6 intentional external annotations (3 YouTube, 2 Tally survey, 1 Tally first-group); `/ebook-gratis` backlink remains non-clickable pending production domain |
+| No localhost annotations | Pass — URI safety scan passed in export script |
+| Annotation count | Pass — 7 annotations (3 YouTube, 2 Tally survey, 1 Tally first-group, 1 ebook backlink) |
+| Ebook backlink | Pass — `https://english-with-lyrics.vercel.app/ebook-gratis` confirmed in export script |
 | Metadata — Title | Pass — `Aprende inglés con 3 canciones — Sing Pronounce Repeat` |
 | Metadata — Author | Pass — `Sing Pronounce Repeat / English with Lyrics` (corrected in this branch) |
 | Metadata — Subject | Pass — corrected in this branch |
@@ -114,8 +118,8 @@ Manual checks required. Mark complete only after actual inspection.
 
 | ID | Description | Severity | Status |
 |---|---|---|---|
-| BLK-02 | Production domain not approved — `/ebook-gratis` backlink in PDF is non-clickable | High | Pending — does not block download; delivery page works without it |
-| BLK-DEL-01 | Deployed-environment smoke test not performed | High | Pending — test after deploying to production environment |
+| BLK-02 | Production domain approval and PDF backlink restoration | High | Complete — origin approved; backlink restored in `fix/phase-0-production-origin-and-pdf-backlink` |
+| BLK-DEL-01 | Production redeploy + smoke test | High | Pending — deploy branch and verify backlink click on production |
 | BLK-DEL-02 | Mobile browser QA not performed | Medium | Pending — manual check required |
 | BLK-DEL-03 | Download analytics not implemented | Low | Pending — add as separate backlog item |
 | BLK-DEL-04 | Email-provider automation not configured | Medium | Pending — separate task after provider selection |

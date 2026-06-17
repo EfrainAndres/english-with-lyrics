@@ -6,19 +6,22 @@
 |---|---|
 | Review date | 2026-06-16 |
 | Delivery implementation date | 2026-06-17 |
-| Branch | `review/phase-0-ebook-publication-readiness` / `feat/phase-0-ebook-pdf-delivery` |
+| Production origin finalization | 2026-06-17 |
+| Branch | `review/phase-0-ebook-publication-readiness` / `feat/phase-0-ebook-pdf-delivery` / `fix/phase-0-production-origin-and-pdf-backlink` |
 | Ebook title | Aprende inglés con 3 canciones — Sing Pronounce Repeat |
 | PDF source path | `docs/design/production/phase-0-ebook-production-draft.pdf` |
 | Public PDF path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
 | Current PDF page count | 21 |
-| Current PDF file size | 1,225,508 bytes (after metadata correction) |
-| Public SHA-256 | `ebd1745feba55b15cf1d698e890c1ac26b01ffb2ba6c1aac38f1e428a43daf19` |
-| Publication status | Public PDF prepared — deployed-environment smoke test pending |
-| Delivery status | Download route active locally — deployment verification pending |
+| Current PDF file size | 1,225,899 bytes (after metadata correction) |
+| Public SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
+| Publication status | Public PDF prepared — production redeploy and smoke test pending |
+| Delivery status | Download route active — production redeploy required to serve updated PDF |
 | **Project-owner visual review** | **Approved** |
+| **Production origin** | **Approved — `https://english-with-lyrics.vercel.app`** |
+| **PDF backlink** | **Restored — `https://english-with-lyrics.vercel.app/ebook-gratis`** |
 | **Final decision** | **CONDITIONAL GO** |
 
-**Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes all automated checks. PDF metadata (Author, Subject, Keywords, Creator) corrected in this branch via incremental update. Public file prepared at `public/downloads/`. Download page live locally. Delivery remains conditionally blocked on: (1) deployed-environment smoke test, and (2) production domain approval to restore the `/ebook-gratis` clickable backlink inside the PDF. Neither condition blocks the download button on the website.
+**Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes all automated checks. PDF metadata complete (Author, Subject, Keywords, Creator). Production origin approved and recorded. Absolute `/ebook-gratis` backlink restored inside the PDF (annotation 7 of 7). Public file updated at `public/downloads/`. Download page live. Remaining blocker: production redeploy and deployed smoke test for PDF backlink click verification.
 
 ---
 

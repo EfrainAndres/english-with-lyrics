@@ -325,27 +325,59 @@ for hex_bytes in uri_hex_matches:
     except Exception:
         pass
 
-BAD_PREFIXES = [b'http://127.0.0.1', b'https://127.0.0.1',
-                b'http://localhost',  b'https://localhost']
-EXPECTED_LINK_COUNT = 6  # 3 YouTube + 2 Tally CTAs + 1 Tally challenge; /ebook-gratis is non-clickable
+APPROVED_PRODUCTION_ORIGIN = b'https://english-with-lyrics.vercel.app'
+EXPECTED_BACKLINK         = b'https://english-with-lyrics.vercel.app/ebook-gratis'
+
+# Forbidden URI patterns: localhost, preview deployments, HTTP for external links
+BAD_PREFIXES = [
+    b'http://127.0.0.1',
+    b'https://127.0.0.1',
+    b'http://localhost',
+    b'https://localhost',
+]
+# Catch any vercel.app URL that is NOT the approved production origin
+# (preview and branch deploy URLs look like https://<project>-<hash>-<org>.vercel.app)
+BAD_PATTERNS = [b'.vercel.app']
+
+EXPECTED_LINK_COUNT = 7  # 3 YouTube + 2 Tally survey + 1 Tally first-group + 1 ebook backlink
 
 print(f'Embedded annotation URIs ({len(uri_matches)} found):')
 for uri in uri_matches:
     print(f'  {uri.decode("latin-1", errors="replace")}')
 
-localhost_found = False
+bad_uri_found = False
+
+# Check forbidden prefixes
 for uri in uri_matches:
     for bad in BAD_PREFIXES:
         if uri.lower().startswith(bad.lower()):
-            print(f'VALIDATION FAILED — localhost URI in PDF annotation: {uri.decode("latin-1", errors="replace")}')
+            print(f'VALIDATION FAILED — forbidden URI prefix in PDF annotation: {uri.decode("latin-1", errors="replace")}')
             failed = True
-            localhost_found = True
+            bad_uri_found = True
 
-if not localhost_found:
-    print('Localhost annotation scan: PASSED')
+# Check for preview/branch .vercel.app URLs (any .vercel.app that is not the approved origin)
+for uri in uri_matches:
+    uri_lower = uri.lower()
+    for pat in BAD_PATTERNS:
+        if pat in uri_lower and not uri_lower.startswith(APPROVED_PRODUCTION_ORIGIN.lower()):
+            print(f'VALIDATION FAILED — non-production vercel.app URL in PDF annotation: {uri.decode("latin-1", errors="replace")}')
+            failed = True
+            bad_uri_found = True
+
+if not bad_uri_found:
+    print('URI safety scan: PASSED (no localhost, 127.0.0.1, or non-production vercel.app URLs)')
+
+# Verify the exact ebook backlink is present
+backlink_found = any(uri.rstrip(b'/') == EXPECTED_BACKLINK for uri in uri_matches)
+if not backlink_found:
+    print(f'VALIDATION FAILED — expected ebook backlink not found: {EXPECTED_BACKLINK.decode()}')
+    failed = True
+else:
+    print(f'Ebook backlink check: PASSED ({EXPECTED_BACKLINK.decode()})')
 
 if len(uri_matches) != EXPECTED_LINK_COUNT:
-    print(f'WARNING — expected {EXPECTED_LINK_COUNT} embedded link annotations, found {len(uri_matches)}. Verify manually.')
+    print(f'VALIDATION FAILED — expected {EXPECTED_LINK_COUNT} embedded link annotations, found {len(uri_matches)}.')
+    failed = True
 else:
     print(f'Link annotation count: PASSED ({len(uri_matches)} annotations)')
 
@@ -386,7 +418,7 @@ echo "IMPORTANT — manual QA required before publishing:"
 echo "  1. Open the PDF and verify all 21 pages render correctly."
 echo "  2. Verify background colors appear (requires 'Background graphics')."
 echo "  3. Check that no URLs appear twice."
-echo "  4. Verify all links (YouTube, Tally). /ebook-gratis is intentionally non-clickable pending production URL."
+echo "  4. Verify all 7 links (3 YouTube, 2 survey, 1 first-group, 1 ebook backlink)."
 echo "  5. Work through docs/validation/PHASE_0_EBOOK_PDF_QA.md."
 echo "  6. Only after manual approval:"
 echo "     cp $OUTPUT_PDF public/downloads/guia-gratis-sing-pronounce-repeat.pdf"
