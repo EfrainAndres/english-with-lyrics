@@ -81,6 +81,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Home page alignment | Locally complete — `fix/phase-0-home-ebook-delivery-alignment`; all home CTAs route to `/ebook-gratis`; waiting-state copy removed; deployed smoke test pending |
 | Production origin + PDF backlink | Locally complete — `fix/phase-0-production-origin-and-pdf-backlink`; origin `https://english-with-lyrics.vercel.app` approved; PDF backlink restored; 7 annotations validated; production redeploy and PDF backlink click test pending |
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
+| Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | Pending — after PDF and consent approach confirmed |
 
 ### Launch Steps

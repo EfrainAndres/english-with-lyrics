@@ -139,6 +139,7 @@ Remaining pre-publication work:
 - Home page alignment with active delivery flow. Status: complete — `fix/phase-0-home-ebook-delivery-alignment`.
 - Production-origin approval, PDF backlink restoration, seven-link structural validation, source-to-public PDF integrity, metadata completion. Status: locally complete — `fix/phase-0-production-origin-and-pdf-backlink`. Production redeploy and PDF backlink click verification pending.
 - Email provider setup and delivery automation.
+- Validation-metrics baseline framework. Status: complete — `review/phase-0-validation-metrics-baseline`. See `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`. Actual production data collection pending.
 
 ### Ebook PDF Template
 

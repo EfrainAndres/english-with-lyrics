@@ -47,6 +47,45 @@ Survey interpretation:
 - Medium signal: learners want the free guide but need clearer proof before joining a group.
 - Red flag: learners mainly ask for full lyrics, complete translations, or a karaoke replacement.
 
+## Phase 0 Validation Metrics Baseline
+
+The full framework — observation-window requirements, data-source inventory, funnel definitions, baseline calculations, minimum evidence thresholds, decision matrix, survey-analysis categories, privacy rules, and the go-forward procedure — is documented in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`.
+
+### Evidence quality labels
+
+Use these labels when recording any metric value:
+
+| Label | Meaning |
+|---|---|
+| Verified | Exported directly from the Vercel or Tally dashboard for a defined observation window |
+| Directional | Calculated from verified values but subject to cross-device or cross-session attribution gaps |
+| Pending | No verified data yet; observation window not started or not complete |
+| Not calculable | Denominator missing, zero, or data source unavailable |
+
+Do not record a numeric value without a label and a source.
+
+### Minimum evidence thresholds
+
+| State | Home visitors | Ebook-page visitors | Submissions | Observation days |
+|---|---|---|---|---|
+| Insufficient | < 30 | < 10 | < 3 combined | Any |
+| Early signal | ≥ 30 | ≥ 10 | ≥ 3 combined | ≥ 7 complete days |
+| Baseline established | ≥ 100 | ≥ 30 | ≥ 10 survey + ≥ 3 first-group | ≥ 14 complete days |
+
+### Current baseline status
+
+| Metric | Value | Label |
+|---|---|---|
+| Home unique visitors | Pending manual data entry | Pending |
+| Ebook-page unique visitors | Pending manual data entry | Pending |
+| Ebook-page visit rate | Pending manual data entry | Pending |
+| Survey submissions | Pending manual data entry | Pending |
+| First-group submissions | Pending manual data entry | Pending |
+| Observation window | Not started | — |
+| **Decision** | **CONTINUE OBSERVING** | — |
+
+---
+
 ## Phase 0.5: Ebook Metrics
 
 ### Available now (Vercel Web Analytics — Hobby plan)
