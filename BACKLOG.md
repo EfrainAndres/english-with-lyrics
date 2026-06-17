@@ -137,6 +137,7 @@ Remaining pre-publication work:
 - PDF upload: `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 - `/ebook-gratis` page conversion from waiting page to real download page. Status: complete — `feat/phase-0-ebook-pdf-delivery`.
 - Home page alignment with active delivery flow. Status: complete — `fix/phase-0-home-ebook-delivery-alignment`.
+- Production-origin approval, PDF backlink restoration, seven-link structural validation, source-to-public PDF integrity, metadata completion. Status: locally complete — `fix/phase-0-production-origin-and-pdf-backlink`. Production redeploy and PDF backlink click verification pending.
 - Email provider setup and delivery automation.
 
 ### Ebook PDF Template

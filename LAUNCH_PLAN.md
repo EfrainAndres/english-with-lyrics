@@ -79,6 +79,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | PDF publication readiness review | Complete — `docs/validation/PHASE_0_EBOOK_PUBLICATION_READINESS.md`; decision: CONDITIONAL GO |
 | PDF delivery and page conversion | Locally complete — `feat/phase-0-ebook-pdf-delivery`; public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`; `/ebook-gratis` download page active; deployed smoke test pending |
 | Home page alignment | Locally complete — `fix/phase-0-home-ebook-delivery-alignment`; all home CTAs route to `/ebook-gratis`; waiting-state copy removed; deployed smoke test pending |
+| Production origin + PDF backlink | Locally complete — `fix/phase-0-production-origin-and-pdf-backlink`; origin `https://english-with-lyrics.vercel.app` approved; PDF backlink restored; 7 annotations validated; production redeploy and PDF backlink click test pending |
 | Email provider setup | Pending — after PDF and consent approach confirmed |
 
 ### Launch Steps
