@@ -139,3 +139,4 @@ Production routes to verify after enabling:
 - `AGENTS.md`
 - `docs/validation/PHASE_0_FORM_INTEGRATION.md`
 - `docs/validation/PHASE_0_EBOOK_DOWNLOAD_PAGE.md`
+- `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`

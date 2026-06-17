@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added the Phase 0 validation-metrics baseline framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`, covering observation-window requirements, data-source inventory, funnel definitions, baseline calculations, evidence thresholds, decision matrix, survey-analysis categories, privacy rules, and next-step procedure; all metric values remain pending manual data entry and the current decision is CONTINUE OBSERVING.
 - Added privacy-conscious Vercel Web Analytics page-view tracking and Phase 0 ebook-funnel documentation, while keeping exact download-click events pending because custom events are unavailable on the current hosting plan.
 - Completed the Phase 0 ebook validation and delivery flow for **Aprende inglés con 3 canciones**, including the three-song content strategy, nine approved educational fragments, `Escríbelo como suena` guidance, natural meanings, original examples, exercises, reconstruction safeguards, and final learner-facing content.
 - Added the reusable A5 ebook design system, production HTML/CSS, reproducible Chrome-based export tooling, metadata patching, structural PDF validation, visual QA corrections, publication-readiness review, and the final validated 21-page PDF artifact.
