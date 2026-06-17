@@ -1,3 +1,4 @@
+export const ebookPagePath = "/ebook-gratis";
 export const ebookDownloadPath = "/downloads/guia-gratis-sing-pronounce-repeat.pdf";
 export const ebookDownloadFilename = "guia-gratis-sing-pronounce-repeat.pdf";
 export const ebookPageCount = 21;

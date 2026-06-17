@@ -135,7 +135,8 @@ Remaining pre-publication work:
 - PDF design: branch `design/phase-0-ebook-pdf-template`.
 - Mobile readability QA.
 - PDF upload: `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
-- `/ebook-gratis` page conversion from waiting page to real download page.
+- `/ebook-gratis` page conversion from waiting page to real download page. Status: complete — `feat/phase-0-ebook-pdf-delivery`.
+- Home page alignment with active delivery flow. Status: complete — `fix/phase-0-home-ebook-delivery-alignment`.
 - Email provider setup and delivery automation.
 
 ### Ebook PDF Template

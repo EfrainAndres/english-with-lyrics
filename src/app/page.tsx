@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
 import {
-  ebookFormUrl,
+  ebookPagePath,
   firstGroupFormUrl,
   getLinkProps,
   surveyFormUrl,
@@ -41,18 +41,22 @@ const lessonSteps = [
   },
 ];
 
-const guidePaths = [
+const guideContents = [
   {
-    name: "Románticas",
-    text: "Frases emocionales, lentas y fáciles de repetir.",
+    name: "3 canciones seleccionadas",
+    text: "A Thousand Years, Still Loving You y The Reason — fragmentos educativos cortos para practicar sin sobrecargar.",
   },
   {
-    name: "Rock / pop clásicos",
-    text: "Canciones conocidas con expresiones que aparecen mucho.",
+    name: "9 prácticas de pronunciación",
+    text: "Escríbelo como suena para cada fragmento, sin IPA ni símbolos técnicos.",
   },
   {
-    name: "Principiantes",
-    text: "Fragmentos cortos para empezar sin sentirse perdido.",
+    name: "Significados naturales y vocabulario útil",
+    text: "Traducción natural y palabras clave en contexto para cada frase practicada.",
+  },
+  {
+    name: "Ejercicios originales, reto de tres días y autochequeo",
+    text: "Ejercicios por fragmento, un reto de práctica y una escala de confianza para seguir tu avance.",
   },
 ];
 
@@ -65,13 +69,6 @@ const methodHighlights = [
 const learningModes = ["Inglés", "Pronunciación", "Español"];
 
 const validationActions = [
-  {
-    title: "Quiero la guía gratis",
-    text: "Abre un formulario corto para pedir la guía de 3 canciones y elegir el camino que más te motiva.",
-    href: ebookFormUrl,
-    cta: "Quiero la guía gratis",
-    accent: "border-pink/35 bg-pink/10 text-pink",
-  },
   {
     title: "Responder la encuesta",
     text: "Abre una encuesta breve sobre tu nivel, tus bloqueos al escuchar y las canciones que te gustaría practicar.",
@@ -232,9 +229,9 @@ export default function Home() {
             </div>
             <a
               className="inline-flex min-h-10 items-center rounded-md bg-pink px-4 text-sm font-black text-ink transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              {...getLinkProps(ebookFormUrl)}
+              href={ebookPagePath}
             >
-              Ebook gratis
+              Descargar guía gratis
             </a>
           </div>
         </div>
@@ -267,14 +264,14 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton href={ebookFormUrl}>Quiero mi ebook gratis</CTAButton>
+              <CTAButton href={ebookPagePath}>Descargar guía gratis</CTAButton>
               <CTAButton href="#demo" variant="secondary">
                 Ver cómo funciona
               </CTAButton>
             </div>
             <p className="mt-5 max-w-xl text-sm font-bold leading-6 text-soft">
-              Recibe una guía gratis con 3 canciones para practicar
-              pronunciación sin símbolos raros.
+              Guía gratuita disponible — 3 canciones, 9 prácticas de
+              pronunciación, ejercicios originales y reto de tres días.
             </p>
           </div>
 
@@ -350,9 +347,9 @@ export default function Home() {
       <Section
         id="ebook"
         tone="ink"
-        eyebrow="Guía gratis"
-        title="Descarga tu guía gratis"
-        intro="3 canciones para empezar a entender inglés real, con fragmentos educativos cortos, pronunciación sencilla y explicación natural."
+        eyebrow="Guía gratuita disponible"
+        title="Aprende inglés con 3 canciones"
+        intro="9 frases cortas, pronunciación con Escríbelo como suena, significados naturales, vocabulario útil y ejercicios originales. Incluye reto de tres días y autochequeo."
       >
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="border border-pink/25 bg-panel p-6 text-paper shadow-neon">
@@ -363,8 +360,8 @@ export default function Home() {
               Guía de práctica
             </h3>
             <p className="mt-4 leading-8 text-soft">
-              Elige el tipo de canciones que más te motivan y ayúdanos a
-              validar el primer recurso gratuito.
+              Escucha, repite y entiende inglés real con canciones
+              seleccionadas y una guía pensada para hispanohablantes.
             </p>
             <div className="mt-6 flex items-end gap-1" aria-hidden="true">
               {[24, 34, 18, 44, 28, 38, 20, 32, 26].map((height, index) => (
@@ -378,26 +375,26 @@ export default function Home() {
           </div>
 
           <div className="grid gap-4">
-            {guidePaths.map((path) => (
+            {guideContents.map((item) => (
               <article
                 className="flex items-start gap-4 border border-white/10 bg-white/5 p-5 text-paper"
-                key={path.name}
+                key={item.name}
               >
                 <span className="mt-1 h-4 w-4 shrink-0 rounded-full bg-cream" />
                 <div>
                   <h3 className="font-heading text-2xl font-black">
-                    {path.name}
+                    {item.name}
                   </h3>
-                  <p className="mt-2 leading-7 text-soft">{path.text}</p>
+                  <p className="mt-2 leading-7 text-soft">{item.text}</p>
                 </div>
               </article>
             ))}
             <CTAButton
               className="mt-2 w-full sm:w-fit"
-              href={ebookFormUrl}
+              href={ebookPagePath}
               variant="light"
             >
-              Elegir mi guía gratis
+              Descargar guía gratis
             </CTAButton>
           </div>
         </div>
@@ -451,7 +448,7 @@ export default function Home() {
       <Section
         id="first-group"
         title="Únete al primer grupo"
-        intro="Cuando la guía gratis esté lista, abriremos un grupo pequeño para practicar con canciones seleccionadas y avanzar con acompañamiento paso a paso."
+        intro="La guía gratis ya está disponible. Ahora preparamos un grupo pequeño para practicar con canciones seleccionadas y avanzar con acompañamiento paso a paso."
       >
         <div className="grid gap-5 lg:grid-cols-3">
           {[
@@ -476,22 +473,21 @@ export default function Home() {
       <Section
         id="waitlist"
         tone="paper"
-        title="Únete a la lista de espera"
-        intro="Elige cómo quieres participar en la validación. Cada botón abre un formulario externo corto para registrar tu interés."
+        title="Sigue aprendiendo con nosotros"
+        intro="La guía gratuita ya está disponible. Puedes responder la encuesta para ayudar a elegir las próximas canciones o pedir información sobre el primer grupo de práctica."
       >
         <div className="border border-white/10 bg-panel p-5 shadow-soft sm:p-6">
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
             <div className="border-l-4 border-purple pl-5">
               <h3 className="font-heading text-3xl font-black">
-                Queremos construir esto con estudiantes reales.
+                Construido con estudiantes reales.
               </h3>
               <p className="mt-4 leading-8 text-soft">
                 Usamos formularios externos para medir interés sin crear una
                 cuenta ni guardar datos dentro de esta página.
               </p>
               <p className="mt-4 text-sm font-bold text-cream">
-                Validación en curso: guía gratis, encuesta y primer grupo se
-                registran por formularios cortos de Tally.
+                Encuesta y primer grupo se registran por formularios cortos de Tally.
               </p>
             </div>
 
@@ -548,9 +544,9 @@ export default function Home() {
           </div>
           <a
             className="text-sm font-black text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-            {...getLinkProps(ebookFormUrl)}
+            href={ebookPagePath}
           >
-            Quiero mi ebook gratis
+            Descargar guía gratis
           </a>
         </div>
       </footer>
