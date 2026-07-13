@@ -124,6 +124,19 @@ Do not use "ebook downloads" as a metric — only ebook-page visits are currentl
 
 Do not record baselines for these until the funnel is implemented and verified.
 
+### Pending future instrumentation — privacy-quality operations
+
+- Consent acceptance error rate.
+- Form submission error rate.
+- Unsubscribe count.
+- Delivery failure count.
+- Privacy request count.
+- Deletion-request completion count.
+- Provider incident count.
+- Accidental Preview-to-Production submission count.
+
+These metrics must contain no email, name, provider contact ID, raw answer, free text, or other personal data. Do not establish numerical targets or baselines until instrumentation and operating evidence exist.
+
 ### Ebook validation signal categories
 
 These categories align with the signal framework in `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` Section 16.

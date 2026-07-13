@@ -76,15 +76,29 @@ Status: complete.
 
 Priority: High.
 
-- Define privacy and consent surface for production lead capture.
-- Verify current official plan details for the selected email provider.
-- Configure provider, sender identity, groups, automations, and preview isolation.
-- Add the reusable lead form to `/` and `/ebook-gratis`.
-- Create `/gracias` as the immediate post-registration delivery page.
-- Connect Email 1 delivery and the four-email educational sequence.
-- Restructure landing conversion hierarchy around the new lead form.
-- Add exact funnel-event analytics when approved tooling exists.
-- Run preview QA, rollback QA, and production-readiness review.
+- [x] Create privacy and data-treatment drafting framework.
+- [x] Create implementation-ready consent-copy source.
+- [x] Create the personal-data inventory.
+- [x] Define the retention framework without unsupported statutory periods.
+- [x] Create the privacy implementation checklist and provider diligence gates.
+- [x] Record the Phase 0 privacy decision log.
+- [ ] Supply responsible-party identity, operating status, location, and privacy contact.
+- [ ] Complete professional legal review.
+- [ ] Create the approved public privacy-policy route.
+- [ ] Create the approved public data-processing-policy route when required.
+- [ ] Create and operate the approved contact/privacy-request route.
+- [ ] Complete MailerLite due diligence and international-processing review.
+- [ ] Verify current official plan details for the selected email provider.
+- [ ] Configure provider account, sender identity, groups, automations, and preview isolation.
+- [ ] Add the reusable lead form to `/` and `/ebook-gratis`.
+- [ ] Implement the explicit unchecked consent UI.
+- [ ] Create `/gracias` as the immediate post-registration delivery page.
+- [ ] Connect Email 1 delivery and the four-email educational sequence.
+- [ ] Restructure landing conversion hierarchy around the new lead form.
+- [ ] Add exact funnel-event analytics when approved tooling exists.
+- [ ] Test provider export, correction, unsubscribe, suppression, and deletion.
+- [ ] Run preview QA, rollback QA, and production-readiness review.
+- [ ] Complete controlled production rollout only after all privacy gates pass.
 
 Acceptance criteria:
 
@@ -92,6 +106,15 @@ Acceptance criteria:
 - No production leads are collected before privacy and consent are approved.
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
+
+Privacy drafting status: documentation foundation complete; privacy implementation and production approval remain pending. See:
+
+- `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
+- `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`
+- `docs/legal/PHASE_0_CONSENT_COPY.md`
+- `docs/legal/PHASE_0_DATA_INVENTORY_AND_RETENTION.md`
+- `docs/legal/PHASE_0_PRIVACY_IMPLEMENTATION_CHECKLIST.md`
+- `docs/architecture/PHASE_0_PRIVACY_DECISIONS.md`
 
 ### Ebook Content Plan
 

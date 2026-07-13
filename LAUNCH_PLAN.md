@@ -103,7 +103,7 @@ Status: planned, not live.
 Staged rollout:
 
 1. Architecture approved.
-2. Privacy and consent ready.
+2. Privacy and consent ready, including owner details and professional legal review.
 3. Provider configured.
 4. Form integrated.
 5. `/gracias` ready.
@@ -112,6 +112,23 @@ Staged rollout:
 8. Preview QA.
 9. Controlled production rollout.
 10. Metrics review.
+
+### Privacy gates before production lead capture
+
+All gates remain pending until supported by evidence:
+
+1. Owner and responsible-party details complete.
+2. Professional legal review complete.
+3. Approved public privacy and data-processing policies published as applicable.
+4. Privacy/contact channel operational.
+5. MailerLite due diligence and international-processing review complete.
+6. Production and Preview data isolation verified.
+7. Explicit, unchecked consent UI verified.
+8. Unsubscribe and suppression behavior verified.
+9. Data deletion and export verified.
+10. Controlled rollout approved.
+
+Direct ebook delivery must remain active until the replacement funnel passes Preview, rollback, privacy, and production-readiness QA. Draft legal documents do not make the funnel live.
 
 ## Phase 1 Launch: Paid MVP
 
