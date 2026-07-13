@@ -72,6 +72,22 @@ Before real COP payments:
 - Define support expectations.
 - Add clear terms and privacy policy.
 
+## Phase 0 Privacy And Consent
+
+- Production lead capture requires explicit authorization for the stated delivery and educational-communication purposes.
+- The consent checkbox must be required, specific, and unchecked by default.
+- An approved public privacy policy must be available before production capture begins.
+- Collect only the minimum needed for the first conversion: email, optional first name, consent evidence, and limited non-sensitive attribution.
+- Complete due diligence for the selected email provider, including current terms, DPA, consent evidence, unsubscribe, deletion, processing locations, and sub-processors.
+- Review international processing and transfer implications before using an external provider in production.
+- Never place personal data in Git, analytics events, technical logs, URLs, screenshots, or issue trackers.
+- Establish an owner-controlled procedure for access, correction, updating, deletion, withdrawal, unsubscribe, use-information, and complaint requests.
+- Every marketing or educational email must provide a functional unsubscribe path.
+- Because the product may attract younger learners, minimize data and obtain legal guidance before defining age or parent/guardian rules.
+- Draft documentation does not complete privacy implementation. Owner details, provider verification, public policies, operational contact, and professional legal review are production blockers.
+
+Source drafts live under `docs/legal/`. They must be adapted to the verified production configuration and must not be published as final policies without approval.
+
 ## Required Review Before Scaling
 
 Get legal review before:
@@ -82,3 +98,4 @@ Get legal review before:
 - Running partner programs.
 - Creating a mobile app with app store distribution.
 - Using AI features trained on or generating copyrighted song content.
+- Collecting production leads through the Phase 0 funnel.

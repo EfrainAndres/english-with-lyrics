@@ -54,6 +54,15 @@ Key questions:
 
 Lead capture and nurture funnel.
 
+Required gate: privacy and consent approval. Drafts alone do not complete this gate. Owner details, professional legal review, approved public policies, an operational privacy contact, and provider due diligence must be complete before production collection.
+
+This gate applies before:
+
+- Email-provider setup that handles production contacts.
+- Production form activation.
+- Email automation.
+- Funnel analytics involving registration events.
+
 This milestone must happen before:
 
 - Advanced paid ebook.
