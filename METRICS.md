@@ -106,6 +106,24 @@ Do not use "ebook downloads" as a metric — only ebook-page visits are currentl
 - CTA-specific click events (`ebook_download_clicked`, `ebook_survey_clicked`, `ebook_first_group_clicked`).
 - Email delivery rate, open rate, and click rate (requires email provider setup).
 
+### Pending future instrumentation — lead funnel metrics
+
+- Landing visitors.
+- Form views.
+- Form starts.
+- Successful registrations.
+- Form errors.
+- `/gracias` views.
+- Download clicks.
+- Email delivery rate.
+- Email open rate when available.
+- Email click rate.
+- Survey participation.
+- Advanced-product interest.
+- First-group interest.
+
+Do not record baselines for these until the funnel is implemented and verified.
+
 ### Ebook validation signal categories
 
 These categories align with the signal framework in `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` Section 16.

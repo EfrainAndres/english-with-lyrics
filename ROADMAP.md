@@ -50,6 +50,17 @@ Key questions:
 - Do they find the method useful?
 - Do they want more songs after the ebook?
 
+### Next validation milestone
+
+Lead capture and nurture funnel.
+
+This milestone must happen before:
+
+- Advanced paid ebook.
+- Subscription platform.
+- Authentication.
+- Payments.
+
 ## Phase 1: MVP
 
 Goal: Sell and deliver the first paid web product.

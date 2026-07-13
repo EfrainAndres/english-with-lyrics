@@ -64,6 +64,35 @@ Acceptance criteria:
 
 ## Phase 0.5: Ebook Lead Magnet
 
+### Lead Funnel Architecture
+
+- Architecture complete in `docs/architecture/PHASE_0_LEAD_FUNNEL_ARCHITECTURE.md`.
+- Decision log complete in `docs/architecture/PHASE_0_LEAD_FUNNEL_DECISIONS.md`.
+- Current public direct-delivery flow remains active until the replacement funnel passes QA.
+
+Status: complete.
+
+### Phase 0 Lead Funnel Epic
+
+Priority: High.
+
+- Define privacy and consent surface for production lead capture.
+- Verify current official plan details for the selected email provider.
+- Configure provider, sender identity, groups, automations, and preview isolation.
+- Add the reusable lead form to `/` and `/ebook-gratis`.
+- Create `/gracias` as the immediate post-registration delivery page.
+- Connect Email 1 delivery and the four-email educational sequence.
+- Restructure landing conversion hierarchy around the new lead form.
+- Add exact funnel-event analytics when approved tooling exists.
+- Run preview QA, rollback QA, and production-readiness review.
+
+Acceptance criteria:
+
+- Direct delivery remains active until the replacement funnel passes QA.
+- No production leads are collected before privacy and consent are approved.
+- Production and Preview data remain isolated.
+- No implementation branch marks the lead funnel live before controlled rollout approval.
+
 ### Ebook Content Plan
 
 - Content plan complete. See `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` for strategic, editorial, legal-safe, and design-ready guidance.
@@ -223,6 +252,24 @@ Acceptance criteria:
 - No provider is integrated before the ebook delivery page or PDF exists.
 - Emails are sent only to learners who consented.
 - The provider supports basic tracking for opens, clicks, unsubscribes, and replies.
+
+### Lead Funnel Implementation
+
+- Privacy and consent branch: define production privacy policy, consent copy, and contact/support guidance.
+- Provider setup branch: configure MailerLite first, with Brevo as fallback if official-plan verification changes the recommendation.
+- Lead-form branch: add the short registration form to `/` and `/ebook-gratis`.
+- Thank-you-page branch: create `/gracias` with immediate download, open-in-browser action, and optional survey CTA.
+- Email-delivery branch: trigger Email 1 and the follow-up sequence.
+- Landing CRO branch: make lead capture the primary journey while preserving the current public PDF fallback.
+- Funnel-analytics branch: add exact-event measurement only through approved tooling.
+- QA branch: verify consent, redirect, delivery, isolation, analytics, failure states, and rollback.
+
+Acceptance criteria:
+
+- Implementation remains split into small branches.
+- No database or authentication is introduced.
+- Tally remains available for survey and first-group research until replacement integrations are ready.
+- Direct PDF delivery can be restored quickly if the lead funnel fails in production.
 
 ## Phase 1: MVP
 
