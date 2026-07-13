@@ -96,6 +96,23 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 8. Measure downloads, replies, survey clicks, and first-group interest.
 9. Compare demand across Románticas, Rock / pop clásicos, and Principiantes paths.
 
+### Next rollout milestone: Lead capture and nurture funnel
+
+Status: planned, not live.
+
+Staged rollout:
+
+1. Architecture approved.
+2. Privacy and consent ready.
+3. Provider configured.
+4. Form integrated.
+5. `/gracias` ready.
+6. Email 1 tested.
+7. Full sequence prepared.
+8. Preview QA.
+9. Controlled production rollout.
+10. Metrics review.
+
 ## Phase 1 Launch: Paid MVP
 
 ### Assets
