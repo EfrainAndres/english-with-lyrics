@@ -88,8 +88,24 @@ Priority: High.
 - [ ] Create the approved public data-processing-policy route when required.
 - [ ] Create and operate the approved contact/privacy-request route.
 - [ ] Complete MailerLite due diligence and international-processing review.
+- [x] Verify current official MailerLite capabilities required for the selected provider direction.
+- [x] Define the MailerLite group taxonomy.
+- [x] Define the MailerLite field taxonomy.
+- [x] Define Preview and Production environment isolation for the provider.
+- [x] Define the non-secret environment-variable contract for provider-hosted forms.
+- [x] Create the provider readiness document.
+- [x] Create the MailerLite manual setup checklist.
 - [ ] Verify current official plan details for the selected email provider.
-- [ ] Configure provider account, sender identity, groups, automations, and preview isolation.
+- [ ] Complete MailerLite account approval and sender setup.
+- [ ] Complete MailerLite DPA review.
+- [ ] Complete MailerLite sub-processor review.
+- [ ] Complete MailerLite domain authentication.
+- [ ] Create the Preview group in MailerLite.
+- [ ] Create the Preview form in MailerLite.
+- [ ] Create the Preview automation in MailerLite.
+- [ ] Create the Production groups in MailerLite.
+- [ ] Create the Production form in MailerLite.
+- [ ] Create the Production automation in MailerLite.
 - [ ] Add the reusable lead form to `/` and `/ebook-gratis`.
 - [ ] Implement the explicit unchecked consent UI.
 - [ ] Create `/gracias` as the immediate post-registration delivery page.
@@ -115,6 +131,9 @@ Privacy drafting status: documentation foundation complete; privacy implementati
 - `docs/legal/PHASE_0_DATA_INVENTORY_AND_RETENTION.md`
 - `docs/legal/PHASE_0_PRIVACY_IMPLEMENTATION_CHECKLIST.md`
 - `docs/architecture/PHASE_0_PRIVACY_DECISIONS.md`
+- `docs/integrations/PHASE_0_MAILERLITE_SETUP.md`
+- `docs/integrations/PHASE_0_MAILERLITE_MANUAL_CHECKLIST.md`
+- `docs/validation/PHASE_0_EMAIL_PROVIDER_READINESS.md`
 
 ### Ebook Content Plan
 

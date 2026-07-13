@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added the non-production MailerLite provider foundation, including capability verification, subscriber-group and field taxonomy, Preview/Production isolation, environment-variable contract, sender-domain checklist, manual setup guide, and production-readiness gates.
 - Added the Phase 0 privacy and consent documentation package, including draft privacy and data-treatment policies, explicit-consent copy, data inventory and retention rules, provider due-diligence requirements, privacy decisions, implementation gates, and rights-request procedures.
 - Added the Phase 0 lead-funnel architecture and decision log, defining the email-provider recommendation, explicit-consent model, post-registration `/gracias` flow, provider integration boundaries, email sequence, analytics contract, environment isolation, failure handling, and phased implementation plan.
 - Added the Phase 0 validation-metrics baseline framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`, covering observation-window requirements, data-source inventory, funnel definitions, baseline calculations, evidence thresholds, decision matrix, survey-analysis categories, privacy rules, and next-step procedure; all metric values remain pending manual data entry and the current decision is CONTINUE OBSERVING.
