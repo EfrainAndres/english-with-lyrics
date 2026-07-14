@@ -2,9 +2,9 @@
 
 ## Readiness status
 
-`PARTIALLY READY`
+`READY FOR CONTROLLED PREVIEW`
 
-Production is not ready. This status only means the repository now has a documented provider foundation for non-production preparation.
+Production is not ready. This status means the isolated provider-hosted Preview workflow has been verified manually without activating any public-site integration or Production identifiers.
 
 ## Capability evidence
 
@@ -34,10 +34,11 @@ Still requiring account-level verification:
 
 | Item | Status |
 |---|---|
-| Account created | Pending manual verification |
+| Account created | Verified manually |
 | Owner verification | Pending manual verification |
-| MFA | Pending manual verification |
-| Sender created | Pending manual verification |
+| MFA | Verified manually |
+| Final sender identity | Pending manual verification |
+| Branded mailbox | Pending manual verification |
 | Domain authenticated | Pending manual verification |
 | DPA reviewed | Pending manual verification |
 | Sub-processors reviewed | Pending manual verification |
@@ -51,14 +52,43 @@ Still requiring account-level verification:
 
 | Item | Status |
 |---|---|
-| Preview group | Documented, manual creation pending |
-| Preview form | Documented, manual creation pending |
-| Preview automation | Documented, manual creation pending |
-| Test sender | Pending manual verification |
-| Test contacts | Pending manual verification |
-| Test redirect | Blocked until a safe redirect target exists |
+| Preview group created | Verified manually |
+| Preview form created | Verified manually |
+| Preview group assignment verified | Verified manually |
+| Required consent verified | Verified manually |
+| Single opt-in verified | Verified manually |
+| Duplicate handling verified | Verified manually |
+| Preview automation created | Verified manually |
+| Preview automation activated | Verified manually |
+| End-to-end Preview submission passed | Verified manually |
+| Test email sent | Verified manually |
+| Test redirect | Temporary success message verified; custom `/gracias` redirect still blocked |
 | Preview secrets | Not required for the current provider-hosted-form direction |
-| No Production contact creation | Documented requirement; manual verification pending |
+| No Production contact creation | Verified manually |
+
+## Deliverability
+
+| Item | Status |
+|---|---|
+| Technical email delivery | Passed |
+| Gmail inbox placement | Failed for the current sender setup |
+| Spam placement observed | Yes |
+| Free-domain sender warning observed | Yes |
+| Custom-domain authentication required before Production | Yes |
+
+Notes:
+
+- The Preview workflow test remains valid because the provider-hosted form, isolated group, subscriber activation, automation trigger, and test-email delivery all worked end to end.
+- Current inbox placement is not sufficient for Production.
+- The current sender uses a free Gmail address.
+- MailerLite displayed a free-domain deliverability warning.
+- SPF, DKIM, DMARC, branded mailbox, and domain alignment remain pending.
+
+## Footer and privacy finding
+
+- Footer and business-address information shown in the test email require owner review before Production.
+- The currently displayed address must not be treated as approved merely because MailerLite populated it during onboarding.
+- No personal email addresses, IP addresses, subscriber details, or screenshots are stored in this repository.
 
 ## Production blockers
 
@@ -68,17 +98,27 @@ Still requiring account-level verification:
 - Applicable public treatment-policy route.
 - Professional legal approval.
 - MailerLite due diligence.
-- Sender-domain authentication.
-- Production form approval.
+- Branded sender mailbox.
+- SPF.
+- DKIM.
+- DMARC.
+- Sender/domain authentication.
+- Approved business/footer address.
+- Production form.
 - `/gracias`.
-- Email 1.
+- Production Email 1.
 - Unsubscribe test.
-- Deletion/export test.
-- Preview isolation test.
+- Export test.
+- Correction test.
+- Deletion test.
+- Production/Preview isolation test on deployed site.
 - Controlled rollout approval.
 
 ## Go/no-go decision
 
-Decision: NO-GO FOR PRODUCTION
+Preview decision: READY FOR CONTROLLED PREVIEW
 
-Reason: Provider foundation may be prepared, but public policies, legal approval, sender-domain readiness, production form, `/gracias`, automation, and end-to-end QA are incomplete.
+Production decision: NO-GO FOR PRODUCTION
+
+Reason:
+The provider-hosted Preview form, isolated group, single opt-in, explicit consent, duplicate handling, automation trigger, and test-email delivery were verified end to end. Production remains blocked by legal, privacy, sender-domain, footer, public-route, deliverability, and end-to-end Production requirements.

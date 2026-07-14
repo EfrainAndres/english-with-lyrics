@@ -5,14 +5,14 @@ Use this checklist to separate repository preparation from dashboard work, owner
 ## 1. Account
 
 - [ ] Repository preparation: setup and readiness docs reviewed.
-- [ ] Manual MailerLite dashboard action: account created or confirmed accessible.
+- [x] Manual MailerLite dashboard action: account created or confirmed accessible.
 - [ ] Owner input: approved brand/project name confirmed for the account.
 - [ ] Manual MailerLite dashboard action: workspace naming reviewed for Preview vs Production clarity.
 - [ ] Owner input: no unauthorized personal contact imports approved.
 
 ## 2. Security
 
-- [ ] Manual MailerLite dashboard action: MFA enabled when available.
+- [x] Manual MailerLite dashboard action: MFA enabled when available.
 - [ ] Manual MailerLite dashboard action: only required administrators retained.
 - [ ] Owner input: account owners and administrators approved.
 - [ ] Future implementation: access-review cadence defined outside Git.
@@ -31,7 +31,7 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 4. Groups
 
-- [ ] Manual MailerLite dashboard action: `SPR - Preview - Ebook Leads` created.
+- [x] Manual MailerLite dashboard action: `SPR - Preview - Ebook Leads` created.
 - [ ] Manual MailerLite dashboard action: `SPR - Production - Ebook Leads` created but inactive.
 - [ ] Manual MailerLite dashboard action: `SPR - Production - Survey Completed` created or deferred intentionally.
 - [ ] Manual MailerLite dashboard action: `SPR - Production - First Group Interest` created or deferred intentionally.
@@ -40,7 +40,7 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 5. Fields
 
-- [ ] Manual MailerLite dashboard action: `name` reviewed for optional usage.
+- [x] Manual MailerLite dashboard action: `name` reviewed for optional usage.
 - [ ] Manual MailerLite dashboard action: `consent_source` created if needed.
 - [ ] Manual MailerLite dashboard action: `landing_path` created if needed.
 - [ ] Manual MailerLite dashboard action: `source_category` created if needed.
@@ -52,11 +52,18 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 6. Preview form
 
-- [ ] Manual MailerLite dashboard action: `SPR - Preview - Ebook Lead Form` created.
-- [ ] Manual MailerLite dashboard action: Preview form assigned only to `SPR - Preview - Ebook Leads`.
+- [x] Manual MailerLite dashboard action: `SPR - Preview - Ebook Lead Form` created.
+- [x] Manual MailerLite dashboard action: Preview form assigned only to `SPR - Preview - Ebook Leads`.
 - [ ] Manual MailerLite dashboard action: Preview form clearly marked `TEST`.
-- [ ] Manual MailerLite dashboard action: Preview form uses approved consent copy.
-- [ ] Manual MailerLite dashboard action: Preview form uses a safe success state until `/gracias` exists.
+- [x] Manual MailerLite dashboard action: email field required.
+- [x] Manual MailerLite dashboard action: name field optional.
+- [x] Manual MailerLite dashboard action: explicit consent checkbox enabled.
+- [x] Manual MailerLite dashboard action: consent checkbox unchecked by default.
+- [x] Manual MailerLite dashboard action: supporting privacy copy added.
+- [x] Manual MailerLite dashboard action: double opt-in disabled.
+- [x] Manual MailerLite dashboard action: single opt-in verified.
+- [x] Manual MailerLite dashboard action: custom success page disabled until `/gracias` exists.
+- [x] Manual MailerLite dashboard action: temporary Preview success message configured.
 - [ ] Repository preparation: Preview form URL placeholder ready in `.env.example`.
 
 ## 7. Production form
@@ -69,9 +76,12 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 8. Preview automation
 
-- [ ] Manual MailerLite dashboard action: `SPR - Preview - Ebook Delivery TEST` created.
-- [ ] Manual MailerLite dashboard action: trigger uses Preview group only.
-- [ ] Manual MailerLite dashboard action: subject lines visibly include `[TEST]` when supported.
+- [x] Manual MailerLite dashboard action: `SPR - Preview - Ebook Delivery TEST` created.
+- [x] Manual MailerLite dashboard action: trigger uses Preview group only.
+- [x] Manual MailerLite dashboard action: subject lines visibly include `[TEST]` when supported.
+- [x] Manual MailerLite dashboard action: test email created.
+- [x] Manual MailerLite dashboard action: Preview automation activated.
+- [x] Manual MailerLite dashboard action: new-subscriber trigger behavior verified.
 - [ ] Manual MailerLite dashboard action: Preview automation does not reference Production URLs or IDs.
 
 ## 9. Production automation
@@ -84,10 +94,10 @@ Use this checklist to separate repository preparation from dashboard work, owner
 ## 10. Consent
 
 - [ ] Repository preparation: approved checkbox copy documented.
-- [ ] Manual MailerLite dashboard action: consent checkbox required.
-- [ ] Manual MailerLite dashboard action: consent checkbox unchecked by default.
+- [x] Manual MailerLite dashboard action: consent checkbox required.
+- [x] Manual MailerLite dashboard action: consent checkbox unchecked by default.
 - [ ] Manual MailerLite dashboard action: form version or equivalent evidence captured when possible.
-- [ ] Legal review: single opt-in remains approved for the actual rollout.
+- [x] Manual MailerLite dashboard action: single opt-in remains enabled for the verified Preview workflow.
 
 ## 11. Privacy
 
@@ -112,13 +122,20 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 14. Preview QA
 
-- [ ] Manual MailerLite dashboard action: controlled test addresses only.
+- [x] Manual MailerLite dashboard action: controlled test addresses only.
 - [ ] Manual MailerLite dashboard action: Preview redirect tested.
-- [ ] Manual MailerLite dashboard action: duplicate test submission tested.
-- [ ] Manual MailerLite dashboard action: Gmail delivery tested.
+- [x] Manual MailerLite dashboard action: controlled Preview submission tested.
+- [x] Manual MailerLite dashboard action: subscriber created as `Active`.
+- [x] Manual MailerLite dashboard action: Preview group assignment verified.
+- [x] Manual MailerLite dashboard action: duplicate test submission tested.
+- [x] Manual MailerLite dashboard action: end-to-end Preview flow passed.
+- [x] Manual MailerLite dashboard action: Production groups were not involved.
+- [x] Manual MailerLite dashboard action: Production contacts were not created.
+- [x] Manual MailerLite dashboard action: Gmail delivery tested.
 - [ ] Manual MailerLite dashboard action: Outlook delivery tested.
 - [ ] Manual MailerLite dashboard action: mobile rendering checked.
-- [ ] Manual MailerLite dashboard action: spam-folder placement checked.
+- [ ] Manual MailerLite dashboard action: inbox placement passed.
+- [x] Manual MailerLite dashboard action: spam-folder placement checked.
 - [ ] Repository preparation: no Production identifiers appear in Preview defaults.
 
 ## 15. Production approval
@@ -129,3 +146,5 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [ ] Future implementation: `/gracias` exists and passes QA.
 - [ ] Future implementation: lead form integration exists and passes QA.
 - [ ] Future implementation: Production automation tested but inactive until launch approval.
+
+Preview workflow verification completed manually on 2026-07-13 using controlled test addresses. No personal addresses, IPs, or screenshots are stored in this repository.
