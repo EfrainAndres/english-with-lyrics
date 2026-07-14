@@ -153,6 +153,13 @@ These metrics must contain no email, name, provider contact ID, raw answer, free
 
 Do not record values or targets for these until MailerLite Preview setup exists and instrumentation has been approved.
 
+Current implementation note:
+
+- Preview form submission can be observed in MailerLite.
+- Application-level funnel events remain pending.
+- Production registrations remain inactive.
+- Exact form-start and form-submit analytics remain future instrumentation.
+
 ### Ebook validation signal categories
 
 These categories align with the signal framework in `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md` Section 16.

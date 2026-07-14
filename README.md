@@ -110,6 +110,14 @@ NEXT_PUBLIC_PRIVACY_POLICY_URL=
 
 Leave them empty until Preview-safe provider forms and approved public privacy routes exist.
 
+Lead-capture form foundation behavior:
+
+- Local submission is disabled.
+- Preview requires `NEXT_PUBLIC_MAILERLITE_PREVIEW_FORM_URL`.
+- Production form remains inactive.
+- Do not use Production form values in Preview.
+- Current Production direct delivery remains active.
+
 ## Validation Commands
 
 ```bash

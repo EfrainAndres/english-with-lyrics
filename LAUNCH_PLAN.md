@@ -106,11 +106,11 @@ Staged rollout:
 2. Privacy and consent ready, including owner details and professional legal review.
 3. Provider foundation documented.
 4. Provider configured.
-5. Form integrated.
-6. `/gracias` ready.
-7. Email 1 tested.
-8. Full sequence prepared.
-9. Preview QA.
+5. Preview form integrated.
+6. Deployed Preview QA.
+7. `/gracias` ready.
+8. Email 1 tested.
+9. Full sequence prepared.
 10. Controlled production rollout.
 11. Metrics review.
 
@@ -147,6 +147,14 @@ All gates remain pending until supported by evidence:
 10. Controlled rollout approved.
 
 Direct ebook delivery must remain active until the replacement funnel passes Preview, rollback, privacy, and production-readiness QA. Draft legal documents do not make the funnel live.
+
+Current implementation note:
+
+- The controlled Preview lead-capture component is implemented only on `/ebook-gratis`.
+- Production direct delivery remains active.
+- Production form activation remains blocked.
+- `/gracias` and Email 1 must exist before rollout.
+- Legal, privacy, and sender-domain gates remain blocking.
 
 ## Phase 1 Launch: Paid MVP
 
