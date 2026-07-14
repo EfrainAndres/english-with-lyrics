@@ -75,6 +75,16 @@ shasum -a 256 public/downloads/guia-gratis-sing-pronounce-repeat.pdf
 
 Email automation is not configured. Direct web download through `/ebook-gratis` is the current delivery method.
 
+## MailerLite provider setup
+
+MailerLite is the proposed Phase 0 email provider for the future soft-gated lead funnel, but Production activation is blocked.
+
+- Manual setup checklist: `docs/integrations/PHASE_0_MAILERLITE_MANUAL_CHECKLIST.md`
+- Setup and readiness docs: `docs/integrations/PHASE_0_MAILERLITE_SETUP.md` and `docs/validation/PHASE_0_EMAIL_PROVIDER_READINESS.md`
+- Preview and Production identifiers must remain isolated.
+- No real secrets, API keys, group IDs, or automation IDs belong in Git.
+- Current direct ebook delivery remains active until the replacement funnel passes QA and approval.
+
 ## Environment Variables
 
 Phase 0 form links are configured with public environment variables. Copy `.env.example` to `.env.local` for local testing:
@@ -89,6 +99,16 @@ NEXT_PUBLIC_FIRST_GROUP_FORM_URL=https://tally.so/r/D4a6NE
 Do not commit `.env.local`; it is ignored by git.
 
 When these variables are missing, CTA links fall back to local anchors so the page can still be checked without external forms. When the values start with `https://`, form links open in a new tab with safe external-link attributes.
+
+Future provider-hosted form placeholders for the lead funnel also live in `.env.example`:
+
+```bash
+NEXT_PUBLIC_MAILERLITE_PREVIEW_FORM_URL=
+NEXT_PUBLIC_MAILERLITE_PRODUCTION_FORM_URL=
+NEXT_PUBLIC_PRIVACY_POLICY_URL=
+```
+
+Leave them empty until Preview-safe provider forms and approved public privacy routes exist.
 
 ## Validation Commands
 

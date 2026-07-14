@@ -124,7 +124,7 @@ Do not use "ebook downloads" as a metric — only ebook-page visits are currentl
 
 Do not record baselines for these until the funnel is implemented and verified.
 
-### Pending future instrumentation — privacy-quality operations
+### Pending future instrumentation - privacy-quality operations
 
 - Consent acceptance error rate.
 - Form submission error rate.
@@ -136,6 +136,22 @@ Do not record baselines for these until the funnel is implemented and verified.
 - Accidental Preview-to-Production submission count.
 
 These metrics must contain no email, name, provider contact ID, raw answer, free text, or other personal data. Do not establish numerical targets or baselines until instrumentation and operating evidence exist.
+
+### Pending future instrumentation - provider operations
+
+- Form submissions accepted.
+- Duplicate-contact updates.
+- Invalid submissions.
+- Provider errors.
+- Delivery count.
+- Bounce count.
+- Unsubscribe count.
+- Open rate when available.
+- Click rate when available.
+- Preview test submissions.
+- Accidental Production test submissions.
+
+Do not record values or targets for these until MailerLite Preview setup exists and instrumentation has been approved.
 
 ### Ebook validation signal categories
 

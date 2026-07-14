@@ -56,6 +56,8 @@ Lead capture and nurture funnel.
 
 Required gate: privacy and consent approval. Drafts alone do not complete this gate. Owner details, professional legal review, approved public policies, an operational privacy contact, and provider due diligence must be complete before production collection.
 
+Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
+
 This gate applies before:
 
 - Email-provider setup that handles production contacts.

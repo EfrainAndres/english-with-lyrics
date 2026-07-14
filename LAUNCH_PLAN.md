@@ -104,14 +104,32 @@ Staged rollout:
 
 1. Architecture approved.
 2. Privacy and consent ready, including owner details and professional legal review.
-3. Provider configured.
-4. Form integrated.
-5. `/gracias` ready.
-6. Email 1 tested.
-7. Full sequence prepared.
-8. Preview QA.
-9. Controlled production rollout.
-10. Metrics review.
+3. Provider foundation documented.
+4. Provider configured.
+5. Form integrated.
+6. `/gracias` ready.
+7. Email 1 tested.
+8. Full sequence prepared.
+9. Preview QA.
+10. Controlled production rollout.
+11. Metrics review.
+
+### Provider setup gates
+
+1. Account approved.
+2. Security and MFA completed.
+3. Provider due diligence completed.
+4. Preview group created.
+5. Preview form created.
+6. Preview automation prepared.
+7. Sender verified.
+8. Domain authenticated.
+9. Export and deletion tested.
+10. Unsubscribe tested.
+11. Production identifiers created but inactive.
+12. Public policies published.
+13. Legal approval complete.
+14. Controlled rollout approved.
 
 ### Privacy gates before production lead capture
 
