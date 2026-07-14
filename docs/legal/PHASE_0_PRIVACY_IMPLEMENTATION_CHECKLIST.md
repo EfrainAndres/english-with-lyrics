@@ -35,6 +35,19 @@ Marcar un item solo con evidencia verificable. Completar borradores no equivale 
 - [x] Enlaces de footer implementados en `/` y `/ebook-gratis`.
 - [x] Configuracion legal centralizada implementada (`src/lib/legal-config.ts`).
 - [x] Ningun dato personal fue confirmado en Git.
+- [x] Renderizado seguro de estado incompleto implementado (Draft en Development/Preview, estado neutral en Production).
+- [x] Ruta de privacidad verificada en Preview desplegado.
+- [x] Ruta de tratamiento de datos verificada en Preview desplegado.
+- [x] Renderizado en movil verificado.
+- [x] Renderizado en escritorio verificado.
+- [x] Navegacion por teclado verificada.
+- [x] Ningun token de marcador crudo es visible.
+- [x] Ningun dato ficticio del responsable fue confirmado.
+- [x] Flujo actual del ebook preservado.
+- [x] Rutas actuales de agradecimiento preservadas.
+- [x] Captura de leads en Produccion permanece desactivada.
+
+Deployed Preview QA was completed manually without storing screenshots, deployment URLs, personal data, provider IDs, fake legal details, or private contact information in the repository.
 
 ## Debida diligencia de MailerLite
 

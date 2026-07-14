@@ -4,7 +4,7 @@
 
 ```text
 Implementation status: COMPLETE
-Preview route QA: PENDING
+Deployed Preview route QA: PASS
 Legal content status: DRAFT PENDING OWNER INPUT
 Professional legal review: PENDING
 Production legal readiness: NO-GO
@@ -53,27 +53,30 @@ Configuration completeness is evaluated by `isLegalConfigurationComplete()` in `
 
 ## Manual QA checklist
 
-- [ ] `/privacidad` renders in Development.
-- [ ] `/tratamiento-de-datos` renders in Development.
-- [ ] Preview notice appears.
-- [ ] Production-safe incomplete state works.
-- [ ] Metadata contains noindex/nofollow while incomplete.
-- [ ] Footer links work.
-- [ ] Keyboard navigation works.
-- [ ] Mobile rendering works.
-- [ ] Desktop rendering works.
-- [ ] No placeholder token is visible.
-- [ ] No fake responsible-party details appear.
-- [ ] No Production form is activated.
-- [ ] Existing ebook flow still works.
-- [ ] Existing thank-you routes still work.
+- [x] `/privacidad` renders in deployed Preview.
+- [x] `/tratamiento-de-datos` renders in deployed Preview.
+- [x] Preview preparation notice appears.
+- [x] Incomplete legal configuration is handled safely.
+- [x] Metadata contains `noindex, nofollow`.
+- [x] Footer privacy link works.
+- [x] Footer data-processing link works.
+- [x] Keyboard navigation works.
+- [x] Mobile rendering works.
+- [x] Desktop rendering works.
+- [x] No raw placeholder token is visible.
+- [x] No fake responsible-party details appear.
+- [x] No Production form is activated.
+- [x] Existing ebook flow still works.
+- [x] Existing thank-you routes still work.
 
-Local smoke checks already performed in this branch (not a substitute for the Preview/Production manual QA above):
+Local smoke checks previously performed in this branch, prior to deployed Preview QA:
 
 - `npm run build` generates `/privacidad` and `/tratamiento-de-datos` as static routes.
 - Local dev server (`npm run dev`) confirms both routes return the draft notice, natural pending phrasing (no raw `PENDING_*` tokens), and `<meta name="robots" content="noindex, nofollow">`.
 - `/`, `/ebook-gratis`, `/gracias`, `/gracias?source=ebook`, and `/gracias?source=email` all continue to return HTTP 200 locally.
 - Footer links to `/privacidad` and `/tratamiento-de-datos` render on `/` and `/ebook-gratis`.
+
+Deployed Preview QA was completed manually. No personal data, screenshots, ephemeral Preview URLs, provider IDs, fake legal details, or private contact information are stored in the repository.
 
 ## Production blockers
 
@@ -100,7 +103,10 @@ Local smoke checks already performed in this branch (not a substitute for the Pr
 ## Decision
 
 ```text
-Preview decision: READY FOR MANUAL ROUTE QA
+Preview decision: PASS
 
 Production decision: NO-GO FOR PRODUCTION LEAD CAPTURE
+
+Reason:
+The deployed Preview privacy and data-processing routes, preparation notices, safe incomplete-state rendering, footer navigation, responsive layouts, keyboard navigation, and noindex/nofollow metadata were verified successfully. Production remains blocked by responsible-party details, privacy contact, effective date, final owner approval, professional legal review, rights-request operations, MailerLite due diligence, sender-domain readiness, approved footer and business information, Production consent linking, and controlled rollout approval.
 ```
