@@ -82,12 +82,16 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: test email created.
 - [x] Manual MailerLite dashboard action: Preview automation activated.
 - [x] Manual MailerLite dashboard action: new-subscriber trigger behavior verified.
-- [ ] Repository preparation: Email 1 source content approved in `docs/email/PHASE_0_EBOOK_DELIVERY_EMAIL.md`.
-- [ ] Repository preparation: Preview CTA target documented as `/gracias?source=email`.
-- [ ] Manual MailerLite dashboard action: Preview Email 1 content replaced with the approved delivery copy.
-- [ ] Manual MailerLite dashboard action: Preview preheader configured.
-- [ ] Manual MailerLite dashboard action: Preview CTA updated to Preview `/gracias?source=email`.
-- [ ] Manual MailerLite dashboard action: Preview automation does not reference Production URLs or IDs.
+- [x] Repository preparation: Email 1 source content approved in `docs/email/PHASE_0_EBOOK_DELIVERY_EMAIL.md`.
+- [x] Repository preparation: Preview CTA target documented as `/gracias?source=email`.
+- [x] Manual MailerLite dashboard action: Preview Email 1 content replaced with the approved delivery copy.
+- [x] Manual MailerLite dashboard action: Preview preheader configured.
+- [x] Manual MailerLite dashboard action: sender display name set to `Sing Pronounce Repeat`.
+- [x] Manual MailerLite dashboard action: Preview Email 1 subject configured with `[TEST]`.
+- [x] Manual MailerLite dashboard action: Preview-only CTA updated to Preview `/gracias?source=email`.
+- [x] Manual MailerLite dashboard action: plain fallback URL configured.
+- [x] Manual MailerLite dashboard action: PDF attachment omitted.
+- [x] Manual MailerLite dashboard action: Preview automation does not reference Production URLs or IDs.
 
 ## 9. Production automation
 
@@ -122,8 +126,8 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 13. Unsubscribe
 
-- [ ] Manual MailerLite dashboard action: unsubscribe link present in Preview test message.
-- [ ] Manual MailerLite dashboard action: unsubscribe changes subscriber state as expected.
+- [x] Manual MailerLite dashboard action: real automation unsubscribe link worked.
+- [x] Manual MailerLite dashboard action: subscriber unsubscribe status verified.
 - [ ] Manual MailerLite dashboard action: suppression/reactivation behavior documented from test results.
 
 ## 14. Preview QA
@@ -135,7 +139,14 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: Preview group assignment verified.
 - [x] Manual MailerLite dashboard action: duplicate test submission tested.
 - [x] Manual MailerLite dashboard action: end-to-end Preview flow passed.
+- [x] Manual MailerLite dashboard action: real Preview automation send tested with a controlled address.
+- [x] Manual MailerLite dashboard action: email received from the Preview automation.
+- [x] Manual MailerLite dashboard action: CTA opened `/gracias?source=email`.
+- [x] Manual MailerLite dashboard action: fallback URL opened `/gracias?source=email`.
+- [x] Manual MailerLite dashboard action: PDF download worked.
+- [x] Manual MailerLite dashboard action: PDF browser-open action worked.
 - [x] Manual MailerLite dashboard action: Production groups were not involved.
+- [x] Manual MailerLite dashboard action: Production automation was not involved.
 - [x] Manual MailerLite dashboard action: Production contacts were not created.
 - [x] Manual MailerLite dashboard action: Gmail delivery tested.
 - [ ] Manual MailerLite dashboard action: Outlook delivery tested.
@@ -153,4 +164,4 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [ ] Future implementation: lead form integration exists and passes QA.
 - [ ] Future implementation: Production automation tested but inactive until launch approval.
 
-Preview workflow verification completed manually on 2026-07-13 using controlled test addresses. No personal addresses, IPs, or screenshots are stored in this repository.
+Preview Email 1 end-to-end verification was completed manually using controlled test addresses. The real MailerLite automation email reached the subscriber, opened the Preview thank-you page, provided PDF access, and supported a successful subscriber-specific unsubscribe. No subscriber addresses, IP addresses, screenshots, provider IDs, or Preview share tokens are stored in this repository.

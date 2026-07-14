@@ -6,6 +6,14 @@
 
 Production is not ready. This status means the isolated provider-hosted Preview workflow has been verified manually without activating any public-site integration or Production identifiers.
 
+Provider readiness: READY FOR CONTROLLED PREVIEW
+
+Preview email delivery: VERIFIED
+
+Preview unsubscribe: VERIFIED
+
+Production readiness: NO-GO FOR PRODUCTION
+
 ## Capability evidence
 
 Official MailerLite sources verified in this phase support:
@@ -52,28 +60,36 @@ Still requiring account-level verification:
 
 | Item | Status |
 |---|---|
-| Preview group created | Verified manually |
-| Preview form created | Verified manually |
-| Preview group assignment verified | Verified manually |
-| Required consent verified | Verified manually |
-| Single opt-in verified | Verified manually |
-| Duplicate handling verified | Verified manually |
-| Preview automation created | Verified manually |
-| Preview automation activated | Verified manually |
-| End-to-end Preview submission passed | Verified manually |
-| Test email sent | Verified manually |
-| Email 1 source content | Documentation complete |
-| Preview Email 1 CTA target | Documented as `/gracias?source=email` |
-| Four-email timing outline | Documentation complete |
-| Test redirect | Temporary success message verified; custom `/gracias` redirect still blocked |
+| Preview group | VERIFIED |
+| Preview form | VERIFIED |
+| Preview group assignment | VERIFIED |
+| Required consent | VERIFIED |
+| Single opt-in | VERIFIED |
+| Duplicate handling | VERIFIED |
+| Preview automation | VERIFIED |
+| Preview Email 1 | VERIFIED |
+| Real automation send | VERIFIED |
+| Preview CTA | VERIFIED |
+| Preview fallback URL | VERIFIED |
+| `/gracias?source=email` | VERIFIED |
+| PDF access | VERIFIED |
+| Real unsubscribe | VERIFIED |
+| Export | PENDING |
+| Correction | PENDING |
+| Deletion | PENDING |
+| Inbox placement | PENDING |
+| Domain authentication | PENDING |
+| Production configuration | INACTIVE |
 | Preview secrets | Not required for the current provider-hosted-form direction |
-| No Production contact creation | Verified manually |
+| No Production contact creation | VERIFIED |
 
 ## Deliverability
 
 | Item | Status |
 |---|---|
 | Technical email delivery | Passed |
+| Preview automation delivery | Passed |
+| Gmail delivery observed | Yes |
 | Gmail inbox placement | Failed for the current sender setup |
 | Spam placement observed | Yes |
 | Free-domain sender warning observed | Yes |
@@ -84,13 +100,19 @@ Notes:
 - The Preview workflow test remains valid because the provider-hosted form, isolated group, subscriber activation, automation trigger, and test-email delivery all worked end to end.
 - Current inbox placement is not sufficient for Production.
 - The current sender uses a free Gmail address.
+- The current sender remains a non-branded free-domain setup for QA.
 - MailerLite displayed a free-domain deliverability warning.
 - SPF, DKIM, DMARC, branded mailbox, and domain alignment remain pending.
+- Production deliverability remains blocked.
+- Provider due diligence remains incomplete.
 
 ## Footer and privacy finding
 
 - Footer and business-address information shown in the test email require owner review before Production.
 - The currently displayed address must not be treated as approved merely because MailerLite populated it during onboarding.
+- MailerLite automatic footer remained present.
+- Unsubscribe remained present.
+- Footer language was adjusted or reviewed where supported.
 - No personal email addresses, IP addresses, subscriber details, or screenshots are stored in this repository.
 
 ## Production blockers
@@ -107,13 +129,16 @@ Notes:
 - DMARC.
 - Sender/domain authentication.
 - Approved business/footer address.
+- Production MailerLite group.
 - Production form.
+- Production MailerLite automation.
 - `/gracias`.
 - Production Email 1.
-- Unsubscribe test.
 - Export test.
 - Correction test.
 - Deletion test.
+- Inbox-placement QA.
+- Funnel event analytics.
 - Production/Preview isolation test on deployed site.
 - Controlled rollout approval.
 
@@ -124,4 +149,4 @@ Preview decision: READY FOR CONTROLLED PREVIEW
 Production decision: NO-GO FOR PRODUCTION
 
 Reason:
-The provider-hosted Preview form, isolated group, single opt-in, explicit consent, duplicate handling, automation trigger, and test-email delivery were verified end to end. Production remains blocked by legal, privacy, sender-domain, footer, public-route, deliverability, and end-to-end Production requirements.
+The provider-hosted Preview form, isolated group, single opt-in, explicit consent, duplicate handling, real automation Email 1, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, and subscriber-specific unsubscribe flow were verified. Production remains blocked by legal, privacy, sender-domain, footer approval, public-route, deliverability, rights-operation QA, and end-to-end Production requirements.
