@@ -83,6 +83,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | Pending — after PDF and consent approach confirmed |
+| Public legal routes | Locally complete — `feat/phase-0-public-legal-routes`; `/privacidad` and `/tratamiento-de-datos` implemented with safe draft/preparation rendering, noindex metadata, and footer links; owner details, privacy contact, and professional legal review still pending; Preview manual QA pending |
 
 ### Launch Steps
 
@@ -159,6 +160,7 @@ Current implementation note:
 
 - The controlled Preview lead-capture component is implemented only on `/ebook-gratis`.
 - `/gracias` is implemented and has passed deployed Preview QA.
+- `/privacidad` and `/tratamiento-de-datos` are implemented with safe draft/preparation rendering and noindex metadata; they are not yet approved public policies and are not linked as final consent documents from the Preview lead form.
 - Preview redirect configuration is still pending in MailerLite.
 - Email 1 content is documented; Preview manual configuration is still pending.
 - Production direct delivery remains active.

@@ -4,11 +4,13 @@ import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
 import { LeadCaptureForm } from "@/components/LeadCaptureForm";
 import {
+  dataProcessingPath,
   ebookDownloadFilename,
   ebookDownloadPath,
   ebookFileSizeKB,
   ebookPageCount,
   firstGroupFormUrl,
+  privacyPath,
   surveyFormUrl,
 } from "@/lib/links";
 
@@ -287,14 +289,28 @@ export default function EbookGratisPage() {
             <BrandLogo className="shrink-0" height="4rem" />
             <p className="text-sm text-soft">Método Escríbelo como suena.</p>
           </div>
-          <a
-            className="text-sm font-black text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-            href={ebookDownloadPath}
-            download={ebookDownloadFilename}
-            aria-label="Descargar guía gratis en PDF"
-          >
-            Descargar guía gratis
-          </a>
+          <div className="flex flex-wrap items-center gap-4 text-sm font-black">
+            <Link
+              className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+              href={privacyPath}
+            >
+              Privacidad
+            </Link>
+            <Link
+              className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+              href={dataProcessingPath}
+            >
+              Tratamiento de datos
+            </Link>
+            <a
+              className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+              href={ebookDownloadPath}
+              download={ebookDownloadFilename}
+              aria-label="Descargar guía gratis en PDF"
+            >
+              Descargar guía gratis
+            </a>
+          </div>
         </div>
       </footer>
     </main>

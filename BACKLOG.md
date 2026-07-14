@@ -84,8 +84,8 @@ Priority: High.
 - [x] Record the Phase 0 privacy decision log.
 - [ ] Supply responsible-party identity, operating status, location, and privacy contact.
 - [ ] Complete professional legal review.
-- [ ] Create the approved public privacy-policy route.
-- [ ] Create the approved public data-processing-policy route when required.
+- [x] Create the public `/privacidad` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
+- [x] Create the public `/tratamiento-de-datos` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval.
 - [ ] Create and operate the approved contact/privacy-request route.
 - [ ] Complete MailerLite due diligence and international-processing review.
 - [x] Verify current official MailerLite capabilities required for the selected provider direction.
@@ -152,7 +152,7 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy drafting status: documentation foundation complete; privacy implementation and production approval remain pending. See:
+Privacy drafting status: documentation foundation complete; public legal routes (`/privacidad`, `/tratamiento-de-datos`) implemented with safe incomplete-state rendering and noindex metadata in `feat/phase-0-public-legal-routes`; owner details, privacy contact, professional legal review, and production approval remain pending. See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`
