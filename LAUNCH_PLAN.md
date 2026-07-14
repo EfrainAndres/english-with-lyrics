@@ -107,12 +107,13 @@ Staged rollout:
 3. Provider foundation documented.
 4. Provider configured.
 5. Preview form integrated.
-6. Deployed Preview QA.
-7. `/gracias` ready.
-8. Email 1 tested.
-9. Full sequence prepared.
-10. Controlled production rollout.
-11. Metrics review.
+6. `/gracias` implemented.
+7. Preview redirect configured.
+8. Deployed Preview QA.
+9. Email 1 tested.
+10. Full sequence prepared.
+11. Controlled production rollout.
+12. Metrics review.
 
 ### Provider setup gates
 
@@ -151,9 +152,11 @@ Direct ebook delivery must remain active until the replacement funnel passes Pre
 Current implementation note:
 
 - The controlled Preview lead-capture component is implemented only on `/ebook-gratis`.
+- `/gracias` is implemented and ready for deployed QA.
+- Preview redirect configuration is still pending in MailerLite.
 - Production direct delivery remains active.
 - Production form activation remains blocked.
-- `/gracias` and Email 1 must exist before rollout.
+- Production email-delivery claims remain blocked.
 - Legal, privacy, and sender-domain gates remain blocking.
 
 ## Phase 1 Launch: Paid MVP

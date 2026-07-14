@@ -62,10 +62,10 @@ Current funnel step: controlled Preview lead-form implementation.
 
 Next order:
 
-1. Deployed Preview QA.
-2. Public legal routes.
-3. `/gracias`.
-4. Email-delivery implementation.
+1. `/gracias` implemented.
+2. Configure and QA MailerLite Preview redirect.
+3. Public legal routes.
+4. Production email-delivery content.
 5. Landing CRO restructure.
 6. Funnel event analytics.
 7. Production QA and rollout.

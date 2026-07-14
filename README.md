@@ -118,6 +118,16 @@ Lead-capture form foundation behavior:
 - Do not use Production form values in Preview.
 - Current Production direct delivery remains active.
 
+Thank-you page behavior:
+
+- `/gracias` exists.
+- The route is public but unpromoted.
+- The route is `noindex`.
+- The route contains no personal data.
+- Preview MailerLite can later redirect to `/gracias?source=ebook`.
+- Production lead capture remains inactive.
+- Direct Production ebook delivery remains active.
+
 ## Validation Commands
 
 ```bash

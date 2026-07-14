@@ -2,9 +2,9 @@
 
 ## Status
 
-Implementation status: PASS
+Implementation status: COMPLETE FOR CONTROLLED PREVIEW
 
-Preview readiness: COMPLETE
+Preview readiness: READY FOR QA
 
 Production readiness: NO-GO
 
@@ -25,6 +25,10 @@ Implementation notes:
 - The app opens the verified Preview form as a controlled external experience in the same tab.
 - The current download CTA remains intact in Production.
 - In Preview, the existing PDF download remains visible as a secondary QA fallback while the MailerLite form is being validated.
+- `/gracias` now exists as the stable thank-you destination.
+- MailerLite Preview redirect may now be configured to `/gracias?source=ebook`.
+- The current Preview form may keep its existing success message until manual redirect configuration is completed.
+- When MailerLite Preview redirect is configured, it should target `https://<preview-domain>/gracias?source=ebook` using the stable Preview branch alias rather than an ephemeral commit URL.
 
 ## Page behavior matrix
 
@@ -74,7 +78,6 @@ Implementation notes:
 - Domain authentication.
 - Footer/business address.
 - Production MailerLite form.
-- `/gracias`.
 - Production Email 1.
 - Unsubscribe, export, correction, and deletion QA.
 - Event analytics decision.

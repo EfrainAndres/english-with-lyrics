@@ -122,6 +122,12 @@ Do not use "ebook downloads" as a metric — only ebook-page visits are currentl
 - Advanced-product interest.
 - First-group interest.
 
+- `thank_you_view`
+- `pdf_download_click`
+- `pdf_open_click`
+- `survey_click`
+- `first_group_click`
+
 Do not record baselines for these until the funnel is implemented and verified.
 
 ### Pending future instrumentation - privacy-quality operations
@@ -156,7 +162,9 @@ Do not record values or targets for these until MailerLite Preview setup exists 
 Current implementation note:
 
 - Preview form submission can be observed in MailerLite.
+- The `/gracias` route now exists.
 - Application-level funnel events remain pending.
+- Existing page views may be available through Vercel Analytics.
 - Production registrations remain inactive.
 - Exact form-start and form-submit analytics remain future instrumentation.
 
