@@ -64,7 +64,7 @@ Next order:
 
 1. Preview Email 1 content.
 2. Preview email QA.
-3. Public legal routes.
+3. Public legal routes — implemented (`/privacidad`, `/tratamiento-de-datos`); Preview manual QA pending. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
 4. Sender-domain readiness.
 5. Production Email 1.
 6. Landing CRO restructure.

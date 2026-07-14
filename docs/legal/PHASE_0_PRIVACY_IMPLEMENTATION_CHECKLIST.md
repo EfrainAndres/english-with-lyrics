@@ -26,7 +26,28 @@ Marcar un item solo con evidencia verificable. Completar borradores no equivale 
 - [ ] Enfoque para usuarios menores revisado: `[PENDING_LEGAL_REVIEW]`.
 - [ ] Decisiones de conservacion aprobadas: `[PENDING_LEGAL_REVIEW]`.
 - [ ] Campos del formulario confirmados: email requerido, nombre opcional, consentimiento requerido y atribucion limitada opcional.
-- [ ] Ruta publica futura de politica y canal de contacto definidos.
+- [x] Ruta publica futura de politica y canal de contacto definidos: `/privacidad` y `/tratamiento-de-datos` implementadas en `feat/phase-0-public-legal-routes`. Ver `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
+- [x] Estructura de rutas publicas implementada.
+- [x] Pagina de privacidad implementada (`src/app/privacidad/page.tsx`).
+- [x] Pagina de tratamiento de datos implementada (`src/app/tratamiento-de-datos/page.tsx`).
+- [x] Manejo de estado incompleto implementado (Draft en Development/Preview, estado neutral en Production).
+- [x] Metadata noindex implementada en ambas rutas.
+- [x] Enlaces de footer implementados en `/` y `/ebook-gratis`.
+- [x] Configuracion legal centralizada implementada (`src/lib/legal-config.ts`).
+- [x] Ningun dato personal fue confirmado en Git.
+- [x] Renderizado seguro de estado incompleto implementado (Draft en Development/Preview, estado neutral en Production).
+- [x] Ruta de privacidad verificada en Preview desplegado.
+- [x] Ruta de tratamiento de datos verificada en Preview desplegado.
+- [x] Renderizado en movil verificado.
+- [x] Renderizado en escritorio verificado.
+- [x] Navegacion por teclado verificada.
+- [x] Ningun token de marcador crudo es visible.
+- [x] Ningun dato ficticio del responsable fue confirmado.
+- [x] Flujo actual del ebook preservado.
+- [x] Rutas actuales de agradecimiento preservadas.
+- [x] Captura de leads en Produccion permanece desactivada.
+
+Deployed Preview QA was completed manually without storing screenshots, deployment URLs, personal data, provider IDs, fake legal details, or private contact information in the repository.
 
 ## Debida diligencia de MailerLite
 

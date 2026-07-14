@@ -2,9 +2,11 @@ import Image from "next/image";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
 import {
+  dataProcessingPath,
   ebookPagePath,
   firstGroupFormUrl,
   getLinkProps,
+  privacyPath,
   surveyFormUrl,
 } from "@/lib/links";
 
@@ -542,12 +544,26 @@ export default function Home() {
               Método Escríbelo como suena.
             </p>
           </div>
-          <a
-            className="text-sm font-black text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-            href={ebookPagePath}
-          >
-            Descargar guía gratis
-          </a>
+          <div className="flex flex-wrap items-center gap-4 text-sm font-black">
+            <a
+              className="text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+              href={privacyPath}
+            >
+              Privacidad
+            </a>
+            <a
+              className="text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+              href={dataProcessingPath}
+            >
+              Tratamiento de datos
+            </a>
+            <a
+              className="text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+              href={ebookPagePath}
+            >
+              Descargar guía gratis
+            </a>
+          </div>
         </div>
       </footer>
     </main>

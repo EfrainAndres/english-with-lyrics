@@ -59,6 +59,8 @@ Useful local routes:
 
 - `/`
 - `/ebook-gratis` — ebook download page (download CTA active; PDF at `/downloads/guia-gratis-sing-pronounce-repeat.pdf`)
+- `/privacidad` — public privacy policy (draft/preparation state; `noindex`)
+- `/tratamiento-de-datos` — public data-processing policy (draft/preparation state; `noindex`)
 
 ## Free ebook PDF
 
@@ -109,6 +111,19 @@ NEXT_PUBLIC_PRIVACY_POLICY_URL=
 ```
 
 Leave them empty until Preview-safe provider forms and approved public privacy routes exist.
+
+Phase 0 legal-route configuration (server-only, no `NEXT_PUBLIC_` prefix, so nothing reaches the client bundle before approval) also lives in `.env.example`:
+
+```bash
+LEGAL_RESPONSIBLE_PARTY_NAME=
+LEGAL_RESPONSIBLE_PARTY_IDENTIFICATION=
+LEGAL_RESPONSIBLE_PARTY_CITY=
+LEGAL_PRIVACY_CONTACT_EMAIL=
+LEGAL_EFFECTIVE_DATE=
+LEGAL_PROFESSIONAL_REVIEW_COMPLETED=false
+```
+
+`/privacidad` and `/tratamiento-de-datos` render a safe draft/preparation state in Development and Preview, and a neutral "legal information in preparation" state in Production, until all five values above are set and `LEGAL_PROFESSIONAL_REVIEW_COMPLETED=true`. Both routes stay `noindex, nofollow` regardless, since indexing remains a separate explicit decision. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
 
 Lead-capture form foundation behavior:
 
