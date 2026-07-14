@@ -2,9 +2,9 @@
 
 ## Status
 
-Implementation status: COMPLETE FOR CONTROLLED PREVIEW
+Implementation status: PASS
 
-Preview readiness: READY FOR QA
+Preview readiness: COMPLETE
 
 Production readiness: NO-GO
 
