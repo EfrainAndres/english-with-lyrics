@@ -2,9 +2,11 @@
 
 ## Status
 
-Implementation status: PASS
+Implementation status: COMPLETE FOR CONTROLLED PREVIEW
 
-Preview readiness: COMPLETE
+Deployed Preview QA: PASS
+
+Preview readiness: READY
 
 Production readiness: NO-GO
 
@@ -25,6 +27,14 @@ Implementation notes:
 - The app opens the verified Preview form as a controlled external experience in the same tab.
 - The current download CTA remains intact in Production.
 - In Preview, the existing PDF download remains visible as a secondary QA fallback while the MailerLite form is being validated.
+- `/gracias` now exists as the stable thank-you destination.
+- `/gracias?source=ebook` is ready as the Preview redirect target.
+- MailerLite Preview redirect may now be configured to `/gracias?source=ebook`.
+- MailerLite manual redirect configuration remains pending unless end-to-end redirect was tested.
+- The current Preview form may keep its existing success message until manual redirect configuration is completed.
+- When MailerLite Preview redirect is configured, it should target `https://<preview-domain>/gracias?source=ebook` using the stable Preview branch alias rather than an ephemeral commit URL.
+- Production form remains disabled.
+- Production direct delivery remains active.
 
 ## Page behavior matrix
 
@@ -42,31 +52,34 @@ Implementation notes:
 - Consent remains provider-controlled and explicit inside MailerLite.
 - No MailerLite form HTML or script is injected into the app.
 
-## Manual Preview QA
+## Deployed Preview QA
 
-- [ ] Preview deployment loads.
-- [ ] Preview notice appears.
-- [ ] Correct Preview form opens.
-- [ ] Email remains required.
-- [ ] Name remains optional.
-- [ ] Consent remains required.
-- [ ] Consent remains unchecked by default.
-- [ ] Duplicate behavior remains correct.
-- [ ] Subscriber enters Preview group only.
-- [ ] Preview automation triggers.
-- [ ] Test email is sent.
-- [ ] No Production contact is created.
-- [ ] Mobile layout works.
-- [ ] Keyboard navigation works.
-- [ ] Missing configuration fallback works.
-- [ ] Production deployment keeps direct delivery.
+- [x] Preview deployment renders.
+- [x] Preview notice appears.
+- [x] CTA opens the MailerLite Preview form.
+- [x] Email is required.
+- [x] Name is optional.
+- [x] Consent is required.
+- [x] Consent is unchecked by default.
+- [x] Duplicate behavior remains correct.
+- [x] Subscriber enters Preview group only.
+- [x] Preview automation triggers.
+- [x] Test email is sent.
+- [x] No Production contact is created.
+- [x] Direct PDF fallback remains available in Preview.
+- [x] Production keeps direct delivery.
+- [x] Mobile and desktop behavior is acceptable.
+- [x] Keyboard-accessible CTA behavior was reviewed when applicable.
+- [x] Missing-config fallback remains documented.
 
 ## Production blockers
 
+- Responsible-party details.
+- Privacy contact.
 - Public privacy route.
 - Data-processing route when applicable.
-- Owner details.
-- Legal approval.
+- Professional legal approval.
+- Full MailerLite due diligence.
 - Branded sender mailbox.
 - SPF.
 - DKIM.
@@ -74,14 +87,18 @@ Implementation notes:
 - Domain authentication.
 - Footer/business address.
 - Production MailerLite form.
-- `/gracias`.
+- Production MailerLite automation.
 - Production Email 1.
-- Unsubscribe, export, correction, and deletion QA.
-- Event analytics decision.
+- Unsubscribe test.
+- Export test.
+- Correction test.
+- Deletion test.
+- MailerLite Preview redirect end-to-end QA.
+- Funnel event analytics.
 - Controlled rollout.
 
 ## Decision
 
-Preview decision: READY FOR DEPLOYED QA
+Preview decision: PASS
 
 Production decision: NO-GO FOR PRODUCTION

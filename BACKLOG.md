@@ -115,11 +115,20 @@ Priority: High.
 - [x] Create the lead-capture validation documentation.
 - [ ] Add the reusable lead form to `/` and `/ebook-gratis`.
 - [ ] Implement the explicit unchecked consent UI.
-- [ ] Create `/gracias` as the immediate post-registration delivery page.
+- [x] Create `/gracias` as the immediate post-registration delivery page.
+- [x] Add the immediate download action.
+- [x] Add the open-in-browser action.
+- [x] Add the optional survey section.
+- [x] Add the optional first-group section.
+- [x] Add environment-safe copy to `/gracias`.
+- [x] Add SEO noindex handling to `/gracias`.
+- [x] Add privacy-safe route behavior to `/gracias`.
+- [x] Create thank-you validation documentation.
 - [ ] Connect Email 1 delivery and the four-email educational sequence.
 - [ ] Restructure landing conversion hierarchy around the new lead form.
 - [ ] Add exact funnel-event analytics when approved tooling exists.
 - [ ] Test provider export, correction, unsubscribe, suppression, and deletion.
+- [ ] Configure the MailerLite Preview redirect to `/gracias`.
 - [ ] Run deployed Preview QA.
 - [ ] Run rollback QA and production-readiness review.
 - [ ] Complete controlled production rollout only after all privacy gates pass.
