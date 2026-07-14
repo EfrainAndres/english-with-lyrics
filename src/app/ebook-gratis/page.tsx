@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
+import { LeadCaptureForm } from "@/components/LeadCaptureForm";
 import {
   ebookDownloadFilename,
   ebookDownloadPath,
@@ -174,6 +175,8 @@ export default function EbookGratisPage() {
           </aside>
         </div>
       </section>
+
+      <LeadCaptureForm />
 
       {/* ── Content breakdown ──────────────────────────────────────────────── */}
       <section className="bg-night px-5 py-14 sm:px-8 lg:py-20">

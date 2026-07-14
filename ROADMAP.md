@@ -58,6 +58,18 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
+Current funnel step: controlled Preview lead-form implementation.
+
+Next order:
+
+1. Deployed Preview QA.
+2. Public legal routes.
+3. `/gracias`.
+4. Email-delivery implementation.
+5. Landing CRO restructure.
+6. Funnel event analytics.
+7. Production QA and rollout.
+
 This gate applies before:
 
 - Email-provider setup that handles production contacts.

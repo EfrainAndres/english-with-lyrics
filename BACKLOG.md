@@ -100,12 +100,19 @@ Priority: High.
 - [ ] Complete MailerLite DPA review.
 - [ ] Complete MailerLite sub-processor review.
 - [ ] Complete MailerLite domain authentication.
-- [ ] Create the Preview group in MailerLite.
-- [ ] Create the Preview form in MailerLite.
-- [ ] Create the Preview automation in MailerLite.
+- [x] Create the Preview group in MailerLite.
+- [x] Create the Preview form in MailerLite.
+- [x] Create the Preview automation in MailerLite.
 - [ ] Create the Production groups in MailerLite.
 - [ ] Create the Production form in MailerLite.
 - [ ] Create the Production automation in MailerLite.
+- [x] Add the runtime environment resolver.
+- [x] Add the safe Preview-form resolver.
+- [x] Add the reusable lead-capture component.
+- [x] Add `/ebook-gratis` Preview integration.
+- [x] Add the local disabled state.
+- [x] Preserve Production direct-delivery behavior.
+- [x] Create the lead-capture validation documentation.
 - [ ] Add the reusable lead form to `/` and `/ebook-gratis`.
 - [ ] Implement the explicit unchecked consent UI.
 - [ ] Create `/gracias` as the immediate post-registration delivery page.
@@ -113,7 +120,8 @@ Priority: High.
 - [ ] Restructure landing conversion hierarchy around the new lead form.
 - [ ] Add exact funnel-event analytics when approved tooling exists.
 - [ ] Test provider export, correction, unsubscribe, suppression, and deletion.
-- [ ] Run preview QA, rollback QA, and production-readiness review.
+- [ ] Run deployed Preview QA.
+- [ ] Run rollback QA and production-readiness review.
 - [ ] Complete controlled production rollout only after all privacy gates pass.
 
 Acceptance criteria:

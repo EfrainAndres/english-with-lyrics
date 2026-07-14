@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added a controlled-Preview MailerLite lead-capture component with strict Local/Preview/Production isolation, safe configuration fallbacks, provider-managed consent, and preserved direct ebook delivery in Production.
 - Added the non-production MailerLite provider foundation, including capability verification, subscriber-group and field taxonomy, Preview/Production isolation, environment-variable contract, sender-domain checklist, manual setup guide, and production-readiness gates.
 - Added the Phase 0 privacy and consent documentation package, including draft privacy and data-treatment policies, explicit-consent copy, data inventory and retention rules, provider due-diligence requirements, privacy decisions, implementation gates, and rights-request procedures.
 - Added the Phase 0 lead-funnel architecture and decision log, defining the email-provider recommendation, explicit-consent model, post-registration `/gracias` flow, provider integration boundaries, email sequence, analytics contract, environment isolation, failure handling, and phased implementation plan.
