@@ -259,6 +259,16 @@ This branch documents the automation only. It must not activate the Production a
 - Unsubscribe link.
 - No claim that the advanced ebook already exists.
 
+### Email 1 content package
+
+- Canonical content source: `docs/email/PHASE_0_EBOOK_DELIVERY_EMAIL.md`
+- Canonical Preview CTA target: `https://<stable-preview-branch-domain>/gracias?source=email`
+- Future Production CTA target: `https://english-with-lyrics.vercel.app/gracias?source=email`
+- Preview subject must keep `[TEST]`.
+- Delivery continues to use a stable page link, not a PDF attachment.
+- Four-email timing outline is documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
+- Manual MailerLite dashboard configuration remains pending.
+
 ### Emails 2-4
 
 - Remain documented placeholders in this branch.
@@ -375,4 +385,3 @@ Brevo remains fallback only and inactive.
 - No simultaneous synchronization with MailerLite.
 - Revisit Brevo only if MailerLite fails a blocking operational, legal, or deliverability requirement.
 - A migration would require a new DPA review, new groups/lists, new forms, new automations, new sender/domain authentication, new Preview isolation, new deletion/export QA, and privacy-policy updates.
-

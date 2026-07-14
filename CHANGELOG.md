@@ -6,6 +6,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Added
 
+- Added the Phase 0 ebook delivery-email package, including approved Email 1 content, stable `/gracias?source=email` delivery, Preview/Production separation, four-email sequence planning, MailerLite manual configuration steps, and production-readiness gates.
 - Added the environment-aware `/gracias` page with immediate ebook access, optional survey and first-group actions, privacy-safe query handling, noindex metadata, and Preview-ready MailerLite redirect support.
 - Added a controlled-Preview MailerLite lead-capture component with strict Local/Preview/Production isolation, safe configuration fallbacks, provider-managed consent, and preserved direct ebook delivery in Production.
 - Added the non-production MailerLite provider foundation, including capability verification, subscriber-group and field taxonomy, Preview/Production isolation, environment-variable contract, sender-domain checklist, manual setup guide, and production-readiness gates.

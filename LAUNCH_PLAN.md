@@ -91,7 +91,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 3. Review content against `CONTENT_GUIDE.md`, `LEGAL_GUIDE.md`, and the quality gates in Section 19 of the content plan.
 4. Create the PDF template using the design handoff requirements in Section 17 of the content plan.
 5. Convert `/ebook-gratis` from waiting page to real download page.
-6. Send the delivery email with a link to `/ebook-gratis`.
+6. Send the delivery email with a link to `/gracias?source=email`.
 7. Promote through YouTube, social, and email.
 8. Measure downloads, replies, survey clicks, and first-group interest.
 9. Compare demand across Románticas, Rock / pop clásicos, and Principiantes paths.
@@ -110,10 +110,16 @@ Staged rollout:
 6. `/gracias` implemented.
 7. Preview redirect configured.
 8. Deployed Preview QA.
-9. Email 1 tested.
-10. Full sequence prepared.
-11. Controlled production rollout.
-12. Metrics review.
+9. Email 1 content approved.
+10. Preview Email 1 configured.
+11. Preview test email sent.
+12. Preview CTA validated.
+13. Unsubscribe tested.
+14. Sender domain completed.
+15. Public legal pages published.
+16. Production Email 1 configured.
+17. Production automation remains inactive until approval.
+18. Controlled rollout.
 
 ### Provider setup gates
 
@@ -152,8 +158,9 @@ Direct ebook delivery must remain active until the replacement funnel passes Pre
 Current implementation note:
 
 - The controlled Preview lead-capture component is implemented only on `/ebook-gratis`.
-- `/gracias` is implemented and ready for deployed QA.
+- `/gracias` is implemented and has passed deployed Preview QA.
 - Preview redirect configuration is still pending in MailerLite.
+- Email 1 content is documented; Preview manual configuration is still pending.
 - Production direct delivery remains active.
 - Production form activation remains blocked.
 - Production email-delivery claims remain blocked.

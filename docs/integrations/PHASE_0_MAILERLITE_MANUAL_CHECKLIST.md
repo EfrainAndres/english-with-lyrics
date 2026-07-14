@@ -82,6 +82,11 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: test email created.
 - [x] Manual MailerLite dashboard action: Preview automation activated.
 - [x] Manual MailerLite dashboard action: new-subscriber trigger behavior verified.
+- [ ] Repository preparation: Email 1 source content approved in `docs/email/PHASE_0_EBOOK_DELIVERY_EMAIL.md`.
+- [ ] Repository preparation: Preview CTA target documented as `/gracias?source=email`.
+- [ ] Manual MailerLite dashboard action: Preview Email 1 content replaced with the approved delivery copy.
+- [ ] Manual MailerLite dashboard action: Preview preheader configured.
+- [ ] Manual MailerLite dashboard action: Preview CTA updated to Preview `/gracias?source=email`.
 - [ ] Manual MailerLite dashboard action: Preview automation does not reference Production URLs or IDs.
 
 ## 9. Production automation
@@ -89,6 +94,7 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [ ] Manual MailerLite dashboard action: `SPR - Phase 0 - Ebook Delivery and Nurture` drafted only when allowed.
 - [ ] Manual MailerLite dashboard action: trigger set to `SPR - Production - Ebook Leads`.
 - [ ] Future implementation: Email 1 links to `/gracias`, not a PDF attachment.
+- [ ] Repository preparation: sequence timing documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
 - [ ] Future implementation: Production automation remains inactive until rollout approval.
 
 ## 10. Consent

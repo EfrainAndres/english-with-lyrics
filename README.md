@@ -128,6 +128,15 @@ Thank-you page behavior:
 - Production lead capture remains inactive.
 - Direct Production ebook delivery remains active.
 
+Email 1 delivery package:
+
+- Source: `docs/email/PHASE_0_EBOOK_DELIVERY_EMAIL.md`
+- Sequence outline: `docs/email/PHASE_0_EMAIL_SEQUENCE.md`
+- Preview automation is test-only.
+- The email must link to `/gracias?source=email`, not attach the PDF.
+- Production sending remains inactive.
+- Do not commit MailerLite IDs, contacts, or screenshots.
+
 ## Validation Commands
 
 ```bash
