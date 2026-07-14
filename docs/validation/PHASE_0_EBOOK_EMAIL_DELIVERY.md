@@ -4,9 +4,11 @@
 
 Content status: COMPLETE
 
-Preview implementation readiness: READY FOR MANUAL CONFIGURATION
+Preview implementation status: COMPLETE
 
-Preview QA: PENDING
+Preview email QA: PASS
+
+Preview unsubscribe QA: PASS
 
 Production readiness: NO-GO
 
@@ -19,6 +21,9 @@ Production readiness: NO-GO
 - No application-side personal-data handling.
 - Preview and Production remain isolated.
 - Email 1 should deliver users to `/gracias?source=email`.
+- Production Email 1 remains inactive.
+- Emails 2–4 remain planning-only.
+- Inbox placement is not approved.
 
 ## Email content
 
@@ -65,23 +70,53 @@ Production readiness: NO-GO
 
 ## Manual QA checklist
 
-- [ ] Subject displays correctly.
-- [ ] Preheader displays correctly.
-- [ ] Sender display name is correct.
+- [x] Subject displays correctly.
+- [x] Preheader displays correctly.
+- [x] Sender display name is correct.
 - [ ] Mobile rendering looks correct.
 - [ ] Desktop rendering looks correct.
-- [ ] CTA works.
-- [ ] Plain URL fallback works.
-- [ ] `/gracias?source=email` loads.
-- [ ] PDF download works.
-- [ ] Unsubscribe works.
-- [ ] Footer appears.
-- [ ] Footer language reviewed.
+- [x] CTA works.
+- [x] Plain URL fallback works.
+- [x] `/gracias?source=email` loads.
+- [x] PDF download works.
+- [x] Unsubscribe works.
+- [x] Footer appears.
+- [x] Footer language reviewed.
 - [ ] Address reviewed.
-- [ ] Gmail delivery reviewed.
+- [x] Gmail delivery reviewed.
 - [ ] Outlook delivery reviewed.
-- [ ] Spam placement documented.
-- [ ] No Production group involved.
+- [x] Spam placement documented.
+- [x] No Production group involved.
+
+## QA results
+
+- Preview Email 1 configuration: PASS
+- Real automation send: PASS
+- Subject: PASS
+- Preheader: PASS
+- Sender display name: PASS
+- Preview-only destination: PASS
+- CTA: PASS
+- Fallback URL: PASS
+- `/gracias?source=email`: PASS
+- PDF access: PASS
+- Real unsubscribe: PASS
+- Production group involved: NO
+- Production automation involved: NO
+- Production contact created: NO
+
+## Deliverability and footer notes
+
+- Technical email delivery: PASS.
+- Preview automation delivery: PASS.
+- Gmail delivery was observed.
+- Spam placement was observed previously with the current free-domain sender.
+- Inbox placement must not be treated as approved.
+- MailerLite automatic footer remained present.
+- Unsubscribe remained present.
+- Footer language was adjusted or reviewed where supported.
+- The displayed business or address information is not yet approved for Production.
+- MailerLite branding may remain according to the current account plan.
 
 ## Production blockers
 
@@ -108,6 +143,9 @@ Production readiness: NO-GO
 
 ## Decision
 
-Preview decision: READY FOR MANUAL EMAIL CONFIGURATION
+Preview decision: PASS
 
 Production decision: NO-GO FOR PRODUCTION
+
+Reason:
+The controlled Preview automation successfully delivered Email 1 to a test subscriber. The subject, preheader, sender display name, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, and subscriber-specific unsubscribe flow were verified. Production remains blocked by public legal routes, approved responsible-party information, branded sender-domain readiness, footer approval, Production MailerLite configuration, deliverability QA, rights-operation QA, funnel analytics, and legal approval.
