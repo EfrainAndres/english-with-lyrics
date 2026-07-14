@@ -14,10 +14,12 @@ Production readiness: NO-GO
 
 - `/gracias`
 - `/gracias?source=ebook`
+- `/gracias?source=email`
 
 Future Preview redirect target:
 
 - `https://<preview-domain>/gracias?source=ebook`
+- `https://<preview-domain>/gracias?source=email`
 - Use the stable Preview branch alias when available.
 - Do not point MailerLite at an ephemeral commit deployment URL.
 
@@ -38,6 +40,9 @@ Future Preview redirect target:
 - The route is public but unpromoted.
 - Metadata is `noindex` and `nofollow`.
 - The deployed Preview branch URL was verified manually.
+- `/gracias?source=email` is an approved delivery target for Preview Email 1.
+- Production Email 1 remains inactive.
+- The page remains safe when accessed directly.
 
 ## Deployed Preview QA summary
 

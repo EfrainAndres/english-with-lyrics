@@ -124,12 +124,24 @@ Priority: High.
 - [x] Add SEO noindex handling to `/gracias`.
 - [x] Add privacy-safe route behavior to `/gracias`.
 - [x] Create thank-you validation documentation.
-- [ ] Connect Email 1 delivery and the four-email educational sequence.
+- [x] Define Email 1 content source.
+- [x] Define subject and preheader.
+- [x] Define the Preview delivery target.
+- [x] Define the four-email sequence outline.
+- [x] Create the ebook delivery validation documentation.
+- [x] Add MailerLite manual configuration instructions for Email 1.
+- [ ] Configure Preview Email 1 in MailerLite.
+- [ ] Run Preview Email 1 QA.
+- [ ] Test unsubscribe from the delivery email.
+- [ ] Complete Production sender-domain setup.
+- [ ] Configure Production Email 1.
+- [ ] Activate the Production sequence only after approval.
+- [ ] Document inbox-placement results.
 - [ ] Restructure landing conversion hierarchy around the new lead form.
 - [ ] Add exact funnel-event analytics when approved tooling exists.
 - [ ] Test provider export, correction, unsubscribe, suppression, and deletion.
 - [ ] Configure the MailerLite Preview redirect to `/gracias`.
-- [ ] Run deployed Preview QA.
+- [x] Run deployed Preview QA.
 - [ ] Run rollback QA and production-readiness review.
 - [ ] Complete controlled production rollout only after all privacy gates pass.
 

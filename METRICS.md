@@ -156,6 +156,14 @@ These metrics must contain no email, name, provider contact ID, raw answer, free
 - Click rate when available.
 - Preview test submissions.
 - Accidental Production test submissions.
+- Emails delivered.
+- Emails bounced.
+- Emails opened when available.
+- CTA clicks.
+- Unsubscribes.
+- Spam complaints.
+- Preview test sends.
+- Accidental Production sends.
 
 Do not record values or targets for these until MailerLite Preview setup exists and instrumentation has been approved.
 
@@ -163,6 +171,7 @@ Current implementation note:
 
 - Preview form submission can be observed in MailerLite.
 - The `/gracias` route now exists.
+- Email 1 delivery uses `/gracias?source=email` in documentation only.
 - Application-level funnel events remain pending.
 - Existing page views may be available through Vercel Analytics.
 - Production registrations remain inactive.
@@ -176,7 +185,7 @@ Interest signals:
 
 - Visits to `/ebook-gratis`.
 - Delivery email open rate (pending email provider).
-- Click rate from delivery email to `/ebook-gratis` (pending email provider).
+- Click rate from delivery email to `/gracias?source=email` (pending email provider).
 
 Engagement signals:
 

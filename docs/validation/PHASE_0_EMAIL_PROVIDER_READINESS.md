@@ -62,6 +62,9 @@ Still requiring account-level verification:
 | Preview automation activated | Verified manually |
 | End-to-end Preview submission passed | Verified manually |
 | Test email sent | Verified manually |
+| Email 1 source content | Documentation complete |
+| Preview Email 1 CTA target | Documented as `/gracias?source=email` |
+| Four-email timing outline | Documentation complete |
 | Test redirect | Temporary success message verified; custom `/gracias` redirect still blocked |
 | Preview secrets | Not required for the current provider-hosted-form direction |
 | No Production contact creation | Verified manually |
