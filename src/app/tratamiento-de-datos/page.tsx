@@ -71,6 +71,7 @@ export default function TratamientoDeDatosPage() {
     ownerDomicile,
     contactAddress,
     contactPhone,
+    contactPhoneHref,
     privacyEmail: configuredPrivacyEmail,
     effectiveDate,
     lastUpdatedDate,
@@ -151,7 +152,18 @@ export default function TratamientoDeDatosPage() {
             <dt className="font-semibold text-zinc-200">Correspondencia</dt>
             <dd className="text-zinc-300">{contactAddress}</dd>
             <dt className="font-semibold text-zinc-200">Teléfono</dt>
-            <dd className="text-zinc-300">{contactPhone}</dd>
+            <dd className="text-zinc-300">
+              {contactPhoneHref ? (
+                <a
+                  className="text-yellow-300 underline underline-offset-4"
+                  href={contactPhoneHref}
+                >
+                  {contactPhone}
+                </a>
+              ) : (
+                contactPhone
+              )}
+            </dd>
             <dt className="font-semibold text-zinc-200">Correo</dt>
             <dd>
               <a
@@ -162,6 +174,17 @@ export default function TratamientoDeDatosPage() {
               </a>
             </dd>
           </dl>
+          <p>
+            Persona responsable de la atención de peticiones, consultas y
+            reclamos: la responsable del proyecto Sing Pronunce Repeat. Canal:{" "}
+            <a
+              className="text-yellow-300 underline underline-offset-4"
+              href={`mailto:${configuredPrivacyEmail}`}
+            >
+              {configuredPrivacyEmail}
+            </a>
+            .
+          </p>
         </section>
 
         <section aria-labelledby="processing-categories">
@@ -199,12 +222,28 @@ export default function TratamientoDeDatosPage() {
 
         <section aria-labelledby="processing-rights">
           <h2 id="processing-rights">8. Derechos de las personas titulares</h2>
-          <p>
-            Se podrán presentar solicitudes de acceso, consulta, corrección,
-            actualización, evidencia del consentimiento, revocación, baja,
-            supresión y reclamo, sujetas a las condiciones y excepciones del marco
-            aplicable.
-          </p>
+          <ul>
+            <li>Conocer, actualizar y rectificar sus datos personales.</li>
+            <li>Conocer el uso dado a sus datos personales.</li>
+            <li>Acceder gratuitamente a los datos personales tratados.</li>
+            <li>
+              Solicitar prueba de la autorización, salvo cuando legalmente no sea
+              necesaria.
+            </li>
+            <li>
+              Ser informado, previa solicitud, respecto del uso dado a sus datos.
+            </li>
+            <li>
+              Solicitar la revocación de la autorización o la supresión cuando
+              resulte aplicable y no exista un deber legal o contractual que
+              exija conservar la información.
+            </li>
+            <li>
+              Presentar quejas ante la Superintendencia de Industria y Comercio
+              después de agotar el procedimiento de consulta o reclamo ante la
+              responsable.
+            </li>
+          </ul>
         </section>
 
         <section aria-labelledby="processing-duties">
@@ -231,11 +270,39 @@ export default function TratamientoDeDatosPage() {
         <section aria-labelledby="processing-consultations">
           <h2 id="processing-consultations">11. Consultas y reclamos</h2>
           <p>
-            Las consultas se atenderán, como compromiso operativo preliminar, en
-            un plazo de hasta 10 días hábiles. Los reclamos se atenderán en hasta
-            15 días hábiles. Cuando resulte aplicable una extensión, se informará
-            el motivo y podrán emplearse hasta 8 días hábiles adicionales después
-            del aviso. Estos plazos son un borrador sujeto a revisión jurídica
+            Las consultas se atenderán en un término máximo de diez (10) días
+            hábiles contados desde su recepción. Cuando no sea posible responder
+            dentro de ese término, se informarán los motivos de la demora y la
+            nueva fecha de respuesta, que no podrá superar los cinco (5) días
+            hábiles siguientes al vencimiento del término inicial.
+          </p>
+          <p>
+            Los reclamos se atenderán en un término máximo de quince (15) días
+            hábiles contados a partir del día siguiente a su recepción. Cuando no
+            sea posible responder dentro de ese término, se informarán los
+            motivos de la demora y la nueva fecha de respuesta, que no podrá
+            superar los ocho (8) días hábiles siguientes al vencimiento del
+            término inicial.
+          </p>
+          <p>
+            Como procedimiento operativo preliminar, si un reclamo está
+            incompleto se solicitará su corrección o complementación dentro de
+            los cinco (5) días hábiles siguientes a su recepción. Si la persona no
+            responde dentro de los dos (2) meses siguientes al requerimiento, el
+            reclamo podrá entenderse desistido.
+          </p>
+          <p>
+            Si el reclamo es recibido por una persona que no sea competente para
+            resolverlo, se trasladará a quien corresponda en un término máximo de
+            dos (2) días hábiles y se informará a la persona solicitante.
+          </p>
+          <p>
+            Cuando el reclamo esté completo, se incorporará la leyenda “reclamo
+            en trámite” al registro aplicable en un término máximo de dos (2) días
+            hábiles y se mantendrá hasta que el reclamo sea resuelto.
+          </p>
+          <p>
+            Estas reglas son un borrador operativo pendiente de revisión jurídica
             profesional.
           </p>
         </section>

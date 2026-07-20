@@ -14,9 +14,15 @@ Minors strategy: IMPLEMENTED
 Provider inventory: IMPLEMENTED
 Rights-request workflow: DOCUMENTED
 Owner authorization to publish contact details: CONFIRMED OUTSIDE REPOSITORY
+Domicile/correspondence correction: PASS
+Initial owner rendered-copy review: CHANGES REQUESTED
+Internal structured review: CHANGES REQUESTED
+Remaining review corrections: IMPLEMENTED
+Protected Preview regression QA: PENDING
+Owner re-review: PENDING
 Owner approval of final rendered copy: PENDING
-Internal structured review: PENDING
-Professional legal review: PENDING
+Professional Colombian legal review: PENDING
+Production legal publication: PENDING
 Production consent linking: PENDING
 Production Email 1: INACTIVE
 Production automation: INACTIVE
@@ -29,6 +35,7 @@ Production lead capture: INACTIVE
 - `LEGAL_PUBLICATION_STATUS` accepts only `pending`, `draft` or `approved`.
 - `LEGAL_OWNER_TYPE` accepts the supported `natural_person` value.
 - Values are trimmed, dates require valid `YYYY-MM-DD` input, and the privacy email is validated before use.
+- Valid Colombian mobile numbers are rendered in a readable international format and use a digits-only `tel:` link; other configured telephone values are trimmed and rendered without inventing a link.
 - Missing or invalid required fields produce a safe `pending` configuration without throwing during a normal build.
 - Configuration completeness does not imply approval.
 - Missing field names can be inspected server-side without exposing field values in errors or logs.
@@ -52,6 +59,12 @@ Production must remain configured as `pending` during this phase. Protected Prev
 - The retention text avoids an unsupported fixed period.
 - The minors strategy states that forms and communications are not intentionally directed to minors and adds no age-verification or identity-upload workflow.
 - The public privacy mailbox remains the operational request channel.
+- Domicile continues to use `LEGAL_OWNER_DOMICILE`, correspondence continues to use `LEGAL_CONTACT_ADDRESS`, and the corrected Preview rendering passed manual QA.
+- Consultation and claim deadlines use separate initial terms and separate extensions: 5 additional business days for consultations and 8 for claims.
+- The rights sections cover information about data use, free access and the right to complain to the Superintendencia de Industria y Comercio after the responsible-party procedure is exhausted.
+- The claim draft covers incomplete claims, a possible withdrawal after 2 months without response, transfer by a non-competent recipient, and the `reclamo en trámite` notation.
+- The responsible person for petitions, consultations and claims is identified by project role, and the public privacy mailbox is the channel.
+- `/privacidad` links internally to `/tratamiento-de-datos` without using a Preview or technical deployment URL.
 
 ## Privacy and Security Check
 
@@ -64,10 +77,9 @@ Production must remain configured as `pending` during this phase. Protected Prev
 
 ## Remaining Gates
 
-- Configure the real values manually in a protected Vercel Preview deployment.
-- Validate both rendered legal pages in Preview.
-- Obtain owner approval of the rendered copy.
-- Complete internal structured review.
+- Run protected Preview regression QA after these corrections.
+- Obtain owner re-review and final approval of the rendered copy.
+- Close the internal structured review after regression QA.
 - Complete professional Colombian legal review.
 - Review provider contracts, DPA terms and legal classifications.
 - Test rights-request export, correction, unsubscribe, restriction and deletion operations.

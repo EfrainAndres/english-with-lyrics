@@ -11,6 +11,7 @@ export type LegalConfiguration = {
   ownerDomicile: string | null;
   contactAddress: string | null;
   contactPhone: string | null;
+  contactPhoneHref: string | null;
   privacyEmail: string | null;
   effectiveDate: string | null;
   lastUpdatedDate: string | null;
@@ -86,6 +87,38 @@ function parseEmail(value: string | null): string | null {
   return value;
 }
 
+export function normalizeLegalTelephone(value: string | null): {
+  displayValue: string | null;
+  href: string | null;
+} {
+  const trimmedValue = value?.trim() || null;
+
+  if (!trimmedValue) {
+    return { displayValue: null, href: null };
+  }
+
+  if (!/^\+?[\d\s().-]+$/.test(trimmedValue)) {
+    return { displayValue: trimmedValue, href: null };
+  }
+
+  const digits = trimmedValue.replace(/\D/g, "");
+  const localNumber =
+    digits.length === 12 && digits.startsWith("57")
+      ? digits.slice(2)
+      : digits.length === 10
+        ? digits
+        : null;
+
+  if (!localNumber || !/^3\d{9}$/.test(localNumber)) {
+    return { displayValue: trimmedValue, href: null };
+  }
+
+  return {
+    displayValue: `+57 ${localNumber.slice(0, 3)} ${localNumber.slice(3, 6)} ${localNumber.slice(6)}`,
+    href: `tel:+57${localNumber}`,
+  };
+}
+
 export function readLegalConfiguration(
   environment: LegalEnvironment = process.env,
 ): LegalConfiguration {
@@ -96,7 +129,9 @@ export function readLegalConfiguration(
   const ownerRole = normalize(environment.LEGAL_OWNER_ROLE);
   const ownerDomicile = normalize(environment.LEGAL_OWNER_DOMICILE);
   const contactAddress = normalize(environment.LEGAL_CONTACT_ADDRESS);
-  const contactPhone = normalize(environment.LEGAL_CONTACT_PHONE);
+  const contactPhone = normalizeLegalTelephone(
+    normalize(environment.LEGAL_CONTACT_PHONE),
+  );
   const privacyEmail = parseEmail(normalize(environment.LEGAL_PRIVACY_EMAIL));
   const effectiveDate = parseIsoDate(normalize(environment.LEGAL_EFFECTIVE_DATE));
   const lastUpdatedDate = parseIsoDate(
@@ -109,7 +144,7 @@ export function readLegalConfiguration(
     LEGAL_OWNER_ROLE: ownerRole,
     LEGAL_OWNER_DOMICILE: ownerDomicile,
     LEGAL_CONTACT_ADDRESS: contactAddress,
-    LEGAL_CONTACT_PHONE: contactPhone,
+    LEGAL_CONTACT_PHONE: contactPhone.displayValue,
     LEGAL_PRIVACY_EMAIL: privacyEmail,
     LEGAL_EFFECTIVE_DATE: effectiveDate,
     LEGAL_LAST_UPDATED_DATE: lastUpdatedDate,
@@ -134,7 +169,8 @@ export function readLegalConfiguration(
     ownerRole: mayRenderPersonalValues ? ownerRole : null,
     ownerDomicile: mayRenderPersonalValues ? ownerDomicile : null,
     contactAddress: mayRenderPersonalValues ? contactAddress : null,
-    contactPhone: mayRenderPersonalValues ? contactPhone : null,
+    contactPhone: mayRenderPersonalValues ? contactPhone.displayValue : null,
+    contactPhoneHref: mayRenderPersonalValues ? contactPhone.href : null,
     privacyEmail: mayRenderPersonalValues ? privacyEmail : null,
     effectiveDate: mayRenderPersonalValues ? effectiveDate : null,
     lastUpdatedDate: mayRenderPersonalValues ? lastUpdatedDate : null,

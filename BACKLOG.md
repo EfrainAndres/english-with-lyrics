@@ -88,11 +88,20 @@ Priority: High.
 - [x] Approve the minors-policy draft as not intentionally directed to minors.
 - [x] Create the Phase 0 provider inventory.
 - [x] Document the draft data-subject rights-request workflow.
-- [ ] Configure authorized responsible-party values manually in a protected Vercel Preview deployment.
-- [ ] Complete Preview legal-page QA.
-- [ ] Obtain owner approval of the final rendered legal pages.
-- [ ] Complete internal structured legal review.
+- [x] Complete and verify the domicile/correspondence Preview correction while preserving the separate environment-field mapping.
+- [x] Complete the initial owner rendered-copy review. Status: CHANGES REQUESTED.
+- [x] Complete the initial internal structured review. Status: CHANGES REQUESTED.
+- [x] Separate the consultation and claim deadlines and extensions in the legal draft.
+- [x] Complete the titular-rights summary, including free access, use information and the SIC complaint path.
+- [x] Complete the operational claim-procedure draft.
+- [x] Identify the project role responsible for petitions, consultations and claims.
+- [x] Add the internal privacy-to-treatment-policy link.
+- [x] Add accessible Colombian-mobile display and `tel:` formatting without hardcoding a number.
+- [ ] Complete protected Preview regression QA after the review corrections.
+- [ ] Obtain owner re-review and final approval of the rendered legal pages.
+- [ ] Close the internal structured review after regression QA.
 - [ ] Complete professional legal review.
+- [ ] Complete provider contractual/DPA review.
 - [x] Create the public `/privacidad` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
 - [x] Create the public `/tratamiento-de-datos` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval.
 - [x] Confirm the operational privacy mailbox and document the draft contact/privacy-request workflow.
@@ -186,7 +195,7 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy drafting status: server-only legal-owner configuration, environment-variable support, retention and minors drafts, provider inventory, and rights-request workflow are implemented without committing personal values. Production remains in the safe `pending` state. Protected Preview configuration, rendered-page QA, owner approval, internal structured review, professional legal review, provider contractual/DPA review, final consent linking, and Production approval remain pending. See:
+Privacy drafting status: the domicile/correspondence Preview correction passed, and the remaining internal-review corrections are implemented, including separate consultation/claim terms, expanded rights, claim handling, request responsibility, an internal policy link and accessible telephone formatting. Production remains in the safe `pending` state. Protected Preview regression QA, owner re-review, closure of the internal structured review, professional legal review, provider contractual/DPA review, final consent linking, Production legal publication and controlled rollout remain pending. See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`

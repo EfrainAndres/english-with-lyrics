@@ -73,6 +73,7 @@ export default function PrivacidadPage() {
     ownerDomicile,
     contactAddress,
     contactPhone,
+    contactPhoneHref,
     privacyEmail: configuredPrivacyEmail,
     effectiveDate,
     lastUpdatedDate,
@@ -117,7 +118,18 @@ export default function PrivacidadPage() {
             <dt className="font-semibold text-zinc-200">Correspondencia</dt>
             <dd className="text-zinc-300">{contactAddress}</dd>
             <dt className="font-semibold text-zinc-200">Teléfono</dt>
-            <dd className="text-zinc-300">{contactPhone}</dd>
+            <dd className="text-zinc-300">
+              {contactPhoneHref ? (
+                <a
+                  className="text-yellow-300 underline underline-offset-4"
+                  href={contactPhoneHref}
+                >
+                  {contactPhone}
+                </a>
+              ) : (
+                contactPhone
+              )}
+            </dd>
             <dt className="font-semibold text-zinc-200">Correo de privacidad</dt>
             <dd>
               <a
@@ -159,12 +171,18 @@ export default function PrivacidadPage() {
 
         <section aria-labelledby="privacy-rights">
           <h2 id="privacy-rights">4. Derechos de las personas titulares</h2>
-          <p>
-            La persona titular podrá solicitar acceso o consulta, corrección,
-            actualización, evidencia de autorización, revocación, baja,
-            supresión y atención de reclamos, conforme al marco aplicable y a
-            las limitaciones legales correspondientes.
-          </p>
+          <ul>
+            <li>Conocer, actualizar y corregir sus datos personales.</li>
+            <li>Conocer el uso dado a sus datos personales.</li>
+            <li>Acceder gratuitamente a los datos tratados.</li>
+            <li>Solicitar evidencia de la autorización cuando corresponda.</li>
+            <li>Solicitar la revocación, baja o supresión cuando resulte aplicable.</li>
+            <li>
+              Presentar una queja ante la Superintendencia de Industria y
+              Comercio después de agotar el procedimiento de consulta o reclamo
+              ante la responsable.
+            </li>
+          </ul>
         </section>
 
         <section aria-labelledby="privacy-requests">
@@ -182,6 +200,26 @@ export default function PrivacidadPage() {
             será proporcional; no se exigirá por defecto una copia del documento
             de identidad. El procedimiento operativo y sus plazos permanecen
             sujetos a revisión jurídica profesional.
+          </p>
+          <p>
+            Persona responsable de la atención de peticiones, consultas y
+            reclamos: la responsable del proyecto Sing Pronunce Repeat. Canal:{" "}
+            <a
+              className="text-yellow-300 underline underline-offset-4"
+              href={`mailto:${configuredPrivacyEmail}`}
+            >
+              {configuredPrivacyEmail}
+            </a>
+            .
+          </p>
+          <p>
+            <a
+              className="font-semibold text-yellow-300 underline underline-offset-4"
+              href="/tratamiento-de-datos"
+            >
+              Consulta aquí la Política de tratamiento de datos personales
+              completa.
+            </a>
           </p>
         </section>
 

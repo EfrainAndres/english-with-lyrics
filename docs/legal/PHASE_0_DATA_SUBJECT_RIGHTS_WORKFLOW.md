@@ -5,6 +5,10 @@
 - Workflow status: DRAFT DOCUMENTED
 - Operational privacy channel: `privacidad@singpronuncerepeat.com`
 - Identity-verification details: PENDING PROFESSIONAL REVIEW
+- Domicile/correspondence Preview correction: PASS
+- Remaining internal-review corrections: IMPLEMENTED
+- Protected Preview regression QA: PENDING
+- Owner re-review: PENDING
 - Workflow QA: PENDING
 - Production lead capture: INACTIVE
 
@@ -35,11 +39,28 @@ This document defines a private operational workflow for handling requests about
 
 ## Draft Deadlines
 
-- Consultations: up to 10 business days.
-- Complaints or claims: up to 15 business days.
-- Applicable extension: up to 8 additional business days after notifying the requester of the reason and revised response date.
+- Consultations: a maximum of 10 business days counted from receipt. If a response is not possible within that term, notify the requester of the reason and the new date, which may not exceed 5 business days after the initial term expires.
+- Complaints or claims: a maximum of 15 business days counted from the day after receipt. If a response is not possible within that term, notify the requester of the reason and the new date, which may not exceed 8 business days after the initial term expires.
 
 These are draft operational commitments subject to final professional Colombian legal review.
+
+## Request-Handling Responsibility
+
+- Person responsible for petitions, consultations and claims: the person responsible for the Sing Pronunce Repeat project.
+- Channel: `privacidad@singpronuncerepeat.com`.
+
+No separate legal department or company is designated.
+
+## Draft Claim Procedure
+
+1. Review whether the claim contains enough information to identify the requester, locate the applicable record and understand the requested correction or action.
+2. If the claim is incomplete, request correction or completion within 5 business days after receipt.
+3. If the requester does not respond within 2 months after that request, the claim may be considered withdrawn.
+4. If a non-competent party receives the claim, transfer it to the appropriate party within no more than 2 business days and inform the requester.
+5. Once a claim is complete, add the notation `reclamo en trámite` to the applicable record within no more than 2 business days and retain it until the claim is resolved.
+6. Resolve the claim within the draft claim deadline and preserve only minimum evidence of the decision and response.
+
+This is an operational draft pending professional Colombian legal review. It does not require a copy of an identity document by default.
 
 ## Proportional Identity Validation
 
@@ -66,10 +87,9 @@ A government identity document must not be requested by default. The final verif
 
 ## Open Gates
 
-- Manual Preview configuration of legal-owner values.
-- Preview legal-page QA.
-- Owner review of the rendered policies.
-- Internal structured legal review.
+- Protected Preview regression QA after the internal-review corrections.
+- Owner re-review of the rendered policies.
+- Closure of the internal structured review.
 - Professional Colombian legal review.
 - Provider export, correction and deletion workflow QA.
 - Final Production consent linking.
