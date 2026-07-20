@@ -14,6 +14,7 @@ Current canonical-brand audit note:
 - Visual QA: PASS — all 21 pages rendered to temporary PNGs; page 16 density was adjusted to remove inherited footer clipping while preserving content and page count.
 - Link annotation validation: PASS — 7 intended HTTPS annotations retained.
 - Public PDF path: UNCHANGED — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- Production delivery smoke test: PASS.
 
 | Field | Value |
 |---|---|
@@ -28,14 +29,40 @@ Current canonical-brand audit note:
 | Current PDF page count | 21 |
 | Current PDF file size | 1,322,844 bytes (after metadata correction) |
 | Public SHA-256 | `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08` |
-| Publication status | Public PDF prepared — production redeploy and smoke test pending |
-| Delivery status | Download route active — production redeploy required to serve updated PDF |
+| Publication status | Public PDF deployed and smoke-tested through canonical Production domain |
+| Delivery status | Current direct ebook-delivery flow active through canonical Production domain |
 | **Project-owner visual review** | **Approved** |
 | **Production origin** | **Approved — `https://singpronuncerepeat.com`** |
 | **PDF backlink** | **Restored — `https://singpronuncerepeat.com/ebook-gratis`** |
-| **Final decision** | **CONDITIONAL GO** |
+| **Final decision** | **PASS FOR CURRENT DIRECT-DELIVERY FLOW** |
 
-**Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes automated structural, binary-string, metadata, link-annotation, and render checks. PDF metadata is complete (Author, Subject, Keywords, Creator). Production origin is approved and recorded. Absolute `/ebook-gratis` backlink is present inside the PDF (annotation 7 of 7). Public file updated at `public/downloads/` without changing the legacy filename. Download page live. Remaining blocker: production redeploy and deployed smoke test for PDF download/open behavior.
+**Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes automated structural, binary-string, metadata, link-annotation, render, local delivery, and Production smoke checks. PDF metadata is complete (Author, Subject, Keywords, Creator). Production origin is approved and recorded. Absolute `/ebook-gratis` backlink is present inside the deployed PDF (annotation 7 of 7). Public file is served at `public/downloads/` without changing the legacy filename. Download page is live through the canonical custom domain.
+
+This approval applies to the current direct ebook-delivery flow only. Production lead capture remains inactive, Production Email 1 remains inactive, Production automation remains inactive, and legal-owner/professional-review blockers remain separate from direct PDF availability.
+
+Production smoke testing was completed manually through the canonical custom domain. No screenshots, personal data, subscriber information, deployment URLs, provider IDs, or private account details are stored in the repository.
+
+### Current readiness summary
+
+| Check | Status |
+|---|---|
+| PDF content readiness | PASS |
+| PDF structural QA | PASS |
+| PDF visual QA | PASS |
+| Canonical brand migration | PASS |
+| Canonical backlink migration | PASS |
+| Local delivery QA | PASS |
+| Production delivery smoke test | PASS |
+| Production ebook page | PASS — `https://singpronuncerepeat.com/ebook-gratis` |
+| Production PDF download | PASS — `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
+| Production browser-open action | PASS |
+| Production PDF content type | VERIFIED — `application/pdf` |
+| Public filename unchanged | PASS |
+| Production publication readiness | PASS FOR CURRENT DIRECT-DELIVERY FLOW |
+| Production lead capture | INACTIVE |
+| Production Email 1 | INACTIVE |
+| Production automation | INACTIVE |
+| Production email delivery | INACTIVE |
 
 ---
 
@@ -371,9 +398,12 @@ Do not use localhost, preview deployment URLs, or the legacy Vercel origin as ca
 
 ### Not ready
 
-- Email provider setup — no provider selected; manual workflow for low-volume Phase 0 signups.
-- Email automation — blocked on provider selection and sender domain decision.
-- Analytics tooling — no analytics integrated; manual tracking only.
+- Production Email 1 — inactive.
+- Production automation — inactive.
+- Production lead capture — inactive.
+- Gmail inbox-placement review — pending.
+- Outlook delivery QA — pending.
+- Legal-owner configuration and professional legal review — pending.
 - First-group payments — out of scope for Phase 0.
 
 ---
@@ -383,24 +413,24 @@ Do not use localhost, preview deployment URLs, or the legacy Vercel origin as ca
 | Area | Status | Blocking? | Evidence | Required action |
 |---|---|---|---|---|
 | Content completeness | Pass | No | All 9 fragments present, all 10 learning-block elements confirmed in HTML source | None |
-| Visual QA | Pending | Yes — for full delivery sign-off | Page 17/19/20 partially confirmed; all other pages pending | Project owner opens PDF, reviews all 21 pages against QA checklist |
-| Link QA | Pass | No | 6 annotations extracted, all HTTPS, all verified destinations, no localhost | None |
+| Visual QA | Pass | No | All 21 pages rendered and inspected; page 16 clipping correction verified | None |
+| Link QA | Pass | No | 7 annotations extracted, all HTTPS, all verified destinations, no localhost | None |
 | Legal-safe review | Conservative review passed | No | Per-song analysis in section 8; ~37 total quoted words across 9 fragments; non-adjacency confirmed | Professional legal review before scaling paid content |
 | Metadata — Title | Pass | No | "Aprende inglés con 3 canciones — Sing Pronunce Repeat" confirmed | None |
-| Metadata — Author/Subject/Keywords | Incomplete | Medium | Not set in PDF; Chrome does not map HTML meta tags to PDF Info dictionary | Add Python incremental-update post-processing to export script in delivery branch |
-| Metadata — Creator field | Advisory | No | Shows Chrome UA/OS string; no username, path, or branch name exposed | Optionally overwrite in delivery branch post-processing |
+| Metadata — Author/Subject/Keywords | Pass | No | Set through the existing metadata patch workflow | None |
+| Metadata — Creator field | Pass | No | Latest Info dictionary value is `Sing Pronunce Repeat / English with Lyrics` | None |
 | Filename | Approved | No | `guia-gratis-sing-pronounce-repeat.pdf` — lowercase, hyphenated, brand-clear | None |
-| Public origin | Pending | Yes — for delivery | No production domain documented anywhere | Owner approves and documents production domain; restore /ebook-gratis anchor |
-| Download route | Not activated | Yes — for delivery | `public/downloads/` does not exist; `/ebook-gratis` is a waiting page | Create path and convert page in delivery branch after visual sign-off |
-| Email delivery | Pending | No — not required for PDF release | Email provider not selected; manual workflow adequate for Phase 0 | Select provider and configure after PDF is live |
-| Analytics | Pending | No — not required for PDF release | No analytics configured | Add in delivery branch or later |
-| Final owner approval | Pending | Yes | No sign-off recorded | Owner completes visual QA and signs off below |
+| Public origin | Pass | No | Canonical Production origin verified: `https://singpronuncerepeat.com` | None for direct PDF delivery |
+| Download route | Pass | No | `/ebook-gratis` active; public PDF request, download, browser-open action, and in-PDF backlink passed Production smoke testing | None for direct PDF delivery |
+| Email delivery | Inactive | No — not required for current direct PDF release | Production email delivery remains inactive | Configure only after separate approval and QA |
+| Analytics | Code complete / production verification pending | No — not required for PDF release | Vercel Web Analytics code integration exists; exact download-click events unavailable on Hobby plan | Dashboard activation and verification remain separate |
+| Final owner approval | Pass for current direct-delivery flow | No | Manual Production smoke test completed through canonical custom domain | Continue with separate legal/email/rollout gates |
 
 **Decision rules applied:**
 
-- **GO** requires: visual QA passed + link QA passed + legal-safe passed + metadata approved + filename approved + public origin approved + owner approval. **Not all conditions met.**
-- **CONDITIONAL GO** applies because: PDF content is ready; link QA and legal-safe review passed; content is complete; delivery integration and public origin are still pending; no content, legal-safe, or visual content blocker prevents the delivery branch from starting once the owner signs off on visual review.
-- **Decision: CONDITIONAL GO.**
+- **PASS FOR CURRENT DIRECT-DELIVERY FLOW** applies because: PDF content, structural QA, visual QA, canonical brand migration, canonical backlink migration, local delivery QA, and Production delivery smoke test passed.
+- This decision does not activate Production lead capture, Production Email 1, Production automation, or Production email delivery.
+- **Decision: PASS FOR CURRENT DIRECT-DELIVERY FLOW.**
 
 ---
 
@@ -457,11 +487,11 @@ Do not use localhost, preview deployment URLs, or the legacy Vercel origin as ca
 
 | ID | Description | Severity | Owner | Required action | Verification | Target phase |
 |---|---|---|---|---|---|---|
-| BLK-01 | Visual QA not signed off — all 21 pages require project-owner review | High | Project owner | Open PDF, work through `PHASE_0_EBOOK_PDF_QA.md` section 2, record pass/fail per page | Owner records sign-off date and initials in this document and in QA doc | Before delivery |
-| BLK-02 | Production domain not approved — `/ebook-gratis` is non-clickable in PDF | High | Project owner | Approve and document the production base URL; update HTML anchor to `https://<domain>/ebook-gratis`; regenerate PDF | Verify PDF annotation count rises to 7; confirm new URL is HTTPS and points to live route | Before delivery |
+| BLK-01 | Visual QA not signed off — all 21 pages require project-owner review | High | ~~Project owner~~ **RESOLVED** | Visual QA passed for the regenerated 21-page PDF, including page 16 clipping correction and page 21 CTA/backlink area. | Production smoke test recorded. | Resolved for current direct-delivery flow |
+| BLK-02 | Production domain not approved — `/ebook-gratis` is non-clickable in PDF | High | ~~Project owner~~ **RESOLVED** | Canonical Production origin approved; PDF backlink restored to `https://singpronuncerepeat.com/ebook-gratis`. | Deployed artifact backlink verified in Production smoke test. | Resolved |
 | BLK-03 | PDF metadata incomplete — Author, Subject, Keywords not set | Medium | ~~Delivery branch~~ **RESOLVED** | Corrected via `scripts/patch-pdf-metadata.py` (Python stdlib incremental update) in `feat/phase-0-ebook-pdf-delivery`. All five fields now set. | Metadata extraction confirms Author, Subject, Keywords, Creator all present. | Resolved |
 | BLK-04 | PDF Creator field exposes Chrome user-agent string | Low | ~~Delivery branch~~ **RESOLVED** | Creator updated to `Sing Pronunce Repeat / English with Lyrics` in same patch. | Confirmed in metadata extraction. | Resolved |
-| BLK-05 | `/ebook-gratis` page is still a waiting page — not a real download page | High | ~~Delivery branch~~ **RESOLVED** | Page converted in `feat/phase-0-ebook-pdf-delivery`; download CTA, open-in-browser link, content breakdown, and how-to section added; waiting-state copy removed. | Build passes; route renders as static. | Resolved locally — deployed smoke test pending |
+| BLK-05 | `/ebook-gratis` page is still a waiting page — not a real download page | High | ~~Delivery branch~~ **RESOLVED** | Page converted in `feat/phase-0-ebook-pdf-delivery`; download CTA, open-in-browser link, content breakdown, and how-to section added; waiting-state copy removed. | Production ebook page, PDF download, browser-open action, and in-PDF backlink passed smoke testing. | Resolved for current direct-delivery flow |
 | BLK-06 | Email delivery not configured | Medium | Post-delivery | Select provider (MailerLite or Brevo recommended for Phase 0 volume), configure sender identity, unsubscribe handling, and import consent-confirmed contacts from Tally | Send a test delivery email; confirm link opens `/ebook-gratis` | After delivery |
 | BLK-07 | No analytics on PDF download or page visits | Low | Post-delivery | Add basic click tracking on `/ebook-gratis`; no third-party analytics required until Phase 1 | Confirm download click events are logged | After delivery |
 | BLK-08 | Professional legal review not completed | Advisory | Project owner | Before broad public distribution or paid MVP launch, consult a copyright attorney familiar with educational fair-use context and relevant jurisdictions | Attorney review documented | Before Phase 1 scale |
@@ -470,17 +500,13 @@ Do not use localhost, preview deployment URLs, or the legacy Vercel origin as ca
 
 ## 16. Next Branch Recommendation
 
-**Recommended next branch: `feat/phase-0-ebook-pdf-delivery`**
+**Recommended next branch: legal owner configuration or Production Email 1 configuration, depending on the next approved phase.**
 
-Rationale: No content, legal-safe, or structural PDF blocker prevents starting the delivery branch. The PDF content is complete, the link QA is passed, and the conservative legal-safe review is passed. The remaining work is exclusively delivery integration:
+Rationale: The current direct ebook-delivery flow has passed Production smoke testing. Remaining work is outside direct PDF availability:
 
-- Approve and document the production domain (owner action, not a code change).
-- Restore `/ebook-gratis` as a verified HTTPS anchor and regenerate the PDF.
-- Add PDF metadata post-processing (Author, Subject, Keywords, Creator override) to the export script.
-- Copy the approved PDF to `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
-- Convert `/ebook-gratis` from waiting page to real download page per `PHASE_0_EBOOK_DOWNLOAD_PAGE.md`.
-- Run final export validation with the corrected metadata and link.
+- Complete legal-owner configuration and professional legal review before Production lead capture.
+- Configure Production Email 1 only after approval and QA.
+- Complete remaining deliverability QA, including Gmail placement review and Outlook delivery QA.
+- Keep Production lead capture, Production Email 1, Production automation, and Production email delivery inactive until separately approved.
 
-A `fix/` branch would be appropriate only if visual QA reveals content clipping, missing text, or broken layout on pages not yet confirmed. If the owner's visual review identifies corrections, open `fix/phase-0-ebook-pdf-qa` before starting the delivery branch.
-
-**Do not merge this review branch into main before owner visual sign-off is recorded.**
+Do not reopen PDF regeneration work unless a future manual smoke test finds a concrete defect in the deployed artifact.

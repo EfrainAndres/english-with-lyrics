@@ -148,6 +148,10 @@ Priority: High.
 - [ ] Test Outlook delivery with the authenticated sender.
 - [ ] Review spam placement with the authenticated sender. Spam placement was not recorded for the authenticated-sender test.
 - [x] Re-export and validate the ebook PDF so the binary artifact uses `https://singpronuncerepeat.com/ebook-gratis` and `Sing Pronunce Repeat`; legacy backlink and old brand alt text removed from the checked-in source and public PDF binaries.
+- [x] Validate Production PDF download through `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- [x] Validate Production browser-open action for the public PDF.
+- [x] Validate canonical in-PDF backlink to `https://singpronuncerepeat.com/ebook-gratis`.
+- [x] Complete Production PDF smoke test for the regenerated 21-page ebook.
 - [ ] Configure Production Email 1.
 - [ ] Activate the Production sequence only after approval.
 - [ ] Document inbox-placement results.
@@ -251,7 +255,7 @@ Remaining pre-publication work:
 - PDF upload: `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 - `/ebook-gratis` page conversion from waiting page to real download page. Status: complete — `feat/phase-0-ebook-pdf-delivery`.
 - Home page alignment with active delivery flow. Status: complete — `fix/phase-0-home-ebook-delivery-alignment`.
-- Production-origin approval, PDF backlink restoration, seven-link structural validation, source-to-public PDF integrity, metadata completion. Status: locally complete — `fix/phase-0-production-origin-and-pdf-backlink`. Production redeploy and PDF backlink click verification pending.
+- Production-origin approval, PDF backlink restoration, seven-link structural validation, source-to-public PDF integrity, metadata completion, and Production PDF smoke testing. Status: complete for current direct-delivery flow.
 - Email provider setup and delivery automation.
 - Validation-metrics baseline framework. Status: complete — `review/phase-0-validation-metrics-baseline`. See `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`. Actual production data collection pending.
 
@@ -277,7 +281,7 @@ Status: Complete.
 
 Branch: `design/phase-0-ebook-pdf-production`
 
-Status: Complete — structural QA passed. Visual QA: approved by project owner. Link QA: passed. Legal-safe review: conservative review passed. Metadata: complete (corrected in `feat/phase-0-ebook-pdf-delivery`). Publication readiness decision: CONDITIONAL GO.
+Status: Complete — structural QA passed. Visual QA: approved by project owner. Link QA: passed. Legal-safe review: conservative review passed. Metadata: complete (corrected in `feat/phase-0-ebook-pdf-delivery`). Publication readiness decision: PASS FOR CURRENT DIRECT-DELIVERY FLOW.
 
 ### Ebook PDF Delivery
 
@@ -288,8 +292,8 @@ Status: Complete — structural QA passed. Visual QA: approved by project owner.
 - [x] PDF metadata corrected (Author, Subject, Keywords, Creator) via `scripts/patch-pdf-metadata.py`.
 - [x] Owner visual review approved.
 - [x] Source-to-public integrity documented in `docs/validation/PHASE_0_EBOOK_PDF_DELIVERY.md`.
-- [ ] Deployed-environment smoke test — pending deployment.
-- [ ] Production domain approval — needed to restore `/ebook-gratis` clickable backlink inside PDF.
+- [x] Deployed-environment smoke test — passed through the canonical custom domain.
+- [x] Production domain approval — complete; `/ebook-gratis` clickable backlink restored and verified inside the deployed PDF.
 - [ ] Mobile browser QA — pending manual check.
 - [x] Download analytics — Vercel Web Analytics code integration complete (`feat/phase-0-download-analytics`). Dashboard activation and production verification pending.
 - [ ] Email delivery automation — pending provider selection.
@@ -313,15 +317,14 @@ Acceptance criteria:
 
 ### Ebook Download Page
 
-- Maintain `/ebook-gratis` as a waiting page until the ebook PDF is ready.
-- Store the future PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
-- Include CTAs for PDF download, survey, and first group interest.
+- `/ebook-gratis` is active for the current direct ebook-delivery flow.
+- Public PDF remains at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- Include CTAs for PDF download, browser-open action, survey, and first group interest.
 - Include the legal-safe educational note.
 
 Acceptance criteria:
 
-- The current page does not fake a download before the PDF exists.
-- The future page delivers the guide without email attachments.
+- The current page delivers the guide without email attachments.
 - The page supports click tracking for download, survey, and first group interest.
 - The page does not include full commercial lyrics or full translated lyrics.
 
