@@ -138,12 +138,15 @@ Priority: High.
 - [x] Configure combined Hostinger/MailerLite SPF.
 - [x] Configure MailerLite DKIM.
 - [x] Complete MailerLite domain authentication for `singpronuncerepeat.com`.
-- [ ] Run post-authentication Hostinger inbound mailbox regression.
-- [ ] Run post-authentication Hostinger outbound mailbox regression.
-- [ ] Test Preview Email 1 with the authenticated sender.
-- [ ] Review Gmail inbox placement with the authenticated sender.
+- [x] Run post-authentication Hostinger inbound mailbox regression.
+- [x] Run post-authentication Hostinger outbound mailbox regression.
+- [x] Test Preview Email 1 with the authenticated sender.
+- [x] Verify Preview CTA after sender authentication.
+- [x] Verify Preview PDF access after sender authentication.
+- [x] Verify Preview unsubscribe after sender authentication.
+- [ ] Review Gmail inbox placement with the authenticated sender. Gmail technical delivery passed, but exact folder placement was not recorded.
 - [ ] Test Outlook delivery with the authenticated sender.
-- [ ] Review spam placement with the authenticated sender.
+- [ ] Review spam placement with the authenticated sender. Spam placement was not recorded for the authenticated-sender test.
 - [ ] Re-export and validate the ebook PDF so the binary artifact uses `https://singpronuncerepeat.com/ebook-gratis` and `Sing Pronunce Repeat`; current PDF source configuration is aligned, but the checked-in binary still contains the legacy backlink and old brand alt text.
 - [ ] Configure Production Email 1.
 - [ ] Activate the Production sequence only after approval.

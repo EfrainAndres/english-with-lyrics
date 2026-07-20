@@ -82,7 +82,7 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 | Production origin + PDF backlink | Production origin complete — canonical Production origin is `https://singpronuncerepeat.com`; HTTPS, Vercel Production connection, Hostinger DNS connection, apex loading, and permanent `www` redirect verified. PDF source configuration is aligned, but checked-in PDF binaries still need controlled re-export and validation. |
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
-| Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PENDING; authenticated-sender Preview QA: PENDING; Production email activation: BLOCKED |
+| Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
 | Public legal routes | Locally complete — `feat/phase-0-public-legal-routes`; `/privacidad` and `/tratamiento-de-datos` implemented with safe draft/preparation rendering, noindex metadata, and footer links; owner details, privacy contact, and professional legal review still pending; Preview manual QA pending |
 
 ### Launch Steps
@@ -116,7 +116,7 @@ Staged rollout:
 11. Preview test email sent.
 12. Preview CTA validated.
 13. Unsubscribe tested.
-14. Custom Production web domain, professional mailbox, and MailerLite domain authentication completed; post-authentication mailbox regression and authenticated-sender Preview QA pending.
+14. Custom Production web domain, professional mailbox, MailerLite domain authentication, post-authentication mailbox regression, and authenticated-sender Preview QA completed.
 15. Public legal pages published.
 16. Production Email 1 configured.
 17. Production automation remains inactive until approval.
@@ -131,7 +131,7 @@ Staged rollout:
 5. Preview form created.
 6. Preview automation prepared.
 7. Sender verified.
-8. Domain authenticated. Status: complete for `singpronuncerepeat.com`; authenticated-sender regression remains pending.
+8. Domain authenticated. Status: complete for `singpronuncerepeat.com`; authenticated-sender Preview regression passed.
 9. Export and deletion tested.
 10. Unsubscribe tested.
 11. Production identifiers created but inactive.
@@ -162,11 +162,11 @@ Current implementation note:
 - `/gracias` is implemented and has passed deployed Preview QA.
 - `/privacidad` and `/tratamiento-de-datos` are implemented with safe draft/preparation rendering and noindex metadata; they are not yet approved public policies and are not linked as final consent documents from the Preview lead form.
 - Preview redirect configuration is still pending in MailerLite.
-- Email 1 content is documented; Preview manual configuration is still pending.
+- Email 1 content is documented; authenticated-sender Preview regression has passed.
 - Production direct delivery remains active.
 - Production form activation remains blocked.
 - Production email-delivery claims remain blocked.
-- Legal, privacy, and sender-domain gates remain blocking.
+- Legal-owner configuration, professional legal review, final Production consent linking, remaining deliverability QA, Production Email 1, Production automation, and controlled rollout approval remain blocking.
 
 ## Phase 1 Launch: Paid MVP
 

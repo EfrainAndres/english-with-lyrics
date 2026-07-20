@@ -163,13 +163,26 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [ ] Manual MailerLite dashboard action: mobile rendering checked.
 - [ ] Manual MailerLite dashboard action: inbox placement passed.
 - [x] Manual MailerLite dashboard action: spam-folder placement checked.
-- [ ] Hostinger inbound mailbox regression tested after authentication.
-- [ ] Hostinger outbound mailbox regression tested after authentication.
-- [ ] Preview Email 1 tested with the authenticated sender.
-- [ ] Preview CTA tested after sender authentication.
-- [ ] Preview unsubscribe tested after sender authentication.
+- [x] Hostinger inbound mailbox regression tested after MailerLite authentication.
+- [x] Hostinger outbound mailbox regression tested after MailerLite authentication.
+- [x] No bounce observed during the mailbox regression.
+- [x] Sender display name remained `Sing Pronunce Repeat`.
+- [x] Preview Email 1 tested with the authenticated sender.
+- [x] Preview form submitted using a new controlled subscriber.
+- [x] Subscriber entered `SPR - Preview - Ebook Leads`.
+- [x] Preview automation trigger executed.
+- [x] Authenticated Email 1 was delivered.
+- [x] Preview CTA opened `/gracias?source=email`.
+- [x] Plain fallback URL opened `/gracias?source=email`.
+- [x] PDF download worked.
+- [x] PDF browser-open action worked.
+- [x] Real unsubscribe link worked.
+- [x] Subscriber unsubscribe status was verified.
+- [x] No Production group was involved.
+- [x] No Production automation was involved.
+- [x] No Production email was sent.
 - [ ] Gmail inbox placement reviewed with the authenticated sender.
-- [ ] Outlook delivery reviewed with the authenticated sender.
+- [ ] Outlook delivery tested with authenticated sender.
 - [ ] Spam placement reviewed with the authenticated sender.
 - [ ] Repository preparation: no Production identifiers appear in Preview defaults.
 
@@ -183,6 +196,7 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [ ] Production Email 1 configured.
 - [ ] Production automation configured.
 - [ ] Production email delivery activated.
+- [ ] Production lead capture activated.
 - [ ] Future implementation: Production automation tested but inactive until launch approval.
 - [ ] Controlled Production rollout approved.
 
