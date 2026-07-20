@@ -82,7 +82,7 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 | Production origin + PDF backlink | Complete — canonical Production origin is `https://singpronuncerepeat.com`; HTTPS, Vercel Production connection, Hostinger DNS connection, apex loading, and permanent `www` redirect verified. Checked-in source and public PDF binaries were re-exported and validated with the canonical `/ebook-gratis` backlink and official `Sing Pronunce Repeat` brand. Production in-PDF canonical backlink: PASS. Current direct ebook delivery: ACTIVE. Production email delivery: INACTIVE. Production lead capture: INACTIVE. |
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
-| Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
+| Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Gmail Primary placement: PASS; Hotmail inbox placement: PASS — Other tab; consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS; organization-managed Outlook technical delivery: PASS; organization-managed Outlook inbox placement: FAILED CURRENT TENANT TEST; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
 | Public legal routes | Locally complete — `feat/phase-0-public-legal-routes`; `/privacidad` and `/tratamiento-de-datos` implemented with safe draft/preparation rendering, noindex metadata, and footer links; owner details, privacy contact, and professional legal review still pending; Preview manual QA pending |
 
 ### Launch Steps
@@ -131,7 +131,7 @@ Staged rollout:
 5. Preview form created.
 6. Preview automation prepared.
 7. Sender verified.
-8. Domain authenticated. Status: complete for `singpronuncerepeat.com`; authenticated-sender Preview regression passed.
+8. Domain authenticated. Status: complete for `singpronuncerepeat.com`; authenticated-sender Preview regression passed; controlled consumer deliverability passed for Gmail Primary and Hotmail Inbox — Other; organization-managed Outlook placement remains a known Junk limitation for the current tenant test.
 9. Export and deletion tested.
 10. Unsubscribe tested.
 11. Production identifiers created but inactive.
@@ -163,10 +163,12 @@ Current implementation note:
 - `/privacidad` and `/tratamiento-de-datos` are implemented with safe draft/preparation rendering and noindex metadata; they are not yet approved public policies and are not linked as final consent documents from the Preview lead form.
 - Preview redirect configuration is still pending in MailerLite.
 - Email 1 content is documented; authenticated-sender Preview regression has passed.
+- Controlled consumer deliverability has passed for the current Gmail and Hotmail tests; Hotmail reached Inbox — Other, not Focused.
+- Organization-managed Outlook technical delivery passed, but placement failed the current tenant test because the message landed in Junk. This remains a known limitation and is not generalized to every corporate Microsoft tenant.
 - Production direct delivery remains active.
 - Production form activation remains blocked.
 - Production email-delivery claims remain blocked.
-- Legal-owner configuration, professional legal review, final Production consent linking, remaining deliverability QA, Production Email 1, Production automation, and controlled rollout approval remain blocking.
+- Legal-owner configuration, professional legal review, final Production consent linking, corporate deliverability limitations, Production Email 1, Production automation, and controlled rollout approval remain blocking.
 
 ## Phase 1 Launch: Paid MVP
 

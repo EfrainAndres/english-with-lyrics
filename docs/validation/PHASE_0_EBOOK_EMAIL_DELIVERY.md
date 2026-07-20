@@ -30,6 +30,14 @@ Production email delivery: INACTIVE
 
 Production readiness: NO-GO
 
+Controlled Preview deliverability: PASS
+
+Consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS
+
+Corporate Outlook limitation: OPEN
+
+Broad Production deliverability approval: NO-GO
+
 ## Architecture
 
 - MailerLite group-triggered automation.
@@ -43,8 +51,9 @@ Production readiness: NO-GO
 - Production automation remains inactive.
 - Production email delivery remains inactive.
 - Emails 2–4 remain planning-only.
-- Gmail technical delivery passed, but the exact Gmail folder was not recorded for the authenticated-sender test.
-- Outlook delivery remains pending.
+- Gmail technical delivery passed and current controlled placement was Primary.
+- Consumer Hotmail technical delivery passed and current controlled placement was Inbox — Other tab.
+- Organization-managed Outlook technical delivery passed, but current controlled placement was Junk.
 - Inbox placement is not approved for Production.
 - Authenticated-sender Preview regression passed after the sender-domain configuration changed.
 
@@ -150,9 +159,18 @@ Production readiness: NO-GO
 - Real unsubscribe: PASS
 - Subscriber unsubscribe status: PASS
 - Gmail technical delivery: PASS
-- Gmail inbox placement: NOT RECORDED
-- Spam placement: NOT RECORDED
-- Outlook delivery: PENDING
+- Gmail placement: PRIMARY
+- Gmail inbox-placement decision: PASS FOR CURRENT CONTROLLED TEST
+- Hotmail technical delivery: PASS
+- Hotmail placement: INBOX — OTHER TAB
+- Hotmail consumer inbox placement: PASS FOR CURRENT CONTROLLED TEST
+- Organization-managed Outlook technical delivery: PASS
+- Organization-managed Outlook placement: JUNK
+- Organization-managed Outlook inbox placement: FAIL FOR CURRENT TENANT TEST
+- Organization-managed Outlook bounce observed: NO
+- Consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS
+- Corporate Outlook limitation: OPEN
+- Broad Production deliverability approval: NO-GO
 - Production group involved: NO
 - Production automation involved: NO
 - Production email sent: NO
@@ -161,9 +179,19 @@ Production readiness: NO-GO
 
 - Technical email delivery: PASS.
 - Preview automation delivery: PASS.
-- Gmail delivery was observed.
-- Spam placement was observed previously with the original free-domain sender. Spam placement was not recorded for the authenticated-sender regression.
-- Inbox placement must not be treated as approved for Production.
+- Gmail technical delivery: PASS.
+- Gmail placement: PRIMARY.
+- Consumer Hotmail technical delivery: PASS.
+- Consumer Hotmail placement: INBOX — OTHER TAB.
+- Organization-managed Outlook technical delivery: PASS.
+- Organization-managed Outlook placement: JUNK.
+- Organization-managed Outlook inbox placement: FAIL FOR CURRENT TENANT TEST.
+- Consumer inbox placement: PASS FOR CURRENT CONTROLLED TESTS.
+- Spam placement was observed previously with the original free-domain sender. In the current authenticated-sender tests, consumer Hotmail Junk placement was not observed, while organization-managed Outlook Junk placement remains a known limitation for the current tenant.
+- Hotmail reached the secondary `Other` tab rather than the `Focused` tab. Do not classify `Other` as Spam or Junk.
+- The current Hotmail result improved from the previous Junk placement.
+- Organization-managed Outlook may be influenced by organization-specific filtering, but the evidence does not prove this is the only cause.
+- Broad Production deliverability remains NO-GO.
 - MailerLite automatic footer remained present.
 - Unsubscribe remained present.
 - Footer language was adjusted or reviewed where supported.
@@ -197,4 +225,4 @@ Preview decision: PASS
 Production decision: NO-GO FOR PRODUCTION
 
 Reason:
-The original controlled Preview automation successfully delivered Email 1 to a test subscriber. After MailerLite sending-domain authentication was verified for `singpronuncerepeat.com`, the authenticated-sender Preview regression also passed: Preview form submission, consent, group membership, automation trigger, Email 1 delivery, sender display name, authenticated sender address, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, PDF download, browser-open action, and subscriber-specific unsubscribe were verified. Production remains blocked by public legal routes, approved responsible-party information, footer approval, Production MailerLite configuration, deliverability QA, rights-operation QA, funnel analytics, and legal approval.
+The original controlled Preview automation successfully delivered Email 1 to a test subscriber. After MailerLite sending-domain authentication was verified for `singpronuncerepeat.com`, the authenticated-sender Preview regression also passed: Preview form submission, consent, group membership, automation trigger, Email 1 delivery, sender display name, authenticated sender address, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, PDF download, browser-open action, and subscriber-specific unsubscribe were verified. Current consumer deliverability passed for controlled Gmail Primary placement and Hotmail Inbox — Other tab placement. Organization-managed Outlook technical delivery passed, but inbox placement failed for the current tenant because the message was placed in Junk. Production remains blocked by public legal routes, approved responsible-party information, footer approval, Production MailerLite configuration, broad Production deliverability approval, rights-operation QA, funnel analytics, and legal approval.

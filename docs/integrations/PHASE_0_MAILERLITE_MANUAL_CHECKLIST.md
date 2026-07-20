@@ -97,6 +97,7 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: Preview Email 1 content replaced with the approved delivery copy.
 - [x] Manual MailerLite dashboard action: Preview preheader configured.
 - [x] Manual MailerLite dashboard action: sender display name set to `Sing Pronunce Repeat`.
+- [x] Manual MailerLite dashboard action: `hola@singpronuncerepeat.com` configured as the authenticated content sender.
 - [x] Manual MailerLite dashboard action: Preview Email 1 subject configured with `[TEST]`.
 - [x] Manual MailerLite dashboard action: Preview-only CTA updated to Preview `/gracias?source=email`.
 - [x] Manual MailerLite dashboard action: plain fallback URL configured.
@@ -159,9 +160,21 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: Production automation was not involved.
 - [x] Manual MailerLite dashboard action: Production contacts were not created.
 - [x] Manual MailerLite dashboard action: Gmail delivery tested.
-- [ ] Manual MailerLite dashboard action: Outlook delivery tested.
+- [x] Manual MailerLite dashboard action: Gmail technical delivery verified.
+- [x] Manual MailerLite dashboard action: Gmail Primary placement verified.
+- [x] Manual MailerLite dashboard action: Consumer Hotmail technical delivery verified.
+- [x] Manual MailerLite dashboard action: Consumer Hotmail inbox placement verified.
+- [x] Manual MailerLite dashboard action: Consumer Hotmail `Other` tab placement recorded.
+- [x] Manual MailerLite dashboard action: Organization-managed Outlook technical delivery verified.
+- [x] Manual MailerLite dashboard action: Organization-managed Outlook Junk placement recorded.
+- [x] Manual MailerLite dashboard action: No bounce observed during the current controlled tests.
+- [x] Manual MailerLite dashboard action: Consumer inbox-placement test passed for Gmail and Hotmail.
+- [x] Manual MailerLite dashboard action: Outlook delivery tested with authenticated sender.
+- [ ] Manual MailerLite dashboard action: Organization-managed Outlook inbox placement passed.
+- [ ] Manual MailerLite dashboard action: Additional corporate Microsoft tenant tested.
+- [ ] Manual MailerLite dashboard action: Corporate Outlook placement limitation resolved.
 - [ ] Manual MailerLite dashboard action: mobile rendering checked.
-- [ ] Manual MailerLite dashboard action: inbox placement passed.
+- [ ] Manual MailerLite dashboard action: broad Production inbox placement passed.
 - [x] Manual MailerLite dashboard action: spam-folder placement checked.
 - [x] Hostinger inbound mailbox regression tested after MailerLite authentication.
 - [x] Hostinger outbound mailbox regression tested after MailerLite authentication.
@@ -181,9 +194,9 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] No Production group was involved.
 - [x] No Production automation was involved.
 - [x] No Production email was sent.
-- [ ] Gmail inbox placement reviewed with the authenticated sender.
-- [ ] Outlook delivery tested with authenticated sender.
-- [ ] Spam placement reviewed with the authenticated sender.
+- [x] Gmail inbox placement reviewed with the authenticated sender.
+- [x] Outlook delivery tested with authenticated sender.
+- [x] Spam/Junk placement reviewed with the authenticated sender.
 - [ ] Repository preparation: no Production identifiers appear in Preview defaults.
 
 ## 15. Production approval

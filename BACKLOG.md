@@ -144,9 +144,15 @@ Priority: High.
 - [x] Verify Preview CTA after sender authentication.
 - [x] Verify Preview PDF access after sender authentication.
 - [x] Verify Preview unsubscribe after sender authentication.
-- [ ] Review Gmail inbox placement with the authenticated sender. Gmail technical delivery passed, but exact folder placement was not recorded.
-- [ ] Test Outlook delivery with the authenticated sender.
-- [ ] Review spam placement with the authenticated sender. Spam placement was not recorded for the authenticated-sender test.
+- [x] Validate authenticated content sender `hola@singpronuncerepeat.com` in controlled deliverability testing.
+- [x] Review Gmail Primary placement with the authenticated sender.
+- [x] Validate consumer Hotmail inbox placement with the authenticated sender.
+- [x] Record consumer Hotmail `Other` tab placement evidence.
+- [x] Complete current consumer deliverability test. Gmail Primary and Hotmail Inbox — Other both passed for the current controlled tests.
+- [x] Test organization-managed Outlook technical delivery with the authenticated sender. Technical delivery passed, but placement was Junk.
+- [ ] Test an additional organization-managed Microsoft tenant when appropriate.
+- [ ] Improve or resolve the corporate Outlook inbox-placement limitation.
+- [ ] Review broad Production deliverability after additional corporate Microsoft evidence.
 - [x] Re-export and validate the ebook PDF so the binary artifact uses `https://singpronuncerepeat.com/ebook-gratis` and `Sing Pronunce Repeat`; legacy backlink and old brand alt text removed from the checked-in source and public PDF binaries.
 - [x] Validate Production PDF download through `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 - [x] Validate Production browser-open action for the public PDF.

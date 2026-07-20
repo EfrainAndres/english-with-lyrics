@@ -43,6 +43,17 @@ Production readiness: NO-GO FOR PRODUCTION
 | Post-authentication Hostinger outbound regression | PASS |
 | Post-authentication bounce check | PASS |
 | Authenticated-sender Preview Email 1 regression | PASS |
+| Gmail technical delivery | PASS |
+| Gmail placement | PRIMARY |
+| Hotmail technical delivery | PASS |
+| Hotmail placement | INBOX — OTHER TAB |
+| Hotmail consumer inbox placement | PASS FOR CURRENT CONTROLLED TEST |
+| Organization-managed Outlook technical delivery | PASS |
+| Organization-managed Outlook placement | JUNK |
+| Organization-managed Outlook inbox placement | FAIL FOR CURRENT TENANT TEST |
+| Consumer deliverability | PASS FOR CURRENT CONTROLLED TESTS |
+| Corporate Outlook limitation | OPEN |
+| Broad Production deliverability approval | NO-GO |
 | Production inbox placement | PENDING |
 | Production Email 1 | INACTIVE |
 | Production automation | INACTIVE |
@@ -54,7 +65,7 @@ MailerLite domain authentication was completed manually after the required DKIM,
 
 Post-authentication mailbox and authenticated-sender Preview regression QA were completed manually using controlled addresses. No subscriber addresses, message content, screenshots, DNS tokens, provider IDs, passwords, or private account information are stored in the repository.
 
-Hostinger MX, SPF, DKIM, and DMARC records remain configured for the Hostinger mailbox. Hostinger and MailerLite authorization coexist in one apex SPF record, and MailerLite DKIM uses a separate selector from Hostinger DKIM. This completes MailerLite sender-domain readiness for controlled testing, but does not activate Production sending. Outlook delivery QA, Production inbox-placement QA, Production Email 1, Production automation, Production lead capture, controlled Production rollout, and MailerLite Production delivery remain pending/inactive.
+Hostinger MX, SPF, DKIM, and DMARC records remain configured for the Hostinger mailbox. Hostinger and MailerLite authorization coexist in one apex SPF record, and MailerLite DKIM uses a separate selector from Hostinger DKIM. This completes MailerLite sender-domain readiness for controlled testing, but does not activate Production sending. Controlled consumer deliverability now passes for Gmail Primary placement and Hotmail Inbox — Other tab placement. Organization-managed Outlook technical delivery passed, but inbox placement failed for the current tenant because the message was placed in Junk. Production inbox-placement approval, Production Email 1, Production automation, Production lead capture, controlled Production rollout, and MailerLite Production delivery remain pending/inactive.
 
 ## Capability evidence
 
@@ -174,9 +185,28 @@ Still requiring account-level verification:
 | Technical email delivery | Passed |
 | Preview automation delivery | Passed |
 | Gmail technical delivery | PASS |
-| Gmail inbox placement | NOT RECORDED |
-| Spam placement | NOT RECORDED |
-| Outlook delivery QA | PENDING |
+| Gmail placement | PRIMARY |
+| Gmail inbox-placement decision | PASS FOR CURRENT CONTROLLED TEST |
+| Hotmail technical delivery | PASS |
+| Hotmail placement | INBOX — OTHER TAB |
+| Hotmail inbox-placement decision | PASS FOR CURRENT CONTROLLED TEST |
+| Hotmail Focused placement | NOT ACHIEVED |
+| Hotmail Junk placement | NOT OBSERVED IN CURRENT TEST |
+| Organization-managed Outlook technical delivery | PASS |
+| Organization-managed Outlook placement | JUNK |
+| Organization-managed Outlook inbox-placement decision | FAIL FOR CURRENT TENANT TEST |
+| Organization-managed Outlook bounce observed | NO |
+| Consumer technical delivery | PASS |
+| Consumer inbox placement | PASS FOR CURRENT CONTROLLED TESTS |
+| Corporate Outlook technical delivery | PASS |
+| Corporate Outlook inbox placement | FAIL FOR CURRENT TENANT TEST |
+| Controlled Preview deliverability readiness | PASS |
+| Broad Production deliverability readiness | NO-GO |
+| SPF | PASS |
+| DKIM for `singpronuncerepeat.com` | PASS |
+| DKIM for MailerLite | PASS |
+| DMARC | PASS |
+| Composite authentication | PASS |
 | Free-domain sender warning observed | Yes |
 | Custom-domain authentication required before Production | Yes |
 
@@ -184,12 +214,17 @@ Notes:
 
 - The Preview workflow test remains valid because the provider-hosted form, isolated group, subscriber activation, automation trigger, and test-email delivery all worked end to end.
 - The authenticated-sender Preview regression passed after the sender-domain configuration changed.
-- Current inbox placement is not sufficient for Production.
+- Current consumer inbox placement passed for the controlled Gmail and Hotmail tests, but broad Production deliverability remains NO-GO.
 - Hostinger mailbox SPF, DKIM, DMARC, visible sender name, inbound delivery, outbound delivery, and bounce check are verified for `privacidad@singpronuncerepeat.com`.
 - Previous Hostinger mailbox tests remain historical passed evidence, and post-authentication inbound and outbound mailbox regression passed after the sending-domain DNS change.
 - MailerLite domain verification, SPF, DKIM, and domain authentication are verified for `singpronuncerepeat.com`.
-- Gmail technical delivery passed, but the exact Gmail folder was not recorded. Gmail inbox placement and spam placement are therefore not recorded for this test.
-- Outlook delivery QA, Production Email 1, Production automation, Production lead capture, controlled Production rollout, and Production email delivery remain pending/inactive.
+- Gmail achieved Primary placement in the current controlled consumer test.
+- Consumer Hotmail achieved inbox placement in the `Other` tab, not Junk. Do not classify the `Other` tab as Spam or Junk.
+- The current Hotmail result is a significant improvement over the earlier Hotmail Junk result.
+- Organization-managed Outlook technical delivery passed, no bounce was observed, but the message was placed in Junk. This is a known limitation for the current tenant.
+- Organization-specific policies may influence corporate delivery, but the evidence does not prove that this is the only cause. A single organization-managed account is not sufficient to generalize behavior across all corporate Microsoft tenants.
+- No new DNS or sender-address change is recommended at this stage.
+- Production Email 1, Production automation, Production lead capture, controlled Production rollout, and Production email delivery remain pending/inactive.
 - Production deliverability remains blocked.
 - Provider due diligence remains incomplete.
 
