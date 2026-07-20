@@ -7,12 +7,21 @@
 - Environment: Non-production preparation.
 - Production activation: Blocked.
 - Account creation: Manual.
-- Domain authentication: Pending manual configuration unless already verified.
+- Authenticated domain: `singpronuncerepeat.com`.
+- Domain verification: VERIFIED.
+- SPF: VERIFIED.
+- DKIM: VERIFIED.
+- Sending-domain authentication: VERIFIED.
+- Production sending: INACTIVE.
 - Legal approval: Pending.
 - Public lead capture: Not active.
 - Current direct ebook delivery: Active.
 
 This document prepares the provider boundary for the approved soft-gated funnel. It does not activate lead capture, `/gracias`, production automations, or production email sends.
+
+MailerLite sending-domain authentication has been completed for `singpronuncerepeat.com`. Hostinger remains the authoritative DNS provider. Hostinger and MailerLite coexist in a single apex SPF record; only one record beginning with `v=spf1` should exist at the apex. Hostinger and MailerLite DKIM records coexist using different selectors. Hostinger MX, DMARC, autoconfig, autodiscover, Vercel web DNS, and the canonical web domain remain preserved.
+
+Exact verification tokens, full DNS values, complete DKIM targets, screenshots, provider IDs, mailbox credentials, subscriber information, and private account data must not be committed. Production sending requires separate approval, authenticated-sender regression QA, inbox-placement review, and controlled rollout approval.
 
 ## Official capability verification
 
@@ -281,24 +290,32 @@ This branch documents the automation only. It must not activate the Production a
 - Sender display name approved.
 - Sender mailbox created and accessible.
 - Domain ownership confirmed.
-- SPF configured.
-- DKIM configured.
-- DMARC reviewed and configured as approved.
+- Domain verification verified.
+- Combined SPF configured and detected.
+- MailerLite DKIM configured and detected.
+- MailerLite sending-domain authentication verified.
+- DMARC reviewed and retained.
+- Hostinger MX retained.
+- Hostinger DKIM retained.
+- Vercel web DNS retained.
 - Domain alignment reviewed.
 - Reply-to address defined.
 - Bounce handling reviewed.
-- Sender verification completed.
-- Test delivery to Gmail passed.
-- Test delivery to Outlook passed.
+- Sender verification pending.
+- Post-authentication Hostinger inbound mailbox regression pending.
+- Post-authentication Hostinger outbound mailbox regression pending.
+- Authenticated-sender Preview Email 1 regression pending.
+- Test delivery to Gmail pending with authenticated sender.
+- Test delivery to Outlook pending with authenticated sender.
 - Mobile rendering checked.
-- Spam-folder placement checked.
-- Unsubscribe rendering checked.
+- Spam-folder placement pending with authenticated sender.
+- Unsubscribe rendering pending with authenticated sender.
 
 ### Blocking rules
 
 - Do not modify DNS automatically from this repository.
-- Do not claim sender verification or authentication is complete unless the owner confirms it.
-- If no branded mailbox or custom domain exists, keep production activation blocked.
+- Do not claim sender verification or production sending is complete unless the owner confirms it.
+- Sender-domain authentication is verified for controlled testing only; keep production activation blocked until regression and rollout gates pass.
 - Temporary account-level testing may exist, but a free personal mailbox is not an acceptable final production sender setup.
 
 ## Environment isolation

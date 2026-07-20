@@ -19,13 +19,23 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 3. Domain
 
-- [ ] Owner input: branded sender mailbox selected.
-- [ ] DNS action: domain ownership confirmed.
-- [ ] DNS action: SPF configured or reviewed.
-- [ ] DNS action: DKIM configured or reviewed.
-- [ ] DNS action: DMARC reviewed.
-- [ ] Manual MailerLite dashboard action: sender/domain added.
-- [ ] Manual MailerLite dashboard action: sender/domain verification completed.
+- [x] Owner input: branded sender mailbox selected.
+- [x] DNS action: domain ownership confirmed.
+- [x] MailerLite sending domain added.
+- [x] Domain-verification TXT record added.
+- [x] Domain-verification TXT record detected.
+- [x] MailerLite DKIM CNAME added.
+- [x] MailerLite DKIM CNAME detected.
+- [x] Hostinger and MailerLite SPF authorization merged.
+- [x] Combined SPF detected.
+- [x] Only one apex SPF record retained.
+- [x] MailerLite domain authentication completed.
+- [x] Hostinger MX records retained.
+- [x] Hostinger DKIM records retained.
+- [x] MailerLite DKIM selector retained.
+- [x] DMARC retained.
+- [x] Vercel web DNS records retained.
+- [ ] Manual MailerLite dashboard action: sender verification completed.
 - [ ] Manual MailerLite dashboard action: domain alignment reviewed.
 - [ ] DNS action: bounce/reply-to mailbox path reviewed.
 
@@ -153,15 +163,27 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [ ] Manual MailerLite dashboard action: mobile rendering checked.
 - [ ] Manual MailerLite dashboard action: inbox placement passed.
 - [x] Manual MailerLite dashboard action: spam-folder placement checked.
+- [ ] Hostinger inbound mailbox regression tested after authentication.
+- [ ] Hostinger outbound mailbox regression tested after authentication.
+- [ ] Preview Email 1 tested with the authenticated sender.
+- [ ] Preview CTA tested after sender authentication.
+- [ ] Preview unsubscribe tested after sender authentication.
+- [ ] Gmail inbox placement reviewed with the authenticated sender.
+- [ ] Outlook delivery reviewed with the authenticated sender.
+- [ ] Spam placement reviewed with the authenticated sender.
 - [ ] Repository preparation: no Production identifiers appear in Preview defaults.
 
 ## 15. Production approval
 
 - [ ] Owner input: controlled rollout approved.
 - [ ] Legal review: production collection approved.
-- [ ] DNS action: sender-domain authentication confirmed.
+- [x] DNS action: sender-domain authentication confirmed for `singpronuncerepeat.com`.
 - [ ] Future implementation: `/gracias` exists and passes QA.
 - [ ] Future implementation: lead form integration exists and passes QA.
+- [ ] Production Email 1 configured.
+- [ ] Production automation configured.
+- [ ] Production email delivery activated.
 - [ ] Future implementation: Production automation tested but inactive until launch approval.
+- [ ] Controlled Production rollout approved.
 
 Preview Email 1 end-to-end verification was completed manually using controlled test addresses. The real MailerLite automation email reached the subscriber, opened the Preview thank-you page, provided PDF access, and supported a successful subscriber-specific unsubscribe. No subscriber addresses, IP addresses, screenshots, provider IDs, or Preview share tokens are stored in this repository.
