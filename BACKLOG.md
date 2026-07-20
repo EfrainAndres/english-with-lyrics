@@ -82,11 +82,39 @@ Priority: High.
 - [x] Define the retention framework without unsupported statutory periods.
 - [x] Create the privacy implementation checklist and provider diligence gates.
 - [x] Record the Phase 0 privacy decision log.
-- [ ] Supply responsible-party identity, operating status, location, and privacy contact.
+- [x] Implement server-only legal-owner configuration architecture.
+- [x] Complete the Phase 0 legal-owner configuration.
+- [x] Add environment-variable support for publication status, owner type, responsible-party contact and policy dates without committing personal values.
+- [x] Approve the retention-policy draft without an unsupported fixed period.
+- [x] Approve the minors-policy draft as not intentionally directed to minors.
+- [x] Create the Phase 0 provider inventory.
+- [x] Document the draft data-subject rights-request workflow.
+- [x] Complete and verify the domicile/correspondence Preview correction while preserving the separate environment-field mapping.
+- [x] Complete the initial owner rendered-copy review. Status: CHANGES REQUESTED.
+- [x] Complete the initial internal structured review. Status: CHANGES REQUESTED.
+- [x] Separate the consultation and claim deadlines and extensions in the legal draft.
+- [x] Complete the titular-rights summary, including free access, use information and the SIC complaint path.
+- [x] Complete the operational claim-procedure draft.
+- [x] Identify the project role responsible for petitions, consultations and claims.
+- [x] Add the internal privacy-to-treatment-policy link.
+- [x] Add accessible Colombian-mobile display and `tel:` formatting without hardcoding a number.
+- [x] Complete the legal correction cycle.
+- [x] Complete protected Preview final regression QA after the review corrections.
+- [x] Complete responsive legal-page QA on desktop and mobile.
+- [x] Complete keyboard-navigation and visible-focus-state QA.
+- [x] Validate `noindex, nofollow` in rendered legal-page HTML.
+- [x] Validate that page metadata and Open Graph metadata contain no personal owner values.
+- [x] Complete the Production pending-state regression with no personal fields or legal draft rendered.
+- [x] Close the internal structured legal review. Status: PASS.
+- [x] Obtain owner re-review and approval of the rendered legal pages.
 - [ ] Complete professional legal review.
+- [ ] Complete provider contractual/DPA review.
+- [ ] Complete final Production consent linking.
+- [ ] Approve Production legal publication.
 - [x] Create the public `/privacidad` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
 - [x] Create the public `/tratamiento-de-datos` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval.
-- [ ] Create and operate the approved contact/privacy-request route.
+- [x] Confirm the operational privacy mailbox and document the draft contact/privacy-request workflow.
+- [ ] Test the complete rights-request workflow, including provider export, correction and deletion operations.
 - [ ] Complete MailerLite due diligence and international-processing review.
 - [x] Verify current official MailerLite capabilities required for the selected provider direction.
 - [x] Define the MailerLite group taxonomy.
@@ -176,7 +204,7 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy drafting status: documentation foundation complete; public legal routes (`/privacidad`, `/tratamiento-de-datos`) implemented with safe incomplete-state rendering and noindex metadata in `feat/phase-0-public-legal-routes`; owner details, privacy contact, professional legal review, and production approval remain pending. See:
+Privacy drafting status: legal-owner configuration, the internal correction cycle, internal structured review, protected Preview final regression, responsive/accessibility QA, robots and metadata privacy validation, Production pending-state regression, and owner rendered-copy approval are complete. Owner approval is not professional legal approval. Professional Colombian legal review, provider contractual/DPA review, final Production consent linking, Production legal publication and controlled rollout remain pending. Production email, automation and lead capture remain inactive. See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`
@@ -187,6 +215,9 @@ Privacy drafting status: documentation foundation complete; public legal routes 
 - `docs/integrations/PHASE_0_MAILERLITE_SETUP.md`
 - `docs/integrations/PHASE_0_MAILERLITE_MANUAL_CHECKLIST.md`
 - `docs/validation/PHASE_0_EMAIL_PROVIDER_READINESS.md`
+- `docs/legal/PHASE_0_DATA_SUBJECT_RIGHTS_WORKFLOW.md`
+- `docs/legal/PHASE_0_PROVIDER_INVENTORY.md`
+- `docs/validation/PHASE_0_LEGAL_OWNER_CONFIGURATION.md`
 
 ### Ebook Content Plan
 

@@ -88,7 +88,7 @@ MailerLite is the proposed Phase 0 email provider for the future soft-gated lead
 - HTTPS, Vercel Production connection, and Hostinger DNS connection are verified.
 - Professional privacy mailbox: VERIFIED — `privacidad@singpronuncerepeat.com`.
 - Legacy Vercel origin: NON-CANONICAL TECHNICAL FALLBACK. Public links and metadata should use the canonical custom domain.
-- MailerLite sender verification, MailerLite domain authentication, and Production email delivery remain pending/inactive.
+- MailerLite sending-domain authentication and the controlled Preview workflow are verified. Production lead capture, Production Email 1, Production automation, and Production email delivery remain inactive.
 - Manual setup checklist: `docs/integrations/PHASE_0_MAILERLITE_MANUAL_CHECKLIST.md`
 - Setup and readiness docs: `docs/integrations/PHASE_0_MAILERLITE_SETUP.md` and `docs/validation/PHASE_0_EMAIL_PROVIDER_READINESS.md`
 - Preview and Production identifiers must remain isolated.
@@ -120,18 +120,28 @@ NEXT_PUBLIC_PRIVACY_POLICY_URL=
 
 Leave them empty until Preview-safe provider forms and approved public privacy routes exist.
 
-Phase 0 legal-route configuration (server-only, no `NEXT_PUBLIC_` prefix, so nothing reaches the client bundle before approval) also lives in `.env.example`:
+Phase 0 legal-owner configuration is server-only and uses no `NEXT_PUBLIC_` prefix. Variable names and non-personal placeholders live in `.env.example`:
 
 ```bash
-LEGAL_RESPONSIBLE_PARTY_NAME=
-LEGAL_RESPONSIBLE_PARTY_IDENTIFICATION=
-LEGAL_RESPONSIBLE_PARTY_CITY=
-LEGAL_PRIVACY_CONTACT_EMAIL=
-LEGAL_EFFECTIVE_DATE=
-LEGAL_PROFESSIONAL_REVIEW_COMPLETED=false
+LEGAL_PUBLICATION_STATUS=pending
+LEGAL_OWNER_TYPE=natural_person
+LEGAL_OWNER_NAME="<configured-in-vercel>"
+LEGAL_OWNER_ROLE="Responsable del proyecto Sing Pronunce Repeat"
+LEGAL_OWNER_DOMICILE="<configured-in-vercel>"
+LEGAL_CONTACT_ADDRESS="<configured-in-vercel>"
+LEGAL_CONTACT_PHONE="<configured-in-vercel>"
+LEGAL_PRIVACY_EMAIL="privacidad@singpronuncerepeat.com"
+LEGAL_EFFECTIVE_DATE="2026-07-27"
+LEGAL_LAST_UPDATED_DATE="2026-07-27"
 ```
 
-`/privacidad` and `/tratamiento-de-datos` render a safe draft/preparation state in Development and Preview, and a neutral "legal information in preparation" state in Production, until all five values above are set and `LEGAL_PROFESSIONAL_REVIEW_COMPLETED=true`. Both routes stay `noindex, nofollow` regardless, since indexing remains a separate explicit decision. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
+Publication behavior is explicit:
+
+- `pending` is the safe default when variables are absent or incomplete. It renders a neutral preparation message and no personal owner fields.
+- `draft` renders the complete environment-backed legal draft with a visible owner-approval and professional-review notice. It is intended only for a protected Preview deployment.
+- `approved` is supported for a later reviewed phase but is not activated here and does not enable indexing.
+
+Real owner values must never be placed in Git, `.env.example`, screenshots, logs, tests or documentation. Configure them manually in Vercel Preview environment variables. Production remains `pending` during this phase, and any environment-variable change requires a new deployment. Both legal routes remain `noindex, nofollow` in every state. See `docs/validation/PHASE_0_LEGAL_OWNER_CONFIGURATION.md`.
 
 Lead-capture form foundation behavior:
 
@@ -210,3 +220,6 @@ Production routes to verify after enabling:
 - `docs/validation/PHASE_0_FORM_INTEGRATION.md`
 - `docs/validation/PHASE_0_EBOOK_DOWNLOAD_PAGE.md`
 - `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`
+- `docs/legal/PHASE_0_DATA_SUBJECT_RIGHTS_WORKFLOW.md`
+- `docs/legal/PHASE_0_PROVIDER_INVENTORY.md`
+- `docs/validation/PHASE_0_LEGAL_OWNER_CONFIGURATION.md`

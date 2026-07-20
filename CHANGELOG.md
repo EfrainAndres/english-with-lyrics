@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Added server-only legal-owner configuration with explicit pending and draft publication modes, expanded the privacy and data-treatment routes, and documented the rights-request workflow and provider inventory while keeping Production email and lead capture inactive.
 - Added public Phase 0 privacy and data-processing routes with centralized legal configuration, safe incomplete-state rendering, noindex metadata, accessible footer links, Preview QA guidance, and Production lead-capture gates.
 - Added the Phase 0 ebook delivery-email package, including approved Email 1 content, stable `/gracias?source=email` delivery, Preview/Production separation, four-email sequence planning, MailerLite manual configuration steps, and production-readiness gates.
 - Added the environment-aware `/gracias` page with immediate ebook access, optional survey and first-group actions, privacy-safe query handling, noindex metadata, and Preview-ready MailerLite redirect support.
@@ -41,6 +42,8 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Completed final protected Preview legal-page QA with responsive, accessibility, robots and metadata privacy checks, and recorded owner rendered-copy approval while keeping Production legal publication and email activation pending.
+- Corrected the Phase 0 legal drafts with separate consultation and claim timelines, expanded data-subject rights and claim handling, request-responsibility designation, an internal policy link, and accessible telephone formatting without adding personal values.
 - Regenerated and revalidated the public 21-page ebook PDF with the official `Sing Pronunce Repeat` brand and canonical `https://singpronuncerepeat.com/ebook-gratis` backlink, while preserving the existing public download path.
 - Aligned public application metadata, links, legal and email documentation with the official `Sing Pronunce Repeat` brand and the canonical `https://singpronuncerepeat.com` Production origin.
 - Established `https://singpronuncerepeat.com` as the canonical Production web domain, with HTTPS and a permanent `www` redirect managed through Vercel and Hostinger DNS.
