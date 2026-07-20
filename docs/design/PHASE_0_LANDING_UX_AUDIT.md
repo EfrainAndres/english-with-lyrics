@@ -4,13 +4,13 @@
 
 This document proposes a warmer, more musical, brand-led direction for the English with Lyrics Phase 0 landing page.
 
-The current landing page works as a functional validation page, but it should feel less like a generic SaaS page and more like a friendly learning experience connected to Sing Pronounce Repeat, English with Lyrics, songs, and Spanish-speaking learners.
+The current landing page works as a functional validation page, but it should feel less like a generic SaaS page and more like a friendly learning experience connected to Sing Pronunce Repeat, English with Lyrics, songs, and Spanish-speaking learners.
 
 This is a documentation-only audit. Do not change the landing code in this branch.
 
 ## Product Context
 
-Sing Pronounce Repeat / English with Lyrics helps Spanish speakers learn English through songs, short educational fragments, natural translation, and the **Escríbelo como suena** method.
+Sing Pronunce Repeat / English with Lyrics helps Spanish speakers learn English through songs, short educational fragments, natural translation, and the **Escríbelo como suena** method.
 
 The page should validate:
 
@@ -53,11 +53,11 @@ The current palette is clean, but the combination of `ink`, `lagoon`, `coral`, `
 
 ### The Brand Method Is Not Present Enough
 
-The product is connected to the English with Lyrics channel brand, but the current page does not make the method memorable enough. The design should make Sing Pronounce Repeat and Escríbelo como suena first-viewport signals.
+The product is connected to the English with Lyrics channel brand, but the current page does not make the method memorable enough. The design should make Sing Pronunce Repeat and Escríbelo como suena first-viewport signals.
 
 This does not require a photo immediately if none is ready, but the layout should reserve space for:
 
-- Sing Pronounce Repeat as the main brand.
+- Sing Pronunce Repeat as the main brand.
 - English with Lyrics as the secondary brand.
 - A future photo or still from the channel.
 - An Escríbelo como suena trust marker.
@@ -235,7 +235,7 @@ Avoid:
 
 Recommended order for the next implementation branch:
 
-1. **Hero: Sing Pronounce Repeat / English with Lyrics**
+1. **Hero: Sing Pronunce Repeat / English with Lyrics**
    - Brand promise, method trust, primary CTA, secondary CTA.
    - Include a warm lesson preview that shows sound, meaning, and practice.
 
@@ -274,7 +274,7 @@ Recommended order for the next implementation branch:
    - Keep the legal note respectful and not fear-based.
 
 9. **Footer**
-   - Sing Pronounce Repeat, English with Lyrics, method, and legal/content summary.
+   - Sing Pronunce Repeat, English with Lyrics, method, and legal/content summary.
 
 ## 7. Recommended Copy Changes
 
@@ -496,7 +496,7 @@ design/phase-0-landing-warm-redesign
 
 ### Step 3: Redesign Hero
 
-- Rework the first viewport around Sing Pronounce Repeat, English with Lyrics, the learner problem, and a micro-lesson preview.
+- Rework the first viewport around Sing Pronunce Repeat, English with Lyrics, the learner problem, and a micro-lesson preview.
 - Make the primary CTA the waitlist or ebook based on the validation priority.
 
 ### Step 4: Redesign Core Sections
@@ -526,7 +526,7 @@ design/phase-0-landing-warm-redesign
 
 The redesigned landing should:
 
-- Feel clearly connected to Sing Pronounce Repeat, English with Lyrics, and music learning.
+- Feel clearly connected to Sing Pronunce Repeat, English with Lyrics, and music learning.
 - Speak directly to Spanish-speaking learners.
 - Explain Escríbelo como suena in a memorable way.
 - Make the free ebook and founder access easier to understand.

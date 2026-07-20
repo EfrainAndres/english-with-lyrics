@@ -8,19 +8,19 @@
 - Fecha del borrador: 2026-07-12.
 - Uso en produccion: Prohibido hasta completar datos del responsable, debida diligencia de proveedores y revision legal.
 
-Esta politica describe como deberia operar Sing Pronounce Repeat / English with Lyrics al tratar datos en el futuro embudo. No es un manual interno completo de seguridad, una certificacion juridica ni una declaracion de cumplimiento. Requiere aprobacion profesional antes de recolectar leads en produccion: `[PENDING_LEGAL_REVIEW]`.
+Esta politica describe como deberia operar Sing Pronunce Repeat / English with Lyrics al tratar datos en el futuro embudo. No es un manual interno completo de seguridad, una certificacion juridica ni una declaracion de cumplimiento. Requiere aprobacion profesional antes de recolectar leads en produccion: `[PENDING_LEGAL_REVIEW]`.
 
 ## 1. Identificacion del responsable
 
 ```text
 Responsible party: [PENDING_OWNER_INPUT]
-Privacy contact: [PENDING_OWNER_INPUT]
+Privacy contact: privacidad@singpronuncerepeat.com
 Location: Colombia — [PENDING_OWNER_INPUT]
 ```
 
 - Identificacion adicional, cuando corresponda: `[PENDING_OWNER_INPUT]`.
 - Condicion de operacion personal o empresarial: `[PENDING_OWNER_INPUT]`.
-- Sitio web: `https://english-with-lyrics.vercel.app`.
+- Sitio web: `https://singpronuncerepeat.com`.
 
 ## 2. Alcance
 

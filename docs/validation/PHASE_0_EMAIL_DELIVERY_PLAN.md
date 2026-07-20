@@ -109,7 +109,7 @@ Important: if the ebook is not ready yet, do not promise immediate download.
 Subject examples:
 
 - Tu guía gratis está en camino
-- Ya estás en la lista de Sing Pronounce Repeat
+- Ya estás en la lista de Sing Pronunce Repeat
 - Gracias por unirte a English with Lyrics
 
 ### Email 2 - Ebook Delivery
@@ -172,7 +172,7 @@ Body:
 
 Hola,
 
-Gracias por unirte a Sing Pronounce Repeat / English with Lyrics.
+Gracias por unirte a Sing Pronunce Repeat / English with Lyrics.
 
 Estamos preparando una guía gratis para practicar inglés con canciones, pronunciación fácil y traducción natural usando el método Escríbelo como suena.
 
@@ -218,7 +218,7 @@ Notes:
 
 Subject: Ayúdanos a elegir las próximas canciones
 
-Preview text: Tu respuesta ayuda a definir las primeras prácticas de Sing Pronounce Repeat.
+Preview text: Tu respuesta ayuda a definir las primeras prácticas de Sing Pronunce Repeat.
 
 Body:
 

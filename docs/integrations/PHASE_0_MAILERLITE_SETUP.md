@@ -164,7 +164,7 @@ Requirements:
 
 - Assigned to `SPR - Production - Ebook Leads`.
 - Uses approved consent copy.
-- Redirects to `https://english-with-lyrics.vercel.app/gracias?source=ebook` only after `/gracias` exists and passes QA.
+- Redirects to `https://singpronuncerepeat.com/gracias?source=ebook` only after `/gracias` exists and passes QA.
 - Uses the approved public privacy-policy URL.
 - Triggers Email 1 only after complete Preview and production-readiness QA.
 - Remains unpublished or inactive until all production blockers are cleared.
@@ -174,7 +174,7 @@ Requirements:
 ### Approved checkbox copy
 
 ```text
-Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronounce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.
+Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronunce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.
 ```
 
 ### Supporting copy
@@ -263,7 +263,7 @@ This branch documents the automation only. It must not activate the Production a
 
 - Canonical content source: `docs/email/PHASE_0_EBOOK_DELIVERY_EMAIL.md`
 - Canonical Preview CTA target: `https://<stable-preview-branch-domain>/gracias?source=email`
-- Future Production CTA target: `https://english-with-lyrics.vercel.app/gracias?source=email`
+- Future Production CTA target: `https://singpronuncerepeat.com/gracias?source=email`
 - Preview subject must keep `[TEST]`.
 - Delivery continues to use a stable page link, not a PDF attachment.
 - Four-email timing outline is documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.

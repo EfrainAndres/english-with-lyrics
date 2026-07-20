@@ -120,7 +120,7 @@ function BrandLogo({
 }) {
   return (
     <Image
-      alt="Sing Pronounce Repeat / English with Lyrics logo"
+      alt="Sing Pronunce Repeat / English with Lyrics logo"
       className={className}
       height={515}
       src="/brand/logo-claro.svg"
@@ -210,7 +210,7 @@ export default function Home() {
             />
             <span className="hidden lg:block">
               <span className="block font-heading text-xl font-black leading-5 text-paper">
-                Sing Pronounce Repeat
+                Sing Pronunce Repeat
               </span>
               <span className="mt-1 block text-xs font-bold uppercase text-soft">
                 English with Lyrics
@@ -306,7 +306,7 @@ export default function Home() {
         tone="panel"
         eyebrow="Beneficios"
         title="Para cuando lees una cosa, pero escuchas otra."
-        intro="Sing Pronounce Repeat habla directo al bloqueo real: entender inglés cantado cuando las palabras se unen, cambian de sonido o no se traducen literal."
+        intro="Sing Pronunce Repeat habla directo al bloqueo real: entender inglés cantado cuando las palabras se unen, cambian de sonido o no se traducen literal."
       >
         <div className="grid gap-5 md:grid-cols-3">
           {benefits.map((benefit) => (
@@ -356,7 +356,7 @@ export default function Home() {
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="border border-pink/25 bg-panel p-6 text-paper shadow-neon">
             <p className="text-sm font-black uppercase text-pink">
-              Sing Pronounce Repeat
+              Sing Pronunce Repeat
             </p>
             <h3 className="mt-3 font-heading text-4xl font-black">
               Guía de práctica
@@ -528,7 +528,7 @@ export default function Home() {
             Nota legal y de contenido
           </h2>
           <p className="mt-3 leading-7 text-soft">
-            Sing Pronounce Repeat enseña con fragmentos educativos cortos,
+            Sing Pronunce Repeat enseña con fragmentos educativos cortos,
             pronunciación original del método, traducción natural y explicaciones
             transformativas. No publica letras completas ni funciona como
             reemplazo de plataformas oficiales de lyrics, música o video.

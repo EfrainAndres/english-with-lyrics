@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Sing Pronounce Repeat / English with Lyrics will be documented in this file.
+All notable changes to Sing Pronunce Repeat / English with Lyrics will be documented in this file.
 
 ## [Unreleased]
 
@@ -18,7 +18,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 - Completed the Phase 0 ebook validation and delivery flow for **Aprende inglés con 3 canciones**, including the three-song content strategy, nine approved educational fragments, `Escríbelo como suena` guidance, natural meanings, original examples, exercises, reconstruction safeguards, and final learner-facing content.
 - Added the reusable A5 ebook design system, production HTML/CSS, reproducible Chrome-based export tooling, metadata patching, structural PDF validation, visual QA corrections, publication-readiness review, and the final validated 21-page PDF artifact.
 - Enabled direct ebook delivery through `/ebook-gratis`, added the approved public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`, aligned the home landing with the active download flow, and preserved survey and first-group actions as optional follow-ups.
-- Approved `https://english-with-lyrics.vercel.app` as the production origin, restored the absolute `/ebook-gratis` backlink inside the public PDF, and validated seven intended HTTPS link annotations with no localhost or preview URLs.
+- Approved `https://singpronuncerepeat.com` as the production origin, restored the absolute `/ebook-gratis` backlink inside the public PDF, and validated seven intended HTTPS link annotations with no localhost or preview URLs.
 - Added Phase 0 ebook delivery, publication-readiness, home-alignment, production-origin, and PDF QA documentation, while keeping download analytics and email-provider automation as pending follow-up work.
 - Added repository-level Claude Code instructions in `CLAUDE.md` and coordination guidance in `AGENTS.md`.
 - Added Phase 0 email delivery planning documentation for ebook delivery, follow-up emails, segmentation, privacy, and provider timing.
@@ -41,18 +41,19 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Aligned public application metadata, links, legal and email documentation with the official `Sing Pronunce Repeat` brand and the canonical `https://singpronuncerepeat.com` Production origin.
 - Established `https://singpronuncerepeat.com` as the canonical Production web domain, with HTTPS and a permanent `www` redirect managed through Vercel and Hostinger DNS.
 - Updated README, backlog, launch, metrics, and validation docs to reflect the active `/ebook-gratis` delivery flow, validated 21-page PDF, approved production origin, and remaining analytics/email follow-up work.
 - Updated all public ebook CTAs to route internally to `/ebook-gratis`, while survey and first-group actions continue to use their approved Tally destinations.
 - Updated validation copy to explain that Phase 0 uses short external forms instead of local data capture.
 - Aligned the Phase 0 landing visual system with the official brand color palette.
 - Polished the real logo integration with clearer desktop sizing, a cleaner sticky header, and softer validation copy.
-- Replaced the Phase 0 landing logo placeholder with the real Sing Pronounce Repeat / English with Lyrics logo.
+- Replaced the Phase 0 landing logo placeholder with the real Sing Pronunce Repeat / English with Lyrics logo.
 - Updated app metadata to use the real favicon assets.
 - Updated the landing waitlist area to point to validation placeholders for ebook interest, survey, and first group interest.
 - Updated launch, metrics, and backlog docs to reference Phase 0 validation assets.
 - Aligned the Phase 0 landing visual identity with the channel-inspired dark music style, neon accents, logo placeholder, learning-mode badges, and karaoke-style micro-lesson card.
-- Aligned public brand copy around Sing Pronounce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
+- Aligned public brand copy around Sing Pronunce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
 - Added warm Phase 0 landing redesign with ebook-first CTA, brand-led copy, micro-lesson demo, method section, polished waitlist placeholder, and legal-safe positioning.
 
 ## [2026-06-09] Channel Visual Identity Alignment
@@ -68,7 +69,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 ### Changed
 
 - Removed personal-name references from public-facing landing copy.
-- Updated docs to require Sing Pronounce Repeat as the main public brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
+- Updated docs to require Sing Pronunce Repeat as the main public brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
 
 ## [2026-06-09] Phase 0 Warm Landing Redesign
 

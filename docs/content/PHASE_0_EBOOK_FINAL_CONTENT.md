@@ -49,7 +49,7 @@ Pronunciación fácil, frases útiles y traducción natural para hispanohablante
 
 ---
 
-**Sing Pronounce Repeat / English with Lyrics**
+**Sing Pronunce Repeat / English with Lyrics**
 Con el método Escríbelo como suena
 
 ---
@@ -91,7 +91,7 @@ Lo más importante es que escuches, repitas en voz alta y te permitas equivocart
 
 ## ¿Qué es Escríbelo como suena?
 
-Escríbelo como suena es la forma que usamos en Sing Pronounce Repeat para escribir la pronunciación del inglés en letras que un hispanohablante puede leer directamente.
+Escríbelo como suena es la forma que usamos en Sing Pronunce Repeat para escribir la pronunciación del inglés en letras que un hispanohablante puede leer directamente.
 
 No es el Alfabeto Fonético Internacional (IPA). No vas a ver símbolos raros ni transcripciones académicas.
 
@@ -569,7 +569,7 @@ Si alguien más quiere esta guía o quieres compartirla, puedes enviarlos a:
 
 ## Nota educativa y de derechos
 
-Esta guía fue creada con fines educativos por Sing Pronounce Repeat / English with Lyrics.
+Esta guía fue creada con fines educativos por Sing Pronunce Repeat / English with Lyrics.
 
 **Sobre los fragmentos**
 
@@ -581,7 +581,7 @@ Esta guía no reproduce letras completas, versos enteros ni coros. No es un reem
 
 Los títulos de las canciones y los nombres de los artistas mencionados en esta guía pertenecen a sus respectivos titulares de derechos.
 
-La pronunciación original, las explicaciones, los ejercicios, los ejemplos de vocabulario y el método Escríbelo como suena son contenido educativo original de Sing Pronounce Repeat / English with Lyrics.
+La pronunciación original, las explicaciones, los ejercicios, los ejemplos de vocabulario y el método Escríbelo como suena son contenido educativo original de Sing Pronunce Repeat / English with Lyrics.
 
 **Sobre el audio**
 

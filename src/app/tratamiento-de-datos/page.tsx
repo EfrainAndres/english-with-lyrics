@@ -6,9 +6,12 @@ import { getDataProcessingPolicySections } from "@/lib/legal-content";
 import { getRuntimeEnvironment } from "@/lib/runtime-environment";
 
 export const metadata: Metadata = {
-  title: "Política de tratamiento de datos | Sing Pronounce Repeat",
+  title: "Política de tratamiento de datos",
   description:
-    "Procedimiento operativo previsto para el tratamiento de datos de Sing Pronounce Repeat / English with Lyrics mientras la información legal está en preparación.",
+    "Procedimiento operativo previsto para el tratamiento de datos de Sing Pronunce Repeat / English with Lyrics mientras la información legal está en preparación.",
+  alternates: {
+    canonical: "/tratamiento-de-datos",
+  },
   robots: {
     index: false,
     follow: false,
@@ -33,7 +36,7 @@ export default function TratamientoDeDatosPage() {
 
   return (
     <LegalPageLayout
-      description="Este documento describe, de forma más procedimental que la política de privacidad, cómo operaría el tratamiento de datos del futuro embudo de Sing Pronounce Repeat / English with Lyrics."
+      description="Este documento describe, de forma más procedimental que la política de privacidad, cómo operaría el tratamiento de datos del futuro embudo de Sing Pronunce Repeat / English with Lyrics."
       eyebrow="Tratamiento de datos"
       notice={renderState === "draft" ? <LegalStatusNotice variant="draft" /> : null}
       sections={getDataProcessingPolicySections(legalConfiguration)}

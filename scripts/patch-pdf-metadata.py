@@ -9,12 +9,12 @@ Does not modify the source file. Writes output to a separate path.
 Uses only Python stdlib — no additional dependencies required.
 
 Metadata applied:
-    Title    : Aprende inglés con 3 canciones — Sing Pronounce Repeat
-    Author   : Sing Pronounce Repeat / English with Lyrics
+    Title    : Aprende inglés con 3 canciones — Sing Pronunce Repeat
+    Author   : Sing Pronunce Repeat / English with Lyrics
     Subject  : Guía educativa de pronunciación y comprensión de inglés con canciones
     Keywords : aprender inglés, pronunciación, inglés con canciones,
                Escríbelo como suena, listening, vocabulario
-    Creator  : Sing Pronounce Repeat / English with Lyrics
+    Creator  : Sing Pronunce Repeat / English with Lyrics
     Producer : (unchanged — Skia/PDF m149)
     CreationDate : (unchanged from source)
     ModDate      : (unchanged from source)
@@ -24,12 +24,12 @@ import re
 import sys
 
 
-TITLE    = 'Aprende inglés con 3 canciones — Sing Pronounce Repeat'
-AUTHOR   = 'Sing Pronounce Repeat / English with Lyrics'
+TITLE    = 'Aprende inglés con 3 canciones — Sing Pronunce Repeat'
+AUTHOR   = 'Sing Pronunce Repeat / English with Lyrics'
 SUBJECT  = 'Guía educativa de pronunciación y comprensión de inglés con canciones'
 KEYWORDS = ('aprender inglés, pronunciación, inglés con canciones, '
             'Escríbelo como suena, listening, vocabulario')
-CREATOR  = 'Sing Pronounce Repeat / English with Lyrics'
+CREATOR  = 'Sing Pronunce Repeat / English with Lyrics'
 PRODUCER = 'Skia/PDF m149'
 
 

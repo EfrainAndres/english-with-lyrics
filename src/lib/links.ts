@@ -1,4 +1,4 @@
-export const productionOrigin = "https://english-with-lyrics.vercel.app";
+export const productionOrigin = "https://singpronuncerepeat.com";
 export const ebookPagePath = "/ebook-gratis";
 export const ebookPageUrl = `${productionOrigin}${ebookPagePath}`;
 export const thankYouPagePath = "/gracias";

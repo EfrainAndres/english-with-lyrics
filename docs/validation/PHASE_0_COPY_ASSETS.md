@@ -6,7 +6,7 @@ Use these Spanish copy blocks to promote the Phase 0 landing, free guide, survey
 
 Rules:
 
-- Use Sing Pronounce Repeat as the main public brand.
+- Use Sing Pronunce Repeat as the main public brand.
 - Use English with Lyrics as the secondary/channel brand.
 - Use Escríbelo como suena as the method.
 - Do not mention personal names in public-facing copy.
@@ -17,7 +17,7 @@ Rules:
 
 ¿Quieres practicar inglés con canciones de una forma más clara?
 
-En Sing Pronounce Repeat / English with Lyrics estamos preparando una guía gratis con 3 canciones para practicar:
+En Sing Pronunce Repeat / English with Lyrics estamos preparando una guía gratis con 3 canciones para practicar:
 
 - Inglés real en frases cortas.
 - Pronunciación fácil con el método Escríbelo como suena.
@@ -63,7 +63,7 @@ Queremos empezar con una guía gratis de 3 canciones y luego abrir un primer gru
 
 ¿Lees una frase en inglés, pero cuando suena en una canción parece otra cosa?
 
-Sing Pronounce Repeat / English with Lyrics te ayuda a practicar con canciones usando:
+Sing Pronunce Repeat / English with Lyrics te ayuda a practicar con canciones usando:
 
 - Inglés en frases cortas.
 - Pronunciación fácil.
@@ -136,7 +136,7 @@ Responde una encuesta corta sobre tu nivel, tus bloqueos al escuchar inglés y l
 
 - Tu guía gratis para practicar inglés con canciones.
 - 3 canciones para empezar con Escríbelo como suena.
-- Aquí está tu guía de Sing Pronounce Repeat.
+- Aquí está tu guía de Sing Pronunce Repeat.
 - Practica inglés frase por frase con canciones.
 - Tu guía de pronunciación fácil ya está lista.
 - ¿Qué canción quieres practicar después?

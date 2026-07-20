@@ -2,7 +2,18 @@
 
 ## Summary
 
-The approved production origin `https://english-with-lyrics.vercel.app` has been recorded. The `/ebook-gratis` backlink inside the ebook PDF has been restored as a clickable absolute HTTPS anchor. The source and public PDFs have been regenerated with 7 validated link annotations and corrected metadata.
+The approved production origin `https://singpronuncerepeat.com` has been recorded. The `/ebook-gratis` backlink inside the ebook PDF has been restored as a clickable absolute HTTPS anchor. The source and public PDFs have been regenerated with 7 validated link annotations and corrected metadata.
+
+Current canonical-brand audit note:
+
+- Official brand alignment: COMPLETE for editable application and repository text.
+- Canonical custom domain: ACTIVE.
+- Canonical Production origin: `https://singpronuncerepeat.com`.
+- WWW redirect: VERIFIED.
+- Legacy Vercel origin: NON-CANONICAL TECHNICAL FALLBACK.
+- PDF source configuration has been aligned for the next export.
+- Existing checked-in PDF binaries still require a controlled re-export: byte inspection found the legacy `https://english-with-lyrics.vercel.app/ebook-gratis` annotation and old `Sing Pronounce Repeat / English with Lyrics` alt text in `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` and `docs/design/production/phase-0-ebook-production-draft.pdf`.
+- No PDF was regenerated in this branch.
 
 Branch: `fix/phase-0-production-origin-and-pdf-backlink`
 
@@ -12,16 +23,16 @@ Branch: `fix/phase-0-production-origin-and-pdf-backlink`
 
 | Field | Value |
 |---|---|
-| Production origin | `https://english-with-lyrics.vercel.app` |
+| Production origin | `https://singpronuncerepeat.com` |
 | Approval source | Manual owner confirmation — deployment active at this URL |
 | Verification date | 2026-06-17 |
-| Verified home route | `https://english-with-lyrics.vercel.app/` |
-| Verified ebook route | `https://english-with-lyrics.vercel.app/ebook-gratis` |
-| Verified PDF route | `https://english-with-lyrics.vercel.app/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
+| Verified home route | `https://singpronuncerepeat.com/` |
+| Verified ebook route | `https://singpronuncerepeat.com/ebook-gratis` |
+| Verified PDF route | `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
 
 Recorded in `src/lib/links.ts` as:
 ```ts
-export const productionOrigin = "https://english-with-lyrics.vercel.app";
+export const productionOrigin = "https://singpronuncerepeat.com";
 export const ebookPagePath    = "/ebook-gratis";
 export const ebookPageUrl     = `${productionOrigin}${ebookPagePath}`;
 ```
@@ -33,8 +44,8 @@ export const ebookPageUrl     = `${productionOrigin}${ebookPagePath}`;
 | Field | Value |
 |---|---|
 | Visible PDF label | `Visitar la página del ebook: /ebook-gratis` |
-| Absolute `href` target | `https://english-with-lyrics.vercel.app/ebook-gratis` |
-| HTML element | `<a href="https://english-with-lyrics.vercel.app/ebook-gratis" class="cta-link--tertiary mt-sm">` |
+| Absolute `href` target | `https://singpronuncerepeat.com/ebook-gratis` |
+| HTML element | `<a href="https://singpronuncerepeat.com/ebook-gratis" class="cta-link--tertiary mt-sm">` |
 | HTML source | `docs/design/production/phase-0-ebook.html`, line ~1430 |
 | Annotation count before | 6 (backlink was a non-clickable `<span>`) |
 | Annotation count after | 7 |
@@ -52,7 +63,7 @@ export const ebookPageUrl     = `${productionOrigin}${ebookPagePath}`;
 | 4 | Tally survey (challenge CTA) | `https://tally.so/r/eqzgbe` |
 | 5 | Tally survey (final CTA) | `https://tally.so/r/eqzgbe` |
 | 6 | Tally first-group | `https://tally.so/r/D4a6NE` |
-| 7 | Ebook page backlink | `https://english-with-lyrics.vercel.app/ebook-gratis` |
+| 7 | Ebook page backlink | `https://singpronuncerepeat.com/ebook-gratis` |
 
 All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app hostnames.
 
@@ -78,11 +89,11 @@ All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app
 
 | Field | Value |
 |---|---|
-| Title | `Aprende inglés con 3 canciones — Sing Pronounce Repeat` |
-| Author | `Sing Pronounce Repeat / English with Lyrics` |
+| Title | `Aprende inglés con 3 canciones — Sing Pronunce Repeat` |
+| Author | `Sing Pronunce Repeat / English with Lyrics` |
 | Subject | `Guía educativa de pronunciación y comprensión de inglés con canciones` |
 | Keywords | `aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario` |
-| Creator | `Sing Pronounce Repeat / English with Lyrics` |
+| Creator | `Sing Pronunce Repeat / English with Lyrics` |
 | Validation | Pass — all five fields confirmed after patch |
 
 ---
@@ -113,7 +124,7 @@ All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app
 
 ### Deployed production validation (pending)
 
-These checks require the updated branch to be deployed and the new PDF to be live at `https://english-with-lyrics.vercel.app/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+These checks require the updated branch to be deployed and the new PDF to be live at `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 
 | Check | Status |
 |---|---|

@@ -2,7 +2,7 @@
 
 ## Objective
 
-Validate whether Spanish-speaking English learners want to learn with Sing Pronounce Repeat / English with Lyrics before building more product infrastructure.
+Validate whether Spanish-speaking English learners want to learn with Sing Pronunce Repeat / English with Lyrics before building more product infrastructure.
 
 The survey should help decide:
 
@@ -160,7 +160,7 @@ Fields:
 
 Include a consent checkbox:
 
-- Acepto recibir novedades de Sing Pronounce Repeat / English with Lyrics sobre la guía gratis, encuesta y primer grupo.
+- Acepto recibir novedades de Sing Pronunce Repeat / English with Lyrics sobre la guía gratis, encuesta y primer grupo.
 
 ## How To Interpret Responses
 

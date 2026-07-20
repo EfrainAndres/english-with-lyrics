@@ -17,7 +17,7 @@ The ebook should:
 
 Subtitle:
 
-**Una guía de Sing Pronounce Repeat / English with Lyrics con el método Escríbelo como suena.**
+**Una guía de Sing Pronunce Repeat / English with Lyrics con el método Escríbelo como suena.**
 
 ## Three Ebook Paths
 

@@ -12,7 +12,7 @@
 
 La casilla debe ser obligatoria y estar desmarcada por defecto.
 
-> Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronounce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.
+> Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronunce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.
 
 Inmediatamente junto a la casilla o debajo:
 
@@ -90,7 +90,7 @@ Un contacto existente o actualizado se trata como exito cuando MailerLite lo con
 
 ### Pie de correo
 
-> Recibes este mensaje porque solicitaste la guía gratuita y aceptaste recibir contenido educativo de Sing Pronounce Repeat / English with Lyrics. Puedes cancelar la suscripción desde el enlace de este correo. Consulta la Política de privacidad o escribe al canal de privacidad: `[PENDING_OWNER_INPUT]`.
+> Recibes este mensaje porque solicitaste la guía gratuita y aceptaste recibir contenido educativo de Sing Pronunce Repeat / English with Lyrics. Puedes cancelar la suscripción desde el enlace de este correo. Consulta la Política de privacidad o escribe al canal de privacidad: `privacidad@singpronuncerepeat.com`.
 
 El enlace de baja debe ser el mecanismo funcional del proveedor, no texto decorativo.
 

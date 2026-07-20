@@ -325,8 +325,8 @@ for hex_bytes in uri_hex_matches:
     except Exception:
         pass
 
-APPROVED_PRODUCTION_ORIGIN = b'https://english-with-lyrics.vercel.app'
-EXPECTED_BACKLINK         = b'https://english-with-lyrics.vercel.app/ebook-gratis'
+APPROVED_PRODUCTION_ORIGIN = b'https://singpronuncerepeat.com'
+EXPECTED_BACKLINK         = b'https://singpronuncerepeat.com/ebook-gratis'
 
 # Forbidden URI patterns: localhost, preview deployments, HTTP for external links
 BAD_PREFIXES = [

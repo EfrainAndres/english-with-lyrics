@@ -15,7 +15,7 @@ This document preserves the full editorial working history including internal no
 
 ## How to read this document
 
-This file is the first complete editorial draft of the free Phase 0.5 ebook for Sing Pronounce Repeat / English with Lyrics. It contains all learner-facing copy, structural sections, fragment placeholders, exercise templates, design annotations, and publication checklists.
+This file is the first complete editorial draft of the free Phase 0.5 ebook for Sing Pronunce Repeat / English with Lyrics. It contains all learner-facing copy, structural sections, fragment placeholders, exercise templates, design annotations, and publication checklists.
 
 Sections marked **[INTERNAL]** must be removed or not transferred to the final PDF. They are editorial working notes only.
 
@@ -35,7 +35,7 @@ Pronunciación fácil, frases útiles y traducción natural para hispanohablante
 
 ---
 
-**Sing Pronounce Repeat / English with Lyrics**
+**Sing Pronunce Repeat / English with Lyrics**
 Con el método Escríbelo como suena
 
 ---
@@ -99,7 +99,7 @@ Lo más importante es que escuches, repitas en voz alta y te permitas equivocart
 
 **¿Qué es Escríbelo como suena?**
 
-Escríbelo como suena es la forma que usamos en Sing Pronounce Repeat para escribir la pronunciación del inglés en letras que un hispanohablante puede leer directamente.
+Escríbelo como suena es la forma que usamos en Sing Pronunce Repeat para escribir la pronunciación del inglés en letras que un hispanohablante puede leer directamente.
 
 No es el Alfabeto Fonético Internacional (IPA). No vas a ver símbolos raros ni transcripciones académicas.
 
@@ -946,7 +946,7 @@ Seguimos publicando prácticas de inglés con canciones en el canal de English w
 - The first-group CTA is secondary. Do not give it equal visual weight.
 - The ebook page link is tertiary — useful for sharing but not the conversion goal.
 - Confirm all Tally links are live before PDF export. A broken CTA in a PDF cannot be fixed after distribution.
-- `/ebook-gratis` will become a full URL in the PDF (e.g., `singpronouncerepeat.com/ebook-gratis`). Confirm the production domain before final export.
+- `/ebook-gratis` will become a full URL in the PDF (e.g., `singpronuncerepeat.com/ebook-gratis`). Confirm the production domain before final export.
 - Do not add more than two primary-weight CTAs on the same page.
 
 ---
@@ -959,7 +959,7 @@ Seguimos publicando prácticas de inglés con canciones en el canal de English w
 
 **Nota educativa y de derechos**
 
-Esta guía fue creada con fines educativos por Sing Pronounce Repeat / English with Lyrics.
+Esta guía fue creada con fines educativos por Sing Pronunce Repeat / English with Lyrics.
 
 **Sobre los fragmentos**
 
@@ -971,7 +971,7 @@ Esta guía no reproduce letras completas, versos enteros ni coros. No es un reem
 
 Los títulos de las canciones y los nombres de los artistas mencionados en esta guía pertenecen a sus respectivos titulares de derechos.
 
-La pronunciación original, las explicaciones, los ejercicios, los ejemplos de vocabulario y el método Escríbelo como suena son contenido educativo original de Sing Pronounce Repeat / English with Lyrics.
+La pronunciación original, las explicaciones, los ejercicios, los ejemplos de vocabulario y el método Escríbelo como suena son contenido educativo original de Sing Pronunce Repeat / English with Lyrics.
 
 **Sobre el audio**
 
@@ -1086,7 +1086,7 @@ The PDF should be tested at phone-screen width (approximately 375–390px equiva
 
 ### Brand and UX
 
-- [x] Main brand name: Sing Pronounce Repeat
+- [x] Main brand name: Sing Pronunce Repeat
 - [x] Secondary brand name: English with Lyrics
 - [x] Method name: Escríbelo como suena
 - [x] No personal-name references in learner-facing copy

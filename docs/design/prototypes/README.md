@@ -1,6 +1,6 @@
 # Prototype — Phase 0 Ebook PDF Template
 
-This folder contains the static design prototype for the Sing Pronounce Repeat / English with Lyrics Phase 0 ebook.
+This folder contains the static design prototype for the Sing Pronunce Repeat / English with Lyrics Phase 0 ebook.
 
 ## This is not the final PDF
 

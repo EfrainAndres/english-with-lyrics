@@ -2,7 +2,7 @@
 
 ## Official Brand Palette
 
-Sing Pronounce Repeat / English with Lyrics uses a compact music-style palette:
+Sing Pronunce Repeat / English with Lyrics uses a compact music-style palette:
 
 - Black: `#010101`
 - Yellow: `#FEE296`

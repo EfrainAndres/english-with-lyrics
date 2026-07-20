@@ -20,7 +20,7 @@ function describeResponsibleParty(config: LegalConfiguration) {
     city: config.responsiblePartyCity ?? "Pendiente de definir.",
     contactEmail:
       config.privacyContactEmail ??
-      "Todavía no existe un canal de contacto de privacidad publicado.",
+      "privacidad@singpronuncerepeat.com",
     effectiveDate:
       config.effectiveDate ?? "Esta política todavía no tiene una fecha de vigencia definitiva.",
   };
@@ -49,7 +49,7 @@ export function getPrivacyPolicySections(config: LegalConfiguration): LegalSecti
     {
       heading: "Datos actualmente tratados",
       paragraphs: [
-        "Sing Pronounce Repeat / English with Lyrics todavía no recolecta datos de registro en Producción. La única captura activa ocurre en un ambiente de Preview controlado, usado exclusivamente para pruebas internas del proveedor de correo.",
+        "Sing Pronunce Repeat / English with Lyrics todavía no recolecta datos de registro en Producción. La única captura activa ocurre en un ambiente de Preview controlado, usado exclusivamente para pruebas internas del proveedor de correo.",
       ],
       list: [
         "Aplicación Next.js: sin base de datos propia de leads, sin almacenamiento del lado de la aplicación de los envíos del formulario, sin autenticación y sin creación de cuentas.",
@@ -135,7 +135,7 @@ export function getPrivacyPolicySections(config: LegalConfiguration): LegalSecti
       heading: "Cómo enviar una solicitud",
       paragraphs: [
         `Canal de contacto de privacidad: ${responsible.contactEmail}`,
-        "Mientras no exista un canal de contacto operativo, no es posible tramitar solicitudes formales de derechos. Este canal es un bloqueador de producción y se publicará antes de activar cualquier captura de datos.",
+        "El canal de privacidad ya existe y fue verificado para recepción y respuesta de mensajes. El procedimiento operativo de solicitudes, los plazos definitivos y la aprobación legal profesional siguen pendientes antes de activar cualquier captura de datos en Producción.",
         uncertainDeadlineNotice,
       ],
     },
@@ -179,7 +179,7 @@ export function getDataProcessingPolicySections(config: LegalConfiguration): Leg
     {
       heading: "Propósito de la política",
       paragraphs: [
-        "Este documento describe, de forma más procedimental que la política de privacidad, cómo debería operar el tratamiento de datos del futuro embudo de Sing Pronounce Repeat / English with Lyrics. No es un manual interno completo de seguridad, no certifica cumplimiento legal y no reemplaza la revisión de un profesional del derecho.",
+        "Este documento describe, de forma más procedimental que la política de privacidad, cómo debería operar el tratamiento de datos del futuro embudo de Sing Pronunce Repeat / English with Lyrics. No es un manual interno completo de seguridad, no certifica cumplimiento legal y no reemplaza la revisión de un profesional del derecho.",
         "El flujo público actual sigue entregando el PDF de forma directa. Este documento no activa formularios, proveedores, automatizaciones ni rutas legales por sí mismo.",
       ],
     },

@@ -11,9 +11,21 @@ import {
 import { getRuntimeEnvironment } from "@/lib/runtime-environment";
 
 export const metadata: Metadata = {
-  title: "Tu guía está lista | Sing Pronounce Repeat",
+  title: "Tu guía está lista",
   description:
-    "Descarga la guía gratuita de Sing Pronounce Repeat para practicar inglés con canciones, pronunciación escrita como suena y ejercicios sencillos.",
+    "Descarga la guía gratuita de Sing Pronunce Repeat para practicar inglés con canciones, pronunciación escrita como suena y ejercicios sencillos.",
+  alternates: {
+    canonical: "/gracias",
+  },
+  openGraph: {
+    title: "Tu guía está lista | Sing Pronunce Repeat",
+    description:
+      "Descarga la guía gratuita de Sing Pronunce Repeat para practicar inglés con canciones, pronunciación escrita como suena y ejercicios sencillos.",
+    url: "/gracias",
+    siteName: "Sing Pronunce Repeat",
+    type: "website",
+    locale: "es_CO",
+  },
   robots: {
     index: false,
     follow: false,
@@ -47,7 +59,7 @@ function BrandLogo({
 }) {
   return (
     <Image
-      alt="Sing Pronounce Repeat / English with Lyrics logo"
+      alt="Sing Pronunce Repeat / English with Lyrics logo"
       className={className}
       height={515}
       src="/brand/logo-claro.svg"

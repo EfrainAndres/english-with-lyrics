@@ -6,7 +6,7 @@
 - Publication status: Not published.
 - Legal-review status: Pending.
 - Production use: Prohibited until owner details and professional legal review are completed.
-- Applicable project: English with Lyrics / Sing Pronounce Repeat.
+- Applicable project: English with Lyrics / Sing Pronunce Repeat.
 - Version: 0.1-draft.
 - Draft date: 2026-07-12.
 - Proposed effective date: `[PENDING_OWNER_INPUT]`.
@@ -17,16 +17,16 @@ Este documento es una fuente de trabajo adaptada al embudo previsto. No certific
 
 ```text
 Responsible party: [PENDING_OWNER_INPUT]
-Privacy contact: [PENDING_OWNER_INPUT]
+Privacy contact: privacidad@singpronuncerepeat.com
 Location: Colombia — [PENDING_OWNER_INPUT]
 ```
 
 - Nombre o entidad legal: `[PENDING_OWNER_INPUT]`.
 - Identificacion, cuando corresponda: `[PENDING_OWNER_INPUT]`.
 - Pais y ciudad: Colombia - `[PENDING_OWNER_INPUT]`.
-- Correo de contacto: `[PENDING_OWNER_INPUT]`.
-- Canal para solicitudes de privacidad: `[PENDING_OWNER_INPUT]`.
-- Sitio web: `https://english-with-lyrics.vercel.app`.
+- Correo de contacto: `privacidad@singpronuncerepeat.com`.
+- Canal para solicitudes de privacidad: `privacidad@singpronuncerepeat.com`.
+- Sitio web: `https://singpronuncerepeat.com`.
 - Condicion de operacion personal o empresarial: `[PENDING_OWNER_INPUT]`.
 
 No se infiere la identidad del responsable a partir del repositorio. Estos datos deben ser suministrados y aprobados antes de cualquier captura de leads en produccion.

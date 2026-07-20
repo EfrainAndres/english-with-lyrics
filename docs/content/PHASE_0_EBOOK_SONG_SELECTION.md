@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document selects the provisional three-song set for the first Sing Pronounce Repeat / English with Lyrics free ebook and records the full selection process, scoring rationale, evidence gaps, backup songs, and conditions that could change the selection before PDF publication.
+This document selects the provisional three-song set for the first Sing Pronunce Repeat / English with Lyrics free ebook and records the full selection process, scoring rationale, evidence gaps, backup songs, and conditions that could change the selection before PDF publication.
 
 All scores in this document are editorial estimates based on pedagogical, brand, and project evidence available in the repository. No audience analytics, streaming data, or survey results have been collected yet. Audience-evidence scores are deliberately conservative to reflect this gap.
 
@@ -164,7 +164,7 @@ Criteria for set-level evaluation:
 - Emotional variety (the set should not be emotionally monotonous).
 - Category coverage (romantic, rock/pop classic, and beginner-friendly/practical).
 - Risk that two songs teach very similar pronunciation patterns or vocabulary.
-- Overall brand fit for Sing Pronounce Repeat.
+- Overall brand fit for Sing Pronunce Repeat.
 - Ability to keep the ebook short, coherent, and completable in one sitting.
 
 ---

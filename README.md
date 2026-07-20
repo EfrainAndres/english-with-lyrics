@@ -1,15 +1,16 @@
-# Sing Pronounce Repeat / English with Lyrics
+# Sing Pronunce Repeat / English with Lyrics
 
-Sing Pronounce Repeat is a web-first educational product connected to the English with Lyrics channel brand. It helps Spanish speakers learn English through songs, easy pronunciation, useful phrases, natural Spanish explanations, quizzes, and micro-lessons.
+Sing Pronunce Repeat is a web-first educational product connected to the English with Lyrics channel brand. It helps Spanish speakers learn English through songs, easy pronunciation, useful phrases, natural Spanish explanations, quizzes, and micro-lessons.
 
 The core method is **Escríbelo como suena**: English pronunciation written in a simple Spanish-friendly way, without IPA symbols.
 
 ## Brand Rules
 
-- Main public brand: Sing Pronounce Repeat.
+- Main public brand: Sing Pronunce Repeat.
 - Secondary brand: English with Lyrics.
 - Core method: Escríbelo como suena.
 - Do not mention any personal creator name in public-facing UI copy.
+- Official brand alignment: COMPLETE.
 
 ## Brand Assets
 
@@ -85,7 +86,9 @@ MailerLite is the proposed Phase 0 email provider for the future soft-gated lead
 - Canonical production origin: `https://singpronuncerepeat.com`.
 - `https://www.singpronuncerepeat.com` permanently redirects to `https://singpronuncerepeat.com`.
 - HTTPS, Vercel Production connection, and Hostinger DNS connection are verified.
-- Professional mailbox, MailerLite sender verification, MailerLite domain authentication, and Production email delivery remain pending/inactive.
+- Professional privacy mailbox: VERIFIED — `privacidad@singpronuncerepeat.com`.
+- Legacy Vercel origin: NON-CANONICAL TECHNICAL FALLBACK. Public links and metadata should use the canonical custom domain.
+- MailerLite sender verification, MailerLite domain authentication, and Production email delivery remain pending/inactive.
 - Manual setup checklist: `docs/integrations/PHASE_0_MAILERLITE_MANUAL_CHECKLIST.md`
 - Setup and readiness docs: `docs/integrations/PHASE_0_MAILERLITE_SETUP.md` and `docs/validation/PHASE_0_EMAIL_PROVIDER_READINESS.md`
 - Preview and Production identifiers must remain isolated.
