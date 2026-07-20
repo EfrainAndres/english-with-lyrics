@@ -133,6 +133,7 @@ Priority: High.
 - [ ] Configure Preview Email 1 in MailerLite.
 - [ ] Run Preview Email 1 QA.
 - [ ] Test unsubscribe from the delivery email.
+- [x] Confirm custom Production web domain readiness: `https://singpronuncerepeat.com` active, HTTPS verified, Vercel Production connection verified, Hostinger DNS connection verified, and `www` permanent redirect verified.
 - [ ] Complete Production sender-domain setup.
 - [ ] Configure Production Email 1.
 - [ ] Activate the Production sequence only after approval.

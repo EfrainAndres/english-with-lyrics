@@ -7,6 +7,7 @@ Implementation status: COMPLETE
 Deployed Preview route QA: PASS
 Legal content status: DRAFT PENDING OWNER INPUT
 Professional legal review: PENDING
+Stable custom Production origin: VERIFIED
 Production legal readiness: NO-GO
 ```
 
@@ -29,6 +30,13 @@ Audit of `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`, `docs/legal/PHASE_0_DATA_
 - `/privacidad` — public privacy policy page. `src/app/privacidad/page.tsx`.
 - `/tratamiento-de-datos` — public data-processing policy page. `src/app/tratamiento-de-datos/page.tsx`.
 - No `/aviso-de-privacidad` route was created (not required by the audited drafts or decisions).
+
+Stable Production origin:
+
+- Canonical origin: `https://singpronuncerepeat.com`.
+- `https://www.singpronuncerepeat.com` permanently redirects to `https://singpronuncerepeat.com`.
+- HTTPS, Vercel Production connection, and Hostinger DNS connection are verified.
+- The legal routes now have a stable custom Production origin, but owner details, privacy contact, effective date, final owner approval, and professional legal review remain pending.
 
 ## Rendering matrix
 

@@ -14,6 +14,26 @@ Preview unsubscribe: VERIFIED
 
 Production readiness: NO-GO FOR PRODUCTION
 
+## Domain and email readiness split
+
+| Area | Status |
+|---|---|
+| Custom web domain readiness | COMPLETE |
+| Custom production web domain | ACTIVE |
+| Canonical production origin | `https://singpronuncerepeat.com` |
+| `www` redirect | VERIFIED — `https://www.singpronuncerepeat.com` returns a permanent redirect to `https://singpronuncerepeat.com` |
+| HTTPS | VERIFIED |
+| Vercel production connection | VERIFIED |
+| Hostinger DNS connection | VERIFIED |
+| Browser verification | VERIFIED — apex and `www` load successfully; `www` redirects to apex; the application renders correctly through the custom domain |
+| Professional mailbox readiness | PENDING |
+| Email-sender domain readiness | PENDING |
+| MailerLite sender verification | PENDING |
+| MailerLite domain authentication | PENDING |
+| Production email delivery | INACTIVE |
+
+The custom web domain is ready for the public web surface of Sing Pronunce Repeat. This does not complete email readiness. SPF, DKIM, DMARC, branded mailbox setup, sender authentication, inbox-placement QA, and MailerLite Production delivery remain pending.
+
 ## Capability evidence
 
 Official MailerLite sources verified in this phase support:

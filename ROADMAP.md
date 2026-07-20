@@ -65,7 +65,7 @@ Next order:
 1. Preview Email 1 content.
 2. Preview email QA.
 3. Public legal routes — implemented (`/privacidad`, `/tratamiento-de-datos`); Preview manual QA pending. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
-4. Sender-domain readiness.
+4. Sender-domain readiness. Custom Production web domain readiness is complete at `https://singpronuncerepeat.com`; professional mailbox, MailerLite sender verification, and MailerLite domain authentication remain pending.
 5. Production Email 1.
 6. Landing CRO restructure.
 7. Funnel event analytics.
