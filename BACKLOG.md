@@ -82,11 +82,21 @@ Priority: High.
 - [x] Define the retention framework without unsupported statutory periods.
 - [x] Create the privacy implementation checklist and provider diligence gates.
 - [x] Record the Phase 0 privacy decision log.
-- [ ] Supply responsible-party identity, operating status, location, and privacy contact.
+- [x] Implement server-only legal-owner configuration architecture.
+- [x] Add environment-variable support for publication status, owner type, responsible-party contact and policy dates without committing personal values.
+- [x] Approve the retention-policy draft without an unsupported fixed period.
+- [x] Approve the minors-policy draft as not intentionally directed to minors.
+- [x] Create the Phase 0 provider inventory.
+- [x] Document the draft data-subject rights-request workflow.
+- [ ] Configure authorized responsible-party values manually in a protected Vercel Preview deployment.
+- [ ] Complete Preview legal-page QA.
+- [ ] Obtain owner approval of the final rendered legal pages.
+- [ ] Complete internal structured legal review.
 - [ ] Complete professional legal review.
 - [x] Create the public `/privacidad` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
 - [x] Create the public `/tratamiento-de-datos` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval.
-- [ ] Create and operate the approved contact/privacy-request route.
+- [x] Confirm the operational privacy mailbox and document the draft contact/privacy-request workflow.
+- [ ] Test the complete rights-request workflow, including provider export, correction and deletion operations.
 - [ ] Complete MailerLite due diligence and international-processing review.
 - [x] Verify current official MailerLite capabilities required for the selected provider direction.
 - [x] Define the MailerLite group taxonomy.
@@ -176,7 +186,7 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy drafting status: documentation foundation complete; public legal routes (`/privacidad`, `/tratamiento-de-datos`) implemented with safe incomplete-state rendering and noindex metadata in `feat/phase-0-public-legal-routes`; owner details, privacy contact, professional legal review, and production approval remain pending. See:
+Privacy drafting status: server-only legal-owner configuration, environment-variable support, retention and minors drafts, provider inventory, and rights-request workflow are implemented without committing personal values. Production remains in the safe `pending` state. Protected Preview configuration, rendered-page QA, owner approval, internal structured review, professional legal review, provider contractual/DPA review, final consent linking, and Production approval remain pending. See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`
@@ -187,6 +197,9 @@ Privacy drafting status: documentation foundation complete; public legal routes 
 - `docs/integrations/PHASE_0_MAILERLITE_SETUP.md`
 - `docs/integrations/PHASE_0_MAILERLITE_MANUAL_CHECKLIST.md`
 - `docs/validation/PHASE_0_EMAIL_PROVIDER_READINESS.md`
+- `docs/legal/PHASE_0_DATA_SUBJECT_RIGHTS_WORKFLOW.md`
+- `docs/legal/PHASE_0_PROVIDER_INVENTORY.md`
+- `docs/validation/PHASE_0_LEGAL_OWNER_CONFIGURATION.md`
 
 ### Ebook Content Plan
 

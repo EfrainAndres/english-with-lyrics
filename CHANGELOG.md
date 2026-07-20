@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Added server-only legal-owner configuration with explicit pending and draft publication modes, expanded the privacy and data-treatment routes, and documented the rights-request workflow and provider inventory while keeping Production email and lead capture inactive.
 - Added public Phase 0 privacy and data-processing routes with centralized legal configuration, safe incomplete-state rendering, noindex metadata, accessible footer links, Preview QA guidance, and Production lead-capture gates.
 - Added the Phase 0 ebook delivery-email package, including approved Email 1 content, stable `/gracias?source=email` delivery, Preview/Production separation, four-email sequence planning, MailerLite manual configuration steps, and production-readiness gates.
 - Added the environment-aware `/gracias` page with immediate ebook access, optional survey and first-group actions, privacy-safe query handling, noindex metadata, and Preview-ready MailerLite redirect support.
