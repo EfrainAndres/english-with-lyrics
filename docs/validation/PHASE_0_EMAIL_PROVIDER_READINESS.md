@@ -26,13 +26,21 @@ Production readiness: NO-GO FOR PRODUCTION
 | Vercel production connection | VERIFIED |
 | Hostinger DNS connection | VERIFIED |
 | Browser verification | VERIFIED — apex and `www` load successfully; `www` redirects to apex; the application renders correctly through the custom domain |
-| Professional mailbox readiness | PENDING |
+| Professional mailbox readiness | VERIFIED |
+| Professional mailbox | `privacidad@singpronuncerepeat.com` |
+| Privacy contact operational | VERIFIED |
+| Hostinger inbound delivery | PASS |
+| Hostinger outbound delivery | PASS |
+| Hostinger mailbox bounce check | PASS |
+| Hostinger sender display name | VERIFIED — `Sing Pronunce Repeat` |
 | Email-sender domain readiness | PENDING |
 | MailerLite sender verification | PENDING |
 | MailerLite domain authentication | PENDING |
 | Production email delivery | INACTIVE |
 
-The custom web domain is ready for the public web surface of Sing Pronunce Repeat. This does not complete email readiness. SPF, DKIM, DMARC, branded mailbox setup, sender authentication, inbox-placement QA, and MailerLite Production delivery remain pending.
+The custom web domain is ready for the public web surface of Sing Pronunce Repeat. The professional privacy mailbox was manually verified through controlled inbound and outbound delivery tests. No message content, personal test addresses, passwords, screenshots, provider IDs, DNS tokens, or private account information are stored in the repository.
+
+Hostinger MX, SPF, DKIM, and DMARC records remain configured for the Hostinger mailbox. This does not complete MailerLite email readiness. MailerLite sender verification, MailerLite sending-domain authentication, MailerLite DKIM verification, MailerLite Production sender readiness, Production inbox-placement QA, and MailerLite Production delivery remain pending/inactive.
 
 ## Capability evidence
 
@@ -65,9 +73,20 @@ Still requiring account-level verification:
 | Account created | Verified manually |
 | Owner verification | Pending manual verification |
 | MFA | Verified manually |
-| Final sender identity | Pending manual verification |
-| Branded mailbox | Pending manual verification |
-| Domain authenticated | Pending manual verification |
+| Final sender identity | Verified manually for Hostinger mailbox; pending for MailerLite Production sender |
+| Professional mailbox created | Verified manually |
+| Webmail login | Verified manually |
+| Branded mailbox | Verified manually for Hostinger privacy contact; pending for MailerLite Production sender |
+| Privacy mailbox operational | Verified manually |
+| Controlled inbound email received | Verified manually |
+| Controlled outbound reply delivered | Verified manually |
+| No bounce observed | Verified manually |
+| Sender display name | Verified manually as `Sing Pronunce Repeat` |
+| Hostinger MX configuration retained | Verified manually |
+| Hostinger SPF configuration retained | Verified manually |
+| Hostinger DKIM configuration retained | Verified manually |
+| DMARC configuration retained | Verified manually |
+| Domain authenticated | Verified manually for Hostinger mailbox; pending for MailerLite Production sending domain |
 | DPA reviewed | Pending manual verification |
 | Sub-processors reviewed | Pending manual verification |
 | Processing locations reviewed | Pending manual verification |
@@ -99,6 +118,11 @@ Still requiring account-level verification:
 | Deletion | PENDING |
 | Inbox placement | PENDING |
 | Domain authentication | PENDING |
+| MailerLite sender verification | PENDING |
+| MailerLite sending-domain authentication | PENDING |
+| MailerLite DKIM verification | PENDING |
+| MailerLite Production sender readiness | PENDING |
+| Production inbox-placement QA | PENDING |
 | Production configuration | INACTIVE |
 | Preview secrets | Not required for the current provider-hosted-form direction |
 | No Production contact creation | VERIFIED |
@@ -122,7 +146,9 @@ Notes:
 - The current sender uses a free Gmail address.
 - The current sender remains a non-branded free-domain setup for QA.
 - MailerLite displayed a free-domain deliverability warning.
-- SPF, DKIM, DMARC, branded mailbox, and domain alignment remain pending.
+- Hostinger mailbox SPF, DKIM, DMARC, visible sender name, inbound delivery, outbound delivery, and bounce check are verified for `privacidad@singpronuncerepeat.com`.
+- Hostinger mailbox verification does not authenticate MailerLite for Production sending.
+- MailerLite sender verification, MailerLite sending-domain authentication, MailerLite DKIM verification, MailerLite Production sender readiness, Production inbox-placement QA, and Production email delivery remain pending/inactive.
 - Production deliverability remains blocked.
 - Provider due diligence remains incomplete.
 
@@ -138,16 +164,14 @@ Notes:
 ## Production blockers
 
 - Responsible-party details.
-- Privacy contact.
+- MailerLite sender verification.
+- MailerLite sending-domain authentication.
+- MailerLite DKIM verification.
+- MailerLite Production sender readiness.
 - Public privacy route.
 - Applicable public treatment-policy route.
 - Professional legal approval.
 - MailerLite due diligence.
-- Branded sender mailbox.
-- SPF.
-- DKIM.
-- DMARC.
-- Sender/domain authentication.
 - Approved business/footer address.
 - Production MailerLite group.
 - Production form.

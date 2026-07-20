@@ -8,6 +8,9 @@ Deployed Preview route QA: PASS
 Legal content status: DRAFT PENDING OWNER INPUT
 Professional legal review: PENDING
 Stable custom Production origin: VERIFIED
+Professional privacy mailbox: VERIFIED
+Privacy contact operational: VERIFIED
+Public contact address: privacidad@singpronuncerepeat.com
 Production legal readiness: NO-GO
 ```
 
@@ -19,7 +22,7 @@ Audit of `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`, `docs/legal/PHASE_0_DATA_
 - Duplicate sections: the "responsible party" identification block and the rights/request-procedure flow appear near-verbatim in both drafts and in the checklist. The public pages keep the privacy policy as the primary explanatory surface and keep the data-processing policy procedural, cross-referencing the privacy policy for the full responsible-party description instead of repeating it.
 - Contradictions: none found. Both drafts consistently state Production capture is blocked and drafts are not final.
 - Missing owner information: responsible-party name, identification, city/jurisdiction, and operating condition (personal vs. business) are all unset.
-- Missing privacy-contact information: no operational contact channel exists yet.
+- Privacy-contact information: the public mailbox `privacidad@singpronuncerepeat.com` exists and is operational. Responsible-party identity, city/jurisdiction, effective date, final policy approval, and professional legal review remain pending.
 - Statements that incorrectly imply Production is active: none found; all drafts explicitly state Production remains blocked.
 - Statements needing professional legal review: retention durations, minors/parental approach, response-time commitments, international-transfer assessment, and final approval — all carried into the public pages as open items rather than resolved claims.
 - Information that should remain internal rather than public: MailerLite's DPA text, internal request-tracking log format, and internal access-role naming. None of this was copied into the public routes.
@@ -36,7 +39,14 @@ Stable Production origin:
 - Canonical origin: `https://singpronuncerepeat.com`.
 - `https://www.singpronuncerepeat.com` permanently redirects to `https://singpronuncerepeat.com`.
 - HTTPS, Vercel Production connection, and Hostinger DNS connection are verified.
-- The legal routes now have a stable custom Production origin, but owner details, privacy contact, effective date, final owner approval, and professional legal review remain pending.
+- The legal routes now have a stable custom Production origin, but owner details, effective date, final owner approval, and professional legal review remain pending.
+
+Privacy-contact channel:
+
+- Professional privacy mailbox: VERIFIED.
+- Privacy contact operational: VERIFIED.
+- Public contact address: `privacidad@singpronuncerepeat.com`.
+- The public privacy-contact mailbox is operational and was tested manually. Responsible-party details, effective date, final policy approval, professional legal review, and Production lead-capture authorization remain pending.
 
 ## Rendering matrix
 
@@ -91,21 +101,22 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 - Responsible-party name.
 - Identification details when legally required.
 - City or jurisdiction information.
-- Privacy contact.
 - Effective date.
 - Final owner approval.
 - Professional legal review.
+- Final policy-copy approval.
 - MailerLite due diligence.
-- Branded sender mailbox.
-- SPF.
-- DKIM.
-- DMARC.
+- MailerLite sender verification.
+- MailerLite domain authentication.
 - Approved footer/business address.
 - Production consent copy.
+- Production consent linking.
 - Rights-request process.
+- Rights-request operating procedure QA.
 - Export/correction/deletion QA.
 - Production form.
 - Production automation.
+- Production lead capture.
 - Controlled rollout.
 
 ## Decision
@@ -116,5 +127,5 @@ Preview decision: PASS
 Production decision: NO-GO FOR PRODUCTION LEAD CAPTURE
 
 Reason:
-The deployed Preview privacy and data-processing routes, preparation notices, safe incomplete-state rendering, footer navigation, responsive layouts, keyboard navigation, and noindex/nofollow metadata were verified successfully. Production remains blocked by responsible-party details, privacy contact, effective date, final owner approval, professional legal review, rights-request operations, MailerLite due diligence, sender-domain readiness, approved footer and business information, Production consent linking, and controlled rollout approval.
+The deployed Preview privacy and data-processing routes, preparation notices, safe incomplete-state rendering, footer navigation, responsive layouts, keyboard navigation, noindex/nofollow metadata, and operational public privacy-contact mailbox were verified successfully. Production remains blocked by responsible-party details, effective date, final owner approval, professional legal review, final policy-copy approval, rights-request operations, MailerLite due diligence, MailerLite sender verification, MailerLite domain authentication, approved footer and business information, Production consent linking, Production lead-capture authorization, and controlled rollout approval.
 ```
