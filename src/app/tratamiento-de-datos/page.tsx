@@ -115,7 +115,7 @@ export default function TratamientoDeDatosPage() {
           <p>
             <strong>Dato personal</strong> es información asociada o asociable a
             una persona. <strong>Titular</strong> es la persona a quien pertenece.
-            <strong>Tratamiento</strong> comprende acciones como recopilar,
+            {" "}<strong>Tratamiento</strong> comprende acciones como recopilar,
             organizar, consultar, usar, actualizar o eliminar datos.{" "}
             <strong>Autorización</strong> es el consentimiento previo, expreso e
             informado cuando resulte aplicable.
