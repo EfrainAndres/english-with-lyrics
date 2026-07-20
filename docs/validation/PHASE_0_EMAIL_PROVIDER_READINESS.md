@@ -33,14 +33,22 @@ Production readiness: NO-GO FOR PRODUCTION
 | Hostinger outbound delivery | PASS |
 | Hostinger mailbox bounce check | PASS |
 | Hostinger sender display name | VERIFIED — `Sing Pronunce Repeat` |
-| Email-sender domain readiness | PENDING |
+| MailerLite domain verification | VERIFIED |
+| MailerLite SPF | VERIFIED |
+| MailerLite DKIM | VERIFIED |
+| MailerLite domain authentication | VERIFIED |
+| MailerLite sender-domain readiness | VERIFIED FOR CONTROLLED TESTING |
 | MailerLite sender verification | PENDING |
-| MailerLite domain authentication | PENDING |
+| Post-authentication mailbox regression | PENDING |
+| Authenticated-sender Preview regression | PENDING |
+| Production inbox placement | PENDING |
 | Production email delivery | INACTIVE |
 
 The custom web domain is ready for the public web surface of Sing Pronunce Repeat. The professional privacy mailbox was manually verified through controlled inbound and outbound delivery tests. No message content, personal test addresses, passwords, screenshots, provider IDs, DNS tokens, or private account information are stored in the repository.
 
-Hostinger MX, SPF, DKIM, and DMARC records remain configured for the Hostinger mailbox. This does not complete MailerLite email readiness. MailerLite sender verification, MailerLite sending-domain authentication, MailerLite DKIM verification, MailerLite Production sender readiness, Production inbox-placement QA, and MailerLite Production delivery remain pending/inactive.
+MailerLite domain authentication was completed manually after the required DKIM, combined SPF, and domain-verification records were detected successfully. No DNS tokens, complete DKIM targets, screenshots, provider IDs, passwords, subscriber information, or private account data are stored in the repository.
+
+Hostinger MX, SPF, DKIM, and DMARC records remain configured for the Hostinger mailbox. Hostinger and MailerLite authorization coexist in one apex SPF record, and MailerLite DKIM uses a separate selector from Hostinger DKIM. This completes MailerLite sender-domain readiness for controlled testing, but does not activate Production sending. MailerLite sender verification, post-authentication mailbox regression, authenticated-sender Preview regression, Production inbox-placement QA, and MailerLite Production delivery remain pending/inactive.
 
 ## Capability evidence
 
@@ -85,8 +93,18 @@ Still requiring account-level verification:
 | Hostinger MX configuration retained | Verified manually |
 | Hostinger SPF configuration retained | Verified manually |
 | Hostinger DKIM configuration retained | Verified manually |
+| MailerLite DKIM retained | Verified manually |
 | DMARC configuration retained | Verified manually |
-| Domain authenticated | Verified manually for Hostinger mailbox; pending for MailerLite Production sending domain |
+| Vercel web DNS retained | Verified manually |
+| Sending domain added to MailerLite | Verified manually |
+| Domain-verification TXT added and detected | Verified manually |
+| DKIM CNAME added and detected | Verified manually |
+| Combined SPF added and detected | Verified manually |
+| One apex SPF record retained | Verified manually |
+| Hostinger SPF authorization retained | Verified manually |
+| MailerLite SPF authorization retained | Verified manually |
+| MailerLite authentication completed | Verified manually |
+| Domain authenticated | Verified manually for Hostinger mailbox and MailerLite sender-domain testing |
 | DPA reviewed | Pending manual verification |
 | Sub-processors reviewed | Pending manual verification |
 | Processing locations reviewed | Pending manual verification |
@@ -117,11 +135,16 @@ Still requiring account-level verification:
 | Correction | PENDING |
 | Deletion | PENDING |
 | Inbox placement | PENDING |
-| Domain authentication | PENDING |
+| Domain authentication | VERIFIED |
 | MailerLite sender verification | PENDING |
-| MailerLite sending-domain authentication | PENDING |
-| MailerLite DKIM verification | PENDING |
-| MailerLite Production sender readiness | PENDING |
+| MailerLite domain verification | VERIFIED |
+| MailerLite SPF | VERIFIED |
+| MailerLite DKIM verification | VERIFIED |
+| MailerLite sending-domain authentication | VERIFIED |
+| MailerLite Production sender readiness | VERIFIED FOR CONTROLLED TESTING |
+| Post-authentication Hostinger inbound regression | PENDING |
+| Post-authentication Hostinger outbound regression | PENDING |
+| Authenticated-sender Preview Email 1 regression | PENDING |
 | Production inbox-placement QA | PENDING |
 | Production configuration | INACTIVE |
 | Preview secrets | Not required for the current provider-hosted-form direction |
@@ -142,13 +165,12 @@ Still requiring account-level verification:
 Notes:
 
 - The Preview workflow test remains valid because the provider-hosted form, isolated group, subscriber activation, automation trigger, and test-email delivery all worked end to end.
+- A new authenticated-sender Preview regression is required because the sender-domain configuration changed after the original Preview Email 1 QA.
 - Current inbox placement is not sufficient for Production.
-- The current sender uses a free Gmail address.
-- The current sender remains a non-branded free-domain setup for QA.
-- MailerLite displayed a free-domain deliverability warning.
 - Hostinger mailbox SPF, DKIM, DMARC, visible sender name, inbound delivery, outbound delivery, and bounce check are verified for `privacidad@singpronuncerepeat.com`.
-- Hostinger mailbox verification does not authenticate MailerLite for Production sending.
-- MailerLite sender verification, MailerLite sending-domain authentication, MailerLite DKIM verification, MailerLite Production sender readiness, Production inbox-placement QA, and Production email delivery remain pending/inactive.
+- Previous Hostinger mailbox tests remain historical passed evidence, but post-authentication inbound and outbound mailbox regression is required after the sending-domain DNS change.
+- MailerLite domain verification, SPF, DKIM, and domain authentication are verified for `singpronuncerepeat.com`.
+- Gmail inbox-placement QA, Outlook delivery QA, spam-placement review, Production Email 1, Production automation, Production lead capture, controlled Production rollout, and Production email delivery remain pending/inactive.
 - Production deliverability remains blocked.
 - Provider due diligence remains incomplete.
 
@@ -165,9 +187,9 @@ Notes:
 
 - Responsible-party details.
 - MailerLite sender verification.
-- MailerLite sending-domain authentication.
-- MailerLite DKIM verification.
-- MailerLite Production sender readiness.
+- Post-authentication Hostinger inbound regression.
+- Post-authentication Hostinger outbound regression.
+- Authenticated-sender Preview Email 1 regression.
 - Public privacy route.
 - Applicable public treatment-policy route.
 - Professional legal approval.
@@ -178,6 +200,9 @@ Notes:
 - Production MailerLite automation.
 - `/gracias`.
 - Production Email 1.
+- Gmail inbox-placement QA.
+- Outlook delivery QA.
+- Spam-placement review.
 - Export test.
 - Correction test.
 - Deletion test.
@@ -193,4 +218,4 @@ Preview decision: READY FOR CONTROLLED PREVIEW
 Production decision: NO-GO FOR PRODUCTION
 
 Reason:
-The provider-hosted Preview form, isolated group, single opt-in, explicit consent, duplicate handling, real automation Email 1, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, and subscriber-specific unsubscribe flow were verified. Production remains blocked by legal, privacy, sender-domain, footer approval, public-route, deliverability, rights-operation QA, and end-to-end Production requirements.
+The provider-hosted Preview form, isolated group, single opt-in, explicit consent, duplicate handling, original real automation Email 1, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, subscriber-specific unsubscribe flow, and MailerLite domain authentication were verified. Production remains blocked by legal, privacy, post-authentication mailbox regression, authenticated-sender Preview regression, footer approval, public-route, deliverability, rights-operation QA, and end-to-end Production requirements.

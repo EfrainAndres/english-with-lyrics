@@ -99,7 +99,7 @@ Priority: High.
 - [ ] Complete MailerLite account approval and sender setup.
 - [ ] Complete MailerLite DPA review.
 - [ ] Complete MailerLite sub-processor review.
-- [ ] Complete MailerLite domain authentication.
+- [x] Complete MailerLite domain authentication.
 - [x] Create the Preview group in MailerLite.
 - [x] Create the Preview form in MailerLite.
 - [x] Create the Preview automation in MailerLite.
@@ -134,8 +134,17 @@ Priority: High.
 - [ ] Run Preview Email 1 QA.
 - [ ] Test unsubscribe from the delivery email.
 - [x] Confirm custom Production web domain readiness: `https://singpronuncerepeat.com` active, HTTPS verified, Vercel Production connection verified, Hostinger DNS connection verified, and `www` permanent redirect verified.
+- [x] Complete MailerLite domain-verification DNS.
+- [x] Configure combined Hostinger/MailerLite SPF.
+- [x] Configure MailerLite DKIM.
+- [x] Complete MailerLite domain authentication for `singpronuncerepeat.com`.
+- [ ] Run post-authentication Hostinger inbound mailbox regression.
+- [ ] Run post-authentication Hostinger outbound mailbox regression.
+- [ ] Test Preview Email 1 with the authenticated sender.
+- [ ] Review Gmail inbox placement with the authenticated sender.
+- [ ] Test Outlook delivery with the authenticated sender.
+- [ ] Review spam placement with the authenticated sender.
 - [ ] Re-export and validate the ebook PDF so the binary artifact uses `https://singpronuncerepeat.com/ebook-gratis` and `Sing Pronunce Repeat`; current PDF source configuration is aligned, but the checked-in binary still contains the legacy backlink and old brand alt text.
-- [ ] Complete Production sender-domain setup.
 - [ ] Configure Production Email 1.
 - [ ] Activate the Production sequence only after approval.
 - [ ] Document inbox-placement results.

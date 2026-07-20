@@ -58,18 +58,18 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current funnel step: Preview Email 1 content and delivery preparation.
+Current funnel step: post-authentication email regression and remaining production-readiness gates.
 
 Next order:
 
-1. Preview Email 1 content.
-2. Preview email QA.
-3. Public legal routes — implemented (`/privacidad`, `/tratamiento-de-datos`); Preview manual QA pending. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
-4. Sender-domain readiness. Custom Production web domain readiness is complete at `https://singpronuncerepeat.com`; professional mailbox, MailerLite sender verification, and MailerLite domain authentication remain pending.
-5. Production Email 1.
-6. Landing CRO restructure.
-7. Funnel event analytics.
-8. Production rollout.
+1. MailerLite domain authentication — complete.
+2. Hostinger mailbox regression — pending.
+3. Authenticated-sender Preview Email 1 regression — pending.
+4. Ebook PDF canonical brand/domain regeneration — pending.
+5. Legal owner configuration — pending.
+6. Production Email 1 configuration — pending.
+7. Inbox-placement QA — pending.
+8. Controlled Production rollout — pending.
 
 This gate applies before:
 
