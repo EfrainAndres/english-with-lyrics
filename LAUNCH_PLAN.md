@@ -79,7 +79,7 @@ Sing Pronounce Repeat helps Spanish speakers learn English through songs using t
 | PDF publication readiness review | Complete — `docs/validation/PHASE_0_EBOOK_PUBLICATION_READINESS.md`; decision: CONDITIONAL GO |
 | PDF delivery and page conversion | Locally complete — `feat/phase-0-ebook-pdf-delivery`; public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`; `/ebook-gratis` download page active; deployed smoke test pending |
 | Home page alignment | Locally complete — `fix/phase-0-home-ebook-delivery-alignment`; all home CTAs route to `/ebook-gratis`; waiting-state copy removed; deployed smoke test pending |
-| Production origin + PDF backlink | Locally complete — `fix/phase-0-production-origin-and-pdf-backlink`; origin `https://english-with-lyrics.vercel.app` approved; PDF backlink restored; 7 annotations validated; production redeploy and PDF backlink click test pending |
+| Production origin + PDF backlink | Complete — canonical Production origin is `https://singpronuncerepeat.com`; HTTPS, Vercel Production connection, Hostinger DNS connection, apex loading, and permanent `www` redirect verified; PDF backlink restored; 7 annotations validated |
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | Pending — after PDF and consent approach confirmed |
@@ -116,7 +116,7 @@ Staged rollout:
 11. Preview test email sent.
 12. Preview CTA validated.
 13. Unsubscribe tested.
-14. Sender domain completed.
+14. Custom Production web domain completed; professional mailbox and sender-domain authentication pending.
 15. Public legal pages published.
 16. Production Email 1 configured.
 17. Production automation remains inactive until approval.

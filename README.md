@@ -81,6 +81,11 @@ Email automation is not configured. Direct web download through `/ebook-gratis` 
 
 MailerLite is the proposed Phase 0 email provider for the future soft-gated lead funnel, but Production activation is blocked.
 
+- Custom production web domain: ACTIVE.
+- Canonical production origin: `https://singpronuncerepeat.com`.
+- `https://www.singpronuncerepeat.com` permanently redirects to `https://singpronuncerepeat.com`.
+- HTTPS, Vercel Production connection, and Hostinger DNS connection are verified.
+- Professional mailbox, MailerLite sender verification, MailerLite domain authentication, and Production email delivery remain pending/inactive.
 - Manual setup checklist: `docs/integrations/PHASE_0_MAILERLITE_MANUAL_CHECKLIST.md`
 - Setup and readiness docs: `docs/integrations/PHASE_0_MAILERLITE_SETUP.md` and `docs/validation/PHASE_0_EMAIL_PROVIDER_READINESS.md`
 - Preview and Production identifiers must remain isolated.
@@ -186,8 +191,8 @@ To enable the dashboard, open the Vercel project → **Analytics** → **Enable*
 
 Production routes to verify after enabling:
 
-- `https://english-with-lyrics.vercel.app/`
-- `https://english-with-lyrics.vercel.app/ebook-gratis`
+- `https://singpronuncerepeat.com/`
+- `https://singpronuncerepeat.com/ebook-gratis`
 
 ## Useful Docs
 

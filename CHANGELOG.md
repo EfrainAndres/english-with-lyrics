@@ -41,6 +41,7 @@ All notable changes to Sing Pronounce Repeat / English with Lyrics will be docum
 
 ### Changed
 
+- Established `https://singpronuncerepeat.com` as the canonical Production web domain, with HTTPS and a permanent `www` redirect managed through Vercel and Hostinger DNS.
 - Updated README, backlog, launch, metrics, and validation docs to reflect the active `/ebook-gratis` delivery flow, validated 21-page PDF, approved production origin, and remaining analytics/email follow-up work.
 - Updated all public ebook CTAs to route internally to `/ebook-gratis`, while survey and first-group actions continue to use their approved Tally destinations.
 - Updated validation copy to explain that Phase 0 uses short external forms instead of local data capture.
