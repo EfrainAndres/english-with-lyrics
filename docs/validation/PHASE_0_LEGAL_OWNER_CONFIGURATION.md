@@ -3,29 +3,60 @@
 ## Current Status
 
 ```text
-Legal configuration architecture: IMPLEMENTED
-Real personal values committed to Git: NO
-Default Production mode: PENDING
-Preview draft mode support: IMPLEMENTED
-Public legal routes: IMPLEMENTED
-Responsible-party section: IMPLEMENTED
-Retention language: IMPLEMENTED
-Minors strategy: IMPLEMENTED
-Provider inventory: IMPLEMENTED
-Rights-request workflow: DOCUMENTED
-Owner authorization to publish contact details: CONFIRMED OUTSIDE REPOSITORY
-Domicile/correspondence correction: PASS
+Legal configuration architecture: SERVER-ONLY
+Default Production status: PENDING
+Protected Preview status: DRAFT
+Approved-mode support: IMPLEMENTED BUT INACTIVE
+Personal owner values committed to Git: NO
+
+Protected Preview final regression: PASS
+Draft notice: PASS
+/privacidad rendering: PASS
+/tratamiento-de-datos rendering: PASS
+Typography correction: PASS
+Domicile/correspondence separation: PASS
+Telephone display and tel link: PASS
+Privacy mailto link: PASS
+Privacy-to-treatment internal link: PASS
+
+Consultation timeline: PASS
+Consultation five-business-day extension: PASS
+Claim timeline: PASS
+Claim eight-business-day extension: PASS
+Titular-rights content: PASS
+Claim-procedure content: PASS
+Request-handling designation: PASS
+Retention content: PASS
+Minors content: PASS
+Provider disclosure: PASS
+
+Desktop layout: PASS
+Mobile layout: PASS
+Keyboard navigation: PASS
+Visible focus states: PASS
+Footer legal links: PASS
+Noindex/nofollow in rendered HTML: PASS
+Personal values absent from page metadata: PASS
+Personal values absent from Open Graph metadata: PASS
+
+Production pending-state regression: PASS
+Production personal fields rendered: NO
+Production legal draft rendered: NO
+
 Initial owner rendered-copy review: CHANGES REQUESTED
-Internal structured review: CHANGES REQUESTED
-Remaining review corrections: IMPLEMENTED
-Protected Preview regression QA: PENDING
-Owner re-review: PENDING
-Owner approval of final rendered copy: PENDING
+Internal-review corrections: COMPLETE
+Internal structured review: PASS
+Owner rendered-copy re-review: APPROVED
+Owner publication authorization: CONFIRMED OUTSIDE REPOSITORY
+Known content defects: NONE
+
 Professional Colombian legal review: PENDING
-Production legal publication: PENDING
+Provider contractual/DPA review: PENDING
 Production consent linking: PENDING
+Production legal publication approval: PENDING
 Production Email 1: INACTIVE
 Production automation: INACTIVE
+Production email delivery: INACTIVE
 Production lead capture: INACTIVE
 ```
 
@@ -75,14 +106,45 @@ Production must remain configured as `pending` during this phase. Protected Prev
 - No cookies, external JavaScript, form submission or analytics were added by this implementation.
 - No MailerLite Production configuration was changed.
 
+## Final Protected Preview Closure
+
+### Regression and content
+
+- The final protected Preview regression passed in `draft` mode for `/privacidad` and `/tratamiento-de-datos`.
+- The draft notice, typography correction, domicile/correspondence separation, telephone display and `tel:` link, privacy `mailto:` link, and internal treatment-policy link passed.
+- Consultation and claim timelines, their separate extensions, titular rights, claim procedure, request-handling designation, retention, minors language and provider disclosure passed.
+- No known content defects remain from the internal correction cycle.
+
+### Responsive and accessibility
+
+- Desktop and mobile layouts passed.
+- Keyboard navigation, visible focus states and footer legal links passed.
+
+### Robots and metadata privacy
+
+- Rendered HTML retained `noindex, nofollow`.
+- Personal owner values were absent from page metadata and Open Graph metadata.
+- No Preview URL, screenshot, PDF or private QA evidence is stored in the repository.
+
+### Production pending-state regression
+
+- The Production `pending` state passed regression QA.
+- Production rendered neither personal owner fields nor the legal draft.
+- `approved` mode remains implemented but inactive.
+
+### Review decision
+
+- The initial owner rendered-copy review requested changes.
+- The internal correction cycle is complete, and the internal structured review passed.
+- The owner re-reviewed and approved the rendered copy and confirmed publication authorization outside the repository.
+- Owner approval is not professional legal approval.
+
 ## Remaining Gates
 
-- Run protected Preview regression QA after these corrections.
-- Obtain owner re-review and final approval of the rendered copy.
-- Close the internal structured review after regression QA.
 - Complete professional Colombian legal review.
 - Review provider contracts, DPA terms and legal classifications.
 - Test rights-request export, correction, unsubscribe, restriction and deletion operations.
 - Configure and validate final Production consent links.
-- Approve a later publication and indexing phase.
+- Approve a later Production legal publication and indexing phase.
 - Configure Production Email 1 and automation only after all applicable gates pass.
+- Approve controlled Production rollout.

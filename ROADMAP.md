@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current funnel step: internal legal corrections after the verified Preview domicile/correspondence correction, followed by protected Preview regression QA and the remaining review, consent, corporate deliverability, email, and rollout gates.
+Current funnel step: professional and provider legal review after completion of legal-owner configuration, internal structured review, protected Preview final regression and owner rendered-copy approval.
 
 Next order:
 
@@ -69,17 +69,16 @@ Next order:
 5. Production PDF smoke test — complete.
 6. Consumer deliverability QA — pass for current controlled tests.
 7. Corporate Outlook placement — known limitation; organization-managed Outlook delivered to Junk in the current tenant test.
-8. Legal owner configuration implementation — complete.
-9. Environment domicile correction — complete.
-10. Internal legal corrections — current.
-11. Protected Preview regression QA — next.
-12. Owner re-review — pending.
-13. Internal structured review closure — pending.
-14. Professional legal review — pending.
-15. Production consent linking — pending.
-16. Production Email 1 configuration — pending.
-17. Remaining deliverability QA — pending as applicable.
-18. Controlled Production rollout — pending.
+8. Legal-owner configuration — complete.
+9. Internal structured review — complete.
+10. Protected Preview final regression — complete.
+11. Owner rendered-copy review — approved.
+12. Professional Colombian legal review — pending.
+13. Provider contractual/DPA review — pending.
+14. Production consent linking — pending.
+15. Production Email 1 configuration — pending.
+16. Remaining deliverability QA — pending as applicable.
+17. Controlled Production rollout — pending.
 
 This gate applies before:
 

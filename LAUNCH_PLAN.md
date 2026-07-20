@@ -83,7 +83,7 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Gmail Primary placement: PASS; Hotmail inbox placement: PASS — Other tab; consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS; organization-managed Outlook technical delivery: PASS; organization-managed Outlook inbox placement: FAILED CURRENT TENANT TEST; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
-| Public legal routes | Domicile/correspondence Preview correction: PASS; initial owner and internal structured reviews: CHANGES REQUESTED; remaining corrections: IMPLEMENTED; both routes remain `noindex, nofollow`; protected Preview regression QA, owner re-review, internal review closure, and professional legal review pending |
+| Public legal routes | Protected Preview final regression: PASS; desktop/mobile, keyboard, focus, robots and metadata privacy QA: PASS; internal structured review: PASS; owner rendered-copy re-review: APPROVED; owner approval is not professional legal approval; both routes remain `noindex, nofollow`; professional Colombian legal review and Production publication pending |
 
 ### Launch Steps
 
@@ -104,7 +104,7 @@ Status: planned, not live.
 Staged rollout:
 
 1. Architecture approved.
-2. Legal-owner architecture implemented; protected Preview configuration, owner approval, internal structured review, professional legal review and final consent linking remain required.
+2. Legal-owner architecture, protected Preview QA, internal structured review and owner rendered-copy approval complete; professional legal review and final consent linking remain required.
 3. Provider foundation documented.
 4. Provider configured.
 5. Preview form integrated.
@@ -141,13 +141,13 @@ Staged rollout:
 
 ### Privacy gates before production lead capture
 
-All gates remain pending until supported by evidence:
+Gate status is recorded below; completed Preview and owner-review gates do not activate Production:
 
-1. Legal-owner architecture complete without personal values in Git; domicile/correspondence Preview correction passed.
-2. Internal legal-page corrections implemented.
-3. Protected Preview regression QA complete.
+1. Legal-owner architecture complete without personal values in Git.
+2. Internal legal-page correction cycle complete.
+3. Protected Preview final regression QA complete.
 4. Owner re-review and approval of the rendered policies complete.
-5. Internal structured legal review closed.
+5. Internal structured legal review passed.
 6. Professional legal review complete.
 7. Approved public privacy and data-processing policies published as applicable.
 8. Privacy/contact channel operational.
@@ -165,8 +165,9 @@ Current implementation note:
 - The controlled Preview lead-capture component is implemented only on `/ebook-gratis`.
 - `/gracias` is implemented and has passed deployed Preview QA.
 - `/privacidad` and `/tratamiento-de-datos` support safe `pending` rendering and complete environment-backed `draft` rendering; Production remains `pending`, both routes remain `noindex, nofollow`, and they are not yet approved or linked as final consent documents.
-- The domicile/correspondence Preview correction passed, and the remaining internal-review corrections are implemented in source.
-- Protected Preview regression QA, owner re-review, closure of the internal structured review, professional Colombian legal review, and provider contractual/DPA review are pending.
+- Protected Preview final regression, responsive/accessibility QA, robots validation, metadata privacy validation and Production pending-state regression passed.
+- The internal structured review passed, and owner rendered-copy re-review is approved. This owner approval is not professional legal approval.
+- Professional Colombian legal review and provider contractual/DPA review remain pending.
 - Preview redirect configuration is still pending in MailerLite.
 - Email 1 content is documented; authenticated-sender Preview regression has passed.
 - Controlled consumer deliverability has passed for the current Gmail and Hotmail tests; Hotmail reached Inbox — Other, not Focused.
@@ -179,7 +180,7 @@ Current implementation note:
 - Production automation: INACTIVE.
 - Production email delivery: INACTIVE.
 - Production lead capture: INACTIVE.
-- Protected Preview regression QA, owner re-review, internal structured review closure, professional legal review, final Production consent linking, corporate deliverability limitations, Production Email 1, Production automation, and controlled rollout approval remain blocking.
+- Professional legal review, provider contractual/DPA review, final Production consent linking, Production legal publication, corporate deliverability limitations, Production Email 1, Production automation, and controlled rollout approval remain blocking.
 
 ## Phase 1 Launch: Paid MVP
 
