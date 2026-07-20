@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current funnel step: remaining legal, deliverability, email, and rollout gates after ebook PDF canonical brand/domain regeneration and Production PDF smoke testing.
+Current funnel step: remaining legal, corporate deliverability, email, and rollout gates after ebook PDF canonical brand/domain regeneration, Production PDF smoke testing, and controlled consumer deliverability QA.
 
 Next order:
 
@@ -67,10 +67,12 @@ Next order:
 3. Authenticated-sender Preview Email 1 regression — complete.
 4. Canonical ebook PDF regeneration — complete.
 5. Production PDF smoke test — complete.
-6. Legal owner configuration — next applicable legal phase.
-7. Production Email 1 configuration — pending.
-8. Remaining deliverability QA — pending as applicable.
-9. Controlled Production rollout — pending.
+6. Consumer deliverability QA — pass for current controlled tests.
+7. Corporate Outlook placement — known limitation; organization-managed Outlook delivered to Junk in the current tenant test.
+8. Legal owner configuration — next applicable legal phase.
+9. Production Email 1 configuration — pending.
+10. Remaining deliverability QA — pending as applicable.
+11. Controlled Production rollout — pending.
 
 This gate applies before:
 
