@@ -18,7 +18,9 @@ MailerLite sending-domain authentication: VERIFIED
 
 Authenticated domain: singpronuncerepeat.com
 
-Authenticated-sender Preview regression: PENDING
+Authenticated-sender Preview regression QA: PASS
+
+Post-authentication mailbox regression: PASS
 
 Production Email 1: INACTIVE
 
@@ -41,8 +43,10 @@ Production readiness: NO-GO
 - Production automation remains inactive.
 - Production email delivery remains inactive.
 - Emails 2–4 remain planning-only.
-- Inbox placement is not approved.
-- Authenticated-sender Preview regression is required because the sender-domain configuration changed after the original Preview email QA.
+- Gmail technical delivery passed, but the exact Gmail folder was not recorded for the authenticated-sender test.
+- Outlook delivery remains pending.
+- Inbox placement is not approved for Production.
+- Authenticated-sender Preview regression passed after the sender-domain configuration changed.
 
 ## Email content
 
@@ -109,6 +113,8 @@ Production readiness: NO-GO
 
 ## QA results
 
+### Original Preview QA
+
 - Preview Email 1 configuration: PASS
 - Real automation send: PASS
 - Subject: PASS
@@ -124,13 +130,40 @@ Production readiness: NO-GO
 - Production automation involved: NO
 - Production contact created: NO
 
+### Authenticated-sender regression QA
+
+- Preview form submission: PASS
+- Consent submission: PASS
+- Preview group membership: PASS
+- Preview automation trigger: PASS
+- Authenticated Email 1 delivery: PASS
+- Sender display name: PASS
+- Authenticated sender address: PASS
+- `[TEST]` subject: PASS
+- Preview-only destination: PASS
+- CTA: PASS
+- Fallback URL: PASS
+- `/gracias?source=email`: PASS
+- PDF access: PASS
+- PDF download: PASS
+- PDF browser-open action: PASS
+- Real unsubscribe: PASS
+- Subscriber unsubscribe status: PASS
+- Gmail technical delivery: PASS
+- Gmail inbox placement: NOT RECORDED
+- Spam placement: NOT RECORDED
+- Outlook delivery: PENDING
+- Production group involved: NO
+- Production automation involved: NO
+- Production email sent: NO
+
 ## Deliverability and footer notes
 
 - Technical email delivery: PASS.
 - Preview automation delivery: PASS.
 - Gmail delivery was observed.
-- Spam placement was observed previously with the current free-domain sender.
-- Inbox placement must not be treated as approved.
+- Spam placement was observed previously with the original free-domain sender. Spam placement was not recorded for the authenticated-sender regression.
+- Inbox placement must not be treated as approved for Production.
 - MailerLite automatic footer remained present.
 - Unsubscribe remained present.
 - Footer language was adjusted or reviewed where supported.
@@ -144,13 +177,8 @@ Production readiness: NO-GO
 - Responsible-party details.
 - Legal approval.
 - MailerLite sender verification.
-- Authenticated-sender Preview Email 1 regression.
-- Preview CTA regression after sender authentication.
-- Preview unsubscribe regression after sender authentication.
 - Production inbox-placement QA.
-- Gmail inbox-placement QA with authenticated sender.
 - Outlook delivery QA with authenticated sender.
-- Spam-placement review with authenticated sender.
 - Approved business address.
 - Production group.
 - Production automation.
@@ -169,4 +197,4 @@ Preview decision: PASS
 Production decision: NO-GO FOR PRODUCTION
 
 Reason:
-The original controlled Preview automation successfully delivered Email 1 to a test subscriber. The subject, preheader, sender display name, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, and subscriber-specific unsubscribe flow were verified. MailerLite sending-domain authentication is now verified for `singpronuncerepeat.com`, so a new authenticated-sender Preview regression is required before treating the sender-authenticated flow as ready. Production remains blocked by public legal routes, approved responsible-party information, footer approval, Production MailerLite configuration, deliverability QA, rights-operation QA, funnel analytics, and legal approval.
+The original controlled Preview automation successfully delivered Email 1 to a test subscriber. After MailerLite sending-domain authentication was verified for `singpronuncerepeat.com`, the authenticated-sender Preview regression also passed: Preview form submission, consent, group membership, automation trigger, Email 1 delivery, sender display name, authenticated sender address, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, PDF download, browser-open action, and subscriber-specific unsubscribe were verified. Production remains blocked by public legal routes, approved responsible-party information, footer approval, Production MailerLite configuration, deliverability QA, rights-operation QA, funnel analytics, and legal approval.
