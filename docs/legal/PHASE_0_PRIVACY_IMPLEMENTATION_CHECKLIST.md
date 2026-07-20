@@ -14,7 +14,19 @@ Marcar un item solo con evidencia verificable. Completar borradores no equivale 
 - [ ] Identidad del responsable suministrada: `[PENDING_OWNER_INPUT]`.
 - [ ] Condicion de operacion personal o empresarial definida: `[PENDING_OWNER_INPUT]`.
 - [ ] Ubicacion y datos de identificacion aplicables suministrados: `[PENDING_OWNER_INPUT]`.
-- [ ] Contacto y canal de privacidad suministrados: `[PENDING_OWNER_INPUT]`.
+- [x] Contacto y canal de privacidad suministrados: `privacidad@singpronuncerepeat.com`.
+- [x] Professional privacy mailbox created.
+- [x] Privacy-contact mailbox operational.
+- [x] Hostinger Webmail login verified.
+- [x] Controlled inbound delivery verified.
+- [x] Controlled outbound delivery verified.
+- [x] No bounce observed during the controlled test.
+- [x] Sender display name configured as `Sing Pronunce Repeat`.
+- [x] Public privacy-contact address defined as `privacidad@singpronuncerepeat.com`.
+- [x] Hostinger MX records retained.
+- [x] Hostinger SPF record retained.
+- [x] Hostinger DKIM records retained.
+- [x] DMARC record retained.
 - [ ] Revision legal profesional realizada: `[PENDING_LEGAL_REVIEW]`.
 - [ ] Terminos oficiales vigentes de MailerLite revisados.
 - [ ] DPA vigente de MailerLite revisado.
@@ -122,14 +134,20 @@ Estado: `[PENDING_PROVIDER_VERIFICATION]`. No enviar datos a MailerLite y Brevo 
 
 - [ ] Contenido legal final aprobado: `[PENDING_LEGAL_REVIEW]`.
 - [ ] Identidad del responsable publicada.
-- [ ] Canal de contacto operativo y probado.
+- [x] Canal de contacto operativo y probado: `privacidad@singpronuncerepeat.com`.
 - [ ] Politica de privacidad publica y enlazada.
 - [ ] Politica de tratamiento publica y enlazada cuando corresponda.
 - [ ] Contrato del proveedor aceptado por propietario autorizado.
 - [ ] Debida diligencia de MailerLite completada.
 - [ ] Evaluacion internacional completada: `[PENDING_LEGAL_REVIEW]`.
-- [ ] Identidad y dominio remitente de Produccion verificados.
+- [ ] MailerLite sender verified.
+- [ ] MailerLite sending domain authenticated.
+- [ ] MailerLite DKIM verified.
+- [ ] Identidad y dominio remitente de Produccion verificados para MailerLite.
 - [ ] Automatizacion de Produccion probada con datos controlados.
+- [ ] Production Email 1 configured.
+- [ ] Production automation activated.
+- [ ] Production inbox placement passed.
 - [ ] Unsubscribe probado de extremo a extremo.
 - [ ] Supresion y prevencion de reactivacion probadas.
 - [ ] Eliminacion probada.
@@ -144,6 +162,8 @@ Estado: `[PENDING_PROVIDER_VERIFICATION]`. No enviar datos a MailerLite y Brevo 
 - [ ] Plan de rollback preparado.
 - [ ] Direct download permanece activo hasta aprobar QA del reemplazo.
 - [ ] Rollout controlado aprobado.
+- [ ] Production lead capture activated.
+- [ ] Controlled Production rollout approved.
 
 ## Despues del lanzamiento
 
@@ -227,7 +247,7 @@ Este bloque es un gate de produccion, no una mejora opcional.
 | Dato o decision | Marcador | Clasificacion |
 |---|---|---|
 | Identidad del responsable | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
-| Contacto de privacidad | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
+| Contacto de privacidad | `privacidad@singpronuncerepeat.com` | Completo para mailbox; procedimiento operativo y revision legal siguen pendientes |
 | Condicion de operacion personal o empresarial | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Detalle de ubicacion | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Fecha efectiva | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
