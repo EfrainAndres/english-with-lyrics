@@ -17,6 +17,8 @@ Current canonical-brand audit note:
 - Legacy Vercel backlink: REMOVED from checked-in PDF binaries.
 - Legacy brand spelling: REMOVED from checked-in PDF binaries.
 - Public PDF path: UNCHANGED — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- Production PDF smoke test: PASS.
+- PDF backlink in deployed artifact: VERIFIED.
 
 Branch: `fix/phase-0-ebook-pdf-canonical-brand-domain`
 
@@ -32,6 +34,9 @@ Branch: `fix/phase-0-ebook-pdf-canonical-brand-domain`
 | Verified home route | `https://singpronuncerepeat.com/` |
 | Verified ebook route | `https://singpronuncerepeat.com/ebook-gratis` |
 | Verified PDF route | `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
+| Canonical Production origin | VERIFIED |
+| Canonical ebook route | VERIFIED |
+| WWW redirect behavior | VERIFIED |
 
 Recorded in `src/lib/links.ts` as:
 ```ts
@@ -53,6 +58,9 @@ export const ebookPageUrl     = `${productionOrigin}${ebookPagePath}`;
 | Annotation count before | 6 (backlink was a non-clickable `<span>`) |
 | Annotation count after | 7 |
 | Validation result | Pass — export script confirms exactly 7 annotations and exact backlink target |
+| Deployed artifact validation | VERIFIED — backlink passed Production smoke testing |
+| PDF backlink destination | PASS — `https://singpronuncerepeat.com/ebook-gratis` |
+| Legacy Vercel backlink | REMOVED |
 
 ---
 
@@ -129,21 +137,31 @@ All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app
 | `npm run build` — passes | Pass |
 | `git diff --check` — clean | Pass |
 
-### Deployed production validation (pending)
+### Deployed production validation (completed)
 
-These checks require the updated branch to be deployed and the new PDF to be live at `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+Production smoke testing was completed manually through the canonical custom domain. No screenshots, personal data, subscriber information, deployment URLs, provider IDs, or private account details are stored in the repository.
 
 | Check | Status |
 |---|---|
-| Home page loads | Pending — verify after redeploy |
-| Ebook page loads | Pending — verify after redeploy |
-| PDF direct URL responds | Pending — verify after redeploy |
-| Download CTA triggers browser download | Pending — verify after redeploy |
-| Open-in-browser CTA opens PDF | Pending — verify after redeploy |
-| PDF backlink (page 20) is clickable and routes to production ebook page | Pending — verify after redeploy |
-| YouTube links open official videos | Pending — verify after redeploy |
-| Survey links open Tally form | Pending — verify after redeploy |
-| First-group link opens Tally form | Pending — verify after redeploy |
+| Production deployment | READY |
+| Ebook page loads | PASS — `https://singpronuncerepeat.com/ebook-gratis` |
+| PDF direct URL responds | PASS — `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
+| PDF content type | VERIFIED — `application/pdf` |
+| Download CTA triggers browser download | PASS |
+| Open-in-browser CTA opens PDF | PASS |
+| Public filename unchanged | PASS — `guia-gratis-sing-pronounce-repeat.pdf` |
+| PDF opens successfully | PASS |
+| Page count | PASS — 21 |
+| Official brand visible in PDF | PASS — `Sing Pronunce Repeat` |
+| Page 16 clipping correction | PASS |
+| Page 21 CTA/backlink area | PASS |
+| PDF backlink in deployed artifact | VERIFIED |
+| PDF backlink destination | PASS — `https://singpronuncerepeat.com/ebook-gratis` |
+| WWW/custom-domain behavior | PASS |
+| Legacy Vercel backlink visible | NO |
+| Legacy brand spelling visible | NO |
+| Production lead capture activated | NO |
+| Production email delivery activated | NO |
 
 ---
 

@@ -14,6 +14,7 @@ Current canonical-brand audit note:
 - Structural validation: PASS.
 - Visual QA: PASS — all 21 pages rendered to temporary PNGs; page 16 density was adjusted to remove inherited footer clipping while preserving content and page count.
 - Link annotation validation: PASS — 7 intended HTTPS annotations retained.
+- Deployed Production PDF smoke test: PASS.
 
 | Field | Value |
 |---|---|
@@ -29,7 +30,7 @@ Current canonical-brand audit note:
 | PDF backlink | Restored — `https://singpronuncerepeat.com/ebook-gratis` (7th annotation) |
 | Embedded annotations | 7 (3 YouTube + 2 Tally survey + 1 Tally first-group + 1 ebook backlink) |
 | Email automation | Pending — direct web download enabled; no email provider configured |
-| Production redeploy | Required — new PDF must be deployed to make backlink live |
+| Production deployment | READY — regenerated PDF deployed behind canonical custom domain |
 | Branch | `fix/phase-0-ebook-pdf-canonical-brand-domain` |
 
 ---
@@ -85,7 +86,40 @@ Verified from source code in `src/app/ebook-gratis/page.tsx` and `src/lib/links.
 | No database or auth | Pass |
 | External links use safe attributes | Pass — `getLinkProps` in `CTAButton` and `surveyFormUrl`/`firstGroupFormUrl` produce `target="_blank" rel="noopener noreferrer"` for `https://` links |
 
-Manual browser QA: Pass locally — `http://localhost:3001/ebook-gratis` returned 200, and `/downloads/guia-gratis-sing-pronounce-repeat.pdf` returned 200 with `Content-Type: application/pdf` and `Content-Length: 1322844`. Deployed-environment smoke test pending.
+Manual browser QA: Pass locally — `http://localhost:3001/ebook-gratis` returned 200, and `/downloads/guia-gratis-sing-pronounce-repeat.pdf` returned 200 with `Content-Type: application/pdf` and `Content-Length: 1322844`.
+
+---
+
+## Production smoke test
+
+Production smoke testing was completed manually through the canonical custom domain. No screenshots, personal data, subscriber information, deployment URLs, provider IDs, or private account details are stored in the repository.
+
+| Check | Status |
+|---|---|
+| PDF regeneration | COMPLETE |
+| Local PDF QA | PASS |
+| Deployed Production PDF smoke test | PASS |
+| Production deployment | READY |
+| Production ebook page | PASS — `https://singpronuncerepeat.com/ebook-gratis` |
+| Production PDF URL | `https://singpronuncerepeat.com/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
+| Production PDF request | PASS |
+| Production PDF content type | VERIFIED — `application/pdf` |
+| Production PDF download | PASS |
+| Production browser-open action | PASS |
+| Public PDF path | UNCHANGED — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
+| Public filename unchanged | PASS — `guia-gratis-sing-pronounce-repeat.pdf` |
+| PDF opens successfully | PASS |
+| Page count | 21 |
+| Official brand in visible PDF | PASS — `Sing Pronunce Repeat` |
+| Page 16 clipping correction | PASS |
+| Page 21 CTA/backlink area | PASS |
+| Production canonical backlink | PASS |
+| Backlink destination | `https://singpronuncerepeat.com/ebook-gratis` |
+| WWW/custom-domain behavior | PASS |
+| Legacy Vercel backlink visible | NO |
+| Legacy brand spelling visible | NO |
+| Production lead capture activated | NO |
+| Production email delivery activated | NO |
 
 ---
 
@@ -136,7 +170,7 @@ Manual checks required. Mark complete only after actual inspection.
 | ID | Description | Severity | Status |
 |---|---|---|---|
 | BLK-02 | Production domain approval and PDF backlink restoration | High | Complete — origin approved; backlink restored in `fix/phase-0-production-origin-and-pdf-backlink` |
-| BLK-DEL-01 | Production redeploy + smoke test | High | Pending — deploy branch and verify backlink click on production |
+| BLK-DEL-01 | Production redeploy + smoke test | High | Complete — deployed Production smoke test passed through `https://singpronuncerepeat.com` |
 | BLK-DEL-02 | Mobile browser QA not performed | Medium | Pending — manual check required |
 | BLK-DEL-03 | Download analytics not implemented | Low | Pending — add as separate backlog item |
 | BLK-DEL-04 | Email-provider automation not configured | Medium | Pending — separate task after provider selection |
