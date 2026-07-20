@@ -6,7 +6,7 @@ This guide sets working rules for legally cautious product and content decisions
 
 ## Core Legal Position
 
-Sing Pronounce Repeat / English with Lyrics should be a transformative educational product. It should teach pronunciation, listening, meaning, and English learning skills through short song fragments, original commentary, and original Escríbelo como suena guidance.
+Sing Pronunce Repeat / English with Lyrics should be a transformative educational product. It should teach pronunciation, listening, meaning, and English learning skills through short song fragments, original commentary, and original Escríbelo como suena guidance. The canonical Production origin is `https://singpronuncerepeat.com`.
 
 The platform must not be designed or presented as a lyrics replacement.
 

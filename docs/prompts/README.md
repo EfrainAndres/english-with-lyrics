@@ -27,7 +27,7 @@ Prompts should help with:
 ## Suggested Prompt Template
 
 ```text
-You are helping create a Sing Pronounce Repeat / English with Lyrics micro-lesson for Spanish speakers.
+You are helping create a Sing Pronunce Repeat / English with Lyrics micro-lesson for Spanish speakers.
 
 Use the Escríbelo como suena method:
 - Spanish-friendly pronunciation guidance.

@@ -12,7 +12,7 @@ This document establishes trustworthy baseline analytics for the Phase 0 ebook f
 |---|---|
 | Provider | Vercel Web Analytics |
 | Hosting plan | Hobby |
-| Production origin | `https://english-with-lyrics.vercel.app` |
+| Production origin | `https://singpronuncerepeat.com` |
 | Implementation | `<Analytics />` rendered in `src/app/layout.tsx` via `@vercel/analytics/next` |
 | Package | `@vercel/analytics` ^2.0.1 |
 | Implementation status | Complete — code integrated; dashboard activation pending |

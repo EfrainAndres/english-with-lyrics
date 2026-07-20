@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document defines the strategic, editorial, educational, legal-safe, and design-ready content plan for the first free ebook produced by Sing Pronounce Repeat / English with Lyrics. It covers purpose, positioning, target reader, benchmark analysis, scope, structure, song-selection framework, micro-lesson template, editorial rules, legal rules, exercise library, production workflow, quality gates, and open decisions.
+This document defines the strategic, editorial, educational, legal-safe, and design-ready content plan for the first free ebook produced by Sing Pronunce Repeat / English with Lyrics. It covers purpose, positioning, target reader, benchmark analysis, scope, structure, song-selection framework, micro-lesson template, editorial rules, legal rules, exercise library, production workflow, quality gates, and open decisions.
 
 This document does not contain the ebook itself, song lyrics, a PDF, or final song selections.
 
@@ -105,7 +105,7 @@ Option A is the provisional recommendation for its clarity, cover readability, a
 - Has difficulty understanding English as it sounds in songs.
 - Feels insecure about pronunciation.
 - Wants practical, accessible guidance without IPA symbols.
-- May arrive from YouTube, Instagram, TikTok, or the Sing Pronounce Repeat landing page.
+- May arrive from YouTube, Instagram, TikTok, or the Sing Pronunce Repeat landing page.
 - Primarily reads from a phone.
 - Prefers short, clear formats over long courses or dense grammar books.
 - Motivated by real songs they know or want to understand.
@@ -213,7 +213,7 @@ Producing a comprehensive ebook before demand is validated is a Phase 1 decision
 
 - **Purpose:** First impression. Brand identification. Motivation to open the guide.
 - **Approximate length:** 1 page.
-- **Main content:** Title, subtitle, brand name (Sing Pronounce Repeat / English with Lyrics), method name (Escríbelo como suena), and brand palette.
+- **Main content:** Title, subtitle, brand name (Sing Pronunce Repeat / English with Lyrics), method name (Escríbelo como suena), and brand palette.
 - **User action:** Open the guide.
 - **Validation value:** None direct, but design quality affects perceived credibility.
 
@@ -735,7 +735,7 @@ This workflow applies to the future `content/phase-0-ebook-draft` branch. It is 
 
 - [ ] The official logo appears on the cover and where appropriate.
 - [ ] Only official brand colors are used: `#010101`, `#FEE296`, `#FE9CE1`, `#CC9DEA`.
-- [ ] The brand name Sing Pronounce Repeat appears on the cover and final page.
+- [ ] The brand name Sing Pronunce Repeat appears on the cover and final page.
 - [ ] English with Lyrics appears as the secondary brand where appropriate.
 - [ ] No personal names appear in public-facing content.
 - [ ] Logo files are used as-is, not recolored, stretched, or cropped.

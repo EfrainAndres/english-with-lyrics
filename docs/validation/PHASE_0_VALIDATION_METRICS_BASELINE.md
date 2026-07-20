@@ -6,7 +6,7 @@
 |---|---|
 | Review date | 2026-06-17 |
 | Branch | `review/phase-0-validation-metrics-baseline` |
-| Production origin | `https://english-with-lyrics.vercel.app` |
+| Production origin | `https://singpronuncerepeat.com` |
 | Analytics provider | Vercel Web Analytics — code integrated, dashboard activation pending |
 | Form provider | Tally |
 | Observation-window status | Not started — no confirmed observation window with verified production data |
@@ -109,7 +109,7 @@ Enter verified values from the Vercel dashboard and Tally after a complete obser
 
 Source: Vercel Web Analytics.
 
-This represents exposure to the Sing Pronounce Repeat brand and value proposition.
+This represents exposure to the Sing Pronunce Repeat brand and value proposition.
 
 ### Stage 2 — Ebook interest
 
@@ -204,7 +204,7 @@ Do not create this metric when starts are unavailable in the Tally dashboard.
 | Risk | Impact | Mitigation | Blocks interpretation? |
 |---|---|---|---|
 | Developer and owner visits during the observation window | Inflates visitor counts in small samples | Avoid repeated production testing; use preview deployments for routine checks | Yes — in very small samples (< 30 visitors) |
-| Preview deployment traffic bleeding into production analytics | Could add non-real visitor data | Vercel Analytics only counts production domain; preview deployments use separate analytics if enabled | No — production analytics is scoped to `english-with-lyrics.vercel.app` |
+| Preview deployment traffic bleeding into production analytics | Could add non-real visitor data | Vercel Analytics only counts production domain; preview deployments use separate analytics if enabled | No — production analytics is scoped to `singpronuncerepeat.com` |
 | Burst traffic from a single share (YouTube, WhatsApp, Instagram) | Creates a spike that does not represent discovery patterns | Annotate promotion dates; interpret burst traffic separately | Partial — note the source channel |
 | Bot traffic | Artificially inflates page views | Vercel's analytics filters some bots; small projects may still see occasional crawlers | Low |
 | Shared devices | A single device used by multiple people counts as one visitor | Acknowledge limitation; do not over-correct | Low for Phase 0 |

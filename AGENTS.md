@@ -1,8 +1,8 @@
-# Sing Pronounce Repeat / English with Lyrics Agent Guide
+# Sing Pronunce Repeat / English with Lyrics Agent Guide
 
 ## Purpose
 
-This file gives Codex and other coding agents the operating rules for Sing Pronounce Repeat / English with Lyrics.
+This file gives Codex and other coding agents the operating rules for Sing Pronunce Repeat / English with Lyrics.
 
 ## Project Status
 
@@ -10,9 +10,10 @@ This repository is currently documentation-only. Do not create the app until a t
 
 ## Brand Rules
 
-- Main public brand: Sing Pronounce Repeat.
+- Main public brand: Sing Pronunce Repeat.
 - Secondary brand: English with Lyrics.
 - Core method: Escríbelo como suena.
+- Canonical Production origin: https://singpronuncerepeat.com.
 - Audience: Spanish speakers learning English.
 - First product surface: Web app.
 

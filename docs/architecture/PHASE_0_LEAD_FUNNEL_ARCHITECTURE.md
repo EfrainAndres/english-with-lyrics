@@ -52,7 +52,7 @@ This document is architecture only. It does not authorize implementation in this
 - The first-group form already exists at `https://tally.so/r/D4a6NE`.
 - Vercel page-view analytics already exists via `@vercel/analytics`.
 - Existing link constants already centralize route and external-form URLs in `src/lib/links.ts`.
-- The current visual system and brand treatment are already aligned with Sing Pronounce Repeat / English with Lyrics.
+- The current visual system and brand treatment are already aligned with Sing Pronunce Repeat / English with Lyrics.
 - Existing delivery, readiness, analytics, form, and QA documentation already covers the PDF and current funnel behavior.
 
 ### Why the site should not be rebuilt from zero
@@ -320,7 +320,7 @@ Those belong in the optional survey, not the first conversion step.
 
 ### Recommended consent copy
 
-`Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronounce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.`
+`Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronunce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.`
 
 Supporting text:
 

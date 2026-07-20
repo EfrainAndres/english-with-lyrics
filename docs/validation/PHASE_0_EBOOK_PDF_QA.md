@@ -57,7 +57,7 @@ for public delivery.
 - **Date:** 2026-06-16
 - **File size:** 1,223,965 bytes
 - **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
-- **PDF title:** "Aprende inglés con 3 canciones — Sing Pronounce Repeat" (UTF-16BE metadata)
+- **PDF title:** "Aprende inglés con 3 canciones — Sing Pronunce Repeat" (UTF-16BE metadata)
 - **Network-error check:** PASSED
 - **Brand colors:** PASSED — yellow #FEE296 detected in shading functions
 - **All 9 learning blocks:** PASSED (deterministic structural validation via Python script)

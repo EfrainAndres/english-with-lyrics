@@ -6,9 +6,12 @@ import { getPrivacyPolicySections } from "@/lib/legal-content";
 import { getRuntimeEnvironment } from "@/lib/runtime-environment";
 
 export const metadata: Metadata = {
-  title: "Política de privacidad | Sing Pronounce Repeat",
+  title: "Política de privacidad",
   description:
-    "Cómo Sing Pronounce Repeat / English with Lyrics trata los datos del futuro embudo de registro mientras la información legal está en preparación.",
+    "Cómo Sing Pronunce Repeat / English with Lyrics trata los datos del futuro embudo de registro mientras la información legal está en preparación.",
+  alternates: {
+    canonical: "/privacidad",
+  },
   robots: {
     index: false,
     follow: false,
@@ -33,7 +36,7 @@ export default function PrivacidadPage() {
 
   return (
     <LegalPageLayout
-      description="Este documento describe, de forma clara y en español, cómo Sing Pronounce Repeat / English with Lyrics trataría los datos relacionados con el futuro embudo de registro."
+      description="Este documento describe, de forma clara y en español, cómo Sing Pronunce Repeat / English with Lyrics trataría los datos relacionados con el futuro embudo de registro."
       eyebrow="Privacidad"
       notice={renderState === "draft" ? <LegalStatusNotice variant="draft" /> : null}
       sections={getPrivacyPolicySections(legalConfiguration)}

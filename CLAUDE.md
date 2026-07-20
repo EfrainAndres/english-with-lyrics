@@ -1,4 +1,4 @@
-# Claude Code Instructions for Sing Pronounce Repeat / English with Lyrics
+# Claude Code Instructions for Sing Pronunce Repeat / English with Lyrics
 
 ## Canonical Sources
 
@@ -10,9 +10,10 @@
 
 ## Project Identity
 
-- Main public brand: Sing Pronounce Repeat.
+- Main public brand: Sing Pronunce Repeat.
 - Secondary brand: English with Lyrics.
 - Core method: Escríbelo como suena.
+- Canonical Production origin: https://singpronuncerepeat.com.
 - Audience: Spanish speakers learning English.
 - Do not mention personal names in public-facing content.
 

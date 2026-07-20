@@ -2,13 +2,13 @@
 
 ## Purpose
 
-This guide defines how Sing Pronounce Repeat / English with Lyrics should create educational song-based content while keeping the Escríbelo como suena method clear, useful, and legally cautious.
+This guide defines how Sing Pronunce Repeat / English with Lyrics should create educational song-based content while keeping the Escríbelo como suena method clear, useful, and legally cautious.
 
 ## Public Brand Rule
 
 Do not mention any personal creator name in public-facing UI copy. Public copy should use:
 
-- Main brand: Sing Pronounce Repeat.
+- Main brand: Sing Pronunce Repeat.
 - Secondary brand: English with Lyrics.
 - Method: Escríbelo como suena.
 

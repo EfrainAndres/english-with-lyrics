@@ -42,7 +42,7 @@ Preview subject:
 Alternative subject options:
 
 ```text
-Aquí tienes tu guía gratuita de Sing Pronounce Repeat
+Aquí tienes tu guía gratuita de Sing Pronunce Repeat
 Tu guía gratuita ya está lista
 ```
 
@@ -72,16 +72,16 @@ Prueba interna del flujo de entrega del ebook.
 Recommended sender display name:
 
 ```text
-Sing Pronounce Repeat
+Sing Pronunce Repeat
 ```
 
 Production sender mailbox:
 
 ```text
-[PENDING_OWNER_INPUT]
+privacidad@singpronuncerepeat.com
 ```
 
-Do not treat a temporary free-domain sender as the final Production mailbox.
+The professional mailbox is verified for Hostinger webmail. MailerLite sender verification and MailerLite domain authentication remain pending, so this does not activate Production sending.
 
 ## Delivery targets
 
@@ -94,7 +94,7 @@ https://<stable-preview-branch-domain>/gracias?source=email
 Future Production delivery target:
 
 ```text
-https://english-with-lyrics.vercel.app/gracias?source=email
+https://singpronuncerepeat.com/gracias?source=email
 ```
 
 Rules:
@@ -140,7 +140,7 @@ No necesitas completar todo en un día. Empieza con unos minutos y vuelve cuando
 
 Si el correo llegó a spam, puedes marcarlo como “No es spam” para facilitar futuras entregas.
 
-Sing Pronounce Repeat
+Sing Pronunce Repeat
 English with Lyrics
 ```
 
@@ -172,7 +172,7 @@ No necesitas completar todo en un día. Empieza con unos minutos y vuelve cuando
 
 Si el correo llegó a spam, puedes marcarlo como “No es spam” para facilitar futuras entregas.
 
-Sing Pronounce Repeat
+Sing Pronunce Repeat
 English with Lyrics
 ```
 
@@ -199,7 +199,7 @@ https://<stable-preview-branch-domain>/gracias?source=email
 Future Production destination:
 
 ```text
-https://english-with-lyrics.vercel.app/gracias?source=email
+https://singpronuncerepeat.com/gracias?source=email
 ```
 
 ## Secondary fallback
@@ -249,9 +249,10 @@ This does not guarantee inbox placement.
 Documented for later activation only:
 
 - No `[TEST]` in the subject.
-- Branded sender mailbox.
-- Authenticated sending domain.
-- SPF, DKIM, and DMARC reviewed.
+- Branded sender mailbox verified for Hostinger webmail.
+- MailerLite sender verification completed before activation.
+- MailerLite sending domain authenticated before activation.
+- MailerLite DKIM verified before activation.
 - Approved footer/business address.
 - Approved legal pages published.
 - Production `/gracias?source=email` active.

@@ -1,22 +1,23 @@
-# Sing Pronounce Repeat / English with Lyrics Project Brief
+# Sing Pronunce Repeat / English with Lyrics Project Brief
 
 ## Project Vision
 
-Sing Pronounce Repeat is a web-first educational product connected to the English with Lyrics channel brand. The project helps Spanish speakers learn English through songs, easy pronunciation, natural translation, short educational fragments, quizzes, and micro-lessons.
+Sing Pronunce Repeat is a web-first educational product connected to the English with Lyrics channel brand. The project helps Spanish speakers learn English through songs, easy pronunciation, natural translation, short educational fragments, quizzes, and micro-lessons.
 
 The long-term vision is to turn a trusted educational channel brand into a practical learning platform where students can understand real English in music without needing IPA, formal grammar first, or full-song lyric memorization.
 
 ## Brand
 
-- Main public brand: Sing Pronounce Repeat
+- Main public brand: Sing Pronunce Repeat
 - Secondary brand: English with Lyrics
 - Core method: Escríbelo como suena
+- Canonical Production origin: https://singpronuncerepeat.com
 - Initial platform: Web app
 - Future possibility: Mobile app after validation
 
 ## Public Brand Rule
 
-Do not mention any personal creator name in public-facing UI copy. Public copy should use Sing Pronounce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
+Do not mention any personal creator name in public-facing UI copy. Public copy should use Sing Pronunce Repeat as the main brand, English with Lyrics as the secondary brand, and Escríbelo como suena as the method.
 
 ## Core Method
 
@@ -42,11 +43,11 @@ Secondary audience:
 
 Many Spanish-speaking learners want to understand English but feel blocked by pronunciation, fast audio, fear of speaking, and expensive formal courses. Music is motivating, but raw lyrics alone do not teach pronunciation, listening strategy, or meaning in a structured way.
 
-Sing Pronounce Repeat addresses this by turning familiar songs into short, guided educational practice with pronunciation support, natural translation, and quizzes.
+Sing Pronunce Repeat addresses this by turning familiar songs into short, guided educational practice with pronunciation support, natural translation, and quizzes.
 
 ## Value Proposition
 
-Sing Pronounce Repeat helps Spanish speakers understand and pronounce real English through songs, using the simple Escríbelo como suena method, short lessons, and practical quizzes.
+Sing Pronunce Repeat helps Spanish speakers understand and pronounce real English through songs, using the simple Escríbelo como suena method, short lessons, and practical quizzes.
 
 The first validation offer should be narrow and concrete:
 

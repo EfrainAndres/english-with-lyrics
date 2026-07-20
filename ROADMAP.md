@@ -2,7 +2,7 @@
 
 ## Strategy
 
-Build the smallest web-first path that proves people want to learn English with the Sing Pronounce Repeat song-based method, then expand only after evidence supports it.
+Build the smallest web-first path that proves people want to learn English with the Sing Pronunce Repeat song-based method, then expand only after evidence supports it.
 
 ## Phase 0: Validation
 
@@ -14,7 +14,7 @@ Deliverables:
 - Survey.
 - Waitlist.
 - Founder offer.
-- Clear positioning around Sing Pronounce Repeat, English with Lyrics, and Escríbelo como suena.
+- Clear positioning around Sing Pronunce Repeat, English with Lyrics, and Escríbelo como suena.
 - Manual follow-up process for interested learners.
 
 Key questions:

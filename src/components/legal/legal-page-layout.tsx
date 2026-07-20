@@ -13,7 +13,7 @@ function BrandLogo({
 }) {
   return (
     <Image
-      alt="Sing Pronounce Repeat / English with Lyrics logo"
+      alt="Sing Pronunce Repeat / English with Lyrics logo"
       className={className}
       height={515}
       src="/brand/logo-claro.svg"

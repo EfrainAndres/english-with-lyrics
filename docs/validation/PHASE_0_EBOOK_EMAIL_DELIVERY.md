@@ -31,10 +31,10 @@ Production readiness: NO-GO
 - Preview subject: `[TEST] Tu guía para practicar inglés con canciones está lista`
 - Production-ready preheader: `Descarga la guía y comienza con una práctica corta.`
 - Preview preheader: `Prueba interna del flujo de entrega del ebook.`
-- Sender display name: `Sing Pronounce Repeat`
+- Sender display name: `Sing Pronunce Repeat`
 - CTA: `Abrir mi guía`
 - Preview destination: `https://<stable-preview-branch-domain>/gracias?source=email`
-- Future Production destination: `https://english-with-lyrics.vercel.app/gracias?source=email`
+- Future Production destination: `https://singpronuncerepeat.com/gracias?source=email`
 - Plain-text fallback link: required
 - Unsubscribe: provider-managed footer must remain active
 - Footer requirements: footer language, sender identity, and business address must be reviewed before Production
@@ -123,13 +123,11 @@ Production readiness: NO-GO
 - Public privacy policy.
 - Applicable public data-processing policy.
 - Responsible-party details.
-- Privacy contact.
 - Legal approval.
-- Branded sender mailbox.
-- SPF.
-- DKIM.
-- DMARC.
-- Domain authentication.
+- MailerLite sender verification.
+- MailerLite sending-domain authentication.
+- MailerLite DKIM verification.
+- Production inbox-placement QA.
 - Approved business address.
 - Production group.
 - Production automation.

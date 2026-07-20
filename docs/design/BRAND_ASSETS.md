@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document tracks the real brand assets available for Sing Pronounce Repeat / English with Lyrics and how to use them in the web product.
+This document tracks the real brand assets available for Sing Pronunce Repeat / English with Lyrics and how to use them in the web product.
 
 ## Available Assets
 
@@ -61,7 +61,7 @@ Do not:
 Do:
 
 - Keep the original aspect ratio.
-- Use accessible alt text: `Sing Pronounce Repeat / English with Lyrics logo`.
+- Use accessible alt text: `Sing Pronunce Repeat / English with Lyrics logo`.
 - Leave enough spacing around the logo.
 - Use the light logo on dark backgrounds and the dark logo on light backgrounds.
 

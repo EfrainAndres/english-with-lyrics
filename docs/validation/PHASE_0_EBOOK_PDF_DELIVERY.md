@@ -2,6 +2,13 @@
 
 ## Delivery status
 
+Current canonical-brand audit note:
+
+- Editable source and export configuration now use `Sing Pronunce Repeat` and `https://singpronuncerepeat.com`.
+- The public PDF filename remains `guia-gratis-sing-pronounce-repeat.pdf`.
+- Existing checked-in PDF binaries still require a controlled re-export: byte inspection found the legacy `https://english-with-lyrics.vercel.app/ebook-gratis` annotation and old `Sing Pronounce Repeat / English with Lyrics` alt text.
+- No PDF was regenerated in this branch.
+
 | Field | Value |
 |---|---|
 | Public file path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
@@ -12,8 +19,8 @@
 | SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
 | Visual review | Project-owner visual review: Approved |
 | Legal-safe review | Conservative review passed — see `PHASE_0_EBOOK_PUBLICATION_READINESS.md` |
-| Production origin | Approved — `https://english-with-lyrics.vercel.app` |
-| PDF backlink | Restored — `https://english-with-lyrics.vercel.app/ebook-gratis` (7th annotation) |
+| Production origin | Approved — `https://singpronuncerepeat.com` |
+| PDF backlink | Restored — `https://singpronuncerepeat.com/ebook-gratis` (7th annotation) |
 | Embedded annotations | 7 (3 YouTube + 2 Tally survey + 1 Tally first-group + 1 ebook backlink) |
 | Email automation | Pending — direct web download enabled; no email provider configured |
 | Production redeploy | Required — new PDF must be deployed to make backlink live |
@@ -41,11 +48,11 @@ Fields corrected or added:
 
 | Field | Before | After |
 |---|---|---|
-| Author | (not set) | Sing Pronounce Repeat / English with Lyrics |
+| Author | (not set) | Sing Pronunce Repeat / English with Lyrics |
 | Subject | (not set) | Guía educativa de pronunciación y comprensión de inglés con canciones |
 | Keywords | (not set) | aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario |
-| Creator | Mozilla/5.0 (Chrome UA string) | Sing Pronounce Repeat / English with Lyrics |
-| Title | (unchanged) | Aprende inglés con 3 canciones — Sing Pronounce Repeat |
+| Creator | Mozilla/5.0 (Chrome UA string) | Sing Pronunce Repeat / English with Lyrics |
+| Title | (unchanged) | Aprende inglés con 3 canciones — Sing Pronunce Repeat |
 | Producer | (unchanged) | Skia/PDF m149 |
 | CreationDate | (unchanged) | D:20260616234021+00'00' |
 | ModDate | (unchanged) | D:20260616234021+00'00' |
@@ -90,12 +97,12 @@ Verified from `docs/design/production/phase-0-ebook-production-draft.pdf` and `p
 | No placeholders | Pass |
 | No localhost annotations | Pass — URI safety scan passed in export script |
 | Annotation count | Pass — 7 annotations (3 YouTube, 2 Tally survey, 1 Tally first-group, 1 ebook backlink) |
-| Ebook backlink | Pass — `https://english-with-lyrics.vercel.app/ebook-gratis` confirmed in export script |
-| Metadata — Title | Pass — `Aprende inglés con 3 canciones — Sing Pronounce Repeat` |
-| Metadata — Author | Pass — `Sing Pronounce Repeat / English with Lyrics` (corrected in this branch) |
+| Ebook backlink | Pass — `https://singpronuncerepeat.com/ebook-gratis` confirmed in export script |
+| Metadata — Title | Pass — `Aprende inglés con 3 canciones — Sing Pronunce Repeat` |
+| Metadata — Author | Pass — `Sing Pronunce Repeat / English with Lyrics` (corrected in this branch) |
 | Metadata — Subject | Pass — corrected in this branch |
 | Metadata — Keywords | Pass — corrected in this branch |
-| Metadata — Creator | Pass — updated from Chrome UA string to `Sing Pronounce Repeat / English with Lyrics` |
+| Metadata — Creator | Pass — updated from Chrome UA string to `Sing Pronunce Repeat / English with Lyrics` |
 | Public filename | Pass — `guia-gratis-sing-pronounce-repeat.pdf` |
 
 ---

@@ -2,13 +2,19 @@
 
 ## 1. Review Status
 
+Current canonical-brand audit note:
+
+- Editable application, documentation, PDF source HTML, and export scripts have been aligned to `Sing Pronunce Repeat` and `https://singpronuncerepeat.com`.
+- The existing checked-in PDF binaries still need a controlled re-export and validation before claiming the binary artifact itself is aligned. Byte inspection found the legacy `https://english-with-lyrics.vercel.app/ebook-gratis` annotation and old `Sing Pronounce Repeat / English with Lyrics` alt text.
+- No PDF was regenerated in this branch.
+
 | Field | Value |
 |---|---|
 | Review date | 2026-06-16 |
 | Delivery implementation date | 2026-06-17 |
 | Production origin finalization | 2026-06-17 |
 | Branch | `review/phase-0-ebook-publication-readiness` / `feat/phase-0-ebook-pdf-delivery` / `fix/phase-0-production-origin-and-pdf-backlink` |
-| Ebook title | Aprende inglés con 3 canciones — Sing Pronounce Repeat |
+| Ebook title | Aprende inglés con 3 canciones — Sing Pronunce Repeat |
 | PDF source path | `docs/design/production/phase-0-ebook-production-draft.pdf` |
 | Public PDF path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
 | Current PDF page count | 21 |
@@ -17,8 +23,8 @@
 | Publication status | Public PDF prepared — production redeploy and smoke test pending |
 | Delivery status | Download route active — production redeploy required to serve updated PDF |
 | **Project-owner visual review** | **Approved** |
-| **Production origin** | **Approved — `https://english-with-lyrics.vercel.app`** |
-| **PDF backlink** | **Restored — `https://english-with-lyrics.vercel.app/ebook-gratis`** |
+| **Production origin** | **Approved — `https://singpronuncerepeat.com`** |
+| **PDF backlink** | **Restored — `https://singpronuncerepeat.com/ebook-gratis`** |
 | **Final decision** | **CONDITIONAL GO** |
 
 **Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes all automated checks. PDF metadata complete (Author, Subject, Keywords, Creator). Production origin approved and recorded. Absolute `/ebook-gratis` backlink restored inside the PDF (annotation 7 of 7). Public file updated at `public/downloads/`. Download page live. Remaining blocker: production redeploy and deployed smoke test for PDF backlink click verification.
@@ -174,11 +180,11 @@ Metadata extracted from `docs/design/production/phase-0-ebook-production-draft.p
 
 | Field | Current value | Recommended value | Status |
 |---|---|---|---|
-| Title | `Aprende inglés con 3 canciones — Sing Pronounce Repeat` | Same | Pass |
-| Author | (not set) | `Sing Pronounce Repeat / English with Lyrics` | Incomplete — Medium blocker |
+| Title | `Aprende inglés con 3 canciones — Sing Pronunce Repeat` | Same | Pass |
+| Author | (not set) | `Sing Pronunce Repeat / English with Lyrics` | Incomplete — Medium blocker |
 | Subject | (not set) | `Guía educativa de pronunciación y comprensión de inglés con canciones` | Incomplete — Medium blocker |
 | Keywords | (not set) | `aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario` | Incomplete — Medium blocker |
-| Creator | `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)` | (omit or set to `Sing Pronounce Repeat / English with Lyrics`) | Advisory — exposes browser UA and OS version; does not expose username, paths, or branch names |
+| Creator | `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)` | (omit or set to `Sing Pronunce Repeat / English with Lyrics`) | Advisory — exposes browser UA and OS version; does not expose username, paths, or branch names |
 | Producer | `Skia/PDF m149` | (no change required) | Acceptable — identifies Chrome as render engine, no sensitive data |
 | CreationDate | `D:20260616232611+00'00'` | (no change required) | Pass — no sensitive information |
 | ModDate | `D:20260616232611+00'00'` | (no change required) | Pass |
@@ -285,7 +291,7 @@ No fragment should be shortened or replaced at this stage. Recommend professiona
 
 | Check | Result |
 |---|---|
-| Main brand: Sing Pronounce Repeat | Pass — used consistently in headers, footers (26 instances), cover, metadata, and CTA copy |
+| Main brand: Sing Pronunce Repeat | Pass — used consistently in headers, footers (26 instances), cover, metadata, and CTA copy |
 | Secondary brand: English with Lyrics | Pass — used in cover, final footer, and meta author tag |
 | Method: Escríbelo como suena | Pass — appears in cover subtitle, headers, method page, and fragment sections |
 | Official logo asset | Pass — `logo-claro.svg` from `public/brand/` used on the cover |
@@ -326,7 +332,7 @@ The README references `localhost:3000` and `/ebook-gratis` as a local Next.js ro
 **Status:**
 - Production origin: **Pending** — no approved domain documented.
 - `/ebook-gratis` in PDF: **Intentionally non-clickable** — `<a>` changed to `<span>` to prevent localhost URL embedding. Visible text preserved.
-- Required action before delivery: Project owner must approve and document the production domain (e.g., `https://singpronouncerepeat.com` or equivalent). Once approved, restore to `<a href="https://<domain>/ebook-gratis">` and regenerate the PDF.
+- Required action before delivery: Project owner must approve and document the production domain (e.g., `https://singpronuncerepeat.com` or equivalent). Once approved, restore to `<a href="https://<domain>/ebook-gratis">` and regenerate the PDF.
 
 Do not guess, invent, or use a preview deployment URL.
 
@@ -372,7 +378,7 @@ Do not guess, invent, or use a preview deployment URL.
 | Visual QA | Pending | Yes — for full delivery sign-off | Page 17/19/20 partially confirmed; all other pages pending | Project owner opens PDF, reviews all 21 pages against QA checklist |
 | Link QA | Pass | No | 6 annotations extracted, all HTTPS, all verified destinations, no localhost | None |
 | Legal-safe review | Conservative review passed | No | Per-song analysis in section 8; ~37 total quoted words across 9 fragments; non-adjacency confirmed | Professional legal review before scaling paid content |
-| Metadata — Title | Pass | No | "Aprende inglés con 3 canciones — Sing Pronounce Repeat" confirmed | None |
+| Metadata — Title | Pass | No | "Aprende inglés con 3 canciones — Sing Pronunce Repeat" confirmed | None |
 | Metadata — Author/Subject/Keywords | Incomplete | Medium | Not set in PDF; Chrome does not map HTML meta tags to PDF Info dictionary | Add Python incremental-update post-processing to export script in delivery branch |
 | Metadata — Creator field | Advisory | No | Shows Chrome UA/OS string; no username, path, or branch name exposed | Optionally overwrite in delivery branch post-processing |
 | Filename | Approved | No | `guia-gratis-sing-pronounce-repeat.pdf` — lowercase, hyphenated, brand-clear | None |
@@ -446,7 +452,7 @@ Do not guess, invent, or use a preview deployment URL.
 | BLK-01 | Visual QA not signed off — all 21 pages require project-owner review | High | Project owner | Open PDF, work through `PHASE_0_EBOOK_PDF_QA.md` section 2, record pass/fail per page | Owner records sign-off date and initials in this document and in QA doc | Before delivery |
 | BLK-02 | Production domain not approved — `/ebook-gratis` is non-clickable in PDF | High | Project owner | Approve and document the production base URL; update HTML anchor to `https://<domain>/ebook-gratis`; regenerate PDF | Verify PDF annotation count rises to 7; confirm new URL is HTTPS and points to live route | Before delivery |
 | BLK-03 | PDF metadata incomplete — Author, Subject, Keywords not set | Medium | ~~Delivery branch~~ **RESOLVED** | Corrected via `scripts/patch-pdf-metadata.py` (Python stdlib incremental update) in `feat/phase-0-ebook-pdf-delivery`. All five fields now set. | Metadata extraction confirms Author, Subject, Keywords, Creator all present. | Resolved |
-| BLK-04 | PDF Creator field exposes Chrome user-agent string | Low | ~~Delivery branch~~ **RESOLVED** | Creator updated to `Sing Pronounce Repeat / English with Lyrics` in same patch. | Confirmed in metadata extraction. | Resolved |
+| BLK-04 | PDF Creator field exposes Chrome user-agent string | Low | ~~Delivery branch~~ **RESOLVED** | Creator updated to `Sing Pronunce Repeat / English with Lyrics` in same patch. | Confirmed in metadata extraction. | Resolved |
 | BLK-05 | `/ebook-gratis` page is still a waiting page — not a real download page | High | ~~Delivery branch~~ **RESOLVED** | Page converted in `feat/phase-0-ebook-pdf-delivery`; download CTA, open-in-browser link, content breakdown, and how-to section added; waiting-state copy removed. | Build passes; route renders as static. | Resolved locally — deployed smoke test pending |
 | BLK-06 | Email delivery not configured | Medium | Post-delivery | Select provider (MailerLite or Brevo recommended for Phase 0 volume), configure sender identity, unsubscribe handling, and import consent-confirmed contacts from Tally | Send a test delivery email; confirm link opens `/ebook-gratis` | After delivery |
 | BLK-07 | No analytics on PDF download or page visits | Low | Post-delivery | Add basic click tracking on `/ebook-gratis`; no third-party analytics required until Phase 1 | Confirm download click events are logged | After delivery |

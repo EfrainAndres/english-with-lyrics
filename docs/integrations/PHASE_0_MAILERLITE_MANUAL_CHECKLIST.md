@@ -86,7 +86,7 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Repository preparation: Preview CTA target documented as `/gracias?source=email`.
 - [x] Manual MailerLite dashboard action: Preview Email 1 content replaced with the approved delivery copy.
 - [x] Manual MailerLite dashboard action: Preview preheader configured.
-- [x] Manual MailerLite dashboard action: sender display name set to `Sing Pronounce Repeat`.
+- [x] Manual MailerLite dashboard action: sender display name set to `Sing Pronunce Repeat`.
 - [x] Manual MailerLite dashboard action: Preview Email 1 subject configured with `[TEST]`.
 - [x] Manual MailerLite dashboard action: Preview-only CTA updated to Preview `/gracias?source=email`.
 - [x] Manual MailerLite dashboard action: plain fallback URL configured.

@@ -15,9 +15,21 @@ import {
 } from "@/lib/links";
 
 export const metadata: Metadata = {
-  title: "Guía gratis disponible | Sing Pronounce Repeat",
+  title: "Guía gratis disponible",
   description:
-    "Descarga gratis la guía de práctica de Sing Pronounce Repeat / English with Lyrics. 3 canciones, 9 frases, pronunciación con Escríbelo como suena y ejercicios originales.",
+    "Descarga gratis la guía de práctica de Sing Pronunce Repeat / English with Lyrics. 3 canciones, 9 frases, pronunciación con Escríbelo como suena y ejercicios originales.",
+  alternates: {
+    canonical: "/ebook-gratis",
+  },
+  openGraph: {
+    title: "Guía gratis disponible | Sing Pronunce Repeat",
+    description:
+      "Descarga gratis la guía de práctica de Sing Pronunce Repeat / English with Lyrics. 3 canciones, 9 frases, pronunciación con Escríbelo como suena y ejercicios originales.",
+    url: "/ebook-gratis",
+    siteName: "Sing Pronunce Repeat",
+    type: "website",
+    locale: "es_CO",
+  },
 };
 
 const contentItems = [
@@ -60,7 +72,7 @@ function BrandLogo({
 }) {
   return (
     <Image
-      alt="Sing Pronounce Repeat / English with Lyrics logo"
+      alt="Sing Pronunce Repeat / English with Lyrics logo"
       className={className}
       height={515}
       src="/brand/logo-claro.svg"

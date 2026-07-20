@@ -1,6 +1,6 @@
 # Phase 0 Ebook PDF Template Specification
 
-**Sing Pronounce Repeat / English with Lyrics**
+**Sing Pronunce Repeat / English with Lyrics**
 
 ---
 
@@ -71,7 +71,7 @@ adequate whitespace.
 - Use `logo-claro.svg` on all dark pages in this ebook.
 - Display at 36 px height on the cover; keep aspect ratio intact.
 - On interior page headers use a small text identifier instead of repeating the full logo.
-- Alt text: `Sing Pronounce Repeat / English with Lyrics logo`
+- Alt text: `Sing Pronunce Repeat / English with Lyrics logo`
 - Do not recolor, crop, stretch, or recreate the logo in CSS.
 
 **Relative path from prototype HTML to assets:**
@@ -376,7 +376,7 @@ At desktop browser widths:
 | Non-color-only meaning | Labels are always text, not color alone |
 | Pronunciation labels are textual, not color-only | Implemented (both label and pink background) |
 | Translation distinguished from pronunciation by label | Label column required — not merged |
-| Logo alt text | `Sing Pronounce Repeat / English with Lyrics logo` |
+| Logo alt text | `Sing Pronunce Repeat / English with Lyrics logo` |
 | Links visible in print | URL appended via CSS `::after` in print mode |
 | Line length | 50–60 ch — comfortable for prose reading |
 | Adequate spacing | 4-point grid minimum spacing between elements |
