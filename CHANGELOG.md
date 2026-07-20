@@ -41,6 +41,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Regenerated and revalidated the public 21-page ebook PDF with the official `Sing Pronunce Repeat` brand and canonical `https://singpronuncerepeat.com/ebook-gratis` backlink, while preserving the existing public download path.
 - Aligned public application metadata, links, legal and email documentation with the official `Sing Pronunce Repeat` brand and the canonical `https://singpronuncerepeat.com` Production origin.
 - Established `https://singpronuncerepeat.com` as the canonical Production web domain, with HTTPS and a permanent `www` redirect managed through Vercel and Hostinger DNS.
 - Updated README, backlog, launch, metrics, and validation docs to reflect the active `/ebook-gratis` delivery flow, validated 21-page PDF, approved production origin, and remaining analytics/email follow-up work.

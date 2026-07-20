@@ -1008,15 +1008,55 @@ li + li {
   margin-bottom: var(--sp-2);
 }
 
-/* TR-03 page-specific density — keeps the full repítelo sentence within A5 */
+/* TR-02/TR-03 page-specific density — keeps the full repítelo sentence within A5 */
+.page--tr2 .page-header,
 .page--tr3 .page-header {
   margin-bottom: var(--sp-3);
 }
+.page--tr2 .fragment-card,
 .page--tr3 .fragment-card {
   margin-bottom: var(--sp-2);
 }
+.page--tr2 .fragment-footer,
 .page--tr3 .fragment-footer {
   padding: var(--sp-2) var(--sp-4);
+}
+
+.page--tr2 .frag-row {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.page--tr2 .fragment-card-title {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.page--tr2 .frag-value {
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.page--tr2 .frag-row--fragment .frag-value {
+  font-size: 1rem;
+}
+
+.page--tr2 .pronunciation-text {
+  font-size: 0.9rem;
+}
+
+.page--tr2 .pronunciation-note,
+.page--tr2 .vocab-list li,
+.page--tr2 .example-quote,
+.page--tr2 .example-translation,
+.page--tr2 .exercise-text,
+.page--tr2 .repite-text {
+  font-size: 0.66rem;
+  line-height: 1.38;
+}
+
+.page--tr2 .repite-text {
+  line-height: 1.35;
 }
 
 /* =============================================================================

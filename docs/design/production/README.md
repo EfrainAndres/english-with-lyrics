@@ -1,11 +1,11 @@
 # Production — Phase 0 Ebook PDF
 
-This folder contains the production-ready HTML and CSS for the Sing Pronounce
+This folder contains the production-ready HTML and CSS for the Sing Pronunce
 Repeat / English with Lyrics Phase 0 ebook.
 
 ## Status
 
-**PRODUCTION DRAFT — pending manual QA approval before public delivery.**
+**PRODUCTION PDF — canonical brand/domain re-export completed; future edits must use the same export workflow.**
 
 ## Files
 
@@ -48,8 +48,8 @@ Output: `docs/design/production/phase-0-ebook-production-draft.pdf`
    - File exists and is >= 50 KB
    - Starts with `%PDF`
    - No network-error phrases (`ERR_CONNECTION_REFUSED`, `No connection`, `net::ERR`, etc.)
-   - Page count >= 10 (expected: 18)
-   - PDF title metadata decodes (UTF-16BE) to include "Aprende inglés con 3 canciones" and "Sing Pronounce"
+   - Page count within the approved range (expected: 21)
+   - PDF title metadata decodes (UTF-16BE) to include "Aprende inglés con 3 canciones" and "Sing Pronunce"
    - File size >= 200 KB
    - Brand yellow color (#FEE296) detected in shading functions
 8. Only after all checks pass, moves the temporary PDF to the output path.
@@ -127,10 +127,10 @@ approving the PDF for delivery.
 public/downloads/guia-gratis-sing-pronounce-repeat.pdf
 ```
 
-Do NOT create or write to this path until QA is complete and manually approved.
+Keep this path unchanged. Existing public links depend on the legacy filename.
 
 ## Do not modify
 
-- `src/` (application source)
-- `public/downloads/` (public delivery — not yet activated)
+- `src/` (application source), except delivery metadata constants when a task explicitly asks to replace the public PDF
+- `public/downloads/` except when a task explicitly asks to regenerate and replace the public PDF through this workflow
 - Any environment variables or email provider configuration

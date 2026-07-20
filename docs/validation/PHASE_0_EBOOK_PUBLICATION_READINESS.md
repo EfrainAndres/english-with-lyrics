@@ -4,22 +4,30 @@
 
 Current canonical-brand audit note:
 
-- Editable application, documentation, PDF source HTML, and export scripts have been aligned to `Sing Pronunce Repeat` and `https://singpronuncerepeat.com`.
-- The existing checked-in PDF binaries still need a controlled re-export and validation before claiming the binary artifact itself is aligned. Byte inspection found the legacy `https://english-with-lyrics.vercel.app/ebook-gratis` annotation and old `Sing Pronounce Repeat / English with Lyrics` alt text.
-- No PDF was regenerated in this branch.
+- PDF regeneration: COMPLETE.
+- Official brand in PDF binary: VERIFIED — `Sing Pronunce Repeat`.
+- Canonical backlink in PDF binary: VERIFIED — `https://singpronuncerepeat.com/ebook-gratis`.
+- Legacy Vercel backlink: REMOVED.
+- Legacy brand spelling: REMOVED from checked-in PDF binaries.
+- Page count: 21 — VERIFIED.
+- Structural validation: PASS.
+- Visual QA: PASS — all 21 pages rendered to temporary PNGs; page 16 density was adjusted to remove inherited footer clipping while preserving content and page count.
+- Link annotation validation: PASS — 7 intended HTTPS annotations retained.
+- Public PDF path: UNCHANGED — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 
 | Field | Value |
 |---|---|
 | Review date | 2026-06-16 |
 | Delivery implementation date | 2026-06-17 |
 | Production origin finalization | 2026-06-17 |
-| Branch | `review/phase-0-ebook-publication-readiness` / `feat/phase-0-ebook-pdf-delivery` / `fix/phase-0-production-origin-and-pdf-backlink` |
+| Canonical PDF regeneration date | 2026-07-20 |
+| Branch | `review/phase-0-ebook-publication-readiness` / `feat/phase-0-ebook-pdf-delivery` / `fix/phase-0-production-origin-and-pdf-backlink` / `fix/phase-0-ebook-pdf-canonical-brand-domain` |
 | Ebook title | Aprende inglés con 3 canciones — Sing Pronunce Repeat |
 | PDF source path | `docs/design/production/phase-0-ebook-production-draft.pdf` |
 | Public PDF path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
 | Current PDF page count | 21 |
-| Current PDF file size | 1,225,899 bytes (after metadata correction) |
-| Public SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
+| Current PDF file size | 1,322,844 bytes (after metadata correction) |
+| Public SHA-256 | `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08` |
 | Publication status | Public PDF prepared — production redeploy and smoke test pending |
 | Delivery status | Download route active — production redeploy required to serve updated PDF |
 | **Project-owner visual review** | **Approved** |
@@ -27,7 +35,7 @@ Current canonical-brand audit note:
 | **PDF backlink** | **Restored — `https://singpronuncerepeat.com/ebook-gratis`** |
 | **Final decision** | **CONDITIONAL GO** |
 
-**Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes all automated checks. PDF metadata complete (Author, Subject, Keywords, Creator). Production origin approved and recorded. Absolute `/ebook-gratis` backlink restored inside the PDF (annotation 7 of 7). Public file updated at `public/downloads/`. Download page live. Remaining blocker: production redeploy and deployed smoke test for PDF backlink click verification.
+**Rationale:** PDF content is complete, legally conservative, brand-consistent, and passes automated structural, binary-string, metadata, link-annotation, and render checks. PDF metadata is complete (Author, Subject, Keywords, Creator). Production origin is approved and recorded. Absolute `/ebook-gratis` backlink is present inside the PDF (annotation 7 of 7). Public file updated at `public/downloads/` without changing the legacy filename. Download page live. Remaining blocker: production redeploy and deployed smoke test for PDF download/open behavior.
 
 ---
 
@@ -55,7 +63,7 @@ Current canonical-brand audit note:
 
 ## 3. Visual QA Review
 
-> **Note:** CLI visual inspection of a binary PDF is not possible without external rendering tools. The checks below that require a human eye are marked **PENDING — owner review required**. Structural checks that can be verified from the HTML source or export-script output are marked accordingly.
+> **Current render note:** The regenerated PDF was rendered to temporary PNGs for all 21 pages using PDFKit on 2026-07-20. Visual QA passed: no missing pages, duplicated pages, blank unintended pages, corrupted fonts, broken images, black squares, or visible clipping after the page-16 fit correction. The historical page-by-page table below is preserved as prior review context.
 
 ### Page-by-page status
 
@@ -83,7 +91,7 @@ Current canonical-brand audit note:
 | 20 | Autochequeo + ¿Qué sigue? | Within A5 safe area (user review 2026-06-16) | Confirmed pass | Confirmed pass | Structurally present | Pending | Pending | N/A | Tally links present | Partially confirmed — full visual pass pending |
 | 21 | Nota educativa y de derechos | Pending | Pending | Structurally present | Structurally present | Pending | Pending | N/A | N/A | Pending — owner review |
 
-**Visual QA conclusion:** Partial — three pages have user-confirmed pass on specific items from a prior inspection session. Full page-by-page visual sign-off requires the project owner to open `docs/design/production/phase-0-ebook-production-draft.pdf` and work through section 2 of `docs/validation/PHASE_0_EBOOK_PDF_QA.md`.
+**Visual QA conclusion:** Pass for this canonical PDF regeneration. All 21 final rendered pages were inspected from temporary PNG contact sheets, with additional full-page inspection of the cover, backlink/CTA area, legal page, and page 16 fit correction. No render artifacts are committed.
 
 ---
 
@@ -147,18 +155,18 @@ Links verified from the exported PDF binary using annotation URI extraction.
 | 4 | `https://tally.so/r/eqzgbe` | Challenge day-3 survey CTA | Pass — HTTPS, Tally approved form |
 | 5 | `https://tally.so/r/eqzgbe` | Final CTA page survey link | Pass — HTTPS, Tally approved form |
 | 6 | `https://tally.so/r/D4a6NE` | Final CTA page first-group link | Pass — HTTPS, Tally approved form |
+| 7 | `https://singpronuncerepeat.com/ebook-gratis` | Canonical ebook page backlink | Pass — HTTPS, canonical Production origin |
 
-**Total embedded link annotations:** 6
+**Total embedded link annotations:** 7
 
 **Localhost/127.0.0.1 scan:** PASSED — no such URI found in any annotation.
 
 ### /ebook-gratis
 
 - Visible text "Visitar la página del ebook: /ebook-gratis" present on page 20.
-- Link is intentionally non-clickable (`<span>` element, no `href`).
-- No annotation embedded — confirmed from URI extraction (6 total, none matching /ebook-gratis).
-- Reason: no approved public production origin is documented in any project file.
-- Required action before delivery: approve a production domain, restore the element to `<a href="https://<domain>/ebook-gratis">`, and regenerate the PDF.
+- Link is clickable and points to `https://singpronuncerepeat.com/ebook-gratis`.
+- Annotation embedded — confirmed from URI extraction (7 total, one exact canonical ebook backlink).
+- Legacy Vercel backlink removed — `https://english-with-lyrics.vercel.app` absent from the final PDF binary.
 
 ### Link quality checks
 
@@ -181,15 +189,15 @@ Metadata extracted from `docs/design/production/phase-0-ebook-production-draft.p
 | Field | Current value | Recommended value | Status |
 |---|---|---|---|
 | Title | `Aprende inglés con 3 canciones — Sing Pronunce Repeat` | Same | Pass |
-| Author | (not set) | `Sing Pronunce Repeat / English with Lyrics` | Incomplete — Medium blocker |
-| Subject | (not set) | `Guía educativa de pronunciación y comprensión de inglés con canciones` | Incomplete — Medium blocker |
-| Keywords | (not set) | `aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario` | Incomplete — Medium blocker |
-| Creator | `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)` | (omit or set to `Sing Pronunce Repeat / English with Lyrics`) | Advisory — exposes browser UA and OS version; does not expose username, paths, or branch names |
-| Producer | `Skia/PDF m149` | (no change required) | Acceptable — identifies Chrome as render engine, no sensitive data |
-| CreationDate | `D:20260616232611+00'00'` | (no change required) | Pass — no sensitive information |
-| ModDate | `D:20260616232611+00'00'` | (no change required) | Pass |
+| Author | `Sing Pronunce Repeat / English with Lyrics` | Same | Pass |
+| Subject | `Guía educativa de pronunciación y comprensión de inglés con canciones` | Same | Pass |
+| Keywords | `aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario` | Same | Pass |
+| Creator | `Sing Pronunce Repeat / English with Lyrics` | Same | Pass — latest Info dictionary value |
+| Producer | `Skia/PDF m150` | (no change required) | Acceptable — identifies Chrome as render engine, no sensitive data |
+| CreationDate | `D:20260720160103+00'00'` | (no change required) | Pass — no sensitive information |
+| ModDate | `D:20260720160103+00'00'` | (no change required) | Pass |
 
-**Metadata summary:** The PDF title is correct. Author, Subject, and Keywords are not set; Chrome's headless PDF engine does not map `<meta name="author">` or `<meta name="description">` HTML tags to PDF Info dictionary fields. Correcting these fields requires a Python PDF post-processing step in the export script (incremental update appended to the file) or a dedicated library. Neither approach is in scope for this review branch. Recommend addressing in the delivery branch.
+**Metadata summary:** The PDF title, Author, Subject, Keywords, and latest Creator value are correct after the existing metadata patching workflow.
 
 **Internal-exposure check:** No local filesystem paths, usernames, branch names, or temporary server URLs were found in any metadata field or embedded annotation. The Creator field contains the Chrome user-agent string, which reveals the browser and OS version but no personal identity information. This is acceptable for a production review PDF.
 
@@ -325,16 +333,14 @@ No fragment should be shortened or replaced at this stage. Recommend professiona
 
 ## 11. Public URL Readiness
 
-**Finding:** No approved public production origin is documented in any project file checked for this review, including `AGENTS.md`, `CLAUDE.md`, `README.md`, `.env.example`, `docs/design/production/README.md`, `docs/validation/PHASE_0_EBOOK_DOWNLOAD_PAGE.md`, and `docs/validation/PHASE_0_EMAIL_DELIVERY_PLAN.md`.
-
-The README references `localhost:3000` and `/ebook-gratis` as a local Next.js route. The `.env.example` contains only Tally form URLs. No Vercel deployment URL, custom domain, or production base URL is documented anywhere.
+**Finding:** The canonical Production origin is approved and documented as `https://singpronuncerepeat.com`.
 
 **Status:**
-- Production origin: **Pending** — no approved domain documented.
-- `/ebook-gratis` in PDF: **Intentionally non-clickable** — `<a>` changed to `<span>` to prevent localhost URL embedding. Visible text preserved.
-- Required action before delivery: Project owner must approve and document the production domain (e.g., `https://singpronuncerepeat.com` or equivalent). Once approved, restore to `<a href="https://<domain>/ebook-gratis">` and regenerate the PDF.
+- Production origin: **Approved** — `https://singpronuncerepeat.com`.
+- `/ebook-gratis` in PDF: **Clickable canonical backlink** — `https://singpronuncerepeat.com/ebook-gratis`.
+- Public PDF path: **Unchanged** — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 
-Do not guess, invent, or use a preview deployment URL.
+Do not use localhost, preview deployment URLs, or the legacy Vercel origin as canonical public links.
 
 ---
 
@@ -344,8 +350,10 @@ Do not guess, invent, or use a preview deployment URL.
 
 - Export script produces a reproducible 21-page PDF with structural validation.
 - All 9 learning blocks are complete and content-correct.
-- All 6 embedded links point to correct HTTPS destinations.
+- All 7 embedded links point to correct HTTPS destinations.
 - No localhost or internal URLs remain in the PDF.
+- No legacy Vercel backlink remains in the PDF.
+- No legacy brand spelling remains in the PDF.
 - Legal-safe conservative review passed.
 - Filename is approved: `guia-gratis-sing-pronounce-repeat.pdf`.
 - Brand assets and copy are consistent.

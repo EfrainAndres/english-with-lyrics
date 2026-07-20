@@ -4,10 +4,16 @@
 
 Current canonical-brand audit note:
 
-- Editable source and export configuration now use `Sing Pronunce Repeat` and `https://singpronuncerepeat.com`.
+- PDF regeneration: COMPLETE.
+- Official brand in PDF binary: VERIFIED — `Sing Pronunce Repeat`.
+- Canonical backlink in PDF binary: VERIFIED — `https://singpronuncerepeat.com/ebook-gratis`.
+- Legacy Vercel backlink: REMOVED.
+- Legacy brand spelling: REMOVED from the checked-in source and public PDF binaries.
 - The public PDF filename remains `guia-gratis-sing-pronounce-repeat.pdf`.
-- Existing checked-in PDF binaries still require a controlled re-export: byte inspection found the legacy `https://english-with-lyrics.vercel.app/ebook-gratis` annotation and old `Sing Pronounce Repeat / English with Lyrics` alt text.
-- No PDF was regenerated in this branch.
+- Page count: 21 — VERIFIED.
+- Structural validation: PASS.
+- Visual QA: PASS — all 21 pages rendered to temporary PNGs; page 16 density was adjusted to remove inherited footer clipping while preserving content and page count.
+- Link annotation validation: PASS — 7 intended HTTPS annotations retained.
 
 | Field | Value |
 |---|---|
@@ -15,8 +21,8 @@ Current canonical-brand audit note:
 | Browser URL | `/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
 | Filename | `guia-gratis-sing-pronounce-repeat.pdf` |
 | Page count | 21 |
-| File size | 1,225,899 bytes (approx. 1,197 KB) |
-| SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
+| File size | 1,322,844 bytes (approx. 1,292 KB) |
+| SHA-256 | `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08` |
 | Visual review | Project-owner visual review: Approved |
 | Legal-safe review | Conservative review passed — see `PHASE_0_EBOOK_PUBLICATION_READINESS.md` |
 | Production origin | Approved — `https://singpronuncerepeat.com` |
@@ -24,7 +30,7 @@ Current canonical-brand audit note:
 | Embedded annotations | 7 (3 YouTube + 2 Tally survey + 1 Tally first-group + 1 ebook backlink) |
 | Email automation | Pending — direct web download enabled; no email provider configured |
 | Production redeploy | Required — new PDF must be deployed to make backlink live |
-| Branch | `fix/phase-0-production-origin-and-pdf-backlink` |
+| Branch | `fix/phase-0-ebook-pdf-canonical-brand-domain` |
 
 ---
 
@@ -34,9 +40,9 @@ Current canonical-brand audit note:
 |---|---|
 | Source review path | `docs/design/production/phase-0-ebook-production-draft.pdf` |
 | Public path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
-| Source SHA-256 (pre-metadata patch) | `5339c70f3dd1d101cc6f644a2179694383e17a0fc1729fdde934a2aeb23fbecc` |
-| Source SHA-256 (post-metadata patch) | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
-| Public SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
+| Source SHA-256 (pre-metadata patch) | Not retained — Chrome export validated before metadata patch; final checked-in artifact is the patched PDF |
+| Source SHA-256 (post-metadata patch) | `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08` |
+| Public SHA-256 | `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08` |
 | Files identical | Yes — source and public file are byte-identical after the metadata correction |
 | Transformation applied | PDF incremental update via `scripts/patch-pdf-metadata.py` — appends corrected Info dictionary (Author, Subject, Keywords, Creator) to the PDF without modifying existing page content, links, or colors. Page count, visual layout, and all 7 annotation URIs are intact. |
 
@@ -53,9 +59,9 @@ Fields corrected or added:
 | Keywords | (not set) | aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario |
 | Creator | Mozilla/5.0 (Chrome UA string) | Sing Pronunce Repeat / English with Lyrics |
 | Title | (unchanged) | Aprende inglés con 3 canciones — Sing Pronunce Repeat |
-| Producer | (unchanged) | Skia/PDF m149 |
-| CreationDate | (unchanged) | D:20260616234021+00'00' |
-| ModDate | (unchanged) | D:20260616234021+00'00' |
+| Producer | (unchanged from source) | Skia/PDF m150 |
+| CreationDate | (unchanged) | D:20260720160103+00'00' |
+| ModDate | (unchanged) | D:20260720160103+00'00' |
 
 ---
 
@@ -79,7 +85,7 @@ Verified from source code in `src/app/ebook-gratis/page.tsx` and `src/lib/links.
 | No database or auth | Pass |
 | External links use safe attributes | Pass — `getLinkProps` in `CTAButton` and `surveyFormUrl`/`firstGroupFormUrl` produce `target="_blank" rel="noopener noreferrer"` for `https://` links |
 
-Manual browser QA: Pending — local server test at `http://localhost:3000/ebook-gratis` required. Deployed-environment smoke test pending.
+Manual browser QA: Pass locally — `http://localhost:3001/ebook-gratis` returned 200, and `/downloads/guia-gratis-sing-pronounce-repeat.pdf` returned 200 with `Content-Type: application/pdf` and `Content-Length: 1322844`. Deployed-environment smoke test pending.
 
 ---
 
@@ -90,7 +96,7 @@ Verified from `docs/design/production/phase-0-ebook-production-draft.pdf` and `p
 | Check | Status |
 |---|---|
 | Public PDF exists | Pass — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` created |
-| Non-zero size | Pass — 1,225,899 bytes |
+| Non-zero size | Pass — 1,322,844 bytes |
 | Page count | Pass — 21 pages |
 | Nine approved fragments | Pass — all 9 structurally confirmed (ATY-01/02/03, SLY-01/02/03, TR-01/02/03) |
 | No internal markers | Pass — no `[DESIGN: ...]`, production status, or review scores |
@@ -104,6 +110,10 @@ Verified from `docs/design/production/phase-0-ebook-production-draft.pdf` and `p
 | Metadata — Keywords | Pass — corrected in this branch |
 | Metadata — Creator | Pass — updated from Chrome UA string to `Sing Pronunce Repeat / English with Lyrics` |
 | Public filename | Pass — `guia-gratis-sing-pronounce-repeat.pdf` |
+| Official brand in binary | Pass — `Sing Pronunce Repeat` present; `Sing Pronounce Repeat` absent |
+| Canonical backlink in binary | Pass — `https://singpronuncerepeat.com/ebook-gratis` present |
+| Legacy Vercel backlink | Pass — `https://english-with-lyrics.vercel.app` absent |
+| Visual render QA | Pass — all 21 pages rendered via PDFKit; no visible broken fonts, missing pages, black squares, broken images, or clipping after page 16 fit correction |
 
 ---
 

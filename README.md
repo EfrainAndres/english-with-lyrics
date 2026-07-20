@@ -73,7 +73,7 @@ To verify the file after cloning:
 
 ```bash
 shasum -a 256 public/downloads/guia-gratis-sing-pronounce-repeat.pdf
-# Expected: ebd1745feba55b15cf1d698e890c1ac26b01ffb2ba6c1aac38f1e428a43daf19
+# Expected: fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08
 ```
 
 Email automation is not configured. Direct web download through `/ebook-gratis` is the current delivery method.
