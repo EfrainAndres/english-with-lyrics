@@ -111,7 +111,8 @@ MAX_ATTEMPTS=30
 attempt=0
 ready=0
 while [[ $attempt -lt $MAX_ATTEMPTS ]]; do
-  if curl --fail --silent --show-error --max-time 2 "$TARGET_URL" | grep -q "Aprende ingl" 2>/dev/null; then
+  if SERVER_HTML=$(curl --fail --silent --show-error --max-time 2 "$TARGET_URL" 2>/dev/null) \
+    && grep -q "Aprende ingl" <<<"$SERVER_HTML"; then
     ready=1
     break
   fi
@@ -134,7 +135,8 @@ echo "Server ready. Verified: $TARGET_URL returns expected ebook content."
 # ------------------------------------------------------------------ #
 
 echo "Manual server test..."
-if ! curl --fail --silent --show-error "$TARGET_URL" | grep -q "Aprende ingl"; then
+SERVER_HTML=$(curl --fail --silent --show-error "$TARGET_URL")
+if ! grep -q "Aprende ingl" <<<"$SERVER_HTML"; then
   echo "ERROR: Manual server test failed — expected title not found in served HTML."
   exit 1
 fi
@@ -281,7 +283,7 @@ for hex_bytes in title_hex_matches:
 expected_title_fragments = [
     'Aprende ingl',
     'canciones',
-    'Sing Pronounce',
+    'Sing Pronunce',
 ]
 if decoded_titles:
     title = decoded_titles[0]

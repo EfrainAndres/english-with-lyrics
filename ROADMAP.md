@@ -58,14 +58,14 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current funnel step: ebook PDF canonical brand/domain regeneration and remaining production-readiness gates.
+Current funnel step: remaining production-readiness gates after ebook PDF canonical brand/domain regeneration.
 
 Next order:
 
 1. MailerLite domain authentication — complete.
 2. Hostinger mailbox regression — complete.
 3. Authenticated-sender Preview Email 1 regression — complete.
-4. Ebook PDF canonical brand/domain regeneration — next.
+4. Ebook PDF canonical brand/domain regeneration — complete.
 5. Legal owner configuration — pending.
 6. Production Email 1 configuration — pending.
 7. Remaining deliverability QA — pending as applicable.

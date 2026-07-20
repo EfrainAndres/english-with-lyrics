@@ -11,11 +11,14 @@ Current canonical-brand audit note:
 - Canonical Production origin: `https://singpronuncerepeat.com`.
 - WWW redirect: VERIFIED.
 - Legacy Vercel origin: NON-CANONICAL TECHNICAL FALLBACK.
-- PDF source configuration has been aligned for the next export.
-- Existing checked-in PDF binaries still require a controlled re-export: byte inspection found the legacy `https://english-with-lyrics.vercel.app/ebook-gratis` annotation and old `Sing Pronounce Repeat / English with Lyrics` alt text in `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` and `docs/design/production/phase-0-ebook-production-draft.pdf`.
-- No PDF was regenerated in this branch.
+- PDF regeneration: COMPLETE.
+- Official brand in PDF binary: VERIFIED — `Sing Pronunce Repeat`.
+- Canonical backlink in PDF binary: VERIFIED — `https://singpronuncerepeat.com/ebook-gratis`.
+- Legacy Vercel backlink: REMOVED from checked-in PDF binaries.
+- Legacy brand spelling: REMOVED from checked-in PDF binaries.
+- Public PDF path: UNCHANGED — `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
 
-Branch: `fix/phase-0-production-origin-and-pdf-backlink`
+Branch: `fix/phase-0-ebook-pdf-canonical-brand-domain`
 
 ---
 
@@ -75,13 +78,13 @@ All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app
 |---|---|
 | Source PDF path | `docs/design/production/phase-0-ebook-production-draft.pdf` |
 | Public PDF path | `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` |
-| Source SHA-256 (pre-metadata patch) | `5339c70f3dd1d101cc6f644a2179694383e17a0fc1729fdde934a2aeb23fbecc` |
-| Source SHA-256 (post-metadata patch) | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
-| Public SHA-256 | `c5ae8fba25d011d7f35d5e06999780a12a686156b6d84ce6463e41b55bf05312` |
+| Source SHA-256 (pre-metadata patch) | Not retained — Chrome export validated before metadata patch; final checked-in artifact is the patched PDF |
+| Source SHA-256 (post-metadata patch) | `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08` |
+| Public SHA-256 | `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08` |
 | Byte-identical | Yes — source and public are byte-identical after the same metadata patch |
-| File size | 1,225,899 bytes (approx. 1,197 KB) |
+| File size | 1,322,844 bytes (approx. 1,292 KB) |
 | Page count | 21 |
-| Transformation | PDF incremental update via `scripts/patch-pdf-metadata.py` — appends corrected Info dictionary without modifying existing page content, links, or colors |
+| Transformation | PDF incremental update via `scripts/patch-pdf-metadata.py` — appends corrected Info dictionary after Chrome export; page content, canonical link annotations, and intended external links were validated after patch |
 
 ---
 
@@ -94,6 +97,7 @@ All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app
 | Subject | `Guía educativa de pronunciación y comprensión de inglés con canciones` |
 | Keywords | `aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario` |
 | Creator | `Sing Pronunce Repeat / English with Lyrics` |
+| Producer | `Skia/PDF m150` |
 | Validation | Pass — all five fields confirmed after patch |
 
 ---
@@ -105,7 +109,7 @@ All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app
 | Check | Status |
 |---|---|
 | Export script runs successfully | Pass |
-| PDF exists and is non-zero | Pass — 1,225,899 bytes |
+| PDF exists and is non-zero | Pass — 1,322,844 bytes |
 | PDF starts with `%PDF` header | Pass |
 | Page count = 21 | Pass |
 | Network-error phrases absent | Pass |
@@ -118,6 +122,9 @@ All seven are HTTPS. None use localhost, 127.0.0.1, or non-production vercel.app
 | All Tally links unchanged | Pass |
 | Metadata: Title, Author, Subject, Keywords, Creator | Pass |
 | Source and public hashes identical | Pass |
+| Official brand in PDF binary | Pass — `Sing Pronunce Repeat` present; `Sing Pronounce Repeat` absent |
+| Legacy Vercel backlink absent | Pass — `https://english-with-lyrics.vercel.app` absent |
+| Visual render QA | Pass — all 21 pages rendered through PDFKit; page 16 fit correction removed inherited footer clipping |
 | `npm run lint` — 0 errors | Pass |
 | `npm run build` — passes | Pass |
 | `git diff --check` — clean | Pass |

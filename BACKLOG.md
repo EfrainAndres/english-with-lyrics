@@ -147,7 +147,7 @@ Priority: High.
 - [ ] Review Gmail inbox placement with the authenticated sender. Gmail technical delivery passed, but exact folder placement was not recorded.
 - [ ] Test Outlook delivery with the authenticated sender.
 - [ ] Review spam placement with the authenticated sender. Spam placement was not recorded for the authenticated-sender test.
-- [ ] Re-export and validate the ebook PDF so the binary artifact uses `https://singpronuncerepeat.com/ebook-gratis` and `Sing Pronunce Repeat`; current PDF source configuration is aligned, but the checked-in binary still contains the legacy backlink and old brand alt text.
+- [x] Re-export and validate the ebook PDF so the binary artifact uses `https://singpronuncerepeat.com/ebook-gratis` and `Sing Pronunce Repeat`; legacy backlink and old brand alt text removed from the checked-in source and public PDF binaries.
 - [ ] Configure Production Email 1.
 - [ ] Activate the Production sequence only after approval.
 - [ ] Document inbox-placement results.
@@ -273,7 +273,7 @@ Status: Complete.
 - PDF export script at `scripts/export-ebook-pdf.sh` (Chrome headless, Python 3 HTTP server, structural and link annotation validation).
 - QA checklist at `docs/validation/PHASE_0_EBOOK_PDF_QA.md`.
 - Publication readiness review at `docs/validation/PHASE_0_EBOOK_PUBLICATION_READINESS.md`.
-- Production draft at `docs/design/production/phase-0-ebook-production-draft.pdf` — 21 pages, 1,225,508 bytes, all 9 fragments, 6 embedded links, complete metadata.
+- Production draft at `docs/design/production/phase-0-ebook-production-draft.pdf` — 21 pages, 1,322,844 bytes, all 9 fragments, 7 embedded links, complete metadata, official `Sing Pronunce Repeat` brand, and canonical `https://singpronuncerepeat.com/ebook-gratis` backlink.
 
 Branch: `design/phase-0-ebook-pdf-production`
 
@@ -281,7 +281,7 @@ Status: Complete — structural QA passed. Visual QA: approved by project owner.
 
 ### Ebook PDF Delivery
 
-- [x] Public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` (1,225,508 bytes, SHA-256 `ebd1745f...`).
+- [x] Public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` (1,322,844 bytes, SHA-256 `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08`).
 - [x] `/ebook-gratis` converted from waiting page to active download page.
 - [x] Download CTA with `download` attribute and correct filename.
 - [x] Survey and first-group CTAs preserved with correct Tally destinations.

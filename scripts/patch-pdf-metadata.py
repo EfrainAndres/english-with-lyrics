@@ -15,7 +15,7 @@ Metadata applied:
     Keywords : aprender inglés, pronunciación, inglés con canciones,
                Escríbelo como suena, listening, vocabulario
     Creator  : Sing Pronunce Repeat / English with Lyrics
-    Producer : (unchanged — Skia/PDF m149)
+    Producer : (unchanged from source)
     CreationDate : (unchanged from source)
     ModDate      : (unchanged from source)
 """
@@ -30,7 +30,6 @@ SUBJECT  = 'Guía educativa de pronunciación y comprensión de inglés con canc
 KEYWORDS = ('aprender inglés, pronunciación, inglés con canciones, '
             'Escríbelo como suena, listening, vocabulario')
 CREATOR  = 'Sing Pronunce Repeat / English with Lyrics'
-PRODUCER = 'Skia/PDF m149'
 
 
 def utf16be_hex(s: str) -> str:
@@ -40,6 +39,11 @@ def utf16be_hex(s: str) -> str:
 
 def pdf_hex_str(s: str) -> str:
     return f'<{utf16be_hex(s)}>'
+
+
+def pdf_literal_str(s: str) -> str:
+    """Escape a plain PDF literal string."""
+    return '(' + s.replace('\\', '\\\\').replace('(', '\\(').replace(')', '\\)') + ')'
 
 
 def main(source_path: str, dest_path: str) -> None:
@@ -65,10 +69,13 @@ def main(source_path: str, dest_path: str) -> None:
     # ── Extract existing dates from the Info object (near file start) ──────
     creation_m = re.search(rb'/CreationDate\s*\(([^)]+)\)', existing[:4096])
     mod_m      = re.search(rb'/ModDate\s*\(([^)]+)\)', existing[:4096])
+    producer_m = re.search(rb'/Producer\s*\(([^)]*)\)', existing[:4096])
     creation_date = (creation_m.group(1).decode('ascii')
                      if creation_m else "D:20260617000000+00'00'")
     mod_date      = (mod_m.group(1).decode('ascii')
                      if mod_m else creation_date)
+    producer      = (producer_m.group(1).decode('latin-1')
+                     if producer_m else 'Skia/PDF')
 
     # ── Build replacement Info object (object 1, gen 0) ────────────────────
     new_info_content = (
@@ -78,7 +85,7 @@ def main(source_path: str, dest_path: str) -> None:
         f'/Subject {pdf_hex_str(SUBJECT)}\n'
         f'/Keywords {pdf_hex_str(KEYWORDS)}\n'
         f'/Creator {pdf_hex_str(CREATOR)}\n'
-        f'/Producer ({PRODUCER})\n'
+        f'/Producer {pdf_literal_str(producer)}\n'
         f'/CreationDate ({creation_date})\n'
         f'/ModDate ({mod_date})>>\n'
         'endobj\n'
