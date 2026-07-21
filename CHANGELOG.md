@@ -43,6 +43,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Recorded completion of the professional Colombian legal and provider contractual/DPA reviews with no legal-content or provider-related changes requested, while keeping Production legal publication, consent linking, email and lead capture pending or inactive.
 - Completed final protected Preview legal-page QA with responsive, accessibility, robots and metadata privacy checks, and recorded owner rendered-copy approval while keeping Production legal publication and email activation pending.
 - Corrected the Phase 0 legal drafts with separate consultation and claim timelines, expanded data-subject rights and claim handling, request-responsibility designation, an internal policy link, and accessible telephone formatting without adding personal values.
 - Regenerated and revalidated the public 21-page ebook PDF with the official `Sing Pronunce Repeat` brand and canonical `https://singpronuncerepeat.com/ebook-gratis` backlink, while preserving the existing public download path.
