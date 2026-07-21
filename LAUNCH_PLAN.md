@@ -56,7 +56,7 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 - Ebook content plan at `docs/content/PHASE_0_EBOOK_CONTENT_PLAN.md`. Status: complete.
 - Email capture page.
 - Waiting page at `/ebook-gratis`, later converted into the real download page.
-- Future PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`.
+- Current direct-delivery PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`; its legacy filename remains unchanged.
 - Delivery email that links to the download page instead of attaching the PDF by default.
 - Follow-up email sequence.
 - Founder offer invitation.
@@ -74,12 +74,14 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 | Fragment approval — The Reason | Complete — TR-01 "Before I go" (86/100), TR-02 "I'm not a perfect person" (91/100), TR-03 "Start over new" (87/100). All approved. Non-adjacency and source-order distinction confirmed by project owner. |
 | Nine-fragment review phase | Complete — all 9 of 9 fragments approved; cross-song consistency review done |
 | Final content integration | Complete — `docs/content/PHASE_0_EBOOK_FINAL_CONTENT.md` (branch `content/phase-0-ebook-final-content`); official media links verified; design handoff markers in place; publication blocked by legal-safe review and PDF design |
-| PDF design template | Complete — `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md`; A5 portrait, 15 reusable components, static prototype at `docs/design/prototypes/`; recommended 14–16 pages |
+| PDF design template | Complete — `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md`; A5 portrait, 15 reusable components, static prototype at `docs/design/prototypes/`; historical 14–16-page recommendation superseded by the pending-owner-approval 30-page improvement architecture |
 | PDF production draft | Complete — 21-page PDF with full metadata at `docs/design/production/phase-0-ebook-production-draft.pdf`; owner visual review approved |
 | PDF publication readiness review | Complete — `docs/validation/PHASE_0_EBOOK_PUBLICATION_READINESS.md`; decision: PASS FOR CURRENT DIRECT-DELIVERY FLOW |
 | PDF delivery and page conversion | Complete for current direct-delivery flow — public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`; `/ebook-gratis` download page active; Production ebook page smoke test PASS; Production PDF download PASS; Production browser-open action PASS |
 | Home page alignment | Complete for current direct-delivery flow — `fix/phase-0-home-ebook-delivery-alignment`; all home CTAs route to `/ebook-gratis`; waiting-state copy removed |
 | Production origin + PDF backlink | Complete — canonical Production origin is `https://singpronuncerepeat.com`; HTTPS, Vercel Production connection, Hostinger DNS connection, apex loading, and permanent `www` redirect verified. Checked-in source and public PDF binaries were re-exported and validated with the canonical `/ebook-gratis` backlink and official `Sing Pronunce Repeat` brand. Production in-PDF canonical backlink: PASS. Current direct ebook delivery: ACTIVE. Production email delivery: INACTIVE. Production lead capture: INACTIVE. |
+| Mandatory ebook improvement audit | Complete — all 21 current pages, nine practices and seven link annotations audited; current ebook suitable as implementation base: YES; current ebook approved as final Production asset: NO |
+| Improved ebook page architecture | Complete for owner review — one 30-page digital version proposed; architecture approval: PENDING; mandatory ebook improvements: PENDING; Production PDF replacement: PENDING |
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Gmail Primary placement: PASS; Hotmail inbox placement: PASS — Other tab; consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS; organization-managed Outlook technical delivery: PASS; organization-managed Outlook inbox placement: FAILED CURRENT TENANT TEST; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
@@ -161,6 +163,8 @@ Gate status is recorded below; completed Preview and owner-review gates do not a
 
 Direct ebook delivery must remain active until the replacement funnel passes Preview, rollback, privacy, and production-readiness QA. Draft legal documents do not make the funnel live.
 
+The current direct-delivery ebook is a useful implementation base, not the final Production asset. Mandatory ebook improvement remains a launch blocker. Owner approval of the page-by-page architecture is the next ebook gate, followed by copy, verified links and QR codes, design implementation, PDF generation, full QA and controlled Production replacement. Only one digital version is in scope; printable, EPUB, Kindle, paid-ebook and subscription-platform variants are postponed.
+
 Current implementation note:
 
 - The controlled Preview lead-capture component is implemented only on `/ebook-gratis`.
@@ -184,6 +188,8 @@ Current implementation note:
 - Production automation: INACTIVE.
 - Production email delivery: INACTIVE.
 - Production lead capture: INACTIVE.
+- Mandatory ebook improvements: PENDING.
+- Production PDF replacement: PENDING.
 - Final Production consent linking, Production environment configuration, Production legal publication, corporate deliverability limitations, Production MailerLite group/form, Production Email 1, Production automation, and controlled rollout approval remain blocking.
 
 ## Phase 1 Launch: Paid MVP

@@ -251,6 +251,30 @@ Status: done.
 
 Status: done.
 
+### Mandatory Ebook Pre-Production Improvement
+
+Product decision: the current 21-page ebook is a useful implementation base, but it is not approved as the final Production asset. Mandatory improvement is a launch blocker. This phase will produce one improved digital version only; printable, EPUB, Kindle, paid-ebook and subscription-platform variants remain postponed.
+
+- [x] Complete the current ebook page-by-page audit.
+- [x] Complete the nine-practice educational-content audit.
+- [x] Complete the visual and editorial audit of all 21 rendered pages.
+- [x] Inventory all current PDF link annotations.
+- [x] Define the proposed page-by-page architecture.
+- [x] Recommend a 30-page final target.
+- [ ] Obtain project-owner approval of the page architecture.
+- [ ] Write and approve new-page copy.
+- [ ] Apply existing-page copy and pronunciation corrections.
+- [ ] Reverify all final destinations.
+- [ ] Generate and scan-test QR codes from verified destinations.
+- [ ] Implement the improved ebook design.
+- [ ] Generate the replacement PDF through the existing workflow.
+- [ ] Complete final structural, visual, text, metadata and link QA.
+- [ ] Replace the Production PDF while preserving the public filename.
+- [ ] Integrate the approved ebook into the future Production funnel.
+- [ ] Complete controlled Production rollout.
+
+Architecture approval status: PENDING. PDF generation remains blocked until approval.
+
 ### Ebook Draft
 
 - Editorial draft complete. See `docs/content/PHASE_0_EBOOK_DRAFT.md`.
@@ -318,7 +342,7 @@ Remaining pre-publication work:
 - Design specification: `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md` — 21-section specification covering format, brand, typography, components, accessibility, QA checklists, and handoff instructions.
 - Static prototype: `docs/design/prototypes/phase-0-ebook-template.html` (9 representative pages) and `docs/design/prototypes/phase-0-ebook-template.css` (full design system with tokens, print styles, narrow-screen styles).
 - A5 portrait format (148 × 210 mm), dark brand identity, 15 reusable components, mobile-first and print-safe.
-- Recommended final page count: 14–16 pages.
+- Historical template recommendation: 14–16 pages. Superseded for the mandatory improvement by the audited 30-page architecture, pending owner approval.
 
 Branch: `design/phase-0-ebook-pdf-template`
 

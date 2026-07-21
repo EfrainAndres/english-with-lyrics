@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current funnel step: Production consent linking after professional Colombian legal and provider contractual/DPA review completed with no changes requested.
+Current Phase 0 step: mandatory ebook audit and improvement architecture after professional Colombian legal and provider contractual/DPA review completed with no changes requested. The current ebook remains a useful implementation base but is not the final Production asset.
 
 Next order:
 
@@ -74,11 +74,14 @@ Next order:
 10. Owner rendered-copy review — approved.
 11. Professional Colombian legal review — complete; no changes requested.
 12. Provider contractual/DPA review — complete; no changes requested.
-13. Production consent linking — next.
-14. Production legal publication — pending.
-15. Production Email 1 configuration — pending.
-16. Remaining deliverability QA — pending as applicable.
-17. Controlled Production rollout — pending.
+13. Mandatory ebook audit — current; page-by-page audit and 30-page architecture complete.
+14. Page architecture approval — next.
+15. Ebook copy and design implementation — pending.
+16. Production consent linking and legal publication — pending.
+17. Production Email 1 configuration — pending.
+18. Remaining deliverability QA — pending as applicable.
+19. Production funnel activation — pending.
+20. Controlled Production rollout — pending.
 
 This gate applies before:
 
