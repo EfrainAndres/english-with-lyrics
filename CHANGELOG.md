@@ -6,6 +6,9 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Added a single `Escríbelo como suena` pronunciation standard that normalizes the nine approved practice bridges (notation, stress, soft-air `h`, voiced/voiceless `th`, final consonants and temporary cluster support) without changing any approved English fragment.
+- Added an improved 32-page ebook content source drafting all seven new pages and updating existing pages, preserving the nine approved fragments, correcting the known source typo in the new source only, and using internal placeholders instead of raw destinations, while leaving the current 21-page source and PDF unchanged.
+- Added a copy and pronunciation readiness record documenting 32-page coverage, nine-practice preservation, pronunciation normalization, copyright safeguards and the remaining owner-approval, qualified-pronunciation-review, link-verification, design and PDF-generation gates.
 - Approved the revised 32-page ebook architecture after project-owner review of the initial 30-page proposal returned CHANGES REQUESTED, implementing the separation of brand mission, future-product positioning and survey into three distinct pages, strengthening the expression-review contracts, and correcting the 30-page QA reference to 32 pages, while leaving the PDF, its sources and all Production configuration unchanged.
 - Refined the proposed ebook improvement architecture from 30 to 32 pages after project-owner review, separating the brand mission, future-product positioning and survey into three distinct pages and strengthening the expression-review contracts on the completion and consolidated-review pages, while leaving the PDF, its sources and all Production configuration unchanged.
 - Added a complete audit of the current 21-page ebook and a proposed 30-page improvement architecture, while leaving the PDF, its sources and all Production configuration unchanged.

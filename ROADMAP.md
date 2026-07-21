@@ -75,8 +75,8 @@ Next order:
 11. Professional Colombian legal review — complete; no changes requested.
 12. Provider contractual/DPA review — complete; no changes requested.
 13. Mandatory ebook audit — complete; page-by-page audit complete; 30-page architecture received owner feedback of CHANGES REQUESTED and was revised to a 32-page architecture separating the mission, future-product positioning and survey into distinct pages; revised architecture approved.
-14. Copywriting and pronunciation-normalization phase — next.
-15. Ebook copy and design implementation — pending.
+14. Copywriting and pronunciation-normalization phase — complete draft; improved 32-page learner copy and one `Escríbelo como suena` pronunciation standard drafted; owner copy review is next; qualified pronunciation review pending.
+15. Ebook copy approval, qualified pronunciation review, design implementation and PDF generation — pending (copy and pronunciation standard drafted; design and PDF generation blocked).
 16. Production consent linking and legal publication — pending.
 17. Production Email 1 configuration — pending.
 18. Remaining deliverability QA — pending as applicable.

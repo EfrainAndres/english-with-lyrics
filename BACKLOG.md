@@ -263,8 +263,9 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [x] Recommend a 30-page final target.
 - [x] Revise the architecture to a 32-page target after owner review returned CHANGES REQUESTED, separating mission, future-product positioning and survey into distinct pages and strengthening expression-review contracts.
 - [x] Obtain project-owner approval of the revised 32-page page architecture.
-- [ ] Write and approve new-page copy.
-- [ ] Apply existing-page copy and pronunciation corrections.
+- [x] Draft the improved 32-page learner copy and the `Escríbelo como suena` pronunciation standard (complete draft; owner copy approval and qualified pronunciation review pending).
+- [ ] Obtain owner copy approval of the improved 32-page copy.
+- [ ] Complete the qualified pronunciation review of the nine normalized bridges.
 - [ ] Reverify all final destinations.
 - [ ] Generate and scan-test QR codes from verified destinations.
 - [ ] Implement the improved ebook design.
@@ -274,7 +275,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: APPROVED (revised 32-page target). Copywriting and pronunciation-normalization phases may now proceed. PDF generation remains blocked until copy, design and link verification pass their gates.
+Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy and pronunciation standard: COMPLETE DRAFT — see `docs/content/PHASE_0_EBOOK_IMPROVED_CONTENT.md`, `docs/content/PHASE_0_EBOOK_PRONUNCIATION_STANDARD.md` and `docs/validation/PHASE_0_EBOOK_COPY_PRONUNCIATION_READINESS.md`. Owner copy review is next; qualified pronunciation review, link verification and QR remain pending. Design implementation, PDF generation and Production replacement remain blocked. The current 21-page source and PDF are unchanged.
 
 ### Ebook Draft
 
