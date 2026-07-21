@@ -65,6 +65,8 @@ Useful local routes:
 
 ## Free ebook PDF
 
+**Approved architecture:** Historical template recommendation: 14–16 pages. Superseded by the approved 32-page mandatory-improvement architecture. See `docs/ebook/PHASE_0_EBOOK_PAGE_ARCHITECTURE.md`.
+
 Public file: `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`
 
 Local URL: `http://localhost:3000/downloads/guia-gratis-sing-pronounce-repeat.pdf`
