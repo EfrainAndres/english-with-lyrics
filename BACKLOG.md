@@ -343,7 +343,7 @@ Remaining pre-publication work:
 - Design specification: `docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md` — 21-section specification covering format, brand, typography, components, accessibility, QA checklists, and handoff instructions.
 - Static prototype: `docs/design/prototypes/phase-0-ebook-template.html` (9 representative pages) and `docs/design/prototypes/phase-0-ebook-template.css` (full design system with tokens, print styles, narrow-screen styles).
 - A5 portrait format (148 × 210 mm), dark brand identity, 15 reusable components, mobile-first and print-safe.
-- Historical template recommendation: 14–16 pages. Superseded for the mandatory improvement by the audited 30-page architecture, pending owner approval.
+- Historical template recommendation: 14–16 pages. Superseded by the approved 32-page mandatory-improvement architecture.
 
 Branch: `design/phase-0-ebook-pdf-template`
 
