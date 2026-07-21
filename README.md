@@ -131,8 +131,8 @@ LEGAL_OWNER_DOMICILE="<configured-in-vercel>"
 LEGAL_CONTACT_ADDRESS="<configured-in-vercel>"
 LEGAL_CONTACT_PHONE="<configured-in-vercel>"
 LEGAL_PRIVACY_EMAIL="privacidad@singpronuncerepeat.com"
-LEGAL_EFFECTIVE_DATE="2026-07-27"
-LEGAL_LAST_UPDATED_DATE="2026-07-27"
+LEGAL_EFFECTIVE_DATE="2026-07-20"
+LEGAL_LAST_UPDATED_DATE="2026-07-20"
 ```
 
 Publication behavior is explicit:

@@ -173,7 +173,7 @@ Questions prepared: COMPLETE
 Counsel engaged: YES
 Counsel feedback received: YES
 Professional Colombian legal review: COMPLETE
-Professional-review completion date: 2026-07-27
+Professional-review completion date: 2026-07-20
 Professional-review outcome: NO CHANGES REQUESTED
 Professional legal review gate: PASS
 Production legal publication: PENDING

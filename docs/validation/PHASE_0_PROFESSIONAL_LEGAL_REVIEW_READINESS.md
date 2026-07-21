@@ -9,7 +9,7 @@ Current legal routes: PROFESSIONALLY REVIEWED
 Internal structured review: PASS
 Owner rendered-copy review: APPROVED
 Professional Colombian legal review: COMPLETE
-Professional-review completion date: 2026-07-27
+Professional-review completion date: 2026-07-20
 Professional-review outcome: NO CHANGES REQUESTED
 Professional legal review gate: PASS
 Provider contractual/DPA review: COMPLETE
