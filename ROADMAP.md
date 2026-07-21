@@ -54,11 +54,11 @@ Key questions:
 
 Lead capture and nurture funnel.
 
-Required gate: privacy and consent approval. Drafts alone do not complete this gate. Owner details, professional legal review, approved public policies, an operational privacy contact, and provider due diligence must be complete before production collection.
+Required gate: privacy and consent approval. Drafts alone do not complete this gate. Professional legal and provider review are complete, but final Production consent linking, legal publication, environment configuration and controlled rollout approval remain required before Production collection.
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current funnel step: professional legal-review package preparation before engaging Colombian counsel and completing provider, consent and Production gates.
+Current funnel step: Production consent linking after professional Colombian legal and provider contractual/DPA review completed with no changes requested.
 
 Next order:
 
@@ -70,14 +70,15 @@ Next order:
 6. Consumer deliverability QA — pass for current controlled tests.
 7. Corporate Outlook placement — known limitation; organization-managed Outlook delivered to Junk in the current tenant test.
 8. Legal-owner implementation — complete.
-9. Internal and owner review — complete.
-10. Professional legal-review package — current.
-11. Professional Colombian legal review — pending.
-12. Provider contractual/DPA review — pending.
-13. Production consent linking — pending.
-14. Production Email 1 configuration — pending.
-15. Remaining deliverability QA — pending as applicable.
-16. Controlled Production rollout — pending.
+9. Internal structured review — complete.
+10. Owner rendered-copy review — approved.
+11. Professional Colombian legal review — complete; no changes requested.
+12. Provider contractual/DPA review — complete; no changes requested.
+13. Production consent linking — next.
+14. Production legal publication — pending.
+15. Production Email 1 configuration — pending.
+16. Remaining deliverability QA — pending as applicable.
+17. Controlled Production rollout — pending.
 
 This gate applies before:
 

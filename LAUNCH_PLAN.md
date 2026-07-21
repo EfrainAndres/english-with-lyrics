@@ -83,7 +83,7 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Gmail Primary placement: PASS; Hotmail inbox placement: PASS — Other tab; consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS; organization-managed Outlook technical delivery: PASS; organization-managed Outlook inbox placement: FAILED CURRENT TENANT TEST; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
-| Public legal routes | Protected Preview and owner review gates: PASS; professional legal-review brief, counsel questions and readiness checklist: COMPLETE; owner approval is not professional legal approval; professional Colombian legal review, provider contractual/DPA review and Production publication remain pending |
+| Public legal routes | Protected Preview and owner review gates: PASS; professional Colombian legal gate: PASS; provider contractual/DPA gate: PASS; no legal-content or provider-related changes requested; Production consent linking and legal publication remain pending |
 
 ### Launch Steps
 
@@ -104,7 +104,7 @@ Status: planned, not live.
 Staged rollout:
 
 1. Architecture approved.
-2. Legal-owner architecture, protected Preview QA, internal/owner review and professional-review handoff package complete; counsel engagement, professional legal review and final consent linking remain required.
+2. Legal-owner architecture, protected Preview QA, internal/owner review, professional Colombian legal review and provider contractual/DPA review complete; no changes requested; final Production consent linking and publication remain required.
 3. Provider foundation documented.
 4. Provider configured.
 5. Preview form integrated.
@@ -148,11 +148,11 @@ Gate status is recorded below; completed Preview and owner-review gates do not a
 3. Protected Preview final regression QA complete.
 4. Owner re-review and approval of the rendered policies complete.
 5. Internal structured legal review passed.
-6. Professional legal-review package complete and handed to engaged counsel.
-7. Professional legal review complete.
+6. Professional legal-review package complete and reviewed by engaged counsel.
+7. Professional Colombian legal review complete. Status: PASS; no changes requested.
 8. Approved public privacy and data-processing policies published as applicable.
 9. Privacy/contact channel operational.
-10. MailerLite due diligence and international-processing review complete.
+10. Provider contractual/DPA, legal-classification, MailerLite due-diligence and international-processing review complete. Status: PASS; no changes requested.
 11. Production and Preview data isolation verified.
 12. Explicit, unchecked consent UI verified and linked to the final Production policies.
 13. Unsubscribe and suppression behavior verified.
@@ -168,8 +168,10 @@ Current implementation note:
 - `/privacidad` and `/tratamiento-de-datos` support safe `pending` rendering and complete environment-backed `draft` rendering; Production remains `pending`, both routes remain `noindex, nofollow`, and they are not yet approved or linked as final consent documents.
 - Protected Preview final regression, responsive/accessibility QA, robots validation, metadata privacy validation and Production pending-state regression passed.
 - The internal structured review passed, and owner rendered-copy re-review is approved. This owner approval is not professional legal approval.
-- The professional legal-review brief, counsel question list and readiness checklist are complete. Engaging Colombian counsel and agreeing the review scope are the next legal gate.
-- Professional Colombian legal review and provider contractual/DPA review remain pending.
+- The professional legal-review brief, counsel question list and readiness checklist are complete.
+- Professional Colombian legal review: COMPLETE; professional legal gate: PASS; no legal-content changes requested.
+- Provider contractual/DPA and legal-classification review: COMPLETE; provider gate: PASS; no provider-related changes requested.
+- Professional approval does not activate Production legal publication, consent capture, email, automation or lead capture.
 - Preview redirect configuration is still pending in MailerLite.
 - Email 1 content is documented; authenticated-sender Preview regression has passed.
 - Controlled consumer deliverability has passed for the current Gmail and Hotmail tests; Hotmail reached Inbox — Other, not Focused.
@@ -182,7 +184,7 @@ Current implementation note:
 - Production automation: INACTIVE.
 - Production email delivery: INACTIVE.
 - Production lead capture: INACTIVE.
-- Professional legal review, provider contractual/DPA review, final Production consent linking, Production legal publication, corporate deliverability limitations, Production Email 1, Production automation, and controlled rollout approval remain blocking.
+- Final Production consent linking, Production environment configuration, Production legal publication, corporate deliverability limitations, Production MailerLite group/form, Production Email 1, Production automation, and controlled rollout approval remain blocking.
 
 ## Phase 1 Launch: Paid MVP
 
