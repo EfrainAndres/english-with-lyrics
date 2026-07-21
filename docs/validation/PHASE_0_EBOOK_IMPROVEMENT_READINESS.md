@@ -19,8 +19,8 @@ New-page copy: PENDING
 Existing-page copy corrections: PENDING
 Official URL verification: PENDING
 QR generation: PENDING
-PDF source editing: PENDING
-PDF generation: PENDING
+PDF source editing: PENDING — BLOCKED BY COPY, LINK/QR AND DESIGN GATES
+PDF generation: PENDING — BLOCKED BY COPY, LINK/QR AND DESIGN GATES
 Final PDF visual QA: PENDING
 Production replacement: BLOCKED
 Production funnel activation: PENDING
