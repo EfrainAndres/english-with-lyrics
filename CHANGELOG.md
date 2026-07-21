@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Approved the revised 32-page ebook architecture after project-owner review of the initial 30-page proposal returned CHANGES REQUESTED, implementing the separation of brand mission, future-product positioning and survey into three distinct pages, strengthening the expression-review contracts, and correcting the 30-page QA reference to 32 pages, while leaving the PDF, its sources and all Production configuration unchanged.
 - Refined the proposed ebook improvement architecture from 30 to 32 pages after project-owner review, separating the brand mission, future-product positioning and survey into three distinct pages and strengthening the expression-review contracts on the completion and consolidated-review pages, while leaving the PDF, its sources and all Production configuration unchanged.
 - Added a complete audit of the current 21-page ebook and a proposed 30-page improvement architecture, while leaving the PDF, its sources and all Production configuration unchanged.
 - Added the Phase 0 professional legal-review brief, numbered counsel question list and handoff-readiness checklist without activating Production legal publication, email or lead capture.

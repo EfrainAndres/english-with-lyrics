@@ -262,7 +262,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [x] Define the proposed page-by-page architecture.
 - [x] Recommend a 30-page final target.
 - [x] Revise the architecture to a 32-page target after owner review returned CHANGES REQUESTED, separating mission, future-product positioning and survey into distinct pages and strengthening expression-review contracts.
-- [ ] Obtain project-owner approval of the revised 32-page page architecture.
+- [x] Obtain project-owner approval of the revised 32-page page architecture.
 - [ ] Write and approve new-page copy.
 - [ ] Apply existing-page copy and pronunciation corrections.
 - [ ] Reverify all final destinations.
@@ -274,7 +274,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: PENDING (revised 32-page target). PDF generation remains blocked until approval.
+Architecture approval status: APPROVED (revised 32-page target). Copywriting and pronunciation-normalization phases may now proceed. PDF generation remains blocked until copy, design and link verification pass their gates.
 
 ### Ebook Draft
 

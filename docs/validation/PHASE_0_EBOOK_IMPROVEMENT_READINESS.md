@@ -9,24 +9,26 @@ Educational practices reviewed: YES
 Current links inventoried: YES
 Final page architecture: COMPLETE
 Target page count selected: YES
-Architecture owner review: CHANGES REQUESTED
+Initial architecture owner review: CHANGES REQUESTED
+Requested architecture revision: COMPLETE
 Revised target: 32 pages
-Architecture revision implementation: COMPLETE after this task
-Owner final architecture approval: PENDING
+Architecture revision implementation: COMPLETE
+Owner final architecture approval: APPROVED
+Architecture gate: PASS
 New-page copy: PENDING
 Existing-page copy corrections: PENDING
 Official URL verification: PENDING
 QR generation: PENDING
-PDF source editing: BLOCKED
-PDF generation: BLOCKED
+PDF source editing: PENDING
+PDF generation: PENDING
 Final PDF visual QA: PENDING
 Production replacement: BLOCKED
 Production funnel activation: PENDING
 ```
 
-Page-by-page architecture approved by project owner: **PENDING**.
+Page-by-page architecture approved by project owner: **APPROVED**.
 
-The prior 30-page architecture received owner feedback of CHANGES REQUESTED. This document reflects the revised 32-page architecture in `docs/ebook/PHASE_0_EBOOK_PAGE_ARCHITECTURE.md`, which separates the mission, future-product positioning and survey into three distinct pages and strengthens the expression-review contracts. The ebook-generation phase remains blocked until the project owner approves this revised architecture.
+The initial 30-page proposal received owner feedback of CHANGES REQUESTED. The revised 32-page architecture in `docs/ebook/PHASE_0_EBOOK_PAGE_ARCHITECTURE.md` separates the mission, future-product positioning and survey into three distinct pages and strengthens the expression-review contracts. This revised architecture has been approved by the project owner. Copywriting and pronunciation-normalization phases may now proceed; PDF implementation remains blocked until copy, design and link verification pass their own gates.
 
 ## Confirmed baseline
 
@@ -60,7 +62,7 @@ The prior 30-page architecture received owner feedback of CHANGES REQUESTED. Thi
 
 ## Mandatory pre-generation gates
 
-- [ ] Project owner approves the 32-page architecture.
+- [x] Project owner approves the 32-page architecture.
 - [ ] New opening, transformation, journey and consolidated-review copy is approved.
 - [ ] Existing practice-source typo is reconciled with the already-correct rendered copy.
 - [ ] Pronunciation notation receives a consistency pass, including stress, separators, soft-air guidance, `th`, vowel/final-consonant distinctions and temporary initial-cluster supports.
@@ -72,7 +74,7 @@ The prior 30-page architecture received owner feedback of CHANGES REQUESTED. Thi
 - [ ] Optional future-product and channel destinations are either verified or omitted.
 - [ ] QR codes are generated only from verified destinations and scan-tested at final A5 size.
 - [ ] Final design is implemented using the established source/generator workflow.
-- [ ] The final binary passes 30-page structural, text, metadata, annotation, accessibility-support and visual QA.
+- [ ] The final binary passes 32-page structural, text, metadata, annotation, accessibility-support and visual QA.
 - [ ] The public PDF is replaced only after approved QA and rollback preparation.
 
 ## Product boundaries
@@ -92,4 +94,4 @@ Controlled Production rollout: PENDING
 
 ## Decision
 
-Improvement planning is ready for owner review. Implementation is **NO-GO** until the page-by-page architecture is approved. The current direct-delivery PDF remains available at its existing path but remains not final for the mandatory pre-Production improvement.
+Page-by-page architecture is approved. Implementation gates advance to copy and design phases. Copywriting and pronunciation-normalization phases may now proceed in a separate branch. PDF source editing, design implementation and PDF generation remain blocked until new-page copy, pronunciation normalization, link verification/QR creation and design implementation pass their own approval gates. The current direct-delivery PDF remains available at its existing path and will remain until the approved replacement passes final QA and rollback preparation.

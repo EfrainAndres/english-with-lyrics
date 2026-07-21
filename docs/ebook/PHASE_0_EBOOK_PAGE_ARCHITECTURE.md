@@ -3,13 +3,15 @@
 ## Owner review decision
 
 ```text
-Architecture base: APPROVABLE
-Current owner decision: CHANGES REQUESTED
+Architecture base: APPROVED
+Initial owner decision: CHANGES REQUESTED
+Requested architecture revision: COMPLETE
 Revised target page count: 32
-Owner architecture approval: PENDING
+Owner architecture approval: APPROVED
+Architecture gate: PASS
 ```
 
-This revision implements the requested changes. Owner approval of this 32-page architecture remains pending and is not recorded as complete in this document.
+This revision implements all requested changes. The 32-page architecture has been reviewed and approved by the project owner. All changes requested in the initial owner review have been satisfied. Copywriting may proceed in a separate branch. PDF implementation remains blocked until copy, links, QR requirements and design pass their own approval gates.
 
 ## Architecture decision
 
@@ -621,8 +623,6 @@ Rules for placeholders:
 
 ## Approval and implementation gate
 
-Page-by-page architecture approved by project owner: **PENDING**.
+Page-by-page architecture approved by project owner: **APPROVED**.
 
-Owner review of the prior 30-page architecture returned CHANGES REQUESTED; this revision implements those changes at a 32-page target. Owner approval of this revised architecture has not yet been recorded.
-
-Ebook source editing, new-page copy, design implementation and PDF generation remain blocked until that approval is recorded. After approval, work should proceed in separate, scoped phases for copy, link verification/QR creation, design implementation, export and independent PDF QA.
+Owner review of the prior 30-page architecture returned CHANGES REQUESTED; this 32-page revision implements all requested changes and has been approved. Copywriting and pronunciation-normalization phases may now proceed in a separate branch. PDF source editing, design implementation and PDF generation remain blocked until new-page copy, pronunciation normalization, link verification/QR creation and design implementation pass their own approval gates. After design and copy approval, work should proceed in separate, scoped phases for link verification/QR creation, design implementation, export and independent PDF QA.
