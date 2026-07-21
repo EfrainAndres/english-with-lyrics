@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current funnel step: professional and provider legal review after completion of legal-owner configuration, internal structured review, protected Preview final regression and owner rendered-copy approval.
+Current funnel step: professional legal-review package preparation before engaging Colombian counsel and completing provider, consent and Production gates.
 
 Next order:
 
@@ -69,16 +69,15 @@ Next order:
 5. Production PDF smoke test — complete.
 6. Consumer deliverability QA — pass for current controlled tests.
 7. Corporate Outlook placement — known limitation; organization-managed Outlook delivered to Junk in the current tenant test.
-8. Legal-owner configuration — complete.
-9. Internal structured review — complete.
-10. Protected Preview final regression — complete.
-11. Owner rendered-copy review — approved.
-12. Professional Colombian legal review — pending.
-13. Provider contractual/DPA review — pending.
-14. Production consent linking — pending.
-15. Production Email 1 configuration — pending.
-16. Remaining deliverability QA — pending as applicable.
-17. Controlled Production rollout — pending.
+8. Legal-owner implementation — complete.
+9. Internal and owner review — complete.
+10. Professional legal-review package — current.
+11. Professional Colombian legal review — pending.
+12. Provider contractual/DPA review — pending.
+13. Production consent linking — pending.
+14. Production Email 1 configuration — pending.
+15. Remaining deliverability QA — pending as applicable.
+16. Controlled Production rollout — pending.
 
 This gate applies before:
 
