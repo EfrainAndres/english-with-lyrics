@@ -9,20 +9,24 @@ Educational practices reviewed: YES
 Current links inventoried: YES
 Final page architecture: COMPLETE
 Target page count selected: YES
+Architecture owner review: CHANGES REQUESTED
+Revised target: 32 pages
+Architecture revision implementation: COMPLETE after this task
+Owner final architecture approval: PENDING
 New-page copy: PENDING
 Existing-page copy corrections: PENDING
 Official URL verification: PENDING
 QR generation: PENDING
-Final design implementation: PENDING
-Final PDF generation: PENDING
+PDF source editing: BLOCKED
+PDF generation: BLOCKED
 Final PDF visual QA: PENDING
-Production replacement: PENDING
+Production replacement: BLOCKED
 Production funnel activation: PENDING
 ```
 
 Page-by-page architecture approved by project owner: **PENDING**.
 
-The ebook-generation phase is blocked until the project owner approves the architecture in `docs/ebook/PHASE_0_EBOOK_PAGE_ARCHITECTURE.md`.
+The prior 30-page architecture received owner feedback of CHANGES REQUESTED. This document reflects the revised 32-page architecture in `docs/ebook/PHASE_0_EBOOK_PAGE_ARCHITECTURE.md`, which separates the mission, future-product positioning and survey into three distinct pages and strengthens the expression-review contracts. The ebook-generation phase remains blocked until the project owner approves this revised architecture.
 
 ## Confirmed baseline
 
@@ -40,7 +44,7 @@ The ebook-generation phase is blocked until the project owner approves the archi
 | Broken/clipped pages observed | NO |
 | Three current songs retained | YES |
 | Nine short practices retained | YES |
-| Recommended final page count | 30 |
+| Recommended final page count | 32 |
 | Current ebook useful as implementation base | YES |
 | Current ebook approved as final Production asset | NO |
 | Mandatory improvement status | LAUNCH BLOCKER |
@@ -51,12 +55,12 @@ The ebook-generation phase is blocked until the project owner approves the archi
 - All 21 rendered pages were reviewed visually without OCR.
 - The nine practices were reviewed for practical pronunciation, natural meaning, vocabulary, original examples, exercise clarity, level and short-fragment safeguards.
 - Current link annotations were inventoried: three official-song links, two survey links, one first-group link and one canonical ebook backlink.
-- The proposed 30-page architecture preserves all three songs and all nine practices while improving the opening, progress, review, challenge, self-assessment and conversion sequence.
-- No PDF, ebook source, generator, application code, Production configuration or provider configuration changed in this audit.
+- The proposed 32-page architecture preserves all three songs and all nine practices while improving the opening, progress, review, challenge, self-assessment and conversion sequence.
+- No PDF, ebook source, generator, application code, Production configuration or provider configuration changed in this audit or in this revision.
 
 ## Mandatory pre-generation gates
 
-- [ ] Project owner approves the 30-page architecture.
+- [ ] Project owner approves the 32-page architecture.
 - [ ] New opening, transformation, journey and consolidated-review copy is approved.
 - [ ] Existing practice-source typo is reconciled with the already-correct rendered copy.
 - [ ] Pronunciation notation receives a consistency pass, including stress, separators, soft-air guidance, `th`, vowel/final-consonant distinctions and temporary initial-cluster supports.

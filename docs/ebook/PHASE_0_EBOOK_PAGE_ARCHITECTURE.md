@@ -1,10 +1,21 @@
 # Phase 0 Ebook Page Architecture
 
+## Owner review decision
+
+```text
+Architecture base: APPROVABLE
+Current owner decision: CHANGES REQUESTED
+Revised target page count: 32
+Owner architecture approval: PENDING
+```
+
+This revision implements the requested changes. Owner approval of this 32-page architecture remains pending and is not recorded as complete in this document.
+
 ## Architecture decision
 
-Recommended final page count: **30 pages**.
+Recommended final page count: **32 pages**.
 
-Thirty A5 portrait pages are sufficient to preserve the three songs and nine short practices while adding the missing orientation, progress, active review, three-day challenge, self-assessment and continuation layers. The proposal adds nine net pages to the current 21-page artifact, but only four pages are wholly new; the remaining growth comes from separating content that is currently crowded or functionally mixed. It does not expand the guide merely to reach a number.
+Thirty-two A5 portrait pages are sufficient to preserve the three songs and nine short practices while adding the missing orientation, progress, active review, three-day challenge, self-assessment and continuation layers. The proposal adds eleven net pages to the current 21-page artifact, but only seven pages are wholly new; the remaining growth comes from separating content that is currently crowded or functionally mixed. Two of those pages exist specifically to keep the brand mission, future-product positioning and survey from competing on one page — each now has its own page with a single purpose. The range remains intentionally controlled: no page is added elsewhere merely to increase the count.
 
 Final format decisions:
 
@@ -24,7 +35,7 @@ The implementation should reuse four page families:
 1. **Opening pages:** one primary message, no more than three supporting blocks and generous whitespace.
 2. **Song introductions:** title, artist reference, text-plus-visual difficulty, reason, listening focus, verified official link, QR and journey position.
 3. **Practice pages:** approved short fragment, `Escríbelo como suena`, natural meaning, vocabulary, original example, one active exercise, listen/repeat instruction and completion marker.
-4. **Completion pages:** three-expression review, personal sentence, difficult-sound reflection, confidence check and accumulated progress.
+4. **Completion pages:** three-expression review (approved short expression, natural meaning, song/practice reference and recall-without-looking checkbox, one expression per isolated table row), personal sentence, difficult-sound reflection, confidence check and accumulated progress.
 
 Global acceptance rules:
 
@@ -37,6 +48,7 @@ Global acceptance rules:
 - No invented product, bonus, result, testimonial, count, date or URL.
 - Writing activities have adequate physical space in the digital page.
 - Headers, footers and page numbers follow one consistent system.
+- Expression-review tables use only the already approved short expression per row; no adjacent lines, translations beyond the approved natural meaning, or lyric-like combination of expressions are added.
 
 ## Opening
 
@@ -207,14 +219,14 @@ Global acceptance rules:
 - **Page objective:** Consolidate Song 1 and make the first milestone visible.
 - **Status:** MODIFIED.
 - **Source page or content:** Current page 8 plus the three Song 1 practice outcomes.
-- **Exact content blocks:** Three-expression review by practice ID and meaning; recall-without-looking checks; one personal sentence; difficult-sound reflection; confidence 1–5; song completion checkbox.
+- **Exact content blocks:** Three-row expression-review table for Song 1's three approved short expressions — each row holds the approved short expression, its natural meaning, its song/practice reference and a recall-without-looking checkbox, with no adjacent lines or combined lyric-like paragraph; one personal sentence; difficult-sound reflection; confidence 1–5; song completion checkbox.
 - **Approximate text density:** Medium, 120–170 words plus writing space.
 - **Visual components:** Compact review table, writing field, confidence scale and labeled progress bar.
 - **User interaction or writing activity:** Three recall checks, sentence, sound reflection and confidence selection.
 - **Progress indicator:** “1 de 3 canciones · 33%”.
 - **Link or QR requirement:** None.
 - **CTA role:** Continue to Song 2 after meaningful completion.
-- **Rights/copyright consideration:** Review uses practice IDs and meanings; no need to repeat all fragment text.
+- **Rights/copyright consideration:** Review table uses only the three already approved short expressions for Song 1, one per isolated row; no additional translation or reconstructed fragment text is added.
 - **Required placeholder or dependency:** Final meanings from approved practice copy.
 - **Acceptance criteria:** Writing spaces are usable; 33% appears as text and visual; no empty half-page.
 
@@ -289,14 +301,14 @@ Global acceptance rules:
 - **Page objective:** Consolidate Song 2 and connect it with prior learning.
 - **Status:** MODIFIED.
 - **Source page or content:** Current page 13 plus Song 2 outcomes.
-- **Exact content blocks:** Three-expression review; recall checks; personal sentence; difficult-sound reflection; one comparison with Song 1; confidence 1–5; completion checkbox.
+- **Exact content blocks:** Three-row expression-review table for Song 2's three approved short expressions — each row holds the approved short expression, its natural meaning, its song/practice reference and a recall-without-looking checkbox, with no adjacent lines or combined lyric-like paragraph; personal sentence; difficult-sound reflection; one comparison with Song 1; confidence 1–5; completion checkbox.
 - **Approximate text density:** Medium, 130–175 words plus writing space.
 - **Visual components:** Review table, writing field, confidence scale and progress bar.
 - **User interaction or writing activity:** Recall, sentence, comparison, reflection and confidence.
 - **Progress indicator:** “2 de 3 canciones · 66%”.
 - **Link or QR requirement:** None.
 - **CTA role:** Continue to Song 3.
-- **Rights/copyright consideration:** Use practice IDs/meanings rather than repeating all song text.
+- **Rights/copyright consideration:** Review table uses only the three already approved short expressions for Song 2, one per isolated row; no additional translation or reconstructed fragment text is added.
 - **Required placeholder or dependency:** Final practice meanings.
 - **Acceptance criteria:** 66% is explicit in text and visual; no underfilled page; comparison does not introduce new fragments.
 
@@ -371,14 +383,14 @@ Global acceptance rules:
 - **Page objective:** Complete Song 3 and the musical journey.
 - **Status:** MODIFIED.
 - **Source page or content:** Current page 18 plus Song 3 outcomes.
-- **Exact content blocks:** Three-expression review; recall checks; personal sentence; difficult-sound reflection; confidence 1–5; “qué cambió desde la canción 1”; completion checkbox.
+- **Exact content blocks:** Three-row expression-review table for Song 3's three approved short expressions — each row holds the approved short expression, its natural meaning, its song/practice reference and a recall-without-looking checkbox, with no adjacent lines or combined lyric-like paragraph; personal sentence; difficult-sound reflection; confidence 1–5; “qué cambió desde la canción 1”; completion checkbox.
 - **Approximate text density:** Medium, 130–175 words plus writing space.
 - **Visual components:** Review table, reflection area, confidence scale and complete progress bar.
 - **User interaction or writing activity:** Recall, sentence, sound reflection, change reflection and confidence.
 - **Progress indicator:** “3 de 3 canciones · 100%”.
 - **Link or QR requirement:** None.
 - **CTA role:** Celebrate completion and enter consolidated review.
-- **Rights/copyright consideration:** No additional fragment reproduction.
+- **Rights/copyright consideration:** Review table uses only the three already approved short expressions for Song 3, one per isolated row; no additional fragment reproduction.
 - **Required placeholder or dependency:** Final practice meanings.
 - **Acceptance criteria:** 100% is explicit in text and visual; current all-song prompt is placed here only if it supports consolidation.
 
@@ -389,14 +401,14 @@ Global acceptance rules:
 - **Page objective:** Retrieve the first five practices without relying on page order.
 - **Status:** NEW.
 - **Source page or content:** Meanings and song associations from practices 1–5.
-- **Exact content blocks:** Five-row table with practice ID, song, natural meaning and “la recuerdo sin mirar” checkbox; one instruction to verify after attempting recall.
+- **Exact content blocks:** Five-row expression-review table covering the first five practices — each row holds the approved short expression, its natural meaning, its song/practice reference and a “la recuerdo sin mirar” recall-without-looking checkbox, with no adjacent lines or combined lyric-like paragraph; one instruction to verify after attempting recall.
 - **Approximate text density:** Medium, 100–140 words plus table.
 - **Visual components:** High-contrast review table and five checkboxes.
 - **User interaction or writing activity:** Five recall checks.
 - **Progress indicator:** “Repaso final · 1 de 2”.
 - **Link or QR requirement:** None.
 - **CTA role:** Strengthen retention before conversion.
-- **Rights/copyright consideration:** Use practice IDs and concise meanings; do not reproduce the five fragments together.
+- **Rights/copyright consideration:** Each of the five already approved short expressions occupies its own isolated table row; do not reproduce the five fragments together as a combined passage.
 - **Required placeholder or dependency:** Approved concise meanings.
 - **Acceptance criteria:** Song and meaning columns remain readable; learner attempts recall before checking prior pages.
 
@@ -405,14 +417,14 @@ Global acceptance rules:
 - **Page objective:** Complete consolidated recall and select the three most useful expressions.
 - **Status:** NEW.
 - **Source page or content:** Practices 6–9 and existing self-reflection prompts.
-- **Exact content blocks:** Four-row practice/song/meaning/recall table; three selection fields; one reason field; one plan for using an expression this week.
+- **Exact content blocks:** Four-row expression-review table covering the remaining four practices — each row holds the approved short expression, its natural meaning, its song/practice reference and a recall-without-looking checkbox, with no adjacent lines or combined lyric-like paragraph; three selection fields for the learner's three most useful expressions across all nine; one reason field; one plan for using an expression this week.
 - **Approximate text density:** Medium, 100–150 words plus writing space.
 - **Visual components:** Review table, numbered choice cards and writing lines.
 - **User interaction or writing activity:** Four recall checks, choose three expressions and write one use plan.
 - **Progress indicator:** “Repaso final · 2 de 2”.
 - **Link or QR requirement:** None.
 - **CTA role:** Convert recognition into personally relevant use.
-- **Rights/copyright consideration:** No aggregate lyric block; selected items are referenced by practice ID.
+- **Rights/copyright consideration:** No aggregate lyric block; each remaining expression stays in its own isolated row and selected items are referenced by song/practice reference, not reproduced.
 - **Required placeholder or dependency:** Approved concise meanings.
 - **Acceptance criteria:** Exactly three choices can be recorded; enough space exists for one personal plan.
 
@@ -498,48 +510,92 @@ Global acceptance rules:
 - **Required placeholder or dependency:** Verified continuation destination, consent/legal-link review if data is collected and tested QR.
 - **Acceptance criteria:** Exactly one primary CTA; visible URL matches annotation and QR; unresolved destination blocks final generation.
 
-### Final page 29 — Misión, futuro y encuesta corta
+### Final page 29 — ¿Por qué existe Sing Pronunce Repeat?
 
-- **Page objective:** Explain the brand mission, describe possible future directions without commitment and invite brief feedback after value delivery.
-- **Status:** MERGED.
-- **Source page or content:** Current page 20 survey/first-group concepts plus new short mission and future-product copy.
-- **Exact content blocks:** Two-sentence brand mission; “Lo que podríamos explorar” with non-committal language; postponed formats clearly labeled as future possibilities; short survey invitation; one secondary survey link; optional channel link only if verified.
-- **Approximate text density:** Low–medium, 120–160 words.
-- **Visual components:** Mission card, subdued future card and secondary survey CTA with QR.
-- **User interaction or writing activity:** Optional survey; no fabricated waitlist or product enrollment.
+- **Page objective:** Explain the educational mission and situate `Escríbelo como suena` as a bridge toward real audio, not a replacement.
+- **Status:** NEW.
+- **Source page or content:** New brand-mission copy; replaces the mission portion of the removed merged final page 29. No current page maps directly.
+- **Exact content blocks:** Short learner problem; two-to-three sentence mission describing music, emotion, listening and repetition as a practical learning path; “Escucha. Lee. Repite. Usa lo aprendido.”; practical-bridge reminder that `Escríbelo como suena` supports, not replaces, official audio.
+- **Approximate text density:** Low, 90–130 words.
+- **Visual components:** Mission card with brand identity treatment; no interactive control.
+- **User interaction or writing activity:** None.
+- **Progress indicator:** “Nuestra misión”.
+- **Link or QR requirement:** None required; an optional discreet `{{YOUTUBE_CHANNEL_URL}}` footer link or non-competing text link may appear only if verified.
+- **CTA role:** Brand trust only; no commercial CTA.
+- **Rights/copyright consideration:** No personal creator name; no artist affiliation implication; official `Sing Pronunce Repeat` spelling used.
+- **Required placeholder or dependency:** Approved mission copy; optional verified `{{YOUTUBE_CHANNEL_URL}}`.
+- **Acceptance criteria:** No commercial CTA appears; mission reads as educational, not promotional; the method is explicitly framed as a bridge to official audio, not a replacement.
+
+### Final page 30 — Próximo paso
+
+- **Page objective:** Present a possible future learning product without claiming it exists.
+- **Status:** NEW.
+- **Source page or content:** Future-product positioning previously folded into the removed merged final page 29. No current page maps directly.
+- **Exact content blocks:** Cautious, non-committal language only (“Estamos preparando…”, “Podrá incluir…”, “Estamos explorando…”); possible learner-facing content limited to more songs, guided pronunciation, useful expressions, exercises, short challenges and complementary learning material.
+- **Approximate text density:** Low, 70–110 words.
+- **Visual components:** Subdued “future” card; optional waitlist CTA card, QR and visible URL only when a real destination is approved and verified.
+- **User interaction or writing activity:** None required; optional waitlist action only.
+- **Progress indicator:** “Próximo paso · Opcional”.
+- **Link or QR requirement:** `{{ADVANCED_EBOOK_WAITLIST_URL}}` and matching QR only if a real, approved and verified destination exists; otherwise the button, QR and any interactive-looking control are omitted entirely rather than shown disabled or invented.
+- **CTA role:** Optional future-product waitlist only when real and verified.
+- **Rights/copyright consideration:** No mention of EPUB, Kindle, printable versions, internal implementation formats, payment or subscription unless later explicitly approved; no feature described that does not exist.
+- **Required placeholder or dependency:** `{{ADVANCED_EBOOK_WAITLIST_URL}}` verification, or explicit omission of the action if unresolved.
+- **Acceptance criteria:** Language never claims the product currently exists; no invented destination, bonus or schedule; the placeholder does not block the architecture when the action is omitted, but blocks final PDF generation if rendered as an actionable control while unresolved.
+
+### Final page 31 — Ayúdanos a mejorar
+
+- **Page objective:** Invite optional feedback only after all educational value and the primary continuation action have been delivered.
+- **Status:** NEW.
+- **Source page or content:** Current page 19/20 survey concept, isolated into its own dedicated page. Replaces the survey portion of the removed merged final page 29.
+- **Exact content blocks:** Short thank-you; two-minute survey-time expectation only if accurate; questions may cover useful section, difficulty, future songs and advanced-material interest; privacy-context note when applicable; one secondary survey CTA with matching visible URL and QR.
+- **Approximate text density:** Low, 70–100 words.
+- **Visual components:** Single survey CTA card with QR; no competing button, channel link or waitlist control.
+- **User interaction or writing activity:** Optional survey.
 - **Progress indicator:** “Tu opinión · Opcional”.
-- **Link or QR requirement:** `{{SURVEY_URL}}` plus QR; `{{YOUTUBE_CHANNEL_URL}}` only if approved and verified; `{{ADVANCED_EBOOK_WAITLIST_URL}}` only if a real future waitlist is approved.
-- **CTA role:** Secondary feedback, after the primary continuation action.
-- **Rights/copyright consideration:** Brand mission must remain educational and must not imply artist endorsement.
-- **Required placeholder or dependency:** Survey verification; optional destinations may be omitted rather than invented.
-- **Acceptance criteria:** Survey follows value delivery; future language uses “podríamos”, “estamos explorando” or equivalent; no paid/subscription promise; no competing primary CTA.
+- **Link or QR requirement:** `{{SURVEY_URL}}` plus matching QR.
+- **CTA role:** One optional secondary survey CTA.
+- **Rights/copyright consideration:** No song content required; no additional fragment reproduction.
+- **Required placeholder or dependency:** Survey destination, question set and privacy-context verification.
+- **Acceptance criteria:** Exactly one CTA on the page; no waitlist, channel link or second button competes; visible URL matches the QR payload; survey follows all prior value delivery.
 
-### Final page 30 — Nota educativa y de derechos
+### Final page 32 — Nota educativa y de derechos
 
 - **Page objective:** Close with the established educational and copyright boundaries.
 - **Status:** PRESERVED.
-- **Source page or content:** Current page 21.
+- **Source page or content:** Current page 21. Moved from final page 30 to final page 32 to make room for the separated mission, future-product and survey pages.
 - **Exact content blocks:** Short-fragment purpose; rights ownership; official-source audio rule; original educational contribution; no affiliation; no legal-guarantee statement; canonical brand/footer.
-- **Approximate text density:** Medium, 220–280 words after careful tightening.
+- **Approximate text density:** Medium, approximately 190–240 words when copywriting is later performed, after careful tightening.
 - **Visual components:** Four short legal sections with stronger body contrast and consistent footer.
 - **User interaction or writing activity:** None.
 - **Progress indicator:** “Fin”.
 - **Link or QR requirement:** Optional canonical-domain text using `{{CANONICAL_DOMAIN}}`; no QR required.
 - **CTA role:** None.
-- **Rights/copyright consideration:** This page is the primary safeguard and may not be weakened during copy reduction.
+- **Rights/copyright consideration:** This page is the primary safeguard and may not be weakened during copy reduction. It must preserve short-fragment scope, no full lyrics, no commercial audio distribution, rights ownership, the official-source rule, original method/exercises, no affiliation and no absolute legal-protection claim.
 - **Required placeholder or dependency:** Final legal/editorial check of shortened language.
-- **Acceptance criteria:** No full lyrics or translations; no ownership/affiliation claim; readable body size; official brand correct.
+- **Acceptance criteria:** No full lyrics or translations; no ownership/affiliation claim; readable body size at A5 phone-viewing scale; official brand correct.
+
+## CTA hierarchy
+
+```text
+Page 28: Sole primary continuation CTA.
+Page 29: No CTA; mission and trust.
+Page 30: Optional future-product waitlist only when real and verified.
+Page 31: One optional secondary survey CTA.
+Page 32: No CTA.
+```
+
+The YouTube channel may appear only as a discreet verified footer link, or as a non-competing text link on the brand-mission page (final page 29). It must never become another primary or secondary button.
 
 ## Source disposition summary
 
 | Final status | Pages | Count |
 | --- | --- | ---: |
-| NEW | 3, 6, 22, 23 | 4 |
-| PRESERVED | 8–10, 13–15, 18–20, 30 | 10 |
+| NEW | 3, 6, 22, 23, 29, 30, 31 | 7 |
+| PRESERVED | 8–10, 13–15, 18–20, 32 | 10 |
 | MODIFIED | 1, 4–5, 7, 11–12, 16–17, 21, 24–28 | 14 |
-| MERGED | 2, 29 | 2 |
+| MERGED | 2 | 1 |
 
-No current song or practice is removed. The current review pages 8, 13 and 18 are replaced by richer completion pages; current page 19 is split across three challenge pages; current page 20 is separated into self-check, primary continuation and mission/survey pages. These changes explain the nine-page net growth.
+No current song or practice is removed. The current review pages 8, 13 and 18 are replaced by richer completion pages; current page 19 is split across three challenge pages; current page 20 is separated into self-check and primary continuation pages, and its remaining survey concept becomes final page 31. These changes, plus the three-way split of the brand mission, future-product positioning and survey into final pages 29–31, explain the eleven-page net growth.
 
 ## Placeholder inventory
 
@@ -550,8 +606,8 @@ No current song or practice is removed. The current review pages 8, 13 and 18 ar
 | `{{SONG_3_OFFICIAL_URL}}` | Official source for Song 3 | `https://www.youtube.com/watch?v=fV4DiAyExN0` | Confirm availability, official/authorized source and unchanged destination immediately before export | YES | YES |
 | `{{CONTINUE_PRACTICING_URL}}` | Sole primary continuation action | Unresolved | Approve destination, privacy implications, visible URL, annotation and QR | YES | YES |
 | `{{SURVEY_URL}}` | Optional short feedback survey | `https://tally.so/r/eqzgbe` | Confirm form ownership, questions, privacy notice and continued availability | YES | YES |
-| `{{ADVANCED_EBOOK_WAITLIST_URL}}` | Optional future-product interest | Unresolved; advanced/paid ebook is postponed | Include only if a real approved waitlist exists; otherwise omit the link and QR | Only if used | NO if omitted; YES if shown as actionable |
-| `{{YOUTUBE_CHANNEL_URL}}` | Optional brand/channel continuation | Unresolved in this audit | Verify official channel and approve placement; omit if unavailable | Optional | NO if omitted |
+| `{{ADVANCED_EBOOK_WAITLIST_URL}}` | Optional future-product interest on final page 30 | Unresolved; advanced/paid ebook is postponed | Include only if a real approved waitlist exists; otherwise omit the link and QR | Only if used | NO if omitted; YES if shown as actionable |
+| `{{YOUTUBE_CHANNEL_URL}}` | Optional discreet footer link or non-competing text link on the brand-mission page (final page 29) | Unresolved in this audit | Verify official channel and approve placement; omit if unavailable | Optional | NO if omitted |
 | `{{CANONICAL_DOMAIN}}` | Canonical project identity and footer reference | `https://singpronuncerepeat.com` | Confirm canonical Production origin before export | NO | YES |
 
 Rules for placeholders:
@@ -561,9 +617,12 @@ Rules for placeholders:
 - QR payload and visible/clickable URL must be identical.
 - Every QR must be scan-tested at rendered A5 size and after common phone zoom/compression.
 - Optional unresolved destinations are omitted rather than converted into disabled, misleading or interactive-looking controls.
+- Song URLs, the continuation URL, the survey URL and the canonical domain block final export when unresolved. The advanced waitlist URL blocks export only when shown as an actionable control. The YouTube channel link is optional and should be omitted when unresolved; it must never become another primary or secondary button.
 
 ## Approval and implementation gate
 
 Page-by-page architecture approved by project owner: **PENDING**.
+
+Owner review of the prior 30-page architecture returned CHANGES REQUESTED; this revision implements those changes at a 32-page target. Owner approval of this revised architecture has not yet been recorded.
 
 Ebook source editing, new-page copy, design implementation and PDF generation remain blocked until that approval is recorded. After approval, work should proceed in separate, scoped phases for copy, link verification/QR creation, design implementation, export and independent PDF QA.

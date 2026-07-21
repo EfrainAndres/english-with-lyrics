@@ -74,8 +74,8 @@ Next order:
 10. Owner rendered-copy review — approved.
 11. Professional Colombian legal review — complete; no changes requested.
 12. Provider contractual/DPA review — complete; no changes requested.
-13. Mandatory ebook audit — current; page-by-page audit and 30-page architecture complete.
-14. Page architecture approval — next.
+13. Mandatory ebook audit — current; page-by-page audit complete; 30-page architecture received owner feedback of CHANGES REQUESTED and was revised to a 32-page architecture separating the mission, future-product positioning and survey into distinct pages.
+14. Revised 32-page architecture approval — next.
 15. Ebook copy and design implementation — pending.
 16. Production consent linking and legal publication — pending.
 17. Production Email 1 configuration — pending.
