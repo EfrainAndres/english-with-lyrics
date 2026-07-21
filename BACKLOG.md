@@ -107,6 +107,12 @@ Priority: High.
 - [x] Complete the Production pending-state regression with no personal fields or legal draft rendered.
 - [x] Close the internal structured legal review. Status: PASS.
 - [x] Obtain owner re-review and approval of the rendered legal pages.
+- [x] Prepare the Phase 0 professional legal-review brief.
+- [x] Prepare the numbered counsel question list with pending decision fields.
+- [x] Complete the professional legal-review readiness validation.
+- [ ] Engage a Colombian legal professional and agree the review scope.
+- [ ] Receive and classify counsel feedback.
+- [ ] Implement required counsel corrections in a separate branch.
 - [ ] Complete professional legal review.
 - [ ] Complete provider contractual/DPA review.
 - [ ] Complete final Production consent linking.
@@ -204,7 +210,7 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy drafting status: legal-owner configuration, the internal correction cycle, internal structured review, protected Preview final regression, responsive/accessibility QA, robots and metadata privacy validation, Production pending-state regression, and owner rendered-copy approval are complete. Owner approval is not professional legal approval. Professional Colombian legal review, provider contractual/DPA review, final Production consent linking, Production legal publication and controlled rollout remain pending. Production email, automation and lead capture remain inactive. See:
+Privacy drafting status: legal-owner configuration, internal/owner review and the professional legal-review handoff package are complete. The package includes a review brief, 25 counsel questions and readiness validation, but no professional review or legal approval has occurred. Engaging Colombian counsel, provider contractual/DPA review, counsel feedback, any required corrections, final Production consent linking, Production legal publication and controlled rollout remain pending. Production email, automation and lead capture remain inactive. See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`
@@ -218,6 +224,9 @@ Privacy drafting status: legal-owner configuration, the internal correction cycl
 - `docs/legal/PHASE_0_DATA_SUBJECT_RIGHTS_WORKFLOW.md`
 - `docs/legal/PHASE_0_PROVIDER_INVENTORY.md`
 - `docs/validation/PHASE_0_LEGAL_OWNER_CONFIGURATION.md`
+- `docs/legal/PHASE_0_PROFESSIONAL_LEGAL_REVIEW_BRIEF.md`
+- `docs/legal/PHASE_0_LEGAL_REVIEW_QUESTIONS.md`
+- `docs/validation/PHASE_0_PROFESSIONAL_LEGAL_REVIEW_READINESS.md`
 
 ### Ebook Content Plan
 
