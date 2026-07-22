@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Addressed the initial project-owner copy review of the improved 32-page ebook draft: added a learner-facing difficult-sound legend on the method page, clarified the accent rule for multisyllables and monosyllables, replaced the day-three recall with a non-reconstruction activity, added confidence-scale legends to the second and third song-completion pages, and expanded the rights note to explicitly exclude complete translations — with no change to any approved fragment and no PDF or Production change.
 - Added a single `Escríbelo como suena` pronunciation standard that normalizes the nine approved practice bridges (notation, stress, soft-air `h`, voiced/voiceless `th`, final consonants and temporary cluster support) without changing any approved English fragment.
 - Added an improved 32-page ebook content source drafting all seven new pages and updating existing pages, preserving the nine approved fragments, correcting the known source typo in the new source only, and using internal placeholders instead of raw destinations, while leaving the current 21-page source and PDF unchanged.
 - Added a copy and pronunciation readiness record documenting 32-page coverage, nine-practice preservation, pronunciation normalization, copyright safeguards and the remaining owner-approval, qualified-pronunciation-review, link-verification, design and PDF-generation gates.

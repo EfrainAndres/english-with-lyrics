@@ -155,15 +155,24 @@ Es la forma que usamos en Sing Pronunce Repeat para escribir la pronunciación d
 **Cómo leer la guía de pronunciación**
 
 - Todo va en minúsculas.
-- El acento escrito marca la sílaba más fuerte: `clóu·zer`.
+- En palabras de varias sílabas, el acento escrito marca la sílaba más fuerte: `clóu·zer`.
+- En palabras de una sola sílaba, el acento es una ayuda opcional para una vocal o un deslizamiento: `óu`, `niú`. Es una pista de lectura, no una regla de ortografía del español.
 - Un `·` con espacios separa palabras: `uán · fast`.
 - Un `·` sin espacios separa sílabas dentro de una palabra: `pér·fect`.
 - Vocales que deslizan como `ai`, `óu` o `iú` son un solo movimiento.
 - La `(e)` entre paréntesis es un **apoyo temporal** para grupos como `st`: úsalo al principio y redúcelo con la práctica.
 
+**Sonidos que encontrarás**
+
+- `j` para la `h` inglesa: aire suave, nunca la `j` fuerte del español.
+- `d` o `z` como apoyos temporales para `th`: la lengua se acerca o sale ligeramente entre los dientes; la nota de cada práctica indicará si el sonido lleva voz.
+- La `r` inglesa es suave; no se enrolla como una `rr`.
+- Las consonantes finales importan: no las elimines cuando cambian el significado.
+
 Los sonidos de apoyo son temporales y conviene reducirlos con el tiempo. Escucha siempre el audio oficial y ajusta.
 
-<!-- No IPA. No exact-pronunciation claim. ~150–190 words. -->
+<!-- No IPA. No exact-pronunciation claim. Compact for A5. -->
+<!-- Difficult-sound legend and accent rule aligned with PHASE_0_EBOOK_PRONUNCIATION_STANDARD.md. -->
 
 ---
 
@@ -496,6 +505,7 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 **Comparado con la Canción 1, esta me pareció:** más fácil · igual · más difícil
 
 **¿Cómo me siento con la pronunciación?** 1 · 2 · 3 · 4 · 5
+*(1 = muy inseguro · 5 = muy seguro)*
 
 - [ ] Completé la Canción 2
 
@@ -645,6 +655,7 @@ ______________________________
 **¿Qué cambió desde la Canción 1?** ______________________________
 
 **¿Cómo me siento con la pronunciación?** 1 · 2 · 3 · 4 · 5
+*(1 = muy inseguro · 5 = muy seguro)*
 
 - [ ] Completé la Canción 3
 
@@ -776,14 +787,16 @@ Primero intenta recordar cada expresión **sin mirar** las páginas anteriores. 
 
 *Tiempo estimado: 10 a 15 minutos.*
 
-1. Sin mirar la guía, recuerda un fragmento por canción.
-2. Usa al menos una expresión o palabra en una frase propia — escríbela o dila en voz alta.
-3. Elige un hábito para seguir practicando.
+1. Sin mirar la guía, elige una práctica por canción y anota su número o su significado natural.
+2. Revisa las páginas anteriores solo después de intentarlo.
+3. Usa una de las expresiones aprobadas en una frase propia.
+4. Elige un hábito para seguir practicando.
 
-**Mis tres recuerdos (uno por canción):**
-- Canción 1: ________________
-- Canción 2: ________________
-- Canción 3: ________________
+**Mis tres prácticas recordadas:**
+
+- Canción 1 — número de práctica o significado: ________________
+- Canción 2 — número de práctica o significado: ________________
+- Canción 3 — número de práctica o significado: ________________
 
 **Mi frase propia:** ______________________________
 
@@ -959,18 +972,23 @@ Si quieres, responde una encuesta corta. Puede preguntarte:
 
 Esta guía fue creada con fines educativos por Sing Pronunce Repeat / English with Lyrics.
 
-**Sobre los fragmentos.** Utiliza únicamente fragmentos educativos cortos, elegidos para enseñar pronunciación, vocabulario y comprensión. Los fragmentos son el punto de partida del análisis, no el contenido principal. No reproduce letras completas, versos enteros ni coros, y no reemplaza servicios oficiales de letra, audio o video.
+**Sobre los fragmentos.** Utiliza únicamente fragmentos educativos cortos, elegidos para enseñar pronunciación, vocabulario y comprensión. Los fragmentos son el punto de partida del análisis, no el contenido principal. No reproduce letras completas, versos enteros, coros ni traducciones completas. Esta guía no es un reemplazo de servicios de letra, audio o video.
 
-**Sobre los derechos.** Los títulos de las canciones y los nombres de los artistas pertenecen a sus respectivos titulares de derechos. La pronunciación original, las explicaciones, los ejercicios, los ejemplos de vocabulario y el método `Escríbelo como suena` son contenido educativo original de Sing Pronunce Repeat / English with Lyrics.
+**Sobre los derechos.** Los títulos de las canciones, los nombres de los artistas y los derechos de cada canción pertenecen a sus respectivos titulares. Los títulos y los nombres de los artistas se mencionan solo para identificar la fuente educativa, y no para sugerir ninguna relación con ellos.
 
-**Sobre el audio.** Para escuchar las canciones, usa plataformas oficiales o autorizadas. Esta guía no distribuye ni embebe audio comercial.
+**Sobre el audio.** Para escuchar las canciones, usa siempre plataformas oficiales o autorizadas: ese audio es la referencia de escucha. Esta guía no distribuye ni embebe audio comercial.
 
-**Intención educativa.** Esta guía no tiene afiliación con los artistas ni implica su respaldo. Su intención educativa no otorga propiedad sobre las canciones ni garantiza protección legal absoluta. Su propósito es enseñar pronunciación y comprensión del inglés.
+**Contenido original.** Las guías de pronunciación, las explicaciones, los ejemplos de vocabulario, los ejercicios y el método `Escríbelo como suena` son contenido educativo original de Sing Pronunce Repeat / English with Lyrics.
+
+**Intención educativa.** Esta guía no tiene afiliación con los artistas ni implica su respaldo o aprobación. Su intención educativa no otorga propiedad sobre las canciones ni garantiza protección legal absoluta. Su propósito es enseñar la pronunciación y la comprensión del inglés.
 
 `{{CANONICAL_DOMAIN}}`
 
 **Fin**
 
-<!-- ~190–240 words when copywritten. Safeguards preserved: short fragments only,
-     no full lyrics/translations, rights ownership, official-source rule, original
-     method, no affiliation, no absolute legal guarantee. Canonical domain via placeholder. -->
+<!-- ~190–240 visible words. Safeguards preserved and explicit: short fragments only;
+     no full lyrics, verses, choruses or complete translations; not a lyrics/audio/video
+     replacement; rights ownership; titles/artist names only identify the source;
+     official-source listening rule; no commercial audio distribution; original method
+     and materials; no affiliation or endorsement; no absolute legal guarantee.
+     Canonical domain via placeholder. -->

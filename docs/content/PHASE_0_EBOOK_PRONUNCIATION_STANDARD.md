@@ -38,7 +38,9 @@ Scope:
 One consistent system across all nine practices:
 
 - Write every bridge in **lowercase**.
-- Use a **written accent mark** to indicate the strongest syllable of each content word (for example `clóu·zer`, `bi·fór`).
+- In **multisyllabic** bridge words, a written accent identifies the strongest syllable (for example `clóu·zer`, `bi·fór`).
+- In **monosyllables**, an accent is not automatically required. It may be used when it helps prevent a misleading Spanish vowel reading or clarifies a glide (for example `óu`, `niú`).
+- An accent mark is a **learner cue** inside this custom system; it does not follow normal Spanish spelling rules.
 - Separate **words** with `·` surrounded by spaces: `word · word`.
 - Separate **syllables inside a single word** with `·` and no surrounding spaces: `pér·fect`.
 - Treat vowel glides such as `ai`, `éi`, `óu` and `iú` as **one continuous movement**, never as two separate Spanish vowels.
@@ -103,7 +105,7 @@ Every practice page should reinforce, in plain Spanish:
 
 - [ ] All nine bridges use lowercase.
 - [ ] Word separators use `·` with spaces; syllable separators use `·` without spaces.
-- [ ] Strong syllables carry a written accent.
+- [ ] Multisyllabic stress marks and selected monosyllabic vowel/glide cues follow the documented accent rule.
 - [ ] Vowel glides are written as one continuous movement.
 - [ ] `/w/` onsets use a soft `u` glide, not `w` or hard `v`.
 - [ ] Soft-air `h` guidance is consistent and never guttural.

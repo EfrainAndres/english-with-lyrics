@@ -2,11 +2,17 @@
 
 ## 1. Decision
 
-The improved 32-page learner copy and the `Escríbelo como suena` pronunciation standard are a **complete draft ready for owner review**. This is a documentation-only phase. The current 21-page production source and PDF remain unchanged and reproducible.
+The improved 32-page learner copy and the `Escríbelo como suena` pronunciation standard passed the project owner's structural review and received copy corrections, which are now applied. This is a documentation-only phase. The current 21-page production source and PDF remain unchanged and reproducible.
 
-Implementation is **NO-GO** until owner copy approval and a qualified pronunciation review are recorded. Design implementation, PDF generation and Production replacement remain blocked.
+Implementation is **NO-GO** until owner final copy approval and a qualified pronunciation review are recorded. Design implementation, PDF generation and Production replacement remain blocked.
 
 ```text
+32-page structure: PASS
+Seven-new-page coverage: PASS
+Nine-fragment preservation: PASS
+CTA hierarchy: PASS
+Initial owner copy review: CHANGES REQUESTED
+Owner-review corrections: COMPLETE after this task
 Improved content source created: YES
 Final page sections present: 32 of 32
 New pages drafted: 7 of 7
@@ -16,12 +22,20 @@ Pronunciation bridges normalized: 9 of 9
 Source typo corrected in improved source: YES
 Raw destination verification: NOT PERFORMED
 QR generation: NOT PERFORMED
-Owner copy approval: PENDING
+Owner final copy approval: PENDING
 Qualified pronunciation review: PENDING
 Design implementation: NO-GO
 PDF generation: NO-GO
 Production replacement: NO-GO
 ```
+
+## 1a. Owner-review findings — corrected in this task
+
+1. **Learner-facing difficult-sound legend.** Page 4 now includes a compact "Sonidos que encontrarás" section covering soft-air `h`, the temporary `d`/`z` bridges for `th` (with a per-practice voiced/voiceless note), the soft English `r`, and the importance of meaning-changing final consonants — with no IPA.
+2. **Accent-rule clarification.** The pronunciation standard now states that written accents mark the strongest syllable in multisyllabic bridge words, are optional cues on monosyllables for vowels/glides, and are learner cues within this custom system rather than Spanish spelling rules. The page 4 legend was aligned to match.
+3. **Non-reconstruction recall activity.** Page 26 now asks the learner to record a practice number or natural meaning per song instead of remembering and writing a fragment, avoiding any request to reconstruct or transcribe song text. The personal-sentence and habit activities remain; the survey remains absent.
+4. **Completion-scale legends.** Pages 16 and 21 now carry the `(1 = muy inseguro · 5 = muy seguro)` legend, matching page 11, so all three song-completion pages are self-explanatory.
+5. **Expanded rights note.** Page 32 now runs ~190–240 visible words and explicitly excludes complete translations, states that titles and artist names only identify the educational source, keeps the official-source listening rule, relabels the original contributions as "Las guías de pronunciación …", and preserves every prior safeguard.
 
 ## 2. Scope completed
 
@@ -168,7 +182,9 @@ All 32 sections are present, sequential and unique.
 32-page architecture: APPROVED
 Pronunciation standard: COMPLETE DRAFT
 Improved 32-page learner copy: COMPLETE DRAFT
-Owner copy review: NEXT
+Initial owner copy review: CHANGES REQUESTED
+Requested copy corrections: COMPLETE
+Owner final copy approval: PENDING
 Qualified pronunciation review: PENDING
 Link verification and QR: PENDING
 Design implementation: BLOCKED
