@@ -6,6 +6,10 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Addressed the initial project-owner copy review of the improved 32-page ebook draft: added a learner-facing difficult-sound legend on the method page, clarified the accent rule for multisyllables and monosyllables, replaced the day-three recall with a non-reconstruction activity, added confidence-scale legends to the second and third song-completion pages, and expanded the rights note to explicitly exclude complete translations — with no change to any approved fragment and no PDF or Production change.
+- Added a single `Escríbelo como suena` pronunciation standard that normalizes the nine approved practice bridges (notation, stress, soft-air `h`, voiced/voiceless `th`, final consonants and temporary cluster support) without changing any approved English fragment.
+- Added an improved 32-page ebook content source drafting all seven new pages and updating existing pages, preserving the nine approved fragments, correcting the known source typo in the new source only, and using internal placeholders instead of raw destinations, while leaving the current 21-page source and PDF unchanged.
+- Added a copy and pronunciation readiness record documenting 32-page coverage, nine-practice preservation, pronunciation normalization, copyright safeguards and the remaining owner-approval, qualified-pronunciation-review, link-verification, design and PDF-generation gates.
 - Approved the revised 32-page ebook architecture after project-owner review of the initial 30-page proposal returned CHANGES REQUESTED, implementing the separation of brand mission, future-product positioning and survey into three distinct pages, strengthening the expression-review contracts, and correcting the 30-page QA reference to 32 pages, while leaving the PDF, its sources and all Production configuration unchanged.
 - Refined the proposed ebook improvement architecture from 30 to 32 pages after project-owner review, separating the brand mission, future-product positioning and survey into three distinct pages and strengthening the expression-review contracts on the completion and consolidated-review pages, while leaving the PDF, its sources and all Production configuration unchanged.
 - Added a complete audit of the current 21-page ebook and a proposed 30-page improvement architecture, while leaving the PDF, its sources and all Production configuration unchanged.
@@ -46,6 +50,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Recorded final project-owner approval of the improved 32-page ebook copy after all requested corrections passed review, while keeping qualified pronunciation review, design, PDF generation and Production replacement blocked.
 - Recorded completion of the professional Colombian legal and provider contractual/DPA reviews with no legal-content or provider-related changes requested, while keeping Production legal publication, consent linking, email and lead capture pending or inactive.
 - Completed final protected Preview legal-page QA with responsive, accessibility, robots and metadata privacy checks, and recorded owner rendered-copy approval while keeping Production legal publication and email activation pending.
 - Corrected the Phase 0 legal drafts with separate consultation and claim timelines, expanded data-subject rights and claim handling, request-responsibility designation, an internal policy link, and accessible telephone formatting without adding personal values.
