@@ -4,7 +4,7 @@
 
 The improved 32-page learner copy and the `Escríbelo como suena` pronunciation standard passed the project owner's structural review and received copy corrections, which are now applied. This is a documentation-only phase. The current 21-page production source and PDF remain unchanged and reproducible.
 
-Implementation is **NO-GO** until owner final copy approval and a qualified pronunciation review are recorded. Design implementation, PDF generation and Production replacement remain blocked.
+The owner copy gate is **PASS**. Design implementation, PDF generation and Production replacement remain blocked until a qualified pronunciation review is recorded. Merging this documentation does not authorize design implementation or PDF generation.
 
 ```text
 32-page structure: PASS
@@ -12,7 +12,7 @@ Seven-new-page coverage: PASS
 Nine-fragment preservation: PASS
 CTA hierarchy: PASS
 Initial owner copy review: CHANGES REQUESTED
-Owner-review corrections: COMPLETE after this task
+Requested owner-review corrections: COMPLETE
 Improved content source created: YES
 Final page sections present: 32 of 32
 New pages drafted: 7 of 7
@@ -22,11 +22,14 @@ Pronunciation bridges normalized: 9 of 9
 Source typo corrected in improved source: YES
 Raw destination verification: NOT PERFORMED
 QR generation: NOT PERFORMED
-Owner final copy approval: PENDING
+Owner final copy approval: APPROVED
+Owner copy gate: PASS
 Qualified pronunciation review: PENDING
-Design implementation: NO-GO
-PDF generation: NO-GO
-Production replacement: NO-GO
+Pronunciation gate: BLOCKED
+Link verification and QR: PENDING
+Design implementation: BLOCKED
+PDF generation: BLOCKED
+Production replacement: BLOCKED
 ```
 
 ## 1a. Owner-review findings — corrected in this task
@@ -164,10 +167,10 @@ All 32 sections are present, sequential and unique.
 
 ## 10. Owner-review checklist
 
-- [ ] Owner approves the improved 32-page learner copy.
-- [ ] Owner approves the seven new pages.
-- [ ] Owner approves the tone, promises and CTA hierarchy.
-- [ ] Owner confirms the rights note on page 32.
+- [x] Owner approves the improved 32-page learner copy.
+- [x] Owner approves the seven new pages.
+- [x] Owner approves the tone, promises and CTA hierarchy.
+- [x] Owner confirms the rights note on page 32.
 
 ## 11. Qualified-pronunciation-review checklist
 
@@ -181,11 +184,13 @@ All 32 sections are present, sequential and unique.
 ```text
 32-page architecture: APPROVED
 Pronunciation standard: COMPLETE DRAFT
-Improved 32-page learner copy: COMPLETE DRAFT
+Improved 32-page learner copy: APPROVED
 Initial owner copy review: CHANGES REQUESTED
 Requested copy corrections: COMPLETE
-Owner final copy approval: PENDING
+Owner final copy approval: APPROVED
+Owner copy gate: PASS
 Qualified pronunciation review: PENDING
+Pronunciation gate: BLOCKED
 Link verification and QR: PENDING
 Design implementation: BLOCKED
 PDF generation: BLOCKED
@@ -195,4 +200,4 @@ Production Email 1: INACTIVE
 Production automation: INACTIVE
 ```
 
-This phase is not finally approved. Owner copy approval and a qualified pronunciation review are required before design implementation and PDF generation.
+The owner copy gate has passed. Qualified pronunciation review remains required before design implementation and PDF generation; merging this documentation does not authorize either activity.

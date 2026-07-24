@@ -50,6 +50,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Recorded final project-owner approval of the improved 32-page ebook copy after all requested corrections passed review, while keeping qualified pronunciation review, design, PDF generation and Production replacement blocked.
 - Recorded completion of the professional Colombian legal and provider contractual/DPA reviews with no legal-content or provider-related changes requested, while keeping Production legal publication, consent linking, email and lead capture pending or inactive.
 - Completed final protected Preview legal-page QA with responsive, accessibility, robots and metadata privacy checks, and recorded owner rendered-copy approval while keeping Production legal publication and email activation pending.
 - Corrected the Phase 0 legal drafts with separate consultation and claim timelines, expanded data-subject rights and claim handling, request-responsibility designation, an internal policy link, and accessible telephone formatting without adding personal values.

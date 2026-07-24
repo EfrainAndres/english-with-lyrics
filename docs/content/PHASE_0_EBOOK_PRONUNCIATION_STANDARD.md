@@ -125,7 +125,9 @@ Difficult-sound conventions defined: YES
 Nine-practice matrix normalized: 9 of 9
 Approved English fragments changed: NO
 Qualified pronunciation review: PENDING
-Owner copy approval: PENDING
+Owner copy approval: APPROVED
+Owner copy gate: PASS
+Pronunciation gate: BLOCKED
 ```
 
 This standard is a complete draft for review. It is not finally approved. A qualified pronunciation review remains a required gate before design implementation and PDF generation.

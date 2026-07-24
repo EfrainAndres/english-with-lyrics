@@ -5,11 +5,12 @@
 ```text
 Document role: improved 32-page content source
 Architecture: APPROVED
-Copy status: COMPLETE DRAFT
-Owner copy approval: PENDING
+Copy status: APPROVED
+Owner copy approval: APPROVED
+Owner copy gate: PASS
 Pronunciation standard: COMPLETE DRAFT
 Qualified pronunciation review: PENDING
-Design implementation: NOT STARTED
+Design implementation: BLOCKED
 PDF generation: BLOCKED
 Production replacement: BLOCKED
 ```
