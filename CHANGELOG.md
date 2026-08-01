@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Corrected the qualified-pronunciation evidence record, documented the partial secondary-source limitation, removed a stale synchronization status, and restored the pre-review versus approved bridge audit trail without changing learner-facing content or the pronunciation gate decision.
 - Completed the privacy-safe external pronunciation review, applied five approved bridge corrections and two resolved practice caveats, synchronized the pronunciation standard and improved 32-page source, and passed the pronunciation gate; PDF and Production remain unchanged.
 - Added an independent Claude second-opinion pronunciation review covering all fourteen global conventions and all nine practices, recorded blind before reading the earlier AI pre-review and compared against it afterwards, without changing any pronunciation bridge, learner-facing note, ebook copy, PDF or Production configuration.
 - Clarified the ATY-01 voiced-consonant review question, defined PASS WITH CAVEAT disposition requirements, and distinguished qualified-review approval from publication authorization, without changing any pronunciation bridge or learner-facing content.

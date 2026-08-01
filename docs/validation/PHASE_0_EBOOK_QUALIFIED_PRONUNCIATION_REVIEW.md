@@ -58,7 +58,22 @@ No specific qualification is claimed to be legally required. The record should i
 ## 7. Evidence checklist
 
 - [x] Independent dictionary and system cross-check evidence is documented for every practice in the existing second-opinion records.
-- [x] A second reputable reference was used for disputed or high-risk sounds in the existing second-opinion records.
+- [ ] Two independent reputable dictionary sources were documented for every disputed or high-risk sound.
+
+Recorded limitation:
+
+- The independent review documented one accessible authoritative dictionary source for every practice.
+- Additional preferred dictionaries were inaccessible from the review environment.
+- The focused disputed items were subsequently adjudicated by the external pronunciation specialist.
+- No evidence source was invented.
+
+```text
+Secondary independent dictionary evidence: PARTIAL
+Two-source requirement fully documented: NO
+Disposition: ACCEPTED LIMITATION
+Gate impact: NONE — the final disputed items received qualified
+external adjudication and all mandatory gate criteria passed.
+```
 - [x] Neutral spoken pronunciation used as the bridge baseline.
 - [x] Connected phrase pronunciation assessed separately.
 - [x] Official song audio used only for singer-specific realization.
