@@ -76,7 +76,7 @@ Next order:
 12. Provider contractual/DPA review — complete; no changes requested.
 13. Mandatory ebook audit — complete; page-by-page audit complete; 30-page architecture received owner feedback of CHANGES REQUESTED and was revised to a 32-page architecture separating the mission, future-product positioning and survey into distinct pages; revised architecture approved.
 14. Copywriting and pronunciation-normalization phase — improved 32-page learner copy: APPROVED; owner copy gate: PASS; pronunciation standard: COMPLETE DRAFT.
-15. Qualified pronunciation review — NEXT; pronunciation gate: BLOCKED. Link verification and QR: PENDING. Design implementation, PDF generation and Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE.
+15. Qualified pronunciation review — packet: PREPARED; AI-assisted pre-review: COMPLETE; qualified reviewer assignment: PENDING; qualified reviewer decision: PENDING; pronunciation gate: BLOCKED. Link verification and QR: PENDING. Design implementation, PDF generation and Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE.
 16. Production consent linking and legal publication — pending.
 17. Production Email 1 configuration — pending.
 18. Remaining deliverability QA — pending as applicable.

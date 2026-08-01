@@ -266,6 +266,9 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [x] Draft the improved 32-page learner copy and the `Escríbelo como suena` pronunciation standard (copy approval recorded; qualified pronunciation review pending).
 - [x] Address the initial owner copy review (CHANGES REQUESTED): difficult-sound legend on page 4, accent-rule clarification, non-reconstruction recall on page 26, completion-scale legends on pages 16/21, and expanded page 32 rights note.
 - [x] Obtain owner final copy approval of the improved 32-page copy.
+- [x] Prepare the qualified pronunciation review packet for the nine normalized bridges.
+- [x] Complete the AI-assisted, non-authoritative pronunciation pre-review.
+- [ ] Assign a qualified pronunciation reviewer.
 - [ ] Complete the qualified pronunciation review of the nine normalized bridges.
 - [ ] Reverify all final destinations.
 - [ ] Generate and scan-test QR codes from verified destinations.
@@ -276,7 +279,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Pronunciation standard: COMPLETE DRAFT; qualified pronunciation review: NEXT; pronunciation gate: BLOCKED. Link verification and QR: PENDING. Design implementation, PDF generation and Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE. See `docs/content/PHASE_0_EBOOK_IMPROVED_CONTENT.md`, `docs/content/PHASE_0_EBOOK_PRONUNCIATION_STANDARD.md` and `docs/validation/PHASE_0_EBOOK_COPY_PRONUNCIATION_READINESS.md`. The current 21-page source and PDF are unchanged.
+Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Pronunciation standard: COMPLETE DRAFT. Qualified pronunciation review packet: PREPARED; AI-assisted pronunciation pre-review: COMPLETE; qualified reviewer assignment: PENDING; qualified reviewer decision: PENDING; pronunciation gate: BLOCKED. Link verification and QR: PENDING. Design implementation, PDF generation and Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE. See `docs/content/PHASE_0_EBOOK_IMPROVED_CONTENT.md`, `docs/content/PHASE_0_EBOOK_PRONUNCIATION_STANDARD.md`, `docs/content/PHASE_0_EBOOK_PRONUNCIATION_REVIEW_PACKET.md`, `docs/validation/PHASE_0_EBOOK_PRONUNCIATION_PRE_REVIEW_AUDIT.md` and `docs/validation/PHASE_0_EBOOK_QUALIFIED_PRONUNCIATION_REVIEW.md`. The current 21-page source and PDF are unchanged.
 
 ### Ebook Draft
 
