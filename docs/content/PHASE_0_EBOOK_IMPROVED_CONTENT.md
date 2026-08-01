@@ -8,8 +8,10 @@ Architecture: APPROVED
 Copy status: APPROVED
 Owner copy approval: APPROVED
 Owner copy gate: PASS
-Pronunciation standard: COMPLETE DRAFT
-Qualified pronunciation review: PENDING
+Pronunciation standard: APPROVED
+Qualified pronunciation review: COMPLETE
+Pronunciation gate: PASS
+Link verification and QR: PENDING
 Design implementation: BLOCKED
 PDF generation: BLOCKED
 Production replacement: BLOCKED
@@ -156,18 +158,21 @@ Es la forma que usamos en Sing Pronunce Repeat para escribir la pronunciación d
 **Cómo leer la guía de pronunciación**
 
 - Todo va en minúsculas.
-- En palabras de varias sílabas, el acento escrito marca la sílaba más fuerte: `clóu·zer`.
-- En palabras de una sola sílaba, el acento es una ayuda opcional para una vocal o un deslizamiento: `óu`, `niú`. Es una pista de lectura, no una regla de ortografía del español.
+- En palabras de varias sílabas, el acento escrito marca la sílaba más fuerte: `clóu·ser`.
+- En palabras de una sola sílaba, el acento es una ayuda opcional para una vocal o un deslizamiento: `óu`, `nú`. Es una pista de lectura, no una regla de ortografía del español.
 - Un `·` con espacios separa palabras: `uán · fast`.
 - Un `·` sin espacios separa sílabas dentro de una palabra: `pér·fect`.
-- Vocales que deslizan como `ai`, `óu` o `iú` son un solo movimiento.
+- Vocales que deslizan como `ai`, `óu` o `éi` son un solo movimiento.
 - La `(e)` entre paréntesis es un **apoyo temporal** para grupos como `st`: úsalo al principio y redúcelo con la práctica.
 
 **Sonidos que encontrarás**
 
-- `j` para la `h` inglesa: aire suave, nunca la `j` fuerte del español.
-- `d` o `z` como apoyos temporales para `th`: la lengua se acerca o sale ligeramente entre los dientes; la nota de cada práctica indicará si el sonido lleva voz.
-- La `r` inglesa es suave; no se enrolla como una `rr`.
+- `j` para la `h` inglesa: aire suave, como al empañar un vidrio; nunca la `j` fuerte del español.
+- `d` es un apoyo temporal para el `th` con voz.
+- `th` es un apoyo visual para el `th` sin voz: la lengua sale ligeramente entre los dientes y el aire sale sin voz.
+- `z` representa solo una consonante sonora con zumbido.
+- La `r` inglesa se hace con la lengua ligeramente hacia atrás, sin tocar el paladar ni vibrar.
+- Una `e` reducida, cuando la nota la indica, es extremadamente corta y relajada.
 - Las consonantes finales importan: no las elimines cuando cambian el significado.
 
 Los sonidos de apoyo son temporales y conviene reducirlos con el tiempo. Escucha siempre el audio oficial y ajusta.
@@ -268,8 +273,8 @@ Esta canción tiene un tempo lento y una pronunciación muy clara. Es una buena 
 | | |
 |---|---|
 | **Fragmento corto** | **One step closer** |
-| **Escríbelo como suena** | **uán · (e)stép · clóu·zer** |
-| **Nota de pronunciación** | El `ou` en `clóu·zer` es una sola vocal deslizante — no digas `o` y `u` por separado. La `(e)` en `(e)stép` es un apoyo temporal: redúcelo con la práctica. |
+| **Escríbelo como suena** | **uán · (e)stép · clóu·ser** |
+| **Nota de pronunciación** | El `ou` de `clóu·ser` es un solo deslizamiento. La `s` final es sorda y suave, como la `s` del español: no la conviertas en `z` ni hagas vibrar la garganta. La `(e)` de `(e)stép` es temporal y debe reducirse. |
 | **Significado natural** | **Un paso más cerca** — se usa para decir que estás progresando hacia una meta, un sueño o un logro. |
 | **Vocabulario útil** | **step** = paso (literal o figurado) · **closer** = más cerca (comparativo de *close*) |
 | **Ejemplo fuera de la canción** | "Every lesson puts me one step closer to my goal." *(Cada lección me pone un paso más cerca de mi meta.)* |
@@ -296,7 +301,7 @@ Esta canción tiene un tempo lento y una pronunciación muy clara. Es una buena 
 |---|---|
 | **Fragmento corto** | **Heart beats fast** |
 | **Escríbelo como suena** | **jart · bíts · fast** |
-| **Nota de pronunciación** | La `j` en `jart` es un sonido de aire suave, no la `j` gutural del español. Mantén la `a` de `fast` abierta, sin cerrarla hacia `e`. |
+| **Nota de pronunciación** | La `j` de `jart` representa solo aire suave, como al empañar un vidrio; no es la `j` fuerte del español. En `fast`, abre la boca, lleva la lengua hacia delante y abajo y estira ligeramente los labios hacia los lados. No uses una `a` española plena ni la conviertas en una `e`. |
 | **Significado natural** | **El corazón late rápido** — para describir nervios, emoción, miedo o actividad física intensa. |
 | **Vocabulario útil** | **heart** = corazón · **beat / beats** = latir (el corazón) / ritmo (en música) · **fast** = rápido |
 | **Ejemplo fuera de la canción** | "My heart beats fast before an important exam." *(Mi corazón late rápido antes de un examen importante.)* |
@@ -322,7 +327,7 @@ Esta canción tiene un tempo lento y una pronunciación muy clara. Es una buena 
 |---|---|
 | **Fragmento corto** | **Time stands still** |
 | **Escríbelo como suena** | **taim · stanz · (e)stil** |
-| **Nota de pronunciación** | En `taim`, la `ai` desliza como un solo sonido. En `stanz` el grupo `st` va sin apoyo; en `(e)stil` el apoyo `(e)` es temporal y debe reducirse. |
+| **Nota de pronunciación** | En `taim`, `ai` forma un solo deslizamiento. En `stanz`, la `d` escrita de *stands* se debilita mucho en el habla natural: no la fuerces como una `d` española. Termina con una `z` sonora, como un zumbido suave. En `(e)stil`, el apoyo `(e)` es temporal y debe reducirse. |
 | **Significado natural** | **El tiempo se detiene** — expresión figurada para un momento tan especial que parece que el tiempo se para. Aquí "still" significa *inmóvil*, no *todavía*. |
 | **Vocabulario útil** | **time** = tiempo · **stand still / stands still** = quedarse quieto / detenerse · **still** = inmóvil (no confundir con *still* = todavía) |
 | **Ejemplo fuera de la canción** | "When I heard that song for the first time, time stood still." *(Cuando escuché esa canción por primera vez, sentí que el tiempo se detuvo.)* |
@@ -414,7 +419,7 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 |---|---|
 | **Fragmento corto** | **I will be there** |
 | **Escríbelo como suena** | **ai · uíl · bi · dér** |
-| **Nota de pronunciación** | La `d` en `dér` es el `th` inglés con voz: apoya la lengua cerca de los dientes y deja salir el aire. En `uíl`, la `u` es un deslizamiento suave, no una `v`. En inglés informal, "I will be" se contrae a "I'll be". |
+| **Nota de pronunciación** | La `d` de `dér` se parece a la `d` suave de `nada`: la lengua queda cerca de los dientes y el aire sale con voz. En `uíl`, la `u` es un deslizamiento suave, no una `v`. En inglés informal, "I will be" se contrae a "I'll be". |
 | **Significado natural** | **Estaré ahí / Puedes contar conmigo** — una promesa directa de presencia o apoyo, útil en lo personal y lo profesional. |
 | **Vocabulario útil** | **will** = futuro / promesa (auxiliar) · **be there** = estar ahí / estar presente · **there** = ahí / allí |
 | **Ejemplo fuera de la canción** | "Whatever happens, I will be there to support you." *(Pase lo que pase, estaré ahí para apoyarte.)* |
@@ -440,8 +445,8 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 | | |
 |---|---|
 | **Fragmento corto** | **All the way from the start** |
-| **Escríbelo como suena** | **ól · de · uéi · from · de · (e)stárt** |
-| **Nota de pronunciación** | La vocal de `ól` es más abierta que la `o` española. Las dos `de` son muy suaves y rápidas. El apoyo `(e)` en `(e)stárt` es temporal. |
+| **Escríbelo como suena** | **ól · de · uéi · frem · de · (e)stárt** |
+| **Nota de pronunciación** | La vocal de `ól` es más abierta que la `o` española. Las dos `de` son suaves y rápidas. En `frem`, la `e` es muy corta y relajada, casi desaparece; evita una `o` fuerte. El apoyo `(e)` de `(e)stárt` es temporal. |
 | **Significado natural** | **Desde el principio** — para decir que algo estuvo presente desde el primer momento. *En contexto:* "all the way" añade énfasis (completamente, sin interrupciones); "from the start" marca el comienzo. No siempre son intercambiables. |
 | **Vocabulario útil** | **all the way** = todo el camino / completamente *(según el contexto)* · **from the start** = desde el principio |
 | **Ejemplo fuera de la canción** | "I supported her from the start — all the way to graduation day." *(La apoyé desde el principio, hasta el día de su graduación.)* |
@@ -467,8 +472,8 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 | | |
 |---|---|
 | **Fragmento corto** | **I can't get through** |
-| **Escríbelo como suena** | **ai · cant · guet · zrú** |
-| **Nota de pronunciación** | La `t` final de `cant` es clave: sin ella suena como "can" (puedo), el significado opuesto. En `zrú`, la `z` solo aproxima el `th` sin voz — lengua entre los dientes y aire sin voz, luego `r` y `u` larga. |
+| **Escríbelo como suena** | **ai · cant · guet · thrú** |
+| **Nota de pronunciación** | La `t` final de `cant` es clave: sin ella puede sonar como `can`, con el significado opuesto. En `thrú`, `th` no se lee como `t`: coloca la lengua ligeramente entre los dientes y deja salir aire sin voz. La `r` inglesa no golpea ni vibra contra el paladar, y la `ú` se mantiene larga. |
 | **Significado natural** | **No puedo comunicarme / No puedo superar esto** — el significado cambia según el contexto: dificultad para comunicarse, para superar algo o para pasar físicamente. |
 | **Vocabulario útil** | **can't** = no puedo (negación de *can*) · **get through** = superar / comunicarse / pasar *(según el contexto)* |
 | **Ejemplo fuera de la canción** | "I've been trying to call the office all morning but I can't get through." *(He estado llamando a la oficina toda la mañana pero no puedo comunicarme.)* |
@@ -585,12 +590,12 @@ Esta canción tiene una pronunciación del inglés americano muy clara y un ritm
 | | |
 |---|---|
 | **Fragmento corto** | **I'm not a perfect person** |
-| **Escríbelo como suena** | **aim · nat · a · pér·fect · pér·son** |
-| **Nota de pronunciación** | En `aim`, la `ai` desliza. La `a` suelta es casi imperceptible. Las dos `pér` llevan el mismo ritmo fuerte-suave. Las sílabas con más fuerza son `nat`, la primera de `pér·fect` y la primera de `pér·son`. |
+| **Escríbelo como suena** | **aim · nat · a · pér·fect · pér·sen** |
+| **Nota de pronunciación** | En `aim`, `ai` forma un solo deslizamiento y la `a` suelta es muy breve. En `pér·sen`, no formes una `o` redonda: la `e` final es mínima y relajada, casi pasas directamente de `s` a `n`. La `r` inglesa se produce sin golpear ni vibrar contra el paladar. |
 | **Significado natural** | **No soy una persona perfecta** — una admisión honesta de las propias limitaciones; muy usada en disculpas y conversaciones personales. |
 | **Vocabulario útil** | **I'm** = soy / estoy (contracción de *I am*) · **perfect** = perfecto/a · **person** = persona |
 | **Ejemplo fuera de la canción** | "I know I'm not a perfect person, but I always try to learn from my mistakes." *(Sé que no soy una persona perfecta, pero siempre trato de aprender de mis errores.)* |
-| **Practica** | Lee "aim · nat · a · pér·fect · pér·son" tres veces en voz alta. ¿El ritmo sonó natural? Sí · más o menos · todavía no. |
+| **Practica** | Lee "aim · nat · a · pér·fect · pér·sen" tres veces en voz alta. ¿El ritmo sonó natural? Sí · más o menos · todavía no. |
 
 **Repítelo** — Escucha el fragmento en la fuente oficial, repítelo lentamente y luego intenta decirlo sin mirar la guía.
 
@@ -612,8 +617,8 @@ Esta canción tiene una pronunciación del inglés americano muy clara y un ritm
 | | |
 |---|---|
 | **Fragmento corto** | **Start over new** |
-| **Escríbelo como suena** | **(e)stárt · óu·ver · niú** |
-| **Nota de pronunciación** | El apoyo `(e)` en `(e)stárt` es temporal: úsalo al principio y ve reduciéndolo hasta empezar directo en `st`. En `óu·ver`, la `ou` desliza; en `niú`, hay una `i` breve antes de la `u`. |
+| **Escríbelo como suena** | **(e)stárt · óu·ver · nú** |
+| **Nota de pronunciación** | El apoyo `(e)` de `(e)stárt` es temporal y debe reducirse. En `óu·ver`, `ou` forma un solo deslizamiento; para la `v`, el labio inferior roza suavemente los dientes superiores. En `nú`, no añadas un sonido parecido a `i` o `y`: mantén la `u` larga. |
 | **Significado natural** | **Empezar de nuevo** — la clave es "start over", un phrasal verb que significa comenzar otra vez desde cero. "New" añade énfasis: una versión nueva, sin cargas anteriores. |
 | **Vocabulario útil** | **start over** = empezar de nuevo / volver a empezar (phrasal verb) · **new** = nuevo/a |
 | **Ejemplo fuera de la canción** | "After that difficult year, I decided to start over new — a different city, a different routine." *(Después de ese año difícil, decidí empezar de nuevo — otra ciudad, otra rutina.)* |
