@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Added an independent Claude second-opinion pronunciation review covering all fourteen global conventions and all nine practices, recorded blind before reading the earlier AI pre-review and compared against it afterwards, without changing any pronunciation bridge, learner-facing note, ebook copy, PDF or Production configuration.
 - Clarified the ATY-01 voiced-consonant review question, defined PASS WITH CAVEAT disposition requirements, and distinguished qualified-review approval from publication authorization, without changing any pronunciation bridge or learner-facing content.
 - Added the qualified pronunciation reviewer packet with privacy-safe reviewer metadata, evidence requirements, global-convention fields and nine isolated practices initialized as `NOT REVIEWED`.
 - Added an AI-assisted, non-authoritative pronunciation pre-review audit covering global consistency, high-risk sound categories, nine-practice triage, mandatory reviewer questions and non-approved candidate directions.
