@@ -66,6 +66,10 @@ No specific qualification is claimed to be legally required. The record should i
 - [ ] Official song audio used only for singer-specific realization.
 - [ ] Evidence source names and review dates recorded.
 - [ ] No raw song URLs committed in this phase.
+- [ ] Every `PASS WITH CAVEAT` verdict has a documented caveat.
+- [ ] Every caveat has a recorded disposition.
+- [ ] Every learner-facing caveat has project-owner acceptance.
+- [ ] No unresolved caveat remains.
 - [ ] Post-change consistency evidence recorded if changes are required.
 
 ## 8. Privacy-safe reviewer record
@@ -92,6 +96,10 @@ The pronunciation gate may pass only when:
 - Every global convention has a verdict.
 - All nine practices have a reviewer verdict.
 - Every `CHANGE REQUIRED` item has an approved replacement.
+- Every `PASS WITH CAVEAT` verdict has a documented caveat.
+- Every caveat has a recorded disposition.
+- Every learner-facing caveat has project-owner acceptance.
+- No unresolved caveat remains.
 - Standard and improved content are synchronized.
 - No bridge remains `DRAFT — QUALIFIED REVIEW PENDING`.
 - A post-change consistency check passes.

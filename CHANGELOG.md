@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Clarified the ATY-01 voiced-consonant review question, defined PASS WITH CAVEAT disposition requirements, and distinguished qualified-review approval from publication authorization, without changing any pronunciation bridge or learner-facing content.
 - Added the qualified pronunciation reviewer packet with privacy-safe reviewer metadata, evidence requirements, global-convention fields and nine isolated practices initialized as `NOT REVIEWED`.
 - Added an AI-assisted, non-authoritative pronunciation pre-review audit covering global consistency, high-risk sound categories, nine-practice triage, mandatory reviewer questions and non-approved candidate directions.
 - Added the qualified-review readiness record and pronunciation-gate requirements; reviewer assignment and decision remain pending, and no pronunciation bridge, learner copy, PDF or Production setting changed.

@@ -88,6 +88,19 @@ CHANGE REQUIRED
 NOT REVIEWED
 ```
 
+### PASS WITH CAVEAT disposition
+
+PASS WITH CAVEAT requires a documented caveat and disposition.
+
+Allowed dispositions:
+
+- Documentation only.
+- Learner-note change required.
+- Bridge change required.
+- No action required, with reviewer justification.
+
+Any caveat affecting learner-facing material requires project-owner acceptance before publication. No unresolved caveat may remain when the pronunciation gate passes.
+
 ## 6. Global notation review
 
 | Convention | Reviewer verdict | Caveat or required change | Evidence |
@@ -128,6 +141,10 @@ For each category below, determine whether the written convention and learner ex
 ## 8. Nine-practice review matrix
 
 Each approved expression remains isolated. The reviewer must not add surrounding lyrics or combine rows into a lyric-like passage.
+
+In this matrix, `Approved bridge` and `Approved learner note` mean approved by the qualified pronunciation reviewer.
+
+They are not authorized for learner-facing publication until the project owner records acceptance and the synchronized source changes pass validation.
 
 | Practice ID | Approved English expression | Current normalized bridge | Current learner note | Neutral target reviewed | Singer-specific difference | Intelligibility risk | Reviewer verdict | Approved bridge | Approved learner note | Evidence |
 |---|---|---|---|---|---|---|---|---|---|---|

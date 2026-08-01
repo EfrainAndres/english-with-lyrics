@@ -104,9 +104,12 @@ Each question below is an AI-assisted review prompt, not a conclusion.
 `AI-ASSISTED — QUALIFIED VERIFICATION REQUIRED`
 
 ```text
-Does `clóu·zer` represent the consonant in “closer” safely for
-Latin American learners, or should the bridge use another
-s-like representation?
+Does `z` in `clóu·zer` reliably cue a voiced /z/ for Latin
+American Spanish speakers, or is it likely to be read as the
+voiceless /s/ commonly associated with the written letter z
+in much of Latin America?
+
+Should the learner note explicitly instruct the learner to add voice?
 ```
 
 ### ATY-02
