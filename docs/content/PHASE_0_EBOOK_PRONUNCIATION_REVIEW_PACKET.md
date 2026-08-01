@@ -22,11 +22,11 @@ AI pre-review does not complete the qualified-review gate.
 32-page architecture: APPROVED
 Improved learner copy: APPROVED
 Owner copy gate: PASS
-Pronunciation standard: COMPLETE DRAFT — SOURCE APPLICATION IN PROGRESS
+Pronunciation standard: APPROVED
 Qualified pronunciation review packet: COMPLETED
 AI-assisted pronunciation pre-review: COMPLETE
 Qualified pronunciation review: COMPLETE
-Pronunciation gate: BLOCKED — SOURCE APPLICATION IN PROGRESS
+Pronunciation gate: PASS
 ```
 
 The learner-facing copy is approved as copy. The qualified reviewer has authorized the recorded pronunciation changes; source synchronization and validation are still in progress. This packet does not authorize design, PDF, or Production change.
@@ -148,15 +148,15 @@ They are not authorized for learner-facing publication until the project owner r
 
 | Practice ID | Approved English expression | Current normalized bridge | Current learner note | Neutral target reviewed | Singer-specific difference | Intelligibility risk | Reviewer verdict | Approved bridge | Approved learner note | Evidence |
 |---|---|---|---|---|---|---|---|---|---|---|
-| ATY-01 | One step closer | `uán · (e)stép · clóu·zer` | Prior note and bridge reviewed. | YES | No singer-specific change recorded. | HIGH | CHANGE REQUIRED | `uán · (e)stép · clóu·ser` | El `ou` de `clóu·ser` es un solo deslizamiento. La `s` final es sorda y suave, como la `s` del español: no la conviertas en `z` ni hagas vibrar la garganta. La `(e)` de `(e)stép` es temporal y debe reducirse. | External specialist review supplied by the project owner, 2026-08-01. Independent dictionary and system cross-checks are documented in the existing second-opinion records. |
+| ATY-01 | One step closer | `uán · (e)stép · clóu·ser` | Prior note and bridge reviewed. | YES | No singer-specific change recorded. | HIGH | CHANGE REQUIRED | `uán · (e)stép · clóu·ser` | El `ou` de `clóu·ser` es un solo deslizamiento. La `s` final es sorda y suave, como la `s` del español: no la conviertas en `z` ni hagas vibrar la garganta. La `(e)` de `(e)stép` es temporal y debe reducirse. | External specialist review supplied by the project owner, 2026-08-01. Independent dictionary and system cross-checks are documented in the existing second-opinion records. |
 | ATY-02 | Heart beats fast | `jart · bíts · fast` | Prior note reviewed. | YES | No singer-specific change recorded. | MEDIUM | PASS WITH CAVEAT | `jart · bíts · fast` | La `j` de `jart` representa solo aire suave, como al empañar un vidrio; no es la `j` fuerte del español. En `fast`, abre la boca, lleva la lengua hacia delante y abajo y estira ligeramente los labios hacia los lados. No uses una `a` española plena ni la conviertas en una `e`. | External specialist review supplied by the project owner, 2026-08-01. Caveat disposition: learner-note change required, applied, and accepted by the project owner. |
 | ATY-03 | Time stands still | `taim · stanz · (e)stil` | Prior note reviewed. | YES | No singer-specific change recorded. | MEDIUM | PASS WITH CAVEAT | `taim · stanz · (e)stil` | En `taim`, `ai` forma un solo deslizamiento. En `stanz`, la `d` escrita de *stands* se debilita mucho en el habla natural: no la fuerces como una `d` española. Termina con una `z` sonora, como un zumbido suave. En `(e)stil`, el apoyo `(e)` es temporal y debe reducirse. | External specialist review supplied by the project owner, 2026-08-01. Caveat disposition: learner-note change required, applied, and accepted by the project owner. |
 | SLY-01 | I will be there | `ai · uíl · bi · dér` | Prior note reviewed. | YES | Singer realization may differ; neutral bridge retained. | MEDIUM | PASS | `ai · uíl · bi · dér` | La `d` de `dér` se parece a la `d` suave de `nada`: la lengua queda cerca de los dientes y el aire sale con voz. En `uíl`, la `u` es un deslizamiento suave, no una `v`. En inglés informal, "I will be" se contrae a "I'll be". | External specialist review supplied by the project owner, 2026-08-01. |
-| SLY-02 | All the way from the start | `ól · de · uéi · from · de · (e)stárt` | Prior bridge and note reviewed. | YES | Singer realization may differ; neutral bridge retained. | HIGH | CHANGE REQUIRED | `ól · de · uéi · frem · de · (e)stárt` | La vocal de `ól` es más abierta que la `o` española. Las dos `de` son suaves y rápidas. En `frem`, la `e` es muy corta y relajada, casi desaparece; evita una `o` fuerte. El apoyo `(e)` de `(e)stárt` es temporal. | External specialist review supplied by the project owner, 2026-08-01. Independent dictionary and system cross-checks are documented in the existing second-opinion records. |
-| SLY-03 | I can't get through | `ai · cant · guet · zrú` | Prior bridge and note reviewed. | YES | Singer realization may differ; neutral bridge retained. | HIGH | CHANGE REQUIRED | `ai · cant · guet · thrú` | La `t` final de `cant` es clave: sin ella puede sonar como `can`, con el significado opuesto. En `thrú`, `th` no se lee como `t`: coloca la lengua ligeramente entre los dientes y deja salir aire sin voz. La `r` inglesa no golpea ni vibra contra el paladar, y la `ú` se mantiene larga. | External specialist review supplied by the project owner, 2026-08-01. |
+| SLY-02 | All the way from the start | `ól · de · uéi · frem · de · (e)stárt` | Prior bridge and note reviewed. | YES | Singer realization may differ; neutral bridge retained. | HIGH | CHANGE REQUIRED | `ól · de · uéi · frem · de · (e)stárt` | La vocal de `ól` es más abierta que la `o` española. Las dos `de` son suaves y rápidas. En `frem`, la `e` es muy corta y relajada, casi desaparece; evita una `o` fuerte. El apoyo `(e)` de `(e)stárt` es temporal. | External specialist review supplied by the project owner, 2026-08-01. Independent dictionary and system cross-checks are documented in the existing second-opinion records. |
+| SLY-03 | I can't get through | `ai · cant · guet · thrú` | Prior bridge and note reviewed. | YES | Singer realization may differ; neutral bridge retained. | HIGH | CHANGE REQUIRED | `ai · cant · guet · thrú` | La `t` final de `cant` es clave: sin ella puede sonar como `can`, con el significado opuesto. En `thrú`, `th` no se lee como `t`: coloca la lengua ligeramente entre los dientes y deja salir aire sin voz. La `r` inglesa no golpea ni vibra contra el paladar, y la `ú` se mantiene larga. | External specialist review supplied by the project owner, 2026-08-01. |
 | TR-01 | Before I go | `bi·fór · ai · góu` | Prior bridge and note reviewed. | YES | No singer-specific change recorded. | LOW | PASS | `bi·fór · ai · góu` | En `bi·fór`, la sílaba fuerte es `fór`; `bi` es breve y suave. En `góu`, la `ou` desliza hacia la `u` como un solo movimiento. | External specialist review supplied by the project owner, 2026-08-01. |
-| TR-02 | I'm not a perfect person | `aim · nat · a · pér·fect · pér·son` | Prior bridge and note reviewed. | YES | No singer-specific change recorded. | HIGH | CHANGE REQUIRED | `aim · nat · a · pér·fect · pér·sen` | En `aim`, `ai` forma un solo deslizamiento y la `a` suelta es muy breve. En `pér·sen`, no formes una `o` redonda: la `e` final es mínima y relajada, casi pasas directamente de `s` a `n`. La `r` inglesa se produce sin golpear ni vibrar contra el paladar. | External specialist review supplied by the project owner, 2026-08-01. |
-| TR-03 | Start over new | `(e)stárt · óu·ver · niú` | Prior bridge and note reviewed. | YES | No singer-specific change recorded. | MEDIUM | CHANGE REQUIRED | `(e)stárt · óu·ver · nú` | El apoyo `(e)` de `(e)stárt` es temporal y debe reducirse. En `óu·ver`, `ou` forma un solo deslizamiento; para la `v`, el labio inferior roza suavemente los dientes superiores. En `nú`, no añadas un sonido parecido a `i` o `y`: mantén la `u` larga. | External specialist review supplied by the project owner, 2026-08-01. |
+| TR-02 | I'm not a perfect person | `aim · nat · a · pér·fect · pér·sen` | Prior bridge and note reviewed. | YES | No singer-specific change recorded. | HIGH | CHANGE REQUIRED | `aim · nat · a · pér·fect · pér·sen` | En `aim`, `ai` forma un solo deslizamiento y la `a` suelta es muy breve. En `pér·sen`, no formes una `o` redonda: la `e` final es mínima y relajada, casi pasas directamente de `s` a `n`. La `r` inglesa se produce sin golpear ni vibrar contra el paladar. | External specialist review supplied by the project owner, 2026-08-01. |
+| TR-03 | Start over new | `(e)stárt · óu·ver · nú` | Prior bridge and note reviewed. | YES | No singer-specific change recorded. | MEDIUM | CHANGE REQUIRED | `(e)stárt · óu·ver · nú` | El apoyo `(e)` de `(e)stárt` es temporal y debe reducirse. En `óu·ver`, `ou` forma un solo deslizamiento; para la `v`, el labio inferior roza suavemente los dientes superiores. En `nú`, no añadas un sonido parecido a `i` o `y`: mantén la `u` larga. | External specialist review supplied by the project owner, 2026-08-01. |
 
 ## 9. Singer-specific observations
 
@@ -182,13 +182,13 @@ Practices requiring bridge change: 5
 Practices approved with resolved caveat: 2
 Practices approved without change: 2
 Qualified pronunciation review: COMPLETE
-Pronunciation gate: BLOCKED — SOURCE APPLICATION IN PROGRESS
+Pronunciation gate: PASS
 Change application authorized: YES
 ```
 
 ## 11. Change-application authorization
 
-The qualified reviewer approved the recorded bridges and notes. The project owner supplied the decisions for application. Source synchronization, post-change validation, and final gate recording remain required before learner-facing publication.
+The qualified reviewer approved the recorded bridges and notes. The project owner supplied the decisions for application. The pronunciation standard and improved source are synchronized, and the post-change consistency check passed.
 
 After authorized changes, the pronunciation standard and improved content must be synchronized and pass a post-change consistency check. Approved English expressions must remain unchanged.
 

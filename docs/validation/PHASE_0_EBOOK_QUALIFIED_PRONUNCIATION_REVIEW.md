@@ -6,7 +6,7 @@ The qualified pronunciation review is complete. The reviewer approved the materi
 
 ```text
 Qualified pronunciation review: COMPLETE
-Pronunciation gate: BLOCKED — SOURCE APPLICATION IN PROGRESS
+Pronunciation gate: PASS
 ```
 
 ## 2. Phase scope
@@ -68,7 +68,7 @@ No specific qualification is claimed to be legally required. The record should i
 - [x] Every caveat has a recorded disposition.
 - [x] Every learner-facing caveat has project-owner acceptance.
 - [x] No unresolved caveat remains.
-- [ ] Post-change consistency evidence recorded after source application.
+- [x] Post-change consistency evidence recorded after source application.
 
 ## 8. Privacy-safe reviewer record
 
@@ -99,7 +99,7 @@ The pronunciation gate may pass only when:
 - Every learner-facing caveat has project-owner acceptance.
 - No unresolved caveat remains.
 - Standard and improved content are synchronized.
-- No bridge remains `DRAFT — QUALIFIED REVIEW PENDING`.
+- No bridge remains in a qualified-review-pending status.
 - A post-change consistency check passes.
 - No approved English expression is changed.
 - Owner accepts any learner-facing pronunciation changes.
@@ -108,7 +108,7 @@ Until all conditions are true:
 
 ```text
 Qualified pronunciation review: COMPLETE
-Pronunciation gate: BLOCKED — SOURCE APPLICATION IN PROGRESS
+Pronunciation gate: PASS
 ```
 
 ## 10. Current status
@@ -124,13 +124,13 @@ Practices reviewed by qualified reviewer: 9 of 9
 Global conventions reviewed: 14 of 14
 Required bridge changes: 5
 Resolved caveats: 2
-Approved pronunciation changes: AUTHORIZED — APPLICATION IN PROGRESS
-Pronunciation standard modified: NO — APPLICATION IN PROGRESS
-Improved learner copy modified: NO — APPLICATION IN PROGRESS
+Approved pronunciation changes: APPLIED
+Pronunciation standard modified: YES
+Improved learner copy modified: YES
 Owner acceptance: APPROVED
-Post-change consistency check: PENDING
+Post-change consistency check: PASS
 Qualified pronunciation review: COMPLETE
-Pronunciation gate: BLOCKED — SOURCE APPLICATION IN PROGRESS
+Pronunciation gate: PASS
 Design implementation: BLOCKED
 PDF generation: BLOCKED
 Production replacement: BLOCKED
@@ -138,7 +138,6 @@ Production replacement: BLOCKED
 
 ## 11. Remaining actions
 
-1. Apply the authorized bridge, learner-note, and convention changes to the pronunciation standard and improved source without changing an approved English expression.
-2. Run the post-change consistency checks and verify that no bridge remains draft-pending.
-3. Record the source synchronization and reassess the pronunciation gate.
-4. Keep link verification, design, PDF, and Production work blocked until their later gates pass.
+1. Complete link verification and QR preparation before design implementation.
+2. Complete design and QA before PDF generation.
+3. Keep Production replacement and Production operations blocked until their later gates pass.
