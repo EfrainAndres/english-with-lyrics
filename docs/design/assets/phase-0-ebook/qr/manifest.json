@@ -1,0 +1,72 @@
+[
+  {
+    "id": "song-1-a-thousand-years",
+    "file": "song-1-a-thousand-years.svg",
+    "purpose": "Official listening source for A Thousand Years",
+    "payload": "https://www.youtube.com/watch?v=rtOvBOTyX00",
+    "sha256": "a34c246109f95793aa1655ddfd088851fd0f82adf65ea600b10c393dd525fc91",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-01",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PENDING"
+  },
+  {
+    "id": "song-2-still-loving-you",
+    "file": "song-2-still-loving-you.svg",
+    "purpose": "Official listening source for Still Loving You",
+    "payload": "https://www.youtube.com/watch?v=7pOr3dBFAeY",
+    "sha256": "376c9328203d8f29ce47a88e6c1fb839984f0bb0a4f21ff7f251f1ac1ee67a83",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-01",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PENDING"
+  },
+  {
+    "id": "song-3-the-reason",
+    "file": "song-3-the-reason.svg",
+    "purpose": "Official listening source for The Reason",
+    "payload": "https://www.youtube.com/watch?v=fV4DiAyExN0",
+    "sha256": "12ec7bc756d1b0edd5eee977a5f0df3f4caaf1ff7963f596a9e26b17aaa206a4",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-01",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PENDING"
+  },
+  {
+    "id": "continue-first-group",
+    "file": "continue-first-group.svg",
+    "purpose": "Information request for the possible first guided group",
+    "payload": "https://tally.so/r/D4a6NE",
+    "sha256": "541840667c2e6131cbf05713bb42fd0f1bbbc91ba05df42870444e55a50e0583",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-01",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PENDING"
+  },
+  {
+    "id": "survey-feedback",
+    "file": "survey-feedback.svg",
+    "purpose": "Learner feedback survey",
+    "payload": "https://tally.so/r/eqzgbe",
+    "sha256": "c2ed3a600eebe43de28a1d3b1d718f4149e81d336d8618a159d6724dd0ee3ce7",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-01",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PENDING"
+  }
+]
