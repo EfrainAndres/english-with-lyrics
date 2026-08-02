@@ -632,12 +632,19 @@ Original song destination: secondary listening link
 ```
 
 ```text
-Manual QR scan validation: PENDING
-Link/QR gate: BLOCKED until manual scan PASS
+Required destinations resolved: 9 of 9
+Programmatic QR decode: 45 of 45 PASS
+Manual two-device QR scan: PASS
+Manual scan checks: 20 of 20 PASS
+Link/QR gate: PASS
+Design implementation: NEXT
+Minimum supported QR size: 20 mm
+Preferred layout size: 24 mm or 30 mm
+Final embedded-PDF QR validation: still required during final PDF QA
 ```
 
 ## Approval and implementation gate
 
 Page-by-page architecture approved by project owner: **APPROVED**.
 
-Owner review of the prior 30-page architecture returned CHANGES REQUESTED; this 32-page revision implements all requested changes and has been approved. Copywriting and pronunciation-normalization phases may now proceed in a separate branch. PDF source editing, design implementation and PDF generation remain blocked until new-page copy, pronunciation normalization, link verification/QR creation and design implementation pass their own approval gates. After design and copy approval, work should proceed in separate, scoped phases for link verification/QR creation, design implementation, export and independent PDF QA.
+Owner review of the prior 30-page architecture returned CHANGES REQUESTED; this 32-page revision implements all requested changes and has been approved. Copywriting, pronunciation normalization and source-asset link/QR verification are complete. Design implementation is next; PDF source editing and PDF generation remain blocked pending design implementation and QA. Final embedded-PDF QR validation remains required during independent PDF QA.

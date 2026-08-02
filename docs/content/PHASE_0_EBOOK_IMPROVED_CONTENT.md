@@ -13,10 +13,11 @@ Qualified pronunciation review: COMPLETE
 Pronunciation gate: PASS
 Link verification: COMPLETE
 QR generation: COMPLETE
-Manual two-device QR scan: PENDING
-Link/QR gate: BLOCKED — MANUAL SCAN PENDING
-Design implementation: BLOCKED
-PDF generation: BLOCKED
+Manual two-device QR scan: PASS
+Manual scan checks: 20 of 20 PASS
+Link/QR gate: PASS
+Design implementation: NEXT
+PDF generation: BLOCKED pending design implementation and QA
 Production replacement: BLOCKED
 ```
 

@@ -8,6 +8,8 @@ Verification date: 2026-08-02.
 
 ## 2. Entry-gate status
 
+Historical entry state before the manual gate:
+
 ```text
 Qualified pronunciation review: COMPLETE
 Pronunciation gate: PASS
@@ -16,6 +18,8 @@ Design implementation: BLOCKED
 PDF generation: BLOCKED
 Production replacement: BLOCKED
 ```
+
+The source-asset manual QR gate is now complete based on the project-owner manual test report recorded below. This does not replace final embedded-PDF QR validation.
 
 ## 3. Final destination inventory
 
@@ -138,7 +142,7 @@ URL shortener: NONE
 
 Manifest: `docs/design/assets/phase-0-ebook/qr/manifest.json`
 
-The manifest records five assets in source order, their exact payloads, SHA-256 values, QR specification, verification date, programmatic decode result, and pending manual scan state. The first three payloads are the verified educational lessons; the continuation and survey payloads are unchanged.
+The manifest records five assets in source order, their exact payloads, SHA-256 values, QR specification, verification date, programmatic decode result, and completed manual scan state. The first three payloads are the verified educational lessons; the continuation and survey payloads are unchanged.
 
 ## 11. Programmatic decode results
 
@@ -157,20 +161,30 @@ Every decoded value matched its manifest payload byte-for-byte.
 
 ## 12. Manual scan-test matrix
 
-Manual two-device scanning must occur after this branch is pushed. Each row covers both required rendered sizes.
+Manual test date: 2026-08-02
+Calibration line: 50 mm PASS
+Devices tested: 2
+QR assets tested: 5
+Sizes tested: 30 mm and 24 mm
+Manual scan checks: 20
+Result: 20 of 20 PASS
+Unexpected redirects: NONE
+Evidence source: project-owner manual test report
+
+The matrix below records the owner-reported calibrated result. Each row covers both required rendered sizes, producing 20 manual scan checks across five QR assets and two devices. No Tally form was submitted.
 
 | QR ID | Payload | Device | 30 mm scan | 24 mm scan | Opened final destination | Destination identity correct | Unexpected redirect | Test date | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| song-1-a-thousand-years | `https://www.youtube.com/watch?v=si9YeTd8z1E` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-1-a-thousand-years | `https://www.youtube.com/watch?v=si9YeTd8z1E` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-2-still-loving-you | `https://www.youtube.com/watch?v=HetOzN4RtTY` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-2-still-loving-you | `https://www.youtube.com/watch?v=HetOzN4RtTY` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-3-the-reason | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-3-the-reason | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| continue-first-group | `https://tally.so/r/D4a6NE` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| continue-first-group | `https://tally.so/r/D4a6NE` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| survey-feedback | `https://tally.so/r/eqzgbe` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| survey-feedback | `https://tally.so/r/eqzgbe` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
+| song-1-a-thousand-years | `https://www.youtube.com/watch?v=si9YeTd8z1E` | iPhone 12 Pro Max | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| song-1-a-thousand-years | `https://www.youtube.com/watch?v=si9YeTd8z1E` | USB-C Android phone | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| song-2-still-loving-you | `https://www.youtube.com/watch?v=HetOzN4RtTY` | iPhone 12 Pro Max | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| song-2-still-loving-you | `https://www.youtube.com/watch?v=HetOzN4RtTY` | USB-C Android phone | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| song-3-the-reason | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | iPhone 12 Pro Max | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| song-3-the-reason | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | USB-C Android phone | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| continue-first-group | `https://tally.so/r/D4a6NE` | iPhone 12 Pro Max | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| continue-first-group | `https://tally.so/r/D4a6NE` | USB-C Android phone | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| survey-feedback | `https://tally.so/r/eqzgbe` | iPhone 12 Pro Max | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
+| survey-feedback | `https://tally.so/r/eqzgbe` | USB-C Android phone | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
 
 ## 13. Gate criteria
 
@@ -187,20 +201,23 @@ Original official listening destinations verified: 3 of 3
 Optional advanced waitlist: OMITTED
 Optional YouTube channel link: OMITTED
 QR source assets generated: 5 of 5
-Programmatic QR decode: PASS
-Manual two-device QR scan: PENDING
+Programmatic QR decode: 45 of 45 PASS
+Manual two-device QR scan: PASS
+Manual scan checks: 20 of 20 PASS
 Link verification: COMPLETE
 QR generation: COMPLETE
-Link/QR gate: BLOCKED — MANUAL SCAN PENDING
-Design implementation: BLOCKED
-PDF generation: BLOCKED
+Link/QR gate: PASS
+Design implementation: NEXT
+PDF generation: BLOCKED pending design implementation and QA
 Production replacement: BLOCKED
 ```
 
 ## 15. Remaining actions
 
-1. Render all five source assets at 30 mm and 24 mm in the approved future design.
-2. Scan each rendered QR with the iPhone 12 Pro Max and USB-C Android phone.
-3. Record final destinations, identity checks, redirects, dates, and notes in the manual matrix.
-4. Keep the link/QR gate blocked until every required manual result passes.
-5. Begin design implementation only after the link/QR gate passes.
+1. Begin the separate ebook design-implementation phase.
+2. Preserve the verified five QR source assets and exact payloads.
+3. Render QR codes at no less than 20 mm; prefer 24 mm or 30 mm where the layout allows.
+4. Recheck all clickable links and scan the embedded QR codes during final PDF QA.
+5. Keep PDF generation and Production replacement blocked until their later gates pass.
+
+Passing this source-asset gate does not replace the final embedded-PDF QR scan.

@@ -273,7 +273,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [x] Apply the five approved pronunciation bridge corrections and resolve the two practice caveats.
 - [x] Reverify all final destinations.
 - [x] Generate and programmatically decode QR codes from verified destinations.
-- [ ] Complete the manual two-device QR scan test at 30 mm and 24 mm.
+- [x] Complete the manual two-device QR scan test at 30 mm and 24 mm based on the project-owner manual test report: 20 of 20 PASS; no unexpected redirects.
 - [ ] Implement the improved ebook design.
 - [ ] Generate the replacement PDF through the existing workflow.
 - [ ] Complete final structural, visual, text, metadata and link QA.
@@ -281,7 +281,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; song QR payloads: UPDATED; external link verification: COMPLETE; QR source generation: COMPLETE; programmatic QR decode: 45 of 45 PASS; manual two-device QR scan: PENDING; link/QR gate: BLOCKED — MANUAL SCAN PENDING. Design implementation: BLOCKED. PDF generation: BLOCKED. Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE. See `docs/validation/PHASE_0_EBOOK_LINK_QR_VERIFICATION.md` for the manual gate. The current 21-page source and PDF are unchanged.
+Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; song QR payloads: UPDATED; external link verification: COMPLETE; QR source generation: COMPLETE; programmatic QR decode: 45 of 45 PASS; manual two-device QR scan: PASS; manual scan checks: 20 of 20 PASS; link/QR gate: PASS. Design implementation: NEXT. PDF generation: BLOCKED pending design implementation and QA. Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE. See `docs/validation/PHASE_0_EBOOK_LINK_QR_VERIFICATION.md` for the final embedded-PDF QA requirements. The current 21-page source and PDF are unchanged.
 
 ### Ebook Draft
 
