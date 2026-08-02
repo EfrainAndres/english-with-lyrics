@@ -13,6 +13,8 @@ Link/QR gate: PASS
 
 Initial project-owner visual decision: CHANGES REQUESTED
 
+Required A5 corrections: COMPLETE
+
 Review artifact: 12-page A5 prototype PDF
 
 Initial findings:
@@ -98,8 +100,8 @@ The prototype represents all required reusable treatments:
 
 Local HTTP review endpoint: `http://127.0.0.1:9898/docs/design/prototypes/phase-0-ebook-improved-preview.html`.
 
-- Desktop preview: CORRECTION STRUCTURAL PASS — all twelve page footers and matching final-page numbers are rendered; pages 2, 4, 5 and 24 retain a visible footer reserve after their layout corrections. Project-owner visual re-review remains pending.
-- 390 px mobile: STRUCTURAL PASS — the stylesheet limits page width to the viewport, stacks multi-column layouts, keeps QR cards within the page width, and does not use fixed screen heights or horizontal overflow. Project-owner mobile readability review remains pending.
+- Desktop preview: CORRECTION STRUCTURAL PASS — all twelve page footers and matching final-page numbers are rendered; pages 2, 4, 5 and 24 retain a visible footer reserve after their layout corrections. Project-owner desktop review: PASS.
+- 390 px mobile: STRUCTURAL PASS — the stylesheet limits page width to the viewport, stacks multi-column layouts, keeps QR cards within the page width, and does not use fixed screen heights or horizontal overflow. Project-owner 390 px mobile review: PASS.
 - Screen-only prototype labels are defined separately and hidden in print mode.
 
 ## A5 Print Checks
@@ -110,7 +112,7 @@ Local HTTP review endpoint: `http://127.0.0.1:9898/docs/design/prototypes/phase-
 - Screen labels and long YouTube URLs are hidden in print mode. Readable short destinations are limited to designated print URL elements.
 - A5 correction structural validation: PASS — pages 2, 4, 5 and 24 use tightened page-family spacing, retain their full approved content, and reserve the standard footer area without changing the shared text minimums.
 - Temporary local A5 review artifact: 12 pages rendered from the served prototype. All twelve final-page footers and page numbers are visible; pages 2, 4, 5 and 24 show their complete corrected treatments above the footer.
-- A5 print preview: RE-REVIEW PENDING — project-owner confirmation of page balance, footer clearance and background-graphics settings is required.
+- A5 print preview: PASS — project-owner confirmation covered page balance, footer clearance and background-graphics settings.
 
 ## Accessibility and Contrast Review
 
@@ -127,40 +129,66 @@ Local HTTP review endpoint: `http://127.0.0.1:9898/docs/design/prototypes/phase-
 - Song material remains limited to the approved short educational expressions and original educational explanation.
 - Page 32 preserves the approved educational and rights treatment, including the official-source listening rule.
 
+## Final Project-Owner Visual Review
+
+Final project-owner visual decision: PASS
+
+Evidence reviewed:
+
+- A5 corrected prototype: 12-page review PDF.
+- 390 px mobile: Full initial capture covering final pages 1, 2, 4, 5, 6, 7, 8 and 11, plus individual captures of final pages 24, 28, 31 and 32.
+
+Final owner conclusions:
+
+- Horizontal overflow at 390 px: NONE
+- Mobile clipping: NONE
+- CTA containment: PASS
+- QR containment and quiet zones: PASS
+- Mobile footer visibility: PASS
+- A5 footer visibility: 12 of 12 PASS
+- A5 page-number visibility: 12 of 12 PASS
+- Unresolved visual blockers: NONE
+
+The temporary grey selection highlight visible over the word `no` in the page-32 screenshot is a capture-selection artifact, not a prototype design defect.
+
+Project-owner A5 visual re-review: PASS
+Project-owner 390 px mobile review: PASS
+Project-owner final approval: PASS
+
 ## Project-Owner Visual-Review Matrix
 
 | Review area | Status | Notes |
 |---|---|---|
 | Overall visual direction | PASS | |
 | Cover | PASS | |
-| Opening pages | RE-REVIEW PENDING | Corrected final page 2 footer and bottom clearance |
-| Method and notation | RE-REVIEW PENDING | Corrected final page 4 notation density and footer clearance |
+| Opening pages | PASS | Corrected final page 2 footer and bottom clearance |
+| Method and notation | PASS | Corrected final page 4 notation density and footer clearance |
 | Song introduction | PASS | |
 | Practice card | PASS | |
 | Completion page | PASS | |
-| Challenge page | RE-REVIEW PENDING | Corrected final page 24 Day 1 layout and footer clearance |
+| Challenge page | PASS | Corrected final page 24 Day 1 layout and footer clearance |
 | CTA pages | PASS | |
 | QR presentation | PASS | |
-| Mobile readability | PENDING | |
-| A5 print preview | RE-REVIEW PENDING | Corrected final pages: 2, 4, 5 and 24 |
-| Final approval | RE-REVIEW PENDING | |
+| Mobile readability | PASS | |
+| A5 print preview | PASS | Corrected final pages: 2, 4, 5 and 24 |
+| Final approval | PASS | |
 
 ## Current Gate Status
 
 Representative pages implemented: 12 of 12
 Design components represented: COMPLETE
 Prototype structural validation: PASS
-Visual corrections implemented: COMPLETE
-Correction structural validation: PASS
-Project-owner visual re-review: PENDING
-Design prototype gate: BLOCKED — OWNER VISUAL RE-REVIEW PENDING
-Full 32-page design implementation: BLOCKED
-PDF generation: BLOCKED
+A5 visual review: PASS
+390 px mobile visual review: PASS
+Project-owner visual review: PASS
+Design prototype gate: PASS
+Full 32-page design implementation: NEXT / UNBLOCKED — NOT STARTED
+PDF generation: BLOCKED pending complete design implementation and QA
 Production replacement: BLOCKED
 
 ## Remaining Actions
 
-1. Project owner re-reviews the corrected prototype at desktop width, 390 px mobile width and A5 print preview with background graphics enabled.
-2. Record the re-review decision and any further visual corrections without changing approved learner-facing copy.
-3. After the prototype gate passes, implement all 32 approved final pages using the accepted reusable system.
-4. Complete final embedded-link and QR checks during the later PDF QA phase before any Production replacement.
+1. Begin full 32-page design implementation using the approved reusable prototype system.
+2. Preserve approved learner-facing copy, verified URLs and committed QR source assets.
+3. Render QR codes at no less than 20 mm, preferring 24 mm or 30 mm where the layout allows.
+4. Recheck all clickable links and scan embedded QR codes during final PDF QA before any Production replacement.
