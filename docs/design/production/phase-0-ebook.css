@@ -1,1424 +1,539 @@
-/*
- * Phase 0 Ebook — Production Stylesheet
- * Sing Pronunce Repeat / English with Lyrics
- *
- * Production version of the approved design system.
- * Source template: docs/design/prototypes/phase-0-ebook-template.css
- * Design specification: docs/design/PHASE_0_EBOOK_PDF_TEMPLATE.md
- *
- * NOT imported by the Next.js application.
- * For production PDF export only.
- */
-
-/* =============================================================================
-   1. DESIGN TOKENS
-   ============================================================================= */
-
 :root {
-  /* --- Brand colors --- */
-  --c-black:  #010101;
+  --c-black: #010101;
   --c-yellow: #FEE296;
-  --c-pink:   #FE9CE1;
+  --c-pink: #FE9CE1;
   --c-purple: #CC9DEA;
-
-  /* --- Surface layers --- */
-  --c-bg:          #070307;
-  --c-page:        #010101;
-  --c-surface:     #140D14;
-  --c-card:        #1C121C;
-  --c-card-accent: #221522;
-
-  /* --- Text --- */
-  --c-text:        #FFF9FE;
-  --c-text-sub:    #C8BAC8;
-  --c-text-muted:  #8A7E8A;
-
-  /* --- Accent semantics --- */
-  --c-accent-fragment:      var(--c-yellow);
-  --c-accent-pronunciation: var(--c-pink);
-  --c-accent-label:         var(--c-purple);
-  --c-accent-cta-primary:   var(--c-yellow);
-  --c-accent-cta-secondary: var(--c-purple);
-
-  /* --- Spacing (4-point grid) --- */
-  --sp-1:  4px;
-  --sp-2:  8px;
-  --sp-3:  12px;
-  --sp-4:  16px;
-  --sp-5:  20px;
-  --sp-6:  24px;
-  --sp-8:  32px;
-  --sp-10: 40px;
-  --sp-12: 48px;
-
-  /* --- Border radius --- */
-  --r-sm: 4px;
-  --r-md: 8px;
-  --r-lg: 14px;
-
-  /* --- Typography --- */
-  --font-serif: Georgia, 'Times New Roman', 'Palatino Linotype', Palatino, serif;
-  --font-sans:  system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-
-  /* --- Font-size scale (screen baseline) --- */
-  --fs-cover-title:    2.1rem;
-  --fs-cover-subtitle: 1.0rem;
-  --fs-section-title:  1.4rem;
-  --fs-card-label:     0.6rem;
-  --fs-card-title:     1.05rem;
-  --fs-body:           0.875rem;
-  --fs-small:          0.75rem;
-  --fs-legal:          0.68rem;
-
-  /* --- Shadows --- */
-  --shadow-page: 0 6px 32px rgba(0, 0, 0, 0.7);
-  --shadow-card: 0 2px 10px rgba(204, 157, 234, 0.10);
-
-  /* --- Page geometry (A5 portrait) --- */
-  --page-w:  148mm;
-  --page-h:  210mm;
-  --page-px: 11mm;
-  --page-py: 13mm;
-
-  /* --- Line lengths --- */
-  --line-body: 56ch;
+  --c-text: #FFF9FE;
+  --c-surface: #121018;
+  --c-surface-raised: #1E1926;
+  --c-line: #5D5068;
+  --c-muted: #E7DCE6;
+  --c-ink: #161118;
+  --page-width: 148mm;
+  --page-height: 210mm;
+  --safe-x: 13mm;
+  --safe-top: 13mm;
+  --safe-bottom: 15mm;
 }
 
-/* =============================================================================
-   2. BASE RESET
-   ============================================================================= */
+* { box-sizing: border-box; }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-}
+html { background: #0A090C; }
 
 body {
-  background: var(--c-bg);
-  font-family: var(--font-sans);
+  margin: 0;
   color: var(--c-text);
-  line-height: 1.55;
-  padding: var(--sp-6) 0 var(--sp-12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--sp-6);
+  background: #0A090C;
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.42;
 }
 
-a {
-  color: var(--c-yellow);
-  text-underline-offset: 3px;
-}
+a { color: inherit; }
 
-a:focus-visible {
-  outline: 2px solid var(--c-yellow);
-  outline-offset: 3px;
-  border-radius: var(--r-sm);
+.ebook {
+  display: grid;
+  gap: 28px;
+  justify-items: center;
+  padding: 32px;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-ul, ol {
-  padding-left: var(--sp-4);
-}
-
-li + li {
-  margin-top: var(--sp-1);
-}
-
-/* =============================================================================
-   3. PAGE CONTAINER
-   ============================================================================= */
 
 .page {
-  background: var(--c-page);
-  width: var(--page-w);
-  min-height: var(--page-h);
-  padding: var(--page-py) var(--page-px);
   position: relative;
-  overflow: visible; /* visible on screen so content is never silently clipped */
-  break-after: page;
-  page-break-after: always;
-  box-shadow: var(--shadow-page);
   display: flex;
   flex-direction: column;
+  width: var(--page-width);
+  min-height: var(--page-height);
+  padding: var(--safe-top) var(--safe-x) var(--safe-bottom);
+  overflow: visible;
+  color: var(--c-text);
+  background: var(--c-black);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .45);
 }
 
-/* =============================================================================
-   4. PAGE FOOTER
-   ============================================================================= */
-
-.page-footer {
-  margin-top: auto;
-  padding-top: var(--sp-4);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid rgba(204, 157, 234, 0.15);
-  font-size: var(--fs-legal);
-  color: var(--c-text-muted);
-  font-family: var(--font-sans);
+.page::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  border: .5mm solid rgba(254, 226, 150, .16);
 }
 
-.page-footer .footer-brand {
-  color: var(--c-text-muted);
-  font-style: italic;
-}
-
-.page-footer .footer-page-num {
-  color: var(--c-purple);
-}
-
-/* =============================================================================
-   5. INTERNAL PAGE HEADER
-   ============================================================================= */
+.page--cover { background: #17101A; }
+.page--method, .page--journey { background: #110E16; }
+.page--song, .page--cta { background: #19121D; }
+.page--practice { background: #0E1115; }
+.page--closing { background: #100D12; }
 
 .page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--sp-5);
-  padding-bottom: var(--sp-3);
-  border-bottom: 1px solid rgba(254, 156, 225, 0.18);
+  gap: 12px;
+  min-height: 14px;
+  margin-bottom: 5mm;
+  padding-bottom: 3mm;
+  border-bottom: .25mm solid var(--c-line);
+  font-size: 8.5pt;
 }
 
-.page-header .header-method {
-  font-size: 0.62rem;
-  font-family: var(--font-sans);
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+.progress-label, .brand-lockup { margin: 0; }
+.progress-label { color: var(--c-yellow); font-weight: 750; }
+.brand-lockup { text-align: right; color: var(--c-text); font-weight: 750; }
+.brand-lockup span { color: var(--c-muted); font-weight: 500; }
+
+.page-content { flex: 0 1 auto; min-width: 0; }
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", Palatino, serif; line-height: 1.08; }
+h1 { margin: 0 0 4mm; font-size: 24pt; color: var(--c-yellow); }
+h2 { margin: 4mm 0 2mm; font-size: 13.5pt; color: var(--c-pink); }
+h3 { margin: 0; font-size: 11.5pt; }
+p { margin: 0 0 3mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+li + li { margin-top: 1.2mm; }
+code { padding: 0 .5mm; color: var(--c-yellow); background: rgba(254, 226, 150, .09); font-family: inherit; font-weight: 700; }
+
+.eyebrow {
+  margin-bottom: 2mm;
   color: var(--c-pink);
+  font-size: 8.5pt;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
 }
 
-.page-header .header-section {
-  font-size: 0.62rem;
-  font-family: var(--font-sans);
-  letter-spacing: 0.05em;
-  color: var(--c-text-muted);
-  text-align: right;
-}
-
-/* =============================================================================
-   6. COVER PAGE
-   ============================================================================= */
-
-.page--cover {
-  background: var(--c-black);
+.page-footer {
+  flex: 0 0 9mm;
+  display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
-.page--cover::after {
-  content: '';
-  position: absolute;
-  bottom: -40px;
-  right: -40px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(254, 156, 225, 0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.cover-logo {
-  height: 54px;
-  width: auto;
-  display: block;
-  margin-bottom: var(--sp-8);
-}
-
-.cover-eyebrow {
-  font-family: var(--font-sans);
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c-pink);
-  margin-bottom: var(--sp-3);
-}
-
-.cover-title {
-  font-family: var(--font-serif);
-  font-size: var(--fs-cover-title);
-  font-weight: 700;
-  color: var(--c-yellow);
-  line-height: 1.15;
-  margin-bottom: var(--sp-4);
-}
-
-.cover-subtitle {
-  font-family: var(--font-sans);
-  font-size: var(--fs-cover-subtitle);
-  color: var(--c-text);
-  line-height: 1.45;
-  margin-bottom: var(--sp-6);
-  max-width: 56ch;
-}
-
-.cover-brand-block {
-  margin-bottom: var(--sp-5);
-}
-
-.cover-brand {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--c-text);
-  margin-bottom: var(--sp-1);
-}
-
-.cover-method {
-  display: inline-block;
-  background: var(--c-pink);
-  color: var(--c-black);
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: var(--sp-1) var(--sp-2);
-  border-radius: var(--r-sm);
-}
-
-.cover-promise {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  color: var(--c-text-sub);
-  font-style: italic;
-  line-height: 1.5;
-  margin-top: var(--sp-5);
-  padding-top: var(--sp-5);
-  border-top: 1px solid rgba(254, 146, 225, 0.2);
-}
-
-/* =============================================================================
-   7. WELCOME PAGE
-   ============================================================================= */
-
-.welcome-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: var(--sp-4);
-}
-
-.welcome-list li {
-  font-size: var(--fs-body);
-  color: var(--c-text-sub);
-  padding: var(--sp-1) 0;
-  padding-left: var(--sp-4);
-  position: relative;
-}
-
-.welcome-list li::before {
-  content: '♩';
-  position: absolute;
-  left: 0;
-  color: var(--c-pink);
-  font-size: 0.75rem;
-}
-
-.welcome-note {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.55;
-  background: var(--c-surface);
-  border-left: 3px solid var(--c-purple);
-  padding: var(--sp-3) var(--sp-4);
-  border-radius: 0 var(--r-sm) var(--r-sm) 0;
-}
-
-/* =============================================================================
-   8. METHOD CARD
-   ============================================================================= */
-
-.method-section-title {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  color: var(--c-pink);
-  margin-bottom: var(--sp-3);
-}
-
-.method-card {
-  background: var(--c-card);
-  border: 1px solid rgba(204, 157, 234, 0.25);
-  border-radius: var(--r-lg);
-  padding: var(--sp-4) var(--sp-5);
-  margin-bottom: var(--sp-4);
-  box-shadow: var(--shadow-card);
-  break-inside: avoid;
-}
-
-.method-card-example {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--sp-1) var(--sp-3);
-  font-size: var(--fs-body);
-  margin-bottom: var(--sp-3);
-}
-
-.method-card-example .me-lang {
-  color: var(--c-text-muted);
-  font-style: italic;
-  white-space: nowrap;
-}
-
-.method-card-example .me-english {
-  color: var(--c-text);
-}
-
-.method-card-example .me-pronunciation {
-  color: var(--c-pink);
-  font-family: var(--font-serif);
-  font-style: italic;
-  letter-spacing: 0.04em;
-}
-
-.method-note {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.55;
-}
-
-/* =============================================================================
-   9. FOUR-STEP PRACTICE FLOW
-   ============================================================================= */
-
-.steps-title {
-  font-family: var(--font-serif);
-  font-size: 1.0rem;
-  color: var(--c-yellow);
-  margin-bottom: var(--sp-3);
-}
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--sp-3);
-}
-
-.step-card {
-  background: var(--c-card);
-  border: 1px solid rgba(204, 157, 234, 0.18);
-  border-radius: var(--r-md);
-  padding: var(--sp-3);
-}
-
-.step-num {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  color: var(--c-yellow);
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: var(--sp-1);
-}
-
-.step-name {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--c-text);
-  margin-bottom: var(--sp-1);
-}
-
-.step-desc {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.5;
-}
-
-/* =============================================================================
-   10. SONG DIVIDER PAGE
-   ============================================================================= */
-
-.page--song-divider {
-  background: var(--c-page);
-}
-
-.song-divider-bar {
-  height: 3px;
-  background: linear-gradient(to right, var(--c-pink), var(--c-purple));
-  border-radius: 2px;
-  margin-bottom: var(--sp-6);
-}
-
-.song-num-label {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c-purple);
-  margin-bottom: var(--sp-2);
-}
-
-.song-title {
-  font-family: var(--font-serif);
-  font-size: 1.7rem;
-  color: var(--c-yellow);
-  line-height: 1.15;
-  margin-bottom: var(--sp-2);
-}
-
-.song-artist {
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  color: var(--c-pink);
-  margin-bottom: var(--sp-5);
-}
-
-.song-meta {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-  margin-bottom: var(--sp-5);
-}
-
-.song-meta-row {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: var(--sp-2);
-  font-size: var(--fs-small);
-}
-
-.song-meta-label {
-  color: var(--c-purple);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: 0.6rem;
-  padding-top: 2px;
-}
-
-.song-meta-value {
-  color: var(--c-text-sub);
-  line-height: 1.5;
-}
-
-.song-listen-cta {
-  background: var(--c-surface);
-  border: 1px solid rgba(254, 226, 150, 0.25);
-  border-radius: var(--r-md);
-  padding: var(--sp-3) var(--sp-4);
-  font-size: var(--fs-small);
-}
-
-.song-listen-label {
-  color: var(--c-text-muted);
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: var(--sp-1);
-}
-
-.song-listen-link {
-  color: var(--c-yellow);
-  font-size: var(--fs-small);
-  font-weight: 600;
-  word-break: break-all;
-}
-
-.song-before-note {
-  margin-top: var(--sp-4);
-  padding: var(--sp-3) var(--sp-4);
-  background: var(--c-surface);
-  border-left: 3px solid var(--c-pink);
-  border-radius: 0 var(--r-sm) var(--r-sm) 0;
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.55;
-}
-
-/* =============================================================================
-   11. ACCENT NOTE (SLY-specific learner note)
-   ============================================================================= */
-
-.accent-note {
-  background: var(--c-surface);
-  border: 1px solid rgba(254, 156, 225, 0.2);
-  border-radius: var(--r-md);
-  padding: var(--sp-3) var(--sp-4);
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.6;
-  margin-bottom: var(--sp-4);
-}
-
-.accent-note-label {
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: var(--c-pink);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  display: block;
-  margin-bottom: var(--sp-2);
-}
-
-/* =============================================================================
-   12. LEARNING FRAGMENT CARD
-   ============================================================================= */
-
-.fragment-card {
-  background: var(--c-card);
-  border: 1px solid rgba(204, 157, 234, 0.22);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  margin-bottom: var(--sp-4);
-  break-inside: avoid;
-  page-break-inside: avoid;
-  box-shadow: var(--shadow-card);
-}
-
-.fragment-card-title {
-  font-family: var(--font-sans);
-  font-size: var(--fs-small);
-  color: var(--c-purple);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: var(--sp-2) var(--sp-4);
-  border-bottom: 1px solid rgba(204, 157, 234, 0.12);
-}
-
-.frag-row {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: var(--sp-2);
-  padding: var(--sp-2) var(--sp-4);
-  border-bottom: 1px solid rgba(255, 249, 254, 0.05);
-  align-items: start;
-}
-
-.frag-row:last-of-type {
-  border-bottom: none;
-}
-
-.frag-label {
-  font-size: 0.58rem;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  color: var(--c-purple);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding-top: 2px;
-  line-height: 1.4;
-}
-
-.frag-value {
-  font-size: var(--fs-body);
-  color: var(--c-text);
-  line-height: 1.5;
-}
-
-.frag-row--fragment {
-  background: rgba(254, 226, 150, 0.05);
-}
-
-.frag-row--fragment .frag-value {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--c-yellow);
-}
-
-.frag-row--pronunciation {
-  background: rgba(254, 156, 225, 0.07);
-}
-
-.frag-row--pronunciation .frag-value {
-  color: var(--c-text);
-}
-
-.pronunciation-text {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--c-pink);
-  letter-spacing: 0.04em;
-  margin-bottom: var(--sp-1);
-}
-
-.pronunciation-note {
-  display: block;
-  font-size: 0.68rem;
-  color: var(--c-text-sub);
-  line-height: 1.5;
-}
-
-.vocab-list {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-1);
-}
-
-.vocab-list li {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.4;
-}
-
-.vocab-list strong {
-  color: var(--c-text);
-}
-
-.example-quote {
-  font-size: var(--fs-small);
-  color: var(--c-text);
-  font-style: italic;
-  display: block;
-  margin-bottom: var(--sp-1);
-}
-
-.example-translation {
-  font-size: var(--fs-small);
-  color: var(--c-text-muted);
-  font-style: italic;
-  display: block;
-}
-
-.frag-row--exercise {
-  background: rgba(204, 157, 234, 0.04);
-}
-
-.exercise-text {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.55;
-}
-
-.fragment-footer {
-  padding: var(--sp-3) var(--sp-4);
-  background: rgba(1, 1, 1, 0.4);
-  border-top: 1px solid rgba(204, 157, 234, 0.1);
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--sp-3);
-}
-
-.repite-text {
-  font-size: 0.68rem;
-  color: var(--c-text-muted);
-  line-height: 1.5;
-  flex: 1;
-}
-
-.repite-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: var(--c-pink);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  margin-right: var(--sp-2);
-  flex-shrink: 0;
-}
-
-.progress-check {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-1);
-  font-size: 0.65rem;
-  color: var(--c-purple);
-  white-space: nowrap;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.progress-check input[type="checkbox"] {
-  accent-color: var(--c-purple);
-  width: 12px;
-  height: 12px;
-}
-
-/* =============================================================================
-   13. EXERCISE VARIANTS
-   ============================================================================= */
-
-.exercise-options {
-  list-style: upper-alpha;
-  padding-left: var(--sp-5);
-  margin-top: var(--sp-2);
-}
-
-.exercise-options li {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  margin-bottom: var(--sp-1);
-  line-height: 1.5;
-}
-
-.exercise-write-line {
-  border-bottom: 1px solid rgba(204, 157, 234, 0.3);
-  margin-top: var(--sp-3);
-  height: 22px;
-}
-
-.exercise-rating-row {
-  display: flex;
-  gap: var(--sp-2);
-  margin-top: var(--sp-2);
-  flex-wrap: wrap;
-}
-
-.rating-option {
-  background: var(--c-card);
-  border: 1px solid rgba(204, 157, 234, 0.2);
-  border-radius: var(--r-sm);
-  padding: var(--sp-1) var(--sp-3);
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  font-family: var(--font-sans);
-}
-
-/* =============================================================================
-   14. QUICK REVIEW
-   ============================================================================= */
-
-.quick-review {
-  background: var(--c-surface);
-  border: 1px solid rgba(254, 226, 150, 0.15);
-  border-radius: var(--r-md);
-  padding: var(--sp-3) var(--sp-4);
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-.quick-review-title {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--c-yellow);
-  margin-bottom: var(--sp-3);
-}
-
-.quick-review ol {
-  padding-left: var(--sp-4);
-}
-
-.quick-review li {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  margin-bottom: var(--sp-2);
-  line-height: 1.5;
-}
-
-.confidence-scale {
-  display: flex;
-  gap: var(--sp-2);
-  margin-top: var(--sp-2);
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.confidence-label {
-  font-size: 0.62rem;
-  color: var(--c-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-right: var(--sp-1);
-}
-
-.confidence-pip {
-  width: 22px;
-  height: 22px;
-  border: 1px solid rgba(204, 157, 234, 0.4);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.6rem;
-  color: var(--c-purple);
-  font-family: var(--font-sans);
-}
-
-.quick-review-check {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-  margin-top: var(--sp-3);
-  font-size: 0.65rem;
-  color: var(--c-purple);
-  cursor: pointer;
-}
-
-.quick-review-check input {
-  accent-color: var(--c-purple);
-}
-
-/* =============================================================================
-   15. THREE-DAY CHALLENGE
-   ============================================================================= */
-
-.challenge-title {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--c-yellow);
-  margin-bottom: var(--sp-2);
-}
-
-.challenge-intro {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  margin-bottom: var(--sp-5);
-  line-height: 1.55;
-}
-
-.challenge-days {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-}
-
-.challenge-day {
-  background: var(--c-card);
-  border: 1px solid rgba(204, 157, 234, 0.18);
-  border-radius: var(--r-md);
-  padding: var(--sp-3) var(--sp-4);
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-.challenge-day-label {
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: var(--c-pink);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  margin-bottom: var(--sp-1);
-}
-
-.challenge-day-title {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--c-text);
-  margin-bottom: var(--sp-2);
-}
-
-.challenge-day ol {
-  padding-left: var(--sp-4);
-}
-
-.challenge-day li {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  margin-bottom: var(--sp-1);
-  line-height: 1.5;
-}
-
-.challenge-day-goal {
-  font-size: 0.65rem;
-  color: var(--c-text-muted);
-  font-style: italic;
-  margin-top: var(--sp-2);
-}
-
-.challenge-day-check {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-1);
-  margin-top: var(--sp-2);
-  font-size: 0.65rem;
-  color: var(--c-purple);
-  cursor: pointer;
-}
-
-.challenge-day-check input {
-  accent-color: var(--c-purple);
-}
-
-/* Tighter spacing on challenge page to fit all three cards in A5 */
-.page--challenge .challenge-title {
-  margin-bottom: var(--sp-1);
-}
-
-.page--challenge .challenge-intro {
-  margin-bottom: var(--sp-2);
-}
-
-.page--challenge .challenge-days {
-  gap: var(--sp-2);
-}
-
-.page--challenge .challenge-day {
-  padding: var(--sp-2) var(--sp-3);
-}
-
-.page--challenge .challenge-day-title {
-  margin-bottom: var(--sp-1);
-}
-
-.page--challenge .challenge-day li {
-  margin-bottom: 2px;
-  line-height: 1.4;
-}
-
-.page--challenge .challenge-day-goal {
-  margin-top: var(--sp-1);
-}
-
-.page--challenge .challenge-day-check {
-  margin-top: var(--sp-1);
-}
-
-/* Selfcheck + CTA page tighter spacing */
-.page--selfcheck .selfcheck-title {
-  margin-bottom: var(--sp-2);
-}
-
-.page--selfcheck .selfcheck-section-label {
-  margin-bottom: var(--sp-1);
-}
-
-.page--selfcheck .selfcheck-list {
-  margin-bottom: var(--sp-2);
-}
-
-.page--selfcheck .selfcheck-list li {
-  padding: 2px 0;
-}
-
-.page--selfcheck .confidence-table {
-  margin-bottom: var(--sp-2);
-}
-
-.page--selfcheck .cta-divider {
-  margin: var(--sp-2) 0;
-}
-
-.page--selfcheck .cta-title {
-  font-size: 1.05rem;
-  margin-bottom: var(--sp-1);
-}
-
-.page--selfcheck .cta-intro {
-  font-size: 0.7rem;
-  margin-bottom: var(--sp-2);
-  line-height: 1.5;
-}
-
-.page--selfcheck .cta-block {
-  margin-bottom: var(--sp-2);
-}
-
-/* TR-02/TR-03 page-specific density — keeps the full repítelo sentence within A5 */
-.page--tr2 .page-header,
-.page--tr3 .page-header {
-  margin-bottom: var(--sp-3);
-}
-.page--tr2 .fragment-card,
-.page--tr3 .fragment-card {
-  margin-bottom: var(--sp-2);
-}
-.page--tr2 .fragment-footer,
-.page--tr3 .fragment-footer {
-  padding: var(--sp-2) var(--sp-4);
-}
-
-.page--tr2 .frag-row {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.page--tr2 .fragment-card-title {
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.page--tr2 .frag-value {
-  font-size: 0.82rem;
-  line-height: 1.4;
-}
-
-.page--tr2 .frag-row--fragment .frag-value {
-  font-size: 1rem;
-}
-
-.page--tr2 .pronunciation-text {
-  font-size: 0.9rem;
-}
-
-.page--tr2 .pronunciation-note,
-.page--tr2 .vocab-list li,
-.page--tr2 .example-quote,
-.page--tr2 .example-translation,
-.page--tr2 .exercise-text,
-.page--tr2 .repite-text {
-  font-size: 0.66rem;
-  line-height: 1.38;
-}
-
-.page--tr2 .repite-text {
-  line-height: 1.35;
-}
-
-/* =============================================================================
-   16. SELF-ASSESSMENT PAGE
-   ============================================================================= */
-
-.selfcheck-title {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  color: var(--c-yellow);
-  margin-bottom: var(--sp-4);
-}
-
-.selfcheck-section-label {
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: var(--c-purple);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: var(--sp-2);
-}
-
-.selfcheck-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: var(--sp-3);
-}
-
-.selfcheck-list li {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  padding: var(--sp-1) 0;
-  line-height: 1.45;
-}
-
-.selfcheck-list input[type="checkbox"] {
-  accent-color: var(--c-purple);
-  flex-shrink: 0;
-}
-
-.confidence-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--fs-small);
-  margin-bottom: var(--sp-3);
-}
-
-.confidence-table th {
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: var(--c-purple);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: center;
-  padding: var(--sp-1);
-  border-bottom: 1px solid rgba(204, 157, 234, 0.2);
-}
-
-.confidence-table th:first-child {
-  text-align: left;
-}
-
-.confidence-table td {
-  text-align: center;
-  padding: var(--sp-1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  color: var(--c-text-muted);
-  font-size: 0.7rem;
-}
-
-/* Rating cells: larger ○ markers, clearly markable on paper */
-.confidence-table td:not(:first-child) {
-  font-size: 1rem;
-  line-height: 1;
-  color: rgba(204, 157, 234, 0.5);
-}
-
-.confidence-table td:first-child {
-  text-align: left;
-  color: var(--c-text-sub);
-  font-size: var(--fs-small);
-}
-
-/* =============================================================================
-   17. CTA SECTION
-   ============================================================================= */
-
-.cta-title {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  color: var(--c-text);
-  margin-bottom: var(--sp-2);
-}
-
-.cta-intro {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  margin-bottom: var(--sp-3);
-  line-height: 1.55;
-}
-
-.cta-block {
-  margin-bottom: var(--sp-3);
-}
-
-.cta-block-desc {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.5;
-  margin-bottom: var(--sp-2);
-}
-
-.cta-button--primary {
-  display: block;
-  background: var(--c-yellow);
-  color: var(--c-black);
-  text-decoration: none;
-  text-align: center;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: var(--sp-3) var(--sp-4);
-  border-radius: var(--r-md);
-  border: none;
-  letter-spacing: 0.02em;
-}
-
-.cta-button--primary:focus-visible {
-  outline: 2px solid var(--c-yellow);
-  outline-offset: 3px;
-}
-
-.cta-button--secondary {
-  display: block;
-  background: transparent;
-  color: var(--c-purple);
-  text-decoration: none;
-  text-align: center;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: var(--sp-3) var(--sp-4);
-  border-radius: var(--r-md);
-  border: 1px solid var(--c-purple);
-  letter-spacing: 0.02em;
-}
-
-.cta-button--secondary:focus-visible {
-  outline: 2px solid var(--c-purple);
-  outline-offset: 3px;
-}
-
-.cta-link--tertiary {
-  display: block;
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  text-align: center;
-  padding: var(--sp-2) 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.cta-divider {
-  border: none;
-  border-top: 1px solid rgba(204, 157, 234, 0.12);
-  margin: var(--sp-3) 0;
-}
-
-/* =============================================================================
-   18. RIGHTS NOTE PAGE
-   ============================================================================= */
-
-.rights-title {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--c-purple);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: var(--sp-4);
-}
-
-.rights-section {
-  margin-bottom: var(--sp-3);
-}
-
-.rights-section-label {
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: var(--c-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: var(--sp-1);
-}
-
-.rights-body {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.6;
-}
-
-/* =============================================================================
-   19. UTILITY CLASSES
-   ============================================================================= */
-
-/* Short print destination — hidden on screen, shown in print */
-.print-url {
-  display: none;
-}
-
-.section-title {
-  font-family: var(--font-serif);
-  font-size: var(--fs-section-title);
-  color: var(--c-yellow);
-  margin-bottom: var(--sp-4);
-  line-height: 1.2;
-}
-
-.text-body {
-  font-size: var(--fs-body);
-  color: var(--c-text);
-  line-height: 1.6;
-  margin-bottom: var(--sp-3);
-}
-
-.text-small {
-  font-size: var(--fs-small);
-  color: var(--c-text-sub);
-  line-height: 1.55;
-}
-
-.mt-sm  { margin-top: var(--sp-3); }
-.mt-md  { margin-top: var(--sp-4); }
-.mt-lg  { margin-top: var(--sp-6); }
-.mb-sm  { margin-bottom: var(--sp-3); }
-.mb-md  { margin-bottom: var(--sp-4); }
-.mb-lg  { margin-bottom: var(--sp-6); }
-
-/* =============================================================================
-   20. NARROW SCREEN STYLES
-   ============================================================================= */
-
-@media screen and (max-width: 600px) {
-  :root {
-    --page-px: 5vw;
-    --page-py: 6vw;
+  gap: 8px;
+  min-height: 9mm;
+  margin-top: 4mm;
+  padding-top: 3mm;
+  border-top: .25mm solid var(--c-line);
+  color: var(--c-muted);
+  font-size: 8.5pt;
+}
+
+.page-footer span:last-child { color: var(--c-yellow); font-size: 11pt; font-weight: 800; }
+
+.cover-layout { display: flex; flex: 1; flex-direction: column; justify-content: space-between; padding: 5mm 3mm 0; }
+.cover-brand { max-width: 55mm; }
+.brand-logo { display: block; width: 100%; height: auto; max-height: 24mm; object-fit: contain; object-position: left center; }
+.secondary-identity { margin-top: 2mm; color: var(--c-muted); font-family: Georgia, "Times New Roman", Palatino, serif; font-size: 12pt; font-style: italic; }
+.cover-copy { max-width: 103mm; }
+.cover-copy h1 { max-width: 94mm; font-size: 34pt; }
+.method-line { font-size: 15pt; }
+.cover-stat { display: inline-block; margin: 4mm 0; padding: 2mm 3mm; color: var(--c-ink); background: var(--c-yellow); font-weight: 800; }
+.cover-audience { color: var(--c-muted); font-style: italic; }
+.cover-progress { margin: 0; color: var(--c-pink); font-size: 9pt; font-weight: 750; text-transform: uppercase; }
+
+.two-card-grid, .notation-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3mm; }
+.info-card, .method-card, .time-card, .mini-practice-map, .prediction-card, .listen-note, .objective-box, .challenge-card { break-inside: avoid; }
+.info-card { padding: 3.3mm; border: .25mm solid var(--c-line); background: var(--c-surface); }
+.info-card h2 { margin-top: 0; }
+.info-card--yes { border-top: 1mm solid var(--c-yellow); }
+.info-card--no { border-top: 1mm solid var(--c-purple); }
+.info-card ul { padding-left: 4mm; }
+.time-card { margin-top: 3mm; padding: 3mm 3.3mm; border-left: 1mm solid var(--c-pink); background: var(--c-surface-raised); }
+.time-card h2 { margin-top: 0; }
+.time-card p { margin-bottom: 1mm; }
+.support-copy { color: var(--c-muted); font-size: 10pt; }
+.completion-check { display: inline-flex; align-items: center; gap: 2mm; margin-top: 2mm; font-weight: 750; }
+input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
+
+.method-card { margin-bottom: 3mm; padding: 4mm; border-left: 1.2mm solid var(--c-yellow); background: var(--c-surface-raised); font-size: 11.25pt; }
+.notation-columns { margin-top: 3mm; }
+.notation-columns > article { min-width: 0; }
+.compact-list { padding-left: 4mm; font-size: 10.5pt; }
+.legend-card { padding: 3mm; background: #211B2B; border: .25mm solid #786083; }
+.legend-card h2 { margin-top: 0; }
+.sound-legend { margin: 0; }
+.sound-legend div { display: grid; grid-template-columns: 7mm 1fr; gap: 1.5mm; padding: 1.5mm 0; border-top: .2mm solid rgba(255, 249, 254, .16); }
+.sound-legend div:first-child { border-top: 0; }
+.sound-legend dt { display: grid; place-items: center; min-height: 6mm; color: var(--c-ink); background: var(--c-yellow); font-weight: 900; }
+.sound-legend dd { margin: 0; font-size: 10pt; }
+
+.steps-flow { display: grid; gap: 2mm; padding: 0; list-style: none; counter-reset: steps; }
+.learning-path { display: flex; align-items: center; gap: 2mm; margin: 3mm 0; color: var(--c-muted); font-size: 10pt; font-weight: 750; }
+.learning-path b { color: var(--c-yellow); font-size: 13pt; }
+.learning-path span:last-child { color: var(--c-pink); }
+.steps-flow li { display: grid; grid-template-columns: 9mm 1fr; gap: 2.5mm; align-items: start; padding: 2.2mm 3mm; border: .25mm solid var(--c-line); background: var(--c-surface); break-inside: avoid; }
+.steps-flow p { margin: 0; }
+.step-number { display: grid; place-items: center; width: 7mm; height: 7mm; color: var(--c-ink); background: var(--c-purple); font-weight: 900; }
+.step-active { border-color: var(--c-yellow) !important; background: #2A2226 !important; }
+.step-active .step-number { background: var(--c-yellow); }
+.mini-practice-map { margin: 3mm 0; padding: 3mm; border: .25mm solid var(--c-purple); background: #1A1520; }
+.mini-practice-map .eyebrow { margin-bottom: 2mm; }
+.mini-map-grid { display: flex; flex-wrap: wrap; gap: 1.5mm; }
+.mini-map-grid span { padding: 1mm 1.6mm; border: .25mm solid var(--c-line); color: var(--c-muted); font-size: 10pt; }
+
+.journey-map { display: grid; gap: 3mm; padding: 0; list-style: none; }
+.journey-map li { display: grid; grid-template-columns: 11mm 1fr; gap: 3mm; align-items: start; padding: 3mm; border-left: 1mm solid var(--c-purple); background: var(--c-surface); break-inside: avoid; }
+.journey-map li:nth-child(2) { border-left-color: var(--c-pink); }
+.journey-map li:nth-child(3) { border-left-color: var(--c-yellow); }
+.journey-map h2 { margin: 0 0 1mm; font-size: 13pt; }
+.journey-map p { margin: 0; }
+.journey-marker { display: grid; place-items: center; width: 8mm; height: 8mm; color: var(--c-ink); background: var(--c-purple); font-weight: 900; }
+.journey-map li:nth-child(2) .journey-marker { background: var(--c-pink); }
+.journey-map li:nth-child(3) .journey-marker { background: var(--c-yellow); }
+.milestone { display: flex; align-items: center; gap: 2mm; margin-top: 2mm !important; color: var(--c-muted); font-size: 10pt; }
+.meter { display: inline-block; width: 36mm; height: 3mm; overflow: hidden; vertical-align: middle; background: #3D3541; }
+.meter i { display: block; width: 33%; height: 100%; background: var(--c-purple); }
+.meter--two i { width: 66%; background: var(--c-pink); }
+.meter--three i { width: 100%; background: var(--c-yellow); }
+.prediction-card { margin-top: 3mm; padding: 3mm; border: .25mm solid var(--c-line); }
+.prediction-card h2 { margin-top: 0; }
+.writing-line { display: inline-block; min-width: 45mm; height: 5mm; border-bottom: .25mm solid var(--c-text); vertical-align: bottom; }
+
+.before-after-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 4mm; margin: 5mm 0; }
+.path-card { padding: 5mm; border: .25mm solid var(--c-line); border-top: 1mm solid var(--c-purple); background: var(--c-surface); break-inside: avoid; }
+.path-card--after { border-top-color: var(--c-yellow); background: var(--c-surface-raised); }
+.path-card .eyebrow { margin-bottom: 3mm; }
+.outcome-list { padding-left: 5mm; }
+.outcome-list strong { color: var(--c-yellow); }
+.calibration-card { margin: 4mm 0; padding: 4mm; border-left: 1mm solid var(--c-pink); background: var(--c-surface); color: var(--c-muted); break-inside: avoid; }
+.writing-area--compact { min-height: 9mm; }
+
+.artist-line { margin-top: -2mm; color: var(--c-muted); font-family: Georgia, "Times New Roman", Palatino, serif; font-style: italic; }
+.song-meta { display: flex; flex-wrap: wrap; gap: 2mm 7mm; margin: 3mm 0; padding: 2.5mm 0; border-top: .25mm solid var(--c-line); border-bottom: .25mm solid var(--c-line); }
+.song-meta p { margin: 0; }
+.state-word { color: var(--c-muted); font-weight: 600; }
+.lesson-panel { display: grid; grid-template-columns: 1fr 36mm; gap: 4mm; align-items: center; margin-top: 3mm; padding: 4mm; border: .25mm solid var(--c-yellow); background: #211B1F; break-inside: avoid; }
+.primary-cta { display: inline-block; margin: 1.5mm 0; padding: 2.5mm 3mm; color: var(--c-ink); background: var(--c-yellow); font-weight: 850; text-decoration: none; }
+.primary-cta--survey { background: var(--c-pink); }
+.primary-cta:hover, .primary-cta:focus-visible { outline: .7mm solid var(--c-text); outline-offset: 1mm; }
+.screen-url { display: block; overflow-wrap: anywhere; color: var(--c-muted); font-size: 10pt; }
+.secondary-link { display: inline-block; color: var(--c-text); font-weight: 750; text-decoration-color: var(--c-pink); text-decoration-thickness: .5mm; text-underline-offset: 1mm; }
+.qr-card { display: flex; flex-direction: column; align-items: center; gap: 1.5mm; min-width: 0; padding: 2.5mm; color: var(--c-text); background: #FFF; text-align: center; text-decoration: none; }
+.qr-card img { display: block; width: 30mm; height: 30mm; background: #FFF; object-fit: contain; }
+.qr-card span { color: var(--c-ink); font-size: 10pt; font-weight: 800; }
+.listen-note { margin-top: 3mm; padding: 3mm; border-left: 1mm solid var(--c-purple); background: var(--c-surface); }
+.listen-note p { margin: 0; }
+.accent-note { margin: 2.5mm 0; padding: 2.5mm 3mm; border-left: 1mm solid var(--c-pink); background: var(--c-surface); color: var(--c-muted); font-size: 10pt; }
+.accent-note p { margin: 0; }
+
+.practice-kicker { margin-top: -2mm; color: var(--c-muted); font-size: 9pt; font-style: italic; }
+.practice-card { overflow: hidden; border: .25mm solid #667584; background: #151B22; break-inside: avoid; }
+.practice-rows { margin: 0; }
+.practice-row { display: grid; grid-template-columns: 34mm 1fr; border-top: .25mm solid #50606D; }
+.practice-row:first-child { border-top: 0; }
+.practice-row dt { padding: 2.2mm; color: var(--c-muted); background: #1E2A35; font-size: 10pt; font-weight: 800; }
+.practice-row dd { margin: 0; padding: 2.2mm 2.6mm; font-size: 10.5pt; }
+.pronunciation-row dd { color: var(--c-yellow); font-size: 12pt; }
+.meaning-row dd { background: rgba(204, 157, 234, .1); }
+.exercise-row dd { background: rgba(254, 156, 225, .1); }
+.writing-area { display: grid; gap: 4mm; min-height: 15mm; padding: 3mm; background: #FFF9FE; }
+.writing-area span { border-bottom: .25mm solid #605563; }
+.writing-area--large { min-height: 28mm; }
+.writing-label, .reduction-check { margin: 2mm 3mm 0; font-size: 10pt; }
+.repeat-footer { margin: 0; padding: 3mm; color: var(--c-muted); font-size: 10pt; }
+.practice-card .completion-check { margin: 0; padding: 0 3mm 3mm; }
+
+.table-wrap { overflow: visible; break-inside: avoid; }
+.review-table { width: 100%; border-collapse: collapse; font-size: 10pt; }
+.review-table { table-layout: fixed; }
+.review-table th, .review-table td { padding: 2.2mm; border: .25mm solid var(--c-line); text-align: left; vertical-align: top; }
+.review-table th { color: var(--c-ink); background: var(--c-yellow); font-weight: 850; }
+.review-table td:last-child, .review-table th:last-child { width: 18mm; text-align: center; }
+.review-table input { width: 4.5mm; height: 4.5mm; }
+.reflection-fields { margin-top: 4mm; }
+.reflection-fields p { display: flex; flex-wrap: wrap; gap: 2mm; align-items: flex-end; }
+.confidence-scale { margin: 3mm 0; padding: 3mm; border-left: 1mm solid var(--c-pink); background: var(--c-surface); }
+.confidence-scale p { margin-bottom: 1.5mm; }
+.scale-options { display: flex; gap: 2mm; }
+.scale-options label { display: inline-flex; align-items: center; gap: 1mm; padding: 1.5mm 2mm; border: .25mm solid var(--c-line); }
+.completion-progress { display: flex; align-items: center; justify-content: space-between; gap: 3mm; margin-top: 4mm; }
+.meter--half i { width: 50%; background: var(--c-pink); }
+.choice-card, .recall-card { margin-top: 4mm; padding: 4mm; border: .25mm solid var(--c-purple); background: var(--c-surface); break-inside: avoid; }
+.choice-card h2, .recall-card h2 { margin-top: 0; }
+.choice-card h2 span { color: var(--c-muted); font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10pt; font-weight: 500; }
+.choice-list { display: grid; gap: 2mm; margin-bottom: 3mm; }
+.choice-list .writing-line { width: 100%; }
+.recall-card p { margin-bottom: 2mm; }
+
+.challenge-card { padding: 5mm; border: .25mm solid var(--c-pink); background: #211824; }
+.challenge-card h1 { max-width: 100mm; }
+.time-chip { display: inline-block; padding: 1.5mm 2.5mm; color: var(--c-ink); background: var(--c-purple); font-weight: 800; }
+.challenge-steps { display: grid; gap: 2.5mm; margin: 4mm 0; padding-left: 6mm; }
+.challenge-steps li { padding-left: 1.5mm; }
+.objective-box { margin: 4mm 0; padding: 3mm; border-left: 1mm solid var(--c-yellow); background: var(--c-surface); }
+.objective-box p { margin: 0; }
+.check-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2mm; padding: 0; list-style: none; }
+.check-list li { margin: 0; padding: 2mm; border: .25mm solid var(--c-line); background: var(--c-surface); }
+.check-list label { display: flex; align-items: center; gap: 2mm; }
+.support-inline { color: var(--c-muted); font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10pt; font-weight: 500; }
+.confidence-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 10pt; }
+.confidence-table th, .confidence-table td { padding: 2mm; border: .25mm solid var(--c-line); text-align: center; }
+.confidence-table th { color: var(--c-ink); background: var(--c-purple); }
+.confidence-table th:first-child, .confidence-table td:first-child { width: 64mm; text-align: left; }
+.confidence-table td:not(:first-child) { font-size: 15pt; }
+
+/* Dense A5 page families retain the shared type scale and recover space through rhythm. */
+.page--opening .page-header,
+.page--method .page-header,
+.page--steps .page-header,
+.page--challenge .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
+
+.page--opening h1 { margin-bottom: 2.5mm; font-size: 21pt; }
+.page--opening h2 { margin: 2.5mm 0 1.5mm; font-size: 12.5pt; }
+.page--opening p { margin-bottom: 1.6mm; line-height: 1.28; }
+.page--opening .audience-list { margin-bottom: 2mm; }
+.page--opening .two-card-grid { gap: 2mm; }
+.page--opening .info-card { padding: 2mm; }
+.page--opening .info-card ul { margin-bottom: 0; }
+.page--opening .info-card li + li { margin-top: .7mm; }
+.page--opening .time-card { margin-top: 2mm; padding: 2.2mm 2.5mm; }
+.page--opening .support-copy { margin-top: 2mm; }
+.page--opening .completion-check { margin-top: 1.5mm; }
+
+.page--method h1 { margin-bottom: 2mm; font-size: 18.5pt; }
+.page--method h2 { margin: 1.5mm 0 1mm; font-size: 11.5pt; }
+.page--method .method-card { margin-bottom: 1.5mm; padding: 1.7mm 2.4mm; font-size: 10.5pt; line-height: 1.16; }
+.page--method .two-card-grid { gap: 2mm; }
+.page--method .info-card { padding: 1.6mm 1.8mm; }
+.page--method .info-card ul { margin-bottom: 0; padding-left: 3.5mm; }
+.page--method .info-card li { font-size: 10pt; line-height: 1.1; }
+.page--method .info-card li + li { margin-top: .35mm; }
+.page--method .notation-columns { gap: 1.5mm; margin-top: 1.5mm; }
+.page--method .compact-list { margin-bottom: 0; padding-left: 3.2mm; font-size: 10pt; line-height: 1.1; }
+.page--method .compact-list li + li { margin-top: .35mm; }
+.page--method .legend-card { padding: 1.6mm; }
+.page--method .sound-legend div { grid-template-columns: 5.5mm 1fr; gap: 1mm; padding: .45mm 0; }
+.page--method .sound-legend dt { min-height: 5.5mm; }
+.page--method .sound-legend dd { font-size: 10pt; line-height: 1.1; }
+.page--method .support-copy { margin: 1mm 0 0; line-height: 1.14; }
+
+.page--steps h1 { margin-bottom: 2.5mm; font-size: 21pt; }
+.page--steps .learning-path { margin: 2mm 0; }
+.page--steps .steps-flow { gap: 1.2mm; }
+.page--steps .steps-flow li { gap: 2mm; padding: 1.5mm 2.3mm; }
+.page--steps .step-number { width: 6.5mm; height: 6.5mm; }
+.page--steps .mini-practice-map { margin: 2mm 0; padding: 2.2mm; }
+.page--steps .mini-practice-map .eyebrow { margin-bottom: 1.3mm; }
+.page--steps .mini-map-grid { gap: 1mm; }
+.page--steps .mini-map-grid span { padding: .7mm 1.2mm; }
+.page--steps .page-content > p:last-of-type { margin-bottom: 1.5mm; line-height: 1.3; }
+.page--steps .completion-check { margin-top: 1mm; }
+
+.page--challenge h1 { margin-bottom: 2.5mm; font-size: 20pt; }
+.page--challenge .challenge-card { padding: 3mm; }
+.page--challenge .eyebrow { margin-bottom: 1mm; }
+.page--challenge .time-chip { padding: 1.1mm 2mm; }
+.page--challenge .challenge-steps { gap: 1.3mm; margin: 2.5mm 0; padding-left: 5mm; }
+.page--challenge .challenge-steps li { padding-left: 1mm; }
+.page--challenge .objective-box { margin: 2.5mm 0; padding: 2mm 2.5mm; }
+.page--challenge .writing-area--large { min-height: 20mm; }
+.page--challenge .writing-area { gap: 3mm; padding: 2.5mm; }
+.page--challenge .completion-check { margin-top: 1.5mm; }
+.page--challenge .completion-progress { margin: 2.5mm 0 0; }
+
+.page--song[data-final-page="12"] h1 { margin-bottom: 2mm; }
+.page--song[data-final-page="12"] .song-meta { margin: 2mm 0; }
+.page--song[data-final-page="12"] .lesson-panel { margin-top: 2mm; padding: 3mm; }
+.page--song[data-final-page="12"] .lesson-panel p { margin-bottom: 1.5mm; }
+.page--song[data-final-page="12"] .completion-check { margin-top: 1.5mm; }
+
+.page--practice[data-final-page="14"] .practice-row dd,
+.page--practice[data-final-page="15"] .practice-row dd,
+.page--practice[data-final-page="19"] .practice-row dd,
+.page--practice[data-final-page="20"] .practice-row dd { line-height: 1.08; }
+.page--practice[data-final-page="14"] .writing-area,
+.page--practice[data-final-page="15"] .writing-area,
+.page--practice[data-final-page="19"] .writing-area,
+.page--practice[data-final-page="20"] .writing-area { min-height: 9mm; }
+.page--practice[data-final-page="20"] .writing-area { min-height: 10mm; }
+.page--practice[data-final-page="20"] .reduction-check { line-height: 1.15; }
+
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) .page-header { margin-bottom: 2mm; padding-bottom: 1.5mm; }
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) h1 { margin-bottom: 1mm; font-size: 19pt; }
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) .practice-kicker { margin-bottom: 1mm; }
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) .practice-row dt,
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) .practice-row dd { padding-top: .7mm; padding-bottom: .7mm; line-height: 1.06; }
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) .writing-area { min-height: 8mm; padding: 1.5mm 2mm; }
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) .repeat-footer { padding: 1.5mm 2mm; }
+.page--practice:is(
+  [data-final-page="9"],
+  [data-final-page="13"],
+  [data-final-page="15"],
+  [data-final-page="20"]
+) .completion-check { padding-bottom: 1.5mm; }
+
+.page--review h1, .page--selfcheck h1 { font-size: 21pt; }
+.page--review[data-final-page="22"] .heading-break { display: block; }
+.page--review .review-table th, .page--review .review-table td { padding: 1.7mm; }
+.page--review .completion-progress { margin-top: 3mm; }
+.page--selfcheck .page-header, .page--review .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
+.page--selfcheck h2 { margin: 2.5mm 0 1.5mm; }
+.page--selfcheck .reflection-fields { margin-top: 3mm; }
+
+.page--completion[data-final-page="16"] .page-header { margin-bottom: 2mm; padding-bottom: 1.5mm; }
+.page--completion[data-final-page="16"] h1 { margin-bottom: 1.5mm; font-size: 20pt; }
+.page--completion[data-final-page="16"] h2 { margin: 1.5mm 0 1mm; font-size: 12.5pt; }
+.page--completion[data-final-page="16"] .review-table th,
+.page--completion[data-final-page="16"] .review-table td { padding: 1.25mm; }
+.page--completion[data-final-page="16"] .reflection-fields { margin-top: 2mm; }
+.page--completion[data-final-page="16"] .reflection-fields p { margin-bottom: 1.5mm; }
+.page--completion[data-final-page="16"] .confidence-scale { margin: 2mm 0; padding: 2mm; }
+.page--completion[data-final-page="16"] .scale-options label { padding: 1mm 1.5mm; }
+.page--completion[data-final-page="16"] .completion-check { margin-top: 1mm; }
+.page--completion[data-final-page="16"] .completion-progress { margin-top: 2mm; }
+
+.page--review[data-final-page="23"] .page-header { margin-bottom: 2mm; padding-bottom: 1.5mm; }
+.page--review[data-final-page="23"] h1 { margin-bottom: 2mm; font-size: 19pt; }
+.page--review[data-final-page="23"] .review-table th,
+.page--review[data-final-page="23"] .review-table td { padding: 1.2mm; }
+.page--review[data-final-page="23"] .choice-card { margin-top: 2mm; padding: 2.5mm; }
+.page--review[data-final-page="23"] .choice-card h2 { margin-bottom: 1mm; }
+.page--review[data-final-page="23"] .choice-list { gap: 1mm; margin-bottom: 1.5mm; }
+.page--review[data-final-page="23"] .choice-card p { margin-bottom: 1.5mm; }
+.page--review[data-final-page="23"] .completion-progress { margin-top: 2mm; }
+
+.mission-layout, .future-layout { display: flex; flex: 1; flex-direction: column; justify-content: center; }
+.mission-card, .future-card { padding: 7mm; border: .25mm solid var(--c-line); background: var(--c-surface-raised); break-inside: avoid; }
+.mission-card { border-top: 1.2mm solid var(--c-yellow); }
+.mission-mantra { margin: 6mm 0; padding: 4mm; color: var(--c-ink); background: var(--c-yellow); font-family: Georgia, "Times New Roman", Palatino, serif; font-size: 17pt; text-align: center; }
+.future-card { margin: 5mm 0; border-top: 1.2mm solid var(--c-purple); }
+.future-card h2 { margin-top: 0; }
+
+.page--practice .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
+.page--practice h1 { margin-bottom: 2mm; font-size: 21pt; }
+.page--practice .practice-kicker { margin-bottom: 1.5mm; }
+.page--practice .practice-card { line-height: 1.14; }
+.page--practice .practice-row dt { padding: 1mm 1.5mm; }
+.page--practice .practice-row dd { padding: 1mm 1.5mm; }
+.page--practice .pronunciation-row dd { font-size: 11pt; }
+.page--practice .writing-area { gap: 2.5mm; min-height: 12mm; padding: 2mm; }
+.page--practice .repeat-footer { padding: 2mm; line-height: 1.16; }
+.page--practice .completion-check { padding: 0 2mm 2mm; }
+
+.page--closing .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
+.page--closing .rights-copy p { margin-bottom: 2mm; line-height: 1.25; }
+.page--closing .canonical-link { margin-top: 2.5mm !important; }
+.page--closing .closing-word { margin-top: 2mm !important; }
+
+.cta-layout { display: grid; grid-template-columns: 1fr 40mm; gap: 5mm; align-items: center; min-height: 150mm; }
+.cta-layout h1 { font-size: 27pt; }
+.qr-card--large { padding: 3mm; }
+.qr-card--large img { width: 34mm; height: 34mm; }
+.privacy-link { margin-top: 4mm; color: var(--c-muted); font-size: 10pt; }
+.privacy-link a, .canonical-link a { color: var(--c-text); overflow-wrap: anywhere; }
+.print-url { display: none; }
+
+.rights-copy h1 { font-size: 20pt; }
+.rights-copy p { font-size: 10pt; }
+.canonical-link { margin-top: 4mm !important; color: var(--c-yellow); font-weight: 850; }
+.closing-word { margin-top: 3mm !important; color: var(--c-pink); font-family: Georgia, "Times New Roman", Palatino, serif; font-size: 16pt !important; }
+
+.page--survey .page-header { margin-bottom: 2mm; padding-bottom: 1.5mm; }
+.page--survey .cta-layout { min-height: 140mm; }
+.page--survey .cta-layout h1 { margin-bottom: 2mm; font-size: 24pt; }
+.page--survey .cta-layout p { margin-bottom: 2mm; }
+.page--survey .compact-list { margin-bottom: 2mm; }
+.page--survey .privacy-link { margin-top: 2mm; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 520px) {
+  .ebook { gap: 18px; padding: 12px; }
+  .page { width: min(100%, var(--page-width)); min-height: 0; padding: 12mm 8mm 13mm; }
+  .page::before { border-width: 1px; }
+  .page-header { align-items: flex-start; flex-direction: column; gap: 2mm; }
+  .brand-lockup { text-align: left; }
+  h1 { font-size: 22pt; }
+  .cover-copy h1 { font-size: 30pt; }
+  .two-card-grid, .notation-columns, .lesson-panel, .cta-layout, .before-after-grid, .check-list { grid-template-columns: 1fr; }
+  .notation-columns { gap: 3mm; }
+  .lesson-panel { gap: 3mm; }
+  .qr-card { justify-self: start; width: 40mm; }
+  .cta-layout { min-height: 0; }
+  .cta-layout .qr-card { justify-self: center; }
+  .practice-row { grid-template-columns: 1fr; }
+  .practice-row dt { padding-bottom: 1mm; }
+  .review-table { display: block; width: 100%; font-size: 10pt; }
+  .review-table thead { display: none; }
+  .review-table tbody { display: grid; gap: 3mm; }
+  .review-table tr { display: block; border: .25mm solid var(--c-line); background: var(--c-surface); }
+  .review-table td,
+  .review-table td:last-child {
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+    min-width: 0;
+    gap: 2mm;
+    padding: 2mm;
+    border: 0;
+    border-top: .2mm solid rgba(255, 249, 254, .2);
+    color: var(--c-text);
+    font-size: 10pt;
+    line-height: 1.32;
+    text-align: left;
   }
-
-  body {
-    padding: var(--sp-3) 0 var(--sp-8);
-    gap: var(--sp-3);
+  .review-table td:first-child { border-top: 0; }
+  .review-table td::before {
+    flex: 0 0 41%;
+    content: attr(data-label);
+    color: var(--c-yellow);
+    font-weight: 800;
   }
-
-  .page {
-    width: 100%;
-    min-height: auto;
-    box-shadow: none;
-    border-radius: 0;
-  }
-
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .frag-row {
-    grid-template-columns: 80px 1fr;
-  }
-
-  .song-meta-row {
-    grid-template-columns: 90px 1fr;
-  }
-
-  .cover-title {
-    font-size: 1.6rem;
-  }
-
-  .fragment-footer {
-    flex-wrap: wrap;
-    gap: var(--sp-2);
-  }
-
-  .exercise-rating-row {
-    flex-wrap: wrap;
-  }
+  .review-table td:last-child { align-items: center; }
+  .review-table td:last-child input { flex: 0 0 auto; }
+  .completion-progress { align-items: flex-start; flex-direction: column; }
+  .meter { width: 100%; max-width: 52mm; }
+  .confidence-table th:first-child, .confidence-table td:first-child { width: 45%; }
+  .mission-card, .future-card { padding: 4mm; }
 }
 
-/* =============================================================================
-   21. PRINT STYLES
-   ============================================================================= */
-
-@page {
-  size: A5 portrait;
-  margin: 0;
-}
+@page { size: A5 portrait; margin: 0; }
 
 @media print {
-  body {
-    background: none;
-    padding: 0;
-    gap: 0;
-    display: block;
-    align-items: initial;
-  }
-
-  .page {
-    width: 148mm;
-    height: 210mm;
-    min-height: unset;
-    box-shadow: none;
-    border-radius: 0;
-    overflow: hidden;
-    break-after: page;
-    page-break-after: always;
-  }
-
-  /* Force brand colors in print */
-  * {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    color-adjust: exact;
-  }
-
-  /* Protect cards from page splits */
-  .fragment-card,
-  .challenge-day,
-  .quick-review,
-  .method-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* Short print destinations: shown only where explicitly marked with .print-url.
-     No automatic a[href]::after expansion. */
-  .print-url {
-    display: inline;
-    font-size: 0.6rem;
-    color: #888;
-    margin-left: 3px;
-    word-break: break-all;
-  }
-}
-
-/* =============================================================================
-   22. REDUCED MOTION
-   ============================================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* =============================================================================
-   23. HIGH-CONTRAST FOCUS
-   ============================================================================= */
-
-:focus-visible {
-  outline: 2px solid var(--c-yellow);
-  outline-offset: 3px;
+  html, body { width: var(--page-width); height: auto; background: var(--c-black); }
+  body { font-size: 10.5pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ebook { display: block; padding: 0; }
+  .page { width: var(--page-width); min-height: var(--page-height); height: var(--page-height); padding: var(--safe-top) var(--safe-x) var(--safe-bottom); overflow: hidden; box-shadow: none; break-after: page; page-break-after: always; }
+  .page:last-child { break-after: auto; page-break-after: auto; }
+  .page-header { margin-bottom: 4mm; }
+  .page-footer { flex: 0 0 9mm; margin-top: auto; padding-top: 2mm; }
+  .page--opening, .page--method, .page--steps, .page--challenge { padding-top: 11mm; padding-bottom: 13mm; }
+  .info-card, .method-card, .time-card, .mini-practice-map, .prediction-card, .listen-note, .lesson-panel, .practice-card, .table-wrap, .challenge-card, .qr-card, .objective-box, .path-card, .calibration-card, .choice-card, .recall-card, .mission-card, .future-card { break-inside: avoid; page-break-inside: avoid; }
+  .screen-url { display: none; }
+  .print-url { display: block; margin: 1mm 0; color: var(--c-muted); font-size: 9pt; }
+  .primary-cta { text-decoration: none; }
+  .privacy-link a, .canonical-link a { text-decoration: none; }
 }
