@@ -2,7 +2,7 @@
 
 ## 1. Scope
 
-This record prepares project-owner visual review of the complete approved 32-page Phase 0 ebook HTML/CSS implementation. It records structural, content, link, QR, responsive and A5 checks without approving the final visual design, generating the committed production PDF or changing the public download or Production delivery.
+This record documents project-owner visual review of the complete approved 32-page Phase 0 ebook HTML/CSS implementation. It preserves the initial requested-changes decision, records the completed corrections and successful corrected re-reviews, and records final visual approval without generating the committed production PDF or changing the public download or Production delivery.
 
 ## 2. Entry gates
 
@@ -27,38 +27,38 @@ Design prototype gate: PASS
 
 | Final page | Page role | Implementation | Structural validation | Project-owner visual review |
 | ---: | --- | --- | --- | --- |
-| 1 | Cover | COMPLETE | PASS | PENDING |
-| 2 | Bienvenida, audiencia y alcance | COMPLETE | PASS | PENDING |
-| 3 | Transformación y resultados de aprendizaje | COMPLETE | PASS | PENDING |
-| 4 | El método: qué hace y qué no hace | COMPLETE | PASS | PENDING |
-| 5 | Cómo usar cada práctica | COMPLETE | PASS | PENDING |
-| 6 | Tu recorrido musical | COMPLETE | PASS | PENDING |
-| 7 | Canción 1: A Thousand Years | COMPLETE | PASS | PENDING |
-| 8 | Canción 1 — Práctica 1 | COMPLETE | PASS | PENDING |
-| 9 | Canción 1 — Práctica 2 | COMPLETE | PASS | PENDING |
-| 10 | Canción 1 — Práctica 3 | COMPLETE | PASS | PENDING |
-| 11 | Cierre de Canción 1 | COMPLETE | PASS | PENDING |
-| 12 | Canción 2: Still Loving You | COMPLETE | PASS | PENDING |
-| 13 | Canción 2 — Práctica 1 | COMPLETE | PASS | PENDING |
-| 14 | Canción 2 — Práctica 2 | COMPLETE | PASS | PENDING |
-| 15 | Canción 2 — Práctica 3 | COMPLETE | PASS | PENDING |
-| 16 | Cierre de Canción 2 | COMPLETE | PASS | PENDING |
-| 17 | Canción 3: The Reason | COMPLETE | PASS | PENDING |
-| 18 | Canción 3 — Práctica 1 | COMPLETE | PASS | PENDING |
-| 19 | Canción 3 — Práctica 2 | COMPLETE | PASS | PENDING |
-| 20 | Canción 3 — Práctica 3 | COMPLETE | PASS | PENDING |
-| 21 | Cierre de Canción 3 | COMPLETE | PASS | PENDING |
-| 22 | Repaso de expresiones 1–5 | COMPLETE | PASS | PENDING |
-| 23 | Repaso de expresiones 6–9 y mis tres elegidas | COMPLETE | PASS | PENDING |
-| 24 | Reto de tres días: Día 1 | COMPLETE | PASS | PENDING |
-| 25 | Reto de tres días: Día 2 | COMPLETE | PASS | PENDING |
-| 26 | Reto de tres días: Día 3 | COMPLETE | PASS | PENDING |
-| 27 | Autochequeo final | COMPLETE | PASS | PENDING |
-| 28 | ¿Quieres seguir practicando? | COMPLETE | PASS | PENDING |
-| 29 | ¿Por qué existe Sing Pronunce Repeat? | COMPLETE | PASS | PENDING |
-| 30 | Próximo paso | COMPLETE | PASS | PENDING |
-| 31 | Ayúdanos a mejorar | COMPLETE | PASS | PENDING |
-| 32 | Nota educativa y de derechos | COMPLETE | PASS | PENDING |
+| 1 | Cover | COMPLETE | PASS | PASS |
+| 2 | Bienvenida, audiencia y alcance | COMPLETE | PASS | PASS |
+| 3 | Transformación y resultados de aprendizaje | COMPLETE | PASS | PASS |
+| 4 | El método: qué hace y qué no hace | COMPLETE | PASS | PASS |
+| 5 | Cómo usar cada práctica | COMPLETE | PASS | PASS |
+| 6 | Tu recorrido musical | COMPLETE | PASS | PASS |
+| 7 | Canción 1: A Thousand Years | COMPLETE | PASS | PASS |
+| 8 | Canción 1 — Práctica 1 | COMPLETE | PASS | PASS |
+| 9 | Canción 1 — Práctica 2 | COMPLETE | PASS | PASS |
+| 10 | Canción 1 — Práctica 3 | COMPLETE | PASS | PASS |
+| 11 | Cierre de Canción 1 | COMPLETE | PASS | PASS |
+| 12 | Canción 2: Still Loving You | COMPLETE | PASS | PASS |
+| 13 | Canción 2 — Práctica 1 | COMPLETE | PASS | PASS |
+| 14 | Canción 2 — Práctica 2 | COMPLETE | PASS | PASS |
+| 15 | Canción 2 — Práctica 3 | COMPLETE | PASS | PASS |
+| 16 | Cierre de Canción 2 | COMPLETE | PASS | PASS |
+| 17 | Canción 3: The Reason | COMPLETE | PASS | PASS |
+| 18 | Canción 3 — Práctica 1 | COMPLETE | PASS | PASS |
+| 19 | Canción 3 — Práctica 2 | COMPLETE | PASS | PASS |
+| 20 | Canción 3 — Práctica 3 | COMPLETE | PASS | PASS |
+| 21 | Cierre de Canción 3 | COMPLETE | PASS | PASS |
+| 22 | Repaso de expresiones 1–5 | COMPLETE | PASS | PASS |
+| 23 | Repaso de expresiones 6–9 y mis tres elegidas | COMPLETE | PASS | PASS |
+| 24 | Reto de tres días: Día 1 | COMPLETE | PASS | PASS |
+| 25 | Reto de tres días: Día 2 | COMPLETE | PASS | PASS |
+| 26 | Reto de tres días: Día 3 | COMPLETE | PASS | PASS |
+| 27 | Autochequeo final | COMPLETE | PASS | PASS |
+| 28 | ¿Quieres seguir practicando? | COMPLETE | PASS | PASS |
+| 29 | ¿Por qué existe Sing Pronunce Repeat? | COMPLETE | PASS | PASS |
+| 30 | Próximo paso | COMPLETE | PASS | PASS |
+| 31 | Ayúdanos a mejorar | COMPLETE | PASS | PASS |
+| 32 | Nota educativa y de derechos | COMPLETE | PASS | PASS |
 
 ## 5. Reusable-component coverage
 
@@ -188,29 +188,45 @@ Required corrections:
 IMPLEMENTED
 
 Project-owner visual re-review:
-PENDING
+PASS
 
 Full design gate:
-BLOCKED — OWNER VISUAL RE-REVIEW PENDING
+PASS
+```
+
+### Corrected final owner review
+
+```text
+Corrected A5 visual re-review: PASS
+Corrected 390 px mobile visual re-review: PASS
+Project-owner final full-design approval: PASS
+
+Review evidence:
+- Corrected 32-page A5 PDF and complete page sequence 1–32.
+- Corrected page 22 with a balanced two-line heading.
+- Corrected 390 px views of pages 11, 16, 21, 22 and 23.
+- All nine natural meanings visible on mobile with labels, references and checkboxes.
+- Visible footers and page numbers.
+- No horizontal overflow, clipping or footer collisions.
 ```
 
 | Review area | Status |
 | --- | --- |
-| Overall 32-page visual direction | PENDING |
-| Cover and opening pages | PENDING |
-| Method and notation pages | PENDING |
-| Three song introductions | PENDING |
-| Nine practice pages | PENDING |
-| Three song-completion pages | RE-REVIEW PENDING |
-| Consolidated review pages | RE-REVIEW PENDING |
-| Three challenge-day pages | PENDING |
-| Final self-check | PENDING |
-| Continuation, mission and future pages | PENDING |
-| Survey and rights closing | PENDING |
-| QR presentation | PENDING |
-| 390 px mobile rendering | RE-REVIEW PENDING |
-| A5 rendering | RE-REVIEW PENDING |
-| Final visual approval | PENDING |
+| Overall 32-page visual direction | PASS |
+| Cover and opening pages | PASS |
+| Method and notation pages | PASS |
+| Three song introductions | PASS |
+| Nine practice pages | PASS |
+| Three song-completion pages | PASS |
+| Consolidated review pages | PASS |
+| Three challenge-day pages | PASS |
+| Final self-check | PASS |
+| Continuation, mission and future pages | PASS |
+| Survey and rights closing | PASS |
+| QR presentation | PASS |
+| 390 px mobile rendering | PASS |
+| A5 rendering | PASS |
+| Final visual approval | PASS |
 
 ## 14. Current gate status
 
@@ -224,23 +240,22 @@ Design prototype gate: PASS
 Full 32-page design implementation: COMPLETE
 Pages implemented: 32 of 32
 Structural validation: PASS
-Project-owner A5 visual review: RE-REVIEW PENDING
-Project-owner 390 px visual review: RE-REVIEW PENDING
-Project-owner final visual approval: PENDING
-Full design gate: BLOCKED — OWNER VISUAL RE-REVIEW PENDING
+Full 32-page ebook design implementation: APPROVED
+Project-owner A5 visual review: PASS
+Project-owner 390 px visual review: PASS
+Project-owner final visual approval: PASS
+Full design gate: PASS
 
 Production PDF generation:
-BLOCKED — FULL DESIGN REVIEW PENDING
+NEXT / UNBLOCKED — NOT STARTED
 
 Production replacement:
-BLOCKED
+BLOCKED — PRODUCTION PDF NOT YET GENERATED OR APPROVED
 ```
 
 ## 15. Remaining actions
 
-1. Complete project-owner re-review of the corrected A5 32-page artifact.
-2. Complete project-owner re-review of the corrected 390 px review-table treatment.
-3. Record final visual approval without changing approved learner copy.
-4. Keep committed production PDF generation blocked until the full design gate passes.
-5. After approval, run the separate PDF-generation and embedded-link/QR QA phase.
-6. Keep public download and Production replacement blocked until their later gates pass.
+1. Begin the separate production-PDF generation phase using the approved 32-page HTML/CSS source.
+2. Complete PDF structural, visual, text, metadata and embedded-link/QR QA.
+3. Preserve the unchanged public downloadable PDF until the replacement artifact is approved.
+4. Keep Production replacement blocked until the new PDF and later delivery gates pass.
