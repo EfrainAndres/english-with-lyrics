@@ -12,7 +12,13 @@ This prototype demonstrates the visual system, page components, and layout behav
 |---|---|
 | `phase-0-ebook-template.html` | Static 9-page component prototype |
 | `phase-0-ebook-template.css` | Design system with tokens, components, print styles |
+| `phase-0-ebook-improved-preview.html` | Representative 12-page prototype for the approved 32-page improved ebook |
+| `phase-0-ebook-improved-preview.css` | Visual system and responsive/A5 print styles for the representative prototype |
 | `README.md` | This file |
+
+`phase-0-ebook-template.*` is the historical/current component template.
+
+`phase-0-ebook-improved-preview.*` is the representative prototype for the approved 32-page improved ebook.
 
 ## How to open locally
 
@@ -23,6 +29,14 @@ open docs/design/prototypes/phase-0-ebook-template.html
 ```
 
 Or drag the file into any modern browser window.
+
+To open the improved-ebook representative prototype:
+
+```
+open docs/design/prototypes/phase-0-ebook-improved-preview.html
+```
+
+It contains twelve representative pages, not the full 32-page implementation, and is not the final PDF. It must pass project-owner visual review before the full design implementation begins.
 
 ## How to preview at mobile width
 

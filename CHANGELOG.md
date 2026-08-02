@@ -6,6 +6,9 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Completed the project-owner A5 and 390 px mobile visual review of the twelve-page representative improved ebook prototype, passing all visual-review areas and the design prototype gate; full 32-page implementation is next, while PDF generation and Production remain unchanged.
+- Applied A5 overflow and footer-clearance corrections to the representative improved ebook prototype following the initial project-owner visual review; visual re-review remains pending.
+- Added a twelve-page representative visual prototype for the approved improved ebook, covering the principal page families, verified link and QR treatments, mobile behavior and A5 print structure; project-owner visual review remains pending, with the full 32-page design, PDF and Production unchanged.
 - Completed the calibrated two-device manual scan of all five ebook QR assets at 30 mm and 24 mm, passing 20 of 20 checks with correct destinations and no unexpected redirects based on the project-owner report; the link/QR gate now passes and design implementation is next.
 - Updated the three song QR destinations to the matching Sing Pronunce Repeat educational lessons while retaining the original official videos as secondary listening references.
 - Verified three official song sources, the first-group continuation destination, learner survey, canonical domain and privacy route; omitted the advanced waitlist and optional channel link; generated five deterministic QR SVG assets with a 45-case programmatic decode pass, with no design, PDF or Production change.
