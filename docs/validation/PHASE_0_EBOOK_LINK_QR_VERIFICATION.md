@@ -2,9 +2,9 @@
 
 ## 1. Scope
 
-This record verifies the approved external destinations for the improved 32-page ebook, records deterministic QR source assets, and prepares the manual scan gate. It does not implement visual design, generate a final PDF, or change Production configuration.
+This record verifies the approved external destinations for the improved 32-page ebook, records deterministic QR source assets, and prepares the manual scan gate. Song QR codes open the matching Sing Pronunce Repeat educational lessons; original official videos remain secondary listening references. It does not implement visual design, generate a final PDF, or change Production configuration.
 
-Verification date: 2026-08-01.
+Verification date: 2026-08-02.
 
 ## 2. Entry-gate status
 
@@ -21,8 +21,11 @@ Production replacement: BLOCKED
 
 | ID | Requested URL | Final URL | HTTP result | Redirect count | HTTPS preserved | Unexpected hostname change | Result |
 |---|---|---|---:|---:|---|---|---|
+| SONG_1_LESSON_URL | `https://www.youtube.com/watch?v=si9YeTd8z1E` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
 | SONG_1_OFFICIAL_URL | `https://www.youtube.com/watch?v=rtOvBOTyX00` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
+| SONG_2_LESSON_URL | `https://www.youtube.com/watch?v=HetOzN4RtTY` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
 | SONG_2_OFFICIAL_URL | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
+| SONG_3_LESSON_URL | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
 | SONG_3_OFFICIAL_URL | `https://www.youtube.com/watch?v=fV4DiAyExN0` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
 | CONTINUE_PRACTICING_URL | `https://tally.so/r/D4a6NE` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
 | SURVEY_URL | `https://tally.so/r/eqzgbe` | Same as requested | 200 | 0 | YES | NO | VERIFIED |
@@ -32,11 +35,31 @@ The auxiliary privacy route, `https://singpronuncerepeat.com/privacidad`, also r
 
 ## 4. Song-source verification
 
+### Educational lesson destinations
+
+| Song | Canonical lesson URL | Video title | Publishing channel | Availability | Song identity | Educational lesson destination |
+|---|---|---|---|---|---|---|
+| A Thousand Years | `https://www.youtube.com/watch?v=si9YeTd8z1E` | A Thousand Years - Christina Perri \| Lyrics, Pronunciación y Traducción al Español | Sing Pronunce Repeat / English with Lyrics | PASS | PASS | APPROVED |
+| Still Loving You | `https://www.youtube.com/watch?v=HetOzN4RtTY` | Still Loving You - Scorpions \| Lyrics, Pronunciation, Pronunciación y Traducción | Sing Pronunce Repeat / English with Lyrics | PASS | PASS | APPROVED |
+| The Reason | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | The Reason - Hoobastank \| Lyrics, Pronunciación y Traducción al Español | Sing Pronunce Repeat / English with Lyrics | PASS | PASS | APPROVED |
+
+Each lesson was checked through HTTPS, YouTube oEmbed, and its public video page on 2026-08-02. The final URL matched the requested canonical URL with no redirect. The public title and publishing channel confirmed the intended song and Sing Pronunce Repeat educational-lesson destination.
+
+### Original official listening references
+
 | Song | Canonical video URL | Video title | Publishing channel | Availability | Official or authorized source conclusion |
 |---|---|---|---|---|---|
-| A Thousand Years | `https://www.youtube.com/watch?v=rtOvBOTyX00` | Christina Perri - A Thousand Years [Official Music Video] | Christina Perri, Official Artist Channel | Available | Official music video verified through oEmbed and the public video page. |
-| Still Loving You | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | Scorpions - Still Loving You (Official Video) | Scorpions, Official Artist Channel | Available | Official video verified through oEmbed and the public video page. |
-| The Reason | `https://www.youtube.com/watch?v=fV4DiAyExN0` | Hoobastank - The Reason (Official Music Video) | HoobastankVEVO, Official Artist Channel | Available | Official music video verified through oEmbed and the public video page. |
+| A Thousand Years | `https://www.youtube.com/watch?v=rtOvBOTyX00` | Christina Perri - A Thousand Years [Official Music Video] | Christina Perri, Official Artist Channel | Available | Official music video retained as the secondary listening reference. |
+| Still Loving You | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | Scorpions - Still Loving You (Official Video) | Scorpions, Official Artist Channel | Available | Official video retained as the secondary listening reference. |
+| The Reason | `https://www.youtube.com/watch?v=fV4DiAyExN0` | Hoobastank - The Reason (Official Music Video) | HoobastankVEVO, Official Artist Channel | Available | Official music video retained as the secondary listening reference. |
+
+Destination policy:
+
+```text
+Primary song QR: Sing Pronunce Repeat educational lesson.
+Secondary text link: original official music video.
+Original audio: final listening reference.
+```
 
 ## 5. Continuation-destination decision
 
@@ -115,7 +138,7 @@ URL shortener: NONE
 
 Manifest: `docs/design/assets/phase-0-ebook/qr/manifest.json`
 
-The manifest records five assets in source order, their exact payloads, SHA-256 values, QR specification, verification date, programmatic decode result, and pending manual scan state.
+The manifest records five assets in source order, their exact payloads, SHA-256 values, QR specification, verification date, programmatic decode result, and pending manual scan state. The first three payloads are the verified educational lessons; the continuation and survey payloads are unchanged.
 
 ## 11. Programmatic decode results
 
@@ -138,12 +161,12 @@ Manual two-device scanning must occur after this branch is pushed. Each row cove
 
 | QR ID | Payload | Device | 30 mm scan | 24 mm scan | Opened final destination | Destination identity correct | Unexpected redirect | Test date | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| song-1-a-thousand-years | `https://www.youtube.com/watch?v=rtOvBOTyX00` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-1-a-thousand-years | `https://www.youtube.com/watch?v=rtOvBOTyX00` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-2-still-loving-you | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-2-still-loving-you | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-3-the-reason | `https://www.youtube.com/watch?v=fV4DiAyExN0` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
-| song-3-the-reason | `https://www.youtube.com/watch?v=fV4DiAyExN0` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
+| song-1-a-thousand-years | `https://www.youtube.com/watch?v=si9YeTd8z1E` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
+| song-1-a-thousand-years | `https://www.youtube.com/watch?v=si9YeTd8z1E` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
+| song-2-still-loving-you | `https://www.youtube.com/watch?v=HetOzN4RtTY` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
+| song-2-still-loving-you | `https://www.youtube.com/watch?v=HetOzN4RtTY` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
+| song-3-the-reason | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
+| song-3-the-reason | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
 | continue-first-group | `https://tally.so/r/D4a6NE` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
 | continue-first-group | `https://tally.so/r/D4a6NE` | USB-C Android phone | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
 | survey-feedback | `https://tally.so/r/eqzgbe` | iPhone 12 Pro Max | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | PENDING |
@@ -151,14 +174,16 @@ Manual two-device scanning must occur after this branch is pushed. Each row cove
 
 ## 13. Gate criteria
 
-The link/QR gate may pass only when every required destination remains verified, every QR payload matches its visible and clickable destination, programmatic decode passes, and both devices pass manual scans at 30 mm and 24 mm with the correct final destination and no unexpected redirect.
+The link/QR gate may pass only when every required destination remains verified, every QR payload matches its visible and clickable primary educational-lesson destination, programmatic decode passes, and both devices pass manual scans at 30 mm and 24 mm with the correct final destination and no unexpected redirect. The original official song links remain secondary listening references and receive no QR.
 
 ## 14. Current status
 
 ```text
 Pronunciation gate: PASS
-Required destinations resolved: 6 of 6
-Required external links verified: 6 of 6
+Required destinations resolved: 9 of 9
+Required external links verified: 9 of 9
+Educational lesson destinations verified: 3 of 3
+Original official listening destinations verified: 3 of 3
 Optional advanced waitlist: OMITTED
 Optional YouTube channel link: OMITTED
 QR source assets generated: 5 of 5
