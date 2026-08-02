@@ -396,6 +396,7 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
 ) .completion-check { padding-bottom: 1.5mm; }
 
 .page--review h1, .page--selfcheck h1 { font-size: 21pt; }
+.page--review[data-final-page="22"] .heading-break { display: block; }
 .page--review .review-table th, .page--review .review-table td { padding: 1.7mm; }
 .page--review .completion-progress { margin-top: 3mm; }
 .page--selfcheck .page-header, .page--review .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
@@ -485,11 +486,34 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
   .cta-layout .qr-card { justify-self: center; }
   .practice-row { grid-template-columns: 1fr; }
   .practice-row dt { padding-bottom: 1mm; }
-  .review-table { font-size: 10pt; }
-  .review-table { table-layout: fixed; }
-  .review-table th, .review-table td { padding: 1.3mm; }
-  .review-table th:nth-child(3), .review-table td:nth-child(3) { display: none; }
-  .review-table td:last-child, .review-table th:last-child { width: 15mm; }
+  .review-table { display: block; width: 100%; font-size: 10pt; }
+  .review-table thead { display: none; }
+  .review-table tbody { display: grid; gap: 3mm; }
+  .review-table tr { display: block; border: .25mm solid var(--c-line); background: var(--c-surface); }
+  .review-table td,
+  .review-table td:last-child {
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+    min-width: 0;
+    gap: 2mm;
+    padding: 2mm;
+    border: 0;
+    border-top: .2mm solid rgba(255, 249, 254, .2);
+    color: var(--c-text);
+    font-size: 10pt;
+    line-height: 1.32;
+    text-align: left;
+  }
+  .review-table td:first-child { border-top: 0; }
+  .review-table td::before {
+    flex: 0 0 41%;
+    content: attr(data-label);
+    color: var(--c-yellow);
+    font-weight: 800;
+  }
+  .review-table td:last-child { align-items: center; }
+  .review-table td:last-child input { flex: 0 0 auto; }
   .completion-progress { align-items: flex-start; flex-direction: column; }
   .meter { width: 100%; max-width: 52mm; }
   .confidence-table th:first-child, .confidence-table td:first-child { width: 45%; }
