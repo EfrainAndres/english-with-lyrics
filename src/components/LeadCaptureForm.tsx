@@ -34,7 +34,7 @@ export function LeadCaptureForm() {
               vocabulario y ejercicios sencillos.
             </p>
             <p className="mt-4 text-sm font-bold text-cream">
-              PDF de 21 páginas · 3 canciones · 9 prácticas
+              PDF de 32 páginas · 3 canciones · 9 prácticas
             </p>
 
             {config.environment === "preview" ? (
