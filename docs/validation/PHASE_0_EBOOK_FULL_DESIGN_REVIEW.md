@@ -136,11 +136,63 @@ Repository status: NOT COMMITTED
 Purpose: project-owner full-design visual review only
 Page count: 32
 A5 geometry: PASS
+
+Corrected temporary review PDF:
+/tmp/phase-0-ebook-full-design-review-corrected.pdf
+Repository status: NOT COMMITTED
+Page count: 32
+A5 geometry: PASS
+Page-22 heading: balanced two-line rendering
 ```
 
 The committed production PDF at `docs/design/production/phase-0-ebook-production-draft.pdf` and the public download at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` were not generated, replaced or modified.
 
 ## 13. Project-owner review matrix
+
+### Historical initial full-design review
+
+```text
+A5 page count: 32 PASS
+A5 page geometry: PASS
+A5 clipping: NONE
+A5 footer visibility: PASS
+A5 page-number visibility: PASS
+QR presentation: PASS
+Document horizontal overflow at 390 px: NONE
+Content/footer collisions at 390 px: NONE
+
+A5 containment and footer review:
+PASS
+
+390 px document containment:
+PASS
+
+Initial project-owner full-design visual decision:
+CHANGES REQUESTED
+
+Finding 1:
+At 390 px, the responsive review-table treatment hid the
+Significado natural column on final pages 11, 16, 21, 22 and 23.
+
+Finding 2:
+In the A5 rendering of final page 22, the heading left the number
+5 alone on its second line.
+
+Required correction 1:
+Preserve Significado natural on mobile review tables.
+
+Required correction 2:
+Balance the final-page-22 A5 heading.
+
+Required corrections:
+IMPLEMENTED
+
+Project-owner visual re-review:
+PENDING
+
+Full design gate:
+BLOCKED — OWNER VISUAL RE-REVIEW PENDING
+```
 
 | Review area | Status |
 | --- | --- |
@@ -149,15 +201,15 @@ The committed production PDF at `docs/design/production/phase-0-ebook-production
 | Method and notation pages | PENDING |
 | Three song introductions | PENDING |
 | Nine practice pages | PENDING |
-| Three song-completion pages | PENDING |
-| Consolidated review pages | PENDING |
+| Three song-completion pages | RE-REVIEW PENDING |
+| Consolidated review pages | RE-REVIEW PENDING |
 | Three challenge-day pages | PENDING |
 | Final self-check | PENDING |
 | Continuation, mission and future pages | PENDING |
 | Survey and rights closing | PENDING |
 | QR presentation | PENDING |
-| 390 px mobile rendering | PENDING |
-| A5 rendering | PENDING |
+| 390 px mobile rendering | RE-REVIEW PENDING |
+| A5 rendering | RE-REVIEW PENDING |
 | Final visual approval | PENDING |
 
 ## 14. Current gate status
@@ -172,10 +224,10 @@ Design prototype gate: PASS
 Full 32-page design implementation: COMPLETE
 Pages implemented: 32 of 32
 Structural validation: PASS
-Project-owner A5 visual review: PENDING
-Project-owner 390 px visual review: PENDING
+Project-owner A5 visual review: RE-REVIEW PENDING
+Project-owner 390 px visual review: RE-REVIEW PENDING
 Project-owner final visual approval: PENDING
-Full design gate: BLOCKED — OWNER VISUAL REVIEW PENDING
+Full design gate: BLOCKED — OWNER VISUAL RE-REVIEW PENDING
 
 Production PDF generation:
 BLOCKED — FULL DESIGN REVIEW PENDING
@@ -186,9 +238,9 @@ BLOCKED
 
 ## 15. Remaining actions
 
-1. Complete project-owner A5 review of the temporary 32-page artifact.
-2. Complete project-owner 390 px review of the HTTP-served production source.
-3. Record corrections or final visual approval without changing approved learner copy.
+1. Complete project-owner re-review of the corrected A5 32-page artifact.
+2. Complete project-owner re-review of the corrected 390 px review-table treatment.
+3. Record final visual approval without changing approved learner copy.
 4. Keep committed production PDF generation blocked until the full design gate passes.
 5. After approval, run the separate PDF-generation and embedded-link/QR QA phase.
 6. Keep public download and Production replacement blocked until their later gates pass.
