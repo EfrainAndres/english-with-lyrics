@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current Phase 0 step: project-owner review of the generated 32-page production-PDF candidate and manual review of its five embedded QR codes. Agent PDF QA passes; the public download and Production delivery remain unchanged.
+Current Phase 0 step: replace the public PDF in a separate branch, verify source-to-public integrity, and complete deployed Production PDF smoke testing and rollback verification. The approved 32-page candidate is not yet public, and Production delivery remains unchanged.
 
 Next order:
 
@@ -76,8 +76,8 @@ Next order:
 12. Provider contractual/DPA review — complete; no changes requested.
 13. Mandatory ebook audit — complete; page-by-page audit complete; 30-page architecture received owner feedback of CHANGES REQUESTED and was revised to a 32-page architecture separating the mission, future-product positioning and survey into distinct pages; revised architecture approved.
 14. Copywriting and pronunciation-normalization phase — improved 32-page learner copy: APPROVED; owner copy gate: PASS; pronunciation standard: APPROVED.
-15. Improved 32-page ebook gates — architecture, owner copy, pronunciation, link/QR source, design prototype and full design: PASS. Production PDF generation: COMPLETE. Production PDF candidate: 32 pages. Agent PDF QA: PASS, including exact 16-link validation and 5-of-5 embedded-PDF programmatic QR decode. Public downloadable PDF: UNCHANGED. Production replacement: BLOCKED.
-16. Project-owner production-PDF and manual embedded-PDF QR review — immediate next step; PENDING.
+15. Improved 32-page ebook gates — architecture, owner copy, pronunciation, link/QR source, design prototype, full design and production PDF: PASS. Production-PDF candidate: APPROVED, 32 pages. Agent PDF QA: PASS. Project-owner production-PDF visual review: PASS — 32 of 32 pages. Project-owner embedded-PDF QR review: PASS — 5 of 5; unexpected redirects: NONE. Public downloadable PDF: UNCHANGED.
+16. Public PDF replacement, source-to-public integrity verification, deployed smoke test and rollback verification — immediate next step; NEXT / UNBLOCKED — NOT STARTED.
 17. Production consent linking and legal publication — pending.
 18. Production Email 1 configuration — pending.
 19. Remaining deliverability QA — pending as applicable.

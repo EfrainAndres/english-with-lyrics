@@ -10,17 +10,20 @@ Phase 0 ebook.
 Approved HTML/CSS source: COMPLETE AND UNCHANGED
 Content source: docs/content/PHASE_0_EBOOK_IMPROVED_CONTENT.md
 Full design gate: PASS
-Production PDF candidate: GENERATED — 32 PAGES
+Production PDF candidate: GENERATED AND APPROVED — 32 PAGES
 Agent structural/visual/text/metadata/link/QR QA: PASS
-Project-owner PDF review: PENDING
-Project-owner embedded-PDF QR review: PENDING
+Project-owner PDF review: PASS
+Project-owner embedded-PDF QR review: PASS
+Production PDF gate: PASS
 Public downloadable PDF: UNCHANGED
-Production replacement: BLOCKED pending owner approval
+Public replacement: NEXT / UNBLOCKED — NOT STARTED
+Production deployment: NOT STARTED
+Production replacement: BLOCKED pending public replacement and delivery QA
 ```
 
 The committed candidate is not published. The current public download remains
-the earlier 21-page artifact until the candidate passes project-owner PDF and
-embedded-QR review and a separate Production replacement gate.
+the earlier 21-page artifact until the separate public-replacement,
+source-to-public integrity and deployed delivery-QA gate passes.
 
 ## Files
 
@@ -28,7 +31,7 @@ embedded-QR review and a separate Production replacement gate.
 |---|---|
 | `phase-0-ebook.html` | Approved complete 32-page ebook source |
 | `phase-0-ebook.css` | Approved A5 production design system |
-| `phase-0-ebook-production-draft.pdf` | Generated 32-page production-PDF candidate awaiting owner review |
+| `phase-0-ebook-production-draft.pdf` | Approved 32-page production-PDF candidate awaiting separate public replacement |
 | `README.md` | Source, artifact and gate status |
 
 ## Content Source
@@ -69,9 +72,9 @@ SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
 Size: 1,315,500 bytes
 ```
 
-Agent QA evidence is recorded in
-`docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Project-owner review remains
-mandatory before any public replacement.
+Agent and project-owner review evidence is recorded in
+`docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Public replacement remains a
+separate unstarted phase.
 
 ## Artifact Protection
 

@@ -19,7 +19,9 @@ PDF generation: BLOCKED
 Production replacement: BLOCKED
 ```
 
-The source-asset manual QR gate is now complete based on the project-owner manual test report recorded below. This does not replace final embedded-PDF QR validation.
+The source-asset manual QR gate is complete based on the project-owner
+two-device test report recorded below. That historical source-asset evidence is
+separate from the completed final embedded-PDF QR review.
 
 ## 3. Final destination inventory
 
@@ -186,6 +188,28 @@ The matrix below records the owner-reported calibrated result. Each row covers b
 | survey-feedback | `https://tally.so/r/eqzgbe` | iPhone 12 Pro Max | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
 | survey-feedback | `https://tally.so/r/eqzgbe` | USB-C Android phone | PASS | PASS | PASS | PASS | NO | 2026-08-02 | Owner-reported calibrated manual scan; no Tally form submitted. |
 
+## 12a. Final embedded-PDF QR review
+
+The project owner manually reviewed the five QR codes embedded in the generated
+32-page PDF candidate. This evidence is distinct from the earlier source-asset
+two-device scan.
+
+| PDF page | Expected destination | Result |
+|---:|---|---|
+| 7 | `https://www.youtube.com/watch?v=si9YeTd8z1E` | PASS |
+| 12 | `https://www.youtube.com/watch?v=HetOzN4RtTY` | PASS |
+| 17 | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | PASS |
+| 28 | `https://tally.so/r/D4a6NE` | PASS |
+| 31 | `https://tally.so/r/eqzgbe` | PASS |
+
+```text
+Evidence source: project-owner manual embedded-PDF review
+Embedded QR codes reviewed: 5 of 5 PASS
+Unexpected redirects: NONE
+Final embedded-PDF QR gate: PASS
+Production PDF gate: PASS
+```
+
 ## 13. Gate criteria
 
 The link/QR gate may pass only when every required destination remains verified, every QR payload matches its visible and clickable primary educational-lesson destination, programmatic decode passes, and both devices pass manual scans at 30 mm and 24 mm with the correct final destination and no unexpected redirect. The original official song links remain secondary listening references and receive no QR.
@@ -211,18 +235,26 @@ Design implementation: COMPLETE / APPROVED
 PDF generation: COMPLETE — 32-page candidate
 Embedded PDF annotation validation: PASS — 16 of 16
 Embedded PDF programmatic QR decode: PASS — 5 of 5
-Project-owner/manual embedded-PDF QR review: PENDING
+Project-owner/manual embedded-PDF QR review: PASS
+Five embedded QR codes reviewed: 5 of 5
+Unexpected redirects: NONE
+Final embedded-PDF QR gate: PASS
+Production PDF gate: PASS
 Public downloadable PDF: UNCHANGED
-Production replacement: BLOCKED pending PDF approval
+Public replacement: NEXT / UNBLOCKED — NOT STARTED
+Production deployment: NOT STARTED
+Production replacement: BLOCKED pending public replacement and delivery QA
 ```
 
 ## 15. Remaining actions
 
-1. Complete project-owner review of the 32-page PDF candidate.
-2. Complete project-owner/manual scans of the five QR codes embedded in the candidate.
-3. Preserve the verified five QR source assets and exact payloads.
-4. Keep the public downloadable PDF unchanged until owner review and public-delivery approval pass.
-5. Keep Production replacement blocked until the later PDF approval gate passes.
+1. Replace the public PDF in a separate approved branch while preserving the public filename.
+2. Complete source-to-public PDF integrity verification.
+3. Complete deployed Production PDF smoke testing and rollback verification.
+4. Preserve the verified five QR source assets and exact payloads.
+5. Keep Production replacement blocked until the later public-replacement and delivery-QA gate passes.
 
-The source-asset gate and embedded-PDF programmatic decode pass do not replace
-the pending project-owner/manual embedded-PDF QR review.
+The source-asset two-device scan remains historical evidence. The completed
+embedded-PDF programmatic and project-owner manual review apply only to the
+generated 32-page candidate and do not replace the separate public-delivery
+verification still required.

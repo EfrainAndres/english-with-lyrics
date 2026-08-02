@@ -13,12 +13,19 @@ Export workflow: scripts/export-ebook-pdf.sh
 Candidate: docs/design/production/phase-0-ebook-production-draft.pdf
 Candidate size: 1,315,500 bytes
 Candidate SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
-Agent QA decision: PASS — READY FOR PROJECT-OWNER REVIEW
-Project-owner PDF review: PENDING
-Project-owner embedded-PDF QR review: PENDING
-Public-delivery approval: PENDING
+Agent QA decision: PASS
+Project-owner production-PDF visual review: PASS
+Project-owner pages visually reviewed: 32 of 32
+Project-owner embedded-PDF QR review: PASS
+Embedded QR codes manually reviewed: 5 of 5 PASS
+Unexpected redirects: NONE
+Production PDF gate: PASS
+Production-PDF candidate: APPROVED
+Public-delivery approval: NEXT / UNBLOCKED — NOT STARTED
 Public downloadable PDF: UNCHANGED
-Production replacement: BLOCKED
+Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED
+Production deployment: NOT STARTED
+Production replacement: BLOCKED pending public replacement and delivery QA
 ```
 
 ## 2. Entry gates
@@ -140,10 +147,27 @@ Contrast: PASS — black/white range 255 for every render
 Quiet-zone containment: PASS
 Clipping, distortion or overlap: NONE
 Visible purpose / annotation / encoded payload agreement: PASS
-Project-owner/manual embedded-PDF QR review: PENDING
+Project-owner/manual embedded-PDF QR review: PASS
 ```
 
-This programmatic result does not claim a physical device scan of the new PDF.
+The programmatic result is separately supported by the following project-owner
+manual embedded-PDF review. It does not replace the earlier source-asset
+two-device scan recorded in the link and QR verification record.
+
+| PDF page | Expected destination | Project-owner manual result |
+|---:|---|---|
+| 7 | `https://www.youtube.com/watch?v=si9YeTd8z1E` | PASS |
+| 12 | `https://www.youtube.com/watch?v=HetOzN4RtTY` | PASS |
+| 17 | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | PASS |
+| 28 | `https://tally.so/r/D4a6NE` | PASS |
+| 31 | `https://tally.so/r/eqzgbe` | PASS |
+
+```text
+Evidence source: project-owner manual embedded-PDF review
+Pages tested: 7, 12, 17, 28 and 31
+Embedded QR codes manually reviewed: 5 of 5 PASS
+Unexpected redirects: NONE
+```
 
 ## 8. Page-by-page visual QA
 
@@ -232,13 +256,13 @@ Application and deployment files: UNCHANGED
 
 | Artifact | Issue | Severity | Disposition |
 |---|---|---|---|
-| Active 32-page candidate | No blocking structural, content, metadata, link, QR or visual defects found | None | Agent QA PASS; owner review pending |
+| Active 32-page candidate | No blocking structural, content, metadata, link, QR or visual defects found | None | Agent QA PASS; project-owner production-PDF and embedded-QR review PASS |
 
 ## 12. Agent and owner decisions
 
 ```text
 Production PDF generation: COMPLETE
-Production PDF candidate: 32 pages
+Production PDF candidate: APPROVED — 32 pages
 Agent structural QA: PASS
 Agent visual QA: PASS
 Agent text/content QA: PASS
@@ -246,18 +270,23 @@ Agent metadata QA: PASS
 Agent embedded-link QA: PASS
 Agent embedded-PDF programmatic QR QA: PASS
 Agent PDF QA: PASS
-Project-owner production-PDF review: PENDING
-Project-owner embedded-PDF QR review: PENDING
-Public-delivery approval: PENDING
+Project-owner production-PDF visual review: PASS
+Project-owner pages visually reviewed: 32 of 32
+Project-owner embedded-PDF QR review: PASS
+Embedded QR codes manually reviewed: 5 of 5 PASS
+Unexpected redirects: NONE
+Production PDF gate: PASS
+Public-delivery approval: NEXT / UNBLOCKED — NOT STARTED
 Public downloadable PDF: UNCHANGED
-Production replacement: BLOCKED pending owner approval
+Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED
+Production replacement: BLOCKED pending public replacement and delivery QA
 Production deployment: NOT STARTED
 ```
 
 - [x] Agent structural, visual, text, metadata, link and QR QA complete.
-- [ ] Project-owner production-PDF review complete.
-- [ ] Project-owner embedded-PDF QR review complete.
-- [ ] Approved for public delivery.
+- [x] Project-owner production-PDF visual review complete.
+- [x] Project-owner embedded-PDF QR review complete.
+- [ ] Public PDF replacement and delivery approval complete.
 
 ## 13. Superseded 21-page export history
 
