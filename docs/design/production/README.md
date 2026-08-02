@@ -1,33 +1,35 @@
 # Production Source — Phase 0 Ebook
 
-This folder contains the production HTML/CSS source for the Sing Pronunce
-Repeat / English with Lyrics Phase 0 ebook and the previously committed PDF
-artifact.
+This folder contains the approved production HTML/CSS source and the current
+production-PDF candidate for the Sing Pronunce Repeat / English with Lyrics
+Phase 0 ebook.
 
 ## Status
 
 ```text
-Production HTML/CSS source: 32-page improved design
+Approved HTML/CSS source: COMPLETE AND UNCHANGED
 Content source: docs/content/PHASE_0_EBOOK_IMPROVED_CONTENT.md
-Design implementation: COMPLETE / READY FOR OWNER REVIEW
-Committed production PDF: unchanged 21-page asset
-Public downloadable PDF: unchanged
-PDF export: BLOCKED pending owner approval of the full design
-Production replacement: BLOCKED
+Full design gate: PASS
+Production PDF candidate: GENERATED — 32 PAGES
+Agent structural/visual/text/metadata/link/QR QA: PASS
+Project-owner PDF review: PENDING
+Project-owner embedded-PDF QR review: PENDING
+Public downloadable PDF: UNCHANGED
+Production replacement: BLOCKED pending owner approval
 ```
 
-The source HTML/CSS has advanced to the complete approved 32-page design. The
-committed production draft PDF remains the previous 21-page artifact, and the
-public downloadable PDF remains unchanged.
+The committed candidate is not published. The current public download remains
+the earlier 21-page artifact until the candidate passes project-owner PDF and
+embedded-QR review and a separate Production replacement gate.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `phase-0-ebook.html` | Complete 32-page improved ebook source |
+| `phase-0-ebook.html` | Approved complete 32-page ebook source |
 | `phase-0-ebook.css` | Approved A5 production design system |
-| `phase-0-ebook-production-draft.pdf` | Previous committed 21-page PDF artifact; unchanged in this phase |
-| `README.md` | Source and gate status |
+| `phase-0-ebook-production-draft.pdf` | Generated 32-page production-PDF candidate awaiting owner review |
+| `README.md` | Source, artifact and gate status |
 
 ## Content Source
 
@@ -38,40 +40,45 @@ docs/content/PHASE_0_EBOOK_IMPROVED_CONTENT.md
 ```
 
 The source preserves the nine approved educational fragments, verified lesson
-and official-listening destinations, and the committed QR assets. Internal
-editorial notes, status blocks and design annotations are not rendered.
+and official-listening destinations, and the committed QR assets. The PDF
+candidate was generated without modifying the approved HTML, CSS or QR inputs.
 
-## Local Review
+## Export Workflow
 
-Serve the repository root and open the production HTML:
+The reproducible export workflow is:
 
 ```bash
-python3 -m http.server 9898 --bind 127.0.0.1
-open http://127.0.0.1:9898/docs/design/production/phase-0-ebook.html
+bash scripts/export-ebook-pdf.sh
 ```
 
-The current review phase covers the complete HTML/CSS at desktop width, 390 px
-mobile width and A5 print geometry. Project-owner visual approval is required
-before production PDF generation.
+The script serves the approved source locally, renders a temporary PDF,
+validates the 32-page A5 structure and exact 16-link inventory, applies
+`scripts/patch-pdf-metadata.py`, reopens and validates the patched artifact,
+and atomically replaces the committed candidate path. Temporary files and the
+local server are cleaned on success or failure.
 
-## PDF Export Gate
+The script must never copy the candidate to `public/downloads/`.
 
-The existing export script belongs to the later PDF-generation phase:
+## Current Candidate
 
 ```text
-scripts/export-ebook-pdf.sh
+Path: docs/design/production/phase-0-ebook-production-draft.pdf
+Pages: 32
+Geometry: A5 portrait, 420.00 × 594.96 pt
+SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Size: 1,315,500 bytes
 ```
 
-Do not run it during full-design review. After owner approval, that later phase
-must update its validation for 32 pages, export the committed production PDF,
-complete final embedded-link and QR QA, and then separately authorize any
-public-download replacement.
+Agent QA evidence is recorded in
+`docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Project-owner review remains
+mandatory before any public replacement.
 
 ## Artifact Protection
 
 This phase does not modify:
 
-- `phase-0-ebook-production-draft.pdf`
+- `phase-0-ebook.html`
+- `phase-0-ebook.css`
 - `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`
 - Application or Production delivery configuration
 
@@ -82,4 +89,4 @@ guia-gratis-sing-pronounce-repeat.pdf
 ```
 
 Existing public links depend on that filename. Replacement is allowed only in
-the later gated PDF and Production phases.
+a later, explicitly approved Production phase.
