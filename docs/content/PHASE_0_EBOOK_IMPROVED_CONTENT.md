@@ -11,7 +11,10 @@ Owner copy gate: PASS
 Pronunciation standard: APPROVED
 Qualified pronunciation review: COMPLETE
 Pronunciation gate: PASS
-Link verification and QR: PENDING
+Link verification: COMPLETE
+QR generation: COMPLETE
+Manual two-device QR scan: PENDING
+Link/QR gate: BLOCKED — MANUAL SCAN PENDING
 Design implementation: BLOCKED
 PDF generation: BLOCKED
 Production replacement: BLOCKED
@@ -234,7 +237,7 @@ Al terminar las tres, harás un **reto de tres días** para repasar con calma y 
 ## Final page 7 — Canción 1: A Thousand Years
 
 <!-- Status: MODIFIED. Source: current page 4. Progress: "Canción 1 de 3 · 0%".
-     Link: {{SONG_1_OFFICIAL_URL}} + matching QR — verified in a later phase. -->
+     Link: https://www.youtube.com/watch?v=rtOvBOTyX00 + matching QR. -->
 
 [DESIGN: song divider + difficulty meter + link/QR]
 
@@ -249,10 +252,9 @@ Esta canción tiene un tempo lento y una pronunciación muy clara. Es una buena 
 
 **Qué notar al escuchar:** cómo las palabras fluyen una hacia la otra, las vocales largas y el ritmo suave de las frases.
 
-→ **Escucha la canción (fuente oficial):** `{{SONG_1_OFFICIAL_URL}}`
+→ **Escucha la canción (fuente oficial):** `https://www.youtube.com/watch?v=rtOvBOTyX00`
 
-<!-- INTERNAL: clickable link + matching QR to be added in the link-verification/QR phase.
-     Do not hardcode or reverify the URL now. -->
+<!-- INTERNAL: QR asset: docs/design/assets/phase-0-ebook/qr/song-1-a-thousand-years.svg -->
 
 **Antes de continuar:** escucha la canción completa al menos una vez. Solo escucha; no trates de entender todo.
 
@@ -379,7 +381,7 @@ ______________________________
 ## Final page 12 — Canción 2: Still Loving You
 
 <!-- Status: MODIFIED. Source: current page 9. Progress: "Canción 2 de 3 · 33% acumulado".
-     Link: {{SONG_2_OFFICIAL_URL}} + matching QR — verified in a later phase. -->
+     Link: https://www.youtube.com/watch?v=7pOr3dBFAeY + matching QR. -->
 
 [DESIGN: song divider + difficulty meter + accent note + link/QR]
 
@@ -396,9 +398,9 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 
 **Nota sobre el acento:** las guías de esta sección se basan en inglés hablado neutro. El cantante tiene un acento distinto al inglés americano estándar, así que el audio puede sonar diferente a la guía escrita. Es normal — usa la guía como punto de partida y confía en lo que escuchas.
 
-→ **Escucha la canción (fuente oficial):** `{{SONG_2_OFFICIAL_URL}}`
+→ **Escucha la canción (fuente oficial):** `https://www.youtube.com/watch?v=7pOr3dBFAeY`
 
-<!-- INTERNAL: clickable link + matching QR added in the link-verification/QR phase. -->
+<!-- INTERNAL: QR asset: docs/design/assets/phase-0-ebook/qr/song-2-still-loving-you.svg -->
 
 - [ ] Escuché la canción completa una vez.
 
@@ -524,7 +526,7 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 ## Final page 17 — Canción 3: The Reason
 
 <!-- Status: MODIFIED. Source: current page 14. Progress: "Canción 3 de 3 · 66% acumulado".
-     Link: {{SONG_3_OFFICIAL_URL}} + matching QR — verified in a later phase. -->
+     Link: https://www.youtube.com/watch?v=fV4DiAyExN0 + matching QR. -->
 
 [DESIGN: song divider + difficulty meter + link/QR]
 
@@ -539,9 +541,9 @@ Esta canción tiene una pronunciación del inglés americano muy clara y un ritm
 
 **Qué notar al escuchar:** la claridad de las palabras, cómo se conectan unas con otras y las frases que se repiten y son más fáciles de identificar.
 
-→ **Escucha la canción (fuente oficial):** `{{SONG_3_OFFICIAL_URL}}`
+→ **Escucha la canción (fuente oficial):** `https://www.youtube.com/watch?v=fV4DiAyExN0`
 
-<!-- INTERNAL: clickable link + matching QR added in the link-verification/QR phase. -->
+<!-- INTERNAL: QR asset: docs/design/assets/phase-0-ebook/qr/song-3-the-reason.svg -->
 
 **Antes de continuar:** escucha la canción entera antes de leer. Esta vez, intenta identificar una sola palabra que reconozcas. Con eso basta para empezar.
 
@@ -855,7 +857,7 @@ Primero intenta recordar cada expresión **sin mirar** las páginas anteriores. 
 ## Final page 28 — ¿Quieres seguir practicando?
 
 <!-- Status: MODIFIED. Source: current page 20 continuation. SOLE primary CTA.
-     Link: {{CONTINUE_PRACTICING_URL}} + matching QR — verified in a later phase. -->
+     Link: https://tally.so/r/D4a6NE + matching QR. -->
 
 [DESIGN: single primary CTA card + QR + visible URL]
 
@@ -863,14 +865,16 @@ Primero intenta recordar cada expresión **sin mirar** las páginas anteriores. 
 
 Terminaste la guía. Si te sirvió, puedes dar un paso más.
 
-Con constancia podrás practicar más expresiones cortas, pronunciación guiada y ejercicios útiles — al mismo ritmo tranquilo de esta guía.
+Estamos preparando un grupo pequeño para practicar con canciones, pronunciación guiada y microlecciones.
 
-→ **Seguir practicando:** `{{CONTINUE_PRACTICING_URL}}`
+Puedes dejar tus datos para recibir información cuando estén claros el formato, los cupos, el precio y las condiciones.
 
-<!-- INTERNAL: exactly ONE primary CTA. Clickable link + matching QR + visible URL
-     added after the destination is approved and verified. Do not invent it. -->
+→ **Quiero saber del primer grupo:** `https://tally.so/r/D4a6NE`
 
-*Si este enlace recopila datos, se mostrará un aviso breve de privacidad antes de continuar.*
+<!-- INTERNAL: exactly ONE primary CTA. QR asset:
+     docs/design/assets/phase-0-ebook/qr/continue-first-group.svg -->
+
+*Privacidad: `https://singpronuncerepeat.com/privacidad`*
 
 **Siguiente paso · Opcional**
 
@@ -894,9 +898,7 @@ Sing Pronunce Repeat existe para hacer esa barrera más pequeña. Creemos que la
 
 Recuerda: `Escríbelo como suena` es un puente hacia el audio real, no un reemplazo. El objetivo siempre es que escuches, entiendas y ganes confianza.
 
-<!-- INTERNAL: no CTA. {{YOUTUBE_CHANNEL_URL}} is OPTIONAL and OMITTED from learner copy
-     in this draft; if later verified it may appear only as a discreet footer or a
-     non-competing text link, never as a button. Do not add a personal creator name. -->
+<!-- INTERNAL: YOUTUBE_CHANNEL_URL: OMITTED — no link or QR used in this edition. -->
 
 **Nuestra misión**
 
@@ -925,10 +927,7 @@ Estamos preparando más material para seguir aprendiendo inglés con canciones.
 Estamos explorando la mejor forma de ofrecerlo. Todavía no hay nada disponible ni una fecha definida — cuando haya algo listo, lo compartiremos con cuidado.
 
 <!-- INTERNAL: no product, price, schedule or subscription is claimed to exist.
-     Because no real advanced-ebook waitlist has been approved, the actionable button
-     and QR are OMITTED from learner copy. Dependency reference only, not shown to
-     the learner: {{ADVANCED_EBOOK_WAITLIST_URL}} — include a real CTA only when a
-     verified destination exists. -->
+     ADVANCED_EBOOK_WAITLIST_URL: OMITTED — no approved destination exists. -->
 
 **Próximo paso · Opcional**
 
@@ -938,7 +937,7 @@ Estamos explorando la mejor forma de ofrecerlo. Todavía no hay nada disponible 
 
 ## Final page 31 — Ayúdanos a mejorar
 
-<!-- Status: NEW. Survey only, after all value. One secondary CTA. Link: {{SURVEY_URL}}. -->
+<!-- Status: NEW. Survey only, after all value. One secondary CTA. Link: https://tally.so/r/eqzgbe. -->
 
 [DESIGN: single survey CTA card + QR]
 
@@ -953,13 +952,15 @@ Si quieres, responde una encuesta corta. Puede preguntarte:
 - Qué canciones te gustaría practicar.
 - Si te interesa más material de aprendizaje.
 
-→ **Responder la encuesta:** `{{SURVEY_URL}}`
+La encuesta toma menos de tres minutos.
 
-<!-- INTERNAL: exactly ONE secondary survey CTA. Visible URL must match the QR payload,
-     added in the link-verification/QR phase. No waitlist, no channel link, no second
-     button on this page. State a "dos minutos" time only if later confirmed accurate. -->
+→ **Responder la encuesta:** `https://tally.so/r/eqzgbe`
 
-*Tus respuestas son opcionales y se tratan según nuestro aviso de privacidad.*
+<!-- INTERNAL: exactly ONE secondary survey CTA. QR asset:
+     docs/design/assets/phase-0-ebook/qr/survey-feedback.svg. No waitlist, no channel
+     link, and no second button on this page. -->
+
+*Privacidad: `https://singpronuncerepeat.com/privacidad`*
 
 **Tu opinión · Opcional**
 
@@ -988,7 +989,7 @@ Esta guía fue creada con fines educativos por Sing Pronunce Repeat / English wi
 
 **Intención educativa.** Esta guía no tiene afiliación con los artistas ni implica su respaldo o aprobación. Su intención educativa no otorga propiedad sobre las canciones ni garantiza protección legal absoluta. Su propósito es enseñar la pronunciación y la comprensión del inglés.
 
-`{{CANONICAL_DOMAIN}}`
+`https://singpronuncerepeat.com`
 
 **Fin**
 
@@ -997,4 +998,4 @@ Esta guía fue creada con fines educativos por Sing Pronunce Repeat / English wi
      replacement; rights ownership; titles/artist names only identify the source;
      official-source listening rule; no commercial audio distribution; original method
      and materials; no affiliation or endorsement; no absolute legal guarantee.
-     Canonical domain via placeholder. -->
+     Canonical domain verified. -->

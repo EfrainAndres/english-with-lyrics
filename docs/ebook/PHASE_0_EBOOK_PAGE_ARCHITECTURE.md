@@ -599,27 +599,32 @@ The YouTube channel may appear only as a discreet verified footer link, or as a 
 
 No current song or practice is removed. The current review pages 8, 13 and 18 are replaced by richer completion pages; current page 19 is split across three challenge pages; current page 20 is separated into self-check and primary continuation pages, and its remaining survey concept becomes final page 31. These changes, plus the three-way split of the brand mission, future-product positioning and survey into final pages 29–31, explain the eleven-page net growth.
 
-## Placeholder inventory
+## Destination dependency inventory
 
-| Placeholder | Purpose | Current known value | Verification required | QR required | Blocks final PDF generation |
+| Destination or omission | Purpose | Final value or decision | Verification result | QR required | Blocks final PDF generation |
 | --- | --- | --- | --- | --- | --- |
-| `{{SONG_1_OFFICIAL_URL}}` | Official source for Song 1 | `https://www.youtube.com/watch?v=rtOvBOTyX00` | Confirm availability, official/authorized source and unchanged destination immediately before export | YES | YES |
-| `{{SONG_2_OFFICIAL_URL}}` | Official source for Song 2 | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | Confirm availability, official/authorized source and unchanged destination immediately before export | YES | YES |
-| `{{SONG_3_OFFICIAL_URL}}` | Official source for Song 3 | `https://www.youtube.com/watch?v=fV4DiAyExN0` | Confirm availability, official/authorized source and unchanged destination immediately before export | YES | YES |
-| `{{CONTINUE_PRACTICING_URL}}` | Sole primary continuation action | Unresolved | Approve destination, privacy implications, visible URL, annotation and QR | YES | YES |
-| `{{SURVEY_URL}}` | Optional short feedback survey | `https://tally.so/r/eqzgbe` | Confirm form ownership, questions, privacy notice and continued availability | YES | YES |
-| `{{ADVANCED_EBOOK_WAITLIST_URL}}` | Optional future-product interest on final page 30 | Unresolved; advanced/paid ebook is postponed | Include only if a real approved waitlist exists; otherwise omit the link and QR | Only if used | NO if omitted; YES if shown as actionable |
-| `{{YOUTUBE_CHANNEL_URL}}` | Optional discreet footer link or non-competing text link on the brand-mission page (final page 29) | Unresolved in this audit | Verify official channel and approve placement; omit if unavailable | Optional | NO if omitted |
-| `{{CANONICAL_DOMAIN}}` | Canonical project identity and footer reference | `https://singpronuncerepeat.com` | Confirm canonical Production origin before export | NO | YES |
+| SONG_1_OFFICIAL_URL | Official source for Song 1 | `https://www.youtube.com/watch?v=rtOvBOTyX00` | VERIFIED | YES | YES |
+| SONG_2_OFFICIAL_URL | Official source for Song 2 | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | VERIFIED | YES | YES |
+| SONG_3_OFFICIAL_URL | Official source for Song 3 | `https://www.youtube.com/watch?v=fV4DiAyExN0` | VERIFIED | YES | YES |
+| CONTINUE_PRACTICING_URL | Sole primary continuation action | `https://tally.so/r/D4a6NE` | VERIFIED | YES | YES |
+| SURVEY_URL | Optional short feedback survey | `https://tally.so/r/eqzgbe` | VERIFIED | YES | YES |
+| ADVANCED_EBOOK_WAITLIST_URL | Optional future-product interest on final page 30 | OMITTED — no approved advanced-ebook waitlist or product exists | OMITTED | NO | NO |
+| YOUTUBE_CHANNEL_URL | Optional discreet footer link on final page 29 | OMITTED — optional and unnecessary for this ebook gate | OMITTED | NO | NO |
+| CANONICAL_DOMAIN | Canonical project identity and footer reference | `https://singpronuncerepeat.com` | VERIFIED | NO | YES |
 
-Rules for placeholders:
+Rules for destinations:
 
 - Never invent or shorten a destination.
-- No unresolved token may remain in the generated learner-facing PDF.
+- No unresolved destination token may remain in the generated learner-facing PDF.
 - QR payload and visible/clickable URL must be identical.
 - Every QR must be scan-tested at rendered A5 size and after common phone zoom/compression.
 - Optional unresolved destinations are omitted rather than converted into disabled, misleading or interactive-looking controls.
-- Song URLs, the continuation URL, the survey URL and the canonical domain block final export when unresolved. The advanced waitlist URL blocks export only when shown as an actionable control. The YouTube channel link is optional and should be omitted when unresolved; it must never become another primary or secondary button.
+- Song URLs, the continuation URL, the survey URL and the canonical domain block final export when unresolved. The advanced waitlist URL is omitted because no approved destination exists. The YouTube channel link is omitted and must never become another primary or secondary button.
+
+```text
+Manual QR scan validation: PENDING
+Link/QR gate: BLOCKED until manual scan PASS
+```
 
 ## Approval and implementation gate
 
