@@ -11,6 +11,17 @@ Owner copy gate: PASS
 Pronunciation gate: PASS
 Link/QR gate: PASS
 
+Initial project-owner visual decision: CHANGES REQUESTED
+
+Review artifact: 12-page A5 prototype PDF
+
+Initial findings:
+
+- Final page 2: missing footer / insufficient bottom clearance.
+- Final page 4: clipped notation content / missing footer.
+- Final page 5: clipped footer.
+- Final page 24: challenge overflow / missing footer.
+
 ## Representative-Page Inventory
 
 | Final page | Page family | Prototype status |
@@ -85,9 +96,9 @@ The prototype represents all required reusable treatments:
 
 ## Responsive Checks
 
-Local file opened: `docs/design/prototypes/phase-0-ebook-improved-preview.html`.
+Local HTTP review endpoint: `http://127.0.0.1:9898/docs/design/prototypes/phase-0-ebook-improved-preview.html`.
 
-- Desktop preview: STRUCTURAL PASS — centered A5 cards, dark browser background, visible page gaps and page shadows are defined in the screen stylesheet. Project-owner visual observation remains pending.
+- Desktop preview: CORRECTION STRUCTURAL PASS — all twelve page footers and matching final-page numbers are rendered; pages 2, 4, 5 and 24 retain a visible footer reserve after their layout corrections. Project-owner visual re-review remains pending.
 - 390 px mobile: STRUCTURAL PASS — the stylesheet limits page width to the viewport, stacks multi-column layouts, keeps QR cards within the page width, and does not use fixed screen heights or horizontal overflow. Project-owner mobile readability review remains pending.
 - Screen-only prototype labels are defined separately and hidden in print mode.
 
@@ -97,7 +108,9 @@ Local file opened: `docs/design/prototypes/phase-0-ebook-improved-preview.html`.
 - Print-color preservation: STRUCTURAL PASS — the stylesheet applies exact print-color adjustment.
 - Card, table, exercise and QR blocks use print break protection.
 - Screen labels and long YouTube URLs are hidden in print mode. Readable short destinations are limited to designated print URL elements.
-- A5 print preview: PENDING — project-owner visual confirmation of page balance, footer clearance and background-graphics settings is required.
+- A5 correction structural validation: PASS — pages 2, 4, 5 and 24 use tightened page-family spacing, retain their full approved content, and reserve the standard footer area without changing the shared text minimums.
+- Temporary local A5 review artifact: 12 pages rendered from the served prototype. All twelve final-page footers and page numbers are visible; pages 2, 4, 5 and 24 show their complete corrected treatments above the footer.
+- A5 print preview: RE-REVIEW PENDING — project-owner confirmation of page balance, footer clearance and background-graphics settings is required.
 
 ## Accessibility and Contrast Review
 
@@ -118,34 +131,36 @@ Local file opened: `docs/design/prototypes/phase-0-ebook-improved-preview.html`.
 
 | Review area | Status | Notes |
 |---|---|---|
-| Overall visual direction | PENDING | |
-| Cover | PENDING | |
-| Opening pages | PENDING | |
-| Method and notation | PENDING | |
-| Song introduction | PENDING | |
-| Practice card | PENDING | |
-| Completion page | PENDING | |
-| Challenge page | PENDING | Final page 24 Day 1 only |
-| CTA pages | PENDING | |
-| QR presentation | PENDING | |
+| Overall visual direction | PASS | |
+| Cover | PASS | |
+| Opening pages | RE-REVIEW PENDING | Corrected final page 2 footer and bottom clearance |
+| Method and notation | RE-REVIEW PENDING | Corrected final page 4 notation density and footer clearance |
+| Song introduction | PASS | |
+| Practice card | PASS | |
+| Completion page | PASS | |
+| Challenge page | RE-REVIEW PENDING | Corrected final page 24 Day 1 layout and footer clearance |
+| CTA pages | PASS | |
+| QR presentation | PASS | |
 | Mobile readability | PENDING | |
-| A5 print preview | PENDING | |
-| Final approval | PENDING | |
+| A5 print preview | RE-REVIEW PENDING | Corrected final pages: 2, 4, 5 and 24 |
+| Final approval | RE-REVIEW PENDING | |
 
 ## Current Gate Status
 
 Representative pages implemented: 12 of 12
 Design components represented: COMPLETE
 Prototype structural validation: PASS
-Project-owner visual review: PENDING
-Design prototype gate: BLOCKED — OWNER VISUAL REVIEW PENDING
+Visual corrections implemented: COMPLETE
+Correction structural validation: PASS
+Project-owner visual re-review: PENDING
+Design prototype gate: BLOCKED — OWNER VISUAL RE-REVIEW PENDING
 Full 32-page design implementation: BLOCKED
 PDF generation: BLOCKED
 Production replacement: BLOCKED
 
 ## Remaining Actions
 
-1. Project owner reviews the local prototype at desktop width, 390 px mobile width and A5 print preview with background graphics enabled.
-2. Record the owner decision and any visual corrections without changing approved learner-facing copy.
+1. Project owner re-reviews the corrected prototype at desktop width, 390 px mobile width and A5 print preview with background graphics enabled.
+2. Record the re-review decision and any further visual corrections without changing approved learner-facing copy.
 3. After the prototype gate passes, implement all 32 approved final pages using the accepted reusable system.
 4. Complete final embedded-link and QR checks during the later PDF QA phase before any Production replacement.

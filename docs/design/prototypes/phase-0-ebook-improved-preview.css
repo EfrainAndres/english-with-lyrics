@@ -95,7 +95,7 @@ a { color: inherit; }
 .brand-lockup { text-align: right; color: var(--c-text); font-weight: 750; }
 .brand-lockup span { color: var(--c-muted); font-weight: 500; }
 
-.page-content { flex: 1; min-width: 0; }
+.page-content { flex: 0 1 auto; min-width: 0; }
 
 h1, h2, h3 { font-family: Georgia, "Times New Roman", Palatino, serif; line-height: 1.08; }
 h1 { margin: 0 0 4mm; font-size: 24pt; color: var(--c-yellow); }
@@ -116,6 +116,7 @@ code { padding: 0 .5mm; color: var(--c-yellow); background: rgba(254, 226, 150, 
 }
 
 .page-footer {
+  flex: 0 0 9mm;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -151,24 +152,24 @@ code { padding: 0 .5mm; color: var(--c-yellow); background: rgba(254, 226, 150, 
 .time-card { margin-top: 3mm; padding: 3mm 3.3mm; border-left: 1mm solid var(--c-pink); background: var(--c-surface-raised); }
 .time-card h2 { margin-top: 0; }
 .time-card p { margin-bottom: 1mm; }
-.support-copy { color: var(--c-muted); font-size: 9.75pt; }
+.support-copy { color: var(--c-muted); font-size: 10pt; }
 .completion-check { display: inline-flex; align-items: center; gap: 2mm; margin-top: 2mm; font-weight: 750; }
 input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
 
 .method-card { margin-bottom: 3mm; padding: 4mm; border-left: 1.2mm solid var(--c-yellow); background: var(--c-surface-raised); font-size: 11.25pt; }
 .notation-columns { margin-top: 3mm; }
 .notation-columns > article { min-width: 0; }
-.compact-list { padding-left: 4mm; font-size: 9.6pt; }
+.compact-list { padding-left: 4mm; font-size: 10.5pt; }
 .legend-card { padding: 3mm; background: #211B2B; border: .25mm solid #786083; }
 .legend-card h2 { margin-top: 0; }
 .sound-legend { margin: 0; }
 .sound-legend div { display: grid; grid-template-columns: 7mm 1fr; gap: 1.5mm; padding: 1.5mm 0; border-top: .2mm solid rgba(255, 249, 254, .16); }
 .sound-legend div:first-child { border-top: 0; }
 .sound-legend dt { display: grid; place-items: center; min-height: 6mm; color: var(--c-ink); background: var(--c-yellow); font-weight: 900; }
-.sound-legend dd { margin: 0; font-size: 8.9pt; }
+.sound-legend dd { margin: 0; font-size: 10pt; }
 
 .steps-flow { display: grid; gap: 2mm; padding: 0; list-style: none; counter-reset: steps; }
-.learning-path { display: flex; align-items: center; gap: 2mm; margin: 3mm 0; color: var(--c-muted); font-size: 9pt; font-weight: 750; }
+.learning-path { display: flex; align-items: center; gap: 2mm; margin: 3mm 0; color: var(--c-muted); font-size: 10pt; font-weight: 750; }
 .learning-path b { color: var(--c-yellow); font-size: 13pt; }
 .learning-path span:last-child { color: var(--c-pink); }
 .steps-flow li { display: grid; grid-template-columns: 9mm 1fr; gap: 2.5mm; align-items: start; padding: 2.2mm 3mm; border: .25mm solid var(--c-line); background: var(--c-surface); break-inside: avoid; }
@@ -179,7 +180,7 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
 .mini-practice-map { margin: 3mm 0; padding: 3mm; border: .25mm solid var(--c-purple); background: #1A1520; }
 .mini-practice-map .eyebrow { margin-bottom: 2mm; }
 .mini-map-grid { display: flex; flex-wrap: wrap; gap: 1.5mm; }
-.mini-map-grid span { padding: 1mm 1.6mm; border: .25mm solid var(--c-line); color: var(--c-muted); font-size: 8.5pt; }
+.mini-map-grid span { padding: 1mm 1.6mm; border: .25mm solid var(--c-line); color: var(--c-muted); font-size: 10pt; }
 
 .journey-map { display: grid; gap: 3mm; padding: 0; list-style: none; }
 .journey-map li { display: grid; grid-template-columns: 11mm 1fr; gap: 3mm; align-items: start; padding: 3mm; border-left: 1mm solid var(--c-purple); background: var(--c-surface); break-inside: avoid; }
@@ -190,7 +191,7 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
 .journey-marker { display: grid; place-items: center; width: 8mm; height: 8mm; color: var(--c-ink); background: var(--c-purple); font-weight: 900; }
 .journey-map li:nth-child(2) .journey-marker { background: var(--c-pink); }
 .journey-map li:nth-child(3) .journey-marker { background: var(--c-yellow); }
-.milestone { display: flex; align-items: center; gap: 2mm; margin-top: 2mm !important; color: var(--c-muted); font-size: 9pt; }
+.milestone { display: flex; align-items: center; gap: 2mm; margin-top: 2mm !important; color: var(--c-muted); font-size: 10pt; }
 .meter { display: inline-block; width: 36mm; height: 3mm; overflow: hidden; vertical-align: middle; background: #3D3541; }
 .meter i { display: block; width: 33%; height: 100%; background: var(--c-purple); }
 .meter--two i { width: 66%; background: var(--c-pink); }
@@ -207,11 +208,11 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
 .primary-cta { display: inline-block; margin: 1.5mm 0; padding: 2.5mm 3mm; color: var(--c-ink); background: var(--c-yellow); font-weight: 850; text-decoration: none; }
 .primary-cta--survey { background: var(--c-pink); }
 .primary-cta:hover, .primary-cta:focus-visible { outline: .7mm solid var(--c-text); outline-offset: 1mm; }
-.screen-url { display: block; overflow-wrap: anywhere; color: var(--c-muted); font-size: 8.5pt; }
+.screen-url { display: block; overflow-wrap: anywhere; color: var(--c-muted); font-size: 10pt; }
 .secondary-link { display: inline-block; color: var(--c-text); font-weight: 750; text-decoration-color: var(--c-pink); text-decoration-thickness: .5mm; text-underline-offset: 1mm; }
 .qr-card { display: flex; flex-direction: column; align-items: center; gap: 1.5mm; min-width: 0; padding: 2.5mm; color: var(--c-text); background: #FFF; text-align: center; text-decoration: none; }
 .qr-card img { display: block; width: 30mm; height: 30mm; background: #FFF; object-fit: contain; }
-.qr-card span { color: var(--c-ink); font-size: 8pt; font-weight: 800; }
+.qr-card span { color: var(--c-ink); font-size: 10pt; font-weight: 800; }
 .listen-note { margin-top: 3mm; padding: 3mm; border-left: 1mm solid var(--c-purple); background: var(--c-surface); }
 .listen-note p { margin: 0; }
 
@@ -220,19 +221,19 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
 .practice-rows { margin: 0; }
 .practice-row { display: grid; grid-template-columns: 34mm 1fr; border-top: .25mm solid #50606D; }
 .practice-row:first-child { border-top: 0; }
-.practice-row dt { padding: 2.2mm; color: var(--c-muted); background: #1E2A35; font-size: 8.8pt; font-weight: 800; }
-.practice-row dd { margin: 0; padding: 2.2mm 2.6mm; font-size: 9.25pt; }
+.practice-row dt { padding: 2.2mm; color: var(--c-muted); background: #1E2A35; font-size: 10pt; font-weight: 800; }
+.practice-row dd { margin: 0; padding: 2.2mm 2.6mm; font-size: 10.5pt; }
 .pronunciation-row dd { color: var(--c-yellow); font-size: 12pt; }
 .meaning-row dd { background: rgba(204, 157, 234, .1); }
 .exercise-row dd { background: rgba(254, 156, 225, .1); }
 .writing-area { display: grid; gap: 4mm; min-height: 15mm; padding: 3mm; background: #FFF9FE; }
 .writing-area span { border-bottom: .25mm solid #605563; }
 .writing-area--large { min-height: 28mm; }
-.repeat-footer { margin: 0; padding: 3mm; color: var(--c-muted); font-size: 9pt; }
+.repeat-footer { margin: 0; padding: 3mm; color: var(--c-muted); font-size: 10pt; }
 .practice-card .completion-check { margin: 0; padding: 0 3mm 3mm; }
 
 .table-wrap { overflow: visible; break-inside: avoid; }
-.review-table { width: 100%; border-collapse: collapse; font-size: 8.65pt; }
+.review-table { width: 100%; border-collapse: collapse; font-size: 10pt; }
 .review-table th, .review-table td { padding: 2.2mm; border: .25mm solid var(--c-line); text-align: left; vertical-align: top; }
 .review-table th { color: var(--c-ink); background: var(--c-yellow); font-weight: 850; }
 .review-table td:last-child, .review-table th:last-child { width: 18mm; text-align: center; }
@@ -252,6 +253,81 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
 .challenge-steps li { padding-left: 1.5mm; }
 .objective-box { margin: 4mm 0; padding: 3mm; border-left: 1mm solid var(--c-yellow); background: var(--c-surface); }
 .objective-box p { margin: 0; }
+
+/* Dense A5 page families retain the shared type scale and recover space through rhythm. */
+.page--opening .page-header,
+.page--method .page-header,
+.page--steps .page-header,
+.page--challenge .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
+
+.page--opening h1 { margin-bottom: 2.5mm; font-size: 21pt; }
+.page--opening h2 { margin: 2.5mm 0 1.5mm; font-size: 12.5pt; }
+.page--opening p { margin-bottom: 1.6mm; line-height: 1.28; }
+.page--opening .audience-list { margin-bottom: 2mm; }
+.page--opening .two-card-grid { gap: 2mm; }
+.page--opening .info-card { padding: 2mm; }
+.page--opening .info-card ul { margin-bottom: 0; }
+.page--opening .info-card li + li { margin-top: .7mm; }
+.page--opening .time-card { margin-top: 2mm; padding: 2.2mm 2.5mm; }
+.page--opening .support-copy { margin-top: 2mm; }
+.page--opening .completion-check { margin-top: 1.5mm; }
+
+.page--method h1 { margin-bottom: 2mm; font-size: 18.5pt; }
+.page--method h2 { margin: 1.5mm 0 1mm; font-size: 11.5pt; }
+.page--method .method-card { margin-bottom: 1.5mm; padding: 1.7mm 2.4mm; font-size: 10.5pt; line-height: 1.16; }
+.page--method .two-card-grid { gap: 2mm; }
+.page--method .info-card { padding: 1.6mm 1.8mm; }
+.page--method .info-card ul { margin-bottom: 0; padding-left: 3.5mm; }
+.page--method .info-card li { font-size: 10pt; line-height: 1.1; }
+.page--method .info-card li + li { margin-top: .35mm; }
+.page--method .notation-columns { gap: 1.5mm; margin-top: 1.5mm; }
+.page--method .compact-list { margin-bottom: 0; padding-left: 3.2mm; font-size: 10pt; line-height: 1.1; }
+.page--method .compact-list li + li { margin-top: .35mm; }
+.page--method .legend-card { padding: 1.6mm; }
+.page--method .sound-legend div { grid-template-columns: 5.5mm 1fr; gap: 1mm; padding: .45mm 0; }
+.page--method .sound-legend dt { min-height: 5.5mm; }
+.page--method .sound-legend dd { font-size: 10pt; line-height: 1.1; }
+.page--method .support-copy { margin: 1mm 0 0; line-height: 1.14; }
+
+.page--steps h1 { margin-bottom: 2.5mm; font-size: 21pt; }
+.page--steps .learning-path { margin: 2mm 0; }
+.page--steps .steps-flow { gap: 1.2mm; }
+.page--steps .steps-flow li { gap: 2mm; padding: 1.5mm 2.3mm; }
+.page--steps .step-number { width: 6.5mm; height: 6.5mm; }
+.page--steps .mini-practice-map { margin: 2mm 0; padding: 2.2mm; }
+.page--steps .mini-practice-map .eyebrow { margin-bottom: 1.3mm; }
+.page--steps .mini-map-grid { gap: 1mm; }
+.page--steps .mini-map-grid span { padding: .7mm 1.2mm; }
+.page--steps .page-content > p:last-of-type { margin-bottom: 1.5mm; line-height: 1.3; }
+.page--steps .completion-check { margin-top: 1mm; }
+
+.page--challenge h1 { margin-bottom: 2.5mm; font-size: 20pt; }
+.page--challenge .challenge-card { padding: 3mm; }
+.page--challenge .eyebrow { margin-bottom: 1mm; }
+.page--challenge .time-chip { padding: 1.1mm 2mm; }
+.page--challenge .challenge-steps { gap: 1.3mm; margin: 2.5mm 0; padding-left: 5mm; }
+.page--challenge .challenge-steps li { padding-left: 1mm; }
+.page--challenge .objective-box { margin: 2.5mm 0; padding: 2mm 2.5mm; }
+.page--challenge .writing-area--large { min-height: 20mm; }
+.page--challenge .writing-area { gap: 3mm; padding: 2.5mm; }
+.page--challenge .completion-check { margin-top: 1.5mm; }
+.page--challenge .completion-progress { margin: 2.5mm 0 0; }
+
+.page--practice .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
+.page--practice h1 { margin-bottom: 2mm; font-size: 21pt; }
+.page--practice .practice-kicker { margin-bottom: 1.5mm; }
+.page--practice .practice-card { line-height: 1.14; }
+.page--practice .practice-row dt { padding: 1mm 1.5mm; }
+.page--practice .practice-row dd { padding: 1mm 1.5mm; }
+.page--practice .pronunciation-row dd { font-size: 11pt; }
+.page--practice .writing-area { gap: 2.5mm; min-height: 12mm; padding: 2mm; }
+.page--practice .repeat-footer { padding: 2mm; line-height: 1.16; }
+.page--practice .completion-check { padding: 0 2mm 2mm; }
+
+.page--closing .page-header { margin-bottom: 3mm; padding-bottom: 2mm; }
+.page--closing .rights-copy p { margin-bottom: 2mm; line-height: 1.25; }
+.page--closing .canonical-link { margin-top: 2.5mm !important; }
+.page--closing .closing-word { margin-top: 2mm !important; }
 
 .cta-layout { display: grid; grid-template-columns: 1fr 40mm; gap: 5mm; align-items: center; min-height: 150mm; }
 .cta-layout h1 { font-size: 27pt; }
@@ -284,7 +360,7 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
   .cta-layout .qr-card { justify-self: center; }
   .practice-row { grid-template-columns: 1fr; }
   .practice-row dt { padding-bottom: 1mm; }
-  .review-table { font-size: 8pt; }
+  .review-table { font-size: 10pt; }
   .review-table th, .review-table td { padding: 1.3mm; }
   .review-table th:nth-child(3), .review-table td:nth-child(3) { display: none; }
   .review-table td:last-child, .review-table th:last-child { width: 15mm; }
@@ -302,7 +378,8 @@ input { width: 4mm; height: 4mm; accent-color: var(--c-pink); }
   .page:last-child { break-after: auto; page-break-after: auto; }
   .prototype-label { display: none; }
   .page-header { margin-bottom: 4mm; }
-  .page-footer { margin-top: auto; }
+  .page-footer { flex: 0 0 9mm; margin-top: auto; padding-top: 2mm; }
+  .page--opening, .page--method, .page--steps, .page--challenge { padding-top: 11mm; padding-bottom: 13mm; }
   .info-card, .method-card, .time-card, .mini-practice-map, .prediction-card, .listen-note, .lesson-panel, .practice-card, .table-wrap, .challenge-card, .qr-card, .objective-box { break-inside: avoid; page-break-inside: avoid; }
   .screen-url { display: none; }
   .print-url { display: block; margin: 1mm 0; color: var(--c-muted); font-size: 9pt; }
