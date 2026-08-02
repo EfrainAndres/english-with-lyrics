@@ -18,10 +18,13 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 SOURCE_HTML_REL="docs/design/production/phase-0-ebook.html"
 OUTPUT_PDF="$REPO_ROOT/docs/design/production/phase-0-ebook-production-draft.pdf"
-TEMP_PDF="$REPO_ROOT/docs/design/production/.export-tmp-$$.pdf"
+METADATA_PATCHER="$REPO_ROOT/scripts/patch-pdf-metadata.py"
+TEMP_RENDERED_PDF="$REPO_ROOT/docs/design/production/.export-rendered-$$.pdf"
+TEMP_PATCHED_PDF="$REPO_ROOT/docs/design/production/.export-patched-$$.pdf"
 SERVER_LOG="$(mktemp /tmp/ebook-server-log.XXXXXX)"
+CHROME_PROFILE_DIR="$(mktemp -d /tmp/ebook-chrome-profile.XXXXXX)"
 
-PORT=9898
+PORT="${EBOOK_EXPORT_PORT:-9898}"
 SERVER_PID=""
 
 # ------------------------------------------------------------------ #
@@ -33,7 +36,8 @@ cleanup() {
     kill "$SERVER_PID" 2>/dev/null || true
     echo "Local HTTP server stopped."
   fi
-  rm -f "$TEMP_PDF" "$SERVER_LOG"
+  rm -f "$TEMP_RENDERED_PDF" "$TEMP_PATCHED_PDF" "$SERVER_LOG"
+  rm -rf "$CHROME_PROFILE_DIR"
 }
 trap cleanup EXIT INT TERM
 
@@ -79,6 +83,11 @@ echo "Using browser: $CHROME"
 
 if [[ ! -f "$REPO_ROOT/$SOURCE_HTML_REL" ]]; then
   echo "ERROR: $REPO_ROOT/$SOURCE_HTML_REL not found."
+  exit 1
+fi
+
+if [[ ! -f "$METADATA_PATCHER" ]]; then
+  echo "ERROR: $METADATA_PATCHER not found."
   exit 1
 fi
 
@@ -143,23 +152,75 @@ fi
 echo "Manual server test passed."
 
 # ------------------------------------------------------------------ #
-# Structural content check: TR-03 full repeat instruction              #
+# Approved-source structural preflight                                 #
 # ------------------------------------------------------------------ #
 
-TR03_REQUIRED="decirlo sin mirar la guía"
-if ! grep -qF "$TR03_REQUIRED" "$REPO_ROOT/$SOURCE_HTML_REL"; then
-  echo "ERROR: TR-03 repeat instruction is incomplete in HTML source."
-  echo "  Required phrase: \"$TR03_REQUIRED\""
-  echo "  Check page 17 in $SOURCE_HTML_REL."
-  exit 1
-fi
-echo "TR-03 structural check: PASSED (full repeat instruction present)"
+python3 - "$REPO_ROOT/$SOURCE_HTML_REL" <<'PYEOF'
+import re
+import sys
+from pathlib import Path
+
+html = Path(sys.argv[1]).read_text(encoding='utf-8')
+
+pages = re.findall(
+    r'<section[^>]*class="[^"]*\bpage\b[^"]*"[^>]*data-final-page="(\d+)"',
+    html,
+)
+expected_pages = [str(number) for number in range(1, 33)]
+if pages != expected_pages:
+    raise SystemExit(f'HTML preflight failed — page order: {pages}')
+
+fragments = re.findall(r'data-fragment-id="([A-Z]+-\d{2})"', html)
+expected_fragments = [
+    'ATY-01', 'ATY-02', 'ATY-03',
+    'SLY-01', 'SLY-02', 'SLY-03',
+    'TR-01', 'TR-02', 'TR-03',
+]
+if fragments != expected_fragments:
+    raise SystemExit(f'HTML preflight failed — fragment order: {fragments}')
+
+required_values = [
+    'https://www.youtube.com/watch?v=si9YeTd8z1E',
+    'https://www.youtube.com/watch?v=HetOzN4RtTY',
+    'https://www.youtube.com/watch?v=OYJRuJ18_Rg',
+    'https://www.youtube.com/watch?v=rtOvBOTyX00',
+    'https://www.youtube.com/watch?v=7pOr3dBFAeY',
+    'https://www.youtube.com/watch?v=fV4DiAyExN0',
+    'https://tally.so/r/D4a6NE',
+    'https://tally.so/r/eqzgbe',
+    'https://singpronuncerepeat.com/privacidad',
+    'https://singpronuncerepeat.com',
+    '../assets/phase-0-ebook/qr/song-1-a-thousand-years.svg',
+    '../assets/phase-0-ebook/qr/song-2-still-loving-you.svg',
+    '../assets/phase-0-ebook/qr/song-3-the-reason.svg',
+    '../assets/phase-0-ebook/qr/continue-first-group.svg',
+    '../assets/phase-0-ebook/qr/survey-feedback.svg',
+]
+missing = [value for value in required_values if value not in html]
+if missing:
+    raise SystemExit(f'HTML preflight failed — missing approved values: {missing}')
+
+for forbidden in (
+    '{{',
+    '[DESIGN:',
+    'INTERNAL:',
+    'english-with-lyrics.vercel.app',
+    'tally.so/r/q4z8l9',
+    'youtu.be/',
+    '?si=',
+    '&si=',
+):
+    if forbidden in html:
+        raise SystemExit(f'HTML preflight failed — forbidden value: {forbidden}')
+
+print('Approved-source preflight: PASSED (32 pages, nine fragments, current destinations)')
+PYEOF
 
 # ------------------------------------------------------------------ #
 # Export to temporary PDF                                              #
 # ------------------------------------------------------------------ #
 
-echo "Exporting PDF to temp path: $TEMP_PDF"
+echo "Exporting PDF to temporary path: $TEMP_RENDERED_PDF"
 
 # Detect headless mode: newer Chrome (>= 112) uses --headless=new
 CHROME_VERSION=$("$CHROME" --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+' | head -1 | cut -d. -f1 || echo "0")
@@ -169,258 +230,295 @@ else
   HEADLESS_FLAG="--headless"
 fi
 
-"$CHROME" \
+python3 - \
+  "$CHROME" \
   "$HEADLESS_FLAG" \
-  --disable-gpu \
-  --no-sandbox \
-  --no-pdf-header-footer \
-  --run-all-compositor-stages-before-draw \
-  --virtual-time-budget=10000 \
-  --print-to-pdf="$TEMP_PDF" \
-  "$TARGET_URL"
+  "$TEMP_RENDERED_PDF" \
+  "$TARGET_URL" \
+  "$CHROME_PROFILE_DIR" <<'PYEOF'
+from pathlib import Path
+import os
+import signal
+import subprocess
+import sys
+import time
+
+chrome, headless_flag, output_path, target_url, profile_dir = sys.argv[1:]
+output = Path(output_path)
+command = [
+    chrome,
+    headless_flag,
+    '--disable-gpu',
+    '--disable-background-networking',
+    '--disable-component-update',
+    '--disable-extensions',
+    '--disable-sync',
+    '--no-first-run',
+    '--no-default-browser-check',
+    '--no-sandbox',
+    '--no-pdf-header-footer',
+    f'--user-data-dir={profile_dir}',
+    '--run-all-compositor-stages-before-draw',
+    '--virtual-time-budget=10000',
+    f'--print-to-pdf={output_path}',
+    target_url,
+]
+
+process = subprocess.Popen(command, start_new_session=True)
+deadline = time.monotonic() + 90
+last_size = -1
+stable_since = None
+
+while time.monotonic() < deadline:
+    return_code = process.poll()
+    size = output.stat().st_size if output.exists() else 0
+
+    if size > 0 and size == last_size:
+        stable_since = stable_since or time.monotonic()
+    else:
+        stable_since = None
+        last_size = size
+
+    if return_code is not None:
+        break
+    if stable_since is not None and time.monotonic() - stable_since >= 3:
+        os.killpg(process.pid, signal.SIGTERM)
+        try:
+            process.wait(timeout=10)
+        except subprocess.TimeoutExpired:
+            os.killpg(process.pid, signal.SIGKILL)
+            process.wait(timeout=10)
+        break
+
+    time.sleep(0.25)
+else:
+    os.killpg(process.pid, signal.SIGTERM)
+    try:
+        process.wait(timeout=10)
+    except subprocess.TimeoutExpired:
+        os.killpg(process.pid, signal.SIGKILL)
+        process.wait(timeout=10)
+    raise SystemExit('Chrome export timed out after 90 seconds.')
+
+if not output.exists() or output.stat().st_size == 0:
+    raise SystemExit(f'Chrome did not produce a non-empty PDF: {output_path}')
+
+if process.returncode not in (0, -signal.SIGTERM):
+    raise SystemExit(f'Chrome export exited with status {process.returncode}.')
+
+print(f'Chrome render complete: {output.stat().st_size} bytes')
+PYEOF
 
 # ------------------------------------------------------------------ #
 # Post-export validation                                               #
 # ------------------------------------------------------------------ #
 
-echo ""
-echo "Validating exported PDF..."
+validate_pdf() {
+  local pdf_path="$1"
+  local validation_stage="$2"
 
-# 1. File exists and is non-empty
-if [[ ! -f "$TEMP_PDF" ]]; then
-  echo "ERROR: Chrome did not produce a PDF at $TEMP_PDF."
-  exit 1
-fi
+  python3 - "$pdf_path" "$validation_stage" <<'PYEOF'
+from collections import Counter
+from pathlib import Path
+import re
+import sys
 
-TEMP_SIZE=$(wc -c < "$TEMP_PDF" | tr -d ' ')
-if [[ "$TEMP_SIZE" -lt 50000 ]]; then
-  echo "ERROR: PDF is suspiciously small ($TEMP_SIZE bytes). Export likely failed."
-  exit 1
-fi
-
-echo "File exists: $TEMP_PDF ($TEMP_SIZE bytes)"
-
-# 2. Confirm it starts with the PDF header
-PDF_HEADER=$(head -c 4 "$TEMP_PDF" 2>/dev/null | tr -d '\n')
-if [[ "$PDF_HEADER" != "%PDF" ]]; then
-  echo "ERROR: File does not start with %PDF — not a valid PDF."
-  exit 1
-fi
-echo "Valid PDF header confirmed."
-
-# 3. Validate content using Python stdlib
-#
-# Chrome PDFs encode text as CIDFont with custom glyph mappings, so naive
-# string search in raw or decompressed streams does not find readable text.
-# We validate using:
-#   a) Absence of network-error phrases in raw bytes
-#   b) PDF page count (from /Type /Page objects)
-#   c) PDF title from metadata (stored as UTF-16BE hex — decodable without libraries)
-#   d) File size threshold (error pages are typically < 100 KB; full ebook ~1 MB)
-#   e) Presence of brand colors in shading functions (cover gradient uses exact brand hex)
-
-python3 - "$TEMP_PDF" <<'PYEOF'
-import sys, re, codecs
-
-pdf_path = sys.argv[1]
-with open(pdf_path, 'rb') as f:
-    data = f.read()
-
+pdf_path = Path(sys.argv[1])
+stage = sys.argv[2]
+data = pdf_path.read_bytes()
 failed = False
 
-# --- a) Network-error phrase check -------------------------------------------
-error_phrases = [
+
+def fail(message):
+    global failed
+    print(f'VALIDATION FAILED — {message}')
+    failed = True
+
+
+def decode_hex(value):
+    raw = bytes.fromhex(value.decode('ascii'))
+    if raw.startswith(b'\xfe\xff'):
+        return raw[2:].decode('utf-16-be')
+    if raw.startswith(b'\xff\xfe'):
+        return raw[2:].decode('utf-16-le')
+    try:
+        return raw.decode('utf-8')
+    except UnicodeDecodeError:
+        return raw.decode('latin-1')
+
+
+def last_hex_field(name):
+    matches = re.findall(rb'/' + name.encode() + rb'\s*<([0-9A-Fa-f]+)>', data)
+    return decode_hex(matches[-1]) if matches else None
+
+
+if not data.startswith(b'%PDF'):
+    fail('missing PDF header')
+if b'startxref' not in data or b'%%EOF' not in data:
+    fail('missing readable cross-reference terminator')
+
+for phrase in (
     b'ERR_CONNECTION_REFUSED',
     b'No connection',
     b'No hay conexi',
     b'This site can',
     b'net::ERR',
-]
-for phrase in error_phrases:
+):
     if phrase.lower() in data.lower():
-        print(f'VALIDATION FAILED — network-error phrase found: "{phrase.decode()}"')
-        failed = True
+        fail(f'network-error phrase found: {phrase.decode(errors="replace")}')
 
-if not failed:
-    print('Network-error check: PASSED')
+page_count = len(re.findall(rb'/Type\s*/Page(?!s)\b', data))
+if page_count != 32:
+    fail(f'expected exactly 32 pages, found {page_count}')
 
-# --- b) Page count -----------------------------------------------------------
-# Chrome writes /Type /Page (singular) for each page object.
-pages = re.findall(rb'/Type\s*/Page[^s]', data)
-page_count = len(pages)
+media_boxes = re.findall(
+    rb'/MediaBox\s*\[\s*([-+0-9.]+)\s+([-+0-9.]+)\s+([-+0-9.]+)\s+([-+0-9.]+)\s*\]',
+    data,
+)
+if not media_boxes:
+    fail('no MediaBox geometry found')
+else:
+    geometries = {
+        tuple(float(value) for value in media_box)
+        for media_box in media_boxes
+    }
+    expected = (0.0, 0.0, 420.0, 594.96)
+    for geometry in geometries:
+        if any(abs(actual - wanted) > 0.25 for actual, wanted in zip(geometry, expected)):
+            fail(f'unexpected MediaBox geometry: {geometry}')
+
+rotations = [int(value) % 360 for value in re.findall(rb'/Rotate\s+(-?\d+)', data)]
+if any(rotation != 0 for rotation in rotations):
+    fail(f'unexpected page rotation values: {rotations}')
+
+for forbidden_structure in (b'/Encrypt', b'/JavaScript', b'/AcroForm'):
+    if forbidden_structure in data:
+        fail(f'forbidden PDF structure found: {forbidden_structure.decode()}')
+
+if len(data) < 500_000:
+    fail(f'implausibly small full-document file size: {len(data)} bytes')
+
+uri_values = [
+    value.decode('latin-1').replace('\\(', '(').replace('\\)', ')').replace('\\\\', '\\')
+    for value in re.findall(rb'/URI\s*\(([^)]*)\)', data)
+]
+for value in re.findall(rb'/URI\s*<([0-9A-Fa-f]+)>', data):
+    uri_values.append(decode_hex(value))
+
+def normalize(uri):
+    if uri in {'https://singpronuncerepeat.com', 'https://singpronuncerepeat.com/'}:
+        return 'https://singpronuncerepeat.com/'
+    return uri
+
+uri_values = [normalize(uri) for uri in uri_values]
+expected_uris = Counter({
+    'https://www.youtube.com/watch?v=si9YeTd8z1E': 2,
+    'https://www.youtube.com/watch?v=HetOzN4RtTY': 2,
+    'https://www.youtube.com/watch?v=OYJRuJ18_Rg': 2,
+    'https://www.youtube.com/watch?v=rtOvBOTyX00': 1,
+    'https://www.youtube.com/watch?v=7pOr3dBFAeY': 1,
+    'https://www.youtube.com/watch?v=fV4DiAyExN0': 1,
+    'https://tally.so/r/D4a6NE': 2,
+    'https://tally.so/r/eqzgbe': 2,
+    'https://singpronuncerepeat.com/privacidad': 2,
+    'https://singpronuncerepeat.com/': 1,
+})
+actual_uris = Counter(uri_values)
+if sum(actual_uris.values()) != 16:
+    fail(f'expected exactly 16 link annotations, found {sum(actual_uris.values())}')
+if actual_uris != expected_uris:
+    fail(f'annotation inventory mismatch: {dict(actual_uris)}')
+
+for uri in uri_values:
+    lower = uri.lower()
+    if not lower.startswith('https://'):
+        fail(f'non-HTTPS or relative annotation URL: {uri}')
+    if any(value in lower for value in ('localhost', '127.0.0.1', '.vercel.app', 'youtu.be/', '?si=', '&si=')):
+        fail(f'forbidden annotation URL: {uri}')
+
+if stage == 'patched':
+    expected_metadata = {
+        'Title': 'Aprende inglés con 3 canciones — Sing Pronunce Repeat',
+        'Author': 'Sing Pronunce Repeat / English with Lyrics',
+        'Subject': 'Guía educativa de pronunciación y comprensión de inglés con canciones',
+        'Creator': 'Sing Pronunce Repeat / English with Lyrics',
+    }
+    for field, expected_value in expected_metadata.items():
+        actual_value = last_hex_field(field)
+        if actual_value != expected_value:
+            fail(f'{field} metadata mismatch: {actual_value!r}')
+
+    keywords = last_hex_field('Keywords') or ''
+    for required_keyword in (
+        'aprender inglés',
+        'pronunciación',
+        'inglés con canciones',
+        'Escríbelo como suena',
+        'listening',
+        'vocabulario',
+    ):
+        if required_keyword.casefold() not in keywords.casefold():
+            fail(f'missing metadata keyword: {required_keyword}')
+
+    creator = last_hex_field('Creator') or ''
+    if 'Mozilla/' in creator or 'Chrome/' in creator:
+        fail('Creator exposes a browser user-agent string')
+
+print(f'Validation stage: {stage}')
 print(f'Page count: {page_count}')
-MIN_PAGES = 18
-MAX_PAGES = 25
-if page_count < MIN_PAGES:
-    print(f'VALIDATION FAILED — expected >= {MIN_PAGES} pages, found {page_count}.')
-    failed = True
-elif page_count > MAX_PAGES:
-    print(f'VALIDATION FAILED — expected <= {MAX_PAGES} pages, found {page_count}. Layout may have broken.')
-    failed = True
-elif not (21 <= page_count <= 23):
-    print(f'WARNING — expected 21–23 pages (justified range after QA corrections), found {page_count}. Verify manually.')
-else:
-    print(f'Page count: PASSED ({page_count} pages, within expected range 21–23)')
-
-# --- c) Title metadata (UTF-16BE hex) ----------------------------------------
-# Chrome stores the HTML <title> as a UTF-16BE hex string in /Title <FEFF...>
-title_hex_matches = re.findall(rb'/Title\s*<([0-9A-Fa-f]+)>', data)
-decoded_titles = []
-for hex_bytes in title_hex_matches:
-    try:
-        raw = bytes.fromhex(hex_bytes.decode('ascii'))
-        # Strip BOM (FEFF) and decode UTF-16BE
-        if raw[:2] == b'\xff\xfe':
-            title = raw[2:].decode('utf-16-le', errors='replace')
-        elif raw[:2] == b'\xfe\xff':
-            title = raw[2:].decode('utf-16-be', errors='replace')
-        else:
-            title = raw.decode('utf-16-be', errors='replace')
-        decoded_titles.append(title)
-    except Exception:
-        pass
-
-expected_title_fragments = [
-    'Aprende ingl',
-    'canciones',
-    'Sing Pronunce',
-]
-if decoded_titles:
-    title = decoded_titles[0]
-    print(f'PDF title: {title!r}')
-    missing_title = [f for f in expected_title_fragments if f.lower() not in title.lower()]
-    if missing_title:
-        print(f'VALIDATION FAILED — title missing expected fragments: {missing_title}')
-        failed = True
-    else:
-        print('Title metadata check: PASSED')
-else:
-    print('WARNING — could not extract PDF title metadata. Verify manually.')
-
-# --- d) File size threshold --------------------------------------------------
-size = len(data)
-if size < 200_000:
-    print(f'VALIDATION FAILED — PDF too small ({size} bytes). Expected >= 200 KB for full ebook.')
-    failed = True
-else:
-    print(f'File size check: PASSED ({size:,} bytes)')
-
-# --- e) Brand colors (cover gradient) ----------------------------------------
-# FEE296 yellow = (0.9961, 0.8863, 0.5882); FE9CE1 pink = (0.9961, 0.6118, 0.8824)
-yellow_hex = b'FEE296'
-pink_hex = b'FE9CE1'
-# Chrome encodes gradient stops as decimal RGB floats — check for yellow channel value
-# 0xFE/255 = 0.9961, 0x22/255 ≈ 0.1333 — look for the distinctive yellow triplet
-yellow_str = b'.9961'
-found_color = yellow_str in data
-print(f'Brand color check: {"PASSED" if found_color else "WARNING — yellow brand color not found (may be rendering issue)"}')
-
-# --- f) Annotation URI scan — no localhost links allowed ---------------------
-# Chrome writes /URI (URI) for hyperlinks; extract each URI value and check.
-uri_matches = re.findall(rb'/URI\s*\(([^)]+)\)', data)
-# Also handle hex-encoded URI entries
-uri_hex_matches = re.findall(rb'/URI\s*<([0-9A-Fa-f]+)>', data)
-for hex_bytes in uri_hex_matches:
-    try:
-        raw = bytes.fromhex(hex_bytes.decode('ascii'))
-        uri_matches.append(raw)
-    except Exception:
-        pass
-
-APPROVED_PRODUCTION_ORIGIN = b'https://singpronuncerepeat.com'
-EXPECTED_BACKLINK         = b'https://singpronuncerepeat.com/ebook-gratis'
-
-# Forbidden URI patterns: localhost, preview deployments, HTTP for external links
-BAD_PREFIXES = [
-    b'http://127.0.0.1',
-    b'https://127.0.0.1',
-    b'http://localhost',
-    b'https://localhost',
-]
-# Catch any vercel.app URL that is NOT the approved production origin
-# (preview and branch deploy URLs look like https://<project>-<hash>-<org>.vercel.app)
-BAD_PATTERNS = [b'.vercel.app']
-
-EXPECTED_LINK_COUNT = 7  # 3 YouTube + 2 Tally survey + 1 Tally first-group + 1 ebook backlink
-
-print(f'Embedded annotation URIs ({len(uri_matches)} found):')
-for uri in uri_matches:
-    print(f'  {uri.decode("latin-1", errors="replace")}')
-
-bad_uri_found = False
-
-# Check forbidden prefixes
-for uri in uri_matches:
-    for bad in BAD_PREFIXES:
-        if uri.lower().startswith(bad.lower()):
-            print(f'VALIDATION FAILED — forbidden URI prefix in PDF annotation: {uri.decode("latin-1", errors="replace")}')
-            failed = True
-            bad_uri_found = True
-
-# Check for preview/branch .vercel.app URLs (any .vercel.app that is not the approved origin)
-for uri in uri_matches:
-    uri_lower = uri.lower()
-    for pat in BAD_PATTERNS:
-        if pat in uri_lower and not uri_lower.startswith(APPROVED_PRODUCTION_ORIGIN.lower()):
-            print(f'VALIDATION FAILED — non-production vercel.app URL in PDF annotation: {uri.decode("latin-1", errors="replace")}')
-            failed = True
-            bad_uri_found = True
-
-if not bad_uri_found:
-    print('URI safety scan: PASSED (no localhost, 127.0.0.1, or non-production vercel.app URLs)')
-
-# Verify the exact ebook backlink is present
-backlink_found = any(uri.rstrip(b'/') == EXPECTED_BACKLINK for uri in uri_matches)
-if not backlink_found:
-    print(f'VALIDATION FAILED — expected ebook backlink not found: {EXPECTED_BACKLINK.decode()}')
-    failed = True
-else:
-    print(f'Ebook backlink check: PASSED ({EXPECTED_BACKLINK.decode()})')
-
-if len(uri_matches) != EXPECTED_LINK_COUNT:
-    print(f'VALIDATION FAILED — expected {EXPECTED_LINK_COUNT} embedded link annotations, found {len(uri_matches)}.')
-    failed = True
-else:
-    print(f'Link annotation count: PASSED ({len(uri_matches)} annotations)')
+print('Page geometry: A5 portrait (420.00 x 594.96 pt)')
+print(f'Link annotations: {sum(actual_uris.values())}')
+print(f'File size: {len(data)} bytes')
 
 if failed:
-    sys.exit(1)
+    raise SystemExit(1)
 
-print('All validation checks passed.')
+print(f'PDF validation: PASSED ({stage})')
 PYEOF
+}
 
-echo "PDF validation passed."
+if [[ ! -s "$TEMP_RENDERED_PDF" ]]; then
+  echo "ERROR: Chrome did not produce a non-empty PDF at $TEMP_RENDERED_PDF."
+  exit 1
+fi
 
-# ------------------------------------------------------------------ #
-# Move temp PDF to final destination                                   #
-# ------------------------------------------------------------------ #
+echo "Validating renderer output..."
+validate_pdf "$TEMP_RENDERED_PDF" rendered
 
-mv "$TEMP_PDF" "$OUTPUT_PDF"
+echo "Applying approved metadata patch..."
+python3 "$METADATA_PATCHER" "$TEMP_RENDERED_PDF" "$TEMP_PATCHED_PDF"
+
+if [[ ! -s "$TEMP_PATCHED_PDF" ]]; then
+  echo "ERROR: Metadata patcher did not produce a non-empty PDF."
+  exit 1
+fi
+
+echo "Reopening and validating patched candidate before replacement..."
+validate_pdf "$TEMP_PATCHED_PDF" patched
+
+# Atomic replacement occurs only after the patched candidate passes validation.
+mv "$TEMP_PATCHED_PDF" "$OUTPUT_PDF"
+
+echo "Reopening committed candidate after atomic replacement..."
+validate_pdf "$OUTPUT_PDF" patched
+
 FINAL_SIZE=$(wc -c < "$OUTPUT_PDF" | tr -d ' ')
-
-# Get page count via Python if possible
-PAGE_COUNT=$(python3 - "$OUTPUT_PDF" <<'PYEOF' 2>/dev/null || echo "unknown"
-import sys, re
-with open(sys.argv[1], 'rb') as f:
-    data = f.read()
-pages = re.findall(rb'/Type\s*/Page[^s]', data)
-print(len(pages))
-PYEOF
-)
+FINAL_SHA=$(shasum -a 256 "$OUTPUT_PDF" | awk '{print $1}')
 
 echo ""
 echo "========================================================"
 echo "PDF export successful."
 echo "  Path:       $OUTPUT_PDF"
+echo "  SHA-256:    $FINAL_SHA"
 echo "  Size:       $FINAL_SIZE bytes"
-echo "  Pages:      $PAGE_COUNT"
+echo "  Pages:      32"
+echo "  Geometry:   A5 portrait (420.00 x 594.96 pt)"
+echo "  Links:      16 approved annotations"
 echo "========================================================"
 echo ""
-echo "IMPORTANT — manual QA required before publishing:"
-echo "  1. Open the PDF and verify all 21 pages render correctly."
-echo "  2. Verify background colors appear (requires 'Background graphics')."
-echo "  3. Check that no URLs appear twice."
-echo "  4. Verify all 7 links (3 YouTube, 2 survey, 1 first-group, 1 ebook backlink)."
-echo "  5. Work through docs/validation/PHASE_0_EBOOK_PDF_QA.md."
-echo "  6. Only after manual approval:"
-echo "     cp $OUTPUT_PDF public/downloads/guia-gratis-sing-pronounce-repeat.pdf"
+echo "IMPORTANT — remaining manual QA before publishing:"
+echo "  1. Review all 32 rendered pages and critical pages at full resolution."
+echo "  2. Confirm all five embedded QR codes manually from the final PDF."
+echo "  3. Complete project-owner production-PDF review."
+echo "  4. Work through docs/validation/PHASE_0_EBOOK_PDF_QA.md."
+echo "  5. Do not replace public/downloads until later approval."

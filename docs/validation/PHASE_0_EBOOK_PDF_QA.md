@@ -1,218 +1,306 @@
-# QA Checklist — Phase 0 Ebook PDF Production Draft
+# Phase 0 Ebook Production-PDF QA
 
-## Overview
+## 1. Active review subject
 
-This checklist must be completed manually before approving the production draft
-for public delivery.
+This record covers the generated 32-page production-PDF candidate. It does not
+authorize public delivery or Production replacement.
 
-**Source HTML:** `docs/design/production/phase-0-ebook.html`  
-**Production CSS:** `docs/design/production/phase-0-ebook.css`  
-**Export script:** `scripts/export-ebook-pdf.sh`  
-**Draft PDF:** `docs/design/production/phase-0-ebook-production-draft.pdf`  
-**Future public path:** `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`
-
----
-
-## Export history
-
-### First export (INVALID — replaced)
-
-- **Date:** 2026-06-15
-- **File size:** 70,172 bytes
-- **Status:** INVALID
-- **Reason:** Chrome was launched without a server-readiness check. The local HTTP server
-  had not yet bound to the port when Chrome started, causing an `ERR_CONNECTION_REFUSED`
-  error page to be exported as PDF instead of the ebook.
-- **Detected by:** Raw byte search found `127.0.0.1` in the PDF; expected ebook content
-  ("Aprende inglés", "A Thousand Years", "Still Loving You", "The Reason") was absent.
-- **Action:** Export script rewritten with curl readiness loop, temporary-file validation,
-  and content checks. Invalid PDF replaced.
-
-### Corrected export (2026-06-16, pre-QA layout)
-
-- **Date:** 2026-06-16
-- **File size:** 1,154,555 bytes
-- **Page count:** 18 (confirmed via PDF `/Type /Page` objects)
-- **Status:** Superseded — replaced by QA-corrected layout export below.
-- **Reason superseded:** Manual visual QA identified overflow on pages 7, 11, 15 (Fragment 3 + quick-review shared page caused content to be pushed off A5 boundary); challenge page footer not visible; self-assessment footer and /ebook-gratis reference not visible.
-
-### QA-corrected export (2026-06-16, pre-TR03-fix)
-
-- **Date:** 2026-06-16
-- **File size:** 1,223,741 bytes
-- **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
-- **Status:** Superseded — replaced by TR-03 fix export below.
-- **Reason superseded:** Manual visual QA identified the TR-03 (page 17) repeat instruction was clipped at "después intenta"; the full phrase "decirlo sin mirar la guía." was cut by `overflow: hidden` on the fixed-height A5 page.
-
-### TR-03 fix export (2026-06-15, pre-link-fix)
-
-- **Date:** 2026-06-15
-- **File size:** 1,224,339 bytes
-- **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
-- **Status:** Superseded — replaced by localhost-link fix export below.
-- **Reason superseded:** PDF annotation scan found that the `/ebook-gratis` relative href resolved to `http://127.0.0.1:9898/ebook-gratis` in the exported PDF because Chrome resolved it against the local export server.
-
-### Localhost-link fix export (current)
-
-- **Date:** 2026-06-16
-- **File size:** 1,223,965 bytes
-- **Page count:** 21 (confirmed via PDF `/Type /Page` objects — within expected range 21–23)
-- **PDF title:** "Aprende inglés con 3 canciones — Sing Pronunce Repeat" (UTF-16BE metadata)
-- **Network-error check:** PASSED
-- **Brand colors:** PASSED — yellow #FEE296 detected in shading functions
-- **All 9 learning blocks:** PASSED (deterministic structural validation via Python script)
-- **All 9 fragments present:** PASSED
-- **Three dedicated quick-review pages:** PASSED (pages 8, 13, 18)
-- **Footer on every non-cover page:** PASSED (pages 2–21)
-- **TR-03 visual review:** PASSED — full repeat instruction visible; Listo visible; footer and page number 17 visible (confirmed by user on prior export)
-- **TR-03 structural check:** PASSED — full repeat instruction "decirlo sin mirar la guía" present in HTML source
-- **YouTube links embedded:** PASSED — 3 annotations (ATY, SLY, TR official YouTube)
-- **Survey and first-group links embedded:** PASSED — 2 Tally annotations (tally.so/r/eqzgbe, tally.so/r/D4a6NE)
-- **Challenge page Tally link:** PASSED — 1 Tally annotation (tally.so/r/eqzgbe)
-- **Total link annotations:** 6 (expected 6 — /ebook-gratis is intentionally non-clickable)
-- **Localhost annotation scan:** PASSED — no `http://127.0.0.1` or `http://localhost` URIs in PDF annotations
-- **/ebook-gratis:** Visible text only (non-clickable `<span>`); absolute production URL must be inserted during the public-delivery phase when the production domain is approved
-- **Challenge page footer:** Structurally present (page 19) — visual confirmation pending manual QA
-- **Challenge and self-assessment pages:** Within A5 safe area (confirmed by user on prior export)
-- **Final publication-level legal-safe review:** Pending
-- **Export method:** Chrome headless (`--headless=new`, `--virtual-time-budget=10000`), Python 3 HTTP server with curl readiness loop, temporary PDF validated before move, PDF annotation URI scan
-- **Manual visual QA:** Pending
-- **Publication readiness:** No
-
----
-
-## 1. Page count and structure
-
-| Check | Expected | Pass? |
-|---|---|---|
-| Total page count | 21 A5 pages | |
-| Page 1 | Cover | |
-| Page 2 | Bienvenida | |
-| Page 3 | Método (4 pasos) | |
-| Page 4 | Separador — A Thousand Years | |
-| Pages 5–6 | ATY Fragmentos 1–2 | |
-| Page 7 | ATY Fragmento 3 (complete, dedicated) | |
-| Page 8 | ATY Revisión rápida (dedicated) | |
-| Page 9 | Separador — Still Loving You | |
-| Pages 10–11 | SLY Fragmentos 1–2 | |
-| Page 12 | SLY Fragmento 3 (complete, dedicated) | |
-| Page 13 | SLY Revisión rápida (dedicated) | |
-| Page 14 | Separador — The Reason | |
-| Pages 15–16 | TR Fragmentos 1–2 | |
-| Page 17 | TR Fragmento 3 (complete, dedicated) | |
-| Page 18 | TR Revisión rápida (dedicated) | |
-| Page 19 | Reto de tres días | |
-| Page 20 | Autochequeo + ¿Qué sigue? | |
-| Page 21 | Nota educativa y de derechos | |
-
----
-
-## 2. Visual layout
-
-| Check | Expected | Pass? |
-|---|---|---|
-| Cover logo | Clearly visible, proportionate, `height: 54px` | |
-| Cover background | Dark background with yellow, pink, or black brand color | |
-| Page 19 (challenge) | All 3 day cards fit within the A5 boundary | |
-| Fragment cards | No card extends into the footer area in print | |
-| Confidence table | `○` circles visible and large enough to mark with a pen | |
-| Song divider bars | Colored horizontal bars appear on each song separator | |
-| Brand palette | Black, yellow, pink, purple used consistently | |
-| System fonts | No missing fonts; text readable without custom font installation | |
-| Print backgrounds | Background colors visible in PDF (requires "Background graphics" on) | |
-| Page numbers | Sequential 1–21 in the footer of each page | |
-
----
-
-## 3. Content integrity
-
-| Check | Expected | Pass? |
-|---|---|---|
-| No internal notes | No `[DESIGN: ...]` annotations in the PDF | |
-| No production status | No internal production status block | |
-| No publication blockers | No "publication blockers" section | |
-| No review scores | No confidence percentages or review scores visible | |
-| Fragments only | Only the 9 approved educational fragments appear | |
-| No surrounding lyrics | No surrounding verse lines, choruses, or extended quotes | |
-| ATY-02 translation | "examen importante" (not "examen importantes") | |
-| No personal names | No personal names in public-facing content | |
-
----
-
-## 4. Links
-
-| Check | Expected URL | Pass? |
-|---|---|---|
-| ATY song link (Page 4) | `https://www.youtube.com/watch?v=rtOvBOTyX00` | |
-| SLY song link (Page 8) | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | |
-| TR song link (Page 12) | `https://www.youtube.com/watch?v=fV4DiAyExN0` | |
-| Day 3 survey link (Page 16) | `https://tally.so/r/eqzgbe` | |
-| Primary CTA (Page 17) | `https://tally.so/r/eqzgbe` | |
-| Secondary CTA (Page 17) | `https://tally.so/r/D4a6NE` | |
-| Tertiary link (Page 17) | `/ebook-gratis` | |
-
----
-
-## 5. Print URL behavior
-
-| Check | Expected | Pass? |
-|---|---|---|
-| Song listen links | "Abrir video oficial — youtube.com" (not the full watch URL) | |
-| Full YouTube watch URLs | No full `youtube.com/watch?v=…` URLs printed anywhere | |
-| Tally query strings | No Tally query string appended beside CTA button labels | |
-| `/ebook-gratis` | Appears at most once, in the tertiary link text only | |
-| No URL duplication | No link destination appears twice on any page | |
-
----
-
-## 6. Exercises and interactivity
-
-| Check | Expected | Pass? |
-|---|---|---|
-| Write lines | Visible horizontal lines for handwritten responses | |
-| Multiple choice lists | Numbered options, clearly readable | |
-| Rating rows (TR-02) | Sí / Más o menos / Todavía no options visible | |
-| Checkboxes | Checkbox inputs visible on all progress and review markers | |
-| Confidence scale pips | 1–5 numbered circles on each quick review | |
-
----
-
-## 7. Legal and safety
-
-| Check | Expected | Pass? |
-|---|---|---|
-| Fragment length | Each fragment is a short phrase (2–5 words) only | |
-| No complete verses | No complete verse, bridge, or chorus reproduced | |
-| Rights note visible | Page 18 rights note is present and complete | |
-| Listen guidance | Each song separator directs the reader to the official source | |
-| No claimed certainty | Pronunciation guides include caveats about accent variation | |
-
----
-
-## 8. Approval gate
-
-Complete all checks above before taking any of these actions:
-
-- [ ] Manual review complete — no blocking issues found
-- [ ] PDF exported and visually inspected page by page
-- [ ] All links tested in the browser
-- [ ] Legal-safe review confirmed
-- [ ] Approved for public delivery
-
-Only after all boxes are checked:
-
-```
-cp docs/design/production/phase-0-ebook-production-draft.pdf \
-   public/downloads/guia-gratis-sing-pronounce-repeat.pdf
+```text
+Export date: 2026-08-02
+Approved source HTML: docs/design/production/phase-0-ebook.html
+Approved source CSS: docs/design/production/phase-0-ebook.css
+Export workflow: scripts/export-ebook-pdf.sh
+Candidate: docs/design/production/phase-0-ebook-production-draft.pdf
+Candidate size: 1,315,500 bytes
+Candidate SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Agent QA decision: PASS
+Project-owner production-PDF visual review: PASS
+Project-owner pages visually reviewed: 32 of 32
+Project-owner embedded-PDF QR review: PASS
+Embedded QR codes manually reviewed: 5 of 5 PASS
+Unexpected redirects: NONE
+Production PDF gate: PASS
+Production-PDF candidate: APPROVED
+Public-delivery approval: NEXT / UNBLOCKED — NOT STARTED
+Public downloadable PDF: UNCHANGED
+Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED
+Production deployment: NOT STARTED
+Production replacement: BLOCKED pending public replacement and delivery QA
 ```
 
----
+## 2. Entry gates
 
-## Issue log
+```text
+Architecture gate: PASS
+Owner copy gate: PASS
+Pronunciation gate: PASS
+Link/QR source gate: PASS
+Design prototype gate: PASS
+Full design gate: PASS
+```
 
-Use this table to record any issues found during QA.
+## 3. Export and structural results
 
-| Page | Issue | Severity | Fixed? |
+The export workflow rendered to a temporary path, validated the raw render,
+applied the existing metadata patcher, reopened and validated the patched
+artifact, and only then atomically replaced the candidate path.
+
+| Check | Required | Result |
+|---|---|---|
+| PDF header | `%PDF` | PASS |
+| Cross-reference and EOF | Readable by independent PDF libraries | PASS |
+| File size | Plausible complete document | PASS — 1,315,500 bytes |
+| Page count | Exactly 32 | PASS |
+| Page order | 1 through 32 | PASS |
+| Media box | Approximately 420 × 594.96 pt | PASS — every page 420.00 × 594.96 pt |
+| Orientation | A5 portrait | PASS |
+| Rotation | None | PASS — 0 degrees on all pages |
+| Encryption | None | PASS |
+| JavaScript | None | PASS |
+| Forms | None | PASS |
+| Network-error page | Rejected | PASS — none present |
+| Patched artifact reopened | Required | PASS |
+
+The final patched artifact, not only the pre-patch render, received every
+structural, metadata, text, annotation and QR check recorded below.
+
+## 4. Metadata results
+
+| Field | Final value | Result |
+|---|---|---|
+| Title | `Aprende inglés con 3 canciones — Sing Pronunce Repeat` | PASS |
+| Author | `Sing Pronunce Repeat / English with Lyrics` | PASS |
+| Subject | `Guía educativa de pronunciación y comprensión de inglés con canciones` | PASS |
+| Keywords | `aprender inglés, pronunciación, inglés con canciones, Escríbelo como suena, listening, vocabulario` | PASS |
+| Creator | `Sing Pronunce Repeat / English with Lyrics` | PASS |
+| Producer | `Skia/PDF m151` | ACCEPTED |
+| Chrome user-agent exposed as Creator | NO | PASS |
+
+## 5. Text and content QA
+
+Text was extracted from the final PDF and compared with the approved page
+sequence and required learner content.
+
+```text
+Approved page families in order: 32 of 32 PASS
+Approved educational fragments: 9 of 9, once and in order, PASS
+Natural meanings: 9 of 9 PASS
+Pronunciation bridges: 9 of 9 PASS
+Exercises, checkboxes and response lines: PASS
+Continuation, survey, privacy and canonical content: PASS
+Internal notes or production status in learner pages: NONE
+Design annotations or prototype labels: NONE
+Unresolved placeholders: NONE
+Extended lyrics, verses, choruses or surrounding song lines: NONE
+Forbidden legacy destinations: NONE
+```
+
+No approved copy was edited during PDF generation.
+
+## 6. Annotation inventory
+
+Exactly 16 HTTPS URI annotations were extracted from the final PDF.
+
+| Destination | Expected | Actual | Result |
+|---|---:|---:|---|
+| `https://www.youtube.com/watch?v=si9YeTd8z1E` | 2 | 2 | PASS |
+| `https://www.youtube.com/watch?v=HetOzN4RtTY` | 2 | 2 | PASS |
+| `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | 2 | 2 | PASS |
+| `https://www.youtube.com/watch?v=rtOvBOTyX00` | 1 | 1 | PASS |
+| `https://www.youtube.com/watch?v=7pOr3dBFAeY` | 1 | 1 | PASS |
+| `https://www.youtube.com/watch?v=fV4DiAyExN0` | 1 | 1 | PASS |
+| `https://tally.so/r/D4a6NE` | 2 | 2 | PASS |
+| `https://tally.so/r/eqzgbe` | 2 | 2 | PASS |
+| `https://singpronuncerepeat.com/privacidad` | 2 | 2 | PASS |
+| `https://singpronuncerepeat.com/` | 1 | 1 | PASS |
+| **Total** | **16** | **16** | **PASS** |
+
+```text
+Unexpected annotations: NONE
+Relative annotation URLs: NONE
+Localhost or 127.0.0.1: NONE
+Preview or .vercel.app URLs: NONE
+Shortened URLs: NONE
+Legacy destinations: NONE
+```
+
+The five clickable QR-card annotations match their encoded QR payloads.
+
+## 7. Embedded-QR programmatic QA
+
+The five PDF pages containing QR codes were rendered at three resolutions.
+Every rendered code was decoded and compared byte-for-byte with its approved
+payload.
+
+| PDF page | Purpose | Expected payload | Decode result |
+|---:|---|---|---|
+| 7 | A Thousand Years lesson | `https://www.youtube.com/watch?v=si9YeTd8z1E` | 3 of 3 PASS |
+| 12 | Still Loving You lesson | `https://www.youtube.com/watch?v=HetOzN4RtTY` | 3 of 3 PASS |
+| 17 | The Reason lesson | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | 3 of 3 PASS |
+| 28 | First-group information | `https://tally.so/r/D4a6NE` | 3 of 3 PASS |
+| 31 | Learner survey | `https://tally.so/r/eqzgbe` | 3 of 3 PASS |
+
+```text
+Embedded-PDF programmatic QR decode: 15 of 15 PASS
+Embedded QR assets decoded: 5 of 5
+Contrast: PASS — black/white range 255 for every render
+Quiet-zone containment: PASS
+Clipping, distortion or overlap: NONE
+Visible purpose / annotation / encoded payload agreement: PASS
+Project-owner/manual embedded-PDF QR review: PASS
+```
+
+The programmatic result is separately supported by the following project-owner
+manual embedded-PDF review. It does not replace the earlier source-asset
+two-device scan recorded in the link and QR verification record.
+
+| PDF page | Expected destination | Project-owner manual result |
+|---:|---|---|
+| 7 | `https://www.youtube.com/watch?v=si9YeTd8z1E` | PASS |
+| 12 | `https://www.youtube.com/watch?v=HetOzN4RtTY` | PASS |
+| 17 | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | PASS |
+| 28 | `https://tally.so/r/D4a6NE` | PASS |
+| 31 | `https://tally.so/r/eqzgbe` | PASS |
+
+```text
+Evidence source: project-owner manual embedded-PDF review
+Pages tested: 7, 12, 17, 28 and 31
+Embedded QR codes manually reviewed: 5 of 5 PASS
+Unexpected redirects: NONE
+```
+
+## 8. Page-by-page visual QA
+
+All 32 pages were rendered to PNG, inspected in two contact sheets, and checked
+page by page. The specified dense and interactive pages were also inspected at
+full resolution.
+
+| Page | Page family | Result |
+|---:|---|---|
+| 1 | Cover and logo | PASS |
+| 2 | Welcome, audience and scope | PASS |
+| 3 | Learning transformation | PASS |
+| 4 | Pronunciation method and notation | PASS |
+| 5 | Practice workflow | PASS |
+| 6 | Three-song journey | PASS |
+| 7 | Song 1 introduction and QR | PASS |
+| 8 | ATY-01 practice | PASS |
+| 9 | ATY-02 practice | PASS |
+| 10 | ATY-03 practice | PASS |
+| 11 | Song 1 review | PASS |
+| 12 | Song 2 introduction and QR | PASS |
+| 13 | SLY-01 practice | PASS |
+| 14 | SLY-02 practice | PASS |
+| 15 | SLY-03 practice | PASS |
+| 16 | Song 2 review | PASS |
+| 17 | Song 3 introduction and QR | PASS |
+| 18 | TR-01 practice | PASS |
+| 19 | TR-02 practice | PASS |
+| 20 | TR-03 practice | PASS |
+| 21 | Song 3 review | PASS |
+| 22 | Expressions 1–5; balanced two-line heading | PASS |
+| 23 | Expressions 6–9 and chosen expressions | PASS |
+| 24 | Challenge day 1 | PASS |
+| 25 | Challenge day 2 | PASS |
+| 26 | Challenge day 3 | PASS |
+| 27 | Final self-assessment | PASS |
+| 28 | Continuation CTA and QR | PASS |
+| 29 | Brand mission | PASS |
+| 30 | Future direction | PASS |
+| 31 | Optional survey CTA and QR | PASS |
+| 32 | Educational and rights note | PASS |
+
+```text
+Clipped text: NONE
+Overlaps: NONE
+Footer collisions: NONE
+Missing backgrounds: NONE
+Black squares or unreadable glyphs: NONE
+QR sharpness: PASS
+Page order: 1–32 PASS
+Page-number visibility: 32 of 32 PASS
+Footer visibility: PASS on every designed footer
+Margins, typography, spacing and hierarchy: CONSISTENT
+Page 22 heading balance: PASS
+Learner-facing legibility: PASS
+```
+
+## 9. Temporary QA evidence
+
+Temporary evidence is outside the repository and is not staged:
+
+```text
+/tmp/phase-0-ebook-production-pdf-qa/contact-sheet-1.png
+/tmp/phase-0-ebook-production-pdf-qa/contact-sheet-2.png
+/tmp/phase-0-ebook-production-pdf-qa/pages/page-01.png through page-32.png
+/tmp/phase-0-ebook-production-pdf-qa/extracted-text.txt
+/tmp/phase-0-ebook-production-pdf-qa/validation.json
+/tmp/phase-0-ebook-production-pdf-qa/qr/qr/decode-results.json
+```
+
+## 10. Immutable-source verification
+
+The before/after SHA-256 comparison passed for the approved HTML, CSS, QR
+manifest, five QR SVG assets and current public PDF.
+
+```text
+Approved HTML: UNCHANGED
+Approved CSS: UNCHANGED
+QR manifest: UNCHANGED
+Five QR SVG assets: UNCHANGED
+Public downloadable PDF: UNCHANGED
+Application and deployment files: UNCHANGED
+```
+
+## 11. Issue log
+
+| Artifact | Issue | Severity | Disposition |
 |---|---|---|---|
-| 17 | TR-03 repeat instruction clipped — "decirlo sin mirar la guía." not visible in PDF | High | Yes — `.page--tr3` CSS modifier reduces page-header margin-bottom, fragment-card margin-bottom, and fragment-footer padding to recover ~24px; structural check added to export script |
-| 20 | `/ebook-gratis` link embedded as `http://127.0.0.1:9898/ebook-gratis` in PDF annotations — Chrome resolved relative href against local export server | High | Yes — changed `<a href="/ebook-gratis">` to non-clickable `<span>`; annotation URI scan added to export script; absolute production URL to be inserted during public-delivery phase |
+| Active 32-page candidate | No blocking structural, content, metadata, link, QR or visual defects found | None | Agent QA PASS; project-owner production-PDF and embedded-QR review PASS |
+
+## 12. Agent and owner decisions
+
+```text
+Production PDF generation: COMPLETE
+Production PDF candidate: APPROVED — 32 pages
+Agent structural QA: PASS
+Agent visual QA: PASS
+Agent text/content QA: PASS
+Agent metadata QA: PASS
+Agent embedded-link QA: PASS
+Agent embedded-PDF programmatic QR QA: PASS
+Agent PDF QA: PASS
+Project-owner production-PDF visual review: PASS
+Project-owner pages visually reviewed: 32 of 32
+Project-owner embedded-PDF QR review: PASS
+Embedded QR codes manually reviewed: 5 of 5 PASS
+Unexpected redirects: NONE
+Production PDF gate: PASS
+Public-delivery approval: NEXT / UNBLOCKED — NOT STARTED
+Public downloadable PDF: UNCHANGED
+Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED
+Production replacement: BLOCKED pending public replacement and delivery QA
+Production deployment: NOT STARTED
+```
+
+- [x] Agent structural, visual, text, metadata, link and QR QA complete.
+- [x] Project-owner production-PDF visual review complete.
+- [x] Project-owner embedded-PDF QR review complete.
+- [ ] Public PDF replacement and delivery approval complete.
+
+## 13. Superseded 21-page export history
+
+The following records are retained as historical evidence only. They do not
+describe the active 32-page candidate.
+
+| Export | Date | Pages | Size | Historical disposition |
+|---|---|---:|---:|---|
+| Initial network-error export | 2026-06-15 | Invalid | 70,172 bytes | Replaced after `ERR_CONNECTION_REFUSED` detection |
+| Pre-QA layout export | 2026-06-16 | 18 | 1,154,555 bytes | Superseded after overflow findings |
+| QA-corrected pre-TR-03 export | 2026-06-16 | 21 | 1,223,741 bytes | Superseded after clipped TR-03 instruction |
+| TR-03 fix, pre-link-fix export | 2026-06-15 | 21 | 1,224,339 bytes | Superseded after localhost annotation finding |
+| Localhost-link fix export | 2026-06-16 | 21 | 1,223,965 bytes | Superseded by the approved improved 32-page candidate |
+
+Historical defects were addressed in their respective source phases. The
+active candidate uses the separately approved improved source and current
+16-annotation destination inventory.

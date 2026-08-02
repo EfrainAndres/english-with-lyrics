@@ -279,13 +279,18 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [x] Complete the project-owner visual review of the representative prototype.
 - [x] Implement the complete approved 32-page ebook HTML/CSS design.
 - [x] Complete project-owner A5 and 390 px visual re-review of the full 32-page design: corrected A5 and 390 px reviews PASS; final owner approval recorded.
-- [ ] Generate the replacement PDF through the existing workflow.
-- [ ] Complete final structural, visual, text, metadata and link QA.
-- [ ] Replace the Production PDF while preserving the public filename.
+- [x] Generate the 32-page production-PDF candidate through the approved workflow.
+- [x] Complete agent structural, visual, text, metadata, link and embedded-QR QA.
+- [x] Complete project-owner review of the 32-page production-PDF candidate.
+- [x] Complete project-owner/manual review of the five embedded-PDF QR codes.
+- [x] Pass the production-PDF candidate gate.
+- [ ] Replace the public PDF in a separate branch while preserving the public filename.
+- [ ] Complete source-to-public PDF integrity verification.
+- [ ] Complete deployed Production PDF smoke testing and rollback verification.
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; song QR payloads: UPDATED; external link verification: COMPLETE; QR source generation: COMPLETE; programmatic QR decode: 45 of 45 PASS; manual two-device QR scan: PASS; manual scan checks: 20 of 20 PASS; link/QR gate: PASS. Initial project-owner prototype review: CHANGES REQUESTED. Required A5 corrections: IMPLEMENTED. Design prototype: APPROVED. Project-owner visual review: PASS. Design prototype gate: PASS. Full 32-page design implementation: COMPLETE and APPROVED. Pages implemented: 32 of 32. Corrected A5 visual re-review: PASS. Corrected 390 px mobile visual re-review: PASS. Project-owner final full-design approval: PASS. Full design gate: PASS. Production PDF generation: NEXT / UNBLOCKED — NOT STARTED. Production replacement: BLOCKED — PRODUCTION PDF NOT YET GENERATED OR APPROVED. Production lead capture: INACTIVE. Production Email 1: INACTIVE. Production automation: INACTIVE. See `docs/validation/PHASE_0_EBOOK_FULL_DESIGN_REVIEW.md` for the owner-review gate and `docs/validation/PHASE_0_EBOOK_LINK_QR_VERIFICATION.md` for the final embedded-PDF QA requirements. The committed production PDF, public download and Production delivery are unchanged.
+Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; link/QR source gate: PASS. Design prototype: APPROVED; design prototype gate: PASS. Full 32-page design implementation: COMPLETE and APPROVED; full design gate: PASS. Production PDF generation: COMPLETE. Production-PDF candidate: APPROVED — 32 pages. Agent PDF QA: PASS, including exact 16-link validation and 5-of-5 embedded-PDF programmatic QR decode. Project-owner production-PDF visual review: PASS — 32 of 32 pages. Project-owner/manual embedded-PDF QR review: PASS — 5 of 5; unexpected redirects: NONE. Production PDF gate: PASS. Public downloadable PDF: UNCHANGED. Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED. Production deployment: NOT STARTED. Production replacement: BLOCKED pending public replacement and delivery QA. Overall mandatory ebook improvement: NOT YET COMPLETE. Production lead capture: INACTIVE. Production Email 1: INACTIVE. Production automation: INACTIVE. See `docs/validation/PHASE_0_EBOOK_PDF_QA.md` for the active candidate record and `docs/validation/PHASE_0_EBOOK_LINK_QR_VERIFICATION.md` for QR history and handoff status. Production delivery is unchanged.
 
 ### Ebook Draft
 

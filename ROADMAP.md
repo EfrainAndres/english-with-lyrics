@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current Phase 0 step: mandatory ebook audit and improvement architecture after professional Colombian legal and provider contractual/DPA review completed with no changes requested. The current ebook remains a useful implementation base but is not the final Production asset.
+Current Phase 0 step: replace the public PDF in a separate branch, verify source-to-public integrity, and complete deployed Production PDF smoke testing and rollback verification. The approved 32-page candidate is not yet public, and Production delivery remains unchanged.
 
 Next order:
 
@@ -76,12 +76,13 @@ Next order:
 12. Provider contractual/DPA review — complete; no changes requested.
 13. Mandatory ebook audit — complete; page-by-page audit complete; 30-page architecture received owner feedback of CHANGES REQUESTED and was revised to a 32-page architecture separating the mission, future-product positioning and survey into distinct pages; revised architecture approved.
 14. Copywriting and pronunciation-normalization phase — improved 32-page learner copy: APPROVED; owner copy gate: PASS; pronunciation standard: APPROVED.
-15. Qualified pronunciation review — COMPLETE; practices reviewed: 9 of 9; approved pronunciation changes: APPLIED; owner acceptance: APPROVED; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; song QR payloads: UPDATED; external link verification: COMPLETE; QR source generation: COMPLETE; programmatic QR decode: 45 of 45 PASS; manual two-device QR scan: PASS; manual scan checks: 20 of 20 PASS; link/QR gate: PASS. Initial project-owner prototype review: CHANGES REQUESTED. Required A5 corrections: IMPLEMENTED. Design prototype: APPROVED. Project-owner visual review: PASS. Design prototype gate: PASS. Full 32-page design implementation: COMPLETE and APPROVED. Pages implemented: 32 of 32. Corrected A5 visual re-review: PASS. Corrected 390 px mobile visual re-review: PASS. Project-owner final full-design approval: PASS. Full design gate: PASS. Production PDF generation: NEXT / UNBLOCKED — NOT STARTED. Production replacement: BLOCKED — PRODUCTION PDF NOT YET GENERATED OR APPROVED. Production lead capture: INACTIVE. Production Email 1: INACTIVE. Production automation: INACTIVE.
-16. Production consent linking and legal publication — pending.
-17. Production Email 1 configuration — pending.
-18. Remaining deliverability QA — pending as applicable.
-19. Production funnel activation — pending.
-20. Controlled Production rollout — pending.
+15. Improved 32-page ebook gates — architecture, owner copy, pronunciation, link/QR source, design prototype, full design and production PDF: PASS. Production-PDF candidate: APPROVED, 32 pages. Agent PDF QA: PASS. Project-owner production-PDF visual review: PASS — 32 of 32 pages. Project-owner embedded-PDF QR review: PASS — 5 of 5; unexpected redirects: NONE. Public downloadable PDF: UNCHANGED.
+16. Public PDF replacement, source-to-public integrity verification, deployed smoke test and rollback verification — immediate next step; NEXT / UNBLOCKED — NOT STARTED.
+17. Production consent linking and legal publication — pending.
+18. Production Email 1 configuration — pending.
+19. Remaining deliverability QA — pending as applicable.
+20. Production funnel activation — pending.
+21. Controlled Production rollout — pending.
 
 This gate applies before:
 
