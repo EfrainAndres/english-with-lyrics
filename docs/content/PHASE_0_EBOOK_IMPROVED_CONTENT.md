@@ -28,9 +28,9 @@ for the currently delivered 21-page direct-delivery PDF.
 - The nine approved English fragments are preserved unchanged (ATY-01/02/03,
   SLY-01/02/03, TR-01/02/03).
 - Pronunciation bridges follow docs/content/PHASE_0_EBOOK_PRONUNCIATION_STANDARD.md.
-- Official listening links, the continuation destination, the survey and the
-  canonical domain use internal placeholders only. Raw URLs are NOT used here;
-  link verification and QR creation are separate later phases.
+- Verified educational-lesson links, secondary official listening references,
+  the continuation destination, the survey and the canonical domain are
+  recorded here for the approved link and QR phase.
 - Internal notes appear inside HTML comments and must never render as learner copy.
 - [DESIGN: ...] markers indicate component intent for the later design phase.
 -->
@@ -237,7 +237,8 @@ Al terminar las tres, harás un **reto de tres días** para repasar con calma y 
 ## Final page 7 — Canción 1: A Thousand Years
 
 <!-- Status: MODIFIED. Source: current page 4. Progress: "Canción 1 de 3 · 0%".
-     Link: https://www.youtube.com/watch?v=rtOvBOTyX00 + matching QR. -->
+     Primary lesson link: https://www.youtube.com/watch?v=si9YeTd8z1E + matching QR.
+     Secondary official listening link: https://www.youtube.com/watch?v=rtOvBOTyX00. -->
 
 [DESIGN: song divider + difficulty meter + link/QR]
 
@@ -252,7 +253,11 @@ Esta canción tiene un tempo lento y una pronunciación muy clara. Es una buena 
 
 **Qué notar al escuchar:** cómo las palabras fluyen una hacia la otra, las vocales largas y el ritmo suave de las frases.
 
-→ **Escucha la canción (fuente oficial):** `https://www.youtube.com/watch?v=rtOvBOTyX00`
+→ **Mira la clase completa con pronunciación y traducción:** `https://www.youtube.com/watch?v=si9YeTd8z1E`
+
+Escucha también la canción original: `https://www.youtube.com/watch?v=rtOvBOTyX00`
+
+La clase te guía con pronunciación y traducción. El audio original sigue siendo la referencia final para escuchar y ajustar.
 
 <!-- INTERNAL: QR asset: docs/design/assets/phase-0-ebook/qr/song-1-a-thousand-years.svg -->
 
@@ -381,7 +386,8 @@ ______________________________
 ## Final page 12 — Canción 2: Still Loving You
 
 <!-- Status: MODIFIED. Source: current page 9. Progress: "Canción 2 de 3 · 33% acumulado".
-     Link: https://www.youtube.com/watch?v=7pOr3dBFAeY + matching QR. -->
+     Primary lesson link: https://www.youtube.com/watch?v=HetOzN4RtTY + matching QR.
+     Secondary official listening link: https://www.youtube.com/watch?v=7pOr3dBFAeY. -->
 
 [DESIGN: song divider + difficulty meter + accent note + link/QR]
 
@@ -398,7 +404,11 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 
 **Nota sobre el acento:** las guías de esta sección se basan en inglés hablado neutro. El cantante tiene un acento distinto al inglés americano estándar, así que el audio puede sonar diferente a la guía escrita. Es normal — usa la guía como punto de partida y confía en lo que escuchas.
 
-→ **Escucha la canción (fuente oficial):** `https://www.youtube.com/watch?v=7pOr3dBFAeY`
+→ **Mira la clase completa con pronunciación y traducción:** `https://www.youtube.com/watch?v=HetOzN4RtTY`
+
+Escucha también la canción original: `https://www.youtube.com/watch?v=7pOr3dBFAeY`
+
+La clase te guía con pronunciación y traducción. El audio original sigue siendo la referencia final para escuchar y ajustar.
 
 <!-- INTERNAL: QR asset: docs/design/assets/phase-0-ebook/qr/song-2-still-loving-you.svg -->
 
@@ -526,7 +536,8 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 ## Final page 17 — Canción 3: The Reason
 
 <!-- Status: MODIFIED. Source: current page 14. Progress: "Canción 3 de 3 · 66% acumulado".
-     Link: https://www.youtube.com/watch?v=fV4DiAyExN0 + matching QR. -->
+     Primary lesson link: https://www.youtube.com/watch?v=OYJRuJ18_Rg + matching QR.
+     Secondary official listening link: https://www.youtube.com/watch?v=fV4DiAyExN0. -->
 
 [DESIGN: song divider + difficulty meter + link/QR]
 
@@ -541,7 +552,11 @@ Esta canción tiene una pronunciación del inglés americano muy clara y un ritm
 
 **Qué notar al escuchar:** la claridad de las palabras, cómo se conectan unas con otras y las frases que se repiten y son más fáciles de identificar.
 
-→ **Escucha la canción (fuente oficial):** `https://www.youtube.com/watch?v=fV4DiAyExN0`
+→ **Mira la clase completa con pronunciación y traducción:** `https://www.youtube.com/watch?v=OYJRuJ18_Rg`
+
+Escucha también la canción original: `https://www.youtube.com/watch?v=fV4DiAyExN0`
+
+La clase te guía con pronunciación y traducción. El audio original sigue siendo la referencia final para escuchar y ajustar.
 
 <!-- INTERNAL: QR asset: docs/design/assets/phase-0-ebook/qr/song-3-the-reason.svg -->
 
