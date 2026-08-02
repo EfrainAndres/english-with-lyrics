@@ -2,7 +2,7 @@
 
 ## 1. Scope
 
-This record verifies the approved external destinations for the improved 32-page ebook, records deterministic QR source assets, and prepares the manual scan gate. Song QR codes open the matching Sing Pronunce Repeat educational lessons; original official videos remain secondary listening references. It does not implement visual design, generate a final PDF, or change Production configuration.
+This record verifies the approved external destinations for the improved 32-page ebook, records deterministic QR source assets, preserves the completed source-asset scan gate, and records the generated PDF candidate handoff. Song QR codes open the matching Sing Pronunce Repeat educational lessons; original official videos remain secondary listening references. It does not authorize public PDF replacement or change Production configuration.
 
 Verification date: 2026-08-02.
 
@@ -207,17 +207,22 @@ Manual scan checks: 20 of 20 PASS
 Link verification: COMPLETE
 QR generation: COMPLETE
 Link/QR gate: PASS
-Design implementation: NEXT
-PDF generation: BLOCKED pending design implementation and QA
-Production replacement: BLOCKED
+Design implementation: COMPLETE / APPROVED
+PDF generation: COMPLETE — 32-page candidate
+Embedded PDF annotation validation: PASS — 16 of 16
+Embedded PDF programmatic QR decode: PASS — 5 of 5
+Project-owner/manual embedded-PDF QR review: PENDING
+Public downloadable PDF: UNCHANGED
+Production replacement: BLOCKED pending PDF approval
 ```
 
 ## 15. Remaining actions
 
-1. Begin the separate ebook design-implementation phase.
-2. Preserve the verified five QR source assets and exact payloads.
-3. Render QR codes at no less than 20 mm; prefer 24 mm or 30 mm where the layout allows.
-4. Recheck all clickable links and scan the embedded QR codes during final PDF QA.
-5. Keep PDF generation and Production replacement blocked until their later gates pass.
+1. Complete project-owner review of the 32-page PDF candidate.
+2. Complete project-owner/manual scans of the five QR codes embedded in the candidate.
+3. Preserve the verified five QR source assets and exact payloads.
+4. Keep the public downloadable PDF unchanged until owner review and public-delivery approval pass.
+5. Keep Production replacement blocked until the later PDF approval gate passes.
 
-Passing this source-asset gate does not replace the final embedded-PDF QR scan.
+The source-asset gate and embedded-PDF programmatic decode pass do not replace
+the pending project-owner/manual embedded-PDF QR review.
