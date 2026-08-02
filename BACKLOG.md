@@ -271,8 +271,9 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [x] Assign a qualified pronunciation reviewer.
 - [x] Complete the qualified pronunciation review of the nine normalized bridges.
 - [x] Apply the five approved pronunciation bridge corrections and resolve the two practice caveats.
-- [ ] Reverify all final destinations.
-- [ ] Generate and scan-test QR codes from verified destinations.
+- [x] Reverify all final destinations.
+- [x] Generate and programmatically decode QR codes from verified destinations.
+- [ ] Complete the manual two-device QR scan test at 30 mm and 24 mm.
 - [ ] Implement the improved ebook design.
 - [ ] Generate the replacement PDF through the existing workflow.
 - [ ] Complete final structural, visual, text, metadata and link QA.
@@ -280,7 +281,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; practices reviewed: 9 of 9; approved pronunciation changes: APPLIED; owner acceptance: APPROVED; pronunciation gate: PASS. Link verification and QR: NEXT. Design implementation: BLOCKED pending link/QR gate. PDF generation: BLOCKED pending design and QA. Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE. See `docs/content/PHASE_0_EBOOK_IMPROVED_CONTENT.md`, `docs/content/PHASE_0_EBOOK_PRONUNCIATION_STANDARD.md`, `docs/content/PHASE_0_EBOOK_PRONUNCIATION_REVIEW_PACKET.md`, `docs/validation/PHASE_0_EBOOK_PRONUNCIATION_PRE_REVIEW_AUDIT.md` and `docs/validation/PHASE_0_EBOOK_QUALIFIED_PRONUNCIATION_REVIEW.md`. The current 21-page source and PDF are unchanged.
+Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Required destinations: RESOLVED; external link verification: COMPLETE; QR source generation: COMPLETE; programmatic QR decode: PASS; manual two-device QR scan: PENDING; link/QR gate: BLOCKED — MANUAL SCAN PENDING. Design implementation: BLOCKED. PDF generation: BLOCKED. Production replacement: BLOCKED. Production lead capture, Production Email 1 and Production automation: INACTIVE. See `docs/validation/PHASE_0_EBOOK_LINK_QR_VERIFICATION.md` for the manual gate. The current 21-page source and PDF are unchanged.
 
 ### Ebook Draft
 
