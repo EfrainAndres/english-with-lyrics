@@ -6,6 +6,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Implemented the complete approved 32-page ebook HTML/CSS design using the project-owner-approved visual prototype, exact learner copy, verified lesson and official-listening links, and committed QR assets; full-design owner review remains pending, while the production PDF, public download and Production delivery remain unchanged.
 - Completed the project-owner A5 and 390 px mobile visual review of the twelve-page representative improved ebook prototype, passing all visual-review areas and the design prototype gate; full 32-page implementation is next, while PDF generation and Production remain unchanged.
 - Applied A5 overflow and footer-clearance corrections to the representative improved ebook prototype following the initial project-owner visual review; visual re-review remains pending.
 - Added a twelve-page representative visual prototype for the approved improved ebook, covering the principal page families, verified link and QR treatments, mobile behavior and A5 print structure; project-owner visual review remains pending, with the full 32-page design, PDF and Production unchanged.
