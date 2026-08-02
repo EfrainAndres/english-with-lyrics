@@ -1,0 +1,72 @@
+[
+  {
+    "id": "song-1-a-thousand-years",
+    "file": "song-1-a-thousand-years.svg",
+    "purpose": "Sing Pronunce Repeat educational lesson for A Thousand Years",
+    "payload": "https://www.youtube.com/watch?v=si9YeTd8z1E",
+    "sha256": "3c855114d02c293f3b2f5892e79d7701e186ff1669105aa83561608be328a05e",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-02",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PASS"
+  },
+  {
+    "id": "song-2-still-loving-you",
+    "file": "song-2-still-loving-you.svg",
+    "purpose": "Sing Pronunce Repeat educational lesson for Still Loving You",
+    "payload": "https://www.youtube.com/watch?v=HetOzN4RtTY",
+    "sha256": "86790f652708c039c969f2591732dfba22daed3ddd26754db780959fd7d84311",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-02",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PASS"
+  },
+  {
+    "id": "song-3-the-reason",
+    "file": "song-3-the-reason.svg",
+    "purpose": "Sing Pronunce Repeat educational lesson for The Reason",
+    "payload": "https://www.youtube.com/watch?v=OYJRuJ18_Rg",
+    "sha256": "2ab6d3aefb98b3bf1abc37eaa51a2a83f66cf423ce025742a88f3d4ec7253b3a",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-02",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PASS"
+  },
+  {
+    "id": "continue-first-group",
+    "file": "continue-first-group.svg",
+    "purpose": "Information request for the possible first guided group",
+    "payload": "https://tally.so/r/D4a6NE",
+    "sha256": "541840667c2e6131cbf05713bb42fd0f1bbbc91ba05df42870444e55a50e0583",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-01",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PASS"
+  },
+  {
+    "id": "survey-feedback",
+    "file": "survey-feedback.svg",
+    "purpose": "Learner feedback survey",
+    "payload": "https://tally.so/r/eqzgbe",
+    "sha256": "c2ed3a600eebe43de28a1d3b1d718f4149e81d336d8618a159d6724dd0ee3ce7",
+    "error_correction": "Q",
+    "quiet_zone_modules": 4,
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "verification_date": "2026-08-01",
+    "programmatic_decode": "PASS",
+    "manual_scan": "PASS"
+  }
+]

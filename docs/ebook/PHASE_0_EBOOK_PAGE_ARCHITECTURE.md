@@ -157,16 +157,16 @@ Global acceptance rules:
 - **Page objective:** Prepare focused listening for Song 1.
 - **Status:** MODIFIED.
 - **Source page or content:** Current page 4.
-- **Exact content blocks:** Song/artist identification; “Nivel sugerido: principiante–intermedio”; three-step visual difficulty indicator with text; why it helps; listening focus; official-source instruction; safety note to use official audio.
+- **Exact content blocks:** Song/artist identification; “Nivel sugerido: principiante–intermedio”; three-step visual difficulty indicator with text; why it helps; listening focus; primary educational-lesson CTA and QR; secondary official listening link; safety note to use official audio.
 - **Approximate text density:** Low–medium, 100–140 words.
 - **Visual components:** Song divider, difficulty meter, focus card, link button and QR.
 - **User interaction or writing activity:** Check after first uninterrupted listen.
 - **Progress indicator:** “Canción 1 de 3 · 0%”.
-- **Link or QR requirement:** Clickable `{{SONG_1_OFFICIAL_URL}}` plus matching QR.
-- **CTA role:** Open the official source and listen.
+- **Link or QR requirement:** Clickable `SONG_1_LESSON_URL` plus matching QR, followed by clickable `SONG_1_OFFICIAL_URL` as the secondary original listening reference.
+- **CTA role:** Open the educational lesson; retain the official source for final listening.
 - **Rights/copyright consideration:** No artwork, embedded audio or lyric expansion.
-- **Required placeholder or dependency:** Verified official URL and tested QR.
-- **Acceptance criteria:** Text and visual difficulty agree; URL and QR resolve to the same official destination; no third-party branding imitation.
+- **Required placeholder or dependency:** Verified educational lesson URL, verified official listening URL and tested QR.
+- **Acceptance criteria:** Text and visual difficulty agree; QR and primary CTA resolve to the educational lesson; secondary original link remains distinct; no third-party branding imitation.
 
 ### Final page 8 — Song 1 — Practice 1
 
@@ -239,16 +239,16 @@ Global acceptance rules:
 - **Page objective:** Prepare focused listening for Song 2.
 - **Status:** MODIFIED.
 - **Source page or content:** Current page 9.
-- **Exact content blocks:** Song/artist identification; intermediate difficulty text and visual; why it helps; listening focus; preserved singer-accent caveat; official-source instruction.
+- **Exact content blocks:** Song/artist identification; intermediate difficulty text and visual; why it helps; listening focus; preserved singer-accent caveat; primary educational-lesson CTA and QR; secondary official listening link.
 - **Approximate text density:** Low–medium, 110–150 words.
 - **Visual components:** Standard song divider, difficulty meter, accent note, link and QR.
 - **User interaction or writing activity:** Check after the first listen.
 - **Progress indicator:** “Canción 2 de 3 · 33% acumulado”.
-- **Link or QR requirement:** Clickable `{{SONG_2_OFFICIAL_URL}}` plus matching QR.
-- **CTA role:** Listen at the official source.
+- **Link or QR requirement:** Clickable `SONG_2_LESSON_URL` plus matching QR, followed by clickable `SONG_2_OFFICIAL_URL` as the secondary original listening reference.
+- **CTA role:** Open the educational lesson; retain the official source for final listening.
 - **Rights/copyright consideration:** No artwork, audio or affiliation implication.
-- **Required placeholder or dependency:** Verified official URL and tested QR.
-- **Acceptance criteria:** Accent note distinguishes source listening from neutral teaching target; URL and QR match.
+- **Required placeholder or dependency:** Verified educational lesson URL, verified official listening URL and tested QR.
+- **Acceptance criteria:** Accent note distinguishes source listening from neutral teaching target; QR and primary CTA match; secondary original link remains distinct.
 
 ### Final page 13 — Song 2 — Practice 1
 
@@ -321,16 +321,16 @@ Global acceptance rules:
 - **Page objective:** Prepare focused listening for Song 3.
 - **Status:** MODIFIED.
 - **Source page or content:** Current page 14.
-- **Exact content blocks:** Song/artist identification; intermediate difficulty text and visual; why it helps; listening focus; official-source instruction.
+- **Exact content blocks:** Song/artist identification; intermediate difficulty text and visual; why it helps; listening focus; primary educational-lesson CTA and QR; secondary official listening link.
 - **Approximate text density:** Low–medium, 100–140 words.
 - **Visual components:** Standard song divider, difficulty meter, link and QR.
 - **User interaction or writing activity:** Check after first listen.
 - **Progress indicator:** “Canción 3 de 3 · 66% acumulado”.
-- **Link or QR requirement:** Clickable `{{SONG_3_OFFICIAL_URL}}` plus matching QR.
-- **CTA role:** Listen at the official source.
+- **Link or QR requirement:** Clickable `SONG_3_LESSON_URL` plus matching QR, followed by clickable `SONG_3_OFFICIAL_URL` as the secondary original listening reference.
+- **CTA role:** Open the educational lesson; retain the official source for final listening.
 - **Rights/copyright consideration:** No artwork, embedded audio or affiliation claim.
-- **Required placeholder or dependency:** Verified official URL and tested QR.
-- **Acceptance criteria:** URL and QR match; level is conveyed with words and shape/count, not color alone.
+- **Required placeholder or dependency:** Verified educational lesson URL, verified official listening URL and tested QR.
+- **Acceptance criteria:** QR and primary CTA match; secondary original link remains distinct; level is conveyed with words and shape/count, not color alone.
 
 ### Final page 18 — Song 3 — Practice 1
 
@@ -599,30 +599,52 @@ The YouTube channel may appear only as a discreet verified footer link, or as a 
 
 No current song or practice is removed. The current review pages 8, 13 and 18 are replaced by richer completion pages; current page 19 is split across three challenge pages; current page 20 is separated into self-check and primary continuation pages, and its remaining survey concept becomes final page 31. These changes, plus the three-way split of the brand mission, future-product positioning and survey into final pages 29–31, explain the eleven-page net growth.
 
-## Placeholder inventory
+## Destination dependency inventory
 
-| Placeholder | Purpose | Current known value | Verification required | QR required | Blocks final PDF generation |
+| Destination or omission | Purpose | Final value or decision | Verification result | QR required | Blocks final PDF generation |
 | --- | --- | --- | --- | --- | --- |
-| `{{SONG_1_OFFICIAL_URL}}` | Official source for Song 1 | `https://www.youtube.com/watch?v=rtOvBOTyX00` | Confirm availability, official/authorized source and unchanged destination immediately before export | YES | YES |
-| `{{SONG_2_OFFICIAL_URL}}` | Official source for Song 2 | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | Confirm availability, official/authorized source and unchanged destination immediately before export | YES | YES |
-| `{{SONG_3_OFFICIAL_URL}}` | Official source for Song 3 | `https://www.youtube.com/watch?v=fV4DiAyExN0` | Confirm availability, official/authorized source and unchanged destination immediately before export | YES | YES |
-| `{{CONTINUE_PRACTICING_URL}}` | Sole primary continuation action | Unresolved | Approve destination, privacy implications, visible URL, annotation and QR | YES | YES |
-| `{{SURVEY_URL}}` | Optional short feedback survey | `https://tally.so/r/eqzgbe` | Confirm form ownership, questions, privacy notice and continued availability | YES | YES |
-| `{{ADVANCED_EBOOK_WAITLIST_URL}}` | Optional future-product interest on final page 30 | Unresolved; advanced/paid ebook is postponed | Include only if a real approved waitlist exists; otherwise omit the link and QR | Only if used | NO if omitted; YES if shown as actionable |
-| `{{YOUTUBE_CHANNEL_URL}}` | Optional discreet footer link or non-competing text link on the brand-mission page (final page 29) | Unresolved in this audit | Verify official channel and approve placement; omit if unavailable | Optional | NO if omitted |
-| `{{CANONICAL_DOMAIN}}` | Canonical project identity and footer reference | `https://singpronuncerepeat.com` | Confirm canonical Production origin before export | NO | YES |
+| SONG_1_LESSON_URL | Primary Sing Pronunce Repeat educational lesson for Song 1 | `https://www.youtube.com/watch?v=si9YeTd8z1E` | VERIFIED | YES | YES |
+| SONG_1_OFFICIAL_URL | Secondary original listening source for Song 1 | `https://www.youtube.com/watch?v=rtOvBOTyX00` | VERIFIED | NO | YES |
+| SONG_2_LESSON_URL | Primary Sing Pronunce Repeat educational lesson for Song 2 | `https://www.youtube.com/watch?v=HetOzN4RtTY` | VERIFIED | YES | YES |
+| SONG_2_OFFICIAL_URL | Secondary original listening source for Song 2 | `https://www.youtube.com/watch?v=7pOr3dBFAeY` | VERIFIED | NO | YES |
+| SONG_3_LESSON_URL | Primary Sing Pronunce Repeat educational lesson for Song 3 | `https://www.youtube.com/watch?v=OYJRuJ18_Rg` | VERIFIED | YES | YES |
+| SONG_3_OFFICIAL_URL | Secondary original listening source for Song 3 | `https://www.youtube.com/watch?v=fV4DiAyExN0` | VERIFIED | NO | YES |
+| CONTINUE_PRACTICING_URL | Sole primary continuation action | `https://tally.so/r/D4a6NE` | VERIFIED | YES | YES |
+| SURVEY_URL | Optional short feedback survey | `https://tally.so/r/eqzgbe` | VERIFIED | YES | YES |
+| ADVANCED_EBOOK_WAITLIST_URL | Optional future-product interest on final page 30 | OMITTED — no approved advanced-ebook waitlist or product exists | OMITTED | NO | NO |
+| YOUTUBE_CHANNEL_URL | Optional discreet footer link on final page 29 | OMITTED — optional and unnecessary for this ebook gate | OMITTED | NO | NO |
+| CANONICAL_DOMAIN | Canonical project identity and footer reference | `https://singpronuncerepeat.com` | VERIFIED | NO | YES |
 
-Rules for placeholders:
+Rules for destinations:
 
 - Never invent or shorten a destination.
-- No unresolved token may remain in the generated learner-facing PDF.
-- QR payload and visible/clickable URL must be identical.
+- No unresolved destination token may remain in the generated learner-facing PDF.
+- Each song QR payload and its primary visible/clickable educational-lesson URL must be identical. The original official song URL is a secondary text link and has no QR.
 - Every QR must be scan-tested at rendered A5 size and after common phone zoom/compression.
 - Optional unresolved destinations are omitted rather than converted into disabled, misleading or interactive-looking controls.
-- Song URLs, the continuation URL, the survey URL and the canonical domain block final export when unresolved. The advanced waitlist URL blocks export only when shown as an actionable control. The YouTube channel link is optional and should be omitted when unresolved; it must never become another primary or secondary button.
+- The three educational lesson URLs, three original official song URLs, continuation URL, survey URL and canonical domain block final export when unresolved. The official source remains the final listening reference; the educational lesson is the primary QR continuation from the ebook. The advanced waitlist URL is omitted because no approved destination exists. The YouTube channel link is omitted and must never become another primary or secondary button.
+
+```text
+Required destinations resolved: 9 of 9
+Required external links verified: 9 of 9
+Song QR destination: educational lesson
+Original song destination: secondary listening link
+```
+
+```text
+Required destinations resolved: 9 of 9
+Programmatic QR decode: 45 of 45 PASS
+Manual two-device QR scan: PASS
+Manual scan checks: 20 of 20 PASS
+Link/QR gate: PASS
+Design implementation: NEXT
+Minimum supported QR size: 20 mm
+Preferred layout size: 24 mm or 30 mm
+Final embedded-PDF QR validation: still required during final PDF QA
+```
 
 ## Approval and implementation gate
 
 Page-by-page architecture approved by project owner: **APPROVED**.
 
-Owner review of the prior 30-page architecture returned CHANGES REQUESTED; this 32-page revision implements all requested changes and has been approved. Copywriting and pronunciation-normalization phases may now proceed in a separate branch. PDF source editing, design implementation and PDF generation remain blocked until new-page copy, pronunciation normalization, link verification/QR creation and design implementation pass their own approval gates. After design and copy approval, work should proceed in separate, scoped phases for link verification/QR creation, design implementation, export and independent PDF QA.
+Owner review of the prior 30-page architecture returned CHANGES REQUESTED; this 32-page revision implements all requested changes and has been approved. Copywriting, pronunciation normalization and source-asset link/QR verification are complete. Design implementation is next; PDF source editing and PDF generation remain blocked pending design implementation and QA. Final embedded-PDF QR validation remains required during independent PDF QA.

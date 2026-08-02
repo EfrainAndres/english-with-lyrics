@@ -6,6 +6,9 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- Completed the calibrated two-device manual scan of all five ebook QR assets at 30 mm and 24 mm, passing 20 of 20 checks with correct destinations and no unexpected redirects based on the project-owner report; the link/QR gate now passes and design implementation is next.
+- Updated the three song QR destinations to the matching Sing Pronunce Repeat educational lessons while retaining the original official videos as secondary listening references.
+- Verified three official song sources, the first-group continuation destination, learner survey, canonical domain and privacy route; omitted the advanced waitlist and optional channel link; generated five deterministic QR SVG assets with a 45-case programmatic decode pass, with no design, PDF or Production change.
 - Corrected the qualified-pronunciation evidence record, documented the partial secondary-source limitation, removed a stale synchronization status, and restored the pre-review versus approved bridge audit trail without changing learner-facing content or the pronunciation gate decision.
 - Completed the privacy-safe external pronunciation review, applied five approved bridge corrections and two resolved practice caveats, synchronized the pronunciation standard and improved 32-page source, and passed the pronunciation gate; PDF and Production remain unchanged.
 - Added an independent Claude second-opinion pronunciation review covering all fourteen global conventions and all nine practices, recorded blind before reading the earlier AI pre-review and compared against it afterwards, without changing any pronunciation bridge, learner-facing note, ebook copy, PDF or Production configuration.
