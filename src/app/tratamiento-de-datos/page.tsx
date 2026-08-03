@@ -4,7 +4,7 @@ import { getLegalRenderState, legalConfiguration } from "@/lib/legal-config";
 export const metadata: Metadata = {
   title: "Política de tratamiento de datos",
   description:
-    "Borrador operativo sobre el tratamiento de datos personales de Sing Pronunce Repeat.",
+    "Información sobre el tratamiento de datos personales de Sing Pronunce Repeat.",
   alternates: {
     canonical: "/tratamiento-de-datos",
   },
@@ -64,6 +64,8 @@ export default function TratamientoDeDatosPage() {
     return <PendingPolicyNotice />;
   }
 
+  const isApproved = renderState === "approved";
+
   const {
     ownerType,
     ownerName,
@@ -92,10 +94,9 @@ export default function TratamientoDeDatosPage() {
         </aside>
       ) : null}
       <p className="mt-6 leading-7 text-zinc-300">
-        Este documento define un flujo operativo preliminar para Sing Pronunce
-        Repeat, también identificado públicamente como English with Lyrics. Sus
-        compromisos están sujetos a revisión jurídica profesional y no activan la
-        captura de leads ni el correo de Producción.
+        {isApproved
+          ? "Este documento define el flujo operativo de tratamiento de datos para Sing Pronunce Repeat, también identificado públicamente como English with Lyrics. Las revisiones de la responsable, interna estructurada, jurídica profesional en Colombia y contractual y de DPA de proveedores están completas y no solicitaron cambios sustantivos. Su publicación no constituye una certificación ni una garantía de cumplimiento, y no activa la captura de leads, el Email 1 ni la automatización de Producción."
+          : "Este documento define un flujo operativo preliminar para Sing Pronunce Repeat, también identificado públicamente como English with Lyrics. Sus compromisos están sujetos a revisión jurídica profesional y no activan la captura de leads ni el correo de Producción."}
       </p>
 
       <div className="mt-10 space-y-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_li]:leading-7 [&_p]:mt-3 [&_p]:leading-7 [&_p]:text-zinc-300 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_ul]:text-zinc-300">
@@ -252,8 +253,9 @@ export default function TratamientoDeDatosPage() {
             Se prevé informar las finalidades, solicitar autorización cuando sea
             necesaria, conservar evidencia mínima, atender derechos, procurar
             exactitud y seguridad, limitar accesos y exigir a los proveedores las
-            salvaguardas que correspondan. La definición jurídica final permanece
-            pendiente de revisión profesional.
+            salvaguardas que correspondan. {isApproved
+              ? "La revisión jurídica profesional de estos deberes está completa y no solicitó cambios."
+              : "La definición jurídica final permanece pendiente de revisión profesional."}
           </p>
         </section>
 
@@ -285,7 +287,7 @@ export default function TratamientoDeDatosPage() {
             término inicial.
           </p>
           <p>
-            Como procedimiento operativo preliminar, si un reclamo está
+            Como procedimiento operativo{isApproved ? "" : " preliminar"}, si un reclamo está
             incompleto se solicitará su corrección o complementación dentro de
             los cinco (5) días hábiles siguientes a su recepción. Si la persona no
             responde dentro de los dos (2) meses siguientes al requerimiento, el
@@ -302,8 +304,9 @@ export default function TratamientoDeDatosPage() {
             hábiles y se mantendrá hasta que el reclamo sea resuelto.
           </p>
           <p>
-            Estas reglas son un borrador operativo pendiente de revisión jurídica
-            profesional.
+            {isApproved
+              ? "Estas reglas formaron parte de la revisión jurídica profesional completada y no recibieron solicitudes de cambio."
+              : "Estas reglas son un borrador operativo pendiente de revisión jurídica profesional."}
           </p>
         </section>
 
@@ -334,10 +337,10 @@ export default function TratamientoDeDatosPage() {
             <li><strong>MailerLite:</strong> suscriptores, consentimiento, grupos, automatización, entrega, aperturas, clics y bajas cuando Producción sea activada.</li>
           </ul>
           <p>
-            Algunos servicios pueden implicar procesamiento fuera de Colombia.
-            La clasificación contractual y de transferencia o transmisión para
-            cada proveedor está pendiente de revisión profesional. MailerLite no
-            captura leads ni envía correos de Producción en esta fase.
+            Algunos servicios pueden implicar procesamiento fuera de Colombia. {isApproved
+              ? "La revisión contractual, de DPA y de transferencia o transmisión para los proveedores está completa y no solicitó cambios."
+              : "La clasificación contractual y de transferencia o transmisión para cada proveedor está pendiente de revisión profesional."}{" "}
+            MailerLite no captura leads ni envía correos de Producción en esta fase.
           </p>
         </section>
 
@@ -393,8 +396,9 @@ export default function TratamientoDeDatosPage() {
         <section aria-labelledby="processing-duration">
           <h2 id="processing-duration">18. Vigencia y duración de las bases</h2>
           <p>
-            Fecha prevista de vigencia: <time dateTime={effectiveDate ?? undefined}>{effectiveDate}</time>.
-            Última actualización prevista:{" "}
+            {isApproved ? "Fecha de vigencia" : "Fecha prevista de vigencia"}:{" "}
+            <time dateTime={effectiveDate ?? undefined}>{effectiveDate}</time>.
+            {" "}{isApproved ? "Última actualización" : "Última actualización prevista"}:{" "}
             <time dateTime={lastUpdatedDate ?? undefined}>{lastUpdatedDate}</time>.
             Las bases o registros se mantendrán únicamente mientras exista una
             finalidad válida o una obligación aplicable, sin fijar un plazo
@@ -403,12 +407,11 @@ export default function TratamientoDeDatosPage() {
         </section>
 
         <section aria-labelledby="processing-review">
-          <h2 id="processing-review">19. Estado de revisión</h2>
+          <h2 id="processing-review">19. Estado de la política</h2>
           <p>
-            El contenido está pendiente de aprobación final de la responsable,
-            revisión interna estructurada y revisión jurídica profesional en
-            Colombia. No se presenta como política final ni como certificación de
-            cumplimiento, y permanece excluido de indexación.
+            {isApproved
+              ? "La revisión previa de la responsable, la revisión interna estructurada, la revisión jurídica profesional en Colombia y la revisión contractual y de DPA de proveedores están completas; no se solicitaron cambios sustantivos. La publicación no constituye una certificación ni una garantía de cumplimiento. La captura de leads, el Email 1 y la automatización de Producción permanecen inactivos, y la página continúa excluida de indexación."
+              : "El contenido está pendiente de aprobación final de la responsable, revisión interna estructurada y revisión jurídica profesional en Colombia. No se presenta como política final ni como certificación de cumplimiento, y permanece excluido de indexación."}
           </p>
         </section>
       </div>

@@ -5,16 +5,34 @@
 ```text
 Implementation status: COMPLETE
 Deployed Preview route QA: PASS
-Legal content status: DRAFT PENDING OWNER INPUT
-Professional legal review: PENDING
+Professional Colombian legal review: PASS
+Provider contractual/DPA review: PASS
+Required substantive legal changes: NONE
+Approved-mode source implementation: COMPLETE
+Approved-mode local QA: PASS
+Application privacy-link preparation: PASS
+Owner approved-mode rendered review: PENDING
+Protected approved-mode Preview review: PENDING
 Stable custom Production origin: VERIFIED
 Professional privacy mailbox: VERIFIED
 Privacy contact operational: VERIFIED
 Public contact address: privacidad@singpronuncerepeat.com
-Production legal readiness: NO-GO
+Production environment configuration: PENDING
+Production legal publication: PENDING
+Production indexing decision: PENDING
+Production MailerLite group/form: INACTIVE
+Final Production consent linking: PENDING
+Rights-request provider operations QA: PENDING
+Production Email 1: INACTIVE
+Production automation: INACTIVE
+Production lead capture: INACTIVE
+Controlled rollout: PENDING
+Direct PDF delivery: ACTIVE
+Legal-publication gate: BLOCKED
+Consent gate: BLOCKED
 ```
 
-## Draft audit summary
+## Historical draft audit summary
 
 Audit of `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`, `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`, `docs/legal/PHASE_0_CONSENT_COPY.md`, `docs/legal/PHASE_0_PRIVACY_IMPLEMENTATION_CHECKLIST.md`, and `docs/architecture/PHASE_0_PRIVACY_DECISIONS.md`, performed before implementation:
 
@@ -52,19 +70,46 @@ Privacy-contact channel:
 
 | Environment | Configuration complete | Rendered state | Indexing |
 |---|---:|---|---|
-| Development | No | Draft with preparation notice | noindex |
-| Preview | No | Draft with preparation notice | noindex |
-| Production | No | Neutral preparation state | noindex |
-| Future Production | Yes and approved | Complete policy | Explicit decision required |
+| Any | Missing or invalid | `pending`: neutral preparation page; no full policy or personal values | noindex, nofollow |
+| Development or protected Preview | Complete and `draft` | Full environment-backed policy with draft notice and draft wording | noindex, nofollow |
+| Local readiness QA | Complete and `approved` | Full environment-backed policy without draft notice or pending-review assertions | noindex, nofollow |
+| Production | Not configured in this task | Safe `pending` state | noindex, nofollow |
 
-Configuration completeness is evaluated by `isLegalConfigurationComplete()` in `src/lib/legal-config.ts` against five server-only environment variables (name, identification, city, privacy contact, effective date) plus an explicit `professionalReviewCompleted` flag. All five remain unset today, so both routes render the incomplete-state paths in every environment. `robots: noindex, nofollow` is hardcoded in both routes' metadata regardless of configuration completeness, so indexing stays an explicit future decision rather than something configuration completeness can trigger automatically.
+Configuration completeness is evaluated by `isLegalConfigurationComplete()` in
+`src/lib/legal-config.ts` against the validated server-only fields. Publication
+state is controlled exclusively by `LEGAL_PUBLICATION_STATUS`; missing or
+invalid values fail safely to `pending`. The deprecated
+`professionalReviewCompleted` compatibility field now reports the completed
+review truthfully but cannot activate publication. `robots: noindex, nofollow`
+remains hardcoded in both routes, so indexing stays a separate explicit decision.
+
+## Current local readiness QA
+
+- `pending`: PASS on both routes; full policy and personal fields absent.
+- `draft`: PASS on both routes; complete policy, visible draft notice and draft wording retained.
+- `approved`: PASS on both routes; complete policy rendered without draft notice or stale pending-review assertions.
+- Approved-mode review completion statements: PASS.
+- Inactive Production lead capture, Email 1 and automation statements: PASS.
+- HTTP response: 200 for both routes in all tested modes.
+- Desktop and 390 px containment: PASS; horizontal overflow: NONE.
+- Native mailto, telephone and internal policy links: PASS.
+- Keyboard-accessible links and visible focus treatment: PASS.
+- Metadata and Open Graph personal-value exposure: NONE.
+- Raw environment names and placeholder tokens: NONE.
+- `noindex, nofollow`: PASS in all three modes.
+- Synthetic values and temporary renders: not stored in the repository.
 
 ## Privacy guarantees
 
 - No personal data added to source control.
 - No responsible-party identity invented; all fallback copy uses natural pending phrasing (e.g. "Pendiente de publicación por el responsable del proyecto"), never raw tokens like `[PENDING_OWNER_INPUT]`.
-- No legal approval claimed; both routes state the content is a working draft, not a final policy.
-- No Production lead-capture form activation; `LeadCaptureForm` and `lead-form-config.ts` are unchanged.
+- Approved mode records the completed professional and provider reviews without
+  presenting publication as certification or guaranteed compliance.
+- Draft mode remains visibly identified as a working draft.
+- No Production lead-capture activation; `lead-form-config.ts` is unchanged and
+  the Production component remains absent.
+- The application form area now links internally to `/privacidad` and explicitly
+  states that the application link does not record consent.
 - No new tracking added.
 - No local lead storage added.
 - No API or database added.
@@ -86,6 +131,13 @@ Configuration completeness is evaluated by `isLegalConfigurationComplete()` in `
 - [x] No Production form is activated.
 - [x] Existing ebook flow still works.
 - [x] Existing thank-you routes still work.
+- [x] Approved-mode source implementation completed.
+- [x] Pending, draft and approved local rendering matrix passed.
+- [x] Application privacy-link surface prepared at `/privacidad`.
+- [ ] Owner approved-mode rendered review.
+- [ ] Protected approved-mode Preview review.
+- [ ] Production environment configuration and publication.
+- [ ] Final MailerLite Production consent control and policy link.
 
 Local smoke checks previously performed in this branch, prior to deployed Preview QA:
 
@@ -96,21 +148,20 @@ Local smoke checks previously performed in this branch, prior to deployed Previe
 
 Deployed Preview QA was completed manually. No personal data, screenshots, ephemeral Preview URLs, provider IDs, fake legal details, or private contact information are stored in the repository.
 
-## Production blockers
+## Remaining Production gates
 
 - Responsible-party name.
 - Identification details when legally required.
 - City or jurisdiction information.
 - Effective date.
-- Final owner approval.
-- Professional legal review.
-- Final policy-copy approval.
-- MailerLite due diligence.
-- MailerLite sender verification.
-- MailerLite domain authentication.
+- Owner approved-mode rendered review.
+- Protected approved-mode Preview review.
+- Production server-only environment configuration.
+- Production legal publication authorization and execution.
+- Explicit Production indexing decision.
 - Approved footer/business address.
-- Production consent copy.
-- Production consent linking.
+- Production MailerLite group and form.
+- Final Production consent control and policy linking.
 - Rights-request process.
 - Rights-request operating procedure QA.
 - Export/correction/deletion QA.
@@ -124,8 +175,18 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 ```text
 Preview decision: PASS
 
-Production decision: NO-GO FOR PRODUCTION LEAD CAPTURE
+Approved-mode local readiness decision: PASS
+
+Production legal-publication decision: PENDING
+
+Production consent decision: PENDING
 
 Reason:
-The deployed Preview privacy and data-processing routes, preparation notices, safe incomplete-state rendering, footer navigation, responsive layouts, keyboard navigation, noindex/nofollow metadata, and operational public privacy-contact mailbox were verified successfully. Production remains blocked by responsible-party details, effective date, final owner approval, professional legal review, final policy-copy approval, rights-request operations, MailerLite due diligence, MailerLite sender verification, MailerLite domain authentication, approved footer and business information, Production consent linking, Production lead-capture authorization, and controlled rollout approval.
+The three-state implementation now renders pending, draft and approved modes
+safely with noindex/nofollow. Professional Colombian legal review and provider
+contractual/DPA review pass with no changes requested. Approved-mode local QA
+and application privacy-link preparation pass. Production remains blocked by
+owner rendered review, protected approved-mode Preview QA, server-only
+Production configuration, explicit publication and indexing decisions, final
+MailerLite consent linking, rights-operation QA and controlled rollout.
 ```

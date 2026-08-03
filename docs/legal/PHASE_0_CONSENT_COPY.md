@@ -2,11 +2,18 @@
 
 ## Estado
 
-- Estado: Copy propuesto para implementacion futura.
-- Publicacion: No publicado.
+- Estado: Fuente de copy aprobada para la futura implementacion de Produccion.
+- Publicacion legal en Produccion: PENDIENTE.
 - Modelo: Single opt-in explicito.
-- Revision legal: `[PENDING_LEGAL_REVIEW]`.
-- Uso en produccion: Prohibido hasta publicar la politica aprobada y completar los datos del responsable.
+- Revision juridica profesional colombiana: PASS.
+- Revision contractual y de DPA del proveedor: PASS.
+- Cambios solicitados: NINGUNO.
+- Ruta publica de privacidad aprobada: `/privacidad`.
+- URL canonica: `https://singpronuncerepeat.com/privacidad`.
+- Casilla explicita: OBLIGATORIA Y DESMARCADA POR DEFECTO.
+- Superficie de enlace de privacidad de la aplicacion: PREPARADA.
+- Implementacion de consentimiento en MailerLite Produccion: PENDIENTE.
+- Captura de leads en Produccion: INACTIVA.
 
 ## Casilla principal recomendada
 
@@ -18,13 +25,15 @@ Inmediatamente junto a la casilla o debajo:
 
 > Consulta nuestra Política de privacidad.
 
-`Politica de privacidad` debe enlazar a la futura ruta publica aprobada. El enlace real es `[PENDING_OWNER_INPUT]` y no debe apuntar a este archivo interno.
+`Politica de privacidad` debe enlazar a `/privacidad`, cuya URL canonica es
+`https://singpronuncerepeat.com/privacidad`. No debe apuntar a este archivo
+interno, a Preview ni a un dominio tecnico.
 
 ## Texto de apoyo
 
 > Usaremos tu correo para enviarte la guía, prácticas educativas y novedades relacionadas con el proyecto. No vendemos tus datos ni los compartimos con anunciantes.
 
-La afirmacion es compatible con la arquitectura propuesta porque distingue anunciantes de los proveedores que tratan datos para operar el servicio. La politica debe explicar que MailerLite, Vercel, Tally u otros encargados aprobados pueden tratar informacion. Antes de publicar, el propietario debe confirmar que no existe venta de datos ni uso con anunciantes y que las configuraciones reales mantienen esa practica: `[PENDING_OWNER_INPUT]` y `[PENDING_PROVIDER_VERIFICATION]`.
+La afirmacion es compatible con la arquitectura propuesta porque distingue anunciantes de los proveedores que tratan datos para operar el servicio. La politica explica que MailerLite, Vercel, Tally u otros encargados aprobados pueden tratar informacion. La revision profesional y del proveedor no solicito cambios. La verificacion operativa de la configuracion real permanece pendiente antes de activar Produccion.
 
 ## Variantes para formularios y estados
 
@@ -58,7 +67,9 @@ El uso de personalizacion debe activarse solo si realmente se configura. De lo c
 
 > Lee la Política de privacidad para conocer cómo usamos y protegemos tus datos y cómo solicitar su corrección o eliminación.
 
-Ruta: `[PENDING_OWNER_INPUT]` hasta que exista una pagina publica aprobada.
+Ruta aprobada: `/privacidad`.
+
+URL canonica: `https://singpronuncerepeat.com/privacidad`.
 
 ### Consentimiento faltante
 
@@ -98,7 +109,9 @@ El enlace de baja debe ser el mecanismo funcional del proveedor, no texto decora
 
 > Esta encuesta es opcional. Usaremos tus respuestas para entender qué quieres aprender y mejorar el proyecto. No incluyas información sensible. Consulta la Política de privacidad antes de enviarla.
 
-Si la encuesta solicita contacto para seguimiento, debe explicarlo de forma especifica y separada: `[PENDING_LEGAL_REVIEW]`.
+Si la encuesta solicita contacto para seguimiento, debe explicarlo de forma
+especifica y separada. La revision juridica profesional de este criterio esta
+completa y no solicito cambios.
 
 ### Lista de interes del ebook avanzado
 
@@ -116,7 +129,8 @@ El canal de contacto preferido solo debe pedirse si es necesario y se explica su
 
 > Recibimos tu solicitud de privacidad. La revisaremos por el canal aprobado y podremos pedir una verificación proporcional para proteger tus datos. No envíes documentos o información sensible salvo que sea estrictamente necesario.
 
-No prometer un plazo hasta que se confirme en `[PENDING_LEGAL_REVIEW]`.
+Comunicar plazos unicamente conforme a la politica aprobada y al procedimiento
+operativo aplicable.
 
 ## Reglas de copy e interfaz
 
@@ -150,11 +164,13 @@ Revisar la decision si aparecen:
 - Mayor volumen promocional.
 - Entrada en jurisdicciones adicionales.
 
-La decision de producto no sustituye la evaluacion juridica: `[PENDING_LEGAL_REVIEW]`.
+La decision de producto no sustituye la evaluacion juridica. La revision
+profesional de Phase 0 esta completa y no solicito cambios; cualquier cambio de
+alcance requiere una nueva evaluacion.
 
 ## Consideracion de usuarios jovenes
 
-El lenguaje debe ser comprensible, sin urgencia manipulativa. El formulario inicial no pedira colegio, edad exacta, direccion, telefono ni datos sensibles. No se fija edad minima ni se presume autorizacion parental. El enfoque aplicable es bloqueador de produccion: `[PENDING_LEGAL_REVIEW]`.
+El lenguaje debe ser comprensible, sin urgencia manipulativa. El formulario inicial no pedira colegio, edad exacta, direccion, telefono ni datos sensibles. No se fija edad minima ni se presume autorizacion parental. La revision juridica profesional de este enfoque esta completa y no solicito cambios.
 
 ## Marcadores pendientes
 
@@ -165,12 +181,12 @@ El lenguaje debe ser comprensible, sin urgencia manipulativa. El formulario inic
 | Condicion personal o empresarial | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Detalle de ubicacion | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Fecha efectiva de la politica | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
-| Ruta y procedimiento de contacto | `[PENDING_OWNER_INPUT]` / `[PENDING_LEGAL_REVIEW]` | Bloqueador de implementacion |
-| Entidad contratante del proveedor | `[PENDING_PROVIDER_VERIFICATION]` | Bloqueador de implementacion |
-| Lugares y subencargados | `[PENDING_PROVIDER_VERIFICATION]` | Bloqueador de produccion |
-| Evaluacion de transferencia | `[PENDING_PROVIDER_VERIFICATION]` / `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Duraciones de conservacion | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Enfoque para menores | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Plazos de respuesta | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Aprobacion final del copy | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
+| Ruta de privacidad | `/privacidad` / `https://singpronuncerepeat.com/privacidad` | Aprobada; publicacion de Produccion pendiente |
+| Procedimiento de contacto | Revision profesional PASS | Operaciones de derechos pendientes de QA |
+| Entidad contratante, DPA, lugares y subencargados | Revision de proveedor PASS | Configuracion operativa de Produccion pendiente |
+| Evaluacion de transferencia o transmision | Revision profesional y de proveedor PASS | Sin cambios solicitados |
+| Duraciones de conservacion | Revision profesional PASS | Sin cambios solicitados |
+| Enfoque para menores | Revision profesional PASS | Sin cambios solicitados |
+| Plazos de respuesta | Revision profesional PASS | Sin cambios solicitados |
+| Aprobacion profesional del copy | PASS | Sin cambios solicitados |
 | Ajustes menores de tono sin cambiar finalidad | N/A | Refinamiento documental no bloqueante |

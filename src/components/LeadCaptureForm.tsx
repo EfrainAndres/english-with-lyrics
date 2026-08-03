@@ -94,6 +94,17 @@ export function LeadCaptureForm() {
                 </p>
               </>
             )}
+            <p className="mt-4 text-sm leading-7 text-soft">
+              El consentimiento explícito se gestiona dentro del formulario de
+              MailerLite; este enlace de la aplicación no registra
+              consentimiento. {" "}
+              <a
+                className="font-bold text-cream underline decoration-cream/50 underline-offset-4 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+                href="/privacidad"
+              >
+                Consulta nuestra Política de privacidad.
+              </a>
+            </p>
           </div>
         </div>
       </div>

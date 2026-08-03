@@ -6,7 +6,8 @@
 Legal configuration architecture: SERVER-ONLY
 Default Production status: PENDING
 Protected Preview status: DRAFT
-Approved-mode support: IMPLEMENTED BUT INACTIVE
+Approved-mode source implementation: COMPLETE
+Approved-mode local QA: PASS
 Personal owner values committed to Git: NO
 
 Protected Preview final regression: PASS
@@ -50,14 +51,24 @@ Owner rendered-copy re-review: APPROVED
 Owner publication authorization: CONFIRMED OUTSIDE REPOSITORY
 Known content defects: NONE
 
-Professional Colombian legal review: PENDING
-Provider contractual/DPA review: PENDING
-Production consent linking: PENDING
-Production legal publication approval: PENDING
+Professional Colombian legal review: PASS
+Provider contractual/DPA review: PASS
+Required substantive legal changes: NONE
+Application privacy-link preparation: PASS
+Owner approved-mode rendered review: PENDING
+Protected approved-mode Preview review: PENDING
+Production environment configuration: PENDING
+Production legal publication: PENDING
+Production indexing decision: PENDING
+Production MailerLite group/form: INACTIVE
+Final Production consent linking: PENDING
+Rights-request provider operations QA: PENDING
 Production Email 1: INACTIVE
 Production automation: INACTIVE
 Production email delivery: INACTIVE
 Production lead capture: INACTIVE
+Controlled rollout: PENDING
+Direct PDF delivery: ACTIVE
 ```
 
 ## Architecture Evidence
@@ -79,9 +90,26 @@ Production lead capture: INACTIVE
 | --- | --- | --- |
 | `pending` | Neutral preparation message; personal owner fields are not rendered | `noindex, nofollow` |
 | `draft` | Complete environment-backed draft with visible owner/professional-review notice | `noindex, nofollow` |
-| `approved` | Supported for a later reviewed phase; not activated by this branch | `noindex, nofollow` |
+| `approved` | Complete environment-backed policy; no draft notice or stale pending-review assertions; completed reviews stated accurately | `noindex, nofollow` |
 
-Production must remain configured as `pending` during this phase. Protected Preview may be configured manually as `draft` only after all required values are supplied in Vercel.
+Production must remain configured as `pending` during this readiness phase.
+Protected Preview `approved` mode and Production publication require later,
+explicit configuration and approval. Configuration completeness alone cannot
+change the publication state.
+
+## Three-State Local Validation
+
+| Mode | Configuration | Result |
+|---|---|---|
+| `pending` | Missing/empty synthetic configuration | PASS — neutral preparation state; no full policy or personal fields; no raw environment names or placeholders |
+| `draft` | Complete synthetic configuration and `LEGAL_PUBLICATION_STATUS=draft` | PASS — complete policies, visible draft notice and draft wording |
+| `approved` | Complete synthetic configuration and `LEGAL_PUBLICATION_STATUS=approved` | PASS — complete policies, no draft notice, no stale pending-review assertions, completed reviews represented accurately |
+
+Both legal routes returned HTTP 200, retained `noindex, nofollow`, fit desktop
+and 390 px layouts without horizontal overflow, exposed native mailto, telephone
+and internal policy links, and kept personal values out of metadata and Open
+Graph metadata. Keyboard-accessible links and visible focus treatment passed.
+Synthetic values and temporary visual evidence were not stored in the repository.
 
 ## Content Evidence
 
@@ -130,21 +158,27 @@ Production must remain configured as `pending` during this phase. Protected Prev
 
 - The Production `pending` state passed regression QA.
 - Production rendered neither personal owner fields nor the legal draft.
-- `approved` mode remains implemented but inactive.
+- `approved` mode source and local QA are complete but remain inactive in
+  Production.
 
 ### Review decision
 
 - The initial owner rendered-copy review requested changes.
 - The internal correction cycle is complete, and the internal structured review passed.
 - The owner re-reviewed and approved the rendered copy and confirmed publication authorization outside the repository.
-- Owner approval is not professional legal approval.
+- The earlier owner approval applied to the reviewed draft rendering. The new
+  approved-mode rendering still requires owner review. Professional Colombian
+  legal review and provider contractual/DPA review are complete and requested
+  no changes.
 
 ## Remaining Gates
 
-- Complete professional Colombian legal review.
-- Review provider contracts, DPA terms and legal classifications.
 - Test rights-request export, correction, unsubscribe, restriction and deletion operations.
 - Configure and validate final Production consent links.
-- Approve a later Production legal publication and indexing phase.
+- Complete owner review and protected Preview QA of the `approved` rendering.
+- Configure the server-only Production legal values.
+- Approve a later Production legal publication and indexing phase explicitly.
+- Create and validate the Production MailerLite group/form with its required,
+  unchecked consent control and final policy link.
 - Configure Production Email 1 and automation only after all applicable gates pass.
 - Approve controlled Production rollout.
