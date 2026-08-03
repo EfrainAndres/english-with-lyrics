@@ -2,9 +2,9 @@
 
 ## 1. Active review subject
 
-This record covers the approved 32-page production-PDF candidate and its
-staged repository and Preview delivery. It does not authorize Production
-replacement.
+This record covers the approved 32-page production-PDF candidate through its
+repository, Preview and canonical Production delivery. The replacement is
+live; the separate commercial funnel is not complete or active.
 
 ```text
 Export date: 2026-08-02
@@ -40,12 +40,25 @@ Project-owner Preview PDF viewer page count: 32
 Stable download/open path: PASS — /downloads/guia-gratis-sing-pronounce-repeat.pdf
 Project-owner Preview delivery review: PASS
 Public replacement Preview gate: PASS
-Public repository replacement: APPROVED FOR MERGE
-Canonical Production downloadable PDF: UNCHANGED
-Production deployment: NEXT / UNBLOCKED — NOT STARTED
-Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
-Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
-Rollback plan: PREPARED — NOT EXECUTED
+PR #61 merge: PASS
+Public replacement merge commit: 0f3517478f2d1742d1292ab3f586e896789c9dfe
+Canonical Production downloadable PDF: LIVE — APPROVED 32-PAGE ARTIFACT
+Production deployment: PASS
+Production-served SHA integrity: PASS
+Candidate-to-public-to-Production identity: PASS
+Production-served size: 1,315,500 bytes
+Production-served SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Production PDF structure: PASS — 32 A5 portrait pages, 420.00 × 594.96 pt
+Approved annotation inventory: PASS — exactly 16 HTTPS annotations
+Root-domain canonical annotation: PASS — https://singpronuncerepeat.com/ exactly once on page 32
+Active /ebook-gratis annotation: 0 — APPROVED / EXPECTED
+Embedded-QR Production decode: PASS — 15 of 15
+Post-merge Production smoke test: PASS
+Project-owner canonical Production review: PASS
+Production replacement gate: PASS
+Approved 32-page ebook public replacement: LIVE
+Mandatory improved-ebook deliverable: COMPLETE
+Rollback plan: VERIFIED / PREPARED — NOT EXECUTED
 ```
 
 ## 2. Entry gates
@@ -303,11 +316,21 @@ Preview delivery QA: PASS
 Preview-served PDF: 32 A5 pages; 16 annotations; 5 of 5 embedded QR PASS
 Project-owner Preview delivery review: PASS
 Public replacement Preview gate: PASS
-Public repository replacement: APPROVED FOR MERGE
-Canonical Production downloadable PDF: UNCHANGED
-Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge Production smoke QA
-Production deployment: NEXT / UNBLOCKED — NOT STARTED
-Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+PR #61 merge: PASS
+Public replacement merge commit: 0f3517478f2d1742d1292ab3f586e896789c9dfe
+Canonical Production downloadable PDF: LIVE — APPROVED 32-PAGE ARTIFACT
+Production-served SHA integrity: PASS
+Candidate-to-public-to-Production identity: PASS
+Approved annotation inventory: PASS — 16 of 16
+Root-domain canonical annotation: PASS — exactly 1 on page 32
+Active /ebook-gratis annotation: 0 — APPROVED / EXPECTED
+Embedded-QR Production decode: PASS — 15 of 15
+Production replacement gate: PASS
+Production deployment: PASS
+Post-merge Production smoke test: PASS
+Project-owner canonical Production review: PASS
+Mandatory improved-ebook deliverable: COMPLETE
+Rollback plan: VERIFIED / PREPARED — NOT EXECUTED
 ```
 
 - [x] Agent structural, visual, text, metadata, link and QR QA complete.
@@ -318,7 +341,7 @@ Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
 - [x] Project-owner Preview delivery review complete.
 - [x] Public replacement Preview gate passed.
 - [x] Public repository replacement approved for merge.
-- [ ] Production deployment and smoke QA for the new artifact complete.
+- [x] Production deployment and smoke QA for the new artifact complete.
 
 ## 13. Superseded 21-page export history
 
