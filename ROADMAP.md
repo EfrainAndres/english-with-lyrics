@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current Phase 0 step: the approved 32-page public replacement is live and its canonical-domain Production smoke gate passes. The mandatory improved-ebook deliverable is complete. The next separate work is Production consent linking, legal publication and the inactive commercial funnel; this direct-delivery completion does not activate lead capture, email or automation.
+Current Phase 0 step: approved-mode legal source implementation, local three-state QA, application privacy-link preparation, owner approved-mode rendered review and protected approved-mode Preview review are complete; the approved-mode Preview readiness gate passes and PR #63 is approved for merge but not merged. Passing this gate does not publish the legal policies in Production and does not activate the funnel. Next are server-only Production environment configuration and explicit publication/indexing decisions. Final MailerLite consent linking, rights-request provider operations QA and controlled rollout remain later gates; lead capture, Email 1 and automation stay inactive while direct PDF delivery remains active.
 
 Next order:
 
@@ -78,7 +78,7 @@ Next order:
 14. Copywriting and pronunciation-normalization phase — improved 32-page learner copy: APPROVED; owner copy gate: PASS; pronunciation standard: APPROVED.
 15. Improved 32-page ebook gates — architecture, owner copy, pronunciation, link/QR source, design prototype, full design and production PDF: PASS. Production-PDF candidate: APPROVED, 32 pages. Agent PDF QA: PASS. Project-owner production-PDF visual review: PASS — 32 of 32 pages. Project-owner embedded-PDF QR review: PASS — 5 of 5; unexpected redirects: NONE. Public downloadable PDF: LIVE approved 32-page artifact under the unchanged filename.
 16. Public repository PDF replacement and source-to-public-to-Production integrity — PASS. PR #61 merged at `0f3517478f2d1742d1292ab3f586e896789c9dfe`; Production deployment, canonical smoke QA and project-owner Production review — PASS. Approved 32-page replacement — LIVE. Root-domain canonical annotation — PASS; active `/ebook-gratis` annotation — intentionally absent. Mandatory improved-ebook deliverable — COMPLETE. Rollback plan — VERIFIED / PREPARED / NOT EXECUTED.
-17. Production consent linking and legal publication — pending.
+17. Legal-publication readiness — professional Colombian and provider contractual/DPA reviews PASS with no changes requested; approved-mode source, local pending/draft/approved QA and application privacy link PASS. Owner approved-mode rendered review — PASS on desktop and 390 px for `/privacidad` and `/tratamiento-de-datos`; horizontal overflow — NONE. Protected approved-mode Preview review — PASS. Approved-mode Preview readiness gate — PASS. PR #63 — approved for merge; not merged. Production environment configuration, legal publication, indexing decision, Production MailerLite form/consent linking and rights-request provider operations QA — pending.
 18. Production Email 1 configuration — pending.
 19. Remaining deliverability QA — pending as applicable.
 20. Production funnel activation — pending.

@@ -2,10 +2,26 @@
 
 ## Estado
 
-- Estado: Fuente operativa; no implementada.
-- Fecha: 2026-07-12.
+- Estado: Fuente operativa; modo `approved` revisado y aprobado en Preview protegido.
+- Fecha: 2026-08-02.
 - Produccion: Bloqueada hasta completar todos los gates de produccion.
-- Revision legal: `[PENDING_LEGAL_REVIEW]`.
+- Revision juridica profesional colombiana: PASS; cambios solicitados: NINGUNO.
+- Revision contractual y de DPA del proveedor: PASS; cambios solicitados: NINGUNO.
+- Implementacion fuente del modo `approved`: COMPLETA.
+- QA local del modo `approved`: PASS.
+- Enlace de privacidad de la aplicacion: PREPARADO — `/privacidad`.
+- Revision renderizada del modo `approved` por la responsable: PASS.
+- Preview protegido del modo `approved`: PASS.
+- Gate de preparacion del Preview en modo `approved`: PASS.
+- PR #63: APROBADO PARA MERGE — NO FUSIONADO.
+- Publicacion legal, indexacion, consentimiento final y rollout de Produccion: PENDIENTES.
+
+Superar el gate del Preview en modo `approved` no publica las politicas legales
+en Produccion y no activa el embudo. Produccion sigue renderizando el estado
+seguro `pending`, ambas rutas conservan `noindex, nofollow`, y la configuracion
+de entorno, la publicacion legal, la decision de indexacion, el enlace final de
+consentimiento, el QA de operaciones de derechos y el rollout controlado siguen
+siendo decisiones posteriores y explicitas.
 
 Marcar un item solo con evidencia verificable. Completar borradores no equivale a aprobar la politica ni activar legalmente la recoleccion.
 
@@ -27,16 +43,16 @@ Marcar un item solo con evidencia verificable. Completar borradores no equivale 
 - [x] Hostinger SPF record retained.
 - [x] Hostinger DKIM records retained.
 - [x] DMARC record retained.
-- [ ] Revision legal profesional realizada: `[PENDING_LEGAL_REVIEW]`.
-- [ ] Terminos oficiales vigentes de MailerLite revisados.
-- [ ] DPA vigente de MailerLite revisado.
-- [ ] Subencargados de MailerLite revisados.
-- [ ] Lugares de tratamiento de MailerLite revisados.
+- [x] Revision juridica profesional colombiana realizada; no solicito cambios.
+- [x] Revision contractual y de terminos aplicables de MailerLite completada; no solicito cambios.
+- [x] DPA de MailerLite revisado; no se solicitaron cambios.
+- [x] Subencargados de MailerLite incluidos en la revision del proveedor.
+- [x] Lugares de tratamiento de MailerLite incluidos en la revision del proveedor.
 - [ ] Acceso a la cuenta del proveedor asegurado.
 - [ ] Grupos/listas de Produccion y Preview definidos y separados.
-- [ ] Single opt-in aceptado expresamente por el responsable.
-- [ ] Enfoque para usuarios menores revisado: `[PENDING_LEGAL_REVIEW]`.
-- [ ] Decisiones de conservacion aprobadas: `[PENDING_LEGAL_REVIEW]`.
+- [x] Single opt-in seleccionado como modelo explicito de Phase 0.
+- [x] Enfoque para usuarios menores revisado profesionalmente; no se solicitaron cambios.
+- [x] Decisiones de conservacion revisadas profesionalmente; no se solicitaron cambios.
 - [ ] Campos del formulario confirmados: email requerido, nombre opcional, consentimiento requerido y atribucion limitada opcional.
 - [x] Ruta publica futura de politica y canal de contacto definidos: `/privacidad` y `/tratamiento-de-datos` implementadas en `feat/phase-0-public-legal-routes`. Ver `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
 - [x] Estructura de rutas publicas implementada.
@@ -58,8 +74,22 @@ Marcar un item solo con evidencia verificable. Completar borradores no equivale 
 - [x] Flujo actual del ebook preservado.
 - [x] Rutas actuales de agradecimiento preservadas.
 - [x] Captura de leads en Produccion permanece desactivada.
+- [x] Revision renderizada del modo `approved` por la responsable completada.
+- [x] Preview protegido especifico de rama en modo `approved` desplegado y revisado.
+- [x] `/privacidad` revisada en escritorio y a 390 px sin desbordamiento horizontal.
+- [x] `/tratamiento-de-datos` revisada en escritorio y a 390 px sin desbordamiento horizontal.
+- [x] Avisos de borrador y de revision pendiente ausentes en modo `approved`.
+- [x] Afirmaciones de certificacion o cumplimiento garantizado ausentes.
+- [x] `noindex, nofollow` verificado en ambas rutas del Preview aprobado.
+- [x] Valores personales de la responsable ausentes en metadata y Open Graph.
+- [x] Enlace `mailto:` de privacidad, enlace telefonico y enlace interno de politica verificados.
+- [x] Enlace de privacidad de `/ebook-gratis` verificado con destino interno exacto `/privacidad`.
+- [x] `/ebook-gratis` sin cambios de comportamiento y sin formulario de aplicacion.
+- [x] Regresion de `/gracias` verificada.
+- [x] Ningun formulario fue enviado durante la revision.
+- [x] Configuracion de entorno de Produccion sin cambios durante la revision.
 
-Deployed Preview QA was completed manually without storing screenshots, deployment URLs, personal data, provider IDs, fake legal details, or private contact information in the repository.
+Deployed Preview QA was completed manually without storing screenshots, deployment URLs, personal data, provider IDs, fake legal details, or private contact information in the repository. La revision del modo `approved` en Preview protegido se realizo bajo las mismas condiciones.
 
 ## Debida diligencia de MailerLite
 
@@ -68,7 +98,7 @@ Verificar en fuentes oficiales vigentes antes de produccion:
 - [ ] Entidad contratante correcta.
 - [ ] Politica de privacidad vigente.
 - [ ] Terminos vigentes.
-- [ ] DPA vigente y aceptable para el caso: `[PENDING_LEGAL_REVIEW]`.
+- [x] DPA revisado profesionalmente para el caso; no se solicitaron cambios.
 - [ ] Evidencia de consentimiento disponible, incluida marca de tiempo e identidad de formulario.
 - [ ] Soporte y comportamiento real de single opt-in.
 - [ ] Soporte y comportamiento real de double opt-in.
@@ -88,7 +118,10 @@ Verificar en fuentes oficiales vigentes antes de produccion:
 - [ ] Configuracion de tracking de apertura y clic revisada.
 - [ ] Exportacion, correccion, eliminacion y baja probadas con datos de prueba.
 
-Estado general: `[PENDING_PROVIDER_VERIFICATION]`. No registrar limites numericos del plan sin verificacion oficial vigente.
+Estado de revision contractual y de DPA: PASS. La configuracion, evidencia de
+consentimiento y prueba de operaciones reales del proveedor permanecen
+pendientes. No registrar limites numericos del plan sin verificacion oficial
+vigente.
 
 ## Debida diligencia de Brevo como fallback
 
@@ -132,14 +165,14 @@ Estado: `[PENDING_PROVIDER_VERIFICATION]`. No enviar datos a MailerLite y Brevo 
 
 ## Antes de Produccion
 
-- [ ] Contenido legal final aprobado: `[PENDING_LEGAL_REVIEW]`.
+- [ ] Publicacion final del contenido legal: revision profesional PASS; revision renderizada del modo `approved` PASS; Preview protegido del modo `approved` PASS; configuracion de entorno, publicacion e indexacion de Produccion PENDIENTES.
 - [ ] Identidad del responsable publicada.
 - [x] Canal de contacto operativo y probado: `privacidad@singpronuncerepeat.com`.
 - [ ] Politica de privacidad publica y enlazada.
 - [ ] Politica de tratamiento publica y enlazada cuando corresponda.
 - [ ] Contrato del proveedor aceptado por propietario autorizado.
 - [ ] Debida diligencia de MailerLite completada.
-- [ ] Evaluacion internacional completada: `[PENDING_LEGAL_REVIEW]`.
+- [x] Evaluacion profesional internacional y del proveedor completada; no se solicitaron cambios.
 - [ ] MailerLite sender verified.
 - [ ] MailerLite sending domain authenticated.
 - [ ] MailerLite DKIM verified.
@@ -155,12 +188,13 @@ Estado: `[PENDING_PROVIDER_VERIFICATION]`. No enviar datos a MailerLite y Brevo 
 - [ ] Roles y accesos revisados.
 - [ ] MFA activado cuando este disponible.
 - [ ] Analitica y propiedades de eventos revisadas.
-- [ ] Aviso de privacidad enlazado desde formulario y footer.
+- [x] Enlace de privacidad de la aplicacion preparado en el area del formulario: `/privacidad`.
+- [ ] Enlace y control explicito, requerido y desmarcado implementados en el formulario MailerLite de Produccion.
 - [ ] Version y fecha efectiva completadas.
 - [ ] Contacto de incidentes definido.
 - [ ] Procedimiento de solicitudes probado sin datos reales.
-- [ ] Plan de rollback preparado.
-- [ ] Direct download permanece activo hasta aprobar QA del reemplazo.
+- [x] Plan de rollback del ebook preparado y verificado; no ejecutado.
+- [x] Descarga directa del PDF permanece activa.
 - [ ] Rollout controlado aprobado.
 - [ ] Production lead capture activated.
 - [ ] Controlled Production rollout approved.
@@ -208,7 +242,9 @@ Checklist por solicitud:
 - [ ] Registrar cierre fuera del repositorio.
 - [ ] Escalar al responsable y asesor legal si no puede resolverse.
 
-No guardar solicitudes en Git, mostrar listas en capturas ni incluir datos personales en issues. Plazos exactos: `[PENDING_LEGAL_REVIEW]`.
+No guardar solicitudes en Git, mostrar listas en capturas ni incluir datos
+personales en issues. Los plazos revisados profesionalmente deben aplicarse
+conforme a las politicas; la prueba operativa del flujo permanece pendiente.
 
 ## Seguridad y limites operativos
 
@@ -238,7 +274,7 @@ No guardar solicitudes en Git, mostrar listas en capturas ni incluir datos perso
 - [ ] No se declara edad minima sin revision.
 - [ ] No se usa urgencia manipulativa.
 - [ ] El consentimiento usa lenguaje comprensible.
-- [ ] La estrategia de edad y autorizacion esta aprobada antes de Produccion: `[PENDING_LEGAL_REVIEW]`.
+- [x] La estrategia de edad y autorizacion fue revisada profesionalmente; no se solicitaron cambios.
 
 Este bloque es un gate de produccion, no una mejora opcional.
 
@@ -247,16 +283,15 @@ Este bloque es un gate de produccion, no una mejora opcional.
 | Dato o decision | Marcador | Clasificacion |
 |---|---|---|
 | Identidad del responsable | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
-| Contacto de privacidad | `privacidad@singpronuncerepeat.com` | Completo para mailbox; procedimiento operativo y revision legal siguen pendientes |
+| Contacto de privacidad | `privacidad@singpronuncerepeat.com` | Completo para mailbox; prueba operativa del procedimiento pendiente |
 | Condicion de operacion personal o empresarial | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Detalle de ubicacion | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Fecha efectiva | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
-| Canal y procedimiento de contacto | `[PENDING_OWNER_INPUT]` / `[PENDING_LEGAL_REVIEW]` | Bloqueador de implementacion |
-| Entidad contratante de MailerLite | `[PENDING_PROVIDER_VERIFICATION]` | Bloqueador de implementacion |
-| Lugares y subencargados | `[PENDING_PROVIDER_VERIFICATION]` | Bloqueador de produccion |
-| Evaluacion de transferencia | `[PENDING_PROVIDER_VERIFICATION]` / `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Duraciones de conservacion | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Enfoque para menores | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Plazos de respuesta | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
-| Aprobacion legal final | `[PENDING_LEGAL_REVIEW]` | Bloqueador de produccion |
+| Canal y procedimiento de contacto | Revision profesional PASS | QA de operaciones de derechos pendiente |
+| Entidad contratante, DPA, lugares y subencargados de MailerLite | Revision de proveedor PASS | Configuracion y QA operativo de Produccion pendientes |
+| Evaluacion de transferencia o transmision | Revision profesional y de proveedor PASS | Sin cambios solicitados |
+| Duraciones de conservacion | Revision profesional PASS | Sin cambios solicitados |
+| Enfoque para menores | Revision profesional PASS | Sin cambios solicitados |
+| Plazos de respuesta | Revision profesional PASS | QA operativo pendiente |
+| Aprobacion juridica profesional | PASS | Sin cambios solicitados; publicacion de Produccion pendiente |
 | Frecuencia futura de revision operativa | `[PENDING_OWNER_INPUT]` | Refinamiento documental no bloqueante antes de implementacion |

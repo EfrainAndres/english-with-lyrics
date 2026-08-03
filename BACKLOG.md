@@ -121,11 +121,17 @@ Priority: High.
 - [x] Classify required provider-related changes. Result: NOT REQUIRED.
 - [x] Complete required legal corrections. Result: NOT REQUIRED.
 - [x] Complete required provider-related corrections. Result: NOT REQUIRED.
+- [x] Implement state-aware `approved` legal-page rendering without stale draft or pending-review assertions.
+- [x] Pass the synthetic pending/draft/approved local validation matrix for both legal routes.
+- [x] Prepare the application privacy link to `/privacidad` beside the controlled form context.
+- [x] Complete owner rendered review of both routes in `approved` mode. Result: PASS on desktop and 390 px for both routes; no horizontal overflow.
+- [x] Complete protected Preview review of both routes in `approved` mode. Result: PASS; approved-mode Preview readiness gate passes and PR #63 is approved for merge.
+- [ ] Make an explicit Production indexing decision; keep `noindex, nofollow` until then.
 - [ ] Complete final Production consent linking.
 - [ ] Complete Production environment configuration.
 - [ ] Approve Production legal publication.
-- [x] Create the public `/privacidad` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
-- [x] Create the public `/tratamiento-de-datos` route with safe draft/preparation rendering. Route implemented in `feat/phase-0-public-legal-routes`; content remains a working draft pending owner input and legal approval.
+- [x] Create `/privacidad` with safe pending, draft and approved rendering. Production publication remains pending. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
+- [x] Create `/tratamiento-de-datos` with safe pending, draft and approved rendering. Production publication remains pending.
 - [x] Confirm the operational privacy mailbox and document the draft contact/privacy-request workflow.
 - [ ] Test the complete rights-request workflow, including provider export, correction and deletion operations.
 - [x] Complete MailerLite due diligence and international-processing review within the professional provider review. Result: no changes requested.
@@ -217,7 +223,7 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy drafting status: legal-owner configuration, internal/owner review, professional Colombian legal review and provider contractual/DPA review are complete. Counsel reviewed the full legal and provider package and requested no legal-content or provider-related changes. This outcome does not activate Production. Final Production consent linking, environment configuration, legal publication and controlled rollout remain pending; Production email, automation and lead capture remain inactive. See:
+Privacy publication readiness status: legal-owner architecture, internal/owner draft review, professional Colombian legal review and provider contractual/DPA review are complete; no substantive changes were requested. State-aware `approved` source implementation, local three-state QA and application privacy-link preparation pass. The project owner has now completed the approved-mode rendered review on the branch-specific protected Preview: both legal routes pass on desktop and at 390 px with no horizontal overflow, approved-mode content is correct, `noindex, nofollow` holds, personal values are absent from metadata and Open Graph, and the `/ebook-gratis` privacy link and `/gracias` regression pass. The approved-mode Preview readiness gate passes and PR #63 is approved for merge but has not been merged. This outcome does not publish the legal policies in Production and does not activate the funnel. Production environment configuration, legal publication, indexing decision, MailerLite consent control/linking, rights-request provider operations QA and controlled rollout remain pending. Production Email 1, automation and lead capture remain inactive; direct PDF delivery remains active. See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`

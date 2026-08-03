@@ -66,6 +66,8 @@ export default function PrivacidadPage() {
     return <PendingPrivacyNotice />;
   }
 
+  const isApproved = renderState === "approved";
+
   const {
     ownerType,
     ownerName,
@@ -94,7 +96,8 @@ export default function PrivacidadPage() {
         </aside>
       ) : null}
       <p className="mt-6 leading-7 text-zinc-300">
-        Este borrador explica cómo se prevé tratar los datos personales
+        {isApproved ? "Esta política explica" : "Este borrador explica"} cómo se
+        prevé tratar los datos personales
         relacionados con Sing Pronunce Repeat, también identificado públicamente
         como English with Lyrics, y con el método Escríbelo como suena. No
         constituye una certificación de cumplimiento ni activa la captura de
@@ -198,8 +201,19 @@ export default function PrivacidadPage() {
             . Deben indicar de forma clara el tipo de solicitud y la información
             suficiente para localizar el registro. La validación de identidad
             será proporcional; no se exigirá por defecto una copia del documento
-            de identidad. El procedimiento operativo y sus plazos permanecen
-            sujetos a revisión jurídica profesional.
+            de identidad. {isApproved ? (
+              <>
+                El procedimiento operativo y sus plazos formaron parte de la
+                revisión jurídica profesional completada. La prueba operativa de
+                los derechos permanece pendiente antes de activar la captura de
+                leads en Producción.
+              </>
+            ) : (
+              <>
+                El procedimiento operativo y sus plazos permanecen sujetos a
+                revisión jurídica profesional.
+              </>
+            )}
           </p>
           <p>
             Persona responsable de la atención de peticiones, consultas y
@@ -285,22 +299,24 @@ export default function PrivacidadPage() {
             </li>
           </ul>
           <p>
-            La clasificación jurídica y contractual definitiva de cada relación
-            con proveedores continúa pendiente de revisión profesional.
+            {isApproved
+              ? "La revisión jurídica, contractual y de DPA de las relaciones con proveedores está completa y no solicitó cambios. La validación operativa de los proveedores permanece pendiente antes de activar el flujo de Producción."
+              : "La clasificación jurídica y contractual definitiva de cada relación con proveedores continúa pendiente de revisión profesional."}
           </p>
         </section>
 
         <section aria-labelledby="privacy-dates">
-          <h2 id="privacy-dates">9. Vigencia y estado de revisión</h2>
+          <h2 id="privacy-dates">9. Vigencia y estado</h2>
           <p>
-            Fecha prevista de vigencia: <time dateTime={effectiveDate ?? undefined}>{effectiveDate}</time>.
-            Última actualización prevista:{" "}
+            {isApproved ? "Fecha de vigencia" : "Fecha prevista de vigencia"}:{" "}
+            <time dateTime={effectiveDate ?? undefined}>{effectiveDate}</time>.
+            {" "}{isApproved ? "Última actualización" : "Última actualización prevista"}:{" "}
             <time dateTime={lastUpdatedDate ?? undefined}>{lastUpdatedDate}</time>.
           </p>
           <p>
-            Este texto permanece pendiente de aprobación final de la responsable,
-            revisión interna estructurada y revisión jurídica profesional en
-            Colombia. Las páginas continúan excluidas de indexación.
+            {isApproved
+              ? "La revisión de la responsable, la revisión interna estructurada, la revisión jurídica profesional en Colombia y la revisión contractual y de DPA de proveedores están completas; no se solicitaron cambios sustantivos. La publicación no constituye una certificación ni una garantía de cumplimiento. La captura de leads, el Email 1 y la automatización de Producción permanecen inactivos. La página continúa excluida de indexación."
+              : "Este texto permanece pendiente de aprobación final de la responsable, revisión interna estructurada y revisión jurídica profesional en Colombia. La página continúa excluida de indexación."}
           </p>
         </section>
       </div>

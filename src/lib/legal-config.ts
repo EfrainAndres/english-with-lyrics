@@ -25,8 +25,8 @@ export type LegalConfiguration = {
   responsiblePartyCity: string | null;
   /** @deprecated Compatibility alias for the previous legal-content API. */
   privacyContactEmail: string | null;
-  /** @deprecated Professional review remains pending in this phase. */
-  professionalReviewCompleted: false;
+  /** @deprecated Compatibility flag; publication remains status-controlled. */
+  professionalReviewCompleted: true;
 };
 
 type LegalEnvironment = Readonly<Record<string, string | undefined>>;
@@ -180,7 +180,7 @@ export function readLegalConfiguration(
     responsiblePartyIdentification: null,
     responsiblePartyCity: mayRenderPersonalValues ? ownerDomicile : null,
     privacyContactEmail: mayRenderPersonalValues ? privacyEmail : null,
-    professionalReviewCompleted: false,
+    professionalReviewCompleted: true,
   };
 }
 
