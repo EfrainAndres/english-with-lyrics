@@ -43,7 +43,7 @@ The following are available through Vercel Web Analytics on the current plan:
 | Exact PDF download clicks | Hobby plan does not support custom events; download is a direct anchor |
 | Completed browser downloads | No browser-completion signal is available without a custom endpoint |
 | Time spent reading the PDF | Out of scope for web analytics; would require reader-side tooling |
-| Whether a user finished all 21 pages | Same — requires reader-side instrumentation |
+| Whether a user finished all 32 pages | Same — requires reader-side instrumentation |
 | Which specific PDF link was clicked (YouTube, Tally, backlink) | Requires custom events or PDF reader integration |
 | Open-in-browser vs. download distinction | Same — both use direct anchors |
 | Cross-device user identity | Vercel Web Analytics is privacy-conscious and does not track identity |

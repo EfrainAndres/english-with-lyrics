@@ -2,8 +2,9 @@
 
 ## 1. Active review subject
 
-This record covers the generated 32-page production-PDF candidate. It does not
-authorize public delivery or Production replacement.
+This record covers the approved 32-page production-PDF candidate and its
+staged repository and Preview delivery. It does not authorize Production
+replacement.
 
 ```text
 Export date: 2026-08-02
@@ -21,11 +22,20 @@ Embedded QR codes manually reviewed: 5 of 5 PASS
 Unexpected redirects: NONE
 Production PDF gate: PASS
 Production-PDF candidate: APPROVED
-Public-delivery approval: NEXT / UNBLOCKED — NOT STARTED
-Public downloadable PDF: UNCHANGED
-Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED
+Repository public PDF replacement: STAGED
+Candidate-to-public SHA integrity: PASS
+Repository public SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Preview URL: https://english-with-lyrics-git-feat-p-6da762-efrain-vergara-s-projects.vercel.app
+Preview-served artifact SHA integrity: PASS
+Preview-served SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Preview-served size: 1,315,500 bytes
+Preview PDF structural/link/QR validation: PASS
+Preview page/download/browser-open checks: PASS — HTTP 200; application/pdf
+Project-owner Preview delivery review: PENDING
+Canonical Production downloadable PDF: UNCHANGED
 Production deployment: NOT STARTED
-Production replacement: BLOCKED pending public replacement and delivery QA
+Production smoke test for new artifact: PENDING
+Production replacement gate: BLOCKED pending owner Preview approval, merge and post-merge Production smoke QA
 ```
 
 ## 2. Entry gates
@@ -248,8 +258,9 @@ Approved HTML: UNCHANGED
 Approved CSS: UNCHANGED
 QR manifest: UNCHANGED
 Five QR SVG assets: UNCHANGED
-Public downloadable PDF: UNCHANGED
-Application and deployment files: UNCHANGED
+Repository public PDF: IDENTICAL TO APPROVED CANDIDATE
+Application metadata and page-count copy: UPDATED FOR 32 PAGES
+Production deployment files: UNCHANGED
 ```
 
 ## 11. Issue log
@@ -276,17 +287,24 @@ Project-owner embedded-PDF QR review: PASS
 Embedded QR codes manually reviewed: 5 of 5 PASS
 Unexpected redirects: NONE
 Production PDF gate: PASS
-Public-delivery approval: NEXT / UNBLOCKED — NOT STARTED
-Public downloadable PDF: UNCHANGED
-Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED
-Production replacement: BLOCKED pending public replacement and delivery QA
+Repository public PDF replacement: STAGED
+Candidate-to-public SHA integrity: PASS
+Preview delivery QA: PASS
+Preview-served PDF: 32 A5 pages; 16 annotations; 5 of 5 embedded QR PASS
+Project-owner Preview delivery review: PENDING
+Canonical Production downloadable PDF: UNCHANGED
+Production replacement gate: BLOCKED pending owner Preview approval, merge and post-merge Production smoke QA
 Production deployment: NOT STARTED
+Production smoke test for new artifact: PENDING
 ```
 
 - [x] Agent structural, visual, text, metadata, link and QR QA complete.
 - [x] Project-owner production-PDF visual review complete.
 - [x] Project-owner embedded-PDF QR review complete.
-- [ ] Public PDF replacement and delivery approval complete.
+- [x] Repository public PDF replacement staged with source-to-public integrity.
+- [x] Deployed Preview delivery QA complete.
+- [ ] Project-owner Preview delivery review complete.
+- [ ] Production deployment and smoke QA for the new artifact complete.
 
 ## 13. Superseded 21-page export history
 

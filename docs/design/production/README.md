@@ -15,15 +15,26 @@ Agent structural/visual/text/metadata/link/QR QA: PASS
 Project-owner PDF review: PASS
 Project-owner embedded-PDF QR review: PASS
 Production PDF gate: PASS
-Public downloadable PDF: UNCHANGED
-Public replacement: NEXT / UNBLOCKED — NOT STARTED
+Canonical Production downloadable PDF: UNCHANGED
+Repository public PDF: STAGED — IDENTICAL 32-PAGE ARTIFACT
+Source-to-public integrity: PASS
+Preview delivery QA: PASS
+Project-owner Preview delivery review: PENDING
+Canonical Production delivery: UNCHANGED — SUPERSEDED 21-PAGE ARTIFACT
+Canonical Production SHA-256: fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08
 Production deployment: NOT STARTED
-Production replacement: BLOCKED pending public replacement and delivery QA
+Production replacement: PENDING PR MERGE AND POST-MERGE SMOKE QA
 ```
 
-The committed candidate is not published. The current public download remains
-the earlier 21-page artifact until the separate public-replacement,
-source-to-public integrity and deployed delivery-QA gate passes.
+Preview URL:
+`https://english-with-lyrics-git-feat-p-6da762-efrain-vergara-s-projects.vercel.app`
+
+The approved candidate is staged at the stable repository public path and is
+byte-for-byte identical to that public file. The deployed Preview serves the
+staged 32-page replacement and passed route, download, browser-open, PDF,
+annotation and embedded-QR QA. The canonical Production domain continues to
+serve the earlier 21-page artifact until this PR is merged and post-merge
+Production smoke QA passes.
 
 ## Files
 
@@ -73,16 +84,17 @@ Size: 1,315,500 bytes
 ```
 
 Agent and project-owner review evidence is recorded in
-`docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Public replacement remains a
-separate unstarted phase.
+`docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Repository and Preview staging are
+complete; project-owner Preview delivery review, PR merge and post-merge
+Production smoke QA remain pending.
 
 ## Artifact Protection
 
-This phase does not modify:
+The public-replacement phase does not modify:
 
 - `phase-0-ebook.html`
 - `phase-0-ebook.css`
-- `public/downloads/guia-gratis-sing-pronounce-repeat.pdf`
+- the approved candidate at `phase-0-ebook-production-draft.pdf`
 - Application or Production delivery configuration
 
 The required public filename remains:
@@ -91,5 +103,5 @@ The required public filename remains:
 guia-gratis-sing-pronounce-repeat.pdf
 ```
 
-Existing public links depend on that filename. Replacement is allowed only in
-a later, explicitly approved Production phase.
+Existing public links depend on that filename. The repository replacement is
+staged under that name; Production deployment is not part of this task.

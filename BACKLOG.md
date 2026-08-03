@@ -284,13 +284,15 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [x] Complete project-owner review of the 32-page production-PDF candidate.
 - [x] Complete project-owner/manual review of the five embedded-PDF QR codes.
 - [x] Pass the production-PDF candidate gate.
-- [ ] Replace the public PDF in a separate branch while preserving the public filename.
-- [ ] Complete source-to-public PDF integrity verification.
+- [x] Stage the approved public PDF replacement while preserving the public filename.
+- [x] Complete source-to-public PDF integrity verification.
+- [x] Complete deployed Preview PDF delivery QA.
+- [ ] Complete project-owner Preview delivery review.
 - [ ] Complete deployed Production PDF smoke testing and rollback verification.
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; link/QR source gate: PASS. Design prototype: APPROVED; design prototype gate: PASS. Full 32-page design implementation: COMPLETE and APPROVED; full design gate: PASS. Production PDF generation: COMPLETE. Production-PDF candidate: APPROVED — 32 pages. Agent PDF QA: PASS, including exact 16-link validation and 5-of-5 embedded-PDF programmatic QR decode. Project-owner production-PDF visual review: PASS — 32 of 32 pages. Project-owner/manual embedded-PDF QR review: PASS — 5 of 5; unexpected redirects: NONE. Production PDF gate: PASS. Public downloadable PDF: UNCHANGED. Public PDF replacement: NEXT / UNBLOCKED — NOT STARTED. Production deployment: NOT STARTED. Production replacement: BLOCKED pending public replacement and delivery QA. Overall mandatory ebook improvement: NOT YET COMPLETE. Production lead capture: INACTIVE. Production Email 1: INACTIVE. Production automation: INACTIVE. See `docs/validation/PHASE_0_EBOOK_PDF_QA.md` for the active candidate record and `docs/validation/PHASE_0_EBOOK_LINK_QR_VERIFICATION.md` for QR history and handoff status. Production delivery is unchanged.
+Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; link/QR source gate: PASS. Design prototype: APPROVED; design prototype gate: PASS. Full 32-page design implementation: COMPLETE and APPROVED; full design gate: PASS. Production PDF generation: COMPLETE. Production-PDF candidate: APPROVED — 32 pages. Agent PDF QA: PASS. Production PDF gate: PASS. Public repository PDF replacement: STAGED; public filename: UNCHANGED; source-to-public integrity: PASS. Preview delivery QA: PASS. Project-owner Preview delivery review: PENDING. Production deployment: NOT STARTED. Production PDF smoke test for the new artifact: PENDING. Rollback plan: PREPARED; execution remains pending if needed after merge. Production replacement gate: BLOCKED pending owner Preview approval, merge and post-merge Production smoke QA. Overall mandatory ebook improvement: NOT YET COMPLETE. Production lead capture: INACTIVE. Production Email 1: INACTIVE. Production automation: INACTIVE. See `docs/validation/PHASE_0_EBOOK_PDF_QA.md` and `docs/validation/PHASE_0_EBOOK_PDF_DELIVERY.md` for the active replacement record.
 
 ### Ebook Draft
 
@@ -380,7 +382,7 @@ Status: Complete — structural QA passed. Visual QA: approved by project owner.
 
 ### Ebook PDF Delivery
 
-- [x] Public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` (1,322,844 bytes, SHA-256 `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08`).
+- [x] Historical superseded public PDF at `public/downloads/guia-gratis-sing-pronounce-repeat.pdf` (1,322,844 bytes, SHA-256 `fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08`).
 - [x] `/ebook-gratis` converted from waiting page to active download page.
 - [x] Download CTA with `download` attribute and correct filename.
 - [x] Survey and first-group CTAs preserved with correct Tally destinations.

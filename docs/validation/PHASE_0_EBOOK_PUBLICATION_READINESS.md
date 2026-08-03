@@ -1,6 +1,31 @@
 # Phase 0 Ebook — Publication Readiness Review
 
-## 1. Review Status
+## Active 32-page replacement readiness
+
+```text
+Architecture gate: PASS
+Owner copy gate: PASS
+Pronunciation gate: PASS
+Link/QR source gate: PASS
+Full design gate: PASS
+Production PDF gate: PASS
+Repository public replacement: STAGED
+Source-to-public integrity: PASS
+Preview delivery QA: PASS
+Project-owner Preview delivery review: PENDING
+Production replacement and new-artifact smoke test: PENDING
+Production replacement gate: BLOCKED
+Production lead capture: INACTIVE
+Production Email 1: INACTIVE
+Production automation: INACTIVE
+```
+
+The approved 32-page artifact is now the active publication-readiness subject.
+The project-owner Preview delivery review, merge and post-merge Production
+smoke QA remain mandatory. The earlier 21-page results below are preserved as
+historical context and do not establish readiness for the replacement.
+
+## 1. Historical 21-page Review Status
 
 Current canonical-brand audit note:
 

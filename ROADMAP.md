@@ -58,7 +58,7 @@ Required gate: privacy and consent approval. Drafts alone do not complete this g
 
 Provider foundation follows privacy drafting. Form implementation follows Preview provider readiness. Production activation remains after public policies, legal approval, and provider due diligence are complete.
 
-Current Phase 0 step: replace the public PDF in a separate branch, verify source-to-public integrity, and complete deployed Production PDF smoke testing and rollback verification. The approved 32-page candidate is not yet public, and Production delivery remains unchanged.
+Current Phase 0 step: complete project-owner Preview delivery review for the staged, byte-identical 32-page public replacement, then merge and run post-merge Production PDF smoke QA with rollback verification. Preview delivery QA and source-to-public integrity pass; canonical Production remains unchanged.
 
 Next order:
 
@@ -77,7 +77,7 @@ Next order:
 13. Mandatory ebook audit — complete; page-by-page audit complete; 30-page architecture received owner feedback of CHANGES REQUESTED and was revised to a 32-page architecture separating the mission, future-product positioning and survey into distinct pages; revised architecture approved.
 14. Copywriting and pronunciation-normalization phase — improved 32-page learner copy: APPROVED; owner copy gate: PASS; pronunciation standard: APPROVED.
 15. Improved 32-page ebook gates — architecture, owner copy, pronunciation, link/QR source, design prototype, full design and production PDF: PASS. Production-PDF candidate: APPROVED, 32 pages. Agent PDF QA: PASS. Project-owner production-PDF visual review: PASS — 32 of 32 pages. Project-owner embedded-PDF QR review: PASS — 5 of 5; unexpected redirects: NONE. Public downloadable PDF: UNCHANGED.
-16. Public PDF replacement, source-to-public integrity verification, deployed smoke test and rollback verification — immediate next step; NEXT / UNBLOCKED — NOT STARTED.
+16. Public repository PDF replacement and source-to-public integrity — staged; PASS. Preview delivery QA — PASS. Project-owner Preview delivery review — immediate next step; PENDING. Production deployment and new-artifact smoke QA — NOT STARTED / PENDING. Rollback plan — PREPARED.
 17. Production consent linking and legal publication — pending.
 18. Production Email 1 configuration — pending.
 19. Remaining deliverability QA — pending as applicable.
