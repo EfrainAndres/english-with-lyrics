@@ -24,11 +24,21 @@ Preview-served PDF size: 1,315,500 bytes
 Preview PDF structure: PASS — 32 A5 pages
 Preview annotation inventory: PASS — 16 of 16
 Preview embedded-QR decode: PASS — 5 of 5
-Project-owner Preview delivery review: PENDING
+Project-owner Preview `/ebook-gratis` desktop review: PASS
+Project-owner Preview `/ebook-gratis` 390 px review: PASS
+Horizontal overflow at 390 px: NONE
+Project-owner Preview `/gracias` review: PASS
+Preview PDF browser-open review: PASS — viewer page count 32
+Stable download/open path: PASS — /downloads/guia-gratis-sing-pronounce-repeat.pdf
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
 Canonical Production artifact: UNCHANGED — SUPERSEDED 21-PAGE PDF
 Canonical Production SHA-256: fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08
-New Production smoke test: PENDING
-Production replacement gate: BLOCKED
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
+Rollback plan: PREPARED — NOT EXECUTED
 ```
 
 ### Prepared rollback plan

@@ -12,18 +12,22 @@ Production PDF gate: PASS
 Repository public replacement: STAGED
 Source-to-public integrity: PASS
 Preview delivery QA: PASS
-Project-owner Preview delivery review: PENDING
-Production replacement and new-artifact smoke test: PENDING
-Production replacement gate: BLOCKED
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
+Rollback plan: PREPARED — NOT EXECUTED
 Production lead capture: INACTIVE
 Production Email 1: INACTIVE
 Production automation: INACTIVE
 ```
 
 The approved 32-page artifact is now the active publication-readiness subject.
-The project-owner Preview delivery review, merge and post-merge Production
-smoke QA remain mandatory. The earlier 21-page results below are preserved as
-historical context and do not establish readiness for the replacement.
+PR merge and canonical-domain post-merge Production smoke QA remain mandatory.
+The earlier 21-page results below are preserved as historical context and do
+not establish readiness for the replacement.
 
 ## 1. Historical 21-page Review Status
 

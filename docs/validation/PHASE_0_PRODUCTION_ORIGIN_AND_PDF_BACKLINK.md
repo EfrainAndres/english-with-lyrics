@@ -11,11 +11,16 @@ approved difference is not a defect.
 ```text
 Repository public replacement: STAGED
 Preview delivery QA: PASS
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
 Root-domain canonical link: PASS
 Approved annotations: 16 of 16 PASS
 Legacy Vercel destination: ABSENT
 Canonical Production artifact: UNCHANGED — SUPERSEDED 21-PAGE PDF
-New Production smoke test: PENDING
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
 ```
 
 The `/ebook-gratis` backlink and seven-annotation results below are preserved

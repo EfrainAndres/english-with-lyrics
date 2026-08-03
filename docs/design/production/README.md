@@ -19,11 +19,18 @@ Canonical Production downloadable PDF: UNCHANGED
 Repository public PDF: STAGED — IDENTICAL 32-PAGE ARTIFACT
 Source-to-public integrity: PASS
 Preview delivery QA: PASS
-Project-owner Preview delivery review: PENDING
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
 Canonical Production delivery: UNCHANGED — SUPERSEDED 21-PAGE ARTIFACT
 Canonical Production SHA-256: fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08
-Production deployment: NOT STARTED
-Production replacement: PENDING PR MERGE AND POST-MERGE SMOKE QA
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
+Rollback plan: PREPARED — NOT EXECUTED
+Production lead capture: INACTIVE
+Production Email 1: INACTIVE
+Production automation: INACTIVE
 ```
 
 Preview URL:
@@ -42,7 +49,7 @@ Production smoke QA passes.
 |---|---|
 | `phase-0-ebook.html` | Approved complete 32-page ebook source |
 | `phase-0-ebook.css` | Approved A5 production design system |
-| `phase-0-ebook-production-draft.pdf` | Approved 32-page production-PDF candidate awaiting separate public replacement |
+| `phase-0-ebook-production-draft.pdf` | Approved 32-page production-PDF candidate staged for public replacement merge |
 | `README.md` | Source, artifact and gate status |
 
 ## Content Source
@@ -85,8 +92,8 @@ Size: 1,315,500 bytes
 
 Agent and project-owner review evidence is recorded in
 `docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Repository and Preview staging are
-complete; project-owner Preview delivery review, PR merge and post-merge
-Production smoke QA remain pending.
+complete; project-owner Preview delivery review is approved. PR merge and
+canonical-domain post-merge Production smoke QA remain pending.
 
 ## Artifact Protection
 

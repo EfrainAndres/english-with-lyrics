@@ -31,11 +31,21 @@ Preview-served SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8e
 Preview-served size: 1,315,500 bytes
 Preview PDF structural/link/QR validation: PASS
 Preview page/download/browser-open checks: PASS — HTTP 200; application/pdf
-Project-owner Preview delivery review: PENDING
+Project-owner Preview `/ebook-gratis` desktop review: PASS
+Project-owner Preview `/ebook-gratis` 390 px review: PASS
+Horizontal overflow at 390 px: NONE
+Project-owner Preview `/gracias` review: PASS
+Project-owner Preview PDF browser-open review: PASS
+Project-owner Preview PDF viewer page count: 32
+Stable download/open path: PASS — /downloads/guia-gratis-sing-pronounce-repeat.pdf
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
 Canonical Production downloadable PDF: UNCHANGED
-Production deployment: NOT STARTED
-Production smoke test for new artifact: PENDING
-Production replacement gate: BLOCKED pending owner Preview approval, merge and post-merge Production smoke QA
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
+Rollback plan: PREPARED — NOT EXECUTED
 ```
 
 ## 2. Entry gates
@@ -291,11 +301,13 @@ Repository public PDF replacement: STAGED
 Candidate-to-public SHA integrity: PASS
 Preview delivery QA: PASS
 Preview-served PDF: 32 A5 pages; 16 annotations; 5 of 5 embedded QR PASS
-Project-owner Preview delivery review: PENDING
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
 Canonical Production downloadable PDF: UNCHANGED
-Production replacement gate: BLOCKED pending owner Preview approval, merge and post-merge Production smoke QA
-Production deployment: NOT STARTED
-Production smoke test for new artifact: PENDING
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge Production smoke QA
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
 ```
 
 - [x] Agent structural, visual, text, metadata, link and QR QA complete.
@@ -303,7 +315,9 @@ Production smoke test for new artifact: PENDING
 - [x] Project-owner embedded-PDF QR review complete.
 - [x] Repository public PDF replacement staged with source-to-public integrity.
 - [x] Deployed Preview delivery QA complete.
-- [ ] Project-owner Preview delivery review complete.
+- [x] Project-owner Preview delivery review complete.
+- [x] Public replacement Preview gate passed.
+- [x] Public repository replacement approved for merge.
 - [ ] Production deployment and smoke QA for the new artifact complete.
 
 ## 13. Superseded 21-page export history
