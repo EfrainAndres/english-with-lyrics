@@ -2,7 +2,7 @@
 
 ## Estado
 
-- Estado: Politicas legales publicadas en Produccion en modo `approved`; revision canonica de Produccion por la responsable PENDIENTE.
+- Estado: Politicas legales publicadas y aceptadas en Produccion en modo `approved`; revision canonica de Produccion por la responsable APROBADA.
 - Fecha: 2026-08-03.
 - Produccion: Bloqueada hasta completar todos los gates de produccion.
 - Revision juridica profesional colombiana: PASS; cambios solicitados: NINGUNO.
@@ -24,19 +24,24 @@
 - `noindex, nofollow`: PASS.
 - Privacidad de metadata: PASS.
 - Regresion del ebook y de agradecimiento en Produccion: PASS.
+- Enlace inverso de `/tratamiento-de-datos` a `/privacidad`: NO PRESENTE — comportamiento preexistente aprobado; no es un bloqueador.
 - Rollback: PREPARADO / NO EJECUTADO.
-- Revision canonica de Produccion por la responsable: PENDIENTE.
-- Gate final de aceptacion de publicacion legal en Produccion: BLOQUEADO.
+- Revision canonica de Produccion por la responsable: PASS.
+- Gate final de aceptacion de publicacion legal en Produccion: PASS.
+- Politicas legales de Produccion: EN VIVO / ACEPTADAS.
+- PR #64: APROBADO PARA MERGE — NO FUSIONADO.
 - Decision de indexacion de Produccion: PENDIENTE, con `noindex, nofollow` conservado.
 - Enlace final de consentimiento y QA de operaciones de derechos: PENDIENTES.
 - Rollout controlado: PENDIENTE.
 
-La publicacion legal no activa el embudo comercial y no constituye certificacion
-ni cumplimiento garantizado. La captura de leads, el Email 1, la entrega de
-correo y la automatizacion siguen INACTIVOS; la descarga directa del PDF sigue
-ACTIVA. Ambas rutas conservan `noindex, nofollow` hasta una decision explicita de
-indexacion, y el gate final de aceptacion sigue bloqueado hasta la revision
-canonica de Produccion por la responsable.
+Superar el gate de aceptacion de publicacion legal no activa la captura de
+leads, la recoleccion de consentimiento, la entrega de correo, el Email 1, la
+automatizacion de MailerLite ni el embudo comercial. No constituye
+certificacion ni cumplimiento garantizado. La captura de leads, el Email 1, la
+entrega de correo y la automatizacion siguen INACTIVOS; la descarga directa del
+PDF sigue ACTIVA. Ambas rutas conservan `noindex, nofollow` hasta una decision
+explicita de indexacion, y el enlace final de consentimiento y el QA de
+operaciones de derechos siguen pendientes.
 
 Marcar un item solo con evidencia verificable. Completar borradores no equivale a aprobar la politica ni activar legalmente la recoleccion.
 
@@ -180,7 +185,7 @@ Estado: `[PENDING_PROVIDER_VERIFICATION]`. No enviar datos a MailerLite y Brevo 
 
 ## Antes de Produccion
 
-- [x] Publicacion final del contenido legal: revision profesional PASS; modo `approved` PASS en Preview protegido y en Produccion canonica; configuracion de entorno de Produccion PASS; revision canonica por la responsable y decision de indexacion PENDIENTES.
+- [x] Publicacion final del contenido legal: revision profesional PASS; modo `approved` PASS en Preview protegido y en Produccion canonica; configuracion de entorno de Produccion PASS; revision canonica por la responsable PASS; gate final de aceptacion PASS; decision de indexacion de Produccion PENDIENTE.
 - [x] Identidad del responsable publicada en Produccion mediante variables server-only; ningun valor se almacena en el repositorio.
 - [x] Variables `LEGAL_*` configuradas solo en el scope Production y verificadas por nombre y scope.
 - [x] Scopes Preview y Development sin cambios.

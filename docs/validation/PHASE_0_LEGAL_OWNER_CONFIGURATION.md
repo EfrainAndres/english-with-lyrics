@@ -75,10 +75,13 @@ Production approved-mode content: PASS
 Production noindex, nofollow: PASS
 Production metadata privacy: PASS
 Production ebook and thank-you regression: PASS
+Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
 Personal owner values committed to Git after publication: NO
 Rollback: PREPARED / NOT EXECUTED
-Project-owner canonical Production legal review: PENDING
-Final Production legal-publication acceptance gate: BLOCKED
+Project-owner canonical Production legal review: PASS
+Final Production legal-publication acceptance gate: PASS
+Production legal policies: LIVE / ACCEPTED
+PR #64: APPROVED FOR MERGE — NOT MERGED
 Production indexing decision: PENDING
 Production MailerLite group/form: INACTIVE
 Final Production consent linking: PENDING
@@ -275,15 +278,39 @@ canonical origin.
   restores the safe `pending` state — and depends on no stored secret. Rollback
   status: PREPARED / NOT EXECUTED.
 
+## Project-Owner Canonical Production Review
+
+The project owner completed a canonical Production review directly against
+`https://singpronuncerepeat.com`, after the agent-run smoke QA above passed.
+
+- `/privacidad` and `/tratamiento-de-datos` canonical Production review: PASS.
+- Desktop and 390 px visual review for both routes: PASS. Horizontal overflow: NONE.
+- Approved-mode content, structurally populated responsible-party sections,
+  completed professional and provider review statements: PASS.
+- Pending-review and draft notices: ABSENT. Certification or
+  guaranteed-compliance claims: ABSENT.
+- `noindex, nofollow` and metadata privacy: PASS.
+- Privacy mail link, telephone link, and the `/privacidad` to
+  `/tratamiento-de-datos` internal policy link: PASS.
+- The absence of a reverse `/tratamiento-de-datos` to `/privacidad` link is
+  approved as pre-existing, expected behavior — not a blocker, no source
+  change requested.
+- `/ebook-gratis` privacy link, mobile containment, and the `/gracias`
+  regression: PASS. No form was present, submitted, or activated.
+- Direct PDF delivery: ACTIVE and unchanged. Lead capture, Email 1, email
+  delivery and automation: INACTIVE.
+
+**Project-owner canonical Production legal review: PASS. Final Production
+legal-publication acceptance gate: PASS. Production legal policies: LIVE /
+ACCEPTED.**
+
 Publication does not activate the commercial funnel and does not constitute
 certification or guaranteed compliance. Both routes remain `noindex, nofollow`
-pending an explicit Production indexing decision, and the final acceptance gate
-remains blocked pending the project-owner canonical Production legal review.
+pending an explicit Production indexing decision. Final consent linking and
+rights-request provider operations QA remain pending.
 
 ## Remaining Gates
 
-- Complete the project-owner canonical Production legal review.
-- Record final Production legal-publication acceptance.
 - Test rights-request export, correction, unsubscribe, restriction and deletion operations.
 - Configure and validate final Production consent links.
 - Make an explicit Production indexing decision; retain `noindex, nofollow` until then.
