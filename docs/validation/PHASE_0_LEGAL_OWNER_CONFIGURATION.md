@@ -55,8 +55,14 @@ Professional Colombian legal review: PASS
 Provider contractual/DPA review: PASS
 Required substantive legal changes: NONE
 Application privacy-link preparation: PASS
-Owner approved-mode rendered review: PENDING
-Protected approved-mode Preview review: PENDING
+Owner approved-mode rendered review: PASS
+/privacidad desktop review: PASS
+/privacidad 390 px review: PASS
+/tratamiento-de-datos desktop review: PASS
+/tratamiento-de-datos 390 px review: PASS
+Protected approved-mode Preview review: PASS
+Approved-mode Preview readiness gate: PASS
+PR #63: APPROVED FOR MERGE — NOT MERGED
 Production environment configuration: PENDING
 Production legal publication: PENDING
 Production indexing decision: PENDING
@@ -166,16 +172,71 @@ Synthetic values and temporary visual evidence were not stored in the repository
 - The initial owner rendered-copy review requested changes.
 - The internal correction cycle is complete, and the internal structured review passed.
 - The owner re-reviewed and approved the rendered copy and confirmed publication authorization outside the repository.
-- The earlier owner approval applied to the reviewed draft rendering. The new
-  approved-mode rendering still requires owner review. Professional Colombian
+- The earlier owner approval applied to the reviewed draft rendering; that
+  record is historical and is retained above as such. Professional Colombian
   legal review and provider contractual/DPA review are complete and requested
   no changes.
+- The owner has now separately completed the approved-mode rendered review on
+  the branch-specific protected Preview deployment. See the approved-mode
+  closure below.
+
+## Approved-Mode Protected Preview Closure
+
+This closure covers the `approved` rendering only. The draft-mode closure above
+is historical and is not restated here as current configuration.
+
+### Deployment and routes
+
+- Branch-specific protected Preview deployment: READY.
+- `/privacidad`: HTTP 200.
+- `/tratamiento-de-datos`: HTTP 200.
+
+### Approved-mode content
+
+- Approved-mode rendering on both routes: PASS.
+- Completed professional Colombian legal review statement: PASS.
+- Completed provider contractual/DPA review statement: PASS.
+- Pending-review and draft notices in approved mode: ABSENT.
+- Unsupported certification or guaranteed-compliance claims: ABSENT.
+
+### Responsive and containment
+
+| Route | Desktop | 390 px | Horizontal overflow |
+|---|---|---|---|
+| `/privacidad` | PASS | PASS | NONE |
+| `/tratamiento-de-datos` | PASS | PASS | NONE |
+
+### Robots and metadata privacy
+
+- `noindex, nofollow`: PASS on both routes.
+- Personal responsible-party values in page metadata: NONE.
+- Personal responsible-party values in Open Graph metadata: NONE.
+- Native privacy `mailto:` link, native telephone link and internal policy
+  link: PASS.
+
+### Application-surface regression
+
+- `/ebook-gratis` privacy link: PASS; exact internal destination `/privacidad`.
+- `/ebook-gratis` behavior: unchanged; no application form added.
+- `/gracias` regression: PASS.
+- Forms submitted during review: NONE.
+
+### Production containment
+
+- Production environment configuration changed during owner review: NO.
+- Production legal publication: NOT STARTED.
+- Production consent linking: NOT STARTED.
+- Production continues to render the safe `pending` state.
+
+Passing this gate does not publish the legal policies in Production and does not
+activate the funnel. No ephemeral Preview URL, screenshot, responsible-party
+value, environment-variable value or provider identifier is stored in the
+repository.
 
 ## Remaining Gates
 
 - Test rights-request export, correction, unsubscribe, restriction and deletion operations.
 - Configure and validate final Production consent links.
-- Complete owner review and protected Preview QA of the `approved` rendering.
 - Configure the server-only Production legal values.
 - Approve a later Production legal publication and indexing phase explicitly.
 - Create and validate the Production MailerLite group/form with its required,

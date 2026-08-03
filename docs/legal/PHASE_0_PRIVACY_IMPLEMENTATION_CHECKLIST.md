@@ -2,17 +2,26 @@
 
 ## Estado
 
-- Estado: Fuente operativa; modo `approved` preparado para revision.
-- Fecha: 2026-07-12.
+- Estado: Fuente operativa; modo `approved` revisado y aprobado en Preview protegido.
+- Fecha: 2026-08-02.
 - Produccion: Bloqueada hasta completar todos los gates de produccion.
 - Revision juridica profesional colombiana: PASS; cambios solicitados: NINGUNO.
 - Revision contractual y de DPA del proveedor: PASS; cambios solicitados: NINGUNO.
 - Implementacion fuente del modo `approved`: COMPLETA.
 - QA local del modo `approved`: PASS.
 - Enlace de privacidad de la aplicacion: PREPARADO — `/privacidad`.
-- Revision renderizada del modo `approved` por la responsable: PENDIENTE.
-- Preview protegido del modo `approved`: PENDIENTE.
+- Revision renderizada del modo `approved` por la responsable: PASS.
+- Preview protegido del modo `approved`: PASS.
+- Gate de preparacion del Preview en modo `approved`: PASS.
+- PR #63: APROBADO PARA MERGE — NO FUSIONADO.
 - Publicacion legal, indexacion, consentimiento final y rollout de Produccion: PENDIENTES.
+
+Superar el gate del Preview en modo `approved` no publica las politicas legales
+en Produccion y no activa el embudo. Produccion sigue renderizando el estado
+seguro `pending`, ambas rutas conservan `noindex, nofollow`, y la configuracion
+de entorno, la publicacion legal, la decision de indexacion, el enlace final de
+consentimiento, el QA de operaciones de derechos y el rollout controlado siguen
+siendo decisiones posteriores y explicitas.
 
 Marcar un item solo con evidencia verificable. Completar borradores no equivale a aprobar la politica ni activar legalmente la recoleccion.
 
@@ -65,8 +74,22 @@ Marcar un item solo con evidencia verificable. Completar borradores no equivale 
 - [x] Flujo actual del ebook preservado.
 - [x] Rutas actuales de agradecimiento preservadas.
 - [x] Captura de leads en Produccion permanece desactivada.
+- [x] Revision renderizada del modo `approved` por la responsable completada.
+- [x] Preview protegido especifico de rama en modo `approved` desplegado y revisado.
+- [x] `/privacidad` revisada en escritorio y a 390 px sin desbordamiento horizontal.
+- [x] `/tratamiento-de-datos` revisada en escritorio y a 390 px sin desbordamiento horizontal.
+- [x] Avisos de borrador y de revision pendiente ausentes en modo `approved`.
+- [x] Afirmaciones de certificacion o cumplimiento garantizado ausentes.
+- [x] `noindex, nofollow` verificado en ambas rutas del Preview aprobado.
+- [x] Valores personales de la responsable ausentes en metadata y Open Graph.
+- [x] Enlace `mailto:` de privacidad, enlace telefonico y enlace interno de politica verificados.
+- [x] Enlace de privacidad de `/ebook-gratis` verificado con destino interno exacto `/privacidad`.
+- [x] `/ebook-gratis` sin cambios de comportamiento y sin formulario de aplicacion.
+- [x] Regresion de `/gracias` verificada.
+- [x] Ningun formulario fue enviado durante la revision.
+- [x] Configuracion de entorno de Produccion sin cambios durante la revision.
 
-Deployed Preview QA was completed manually without storing screenshots, deployment URLs, personal data, provider IDs, fake legal details, or private contact information in the repository.
+Deployed Preview QA was completed manually without storing screenshots, deployment URLs, personal data, provider IDs, fake legal details, or private contact information in the repository. La revision del modo `approved` en Preview protegido se realizo bajo las mismas condiciones.
 
 ## Debida diligencia de MailerLite
 
@@ -142,7 +165,7 @@ Estado: `[PENDING_PROVIDER_VERIFICATION]`. No enviar datos a MailerLite y Brevo 
 
 ## Antes de Produccion
 
-- [ ] Publicacion final del contenido legal: revision profesional PASS; revision renderizada del modo `approved` y Preview protegido PENDIENTES.
+- [ ] Publicacion final del contenido legal: revision profesional PASS; revision renderizada del modo `approved` PASS; Preview protegido del modo `approved` PASS; configuracion de entorno, publicacion e indexacion de Produccion PENDIENTES.
 - [ ] Identidad del responsable publicada.
 - [x] Canal de contacto operativo y probado: `privacidad@singpronuncerepeat.com`.
 - [ ] Politica de privacidad publica y enlazada.

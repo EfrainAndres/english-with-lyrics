@@ -86,7 +86,7 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Gmail Primary placement: PASS; Hotmail inbox placement: PASS — Other tab; consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS; organization-managed Outlook technical delivery: PASS; organization-managed Outlook inbox placement: FAILED CURRENT TENANT TEST; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
-| Public legal routes | Professional Colombian and provider contractual/DPA reviews: PASS; no substantive changes requested. Approved-mode source implementation, local pending/draft/approved QA and application privacy-link preparation: PASS. Owner approved-mode review, protected Preview approved-mode QA, Production environment configuration, publication, indexing decision, MailerLite consent linking and rights-operation QA: PENDING. Production lead capture, Email 1 and automation: INACTIVE. Direct PDF delivery: ACTIVE. |
+| Public legal routes | Professional Colombian and provider contractual/DPA reviews: PASS; no substantive changes requested. Approved-mode source implementation, local pending/draft/approved QA and application privacy-link preparation: PASS. Owner approved-mode rendered review: PASS — both routes on desktop and 390 px, no horizontal overflow. Protected approved-mode Preview review: PASS. Approved-mode Preview readiness gate: PASS. PR #63: APPROVED FOR MERGE — NOT MERGED. This does not publish the policies in Production or activate the funnel. Production environment configuration, publication, indexing decision, MailerLite consent linking and rights-request provider operations QA: PENDING. Production lead capture, Email 1 and automation: INACTIVE. Direct PDF delivery: ACTIVE. |
 
 ### Launch Steps
 
@@ -178,8 +178,11 @@ Current implementation note:
 - Professional Colombian legal review: COMPLETE; professional legal gate: PASS; no legal-content changes requested.
 - Provider contractual/DPA and legal-classification review: COMPLETE; provider gate: PASS; no provider-related changes requested.
 - Professional approval does not activate Production legal publication, consent capture, email, automation or lead capture.
-- Owner approved-mode rendered review: PENDING.
-- Protected approved-mode Preview review: PENDING.
+- Owner approved-mode rendered review: PASS. `/privacidad` and `/tratamiento-de-datos` each passed desktop and 390 px review; horizontal overflow: NONE; approved-mode content, robots and metadata privacy passed; `/ebook-gratis` privacy link and `/gracias` regression passed.
+- Protected approved-mode Preview review: PASS.
+- Approved-mode Preview readiness gate: PASS.
+- PR #63: APPROVED FOR MERGE — NOT MERGED.
+- Passing the approved-mode Preview gate does not publish the legal policies in Production and does not activate the funnel.
 - Production environment configuration and indexing decision: PENDING.
 - Rights-request provider operations QA: PENDING.
 - Preview redirect configuration is still pending in MailerLite.

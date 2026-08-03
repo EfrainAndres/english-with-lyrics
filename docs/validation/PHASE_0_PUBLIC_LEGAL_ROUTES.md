@@ -11,8 +11,14 @@ Required substantive legal changes: NONE
 Approved-mode source implementation: COMPLETE
 Approved-mode local QA: PASS
 Application privacy-link preparation: PASS
-Owner approved-mode rendered review: PENDING
-Protected approved-mode Preview review: PENDING
+Owner approved-mode rendered review: PASS
+/privacidad desktop review: PASS
+/privacidad 390 px review: PASS
+/tratamiento-de-datos desktop review: PASS
+/tratamiento-de-datos 390 px review: PASS
+Protected approved-mode Preview review: PASS
+Approved-mode Preview readiness gate: PASS
+PR #63: APPROVED FOR MERGE — NOT MERGED
 Stable custom Production origin: VERIFIED
 Professional privacy mailbox: VERIFIED
 Privacy contact operational: VERIFIED
@@ -99,6 +105,61 @@ remains hardcoded in both routes, so indexing stays a separate explicit decision
 - `noindex, nofollow`: PASS in all three modes.
 - Synthetic values and temporary renders: not stored in the repository.
 
+## Owner approved-mode protected Preview review
+
+Completed by the project owner on the branch-specific protected Preview deployment for this branch. This review supersedes nothing in the historical draft-mode records above; it is a separate review of the `approved` rendering.
+
+Deployment and routes:
+
+- Branch-specific protected Preview deployment: READY.
+- `/privacidad`: HTTP 200.
+- `/tratamiento-de-datos`: HTTP 200.
+
+Approved-mode content:
+
+- Approved-mode rendering on both routes: PASS.
+- Completed professional Colombian legal review statement: PASS.
+- Completed provider contractual/DPA review statement: PASS.
+- Pending-review and draft notices in approved mode: ABSENT.
+- Unsupported certification or guaranteed-compliance claims: ABSENT.
+
+Visual and containment review:
+
+| Route | Desktop | 390 px | Horizontal overflow |
+|---|---|---|---|
+| `/privacidad` | PASS | PASS | NONE |
+| `/tratamiento-de-datos` | PASS | PASS | NONE |
+
+Robots, metadata and links:
+
+- `noindex, nofollow`: PASS on both routes.
+- Personal responsible-party values in page metadata: NONE.
+- Personal responsible-party values in Open Graph metadata: NONE.
+- Native privacy `mailto:` link: PASS.
+- Native telephone link: PASS.
+- Internal policy link: PASS.
+
+Application-surface regression:
+
+- `/ebook-gratis` privacy link: PASS; exact internal destination `/privacidad`.
+- `/ebook-gratis` behavior: unchanged; no application form added.
+- `/gracias` regression: PASS.
+- Forms submitted during review: NONE.
+
+Production containment during the review:
+
+- Production environment configuration changed during owner review: NO.
+- Production legal publication: NOT STARTED.
+- Production consent linking: NOT STARTED.
+- Production lead capture: INACTIVE.
+- Production Email 1: INACTIVE.
+- Production automation: INACTIVE.
+- Direct PDF delivery: ACTIVE.
+
+**Passing this Preview gate does not publish the legal policies in Production and does not activate the funnel.** It approves the `approved`-mode rendering on a protected Preview only. Production still renders the safe `pending` state, both routes remain `noindex, nofollow`, and Production publication, indexing, consent linking, rights-operation QA and controlled rollout remain separate, explicit later decisions.
+
+No ephemeral Preview URL, screenshot, responsible-party value, environment-variable value or provider identifier from this review is stored in the repository.
+
 ## Privacy guarantees
 
 - No personal data added to source control.
@@ -134,8 +195,8 @@ remains hardcoded in both routes, so indexing stays a separate explicit decision
 - [x] Approved-mode source implementation completed.
 - [x] Pending, draft and approved local rendering matrix passed.
 - [x] Application privacy-link surface prepared at `/privacidad`.
-- [ ] Owner approved-mode rendered review.
-- [ ] Protected approved-mode Preview review.
+- [x] Owner approved-mode rendered review.
+- [x] Protected approved-mode Preview review.
 - [ ] Production environment configuration and publication.
 - [ ] Final MailerLite Production consent control and policy link.
 
@@ -154,8 +215,6 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 - Identification details when legally required.
 - City or jurisdiction information.
 - Effective date.
-- Owner approved-mode rendered review.
-- Protected approved-mode Preview review.
 - Production server-only environment configuration.
 - Production legal publication authorization and execution.
 - Explicit Production indexing decision.
@@ -177,16 +236,31 @@ Preview decision: PASS
 
 Approved-mode local readiness decision: PASS
 
+Owner approved-mode rendered review: PASS
+
+Protected approved-mode Preview review: PASS
+
+Approved-mode Preview readiness gate: PASS
+
+PR #63: APPROVED FOR MERGE — NOT MERGED
+
 Production legal-publication decision: PENDING
 
 Production consent decision: PENDING
 
 Reason:
-The three-state implementation now renders pending, draft and approved modes
+The three-state implementation renders pending, draft and approved modes
 safely with noindex/nofollow. Professional Colombian legal review and provider
 contractual/DPA review pass with no changes requested. Approved-mode local QA
-and application privacy-link preparation pass. Production remains blocked by
-owner rendered review, protected approved-mode Preview QA, server-only
-Production configuration, explicit publication and indexing decisions, final
-MailerLite consent linking, rights-operation QA and controlled rollout.
+and application privacy-link preparation pass. The project owner has now
+completed the approved-mode rendered review on the branch-specific protected
+Preview deployment: both routes pass on desktop and at 390 px with no
+horizontal overflow, approved-mode content is correct, and the `/ebook-gratis`
+privacy link and `/gracias` regression pass.
+
+Passing this gate approves the Preview rendering and the PR for merge. It does
+not publish the legal policies in Production and does not activate the funnel.
+Production remains blocked by server-only Production environment configuration,
+explicit publication and indexing decisions, final MailerLite consent linking,
+rights-request provider operations QA and controlled rollout.
 ```
