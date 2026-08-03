@@ -2,8 +2,8 @@
 
 ## Estado
 
-- Estado: Fuente operativa; modo `approved` revisado y aprobado en Preview protegido.
-- Fecha: 2026-08-02.
+- Estado: Politicas legales publicadas en Produccion en modo `approved`; revision canonica de Produccion por la responsable PENDIENTE.
+- Fecha: 2026-08-03.
 - Produccion: Bloqueada hasta completar todos los gates de produccion.
 - Revision juridica profesional colombiana: PASS; cambios solicitados: NINGUNO.
 - Revision contractual y de DPA del proveedor: PASS; cambios solicitados: NINGUNO.
@@ -13,15 +13,30 @@
 - Revision renderizada del modo `approved` por la responsable: PASS.
 - Preview protegido del modo `approved`: PASS.
 - Gate de preparacion del Preview en modo `approved`: PASS.
-- PR #63: APROBADO PARA MERGE — NO FUSIONADO.
-- Publicacion legal, indexacion, consentimiento final y rollout de Produccion: PENDIENTES.
+- Merge del PR #63: PASS en `a09623178b41901a13cb799336dc0ae994a83e3e`.
+- Configuracion de entorno legal de Produccion: PASS.
+- Despliegue de Produccion: PASS.
+- Smoke QA canonico de las rutas legales en Produccion: PASS.
+- Revision de agente en Produccion de `/privacidad`: PASS.
+- Revision de agente en Produccion de `/tratamiento-de-datos`: PASS.
+- Contencion en escritorio y a 390 px: PASS; desbordamiento horizontal: NINGUNO.
+- Contenido en modo `approved`: PASS.
+- `noindex, nofollow`: PASS.
+- Privacidad de metadata: PASS.
+- Regresion del ebook y de agradecimiento en Produccion: PASS.
+- Rollback: PREPARADO / NO EJECUTADO.
+- Revision canonica de Produccion por la responsable: PENDIENTE.
+- Gate final de aceptacion de publicacion legal en Produccion: BLOQUEADO.
+- Decision de indexacion de Produccion: PENDIENTE, con `noindex, nofollow` conservado.
+- Enlace final de consentimiento y QA de operaciones de derechos: PENDIENTES.
+- Rollout controlado: PENDIENTE.
 
-Superar el gate del Preview en modo `approved` no publica las politicas legales
-en Produccion y no activa el embudo. Produccion sigue renderizando el estado
-seguro `pending`, ambas rutas conservan `noindex, nofollow`, y la configuracion
-de entorno, la publicacion legal, la decision de indexacion, el enlace final de
-consentimiento, el QA de operaciones de derechos y el rollout controlado siguen
-siendo decisiones posteriores y explicitas.
+La publicacion legal no activa el embudo comercial y no constituye certificacion
+ni cumplimiento garantizado. La captura de leads, el Email 1, la entrega de
+correo y la automatizacion siguen INACTIVOS; la descarga directa del PDF sigue
+ACTIVA. Ambas rutas conservan `noindex, nofollow` hasta una decision explicita de
+indexacion, y el gate final de aceptacion sigue bloqueado hasta la revision
+canonica de Produccion por la responsable.
 
 Marcar un item solo con evidencia verificable. Completar borradores no equivale a aprobar la politica ni activar legalmente la recoleccion.
 
@@ -165,11 +180,14 @@ Estado: `[PENDING_PROVIDER_VERIFICATION]`. No enviar datos a MailerLite y Brevo 
 
 ## Antes de Produccion
 
-- [ ] Publicacion final del contenido legal: revision profesional PASS; revision renderizada del modo `approved` PASS; Preview protegido del modo `approved` PASS; configuracion de entorno, publicacion e indexacion de Produccion PENDIENTES.
-- [ ] Identidad del responsable publicada.
+- [x] Publicacion final del contenido legal: revision profesional PASS; modo `approved` PASS en Preview protegido y en Produccion canonica; configuracion de entorno de Produccion PASS; revision canonica por la responsable y decision de indexacion PENDIENTES.
+- [x] Identidad del responsable publicada en Produccion mediante variables server-only; ningun valor se almacena en el repositorio.
+- [x] Variables `LEGAL_*` configuradas solo en el scope Production y verificadas por nombre y scope.
+- [x] Scopes Preview y Development sin cambios.
+- [x] Rollback seguro preparado antes de modificar Produccion; PREPARADO / NO EJECUTADO.
 - [x] Canal de contacto operativo y probado: `privacidad@singpronuncerepeat.com`.
-- [ ] Politica de privacidad publica y enlazada.
-- [ ] Politica de tratamiento publica y enlazada cuando corresponda.
+- [x] Politica de privacidad publica y enlazada; enlace interno exacto `/privacidad` desde `/ebook-gratis`.
+- [x] Politica de tratamiento publica y enlazada desde `/privacidad`.
 - [ ] Contrato del proveedor aceptado por propietario autorizado.
 - [ ] Debida diligencia de MailerLite completada.
 - [x] Evaluacion profesional internacional y del proveedor completada; no se solicitaron cambios.
