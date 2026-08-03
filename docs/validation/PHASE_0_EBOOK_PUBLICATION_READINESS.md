@@ -9,25 +9,37 @@ Pronunciation gate: PASS
 Link/QR source gate: PASS
 Full design gate: PASS
 Production PDF gate: PASS
-Repository public replacement: STAGED
+PR #61 merge: PASS
+Public replacement merge commit: 0f3517478f2d1742d1292ab3f586e896789c9dfe
+Repository public replacement: LIVE
 Source-to-public integrity: PASS
 Preview delivery QA: PASS
 Project-owner Preview delivery review: PASS
 Public replacement Preview gate: PASS
-Public repository replacement: APPROVED FOR MERGE
-Production deployment: NEXT / UNBLOCKED — NOT STARTED
-Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
-Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
-Rollback plan: PREPARED — NOT EXECUTED
+Production deployment: PASS
+Production-served SHA integrity: PASS
+Candidate-to-public-to-Production identity: PASS
+Approved 16-annotation inventory: PASS
+Root-domain canonical annotation: PASS — https://singpronuncerepeat.com/ exactly once on page 32
+Active /ebook-gratis annotation: 0 — APPROVED / EXPECTED
+Post-merge Production smoke test: PASS
+Project-owner canonical Production review: PASS
+Production replacement gate: PASS
+Approved 32-page ebook public replacement: LIVE
+Mandatory improved-ebook deliverable: COMPLETE
+Stable public filename: UNCHANGED
+Rollback plan: VERIFIED / PREPARED — NOT EXECUTED
+Current direct PDF delivery: ACTIVE
 Production lead capture: INACTIVE
 Production Email 1: INACTIVE
 Production automation: INACTIVE
+Full commercial launch/funnel: NOT YET COMPLETE
 ```
 
-The approved 32-page artifact is now the active publication-readiness subject.
-PR merge and canonical-domain post-merge Production smoke QA remain mandatory.
-The earlier 21-page results below are preserved as historical context and do
-not establish readiness for the replacement.
+The approved 32-page artifact is the live direct-delivery subject. Repository,
+Preview and canonical Production smoke gates pass. The earlier 21-page results
+below are preserved as historical context and do not define the active
+32-page annotation contract.
 
 ## 1. Historical 21-page Review Status
 

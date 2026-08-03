@@ -15,33 +15,43 @@ Agent structural/visual/text/metadata/link/QR QA: PASS
 Project-owner PDF review: PASS
 Project-owner embedded-PDF QR review: PASS
 Production PDF gate: PASS
-Canonical Production downloadable PDF: UNCHANGED
-Repository public PDF: STAGED — IDENTICAL 32-PAGE ARTIFACT
+PR #61 merge: PASS
+Public replacement merge commit: 0f3517478f2d1742d1292ab3f586e896789c9dfe
+Canonical Production downloadable PDF: LIVE — APPROVED 32-PAGE ARTIFACT
+Repository public PDF: LIVE — IDENTICAL 32-PAGE ARTIFACT
 Source-to-public integrity: PASS
 Preview delivery QA: PASS
 Project-owner Preview delivery review: PASS
 Public replacement Preview gate: PASS
-Public repository replacement: APPROVED FOR MERGE
-Canonical Production delivery: UNCHANGED — SUPERSEDED 21-PAGE ARTIFACT
-Canonical Production SHA-256: fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08
-Production deployment: NEXT / UNBLOCKED — NOT STARTED
-Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
-Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
-Rollback plan: PREPARED — NOT EXECUTED
+Production deployment: PASS
+Production-served SHA integrity: PASS
+Candidate-to-public-to-Production identity: PASS
+Approved 16-annotation inventory: PASS
+Root-domain canonical annotation: PASS — https://singpronuncerepeat.com/ exactly once on page 32
+Active /ebook-gratis annotation: 0 — APPROVED / EXPECTED
+Post-merge Production smoke test: PASS
+Project-owner canonical Production review: PASS
+Production replacement gate: PASS
+Approved 32-page ebook public replacement: LIVE
+Mandatory improved-ebook deliverable: COMPLETE
+Stable public filename: UNCHANGED
+Rollback plan: VERIFIED / PREPARED — NOT EXECUTED
+Current direct PDF delivery: ACTIVE
 Production lead capture: INACTIVE
 Production Email 1: INACTIVE
 Production automation: INACTIVE
+Full commercial launch/funnel: NOT YET COMPLETE
 ```
 
 Preview URL:
 `https://english-with-lyrics-git-feat-p-6da762-efrain-vergara-s-projects.vercel.app`
 
-The approved candidate is staged at the stable repository public path and is
-byte-for-byte identical to that public file. The deployed Preview serves the
-staged 32-page replacement and passed route, download, browser-open, PDF,
-annotation and embedded-QR QA. The canonical Production domain continues to
-serve the earlier 21-page artifact until this PR is merged and post-merge
-Production smoke QA passes.
+The approved candidate, repository public file and canonical Production-served
+PDF are byte-for-byte identical. Canonical Production route, browser-open,
+structure, metadata, exact 16-annotation and embedded-QR smoke checks pass.
+The active 32-page artifact intentionally links once to the root domain on
+page 32 and contains no `/ebook-gratis` annotation. The latter belongs only to
+the explicitly historical 21-page artifact.
 
 ## Files
 
@@ -91,9 +101,9 @@ Size: 1,315,500 bytes
 ```
 
 Agent and project-owner review evidence is recorded in
-`docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Repository and Preview staging are
-complete; project-owner Preview delivery review is approved. PR merge and
-canonical-domain post-merge Production smoke QA remain pending.
+`docs/validation/PHASE_0_EBOOK_PDF_QA.md`. Repository, Preview and canonical
+Production delivery QA are complete. The approved 32-page replacement is live;
+the separate commercial funnel remains incomplete and inactive.
 
 ## Artifact Protection
 
@@ -110,5 +120,6 @@ The required public filename remains:
 guia-gratis-sing-pronounce-repeat.pdf
 ```
 
-Existing public links depend on that filename. The repository replacement is
-staged under that name; Production deployment is not part of this task.
+Existing public links depend on that filename. The approved replacement is
+live under that unchanged name. This smoke-record task does not alter or
+redeploy the artifact.

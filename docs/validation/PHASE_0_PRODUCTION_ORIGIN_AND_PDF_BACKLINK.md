@@ -9,18 +9,24 @@ artifact does not restore the historical `/ebook-gratis` annotation, and that
 approved difference is not a defect.
 
 ```text
-Repository public replacement: STAGED
+PR #61 merge: PASS
+Public replacement merge commit: 0f3517478f2d1742d1292ab3f586e896789c9dfe
+Repository public replacement: LIVE
 Preview delivery QA: PASS
 Project-owner Preview delivery review: PASS
 Public replacement Preview gate: PASS
-Public repository replacement: APPROVED FOR MERGE
-Root-domain canonical link: PASS
+Production deployment: PASS
+Production-served SHA integrity: PASS
+Candidate-to-public-to-Production identity: PASS
+Root-domain canonical link: PASS — https://singpronuncerepeat.com/ exactly once on page 32
+Active /ebook-gratis annotation: 0 — APPROVED / EXPECTED
 Approved annotations: 16 of 16 PASS
 Legacy Vercel destination: ABSENT
-Canonical Production artifact: UNCHANGED — SUPERSEDED 21-PAGE PDF
-Production deployment: NEXT / UNBLOCKED — NOT STARTED
-Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
-Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
+Canonical Production artifact: LIVE — APPROVED 32-PAGE PDF
+Post-merge Production smoke test: PASS
+Project-owner canonical Production review: PASS
+Production replacement gate: PASS
+Rollback plan: VERIFIED / PREPARED — NOT EXECUTED
 ```
 
 The `/ebook-gratis` backlink and seven-annotation results below are preserved

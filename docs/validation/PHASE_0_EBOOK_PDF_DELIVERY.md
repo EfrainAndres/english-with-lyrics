@@ -2,7 +2,7 @@
 
 ## Active 32-page replacement status
 
-The approved 32-page candidate is staged at the stable repository public path.
+The approved 32-page candidate is live at the stable canonical Production path.
 The delivery results below this active section describe the superseded 21-page
 artifact and remain as historical Production evidence.
 
@@ -32,13 +32,28 @@ Preview PDF browser-open review: PASS — viewer page count 32
 Stable download/open path: PASS — /downloads/guia-gratis-sing-pronounce-repeat.pdf
 Project-owner Preview delivery review: PASS
 Public replacement Preview gate: PASS
-Public repository replacement: APPROVED FOR MERGE
-Canonical Production artifact: UNCHANGED — SUPERSEDED 21-PAGE PDF
-Canonical Production SHA-256: fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08
-Production deployment: NEXT / UNBLOCKED — NOT STARTED
-Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
-Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
-Rollback plan: PREPARED — NOT EXECUTED
+PR #61 merge: PASS
+Public replacement merge commit: 0f3517478f2d1742d1292ab3f586e896789c9dfe
+Canonical Production artifact: LIVE — APPROVED 32-PAGE PDF
+Canonical Production SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Canonical Production size: 1,315,500 bytes
+Production routes: PASS — /ebook-gratis, /gracias and direct PDF returned HTTP 200
+Production PDF content type: PASS — application/pdf
+Candidate-to-public-to-Production identity: PASS
+Production PDF structure: PASS — 32 A5 portrait pages, 420.00 × 594.96 pt
+Production annotation inventory: PASS — exactly 16 approved HTTPS annotations
+Root-domain canonical annotation: PASS — https://singpronuncerepeat.com/ exactly once on page 32
+Active /ebook-gratis annotation: 0 — APPROVED / EXPECTED
+Production embedded-QR decode: PASS — 15 of 15
+Legacy Vercel destination: ABSENT
+Production deployment: PASS
+Post-merge Production smoke test: PASS
+Project-owner canonical Production review: PASS
+Production replacement gate: PASS
+Approved 32-page ebook public replacement: LIVE
+Stable public filename: UNCHANGED
+Rollback plan: VERIFIED / PREPARED — NOT EXECUTED
+Direct PDF delivery: ACTIVE
 ```
 
 ### Prepared rollback plan
@@ -49,8 +64,11 @@ Rollback plan: PREPARED — NOT EXECUTED
 4. Verify the stable public path, download and browser-open action.
 5. Keep the approved 32-page production candidate under `docs/design/production/`.
 
-The rollback is prepared but has not been executed. It does not restore the
-old waiting page.
+The rollback source and procedure were verified against parent baseline
+`06f2fb5da6a308a51cf0b393b736103af884b15a`; the prior public PDF SHA remains
+`fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08`.
+Reverting merge `0f3517478f2d1742d1292ab3f586e896789c9dfe` would restore the complete
+pre-replacement state. No rollback was executed or is currently required.
 
 ## Historical 21-page delivery status
 
