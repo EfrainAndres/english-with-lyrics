@@ -9,8 +9,8 @@ export const dataProcessingPath = "/tratamiento-de-datos";
 export const dataProcessingUrl = `${productionOrigin}${dataProcessingPath}`;
 export const ebookDownloadPath = "/downloads/guia-gratis-sing-pronounce-repeat.pdf";
 export const ebookDownloadFilename = "guia-gratis-sing-pronounce-repeat.pdf";
-export const ebookPageCount = 21;
-export const ebookFileSizeKB = 1292;
+export const ebookPageCount = 32;
+export const ebookFileSizeKB = 1285;
 
 const fallbackLinks = {
   ebook: "#ebook",

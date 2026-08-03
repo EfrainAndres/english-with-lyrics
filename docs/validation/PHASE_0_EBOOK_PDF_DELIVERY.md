@@ -1,6 +1,58 @@
 # Phase 0 Ebook PDF — Delivery QA
 
-## Delivery status
+## Active 32-page replacement status
+
+The approved 32-page candidate is staged at the stable repository public path.
+The delivery results below this active section describe the superseded 21-page
+artifact and remain as historical Production evidence.
+
+```text
+Candidate SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Repository public SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Stable filename preserved: PASS
+Repository replacement staged: YES
+Source-to-public integrity: PASS — BYTE-FOR-BYTE IDENTICAL
+Preview URL: https://english-with-lyrics-git-feat-p-6da762-efrain-vergara-s-projects.vercel.app
+Preview delivery QA: PASS
+Preview ebook page: PASS — HTTP 200; 32 pages and 1285 KB approx.
+Preview thank-you page: PASS — HTTP 200
+Preview PDF response: PASS — HTTP 200; application/pdf; stable Preview host and path
+Preview PDF browser-open: PASS
+Preview-served PDF SHA integrity: PASS
+Preview-served PDF SHA-256: 45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09
+Preview-served PDF size: 1,315,500 bytes
+Preview PDF structure: PASS — 32 A5 pages
+Preview annotation inventory: PASS — 16 of 16
+Preview embedded-QR decode: PASS — 5 of 5
+Project-owner Preview `/ebook-gratis` desktop review: PASS
+Project-owner Preview `/ebook-gratis` 390 px review: PASS
+Horizontal overflow at 390 px: NONE
+Project-owner Preview `/gracias` review: PASS
+Preview PDF browser-open review: PASS — viewer page count 32
+Stable download/open path: PASS — /downloads/guia-gratis-sing-pronounce-repeat.pdf
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
+Canonical Production artifact: UNCHANGED — SUPERSEDED 21-PAGE PDF
+Canonical Production SHA-256: fa9801f66f1cb6b0ea4e4ea300e05e808e893993cb4d0a5fdc87bde191fb3f08
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
+Rollback plan: PREPARED — NOT EXECUTED
+```
+
+### Prepared rollback plan
+
+1. Restore the prior public PDF from baseline `06f2fb5`.
+2. Restore the prior `ebookPageCount`, `ebookFileSizeKB` and lead-form page-count copy.
+3. Redeploy.
+4. Verify the stable public path, download and browser-open action.
+5. Keep the approved 32-page production candidate under `docs/design/production/`.
+
+The rollback is prepared but has not been executed. It does not restore the
+old waiting page.
+
+## Historical 21-page delivery status
 
 Current canonical-brand audit note:
 

@@ -1,6 +1,32 @@
 # Phase 0 — Production Origin and PDF Backlink Finalization
 
-## Summary
+## Current 32-page replacement behavior
+
+The approved 32-page replacement intentionally uses the current 16-annotation
+inventory. Its final canonical link is the root domain
+`https://singpronuncerepeat.com`, as approved during the 32-page PDF gate. The
+artifact does not restore the historical `/ebook-gratis` annotation, and that
+approved difference is not a defect.
+
+```text
+Repository public replacement: STAGED
+Preview delivery QA: PASS
+Project-owner Preview delivery review: PASS
+Public replacement Preview gate: PASS
+Public repository replacement: APPROVED FOR MERGE
+Root-domain canonical link: PASS
+Approved annotations: 16 of 16 PASS
+Legacy Vercel destination: ABSENT
+Canonical Production artifact: UNCHANGED — SUPERSEDED 21-PAGE PDF
+Production deployment: NEXT / UNBLOCKED — NOT STARTED
+Post-merge Production smoke test: NEXT / UNBLOCKED — NOT STARTED
+Production replacement gate: BLOCKED pending PR merge and canonical-domain post-merge smoke QA
+```
+
+The `/ebook-gratis` backlink and seven-annotation results below are preserved
+as historical evidence for the superseded 21-page direct-delivery artifact.
+
+## Historical 21-page summary
 
 The approved production origin `https://singpronuncerepeat.com` has been recorded. The `/ebook-gratis` backlink inside the ebook PDF has been restored as a clickable absolute HTTPS anchor. The source and public PDFs have been regenerated with 7 validated link annotations and corrected metadata.
 
