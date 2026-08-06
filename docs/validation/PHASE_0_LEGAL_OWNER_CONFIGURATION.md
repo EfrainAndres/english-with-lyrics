@@ -62,9 +62,26 @@ Owner approved-mode rendered review: PASS
 /tratamiento-de-datos 390 px review: PASS
 Protected approved-mode Preview review: PASS
 Approved-mode Preview readiness gate: PASS
-PR #63: APPROVED FOR MERGE — NOT MERGED
-Production environment configuration: PENDING
-Production legal publication: PENDING
+PR #63 merge: PASS at a09623178b41901a13cb799336dc0ae994a83e3e
+Production legal environment configuration: PASS
+Production deployment: PASS
+Canonical Production legal-route smoke QA: PASS
+/privacidad agent Production review: PASS
+/tratamiento-de-datos agent Production review: PASS
+Production desktop containment: PASS
+Production 390 px containment: PASS
+Production horizontal overflow: NONE
+Production approved-mode content: PASS
+Production noindex, nofollow: PASS
+Production metadata privacy: PASS
+Production ebook and thank-you regression: PASS
+Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
+Personal owner values committed to Git after publication: NO
+Rollback: PREPARED / NOT EXECUTED
+Project-owner canonical Production legal review: PASS
+Final Production legal-publication acceptance gate: PASS
+Production legal policies: LIVE / ACCEPTED
+PR #64: APPROVED FOR MERGE — NOT MERGED
 Production indexing decision: PENDING
 Production MailerLite group/form: INACTIVE
 Final Production consent linking: PENDING
@@ -233,12 +250,70 @@ activate the funnel. No ephemeral Preview URL, screenshot, responsible-party
 value, environment-variable value or provider identifier is stored in the
 repository.
 
+## Production Legal Configuration and Publication
+
+The server-only Production legal values are now configured and published on the
+canonical origin.
+
+- Ten `LEGAL_*` variables configured for the Production scope only and verified
+  present by name and scope: `LEGAL_PUBLICATION_STATUS`, `LEGAL_OWNER_TYPE`,
+  `LEGAL_OWNER_NAME`, `LEGAL_OWNER_ROLE`, `LEGAL_OWNER_DOMICILE`,
+  `LEGAL_CONTACT_ADDRESS`, `LEGAL_CONTACT_PHONE`, `LEGAL_PRIVACY_EMAIL`,
+  `LEGAL_EFFECTIVE_DATE`, `LEGAL_LAST_UPDATED_DATE`.
+- `LEGAL_PUBLICATION_STATUS` is `approved`; `LEGAL_OWNER_TYPE` retains the
+  reviewed supported value.
+- Values originate from the approved protected branch-specific Preview
+  configuration. They were never printed, logged, committed, written to a
+  repository file, or included in any report.
+- Preview and Development scopes: UNCHANGED. Unrelated Production variables:
+  UNCHANGED. Application source: UNCHANGED.
+- No source commit was created for the environment change, and no
+  indexing-source change was made.
+- Production deployment reached READY with target `production`, built from the
+  verified merged `main` commit
+  `a09623178b41901a13cb799336dc0ae994a83e3e` from a clean worktree, and the
+  canonical domain `https://singpronuncerepeat.com` is aliased to it.
+- Rollback was prepared securely before the change. Production previously held
+  no `LEGAL_*` variables, so rollback is deterministic — removing the ten names
+  restores the safe `pending` state — and depends on no stored secret. Rollback
+  status: PREPARED / NOT EXECUTED.
+
+## Project-Owner Canonical Production Review
+
+The project owner completed a canonical Production review directly against
+`https://singpronuncerepeat.com`, after the agent-run smoke QA above passed.
+
+- `/privacidad` and `/tratamiento-de-datos` canonical Production review: PASS.
+- Desktop and 390 px visual review for both routes: PASS. Horizontal overflow: NONE.
+- Approved-mode content, structurally populated responsible-party sections,
+  completed professional and provider review statements: PASS.
+- Pending-review and draft notices: ABSENT. Certification or
+  guaranteed-compliance claims: ABSENT.
+- `noindex, nofollow` and metadata privacy: PASS.
+- Privacy mail link, telephone link, and the `/privacidad` to
+  `/tratamiento-de-datos` internal policy link: PASS.
+- The absence of a reverse `/tratamiento-de-datos` to `/privacidad` link is
+  approved as pre-existing, expected behavior — not a blocker, no source
+  change requested.
+- `/ebook-gratis` privacy link, mobile containment, and the `/gracias`
+  regression: PASS. No form was present, submitted, or activated.
+- Direct PDF delivery: ACTIVE and unchanged. Lead capture, Email 1, email
+  delivery and automation: INACTIVE.
+
+**Project-owner canonical Production legal review: PASS. Final Production
+legal-publication acceptance gate: PASS. Production legal policies: LIVE /
+ACCEPTED.**
+
+Publication does not activate the commercial funnel and does not constitute
+certification or guaranteed compliance. Both routes remain `noindex, nofollow`
+pending an explicit Production indexing decision. Final consent linking and
+rights-request provider operations QA remain pending.
+
 ## Remaining Gates
 
 - Test rights-request export, correction, unsubscribe, restriction and deletion operations.
 - Configure and validate final Production consent links.
-- Configure the server-only Production legal values.
-- Approve a later Production legal publication and indexing phase explicitly.
+- Make an explicit Production indexing decision; retain `noindex, nofollow` until then.
 - Create and validate the Production MailerLite group/form with its required,
   unchecked consent control and final policy link.
 - Configure Production Email 1 and automation only after all applicable gates pass.

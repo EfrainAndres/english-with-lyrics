@@ -86,7 +86,7 @@ Sing Pronunce Repeat helps Spanish speakers learn English through songs using th
 | Baseline analytics | Code complete — `feat/phase-0-download-analytics`; `@vercel/analytics` installed; `<Analytics />` in root layout; dashboard activation and production verification pending; exact download-click events unavailable on Hobby plan |
 | Validation-metrics baseline | Complete — `review/phase-0-validation-metrics-baseline`; 20-section framework in `docs/validation/PHASE_0_VALIDATION_METRICS_BASELINE.md`; observation window not yet started; all metric values pending manual data entry |
 | Email provider setup | MailerLite domain authentication: COMPLETE; post-authentication mailbox regression: PASS; authenticated-sender Preview QA: PASS; Gmail Primary placement: PASS; Hotmail inbox placement: PASS — Other tab; consumer deliverability: PASS FOR CURRENT CONTROLLED TESTS; organization-managed Outlook technical delivery: PASS; organization-managed Outlook inbox placement: FAILED CURRENT TENANT TEST; Production Email 1: INACTIVE; Production automation: INACTIVE; Production email activation: BLOCKED |
-| Public legal routes | Professional Colombian and provider contractual/DPA reviews: PASS; no substantive changes requested. Approved-mode source implementation, local pending/draft/approved QA and application privacy-link preparation: PASS. Owner approved-mode rendered review: PASS — both routes on desktop and 390 px, no horizontal overflow. Protected approved-mode Preview review: PASS. Approved-mode Preview readiness gate: PASS. PR #63: APPROVED FOR MERGE — NOT MERGED. This does not publish the policies in Production or activate the funnel. Production environment configuration, publication, indexing decision, MailerLite consent linking and rights-request provider operations QA: PENDING. Production lead capture, Email 1 and automation: INACTIVE. Direct PDF delivery: ACTIVE. |
+| Public legal routes | Professional Colombian and provider contractual/DPA reviews: PASS; no substantive changes requested. Approved-mode source implementation, local pending/draft/approved QA and application privacy-link preparation: PASS. Owner approved-mode rendered review: PASS — both routes on desktop and 390 px, no horizontal overflow. Protected approved-mode Preview review: PASS. Approved-mode Preview readiness gate: PASS. PR #63 merge: PASS at `a09623178b41901a13cb799336dc0ae994a83e3e`. Production legal environment configuration, Production deployment and canonical Production legal-route smoke QA: PASS — approved-mode content, `noindex, nofollow`, metadata privacy, desktop and 390 px containment and the ebook/thank-you regression all PASS; horizontal overflow NONE. Project-owner canonical Production legal review: PASS, both routes desktop and 390 px against the live origin. Final Production legal-publication acceptance gate: PASS. Production legal policies: LIVE / ACCEPTED. PR #64: APPROVED FOR MERGE — NOT MERGED. Rollback: PREPARED / NOT EXECUTED. Publication does not activate the funnel and is not certification or guaranteed compliance. Production indexing decision, MailerLite consent linking and rights-request provider operations QA: PENDING. Production lead capture, Email 1, email delivery and automation: INACTIVE. Direct PDF delivery: ACTIVE. |
 
 ### Launch Steps
 
@@ -181,9 +181,17 @@ Current implementation note:
 - Owner approved-mode rendered review: PASS. `/privacidad` and `/tratamiento-de-datos` each passed desktop and 390 px review; horizontal overflow: NONE; approved-mode content, robots and metadata privacy passed; `/ebook-gratis` privacy link and `/gracias` regression passed.
 - Protected approved-mode Preview review: PASS.
 - Approved-mode Preview readiness gate: PASS.
-- PR #63: APPROVED FOR MERGE — NOT MERGED.
-- Passing the approved-mode Preview gate does not publish the legal policies in Production and does not activate the funnel.
-- Production environment configuration and indexing decision: PENDING.
+- PR #63 merge: PASS at `a09623178b41901a13cb799336dc0ae994a83e3e`.
+- Production legal environment configuration: PASS — ten `LEGAL_*` variables set for the Production scope only, verified by name and scope, with no values stored in the repository.
+- Production deployment: PASS — READY on the canonical origin `https://singpronuncerepeat.com`.
+- Canonical Production legal-route smoke QA: PASS — `/privacidad` and `/tratamiento-de-datos` both HTTP 200 in approved mode; responsible-party section structurally populated; completed professional and provider review statements present; draft and pending notices absent; certification or guaranteed-compliance claims absent; desktop and 390 px containment PASS with no horizontal overflow; `noindex, nofollow` retained; personal values absent from metadata and Open Graph.
+- Production ebook and thank-you regression: PASS — `/ebook-gratis` privacy link resolves to `/privacidad`, application form absent, direct PDF delivery active with the served PDF hash unchanged.
+- Project-owner canonical Production legal review: PASS. Both routes passed desktop and 390 px visual review directly against the canonical Production origin, with no horizontal overflow, approved-mode content, and metadata privacy passing. The pre-existing absence of a reverse `/tratamiento-de-datos` to `/privacidad` link is approved as expected behavior, not a blocker.
+- Final Production legal-publication acceptance gate: PASS. Production legal policies: LIVE / ACCEPTED.
+- PR #64: APPROVED FOR MERGE — NOT MERGED.
+- Rollback: PREPARED / NOT EXECUTED.
+- Legal publication does not activate the funnel and does not constitute certification or guaranteed compliance.
+- Production indexing decision: PENDING, with `noindex, nofollow` retained.
 - Rights-request provider operations QA: PENDING.
 - Preview redirect configuration is still pending in MailerLite.
 - Email 1 content is documented; authenticated-sender Preview regression has passed.
@@ -192,14 +200,14 @@ Current implementation note:
 - Production direct delivery remains active.
 - Production form activation remains blocked.
 - Production email-delivery claims remain blocked.
-- Production legal publication approval: PENDING.
+- Production legal publication: LIVE / ACCEPTED; project-owner canonical Production review PASS.
 - Production Email 1: INACTIVE.
 - Production automation: INACTIVE.
 - Production email delivery: INACTIVE.
 - Production lead capture: INACTIVE.
 - Mandatory improved-ebook deliverable: COMPLETE.
 - Production PDF replacement: LIVE / PASS.
-- Final Production consent linking, Production environment configuration, Production legal publication, corporate deliverability limitations, Production MailerLite group/form, Production Email 1, Production automation, and controlled rollout approval remain blocking.
+- Final Production consent linking, corporate deliverability limitations, Production MailerLite group/form, Production Email 1, Production automation, and controlled rollout approval remain blocking.
 
 ## Phase 1 Launch: Paid MVP
 
