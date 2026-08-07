@@ -8,6 +8,8 @@
 
 > Production consent staging: **STAGED / INACTIVE from the website perspective** for exactly one new isolated Production group and one matching provider-hosted form. The group has zero subscribers; single opt-in is configured; the form is unlinked from the public website and has no campaign, automation, email, submission, Vercel, or deployment side effect. MailerLite has no native unpublish/deactivate state for this hosted form, so possible reachability through its undistributed direct provider URL is an owner-accepted staging limitation. This does not activate Production consent linking or collection.
 
+> Production welcome staging: **STAGED / INACTIVE** for exactly one Email 1 draft attached to exactly one matching inactive workflow. The workflow uses only the original empty staged Production group/form path and has zero enrolled or completed contacts; no subscriber, audience, form submission, test send, campaign send, public-site link, Vercel value or deployment was created. Lead capture and email delivery remain inactive.
+
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
 ## 1. Account
@@ -144,11 +146,17 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 9. Production automation
 
-- [ ] Manual MailerLite dashboard action: `SPR - Phase 0 - Ebook Delivery and Nurture` drafted only when allowed.
-- [ ] Manual MailerLite dashboard action: trigger set to `SPR - Production - Ebook Leads`.
-- [ ] Future implementation: Email 1 links to `/gracias`, not a PDF attachment.
+- [x] Manual MailerLite dashboard action: exactly one isolated Production workflow created within the staging authorization.
+- [x] Manual MailerLite dashboard action: trigger uses only the original empty staged Production group/form path.
+- [x] Manual MailerLite dashboard action: exactly one Email 1 draft is attached only to the new Production workflow.
+- [x] Manual MailerLite dashboard action: the attached draft uses the approved Spanish subject, preheader, body, Production-scoped CTA and text-compatible fallback.
+- [x] Manual MailerLite dashboard action: provider privacy/footer and unsubscribe treatment retained; no PDF attachment added and direct PDF access remains independent.
+- [x] Manual MailerLite dashboard action: an existing verified sender was reused without modifying a sender identity.
+- [x] Provider state: workflow STAGED / INACTIVE with zero enrolled or completed contacts and zero sent emails.
+- [x] Isolation check: no subscriber, group assignment, audience, form submission, test send, campaign send or connection to an existing resource occurred.
 - [ ] Repository preparation: sequence timing documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
-- [ ] Future implementation: Production automation remains inactive until rollout approval.
+- [x] Staging control: Production automation remains inactive until separate rollout approval.
+- [x] Rollback prepared: delete only the new attached Email 1 draft and the new inactive workflow; do not alter the already staged group/form or any existing resource.
 
 ## 9A. Isolated Preview welcome-email draft
 

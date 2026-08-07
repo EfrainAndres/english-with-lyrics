@@ -28,6 +28,10 @@ Production provider-hosted consent staging: STAGED / INACTIVE from the website p
 
 The staged form has double opt-in disabled and single opt-in persisted after reload. It has no campaign, automation, email side effect, subscriber, submission, public-site link, Vercel configuration, or Production deployment. MailerLite offers no native unpublish/deactivate state for this hosted form; possible reachability through its undistributed direct provider URL is an owner-accepted staging limitation only and does not authorize public linking. The known MailerLite-native missing-consent feedback limitation remains tracked and is not fixed, certified, or approved for public activation. Final Production consent linking remains PENDING; the Production group/form is STAGED / INACTIVE from the website perspective; lead capture, Email 1 delivery and automation remain INACTIVE; controlled rollout and indexing remain PENDING; direct PDF delivery remains ACTIVE. Rollback is prepared and limited to deleting only the new empty form and group.
 
+Production Email 1 and automation staging: STAGED / INACTIVE. Exactly one new Email 1 draft is attached to exactly one matching inactive Production workflow. The workflow uses only the original empty staged Production group/form path, and its in-progress and completed contact counts remain zero. The approved Spanish subject, preheader, body, Production-scoped CTA, text-compatible fallback, provider privacy/footer and unsubscribe treatment are configured with an existing verified sender that was not changed.
+
+No subscriber, group assignment, segment, campaign audience, form submission, test send, campaign send, Production send, public-site link, Vercel value or deployment was created. Provider sent and outbox counts remain zero, and no additional regular campaign draft was added. Existing Preview and Production resources were not changed. The known missing-consent feedback limitation and undistributed direct-provider-reachability limitation remain tracked and do not authorize public activation. Final Production consent linking, controlled rollout and indexing remain PENDING; lead capture and email delivery remain INACTIVE; direct PDF delivery remains ACTIVE. Rollback is limited to deleting only the new attached Email 1 draft and the new inactive workflow, without altering the staged group/form or any existing resource.
+
 Preview Email 1 configuration staging: PASS. Exactly one clearly identified regular Preview-only draft was created with the approved Spanish subject, preheader, body, Preview CTA, text-compatible fallback and draft-specific provider footer. It reuses an existing sender on the authenticated domain without changing sender configuration. Recipients remain empty, the draft is unsent and unpublished, sent and outbox counts remain zero for this staging, and no group, segment, subscriber or automation is connected. No campaign, test, Preview or transactional email was sent, no form was submitted, and no existing Preview, Production or Development resource was changed.
 
 The accepted MailerLite-native consent-feedback limitation remains tracked only for Preview staging. This standalone draft does not activate Email 1, delivery, lead capture, automation, Production or controlled rollout. Rollback is prepared and limited to deleting only this isolated draft.
@@ -97,8 +101,8 @@ Production readiness: NO-GO FOR PRODUCTION
 | Corporate Outlook limitation | OPEN |
 | Broad Production deliverability approval | NO-GO |
 | Production inbox placement | PENDING |
-| Production Email 1 | INACTIVE |
-| Production automation | INACTIVE |
+| Production Email 1 | STAGED / INACTIVE |
+| Production automation | STAGED / INACTIVE |
 | Production email delivery | INACTIVE |
 
 The custom web domain is ready for the public web surface of Sing Pronunce Repeat. The professional privacy mailbox was manually verified through controlled inbound and outbound delivery tests. No message content, personal test addresses, passwords, screenshots, provider IDs, DNS tokens, or private account information are stored in the repository.
@@ -222,8 +226,8 @@ Still requiring account-level verification:
 | Post-authentication Hostinger outbound regression | PASS |
 | Authenticated-sender Preview Email 1 regression | PASS |
 | Production inbox-placement QA | PENDING |
-| Production Email 1 | INACTIVE |
-| Production automation | INACTIVE |
+| Production Email 1 | STAGED / INACTIVE |
+| Production automation | STAGED / INACTIVE |
 | Production configuration | INACTIVE |
 | Preview secrets | Not required for the current provider-hosted-form direction |
 | No Production contact creation | VERIFIED |

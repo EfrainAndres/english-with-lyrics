@@ -10,6 +10,8 @@
 
 > Production consent staging: exactly one new isolated MailerLite Production group and one matching provider-hosted consent form are **STAGED / INACTIVE from the website perspective** with zero subscribers, single opt-in configured, no public-site or Vercel link, and no campaign, automation, email, submission, or Production deployment side effect. MailerLite offers no native unpublish/deactivate state for this hosted form, so direct provider-URL reachability is an owner-accepted staging limitation; the URL is not distributed. The known missing-consent feedback limitation remains a tracked pre-activation follow-up. Production consent linking remains **PENDING** and direct PDF delivery remains **ACTIVE**.
 
+> Production welcome staging: exactly one isolated Email 1 draft is attached to exactly one matching Production workflow, and both are **STAGED / INACTIVE**. The workflow uses only the original empty staged Production group/form path, has zero enrolled or completed contacts, and has not sent any email. The approved Spanish content, preheader, Production-scoped CTA, text-compatible fallback, privacy footer and unsubscribe treatment are configured with an existing verified sender that was not changed. No subscriber, audience, form submission, public-site link, Vercel value, deployment, test send or campaign send was created. Production consent linking, controlled rollout and indexing remain **PENDING**; lead capture and email delivery remain **INACTIVE**; direct PDF delivery remains **ACTIVE**.
+
 ## Backlog Rules
 
 - Keep tasks small enough for a single branch when possible.
@@ -172,7 +174,7 @@ Priority: High.
 - [x] Create exactly one isolated Production consent-staging group in MailerLite. Result: STAGED / INACTIVE / ZERO SUBSCRIBERS.
 - [x] Create exactly one matching provider-hosted Production consent form. Result: STAGED / INACTIVE from the website perspective / UNLINKED; approved consent copy, `/privacidad` destination, and single opt-in configured without submission or activation.
 - [x] Record the owner-accepted staging limitation that MailerLite has no native unpublish/deactivate state and the undistributed direct provider URL may remain reachable; this does not authorize public linking or activation.
-- [ ] Create the Production automation in MailerLite.
+- [x] Create exactly one isolated Production automation in MailerLite. Result: STAGED / INACTIVE / ZERO ENROLLED OR COMPLETED CONTACTS / ZERO EMAILS SENT; trigger limited to the original empty staged Production group/form path.
 - [x] Add the runtime environment resolver.
 - [x] Add the safe Preview-form resolver.
 - [x] Add the reusable lead-capture component.
@@ -226,7 +228,7 @@ Priority: High.
 - [x] Validate Production browser-open action for the public PDF.
 - [x] Validate canonical in-PDF backlink to `https://singpronuncerepeat.com/ebook-gratis`.
 - [x] Complete Production PDF smoke test for the regenerated 21-page ebook.
-- [ ] Configure Production Email 1.
+- [x] Configure exactly one Production Email 1 draft attached only to the new inactive workflow. Result: STAGED / INACTIVE / UNSENT; approved Spanish content, preheader, Production-scoped CTA, text-compatible fallback, privacy footer and unsubscribe treatment retained.
 - [ ] Activate the Production sequence only after approval.
 - [ ] Document inbox-placement results.
 - [ ] Restructure landing conversion hierarchy around the new lead form.

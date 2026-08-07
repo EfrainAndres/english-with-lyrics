@@ -65,9 +65,11 @@ Production indexing decision: PENDING
 Production MailerLite group/form: STAGED / INACTIVE
 Final Production consent linking: PENDING
 Rights-request provider operations QA: PASS
-Production Email 1: INACTIVE
+Production Email 1: STAGED / INACTIVE
 Production email delivery: INACTIVE
-Production automation: INACTIVE
+Production automation: STAGED / INACTIVE
+Production automation contacts in progress/completed: ZERO / ZERO
+Production welcome email test/campaign/Production sends: ZERO / ZERO / ZERO
 Production lead capture: INACTIVE
 Controlled rollout: PENDING
 Direct PDF delivery: ACTIVE
@@ -125,6 +127,22 @@ activation. Final Production consent linking, lead capture, Email 1, delivery,
 automation, controlled rollout and indexing retain their pending or inactive
 states; direct PDF delivery remains active. Rollback is prepared and limited to
 deleting only the new empty Production form and group.
+
+Exactly one Production Email 1 draft is now staged inside exactly one matching
+inactive workflow. The workflow uses only the original empty staged Production
+group/form path and has zero contacts in progress or completed. The draft
+retains the approved Spanish subject, preheader, body, Production-scoped CTA,
+text-compatible fallback, privacy/footer and unsubscribe treatment with an
+existing verified sender that was not changed. No subscriber, audience, form
+submission, test send, campaign send, Production send, public-site link,
+Vercel value or deployment was created, and existing Preview and Production
+resources were not changed. This inactive staging does not authorize final
+consent linking, lead capture, email delivery, rollout or indexing. Direct PDF
+delivery remains active and independent.
+
+Rollback is prepared and limited to deleting only the new attached Email 1
+draft and the new inactive workflow; the already staged group/form and all
+existing resources remain outside that rollback.
 
 ## Historical draft audit summary
 
