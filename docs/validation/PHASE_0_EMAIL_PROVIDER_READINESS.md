@@ -14,7 +14,23 @@ Inert website preparation for provider-hosted consent linking is complete: Produ
 
 Implementation review approval: PASS. The provider-hosted handoff preparation is approved for merge without activating Production consent linking, collection, Email 1, delivery, automation, rollout or indexing.
 
+Preview provider-hosted consent staging: PASS. A new isolated Preview-only group and provider-hosted form were created without altering existing Preview resources. The form requires email, keeps name optional, uses the approved consent copy unchanged in an unchecked affirmative control, and links to the exact `/privacidad` destination. Its source/form identity and copy version support the provider evidence record; MailerLite remains responsible for capture time/channel, subscriber status and unsubscribe/suppression state.
+
+The form has no linked campaign, automation or email side effect, and double opt-in is disabled. No form was submitted, subscriber created, lead captured or email sent. The existing form-URL mechanism is configured only for Preview and restricted to the staging branch; Production and Development configuration were unchanged.
+
+The branch Preview deployment is READY. `/ebook-gratis` renders only the external provider handoff and adjacent privacy notice, keeps direct PDF delivery independent, contains no website-native email/name inputs or submit endpoint, and has no horizontal overflow at desktop or 390 px. The canonical Production route remains unchanged with no lead-capture surface.
+
+Subsequent controlled functional QA of the isolated provider-hosted form is PASS for consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup with no remaining test subscriber, Production lead-capture absence, and independent direct PDF delivery. The provider-hosted checkbox does not expose a visible or programmatically associated missing-consent error message. The project owner accepts this known MailerLite-native limitation for the current Preview staging path only; it remains tracked and is not classified as fixed, fully accessible, legally compliant, certified, or irrelevant. Provider-failure simulation remains UNVERIFIED because no safe provider-native simulation was available.
+
+This Preview staging is not Production activation. Final Production consent linking remains PENDING; Production group/form, lead capture, Email 1, delivery and automation remain INACTIVE; controlled rollout and indexing remain PENDING; direct PDF delivery remains ACTIVE.
+
 Provider readiness: READY FOR CONTROLLED PREVIEW
+
+Provider-hosted form functional consent blocking: PASS
+
+Missing-consent feedback accessibility: KNOWN PROVIDER LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED
+
+Provider-failure simulation: UNVERIFIED
 
 Preview email delivery: VERIFIED
 
@@ -150,6 +166,14 @@ Still requiring account-level verification:
 | Preview form | VERIFIED |
 | Preview group assignment | VERIFIED |
 | Required consent | VERIFIED |
+| Provider-hosted functional consent blocking | PASS |
+| Invalid-email validation | PASS |
+| Single affirmative submission | PASS |
+| Provider-hosted duplicate-safe behavior | PASS |
+| Provider-hosted email/automation side effects | NONE |
+| GDPR Forget cleanup and post-cleanup absence | PASS |
+| Missing-consent feedback accessibility | KNOWN PROVIDER LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED |
+| Provider-failure simulation | UNVERIFIED |
 | Single opt-in | VERIFIED |
 | Duplicate handling | VERIFIED |
 | Preview automation | VERIFIED |
@@ -277,4 +301,4 @@ Preview decision: READY FOR CONTROLLED PREVIEW
 Production decision: NO-GO FOR PRODUCTION
 
 Reason:
-The provider-hosted Preview form, isolated group, single opt-in, explicit consent, duplicate handling, original real automation Email 1, authenticated-sender Email 1 regression, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, subscriber-specific unsubscribe flow, post-authentication Hostinger mailbox regression, and MailerLite domain authentication were verified. Production remains blocked by legal, privacy, footer approval, public-route, deliverability, rights-operation QA, and end-to-end Production requirements.
+The provider-hosted Preview form, isolated group, functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, single opt-in, original real automation Email 1, authenticated-sender Email 1 regression, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, subscriber-specific unsubscribe flow, post-authentication Hostinger mailbox regression, and MailerLite domain authentication were verified. The MailerLite-native missing-consent feedback limitation is owner-accepted for the current Preview staging path only and remains tracked; provider-failure simulation remains UNVERIFIED. Production consent linking, group/form, lead capture, Email 1, delivery, automation, controlled rollout, and indexing remain pending or inactive, direct PDF delivery remains active, and this record does not authorize Production activation.
