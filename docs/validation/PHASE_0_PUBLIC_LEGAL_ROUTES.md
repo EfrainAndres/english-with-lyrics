@@ -1,5 +1,7 @@
 # Phase 0 Public Legal Routes
 
+> Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact; no Production resource or commercial-funnel capability was activated. Production consent linking, indexing, and controlled rollout remain pending; direct PDF delivery remains active.
+
 ## Status
 
 ```text

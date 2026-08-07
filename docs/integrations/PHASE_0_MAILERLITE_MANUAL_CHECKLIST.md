@@ -1,5 +1,7 @@
 # Phase 0 MailerLite Manual Checklist
 
+> Rights-request provider operations QA: **PASS** for one isolated manual Preview-only test contact. It had no group assignment and zero emails sent. Provider consultation, transient JSON export without retention, non-personal correction, manual unsubscribe, GDPR Forget (provider deletion within 30 days), and a subsequent zero-result search were verified. No public form, campaign, email, automation, lead-capture flow, or Production resource was activated or changed.
+
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
 ## 1. Account

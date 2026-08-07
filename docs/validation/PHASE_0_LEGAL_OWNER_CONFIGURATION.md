@@ -1,5 +1,7 @@
 # Phase 0 Legal-Owner Configuration Validation
 
+> Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact. Provider consultation, transient JSON export without retention, non-personal correction, manual unsubscribe, GDPR Forget and post-operation absence were verified without activating Production resources.
+
 ## Current Status
 
 ```text

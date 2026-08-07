@@ -1,5 +1,7 @@
 # English with Lyrics Roadmap
 
+> Phase 0 update: MailerLite rights-request provider operations QA is **PASS** for one isolated Preview-only manual test contact. This does not activate any Production collection, consent, email, automation, or rollout capability.
+
 ## Strategy
 
 Build the smallest web-first path that proves people want to learn English with the Sing Pronunce Repeat song-based method, then expand only after evidence supports it.
