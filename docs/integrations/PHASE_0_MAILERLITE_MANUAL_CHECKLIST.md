@@ -116,11 +116,13 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 ## 10. Consent
 
-- [ ] Repository preparation: approved checkbox copy documented.
+- [x] Repository preparation: approved checkbox copy documented unchanged and surfaced beside the inert provider-hosted Preview handoff.
 - [x] Manual MailerLite dashboard action: consent checkbox required.
 - [x] Manual MailerLite dashboard action: consent checkbox unchecked by default.
 - [ ] Manual MailerLite dashboard action: form version or equivalent evidence captured when possible.
 - [x] Manual MailerLite dashboard action: single opt-in remains enabled for the verified Preview workflow.
+- [x] Repository preparation: provider-hosted MailerLite form selected as the sole future consent system of record; the Next.js app has no personal-data form or submit path.
+- [ ] Owner approval: configure and activate any Production provider form, group, consent evidence fields or delivery flow.
 
 ## 11. Privacy
 

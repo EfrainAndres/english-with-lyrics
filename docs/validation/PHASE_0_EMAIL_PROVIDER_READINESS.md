@@ -10,6 +10,8 @@
 
 Production is not ready. This status means the isolated provider-hosted Preview workflow has been verified manually without activating any public-site integration or Production identifiers.
 
+Inert website preparation for provider-hosted consent linking is complete: Production still renders no lead-capture surface, and an explicitly configured non-Production handoff displays the unchanged approved copy and `/privacidad` link without collecting or submitting personal data. MailerLite remains the sole future system of record for its required unchecked checkbox, validation, consent version/source/timestamp evidence, subscriber state and suppression state. Provider configuration and Production activation require separate owner approval.
+
 Provider readiness: READY FOR CONTROLLED PREVIEW
 
 Preview email delivery: VERIFIED
