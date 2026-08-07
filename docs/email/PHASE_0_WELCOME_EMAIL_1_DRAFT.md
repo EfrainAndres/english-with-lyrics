@@ -184,3 +184,32 @@ Producción:
 
 La configuración del proveedor y cada envío de Preview o Producción requieren
 aprobación separada de la responsable.
+
+## Estado de staging en MailerLite Preview
+
+- Preparación de configuración: PASS.
+- Se creó exactamente un borrador regular, aislado y claramente identificado
+  para Preview.
+- El borrador reutiliza un remitente existente del dominio autenticado; no se
+  creó ni modificó ninguna identidad de remitente.
+- Destinatarios: CERO. No se seleccionó grupo, segmento ni contacto.
+- Estado de envío: DRAFT / UNSENT. Enviados y bandeja de salida permanecen en
+  cero para este staging.
+- Conexión con automatización: NINGUNA. Las automatizaciones existentes no se
+  modificaron.
+- El asunto de prueba, preencabezado, cuerpo, CTA de Preview y contenido
+  compatible con texto sin formato corresponden a este documento.
+- El pie específico del borrador conserva el mecanismo funcional de cancelación
+  del proveedor y enlaza la política de privacidad de Preview.
+- No se envió campaña, correo de prueba, correo de Preview ni mensaje
+  transaccional; tampoco se creó suscriptor ni se envió formulario.
+- La limitación conocida de feedback de consentimiento de MailerLite permanece
+  como seguimiento aceptado solo para staging de Preview y no autoriza
+  Producción.
+
+Este staging no activa Email 1, entrega, captura de leads, automatización ni
+despliegue controlado. Un futuro envío de prueba requiere autorización separada.
+
+Rollback preparado: eliminar únicamente este borrador aislado y volver a
+confirmar cero borradores nuevos, cero destinatarios y cero envíos, sin tocar
+ningún formulario, grupo, automatización, remitente ni recurso de Producción.

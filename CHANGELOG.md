@@ -6,6 +6,8 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Added
 
+- [2026-08-07] Staged exactly one isolated, clearly named MailerLite Preview welcome Email 1 as an unpublished and unsent regular draft using the approved Spanish content, Preview CTA and provider footer; recipients remain empty, sent and outbox counts remain zero for this staging, no group or automation is connected, no email or form was submitted, and no existing Preview, Production or Development resource was changed. All Production funnel gates remain pending or inactive and direct PDF delivery remains active.
+
 - [2026-08-07] Approved the documentation-only re-review of PR #68 for merge without merging it after confirming the Spanish Email 1 draft, independent direct ebook access, future Preview-only test boundary, unchanged inactive and pending gates, and passing validation. No provider or environment configuration was changed during this review.
 
 - [2026-08-07] Added a documentation-only Phase 0 welcome Email 1 draft with Spanish subject options, preheader, complete body, plain-text fallback, CTA, accessibility/footer requirements, and future Preview-only send-test criteria. The ebook remains directly available without email; no provider, form, group, automation, delivery, or Production resource was activated or changed.

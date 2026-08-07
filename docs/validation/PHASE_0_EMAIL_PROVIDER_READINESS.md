@@ -24,7 +24,13 @@ Subsequent controlled functional QA of the isolated provider-hosted form is PASS
 
 This Preview staging is not Production activation. Final Production consent linking remains PENDING; Production group/form, lead capture, Email 1, delivery and automation remain INACTIVE; controlled rollout and indexing remain PENDING; direct PDF delivery remains ACTIVE.
 
+Preview Email 1 configuration staging: PASS. Exactly one clearly identified regular Preview-only draft was created with the approved Spanish subject, preheader, body, Preview CTA, text-compatible fallback and draft-specific provider footer. It reuses an existing sender on the authenticated domain without changing sender configuration. Recipients remain empty, the draft is unsent and unpublished, sent and outbox counts remain zero for this staging, and no group, segment, subscriber or automation is connected. No campaign, test, Preview or transactional email was sent, no form was submitted, and no existing Preview, Production or Development resource was changed.
+
+The accepted MailerLite-native consent-feedback limitation remains tracked only for Preview staging. This standalone draft does not activate Email 1, delivery, lead capture, automation, Production or controlled rollout. Rollback is prepared and limited to deleting only this isolated draft.
+
 Provider readiness: READY FOR CONTROLLED PREVIEW
+
+Isolated Preview welcome-email draft: STAGED / UNSENT / ZERO RECIPIENTS
 
 Provider-hosted form functional consent blocking: PASS
 

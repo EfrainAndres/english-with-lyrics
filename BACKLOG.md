@@ -166,6 +166,7 @@ Priority: High.
 - [x] Create the Preview form in MailerLite.
 - [x] Create the isolated provider-hosted Preview consent group/form with no campaign, automation, email side effect, or submission.
 - [x] Create the Preview automation in MailerLite.
+- [x] Stage exactly one isolated Preview-only welcome Email 1 as an unsent regular draft with zero recipients and no group or automation connection.
 - [ ] Create the Production groups in MailerLite.
 - [ ] Create the Production form in MailerLite.
 - [ ] Create the Production automation in MailerLite.
@@ -188,6 +189,7 @@ Priority: High.
 - [x] Add privacy-safe route behavior to `/gracias`.
 - [x] Create thank-you validation documentation.
 - [x] Define Email 1 content source.
+- [x] Stage the approved Spanish welcome Email 1 content in one isolated MailerLite Preview draft without sending or activating delivery.
 - [x] Define subject and preheader.
 - [x] Define the Preview delivery target.
 - [x] Define the four-email sequence outline.
