@@ -152,6 +152,19 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 Rollback is limited to deleting this exact isolated draft and rechecking zero new drafts, recipients and sends. Do not alter any existing form, group, automation, sender or Production resource.
 
+## 9B. Controlled Preview test-send QA
+
+- [x] Preflight: isolated regular draft remains unpublished, unsent, recipient-free and disconnected from groups, segments and automation.
+- [x] Provider test-send flow confirmed as separate from campaign recipients.
+- [ ] Exactly one controlled test email delivered. BLOCKED before delivery because the authorized QA contact requires a separate provider-verification message.
+- [x] Verification message not sent because it was outside the authorized exactly-one-test-email boundary.
+- [x] Completed test sends: zero; campaign sends: zero; subscribers created: zero; form submissions: zero; automation triggers: zero.
+- [ ] Received subject, preheader, Spanish body, text-compatible content, CTA, footer, privacy treatment and layout. NOT RUN because no email was delivered.
+- [x] Post-attempt provider state unchanged: one isolated draft, zero recipients, zero sent campaigns and zero outbox items.
+- [x] Production lead-capture absence and independent direct PDF delivery retained.
+
+Recovery requires separate owner authorization for a safe provider-verification step or another already verified contact that is explicitly authorized for this QA. Do not create a subscriber, select an audience or activate delivery to bypass this gate.
+
 ## 10. Consent
 
 - [x] Repository preparation: approved checkbox copy documented unchanged and surfaced beside the inert provider-hosted Preview handoff.

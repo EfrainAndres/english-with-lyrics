@@ -213,3 +213,24 @@ despliegue controlado. Un futuro envío de prueba requiere autorización separad
 Rollback preparado: eliminar únicamente este borrador aislado y volver a
 confirmar cero borradores nuevos, cero destinatarios y cero envíos, sin tocar
 ningún formulario, grupo, automatización, remitente ni recurso de Producción.
+
+## Resultado del intento controlado de envío de prueba
+
+- Precondiciones del borrador aislado: PASS.
+- Ejecución del envío de prueba: BLOCKED antes de la entrega.
+- Motivo no sensible: el contacto controlado autorizado requiere una
+  verificación separada del proveedor antes de recibir correos de prueba.
+- Mensaje de verificación: NO ENVIADO; estaba fuera del límite de un único correo
+  de prueba autorizado.
+- Correos de prueba completados: CERO.
+- Envíos de campaña: CERO.
+- Suscriptores o contactos creados: CERO.
+- Formularios enviados y automatizaciones activadas: CERO.
+- Entrega, contenido recibido, CTA, pie, privacidad y diseño recibido: NOT RUN.
+- Estado posterior: el borrador sigue aislado, sin destinatarios, sin publicar y
+  sin conexión de entrega o automatización.
+
+No se requirió rollback porque el proveedor detuvo la operación antes de crear
+un envío o cambiar recursos. Para reanudar esta QA se necesita una autorización
+separada que resuelva el requisito de verificación sin ampliar el alcance a
+Producción ni crear un suscriptor.

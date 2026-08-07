@@ -32,6 +32,10 @@ Provider readiness: READY FOR CONTROLLED PREVIEW
 
 Isolated Preview welcome-email draft: STAGED / UNSENT / ZERO RECIPIENTS
 
+Controlled Preview Email 1 test-send QA: BLOCKED BEFORE DELIVERY. The authorized QA contact requires a separate provider-verification message, which was not sent because it falls outside the exactly-one-test-email authorization. Completed test sends, campaign sends, subscribers created, form submissions and automation triggers remain zero. Delivery, received-content, CTA, footer, privacy and received-layout checks are NOT RUN. The isolated draft and all existing Preview and Production resources remain unchanged.
+
+Recovery requires separate owner direction for a verification-safe path. This result does not activate Email 1, delivery, lead capture, automation, Production or controlled rollout. Production consent linking and indexing remain PENDING; Production group/form, lead capture, Email 1, delivery and automation remain INACTIVE; controlled rollout remains PENDING; direct PDF delivery remains ACTIVE.
+
 Provider-hosted form functional consent blocking: PASS
 
 Missing-consent feedback accessibility: KNOWN PROVIDER LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED
