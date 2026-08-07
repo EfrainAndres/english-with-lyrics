@@ -152,6 +152,36 @@ Use this checklist to separate repository preparation from dashboard work, owner
 
 Rollback is limited to deleting this exact isolated draft and rechecking zero new drafts, recipients and sends. Do not alter any existing form, group, automation, sender or Production resource.
 
+## 9B. Controlled Preview test-send QA
+
+- [x] Preflight: isolated regular draft remains unpublished, unsent, recipient-free and disconnected from groups, segments and automation.
+- [x] Provider test-send flow confirmed as separate from campaign recipients.
+- [ ] Exactly one controlled test email delivered. BLOCKED before delivery because the authorized QA contact requires a separate provider-verification message.
+- [x] Verification message not sent because it was outside the authorized exactly-one-test-email boundary.
+- [x] Completed test sends: zero; campaign sends: zero; subscribers created: zero; form submissions: zero; automation triggers: zero.
+- [ ] Received subject, preheader, Spanish body, text-compatible content, CTA, footer, privacy treatment and layout. NOT RUN because no email was delivered.
+- [x] Post-attempt provider state unchanged: one isolated draft, zero recipients, zero sent campaigns and zero outbox items.
+- [x] Production lead-capture absence and independent direct PDF delivery retained.
+
+Recovery requires separate owner authorization for a safe provider-verification step or another already verified contact that is explicitly authorized for this QA. Do not create a subscriber, select an audience or activate delivery to bypass this gate.
+
+## 9C. Resumed controlled Preview test-send QA
+
+The blocked attempt in section 9B remains historical. The owner subsequently authorized exactly one recipient-verification message followed by exactly one provider test email to the same controlled QA inbox.
+
+- [x] Recipient-verification messages sent: one; verification completed without CAPTCHA, security prompt, additional approval or third message.
+- [x] Provider test emails sent and received: one.
+- [x] Additional messages: zero.
+- [x] Approved subject, hidden preheader, Spanish body, CTA and text-compatible structure verified in the received message.
+- [x] Preview-safe CTA destination verified without recording it.
+- [x] Provider footer, privacy treatment and unsubscribe treatment rendered. Provider test-message links retain their expected non-functional test limitation.
+- [x] Desktop readability and intrinsic 390 px containment passed without internal clipping or horizontal content overflow.
+- [x] Post-QA state: zero draft recipients, zero sent campaigns, zero outbox items and one unchanged isolated draft.
+- [x] No subscriber/contact, group assignment, segment, campaign audience, form action, automation trigger or Production email created.
+- [ ] Provider-failure simulation remains UNVERIFIED; no failure was manufactured.
+
+No rollback was required. This QA authorizes neither an audience send nor any Production activation.
+
 ## 10. Consent
 
 - [x] Repository preparation: approved checkbox copy documented unchanged and surfaced beside the inert provider-hosted Preview handoff.

@@ -213,3 +213,59 @@ despliegue controlado. Un futuro envío de prueba requiere autorización separad
 Rollback preparado: eliminar únicamente este borrador aislado y volver a
 confirmar cero borradores nuevos, cero destinatarios y cero envíos, sin tocar
 ningún formulario, grupo, automatización, remitente ni recurso de Producción.
+
+## Resultado del intento controlado de envío de prueba
+
+- Precondiciones del borrador aislado: PASS.
+- Ejecución del envío de prueba: BLOCKED antes de la entrega.
+- Motivo no sensible: el contacto controlado autorizado requiere una
+  verificación separada del proveedor antes de recibir correos de prueba.
+- Mensaje de verificación: NO ENVIADO; estaba fuera del límite de un único correo
+  de prueba autorizado.
+- Correos de prueba completados: CERO.
+- Envíos de campaña: CERO.
+- Suscriptores o contactos creados: CERO.
+- Formularios enviados y automatizaciones activadas: CERO.
+- Entrega, contenido recibido, CTA, pie, privacidad y diseño recibido: NOT RUN.
+- Estado posterior: el borrador sigue aislado, sin destinatarios, sin publicar y
+  sin conexión de entrega o automatización.
+
+No se requirió rollback porque el proveedor detuvo la operación antes de crear
+un envío o cambiar recursos. Para reanudar esta QA se necesita una autorización
+separada que resuelva el requisito de verificación sin ampliar el alcance a
+Producción ni crear un suscriptor.
+
+## Resultado de la reanudación controlada
+
+El registro BLOCKED anterior se conserva como historial. La responsable amplió
+de forma explícita el límite únicamente a estos dos mensajes para el mismo buzón
+controlado autorizado:
+
+1. Un mensaje de verificación de destinatario.
+2. Un único correo de prueba del proveedor después de completar la verificación.
+
+Resultado:
+
+- Mensajes de verificación enviados: UNO.
+- Correos de prueba enviados y recibidos: UNO.
+- Mensajes adicionales: CERO.
+- Entrega al buzón controlado: PASS.
+- Asunto, preencabezado oculto, cuerpo en español, CTA y contenido compatible
+  con texto: PASS.
+- Destino de CTA con alcance seguro de Preview: PASS.
+- Pie del proveedor y tratamiento de privacidad renderizados: PASS.
+- Tratamiento de cancelación renderizado: PASS. El enlace no es funcional en el
+  modo de correo de prueba del proveedor y no se presenta como una prueba de
+  cancelación real.
+- Lectura y contención intrínseca en escritorio y a 390 px: PASS; sin recorte
+  interno ni desbordamiento horizontal del contenido del correo.
+- Suscriptores o contactos creados: CERO.
+- Destinatarios, grupos, segmentos o audiencias agregados: CERO.
+- Formularios enviados, automatizaciones activadas y correos de Producción:
+  CERO.
+- Borrador: permanece aislado, sin publicar y sin destinatarios.
+- Simulación de fallo del proveedor: UNVERIFIED; no se fabricó un fallo.
+
+No se requirió rollback. La verificación de destinatario fue el único cambio de
+estado autorizado y no activó suscripción, audiencia, automatización, entrega de
+Producción ni el embudo.
