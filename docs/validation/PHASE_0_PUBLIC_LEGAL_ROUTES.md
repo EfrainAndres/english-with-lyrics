@@ -15,6 +15,11 @@ Approved-mode local QA: PASS
 Application privacy-link preparation: PASS
 Provider-hosted consent-linking inert code preparation: PASS
 Isolated provider-hosted Preview consent form: CONFIGURED
+Isolated provider-hosted Production consent group/form: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / ZERO SUBSCRIBERS
+Production provider form public-site or Vercel link: ABSENT
+Production provider form single opt-in: PASS
+Provider-native unpublish/deactivate state: NOT AVAILABLE — OWNER-ACCEPTED FOR STAGING ONLY
+Direct provider URL distribution: NONE
 Branch-restricted Vercel Preview handoff: PASS
 Initial Preview staging validation submission: NOT PERFORMED — HISTORICAL PRE-QA STATE
 Controlled Preview provider-form functional QA: PASS
@@ -25,6 +30,7 @@ Duplicate-safe behavior: PASS
 Email or automation side effects: NONE
 GDPR Forget cleanup and post-cleanup absence: PASS
 Missing-consent feedback accessibility: KNOWN MAILERLITE-NATIVE LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED
+Missing-consent feedback Production disposition: OWNER-ACCEPTED FOR INACTIVE STAGING ONLY / TRACKED
 Provider-failure simulation: UNVERIFIED
 Preview test subscriber after cleanup: NONE
 Preview /ebook-gratis provider handoff and /privacidad link: PASS
@@ -56,7 +62,7 @@ Production metadata privacy: PASS
 Production ebook and thank-you regression: PASS
 Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
 Production indexing decision: PENDING
-Production MailerLite group/form: INACTIVE
+Production MailerLite group/form: STAGED / INACTIVE
 Final Production consent linking: PENDING
 Rights-request provider operations QA: PASS
 Production Email 1: INACTIVE
@@ -97,6 +103,28 @@ provider-native simulation was available. This staging is not Production
 activation: final Production consent linking, group/form, lead capture, Email
 1, delivery, automation, controlled rollout and indexing retain their pending
 or inactive states, while direct PDF delivery remains active.
+
+Exactly one new isolated Production consent group and one matching
+provider-hosted form are staged and inactive from the website perspective with
+zero subscribers. The form
+uses the approved consent wording unchanged, requires email, keeps name
+optional, presents one unchecked provider-required affirmative control, and
+links to the exact `/privacidad` destination. Provider-native form/source and
+copy-version identity support the evidence configuration; capture channel/time,
+subscriber status and unsubscribe/suppression state remain provider-managed.
+Double opt-in is disabled and single opt-in persisted after reload. MailerLite
+offers no native unpublish/deactivate state for this hosted form; possible
+reachability through its undistributed direct provider URL is an owner-accepted
+staging limitation only and does not authorize public linking or activation.
+No form was submitted, campaign or automation connected, email sent, public
+website or Vercel configuration changed, or Production deployment performed.
+The known missing-consent feedback limitation is accepted only for this
+inactive Production staging state and remains tracked; it is not described as
+fixed, fully accessible, compliant, certified, harmless, or approved for public
+activation. Final Production consent linking, lead capture, Email 1, delivery,
+automation, controlled rollout and indexing retain their pending or inactive
+states; direct PDF delivery remains active. Rollback is prepared and limited to
+deleting only the new empty Production form and group.
 
 ## Historical draft audit summary
 
@@ -393,7 +421,7 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 - Effective date.
 - Explicit Production indexing decision; `noindex, nofollow` retained until then.
 - Approved footer/business address.
-- Production MailerLite group and form.
+- Public linking and activation of the staged Production MailerLite group/form.
 - Final Production consent control and policy linking.
 - Resolution or explicit Production disposition of the tracked MailerLite-native missing-consent feedback limitation.
 - Rights-request process.
