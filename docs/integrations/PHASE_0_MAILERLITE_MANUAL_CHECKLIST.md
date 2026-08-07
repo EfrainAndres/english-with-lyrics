@@ -4,6 +4,8 @@
 
 > Provider-hosted consent staging: **PASS** for one new isolated Preview-only group and form plus one branch-restricted Vercel Preview handoff. No form was submitted, no subscriber was created, no email was sent, and no existing Preview or Production provider resource was altered.
 
+> Subsequent controlled provider-hosted form QA: **PASS** for functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, Production absence, and direct-PDF independence. The provider-hosted checkbox's missing-consent feedback lacks a visible or programmatically associated error message. The project owner accepts this MailerLite-native limitation for the current Preview staging path only; it remains a tracked follow-up and does not authorize Production activation. Provider-failure simulation remains **UNVERIFIED** because no safe provider-native simulation was available.
+
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
 ## 1. Account
@@ -78,6 +80,15 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Vercel dashboard action: the existing public form-URL mechanism was configured only for Preview and restricted to the staging branch; Production and Development scopes were unchanged.
 - [x] Deployed Preview validation: `/ebook-gratis` exposes only the external provider handoff and `/privacidad` notice, with no app-side personal-data fields, form submission, storage, or analytics payload.
 - [x] Controlled-task boundary: the staged provider form was not submitted and created no subscriber, lead, email, or automation event.
+- [x] Historical setup boundary retained: the initial staging validation above was completed before any submission.
+- [x] Controlled functional QA: submission remained blocked until affirmative consent was selected.
+- [x] Controlled functional QA: invalid-email validation blocked submission.
+- [x] Controlled functional QA: one affirmative submission produced one isolated Preview subscriber with zero email or automation activity.
+- [x] Controlled functional QA: repeating the same controlled submission was privacy-safe and did not create an unintended duplicate.
+- [x] Controlled functional QA: manual unsubscribe and GDPR Forget cleanup completed; the subsequent provider search returned zero results and the isolated group returned to zero subscribers.
+- [x] Controlled functional QA: Production retained no lead-capture surface and direct PDF delivery remained independent and active.
+- [ ] Provider-native follow-up: expose a visible and programmatically associated missing-consent error. Current MailerLite limitation is accepted by the project owner for Preview staging only and is not considered fixed or fully accessible.
+- [ ] Provider-failure simulation: UNVERIFIED because no safe provider-native simulation was available.
 - [ ] Manual MailerLite dashboard action: Preview form clearly marked `TEST`.
 - [x] Manual MailerLite dashboard action: email field required.
 - [x] Manual MailerLite dashboard action: name field optional.
@@ -134,6 +145,8 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: the staged form identity records the approved-copy version and provider source; provider capture metadata remains the future consent evidence system of record.
 - [x] Manual MailerLite dashboard action: single opt-in remains enabled for the verified Preview workflow.
 - [x] Repository preparation: provider-hosted MailerLite form selected as the sole future consent system of record; the Next.js app has no personal-data form or submit path.
+- [x] Project-owner decision: functional consent blocking is accepted as PASS for the current Preview staging path despite the tracked provider-native missing-consent feedback limitation.
+- [ ] Production consent linking: remains PENDING and requires separate approval; the Preview limitation acceptance does not authorize Production collection or activation.
 - [ ] Owner approval: configure and activate any Production provider form, group, consent evidence fields or delivery flow.
 
 ## 11. Privacy
@@ -162,6 +175,15 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: controlled test addresses only.
 - [ ] Manual MailerLite dashboard action: Preview redirect tested.
 - [x] Manual MailerLite dashboard action: controlled Preview submission tested.
+- [x] Isolated provider-hosted staging form: functional consent blocking verified.
+- [x] Isolated provider-hosted staging form: invalid-email validation verified.
+- [x] Isolated provider-hosted staging form: single affirmative submission verified.
+- [x] Isolated provider-hosted staging form: duplicate-safe behavior verified.
+- [x] Isolated provider-hosted staging form: zero email and automation side effects verified.
+- [x] Isolated provider-hosted staging form: GDPR Forget cleanup and subsequent zero-result search verified.
+- [x] Isolated provider-hosted staging form: Production absence and direct-PDF independence verified.
+- [ ] Isolated provider-hosted staging form: visible/programmatically associated missing-consent feedback. Known MailerLite-native limitation; owner-accepted for Preview staging only and tracked.
+- [ ] Isolated provider-hosted staging form: provider-failure simulation. UNVERIFIED because no safe native simulation was available.
 - [x] Manual MailerLite dashboard action: subscriber created as `Active`.
 - [x] Manual MailerLite dashboard action: Preview group assignment verified.
 - [x] Manual MailerLite dashboard action: duplicate test submission tested.

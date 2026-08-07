@@ -16,8 +16,17 @@ Application privacy-link preparation: PASS
 Provider-hosted consent-linking inert code preparation: PASS
 Isolated provider-hosted Preview consent form: CONFIGURED
 Branch-restricted Vercel Preview handoff: PASS
-Preview provider form submission: NOT PERFORMED
-Preview subscriber, lead or email creation: NONE
+Initial Preview staging validation submission: NOT PERFORMED — HISTORICAL PRE-QA STATE
+Controlled Preview provider-form functional QA: PASS
+Functional consent blocking: PASS
+Invalid-email validation: PASS
+Single affirmative submission: PASS
+Duplicate-safe behavior: PASS
+Email or automation side effects: NONE
+GDPR Forget cleanup and post-cleanup absence: PASS
+Missing-consent feedback accessibility: KNOWN MAILERLITE-NATIVE LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED
+Provider-failure simulation: UNVERIFIED
+Preview test subscriber after cleanup: NONE
 Preview /ebook-gratis provider handoff and /privacidad link: PASS
 Preview desktop and 390 px containment: PASS
 Website personal-data collection or submission: ABSENT
@@ -73,13 +82,21 @@ delivery path. The published policies remain `noindex, nofollow` pending an
 explicit Production indexing decision.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
-handoff are configured and validated without a submission. Existing Preview
-resources were not altered, no campaign or automation is connected to the new
-form, double opt-in is disabled, and no subscriber, lead or email was created.
-This staging is not Production activation: final Production consent linking,
-group/form, lead capture, Email 1, delivery, automation, controlled rollout and
-indexing retain their pending or inactive states, while direct PDF delivery
-remains active.
+handoff were initially configured and validated without a submission. That
+historical setup record is preserved. Subsequent controlled Preview QA verified
+functional consent blocking, invalid-email handling, one affirmative
+submission, privacy-safe duplicate behavior, zero email/automation side
+effects, GDPR Forget cleanup with no remaining test subscriber, Production
+lead-capture absence, and independent direct PDF delivery. The provider-hosted
+checkbox still lacks a visible or programmatically associated missing-consent
+error message. The project owner accepts this known MailerLite-native
+limitation for the current Preview staging path only; it remains tracked and is
+not described as fixed, fully accessible, legally compliant, certified, or
+irrelevant. Provider-failure simulation remains UNVERIFIED because no safe
+provider-native simulation was available. This staging is not Production
+activation: final Production consent linking, group/form, lead capture, Email
+1, delivery, automation, controlled rollout and indexing retain their pending
+or inactive states, while direct PDF delivery remains active.
 
 ## Historical draft audit summary
 
@@ -378,6 +395,7 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 - Approved footer/business address.
 - Production MailerLite group and form.
 - Final Production consent control and policy linking.
+- Resolution or explicit Production disposition of the tracked MailerLite-native missing-consent feedback limitation.
 - Rights-request process.
 - Rights-request operating procedure QA.
 - Export/correction/deletion QA.

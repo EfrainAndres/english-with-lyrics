@@ -6,6 +6,8 @@
 
 > Preview consent staging: an isolated provider-hosted group/form and branch-restricted Vercel Preview handoff are configured and validated without submitting the form, creating a subscriber, or sending email. Production and Development remain unchanged.
 
+> Controlled Preview consent QA: functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, Production absence, and direct-PDF independence are **PASS**. MailerLite's missing-consent feedback has no visible or programmatically associated error message; the project owner accepts this provider-native limitation for the current Preview staging path only, and it remains a tracked follow-up. Provider-failure simulation is **UNVERIFIED**. This decision does not authorize Production activation.
+
 ## Backlog Rules
 
 - Keep tasks small enough for a single branch when possible.
@@ -135,6 +137,10 @@ Priority: High.
 - [ ] Make an explicit Production indexing decision; keep `noindex, nofollow` until then.
 - [ ] Complete final Production consent linking.
 - [x] Stage and validate an isolated provider-hosted consent form through a branch-restricted Preview handoff without activating or altering Production.
+- [x] Complete controlled functional QA of the isolated provider-hosted Preview consent form. Result: PASS for consent blocking, invalid-email handling, one affirmative submission, duplicate safety, zero email/automation side effects, GDPR Forget cleanup, Production absence and direct-PDF independence.
+- [x] Record project-owner acceptance of the MailerLite-native missing-consent feedback limitation for the current Preview staging path only.
+- [ ] Re-evaluate or resolve the missing visible and programmatically associated consent-error feedback before any Production activation; keep this as a tracked provider follow-up.
+- [ ] Verify the provider-failure state if MailerLite exposes a safe native simulation; current status: UNVERIFIED.
 - [x] Complete Production environment configuration. Result: PASS; ten `LEGAL_*` variables set for the Production scope only and verified by name and scope; no values stored in the repository.
 - [x] Publish the approved legal policies in Production and run canonical smoke QA. Result: PASS; both routes HTTP 200 in approved mode, `noindex, nofollow` retained, containment PASS on desktop and 390 px with no horizontal overflow.
 - [x] Complete the project-owner canonical Production legal review. Result: PASS on desktop and 390 px for both routes directly against the canonical Production origin; no horizontal overflow.
