@@ -14,6 +14,12 @@ Approved-mode source implementation: COMPLETE
 Approved-mode local QA: PASS
 Application privacy-link preparation: PASS
 Provider-hosted consent-linking inert code preparation: PASS
+Isolated provider-hosted Preview consent form: CONFIGURED
+Branch-restricted Vercel Preview handoff: PASS
+Preview provider form submission: NOT PERFORMED
+Preview subscriber, lead or email creation: NONE
+Preview /ebook-gratis provider handoff and /privacidad link: PASS
+Preview desktop and 390 px containment: PASS
 Website personal-data collection or submission: ABSENT
 Owner approved-mode rendered review: PASS
 /privacidad desktop review: PASS
@@ -43,7 +49,7 @@ Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre
 Production indexing decision: PENDING
 Production MailerLite group/form: INACTIVE
 Final Production consent linking: PENDING
-Rights-request provider operations QA: PENDING
+Rights-request provider operations QA: PASS
 Production Email 1: INACTIVE
 Production email delivery: INACTIVE
 Production automation: INACTIVE
@@ -65,6 +71,15 @@ compliance. Lead capture, Email 1, email
 delivery and automation remain inactive; direct PDF delivery remains the active
 delivery path. The published policies remain `noindex, nofollow` pending an
 explicit Production indexing decision.
+
+The isolated provider-hosted consent form and its branch-restricted Preview
+handoff are configured and validated without a submission. Existing Preview
+resources were not altered, no campaign or automation is connected to the new
+form, double opt-in is disabled, and no subscriber, lead or email was created.
+This staging is not Production activation: final Production consent linking,
+group/form, lead capture, Email 1, delivery, automation, controlled rollout and
+indexing retain their pending or inactive states, while direct PDF delivery
+remains active.
 
 ## Historical draft audit summary
 

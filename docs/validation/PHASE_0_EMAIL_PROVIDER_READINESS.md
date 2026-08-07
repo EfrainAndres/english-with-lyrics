@@ -14,6 +14,14 @@ Inert website preparation for provider-hosted consent linking is complete: Produ
 
 Implementation review approval: PASS. The provider-hosted handoff preparation is approved for merge without activating Production consent linking, collection, Email 1, delivery, automation, rollout or indexing.
 
+Preview provider-hosted consent staging: PASS. A new isolated Preview-only group and provider-hosted form were created without altering existing Preview resources. The form requires email, keeps name optional, uses the approved consent copy unchanged in an unchecked affirmative control, and links to the exact `/privacidad` destination. Its source/form identity and copy version support the provider evidence record; MailerLite remains responsible for capture time/channel, subscriber status and unsubscribe/suppression state.
+
+The form has no linked campaign, automation or email side effect, and double opt-in is disabled. No form was submitted, subscriber created, lead captured or email sent. The existing form-URL mechanism is configured only for Preview and restricted to the staging branch; Production and Development configuration were unchanged.
+
+The branch Preview deployment is READY. `/ebook-gratis` renders only the external provider handoff and adjacent privacy notice, keeps direct PDF delivery independent, contains no website-native email/name inputs or submit endpoint, and has no horizontal overflow at desktop or 390 px. The canonical Production route remains unchanged with no lead-capture surface.
+
+This Preview staging is not Production activation. Final Production consent linking remains PENDING; Production group/form, lead capture, Email 1, delivery and automation remain INACTIVE; controlled rollout and indexing remain PENDING; direct PDF delivery remains ACTIVE.
+
 Provider readiness: READY FOR CONTROLLED PREVIEW
 
 Preview email delivery: VERIFIED
