@@ -1,51 +1,52 @@
-# Phase 0 Welcome Email 1 Draft
+# Borrador del correo de bienvenida 1 de Fase 0
 
-## Status and boundary
+## Estado y límites
 
-- Content status: DRAFT.
-- Activation status: INACTIVE.
-- Scope: documentation-only preparation for a future Preview-only send test.
-- This draft does not authorize a form, group, automation, delivery, sender, subscriber, provider configuration, or Production activation.
-- Direct PDF delivery remains ACTIVE and independent of promotional consent or this email.
+- Estado del contenido: DRAFT.
+- Estado de activación: INACTIVE.
+- Alcance: preparación exclusivamente documental para una futura prueba de envío solo en Preview.
+- Este borrador no autoriza un formulario, grupo, automatización, entrega, remitente, suscriptor, configuración del proveedor ni activación de Producción.
+- La entrega directa del PDF permanece ACTIVE e independiente del consentimiento promocional o de este correo.
 
-This document is a future content reference. It does not change the historical
-Preview setup or controlled-QA records elsewhere in the repository.
+Este documento es una referencia de contenido futuro. No modifica la
+configuración histórica de Preview ni los registros de QA controlado existentes
+en el repositorio.
 
-## Purpose
+## Propósito
 
-Welcome a subscriber who has already given provider-hosted affirmative consent,
-offer a calm first practice step, and direct them to the existing guide
-experience. The guide is already available directly: this email is not required
-to receive it.
+Dar la bienvenida a una persona suscrita que ya otorgó consentimiento afirmativo
+en el formulario alojado por el proveedor, proponer un primer paso de práctica
+tranquilo y dirigirla a la experiencia existente de la guía. La guía ya está
+disponible directamente: este correo no es necesario para recibirla.
 
-The future provider-hosted form remains the system of record for consent. This
-email draft does not create, store, transmit, or claim to record consent
-evidence.
+El futuro formulario alojado por el proveedor permanece como sistema de registro
+del consentimiento. Este borrador de correo no crea, almacena, transmite ni
+afirma registrar evidencia de consentimiento.
 
-## Subject-line options and preheader
+## Opciones de asunto y preencabezado
 
-Choose one subject when a separately approved Preview-only send test is
-configured:
+Elegir un asunto cuando se configure una prueba de envío solo en Preview,
+aprobada por separado:
 
 - `Bienvenido a Sing Pronunce Repeat: empieza con una práctica`
 - `Una forma simple de empezar con tu guía`
 - `Tu siguiente práctica con canciones`
 
-Preheader:
+Preencabezado:
 
 > Empieza con una práctica corta y vuelve a la guía cuando quieras.
 
-Subject rules:
+Reglas del asunto:
 
-- Keep the language calm, specific, and free of urgency.
-- Do not promise fluency, guaranteed results, certification, or a fixed outcome.
-- Do not use misleading reply or forwarding prefixes.
-- For a future Preview test, add the project-approved test marker without
-  changing the body’s meaning.
+- Mantener un lenguaje tranquilo, específico y sin urgencia.
+- No prometer fluidez, resultados garantizados, certificación ni un resultado fijo.
+- No usar prefijos engañosos de respuesta o reenvío.
+- Para una futura prueba de Preview, agregar el marcador de prueba aprobado por
+  el proyecto sin cambiar el sentido del cuerpo.
 
-## Email body
+## Cuerpo del correo
 
-### HTML-ready copy
+### Copy listo para HTML
 
 ```text
 Hola,
@@ -71,10 +72,10 @@ Sing Pronunce Repeat
 English with Lyrics
 ```
 
-The button label is `Abrir la guía`. Do not add a claim that the email unlocks,
-delivers, or is required for the guide.
+La etiqueta del botón es `Abrir la guía`. No agregar una afirmación de que el
+correo desbloquea, entrega o es necesario para la guía.
 
-### Plain-text fallback
+### Alternativa de texto sin formato
 
 ```text
 Hola,
@@ -100,79 +101,86 @@ Sing Pronunce Repeat
 English with Lyrics
 ```
 
-`[DESTINO_DE_LA_GUIA]` is a configuration-time placeholder only. Do not put a
-provider, Preview, or Production URL in this document.
+`[DESTINO_DE_LA_GUIA]` es solo un marcador de posición para el momento de la
+configuración. No incluir una URL del proveedor, de Preview ni de Producción en
+este documento.
 
-## CTA destination requirements
+## Requisitos de destino de la CTA
 
-- Configure the button and plain-text fallback to the same environment-scoped
-  thank-you route, `/gracias?source=email`.
-- For a future Preview-only test, use only the approved Preview route; never
-  point a Preview email to Production.
-- The direct PDF remains independently available through `/ebook-gratis` and
-  must not be conditional on consent, clicking the CTA, or receiving this
-  email.
-- Do not attach the PDF, use a signed or expiring link, or include personal
-  data in the authored destination.
-- Do not hard-code an environment URL, provider identifier, or tracking value
-  in this draft.
+- Configurar el botón y la alternativa de texto sin formato hacia la misma ruta
+  de agradecimiento con alcance del entorno, `/gracias?source=email`.
+- Para una futura prueba solo en Preview, usar únicamente la ruta de Preview
+  aprobada; nunca dirigir un correo de Preview a Producción.
+- El PDF directo permanece disponible de manera independiente en
+  `/ebook-gratis` y no debe depender del consentimiento, de hacer clic en la
+  CTA ni de recibir este correo.
+- No adjuntar el PDF, usar un enlace firmado o con vencimiento, ni incluir datos
+  personales en el destino redactado.
+- No codificar una URL del entorno, un identificador del proveedor ni un valor
+  de seguimiento en este borrador.
 
-## Accessibility and provider footer
+## Accesibilidad y pie del proveedor
 
-When a send is separately approved and configured in MailerLite:
+Cuando un envío se apruebe y configure por separado en MailerLite:
 
-- Use a real text subject and preheader; do not convey essential meaning only
-  through an image.
-- Keep a clear text CTA with a meaningful label, adequate contrast, visible
-  focus, keyboard access, and a readable plain-text fallback.
-- Structure the body with short paragraphs and a numbered list that retains its
-  meaning without styling.
-- Keep the provider’s functional unsubscribe mechanism and required footer
-  treatment. Do not replace it with decorative text or a non-functional custom
-  link.
-- Include the approved privacy-policy destination in the footer treatment when
-  the provider configuration supports it, using `/privacidad`.
-- Review the rendered provider footer, unsubscribe treatment, and mobile layout
-  in the future Preview-only send test before any wider activation.
+- Usar un asunto y preencabezado de texto real; no transmitir un significado
+  esencial solo mediante una imagen.
+- Mantener una CTA de texto clara, con etiqueta significativa, contraste
+  suficiente, foco visible, acceso por teclado y una alternativa de texto sin
+  formato legible.
+- Estructurar el cuerpo con párrafos cortos y una lista numerada que conserve su
+  significado sin estilos.
+- Mantener el mecanismo funcional de cancelación de suscripción y el tratamiento
+  de pie requerido por el proveedor. No reemplazarlo con texto decorativo ni con
+  un enlace personalizado no funcional.
+- Incluir el destino aprobado de la política de privacidad en el tratamiento de
+  pie cuando la configuración del proveedor lo permita, usando `/privacidad`.
+- Revisar el pie renderizado del proveedor, el tratamiento de cancelación y el
+  diseño móvil en la futura prueba de envío solo en Preview antes de cualquier
+  activación más amplia.
 
-## Future Preview-only send-test acceptance criteria
+## Criterios de aceptación para una futura prueba de envío solo en Preview
 
-This checklist is inactive until separately authorized. A future test passes
-only when all of the following are evidenced without using Production resources:
+Esta lista permanece inactiva hasta recibir autorización separada. Una futura
+prueba pasa solo cuando se evidencie todo lo siguiente sin usar recursos de
+Producción:
 
-- A controlled Preview-only recipient with an existing provider consent record
-  is used; no public website form is submitted for this test.
-- The Preview group, form, automation, sender, and delivery path are isolated
-  from Production and any unrelated workflow.
-- The received message uses one approved subject option and the stated
-  preheader, contains the complete approved draft body, and does not claim the
-  email is necessary to access the guide.
-- The button and plain-text fallback open the approved Preview thank-you route.
-- Direct PDF access remains available before and after the test without a
-  consent or email requirement.
-- The rendered message is understandable with keyboard navigation and retains
-  its core meaning in plain text and on a narrow mobile viewport.
-- The provider footer includes a functional unsubscribe treatment and is
-  reviewed for clarity; it must not claim legal compliance or certification.
-- No campaign, Production group, Production form, Production automation, or
-  Production delivery is involved.
-- The result, including any limitation or failed criterion, is documented
-  without personal data, recipient details, provider identifiers, secrets, or
-  non-public URLs.
+- Se usa una persona destinataria controlada solo de Preview con un registro de
+  consentimiento existente del proveedor; no se envía un formulario público del
+  sitio web para esta prueba.
+- El grupo, formulario, automatización, remitente y ruta de entrega de Preview
+  están aislados de Producción y de cualquier flujo no relacionado.
+- El mensaje recibido usa una opción de asunto aprobada y el preencabezado
+  indicado, contiene el cuerpo completo de este borrador aprobado y no afirma
+  que el correo sea necesario para acceder a la guía.
+- El botón y la alternativa de texto sin formato abren la ruta de agradecimiento
+  de Preview aprobada.
+- El acceso directo al PDF permanece disponible antes y después de la prueba sin
+  un requisito de consentimiento o correo.
+- El mensaje renderizado se entiende con navegación por teclado y conserva su
+  significado esencial en texto sin formato y en una vista móvil estrecha.
+- El pie del proveedor incluye un tratamiento funcional de cancelación de
+  suscripción y se revisa por claridad; no debe afirmar cumplimiento legal ni
+  certificación.
+- No intervienen campaña, grupo de Producción, formulario de Producción,
+  automatización de Producción ni entrega de Producción.
+- El resultado, incluida cualquier limitación o criterio fallido, se documenta
+  sin datos personales, detalles de destinatarios, identificadores del
+  proveedor, secretos ni URLs no públicas.
 
-## Gate status retained
+## Estado de puertas retenido
 
-| Gate | Status |
+| Puerta | Estado |
 | --- | --- |
-| Production consent linking | PENDING |
-| Production indexing decision | PENDING |
-| Production group/form | INACTIVE |
-| Production lead capture | INACTIVE |
-| Production Email 1 | INACTIVE |
-| Production email delivery | INACTIVE |
-| Production automation | INACTIVE |
-| Controlled rollout | PENDING |
-| Direct PDF delivery | ACTIVE |
+| Vinculación de consentimiento de Producción | PENDING |
+| Decisión de indexación de Producción | PENDING |
+| Grupo/formulario de Producción | INACTIVE |
+| Captura de leads de Producción | INACTIVE |
+| Email 1 de Producción | INACTIVE |
+| Entrega de correo de Producción | INACTIVE |
+| Automatización de Producción | INACTIVE |
+| Despliegue controlado | PENDING |
+| Entrega directa del PDF | ACTIVE |
 
-Provider configuration and every Preview or Production send require separate
-owner approval.
+La configuración del proveedor y cada envío de Preview o Producción requieren
+aprobación separada de la responsable.
