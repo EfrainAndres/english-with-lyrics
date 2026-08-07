@@ -6,7 +6,7 @@
 
 > Subsequent controlled provider-hosted form QA: **PASS** for functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, Production absence, and direct-PDF independence. The provider-hosted checkbox's missing-consent feedback lacks a visible or programmatically associated error message. The project owner accepts this MailerLite-native limitation for the current Preview staging path only; it remains a tracked follow-up and does not authorize Production activation. Provider-failure simulation remains **UNVERIFIED** because no safe provider-native simulation was available.
 
-> Production consent staging: **STAGED / INACTIVE** for exactly one new isolated Production group and one matching provider-hosted form. The group has zero subscribers; the form is unlinked from the public website and has no campaign, automation, email, submission, Vercel, or deployment side effect. This does not activate Production consent linking or collection.
+> Production consent staging: **STAGED / INACTIVE from the website perspective** for exactly one new isolated Production group and one matching provider-hosted form. The group has zero subscribers; single opt-in is configured; the form is unlinked from the public website and has no campaign, automation, email, submission, Vercel, or deployment side effect. MailerLite has no native unpublish/deactivate state for this hosted form, so possible reachability through its undistributed direct provider URL is an owner-accepted staging limitation. This does not activate Production consent linking or collection.
 
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
@@ -111,8 +111,9 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: approved consent wording is unchanged in one affirmative checkbox that is unchecked by default and provider-required before submission.
 - [x] Manual MailerLite dashboard action: the privacy-policy destination has exact path `/privacidad`.
 - [x] Manual MailerLite dashboard action: the form/source identity records the approved-copy version; MailerLite remains responsible for capture channel/time, subscriber status, and unsubscribe/suppression state.
-- [x] Manual MailerLite dashboard action: double opt-in is disabled and no campaign, automation, email side effect, or subscriber exists.
-- [x] Staging boundary: the form remains inactive, unlinked from the public website, absent from Vercel configuration, and was not submitted.
+- [x] Manual MailerLite dashboard action: double opt-in is disabled, single opt-in persists after reload, and no campaign, automation, email side effect, or subscriber exists.
+- [x] Staging boundary: the form remains staged and inactive from the website perspective, unlinked from the public website, absent from Vercel configuration, and was not submitted.
+- [x] Provider limitation: MailerLite offers no native unpublish/deactivate state for this hosted form; possible direct provider-URL reachability is owner-accepted for staging only, and the URL is not distributed.
 - [x] Project-owner decision: the known MailerLite-native missing-consent feedback limitation is accepted only for inactive Production staging and remains tracked; this is not an accessibility fix or activation approval.
 - [x] Rollback prepared: delete only the new empty Production form and the new empty Production group; do not alter Preview or existing resources.
 - [x] Manual MailerLite dashboard action: the single isolated Production consent form was drafted only within the current staging authorization.

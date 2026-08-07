@@ -8,7 +8,7 @@
 
 > Controlled Preview consent QA: functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, Production absence, and direct-PDF independence are **PASS**. MailerLite's missing-consent feedback has no visible or programmatically associated error message; the project owner accepts this provider-native limitation for the current Preview staging path only, and it remains a tracked follow-up. Provider-failure simulation is **UNVERIFIED**. This decision does not authorize Production activation.
 
-> Production consent staging: exactly one new isolated MailerLite Production group and one matching provider-hosted consent form are **STAGED / INACTIVE** with zero subscribers, no public-site or Vercel link, and no campaign, automation, email, submission, or Production deployment side effect. The known missing-consent feedback limitation is accepted only for this inactive staging state and remains a tracked pre-activation follow-up. Production consent linking remains **PENDING** and direct PDF delivery remains **ACTIVE**.
+> Production consent staging: exactly one new isolated MailerLite Production group and one matching provider-hosted consent form are **STAGED / INACTIVE from the website perspective** with zero subscribers, single opt-in configured, no public-site or Vercel link, and no campaign, automation, email, submission, or Production deployment side effect. MailerLite offers no native unpublish/deactivate state for this hosted form, so direct provider-URL reachability is an owner-accepted staging limitation; the URL is not distributed. The known missing-consent feedback limitation remains a tracked pre-activation follow-up. Production consent linking remains **PENDING** and direct PDF delivery remains **ACTIVE**.
 
 ## Backlog Rules
 
@@ -170,7 +170,8 @@ Priority: High.
 - [x] Create the Preview automation in MailerLite.
 - [x] Stage exactly one isolated Preview-only welcome Email 1 as an unsent regular draft with zero recipients and no group or automation connection.
 - [x] Create exactly one isolated Production consent-staging group in MailerLite. Result: STAGED / INACTIVE / ZERO SUBSCRIBERS.
-- [x] Create exactly one matching provider-hosted Production consent form. Result: STAGED / INACTIVE / UNLINKED; approved consent copy and `/privacidad` destination configured without submission or activation.
+- [x] Create exactly one matching provider-hosted Production consent form. Result: STAGED / INACTIVE from the website perspective / UNLINKED; approved consent copy, `/privacidad` destination, and single opt-in configured without submission or activation.
+- [x] Record the owner-accepted staging limitation that MailerLite has no native unpublish/deactivate state and the undistributed direct provider URL may remain reachable; this does not authorize public linking or activation.
 - [ ] Create the Production automation in MailerLite.
 - [x] Add the runtime environment resolver.
 - [x] Add the safe Preview-form resolver.
