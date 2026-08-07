@@ -137,6 +137,21 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [ ] Repository preparation: sequence timing documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
 - [ ] Future implementation: Production automation remains inactive until rollout approval.
 
+## 9A. Isolated Preview welcome-email draft
+
+- [x] Exactly one clearly named regular Preview-only Email 1 draft staged.
+- [x] Existing sender on the authenticated domain reused without creating or changing a sender identity.
+- [x] Approved Spanish subject, preheader, body, Preview CTA and text-compatible fallback staged.
+- [x] Draft-specific provider footer retains functional unsubscribe treatment and the Preview privacy-policy destination.
+- [x] Recipients remain empty; no contact, group or segment selected.
+- [x] Draft remains unpublished and unsent; sent and outbox counts remain zero for this staging.
+- [x] No campaign send, test email, Preview email, form submission, subscriber creation or group assignment performed.
+- [x] Standalone campaign draft has no automation connection; existing Preview and Production resources were unchanged.
+- [ ] Future controlled Preview-only send test requires separate owner approval.
+- [ ] MailerLite-native missing-consent feedback limitation remains tracked for Preview staging and does not authorize Production.
+
+Rollback is limited to deleting this exact isolated draft and rechecking zero new drafts, recipients and sends. Do not alter any existing form, group, automation, sender or Production resource.
+
 ## 10. Consent
 
 - [x] Repository preparation: approved checkbox copy documented unchanged and surfaced beside the inert provider-hosted Preview handoff.
