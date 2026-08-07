@@ -31,7 +31,7 @@
 - Politicas legales de Produccion: EN VIVO / ACEPTADAS.
 - PR #64: APROBADO PARA MERGE — NO FUSIONADO.
 - Decision de indexacion de Produccion: PENDIENTE, con `noindex, nofollow` conservado.
-- Enlace final de consentimiento y QA de operaciones de derechos: PENDIENTES.
+- Enlace final de consentimiento: PENDIENTE. QA de operaciones de derechos de MailerLite: PASS para un suscriptor controlado solo de Preview.
 - Rollout controlado: PENDIENTE.
 
 Superar el gate de aceptacion de publicacion legal no activa la captura de
@@ -128,6 +128,19 @@ Verificar en fuentes oficiales vigentes antes de produccion:
 - [ ] Correccion de datos.
 - [ ] Eliminacion de contactos y datos relacionados.
 - [ ] Lugares de tratamiento y almacenamiento.
+
+## QA controlado de operaciones de derechos de MailerLite
+
+- [x] Consulta de acceso al proveedor verificada.
+- [x] Suscriptor controlado creado manualmente sin asignacion de grupo; no se envio ningun formulario publico.
+- [x] El registro mostro cero correos enviados; no se activo ni modifico campana, correo, automatizacion ni flujo de captura.
+- [x] Capacidad de exportacion JSON verificada de forma transitoria; no se retuvieron datos de exportacion.
+- [x] Correccion reversible de un campo no personal guardada y verificada.
+- [x] Baja manual verificada.
+- [x] Operacion GDPR "Forget" ejecutada; el proveedor confirma eliminacion completa dentro de 30 dias.
+- [x] Busqueda posterior sin resultados.
+
+Esta evidencia cubre solo un suscriptor controlado de Preview. No activa consentimiento de Produccion, grupo o formulario de Produccion, captura de leads, entrega de correo, Email 1, automatizacion ni rollout.
 - [ ] Lista de subencargados.
 - [ ] Informacion de seguridad.
 - [ ] Terminos de notificacion de incidentes.

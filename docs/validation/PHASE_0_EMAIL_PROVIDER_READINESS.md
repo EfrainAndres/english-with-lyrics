@@ -1,5 +1,7 @@
 # Phase 0 Email Provider Readiness
 
+> Rights-request provider operations QA: **PASS** for one isolated Preview-only manual test contact. This evidence does not activate Production consent linking, group/form, lead capture, Email 1, delivery, automation, rollout, or indexing.
+
 ## Readiness status
 
 `READY FOR CONTROLLED PREVIEW`

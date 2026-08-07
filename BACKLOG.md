@@ -1,5 +1,7 @@
 # English with Lyrics Backlog
 
+> Phase 0 update: MailerLite rights-request provider operations QA is **PASS** for one isolated Preview-only manual test contact. Production consent linking, group/form, lead capture, Email 1, delivery, automation, rollout, and indexing remain pending or inactive; direct PDF delivery remains active.
+
 ## Backlog Rules
 
 - Keep tasks small enough for a single branch when possible.

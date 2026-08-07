@@ -72,7 +72,7 @@ A government identity document must not be requested by default. The final verif
 
 | System | Possible action | Current validation status |
 | --- | --- | --- |
-| MailerLite | Locate, export, correct, unsubscribe, restrict or delete subscriber records and consent evidence | End-to-end rights QA pending |
+| MailerLite | Locate, export, correct, unsubscribe, restrict or delete subscriber records and consent evidence | PASS — controlled Preview-only provider operations QA; no Production resource involved |
 | Tally | Locate, export, correct where supported, or delete submitted form records | End-to-end rights QA pending |
 | Hostinger | Locate privacy correspondence and retain or delete minimum operational evidence as appropriate | End-to-end rights QA pending |
 | Project records | Locate only relevant operational records and correct, restrict, delete or anonymize as appropriate | End-to-end rights QA pending |
@@ -91,6 +91,6 @@ A government identity document must not be requested by default. The final verif
 - Owner re-review of the rendered policies.
 - Closure of the internal structured review.
 - Professional Colombian legal review.
-- Provider export, correction and deletion workflow QA.
+- MailerLite provider export, correction and deletion workflow QA: PASS for one controlled Preview-only subscriber. Tally and Hostinger operations remain untested.
 - Final Production consent linking.
 - Controlled Production rollout approval.

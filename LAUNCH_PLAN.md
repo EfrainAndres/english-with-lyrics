@@ -1,5 +1,7 @@
 # English with Lyrics Launch Plan
 
+> Current gate update: MailerLite rights-request provider operations QA is **PASS** for one isolated Preview-only manual test contact. Production consent linking and controlled rollout remain pending; Production group/form, lead capture, Email 1, delivery, and automation remain inactive; `noindex, nofollow` and active direct PDF delivery are unchanged.
+
 ## Launch Goal
 
 Validate demand for English with Lyrics before building a full platform.
