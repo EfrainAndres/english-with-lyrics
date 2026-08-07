@@ -2,6 +2,8 @@
 
 > Phase 0 update: MailerLite rights-request provider operations QA is **PASS** for one isolated Preview-only manual test contact. Production consent linking, group/form, lead capture, Email 1, delivery, automation, rollout, and indexing remain pending or inactive; direct PDF delivery remains active.
 
+> Consent-linking preparation: the inert provider-hosted handoff is implemented without website-side personal-data collection. Production consent linking and all provider/Production activation remain pending separate owner approval.
+
 ## Backlog Rules
 
 - Keep tasks small enough for a single branch when possible.

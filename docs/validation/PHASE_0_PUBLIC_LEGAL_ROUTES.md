@@ -13,6 +13,8 @@ Required substantive legal changes: NONE
 Approved-mode source implementation: COMPLETE
 Approved-mode local QA: PASS
 Application privacy-link preparation: PASS
+Provider-hosted consent-linking inert code preparation: PASS
+Website personal-data collection or submission: ABSENT
 Owner approved-mode rendered review: PASS
 /privacidad desktop review: PASS
 /privacidad 390 px review: PASS

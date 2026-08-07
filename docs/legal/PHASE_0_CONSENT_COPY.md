@@ -14,6 +14,10 @@
 - Superficie de enlace de privacidad de la aplicacion: PREPARADA.
 - Implementacion de consentimiento en MailerLite Produccion: PENDIENTE.
 - Captura de leads en Produccion: INACTIVA.
+- Arquitectura aprobada: formulario alojado por MailerLite como unico sistema futuro de registro del consentimiento.
+- Preparacion inerte de la aplicacion: COMPLETA; la aplicacion solo presenta un enlace accesible en Preview cuando la configuracion existente lo habilita y no recopila, transmite ni conserva datos personales.
+- Copy aprobado: SIN CAMBIOS; la casilla obligatoria y desmarcada, su validacion y la evidencia pertenecen al formulario del proveedor.
+- Activacion de proveedor o Produccion: requiere aprobacion separada de la responsable.
 
 ## Casilla principal recomendada
 
