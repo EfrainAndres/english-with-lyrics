@@ -165,6 +165,23 @@ Rollback is limited to deleting this exact isolated draft and rechecking zero ne
 
 Recovery requires separate owner authorization for a safe provider-verification step or another already verified contact that is explicitly authorized for this QA. Do not create a subscriber, select an audience or activate delivery to bypass this gate.
 
+## 9C. Resumed controlled Preview test-send QA
+
+The blocked attempt in section 9B remains historical. The owner subsequently authorized exactly one recipient-verification message followed by exactly one provider test email to the same controlled QA inbox.
+
+- [x] Recipient-verification messages sent: one; verification completed without CAPTCHA, security prompt, additional approval or third message.
+- [x] Provider test emails sent and received: one.
+- [x] Additional messages: zero.
+- [x] Approved subject, hidden preheader, Spanish body, CTA and text-compatible structure verified in the received message.
+- [x] Preview-safe CTA destination verified without recording it.
+- [x] Provider footer, privacy treatment and unsubscribe treatment rendered. Provider test-message links retain their expected non-functional test limitation.
+- [x] Desktop readability and intrinsic 390 px containment passed without internal clipping or horizontal content overflow.
+- [x] Post-QA state: zero draft recipients, zero sent campaigns, zero outbox items and one unchanged isolated draft.
+- [x] No subscriber/contact, group assignment, segment, campaign audience, form action, automation trigger or Production email created.
+- [ ] Provider-failure simulation remains UNVERIFIED; no failure was manufactured.
+
+No rollback was required. This QA authorizes neither an audience send nor any Production activation.
+
 ## 10. Consent
 
 - [x] Repository preparation: approved checkbox copy documented unchanged and surfaced beside the inert provider-hosted Preview handoff.

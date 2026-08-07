@@ -196,7 +196,7 @@ Priority: High.
 - [x] Create the ebook delivery validation documentation.
 - [x] Add MailerLite manual configuration instructions for Email 1.
 - [ ] Configure Preview Email 1 in MailerLite.
-- [ ] Run Preview Email 1 QA. Current controlled attempt is BLOCKED before delivery because the authorized QA contact requires separate provider verification; completed test sends remain zero.
+- [x] Run Preview Email 1 QA. Final resumed result: PASS under the expanded two-message authorization boundary for one recipient-verification message and one provider test email; no additional message, subscriber, audience, form, automation or Production delivery was created. Historical initial attempt: BLOCKED before delivery with zero completed test sends.
 - [ ] Test unsubscribe from the delivery email.
 - [x] Confirm custom Production web domain readiness: `https://singpronuncerepeat.com` active, HTTPS verified, Vercel Production connection verified, Hostinger DNS connection verified, and `www` permanent redirect verified.
 - [x] Complete MailerLite domain-verification DNS.

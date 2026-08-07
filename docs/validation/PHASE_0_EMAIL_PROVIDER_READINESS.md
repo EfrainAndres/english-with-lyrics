@@ -36,6 +36,10 @@ Controlled Preview Email 1 test-send QA: BLOCKED BEFORE DELIVERY. The authorized
 
 Recovery requires separate owner direction for a verification-safe path. This result does not activate Email 1, delivery, lead capture, automation, Production or controlled rollout. Production consent linking and indexing remain PENDING; Production group/form, lead capture, Email 1, delivery and automation remain INACTIVE; controlled rollout remains PENDING; direct PDF delivery remains ACTIVE.
 
+Resumed controlled Preview Email 1 test-send QA: PASS. The prior BLOCKED attempt remains preserved as historical evidence. Under the owner's exact two-message authorization, one recipient-verification message and one provider test email were sent to the same controlled QA inbox; no additional message was sent. Delivery, approved subject, hidden preheader, Spanish body, CTA, text-compatible structure, provider footer, privacy treatment, desktop readability and intrinsic 390 px containment passed. The provider test-message unsubscribe treatment rendered with its expected non-functional test limitation. Post-QA counts remain zero for subscribers, draft recipients, sent campaigns, outbox items, group assignments, segments, campaign audiences, form submissions, automation triggers and Production emails; the single isolated draft remains unpublished and unchanged.
+
+Provider-failure simulation remains UNVERIFIED. This PASS does not activate Email 1 delivery, lead capture, automation, Production or controlled rollout. Production consent linking and indexing remain PENDING; Production group/form, lead capture, Email 1, delivery and automation remain INACTIVE; controlled rollout remains PENDING; direct PDF delivery remains ACTIVE.
+
 Provider-hosted form functional consent blocking: PASS
 
 Missing-consent feedback accessibility: KNOWN PROVIDER LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED
