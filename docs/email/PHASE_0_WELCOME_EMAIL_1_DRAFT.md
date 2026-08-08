@@ -174,16 +174,49 @@ Producción:
 | --- | --- |
 | Vinculación de consentimiento de Producción | PENDING |
 | Decisión de indexación de Producción | PENDING |
-| Grupo/formulario de Producción | INACTIVE |
+| Grupo/formulario de Producción | STAGED / INACTIVE desde la perspectiva del sitio |
 | Captura de leads de Producción | INACTIVE |
-| Email 1 de Producción | INACTIVE |
+| Email 1 de Producción | STAGED / INACTIVE |
 | Entrega de correo de Producción | INACTIVE |
-| Automatización de Producción | INACTIVE |
+| Automatización de Producción | STAGED / INACTIVE |
 | Despliegue controlado | PENDING |
 | Entrega directa del PDF | ACTIVE |
 
 La configuración del proveedor y cada envío de Preview o Producción requieren
 aprobación separada de la responsable.
+
+## Estado de staging en MailerLite Producción
+
+- Preparación de configuración: PASS.
+- Se creó exactamente un borrador de Email 1 dentro de exactamente una nueva
+  automatización de Producción correspondiente; ambos permanecen STAGED /
+  INACTIVE.
+- La automatización usa únicamente el grupo/formulario original de staging de
+  Producción, que permanece vacío, y registra cero contactos en curso o
+  completados.
+- El borrador conserva el asunto aprobado, el preencabezado, el cuerpo en
+  español, la CTA con alcance de Producción, la estructura compatible con texto
+  sin formato, el tratamiento de privacidad, el pie del proveedor y la
+  cancelación de suscripción.
+- Se reutilizó un remitente existente verificado sin crear ni modificar una
+  identidad de remitente.
+- Envíos de prueba, de campaña o de Producción: CERO. Destinatarios, audiencias,
+  suscriptores, envíos de formulario y conexiones adicionales: CERO.
+- No se vinculó el sitio público, no se agregó ningún valor a Vercel y no se
+  realizó ningún despliegue. La entrega directa del PDF permanece independiente
+  y ACTIVE.
+- Las limitaciones conocidas de feedback de consentimiento y de alcance directo
+  del formulario alojado siguen registradas; este staging no las resuelve ni
+  autoriza activación pública.
+
+Este registro posterior no modifica el alcance histórico de preparación y QA
+de Preview documentado a continuación. La vinculación final de consentimiento,
+la entrega, el despliegue controlado y la indexación de Producción siguen sin
+autorizarse.
+
+Rollback preparado: eliminar únicamente el nuevo borrador de Email 1 adjunto y
+la nueva automatización inactiva. No alterar el grupo/formulario ya staged ni
+ningún recurso existente de Preview o Producción.
 
 ## Estado de staging en MailerLite Preview
 
