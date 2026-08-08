@@ -70,11 +70,14 @@ Rights-request provider operations QA: PASS
 Production Email 1: STAGED / INACTIVE
 Production email delivery: INACTIVE
 Production automation: STAGED / INACTIVE
-Production automation contacts in progress/completed: ZERO / ZERO
-Production welcome email test/campaign/Production sends: ZERO / ZERO / ZERO
+Production automation contacts in progress/completed: ZERO / ONE retained history record
+Controlled automated Production Email 1 deliveries: ONE
+Production welcome email test/campaign/transactional sends: ZERO / ZERO / ZERO
 Production lead capture: INACTIVE
-Controlled rollout: PENDING
+Controlled Production test: FAIL — hosted-form redirect did not reach /gracias
+Corrective controlled retest and rollout: PENDING
 Direct PDF delivery: ACTIVE
+Controlled-test cleanup: PASS / EXECUTED
 Rollback: PREPARED / NOT EXECUTED
 Project-owner canonical Production legal review: PASS
 Final Production legal-publication acceptance gate: PASS
@@ -119,9 +122,10 @@ activation: final Production consent linking, group/form, lead capture, Email
 1, delivery, automation, controlled rollout and indexing retain their pending
 or inactive states, while direct PDF delivery remains active.
 
-Exactly one new isolated Production consent group and one matching
-provider-hosted form are staged and inactive from the website perspective with
-zero subscribers. The form
+Exactly one isolated Production consent group and one matching provider-hosted
+form remain staged and inactive from the website perspective with zero group
+subscribers after controlled cleanup. The form retains one non-personal
+registration. The form
 uses the approved consent wording unchanged, requires email, keeps name
 optional, presents one unchecked provider-required affirmative control, and
 links to the exact `/privacidad` destination. Provider-native form/source and
@@ -131,8 +135,11 @@ Double opt-in is disabled and single opt-in persisted after reload. MailerLite
 offers no native unpublish/deactivate state for this hosted form; possible
 reachability through its undistributed direct provider URL is an owner-accepted
 staging limitation only and does not authorize public linking or activation.
-No form was submitted, campaign or automation connected, email sent, public
-website or Vercel configuration changed, or Production deployment performed.
+The one authorized controlled submission verified consent blocking, one group
+assignment, one workflow entry and one automated Email 1. The form redirect
+FAILED because the provider-native success state rendered instead of
+`/gracias`; no second submission was attempted. No campaign, public website or
+Vercel configuration change, or Production deployment was performed.
 The known missing-consent feedback limitation is accepted only for this
 inactive Production staging state and remains tracked; it is not described as
 fixed, fully accessible, compliant, certified, harmless, or approved for public
@@ -141,16 +148,18 @@ automation, controlled rollout and indexing retain their pending or inactive
 states; direct PDF delivery remains active. Rollback is prepared and limited to
 deleting only the new empty Production form and group.
 
-Exactly one Production Email 1 draft is now staged inside exactly one matching
-inactive workflow. The workflow uses only the original empty staged Production
-group/form path and has zero contacts in progress or completed. The draft
+Exactly one Production Email 1 draft remains staged inside exactly one matching
+inactive workflow. The workflow uses only the isolated staged Production
+group/form path and has zero contacts in progress and one retained completed
+history record. The draft
 retains the approved Spanish subject, preheader, body, Production-scoped CTA,
 text-compatible fallback, privacy/footer and unsubscribe treatment with an
-existing verified sender that was not changed. No subscriber, audience, form
-submission, test send, campaign send, Production send, public-site link,
-Vercel value or deployment was created, and existing Preview and Production
-resources were not changed. This inactive staging does not authorize final
-consent linking, lead capture, email delivery, rollout or indexing. Direct PDF
+existing verified sender that was not changed. Exactly one authorized automated
+Production Email 1 was delivered; test, campaign, transactional and additional
+messages remained zero. Real unsubscribe and GDPR Forget returned the contact
+search and Production group to zero without changing Preview or unrelated
+Production resources. This inactive state does not authorize final consent
+linking, lead capture, active email delivery, rollout or indexing. Direct PDF
 delivery remains active and independent.
 
 Rollback is prepared and limited to deleting only the new attached Email 1

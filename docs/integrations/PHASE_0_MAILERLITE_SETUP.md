@@ -240,8 +240,9 @@ If double opt-in is later enabled, the journey, consent docs, and automation ass
 ## Automation setup design
 
 - Production status: exactly one workflow STAGED / INACTIVE, mapped only to the staged Production group/form path and the attached Email 1 draft.
-- Production contacts in progress/completed: ZERO / ZERO.
-- Production test, campaign and Production sends: ZERO / ZERO / ZERO.
+- Production contacts in progress/completed: ZERO / ONE retained non-personal controlled-test history record.
+- Controlled affirmative submissions, group assignments and automated Production Email 1 deliveries: ONE / ONE / ONE.
+- Test-email, campaign and transactional sends: ZERO / ZERO / ZERO; sent campaigns and outbox remain zero.
 - Preview equivalent remains isolated and unchanged.
 
 Intended structure:
@@ -276,7 +277,7 @@ Email 1 is the only staged Production message. Emails 2–4 remain documentation
 - Preview subject must keep `[TEST]`.
 - Delivery continues to use a stable page link, not a PDF attachment.
 - Four-email timing outline is documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
-- Preview verification is complete; Production Email 1 is staged and unsent in the inactive Production workflow.
+- Preview verification is complete; Production Email 1 remains staged in the inactive Production workflow after exactly one authorized automated controlled delivery.
 
 ### Emails 2-4
 
@@ -375,7 +376,8 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 
 - Obtain explicit owner authorization for Production collection and the controlled rollout.
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
-- Run one minimum-boundary controlled Production submission before any public promotion and verify group assignment, `/gracias`, Email 1 delivery, unsubscribe, zero unexpected contacts/sends, and rollback controls.
+- Correct and verify the hosted Production form redirect without a submission. The first controlled test FAILED because the provider-native success state rendered instead of `/gracias`.
+- Obtain separate owner authorization for one corrective Production retest; verify the form redirect itself, one group assignment, one Email 1 delivery, unsubscribe, zero unexpected contacts/sends, cleanup and retained-history counters before public promotion.
 - Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for activation.
 - Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
 - Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.

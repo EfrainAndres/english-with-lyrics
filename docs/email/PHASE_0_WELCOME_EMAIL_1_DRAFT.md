@@ -2,15 +2,15 @@
 
 ## Estado y límites
 
-- Estado del contenido: DRAFT.
+- Estado del contenido: APPROVED DRAFT / STAGED.
 - Estado de activación: INACTIVE.
-- Alcance: preparación exclusivamente documental para una futura prueba de envío solo en Preview.
-- Este borrador no autoriza un formulario, grupo, automatización, entrega, remitente, suscriptor, configuración del proveedor ni activación de Producción.
+- Alcance: referencia canónica verificada en Preview y en exactamente una entrega automatizada controlada de Producción.
+- Este borrador no autoriza vinculación pública, configuración de Vercel, otra entrega, otro suscriptor ni activación de Producción.
 - La entrega directa del PDF permanece ACTIVE e independiente del consentimiento promocional o de este correo.
 
-Este documento es una referencia de contenido futuro. No modifica la
-configuración histórica de Preview ni los registros de QA controlado existentes
-en el repositorio.
+Este documento es la referencia canónica del contenido staged. Su verificación
+controlada no modifica la configuración histórica de Preview ni autoriza otra
+entrega o activación.
 
 ## Propósito
 
@@ -192,16 +192,26 @@ aprobación separada de la responsable.
   automatización de Producción correspondiente; ambos permanecen STAGED /
   INACTIVE.
 - La automatización usa únicamente el grupo/formulario original de staging de
-  Producción, que permanece vacío, y registra cero contactos en curso o
-  completados.
+  Producción, cuyo grupo volvió a cero después del cleanup, y registra cero
+  contactos en curso y un registro completado no personal.
 - El borrador conserva el asunto aprobado, el preencabezado, el cuerpo en
   español, la CTA con alcance de Producción, la estructura compatible con texto
   sin formato, el tratamiento de privacidad, el pie del proveedor y la
   cancelación de suscripción.
 - Se reutilizó un remitente existente verificado sin crear ni modificar una
   identidad de remitente.
-- Envíos de prueba, de campaña o de Producción: CERO. Destinatarios, audiencias,
-  suscriptores, envíos de formulario y conexiones adicionales: CERO.
+- La prueba controlada entregó exactamente un Email 1 automatizado después de
+  una sola asignación y una sola entrada al workflow. Envíos de prueba, de
+  campaña, transaccionales o adicionales: CERO.
+- El asunto aprobado, preencabezado oculto, cuerpo en español, CTA de
+  Producción, alternativa compatible con texto, privacidad/pie y cancelación
+  de suscripción recibidos: PASS. El CTA abrió `/gracias` y la cancelación real
+  funcionó sin generar otro mensaje.
+- El redirect del formulario alojado: FAIL. Se mostró el estado de éxito nativo
+  del proveedor en lugar de `/gracias`; no se realizó un segundo envío.
+- El contacto controlado se dio de baja y se sometió a GDPR Forget. El grupo y
+  la búsqueda de contactos volvieron a cero; el formulario y el workflow
+  retienen un registro y un completado no personales, respectivamente.
 - No se vinculó el sitio público, no se agregó ningún valor a Vercel y no se
   realizó ningún despliegue. La entrega directa del PDF permanece independiente
   y ACTIVE.
@@ -211,8 +221,8 @@ aprobación separada de la responsable.
 
 Este registro posterior no modifica el alcance histórico de preparación y QA
 de Preview documentado a continuación. La vinculación final de consentimiento,
-la entrega, el despliegue controlado y la indexación de Producción siguen sin
-autorizarse.
+la entrega activa, el retest correctivo, el despliegue controlado y la
+indexación de Producción siguen sin autorizarse.
 
 Rollback preparado: eliminar únicamente el nuevo borrador de Email 1 adjunto y
 la nueva automatización inactiva. No alterar el grupo/formulario ya staged ni

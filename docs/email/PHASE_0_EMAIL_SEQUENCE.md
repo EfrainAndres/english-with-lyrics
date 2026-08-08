@@ -5,8 +5,9 @@
 - Sequence status: Email 1 staged; Emails 2–4 remain planned only.
 - Content status: approved Email 1 verified in Preview and staged in exactly one inactive Production workflow.
 - Emails 2–4: Outline only.
-- Production Email 1 and workflow: STAGED / INACTIVE / UNSENT, with zero contacts in progress or completed.
+- Production Email 1 and workflow: STAGED / INACTIVE after one authorized automated controlled delivery; zero contacts are in progress and one non-personal completed history record is retained.
 - Production activation and delivery: INACTIVE.
+- Controlled Production funnel test: FAIL because the provider-hosted form did not redirect to `/gracias`; a separately authorized corrective retest remains required before public linking.
 
 ## Sequence overview
 
@@ -113,4 +114,4 @@ Content direction:
 - Keep consent scope aligned with the approved Phase 0 model.
 - Keep Preview and Production automations separate.
 - The published legal routes, completed professional/provider reviews, verified sender, and available `/gracias` route are readiness evidence; they do not activate the sequence.
-- Do not activate the Production sequence until the separate owner authorization, controlled Production test, provider accessibility/direct-reachability acceptance, analytics-dashboard check, indexing decision, and 10-subscriber/72-hour rollout gates pass.
+- Do not activate the Production sequence until a separately authorized corrective controlled retest passes the form redirect, provider accessibility/direct-reachability acceptance is recorded, the analytics dashboard is verified, the indexing decision is made, and the 10-subscriber/72-hour rollout gate is approved.
