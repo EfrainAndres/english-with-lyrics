@@ -10,7 +10,7 @@
 
 Production is not ready. This status means the isolated provider-hosted Preview workflow has been verified manually without activating any public-site integration or Production identifiers.
 
-Inert website preparation for provider-hosted consent linking is complete: Production still renders no lead-capture surface, and an explicitly configured non-Production handoff displays the unchanged approved copy and `/privacidad` link without collecting or submitting personal data. MailerLite remains the sole future system of record for its required unchecked checkbox, validation, consent version/source/timestamp evidence, subscriber state and suppression state. Provider configuration and Production activation require separate owner approval.
+Website support for provider-hosted consent linking is complete and fail-closed: Preview keeps its isolated behavior, while Production renders no lead-capture surface unless its dedicated configuration is present and valid. Even when configured, the website renders only the external handoff plus the unchanged approved disclosure and exact `/privacidad` link; it never renders native email/name inputs or handles personal data. MailerLite remains the sole future system of record for its required unchecked checkbox, validation, consent version/source/timestamp evidence, subscriber state and suppression state. Merging this support does not configure Vercel or activate Production.
 
 Implementation review approval: PASS. The provider-hosted handoff preparation is approved for merge without activating Production consent linking, collection, Email 1, delivery, automation, rollout or indexing.
 
@@ -84,7 +84,7 @@ Production readiness: NO-GO FOR PRODUCTION
 | MailerLite DKIM | VERIFIED |
 | MailerLite domain authentication | VERIFIED |
 | MailerLite sender-domain readiness | VERIFIED FOR CONTROLLED TESTING |
-| MailerLite sender verification | PENDING |
+| MailerLite sender verification | VERIFIED; existing sender reused unchanged for staged Production Email 1 |
 | Post-authentication Hostinger inbound regression | PASS |
 | Post-authentication Hostinger outbound regression | PASS |
 | Post-authentication bounce check | PASS |
@@ -134,7 +134,6 @@ Still requiring account-level verification:
 - Exact consent evidence preserved by the intended embedded-form setup.
 - Subscriber deletion workflow for the final operating model.
 - Preview/test-account handling beyond separate forms and groups.
-- Sender-verification flow for the chosen mailbox.
 - Retention after account termination in the exact subscribed plan and operating context.
 
 ## Account readiness
@@ -144,10 +143,10 @@ Still requiring account-level verification:
 | Account created | Verified manually |
 | Owner verification | Pending manual verification |
 | MFA | Verified manually |
-| Final sender identity | Verified manually for Hostinger mailbox; pending for MailerLite Production sender |
+| Final sender identity | Existing sender verified and reused unchanged for the staged Production draft; delivery inactive |
 | Professional mailbox created | Verified manually |
 | Webmail login | Verified manually |
-| Branded mailbox | Verified manually for Hostinger privacy contact; pending for MailerLite Production sender |
+| Branded mailbox | Verified manually; staged Production delivery remains inactive |
 | Privacy mailbox operational | Verified manually |
 | Controlled inbound email received | Verified manually |
 | Controlled outbound reply delivered | Verified manually |
@@ -172,13 +171,13 @@ Still requiring account-level verification:
 | MailerLite SPF authorization retained | Verified manually |
 | MailerLite authentication completed | Verified manually |
 | Domain authenticated | Verified manually for Hostinger mailbox and MailerLite sender-domain testing |
-| DPA reviewed | Pending manual verification |
-| Sub-processors reviewed | Pending manual verification |
-| Processing locations reviewed | Pending manual verification |
-| Export tested | Pending manual verification |
-| Correction tested | Pending manual verification |
-| Deletion tested | Pending manual verification |
-| Unsubscribe tested | Pending manual verification |
+| DPA reviewed | PASS in completed provider contractual review |
+| Sub-processors reviewed | PASS in completed provider contractual review |
+| Processing locations reviewed | PASS in completed provider legal-classification review |
+| Export tested | PASS for isolated Preview rights-request QA |
+| Correction tested | PASS for isolated Preview rights-request QA |
+| Deletion tested | PASS for isolated Preview rights-request QA |
+| Unsubscribe tested | PASS for controlled Preview delivery QA |
 
 ## Preview readiness
 
@@ -211,12 +210,12 @@ Still requiring account-level verification:
 | PDF access | VERIFIED |
 | Real unsubscribe | VERIFIED |
 | No Production workflow involved | VERIFIED |
-| Export | PENDING |
-| Correction | PENDING |
-| Deletion | PENDING |
-| Inbox placement | PENDING |
+| Export | PASS for isolated rights-request QA |
+| Correction | PASS for isolated rights-request QA |
+| Deletion | PASS for isolated rights-request QA |
+| Inbox placement | PASS for controlled consumer tests; corporate Outlook limitation remains open |
 | Domain authentication | VERIFIED |
-| MailerLite sender verification | PENDING |
+| MailerLite sender verification | VERIFIED |
 | MailerLite domain verification | VERIFIED |
 | MailerLite SPF | VERIFIED |
 | MailerLite DKIM verification | VERIFIED |
@@ -280,7 +279,7 @@ Notes:
 - No new DNS or sender-address change is recommended at this stage.
 - Production Email 1, Production automation, Production lead capture, controlled Production rollout, and Production email delivery remain pending/inactive.
 - Production deliverability remains blocked.
-- Provider due diligence remains incomplete.
+- Professional provider due diligence is complete; operating-plan retention and the corporate Outlook placement limitation remain tracked separately.
 
 ## Footer and privacy finding
 
@@ -291,30 +290,16 @@ Notes:
 - Footer language was adjusted or reviewed where supported.
 - No personal email addresses, IP addresses, subscriber details, or screenshots are stored in this repository.
 
-## Production blockers
+## Remaining Production activation gates
 
-- Responsible-party details.
-- MailerLite sender verification.
-- Public privacy route.
-- Applicable public treatment-policy route.
-- Professional legal approval.
-- MailerLite due diligence.
-- Approved business/footer address.
-- Production MailerLite group.
-- Production form.
-- Production MailerLite automation.
-- `/gracias`.
-- Production Email 1.
-- Gmail inbox-placement QA.
-- Outlook delivery QA.
-- Spam-placement review.
-- Export test.
-- Correction test.
-- Deletion test.
-- Inbox-placement QA.
-- Funnel event analytics.
-- Production/Preview isolation test on deployed site.
-- Controlled rollout approval.
+- Technical: add the Production-scoped handoff configuration only in the authorized activation task, verify environment isolation, and keep malformed or missing configuration fail-closed.
+- Owner authorization: approve Production collection, the controlled test window, automation activation, Email 1 delivery, and rollback authority.
+- Controlled test: before public promotion, submit exactly one authorized controlled contact and verify its one expected group assignment, one Email 1 delivery, `/gracias`, direct PDF independence, unsubscribe, zero unexpected contacts/sends, and rollback readiness.
+- Accessibility/legal activation acceptance: explicitly accept or resolve the tracked provider-native missing-consent feedback and undistributed direct-provider-reachability limitations; staging acceptance alone is insufficient.
+- Deliverability: explicitly accept, resolve, or continue monitoring the open corporate Outlook placement limitation before broad rollout.
+- Analytics: verify the approved dashboard without adding personal-data payloads, cookies or tracking parameters.
+- Indexing: make the separate Production `noindex` decision.
+- Rollout: approve the 10-subscriber boundary, monitor for 72 hours, and expand only after the gate review passes.
 
 ## Go/no-go decision
 
@@ -323,4 +308,4 @@ Preview decision: READY FOR CONTROLLED PREVIEW
 Production decision: NO-GO FOR PUBLIC ACTIVATION
 
 Reason:
-The provider-hosted Preview form, isolated group, functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, single opt-in, original real automation Email 1, authenticated-sender Email 1 regression, Preview-only CTA, fallback URL, `/gracias?source=email`, PDF access, subscriber-specific unsubscribe flow, post-authentication Hostinger mailbox regression, and MailerLite domain authentication were verified. Exactly one isolated Production group/form is now staged and inactive from the website perspective with zero subscribers, single opt-in, and no public or delivery connection. MailerLite's lack of a native unpublish/deactivate state and possible undistributed direct provider-URL reachability are owner-accepted for staging only. The MailerLite-native missing-consent feedback limitation remains tracked; provider-failure simulation remains UNVERIFIED. Production consent linking, lead capture, Email 1, delivery, automation, controlled rollout, and indexing remain pending or inactive, direct PDF delivery remains active, and this record does not authorize Production activation.
+The provider-hosted Preview workflow, published legal routes, professional/provider reviews, existing verified sender, `/gracias`, rights-request QA and direct PDF path have passed their recorded checks. Exactly one isolated Production group/form and one matching Email 1/workflow path are staged and inactive with zero subscribers, contacts and sends. Production website support is prepared but remains unconfigured and fail-closed. The provider-native accessibility and direct-reachability limitations are accepted only for staging; Production configuration, controlled testing, activation acceptance, analytics-dashboard verification, indexing, and the 10-subscriber/72-hour rollout remain separate gates. Direct PDF delivery remains active and independent.

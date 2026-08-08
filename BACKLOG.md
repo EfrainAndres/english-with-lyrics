@@ -148,11 +148,11 @@ Priority: High.
 - [x] Complete Production environment configuration. Result: PASS; ten `LEGAL_*` variables set for the Production scope only and verified by name and scope; no values stored in the repository.
 - [x] Publish the approved legal policies in Production and run canonical smoke QA. Result: PASS; both routes HTTP 200 in approved mode, `noindex, nofollow` retained, containment PASS on desktop and 390 px with no horizontal overflow.
 - [x] Complete the project-owner canonical Production legal review. Result: PASS on desktop and 390 px for both routes directly against the canonical Production origin; no horizontal overflow.
-- [x] Record final Production legal-publication acceptance. Result: PASS; Production legal policies are LIVE / ACCEPTED. PR #64 approved for merge; not merged.
-- [x] Create `/privacidad` with safe pending, draft and approved rendering. Production publication remains pending. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
-- [x] Create `/tratamiento-de-datos` with safe pending, draft and approved rendering. Production publication remains pending.
+- [x] Record final Production legal-publication acceptance. Result: PASS; Production legal policies are LIVE / ACCEPTED and PR #64 is merged.
+- [x] Create `/privacidad` with safe pending, draft and approved rendering. Production publication is LIVE / ACCEPTED and remains `noindex, nofollow` pending the separate indexing decision. See `docs/validation/PHASE_0_PUBLIC_LEGAL_ROUTES.md`.
+- [x] Create `/tratamiento-de-datos` with safe pending, draft and approved rendering. Production publication is LIVE / ACCEPTED and remains `noindex, nofollow` pending the separate indexing decision.
 - [x] Confirm the operational privacy mailbox and document the draft contact/privacy-request workflow.
-- [ ] Test the complete rights-request workflow, including provider export, correction and deletion operations.
+- [x] Test the isolated rights-request workflow, including provider export, correction and deletion operations. Result: PASS with the Preview-only test contact removed.
 - [x] Complete MailerLite due diligence and international-processing review within the professional provider review. Result: no changes requested.
 - [x] Verify current official MailerLite capabilities required for the selected provider direction.
 - [x] Define the MailerLite group taxonomy.
@@ -162,7 +162,7 @@ Priority: High.
 - [x] Create the provider readiness document.
 - [x] Create the MailerLite manual setup checklist.
 - [ ] Verify current official plan details for the selected email provider.
-- [ ] Complete MailerLite account approval and sender setup.
+- [x] Complete MailerLite account approval and sender setup. Result: existing sender VERIFIED and reused unchanged for staged Production Email 1; Production sending remains inactive.
 - [x] Complete MailerLite DPA review within the professional provider review. Result: no changes requested.
 - [x] Complete MailerLite sub-processor and provider-relationship review within the professional provider review. Result: no changes requested.
 - [x] Complete MailerLite domain authentication.
@@ -176,14 +176,15 @@ Priority: High.
 - [x] Record the owner-accepted staging limitation that MailerLite has no native unpublish/deactivate state and the undistributed direct provider URL may remain reachable; this does not authorize public linking or activation.
 - [x] Create exactly one isolated Production automation in MailerLite. Result: STAGED / INACTIVE / ZERO ENROLLED OR COMPLETED CONTACTS / ZERO EMAILS SENT; trigger limited to the original empty staged Production group/form path.
 - [x] Add the runtime environment resolver.
-- [x] Add the safe Preview-form resolver.
+- [x] Add the safe Preview-form resolver and preserve isolated Preview behavior.
+- [x] Add fail-closed Production form resolution: a dedicated valid Production-scoped URL is required; absent, blank, malformed or unsupported values render no lead-capture surface.
 - [x] Add the reusable lead-capture component.
 - [x] Add `/ebook-gratis` Preview integration.
 - [x] Add the local disabled state.
 - [x] Preserve Production direct-delivery behavior.
 - [x] Create the lead-capture validation documentation.
-- [ ] Add the reusable lead form to `/` and `/ebook-gratis`.
-- [ ] Implement the explicit unchecked consent UI.
+- [x] Add the reusable provider-hosted handoff to `/ebook-gratis`; keep homepage placement outside the current approved scope.
+- [x] Keep the explicit unchecked consent control in the staged provider-hosted form; do not add native personal-data fields or consent handling to the website.
 - [x] Create `/gracias` as the immediate post-registration delivery page.
 - [x] Add the immediate download action.
 - [x] Add the open-in-browser action.
@@ -200,9 +201,9 @@ Priority: High.
 - [x] Define the four-email sequence outline.
 - [x] Create the ebook delivery validation documentation.
 - [x] Add MailerLite manual configuration instructions for Email 1.
-- [ ] Configure Preview Email 1 in MailerLite.
+- [x] Configure and verify Preview Email 1 in MailerLite.
 - [x] Run Preview Email 1 QA. Final resumed result: PASS under the expanded two-message authorization boundary for one recipient-verification message and one provider test email; no additional message, subscriber, audience, form, automation or Production delivery was created. Historical initial attempt: BLOCKED before delivery with zero completed test sends.
-- [ ] Test unsubscribe from the delivery email.
+- [x] Test unsubscribe from the controlled Preview delivery email.
 - [x] Confirm custom Production web domain readiness: `https://singpronuncerepeat.com` active, HTTPS verified, Vercel Production connection verified, Hostinger DNS connection verified, and `www` permanent redirect verified.
 - [x] Complete MailerLite domain-verification DNS.
 - [x] Configure combined Hostinger/MailerLite SPF.
@@ -230,14 +231,17 @@ Priority: High.
 - [x] Complete Production PDF smoke test for the regenerated 21-page ebook.
 - [x] Configure exactly one Production Email 1 draft attached only to the new inactive workflow. Result: STAGED / INACTIVE / UNSENT; approved Spanish content, preheader, Production-scoped CTA, text-compatible fallback, privacy footer and unsubscribe treatment retained.
 - [ ] Activate the Production sequence only after approval.
-- [ ] Document inbox-placement results.
+- [x] Document controlled consumer inbox-placement results and the open corporate Outlook limitation.
 - [ ] Restructure landing conversion hierarchy around the new lead form.
 - [ ] Add exact funnel-event analytics when approved tooling exists.
-- [ ] Test provider export, correction, unsubscribe, suppression, and deletion.
+- [x] Test provider export, correction, unsubscribe, and deletion in isolated Preview QA; keep suppression/reactivation behavior as a separate tracked follow-up.
 - [ ] Configure the MailerLite Preview redirect to `/gracias`.
 - [x] Run deployed Preview QA.
 - [ ] Run rollback QA and production-readiness review.
-- [ ] Complete controlled production rollout only after all privacy gates pass.
+- [ ] Complete one authorized controlled Production test before public promotion and verify the exact group, Email 1, `/gracias`, direct PDF independence, unsubscribe, zero unexpected contacts/sends, and rollback readiness.
+- [ ] Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for Production activation.
+- [ ] Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
+- [ ] Complete the 10-subscriber Production rollout and 72-hour monitoring window only after all activation gates pass.
 
 Acceptance criteria:
 
@@ -246,7 +250,7 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy publication readiness status: legal-owner architecture, internal/owner draft review, professional Colombian legal review and provider contractual/DPA review are complete; no substantive changes were requested. State-aware `approved` source implementation, local three-state QA and application privacy-link preparation pass. The project owner has now completed the approved-mode rendered review on the branch-specific protected Preview: both legal routes pass on desktop and at 390 px with no horizontal overflow, approved-mode content is correct, `noindex, nofollow` holds, personal values are absent from metadata and Open Graph, and the `/ebook-gratis` privacy link and `/gracias` regression pass. The approved-mode Preview readiness gate passed and PR #63 merged at `a09623178b41901a13cb799336dc0ae994a83e3e`. The approved policies are now configured and published on the canonical Production origin: Production legal environment configuration, Production deployment and canonical Production legal-route smoke QA all pass, both routes render approved mode with a structurally populated responsible-party section and valid dates, no draft or pending notices, no certification or guaranteed-compliance claim, no personal value in metadata or Open Graph, no raw environment name or placeholder token, retained `noindex, nofollow`, and clean containment on desktop and at 390 px with no horizontal overflow. The ebook and thank-you regression passes and the Production-served PDF hash is unchanged. Rollback is PREPARED / NOT EXECUTED. The project owner then completed a canonical Production review directly against the live origin: both legal routes pass desktop and 390 px visual review with no horizontal overflow, approved-mode content and metadata privacy pass, and the pre-existing absence of a reverse `/tratamiento-de-datos` to `/privacidad` link is accepted as expected behavior. The project-owner canonical Production legal review is PASS, the final Production legal-publication acceptance gate is PASS, and the Production legal policies are LIVE / ACCEPTED. PR #64 is approved for merge but has not been merged. Legal publication does not activate the funnel and does not constitute certification or guaranteed compliance. Production indexing decision, MailerLite consent control/linking, rights-request provider operations QA and controlled rollout remain pending. Production Email 1, email delivery, automation and lead capture remain inactive; direct PDF delivery remains active. See:
+Privacy publication readiness status: legal-owner architecture, internal/owner draft review, professional Colombian legal review and provider contractual/DPA review are complete; no substantive changes were requested. State-aware `approved` source implementation, local three-state QA and application privacy-link preparation pass. The approved policies are configured, published and owner-accepted on the canonical Production origin; both legal routes and `/gracias` pass their recorded desktop, 390 px, content, metadata and regression checks while `noindex, nofollow` remains in place. Rights-request provider operations QA also passes. Exactly one isolated Production group/form, Email 1 and matching automation are STAGED / INACTIVE with zero subscribers, contacts and sends. Fail-closed website support is prepared, but Production form configuration and public linking remain absent; merging support does not activate the funnel. Production configuration, one controlled test before public promotion, explicit activation acceptance of the provider-native accessibility/direct-reachability limitations, Email 1 delivery, automation activation, analytics-dashboard verification, the indexing decision, and the 10-subscriber/72-hour rollout remain separate gates. Direct PDF delivery remains ACTIVE and independent. See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`

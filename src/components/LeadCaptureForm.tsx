@@ -3,18 +3,23 @@ import { privacyPath } from "@/lib/links";
 
 const approvedConsentCopy =
   "Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronunce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.";
+const previewProviderCopy =
+  "Este acceso controlado abre el formulario verificado de MailerLite para Preview. MailerLite mantiene el correo, el nombre opcional, el consentimiento, la validación y la automatización de prueba.";
+const productionProviderCopy =
+  "Este acceso abre el formulario verificado alojado por MailerLite. MailerLite mantiene el correo, el nombre opcional, el consentimiento, la validación y el flujo de bienvenida.";
 
 export function LeadCaptureForm() {
   const config = getLeadFormConfig();
 
   if (
-    config.status === "disabled" &&
-    config.environment === "production"
+    config.environment === "production" &&
+    config.status !== "enabled"
   ) {
     return null;
   }
 
-  const isPreviewEnabled = config.status === "enabled";
+  const isHandoffEnabled = config.status === "enabled";
+  const isPreview = config.environment === "preview";
 
   return (
     <section
@@ -41,7 +46,7 @@ export function LeadCaptureForm() {
               PDF de 32 páginas · 3 canciones · 9 prácticas
             </p>
 
-            {config.environment === "preview" ? (
+            {isPreview ? (
               <p
                 className="mt-5 border border-purple/35 bg-purple/10 px-4 py-3 text-sm font-bold text-purple"
                 role="status"
@@ -62,16 +67,15 @@ export function LeadCaptureForm() {
           </div>
 
           <div className="min-w-0 border border-white/10 bg-ink/70 p-5">
-            {isPreviewEnabled ? (
+            {isHandoffEnabled ? (
               <>
                 <p className="text-sm font-bold uppercase text-purple">
-                  Formulario de pruebas
+                  {isPreview
+                    ? "Formulario de pruebas"
+                    : "Formulario para recibir la guía"}
                 </p>
                 <p className="mt-3 leading-7 text-soft">
-                  Este acceso controlado abre el formulario verificado de
-                  MailerLite para Preview. MailerLite mantiene el correo, el
-                  nombre opcional, el consentimiento, la validación y la
-                  automatización de prueba.
+                  {isPreview ? previewProviderCopy : productionProviderCopy}
                 </p>
                 <a
                   aria-describedby="provider-hosted-consent-details"
@@ -129,7 +133,7 @@ export function LeadCaptureForm() {
                 </p>
               </>
             )}
-            {!isPreviewEnabled ? (
+            {!isHandoffEnabled ? (
               <p className="mt-4 break-words text-sm leading-7 text-soft">
                 El consentimiento explícito se gestionará únicamente dentro del
                 formulario alojado por MailerLite; este sitio no lo recopila ni lo
