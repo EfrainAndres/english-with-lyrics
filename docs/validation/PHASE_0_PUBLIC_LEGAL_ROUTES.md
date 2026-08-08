@@ -14,6 +14,7 @@ Approved-mode source implementation: COMPLETE
 Approved-mode local QA: PASS
 Application privacy-link preparation: PASS
 Provider-hosted consent-linking inert code preparation: PASS
+Production website handoff support: PREPARED / FAIL-CLOSED / NOT CONFIGURED
 Isolated provider-hosted Preview consent form: CONFIGURED
 Isolated provider-hosted Production consent group/form: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / ZERO SUBSCRIBERS
 Production provider form public-site or Vercel link: ABSENT
@@ -60,6 +61,7 @@ Production approved-mode content: PASS
 Production noindex, nofollow: PASS
 Production metadata privacy: PASS
 Production ebook and thank-you regression: PASS
+/gracias availability: PASS
 Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
 Production indexing decision: PENDING
 Production MailerLite group/form: STAGED / INACTIVE
@@ -77,7 +79,7 @@ Rollback: PREPARED / NOT EXECUTED
 Project-owner canonical Production legal review: PASS
 Final Production legal-publication acceptance gate: PASS
 Production legal policies: LIVE / ACCEPTED
-PR #64: APPROVED FOR MERGE — NOT MERGED
+PR #64 merge: PASS
 Consent gate: BLOCKED
 ```
 
@@ -88,6 +90,17 @@ compliance. Lead capture, Email 1, email
 delivery and automation remain inactive; direct PDF delivery remains the active
 delivery path. The published policies remain `noindex, nofollow` pending an
 explicit Production indexing decision.
+
+The fail-closed Production handoff support also does not activate the funnel.
+With absent, blank, malformed or unsupported Production configuration, the
+entire lead-capture surface is omitted. A valid future Production-scoped value
+can expose only the external provider handoff with the approved disclosure and
+exact `/privacidad` link; it cannot add native personal-data fields or affect
+the independent direct PDF path. Vercel configuration, a controlled Production
+test before public promotion, explicit activation acceptance of the tracked
+provider-native accessibility/direct-reachability limitations, Email 1
+delivery, automation activation, analytics-dashboard verification, the
+indexing decision, and the 10-subscriber/72-hour rollout remain separate gates.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That

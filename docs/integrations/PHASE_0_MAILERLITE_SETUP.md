@@ -3,8 +3,8 @@
 ## Status
 
 - Provider: MailerLite.
-- Role: Proposed Phase 0 email processor.
-- Environment: Non-production preparation.
+- Role: Selected Phase 0 email processor.
+- Environment: isolated Preview verification plus inactive Production staging.
 - Production activation: Blocked.
 - Account creation: Manual.
 - Authenticated domain: `singpronuncerepeat.com`.
@@ -13,11 +13,11 @@
 - DKIM: VERIFIED.
 - Sending-domain authentication: VERIFIED.
 - Production sending: INACTIVE.
-- Legal approval: Pending.
+- Professional legal and provider review: COMPLETE; Production collection still requires explicit activation acceptance.
 - Public lead capture: Not active.
 - Current direct ebook delivery: Active.
 
-This document prepares the provider boundary for the approved soft-gated funnel. It does not activate lead capture, `/gracias`, production automations, or production email sends.
+This document defines the provider boundary for the approved soft-gated funnel. `/gracias` and direct PDF delivery are already available independently. The staged group/form, Email 1 and automation remain inactive, and this repository preparation does not activate lead capture or Production email sends.
 
 MailerLite sending-domain authentication has been completed for `singpronuncerepeat.com`. Hostinger remains the authoritative DNS provider. Hostinger and MailerLite coexist in a single apex SPF record; only one record beginning with `v=spf1` should exist at the apex. Hostinger and MailerLite DKIM records coexist using different selectors. Hostinger MX, DMARC, autoconfig, autodiscover, Vercel web DNS, and the canonical web domain remain preserved.
 
@@ -48,7 +48,7 @@ Only capabilities verified from current official MailerLite documentation are ma
 | API availability | No for initial implementation | Yes | Verified | Official developer docs exist for subscribers, groups, fields, automations, forms, and webhooks. |
 | API authentication | No for initial implementation | Yes | Verified | Official developer docs require a bearer token generated in MailerLite. |
 | Domain authentication | Yes | Yes | Verified | Official help documents domain authentication and DNS records. |
-| Sender verification | Yes | Partial | Partially verified | Official help documents sender/domain steps, but exact sender approval flow for the target mailbox remains a manual task. |
+| Sender verification | Yes | Yes | Verified manually | The existing verified sender is used by the staged Production Email 1 and was not changed during staging. |
 | Automation logs | Yes | Yes | Verified | Official help documents automation history. |
 | Delivery/open/click reporting | Yes | Yes | Verified | Official help and automation stats document sent, bounce, open, and click reporting. |
 | DPA | Yes | Yes | Verified | Official Data Processing Addendum is publicly available. |
@@ -149,7 +149,7 @@ Provider-native field names beyond `email` and `name` should be verified in the 
 ### Preview form
 
 - Internal name: `SPR - Preview - Ebook Lead Form`
-- Status: Planned, manual dashboard setup pending.
+- Status: VERIFIED / isolated from Production.
 
 Requirements:
 
@@ -157,8 +157,7 @@ Requirements:
 - Clearly marked `TEST` in the internal name and visible form treatment.
 - Uses test branding or a visible Preview warning.
 - Does not enter Production automation.
-- Uses Preview `/gracias` only after that route exists.
-- Until `/gracias` exists, uses a provider confirmation or another approved safe placeholder.
+- Uses only the verified Preview thank-you flow.
 - Must not use Production group IDs.
 - Must not be promoted publicly.
 - Accepts only controlled test addresses during QA.
@@ -167,16 +166,16 @@ Requirements:
 ### Production form
 
 - Internal proposed name: `SPR - Production - Ebook Lead Form`
-- Status: `Not active`
+- Status: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / UNLINKED / ZERO SUBSCRIBERS.
 
 Requirements:
 
 - Assigned to `SPR - Production - Ebook Leads`.
 - Uses approved consent copy.
-- Redirects to `https://singpronuncerepeat.com/gracias?source=ebook` only after `/gracias` exists and passes QA.
+- Uses the already available `/gracias` route only after the final redirect mapping is reverified during controlled activation.
 - Uses the approved public privacy-policy URL.
 - Triggers Email 1 only after complete Preview and production-readiness QA.
-- Remains unpublished or inactive until all production blockers are cleared.
+- Remains unlinked from the website until all activation gates are cleared. The provider has no native unpublish state, so undistributed direct-provider reachability and the tracked missing-consent feedback limitation require explicit activation acceptance.
 
 ## Consent mapping
 
@@ -240,9 +239,10 @@ If double opt-in is later enabled, the journey, consent docs, and automation ass
 
 ## Automation setup design
 
-- Internal name: `SPR - Phase 0 - Ebook Delivery and Nurture`
-- Trigger: `Subscriber joins SPR - Production - Ebook Leads`
-- Preview equivalent: `SPR - Preview - Ebook Delivery TEST`
+- Production status: exactly one workflow STAGED / INACTIVE, mapped only to the staged Production group/form path and the attached Email 1 draft.
+- Production contacts in progress/completed: ZERO / ZERO.
+- Production test, campaign and Production sends: ZERO / ZERO / ZERO.
+- Preview equivalent remains isolated and unchanged.
 
 Intended structure:
 
@@ -257,7 +257,7 @@ Trigger: subscriber joins group
 → Email 4
 ```
 
-This branch documents the automation only. It must not activate the Production automation.
+Email 1 is the only staged Production message. Emails 2–4 remain documentation-only outlines. No repository merge may activate the Production automation.
 
 ### Email 1 requirements
 
@@ -276,7 +276,7 @@ This branch documents the automation only. It must not activate the Production a
 - Preview subject must keep `[TEST]`.
 - Delivery continues to use a stable page link, not a PDF attachment.
 - Four-email timing outline is documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
-- Manual MailerLite dashboard configuration remains pending.
+- Preview verification is complete; Production Email 1 is staged and unsent in the inactive Production workflow.
 
 ### Emails 2-4
 
@@ -301,15 +301,12 @@ This branch documents the automation only. It must not activate the Production a
 - Domain alignment reviewed.
 - Reply-to address defined.
 - Bounce handling reviewed.
-- Sender verification pending.
-- Post-authentication Hostinger inbound mailbox regression pending.
-- Post-authentication Hostinger outbound mailbox regression pending.
-- Authenticated-sender Preview Email 1 regression pending.
-- Test delivery to Gmail pending with authenticated sender.
-- Test delivery to Outlook pending with authenticated sender.
+- Existing sender verification complete; the staged Production draft reuses it unchanged.
+- Post-authentication Hostinger inbound and outbound mailbox regressions passed.
+- Authenticated-sender Preview Email 1 regression passed.
+- Controlled consumer Gmail and Hotmail delivery passed; the corporate Outlook placement limitation remains open.
 - Mobile rendering checked.
-- Spam-folder placement pending with authenticated sender.
-- Unsubscribe rendering pending with authenticated sender.
+- Spam/Junk placement and unsubscribe behavior were reviewed in controlled Preview QA.
 
 ### Blocking rules
 
@@ -324,7 +321,7 @@ This branch documents the automation only. It must not activate the Production a
 |---|---|---|---|---|---|
 | Local | Mock or disabled | None | None | Off | No |
 | Preview | Preview TEST form | Preview group | Preview TEST automation | Non-production only or off | Controlled test addresses only |
-| Production | Production form | Production group | Production automation | Production only | Yes, after approval |
+| Production | Staged form; website handoff fail-closed and unconfigured | Staged empty group | Staged inactive automation | Off until separate verification | No until approval and controlled test |
 
 Rules:
 
@@ -354,7 +351,7 @@ NEXT_PUBLIC_PRIVACY_POLICY_URL=
 - `NEXT_PUBLIC_MAILERLITE_PREVIEW_FORM_URL`
   Preview-safe provider form URL for QA only. Must never point to a Production form.
 - `NEXT_PUBLIC_MAILERLITE_PRODUCTION_FORM_URL`
-  Future Production form URL. Keep empty until all blockers are cleared.
+  Production-only provider form URL. Keep empty until the separate controlled activation task is authorized. Missing, blank or invalid values render no Production lead-capture surface.
 - `NEXT_PUBLIC_PRIVACY_POLICY_URL`
   Future public privacy-policy route required before any production collection.
 
@@ -370,30 +367,20 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 ## Local-development behavior
 
 - No real MailerLite submission by default.
-- Local continues using the current direct-download and Tally flows until the lead form exists.
+- Local keeps the provider handoff disabled and direct PDF access available.
 - Preview-only MailerLite variables must not be copied into Local as active defaults.
 - No MailerLite API calls exist in this branch.
 
-## Provider operations to test before production
+## Remaining operations before Production activation
 
-- Account access and MFA.
-- Sender verification.
-- Domain authentication and alignment.
-- Preview group creation.
-- Preview form creation.
-- Preview automation creation.
-- Preview redirect behavior.
-- Duplicate subscriber handling.
-- Single opt-in behavior.
-- Unsubscribe behavior.
-- Suppression behavior.
-- Export behavior.
-- Correction behavior.
-- Deletion behavior.
-- Delivery to Gmail and Outlook.
-- Spam-folder placement.
-- Preview/Production isolation.
-- Production identifiers created but inactive.
+- Obtain explicit owner authorization for Production collection and the controlled rollout.
+- Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
+- Run one minimum-boundary controlled Production submission before any public promotion and verify group assignment, `/gracias`, Email 1 delivery, unsubscribe, zero unexpected contacts/sends, and rollback controls.
+- Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for activation.
+- Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
+- Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
+- Make the separate Production indexing decision; retain current `noindex` behavior until then.
+- Begin the approved 10-subscriber rollout and monitor for 72 hours before expansion.
 
 ## Fallback provider record
 

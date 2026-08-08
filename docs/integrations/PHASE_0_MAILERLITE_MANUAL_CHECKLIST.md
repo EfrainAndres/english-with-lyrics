@@ -218,18 +218,18 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 
 ## 11. Privacy
 
-- [ ] Owner input: responsible-party details completed outside public docs draft.
-- [ ] Owner input: privacy contact channel operational.
-- [ ] Legal review: public privacy-policy route approved.
-- [ ] Legal review: public treatment-policy route approved if required.
-- [ ] Repository preparation: no owner personal details or real contact data committed.
+- [x] Owner input: responsible-party details completed through server-only Production configuration; values are not stored in this repository.
+- [x] Owner input: privacy contact channel operational.
+- [x] Legal review: public privacy-policy route approved and owner-accepted in Production.
+- [x] Legal review: public treatment-policy route approved and owner-accepted in Production.
+- [x] Repository preparation: no owner personal details or configuration values committed.
 
 ## 12. Export/deletion
 
-- [ ] Manual MailerLite dashboard action: export path located and tested with test data.
-- [ ] Manual MailerLite dashboard action: deletion flow located and tested with test data.
-- [ ] Manual MailerLite dashboard action: correction/update flow located and tested with test data.
-- [ ] Legal review: retention and suppression approach approved.
+- [x] Manual MailerLite dashboard action: export path located and tested with isolated Preview test data.
+- [x] Manual MailerLite dashboard action: deletion flow located and tested with isolated Preview test data.
+- [x] Manual MailerLite dashboard action: correction/update flow located and tested with isolated Preview test data.
+- [x] Legal review: retention approach reviewed with no required change; exact suppression/reactivation behavior remains the separate provider follow-up below.
 
 ## 13. Unsubscribe
 
@@ -302,20 +302,25 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 - [x] Gmail inbox placement reviewed with the authenticated sender.
 - [x] Outlook delivery tested with authenticated sender.
 - [x] Spam/Junk placement reviewed with the authenticated sender.
-- [ ] Repository preparation: no Production identifiers appear in Preview defaults.
+- [x] Repository preparation: Preview and Production form configuration use separate variables; no Production identifier appears in Preview defaults.
 
 ## 15. Production approval
 
 - [ ] Owner input: controlled rollout approved.
-- [ ] Legal review: production collection approved.
+- [ ] Activation acceptance: production collection approved. Published legal routes and professional/provider reviews already pass, but the provider-native accessibility and direct-reachability limitations are accepted for staging only.
 - [x] DNS action: sender-domain authentication confirmed for `singpronuncerepeat.com`.
-- [ ] Future implementation: `/gracias` exists and passes QA.
-- [ ] Future implementation: lead form integration exists and passes QA.
-- [ ] Production Email 1 configured.
-- [ ] Production automation configured.
+- [x] `/gracias` exists and passes recorded Preview and Production regression QA.
+- [x] Fail-closed website support exists: Production requires its dedicated valid configuration and otherwise renders no lead-capture surface.
+- [x] Production Email 1 configured as exactly one STAGED / INACTIVE / UNSENT draft.
+- [x] Production automation configured as exactly one matching STAGED / INACTIVE workflow with zero contacts in progress/completed.
+- [ ] Production-scoped handoff configuration added in Vercel during an authorized activation task.
+- [ ] Minimum controlled Production test passes before public promotion: one authorized contact, one expected group assignment, one Email 1, `/gracias`, direct PDF independence, unsubscribe, zero unexpected contacts/sends, and rollback readiness.
 - [ ] Production email delivery activated.
 - [ ] Production lead capture activated.
-- [ ] Future implementation: Production automation tested but inactive until launch approval.
+- [ ] Production accessibility/direct-provider-reachability limitation disposition explicitly accepted for activation or resolved.
+- [ ] Analytics dashboard verified without personal-data payloads, cookies or tracking parameters.
+- [ ] Production indexing decision made; current `noindex` behavior retained until then.
+- [ ] Ten-subscriber rollout authorized and monitored for 72 hours before expansion.
 - [ ] Controlled Production rollout approved.
 
 Preview Email 1 end-to-end verification was completed manually using controlled test addresses. The real MailerLite automation email reached the subscriber, opened the Preview thank-you page, provided PDF access, and supported a successful subscriber-specific unsubscribe. No subscriber addresses, IP addresses, screenshots, provider IDs, or Preview share tokens are stored in this repository.
