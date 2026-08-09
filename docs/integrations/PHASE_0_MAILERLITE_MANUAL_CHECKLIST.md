@@ -122,7 +122,7 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Rollback prepared: delete only the new empty Production form and the new empty Production group; do not alter Preview or existing resources.
 - [x] Manual MailerLite dashboard action: the single isolated Production consent form was drafted only within the current staging authorization.
 - [x] Manual MailerLite dashboard action: the Production form is assigned only to the new isolated Production staging group.
-- [ ] Manual MailerLite dashboard action: Production form redirect to `/gracias`. Controlled-test result: FAIL; provider-native success state rendered instead.
+- [x] Manual MailerLite dashboard action: Production form success action is configured for the approved `/gracias` redirect and reverified without submission. State: STAGED / NOT YET REVALIDATED BY SUBMISSION; the controlled-test failure remains historical evidence.
 - [x] Legal review: approved privacy-policy route available before activation.
 - [x] Staging control: Production form remains inactive and unlinked pending all activation blockers.
 
@@ -224,7 +224,19 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 - [x] Test-email, campaign, transactional and additional-message counts remained zero; sent campaigns and outbox remained zero.
 - [x] Preview isolation and public website, Vercel, source, deployment, analytics and indexing invariants remained unchanged.
 - [ ] Provider-failure simulation: UNVERIFIED because no safe provider-native simulation was available.
-- [ ] Overall controlled Production gate: FAIL / NO-GO until the redirect is corrected and a separately authorized one-contact retest passes.
+- [ ] Overall controlled Production gate: FAIL / NO-GO. The later redirect configuration correction is staged but not yet revalidated by submission; a separately authorized one-contact retest must pass.
+
+## 9E. Production redirect configuration correction
+
+- [x] Scope limited to the existing staged Production provider-hosted consent form.
+- [x] Success action configured for redirect to the approved `/gracias` destination.
+- [x] Saved configuration reopened and verified without submitting the form.
+- [x] Approved consent wording, exact `/privacidad` destination, group mapping, provider evidence fields, single-opt-in setting, known missing-consent accessibility limitation, and undistributed direct-provider-reachability status were not changed.
+- [x] Production group remains empty; the workflow remains inactive with zero contacts in progress and one retained completed-history record.
+- [x] No new form registration, subscriber, group assignment, automation run, email, campaign, audience, or outbox item was created.
+- [x] Public Production remains fail-closed with no website handoff or Production-scoped Vercel form configuration; direct PDF and legal routes remain healthy.
+- [ ] Redirect correction is **NOT YET REVALIDATED BY SUBMISSION**. A separately authorized one-contact corrective retest remains required.
+- [ ] Historical controlled-test result remains **FAIL / NO-GO FOR PUBLIC ACTIVATION** until that corrective retest passes.
 
 ## 10. Consent
 

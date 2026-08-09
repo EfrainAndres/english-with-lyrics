@@ -376,7 +376,7 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 
 - Obtain explicit owner authorization for Production collection and the controlled rollout.
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
-- Correct and verify the hosted Production form redirect without a submission. The first controlled test FAILED because the provider-native success state rendered instead of `/gracias`.
+- Reconfirm the staged hosted-form redirect configuration without submission before opening a corrective test window. The success action is configured for the approved `/gracias` destination and verified without submission, but it is NOT YET REVALIDATED BY SUBMISSION; the first controlled-test failure remains historical evidence.
 - Obtain separate owner authorization for one corrective Production retest; verify the form redirect itself, one group assignment, one Email 1 delivery, unsubscribe, zero unexpected contacts/sends, cleanup and retained-history counters before public promotion.
 - Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for activation.
 - Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.

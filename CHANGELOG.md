@@ -4,6 +4,10 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ## [Unreleased]
 
+### Changed
+
+- Corrected only the staged Production provider-hosted form success action so it is configured to redirect to the approved `/gracias` destination. The saved setting was reopened and verified without a submission. The earlier controlled-test redirect failure remains preserved as historical evidence, and the correction is **STAGED / NOT YET REVALIDATED BY SUBMISSION**. The Production group remains empty; the workflow remains inactive with zero contacts in progress and one retained completed-history record; no form submission, subscriber, assignment, automation run, email, campaign, audience, Vercel value, public handoff, source, deployment, indexing, Preview resource, or unrelated Production resource changed. A separately authorized one-contact corrective retest remains required before public activation.
+
 ### Added
 
 - [2026-08-08] Recorded the one-contact controlled Production funnel test as **FAIL / NO-GO FOR PUBLIC ACTIVATION**. Exactly one affirmative provider-hosted submission produced one isolated group assignment, one workflow entry and one automated Email 1; consent blocking, provider source/copy-version evidence, approved received content, the delivered-email CTA, direct PDF independence, privacy/footer treatment, real unsubscribe and cleanup passed. The hosted form failed to redirect to `/gracias` and showed its provider-native success state, so no second submission was attempted. The workflow was paused, the contact was unsubscribed and subjected to GDPR Forget, the group and contact search returned to zero, and the provider accurately retains one non-personal form registration and one completed workflow history record. No additional email, campaign, test send, transactional send, public website link, Vercel configuration, source, deployment, analytics, indexing, Preview resource or unrelated Production resource changed. Corrective retest, activation acceptance, analytics verification, indexing and the 10-subscriber/72-hour rollout remain pending.

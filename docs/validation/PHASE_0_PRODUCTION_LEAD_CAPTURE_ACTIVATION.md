@@ -14,6 +14,7 @@
 - Direct PDF delivery: ACTIVE / INDEPENDENT of consent and email.
 - Lead capture and email delivery: INACTIVE.
 - Controlled Production test: FAIL because the provider-hosted form showed its native success state instead of redirecting to `/gracias`; no second submission was attempted.
+- Redirect configuration correction: STAGED / VERIFIED WITHOUT SUBMISSION / NOT YET REVALIDATED BY SUBMISSION.
 - Analytics dashboard activation, indexing decision, corrective controlled retest, and rollout: PENDING.
 
 Merging the support code does not configure Vercel, expose the staged form on
@@ -50,6 +51,28 @@ Email 1 and workflow were not deleted. MailerLite's non-personal form and
 workflow history cannot be reset without destructive resource deletion, so the
 one-registration and one-completed-contact counters are retained accurately.
 
+## Redirect configuration correction
+
+The failed controlled test above remains unchanged as historical evidence. In a
+separate no-submission correction, only the existing staged Production form's
+success action was configured to redirect to the approved `/gracias`
+destination. The saved provider setting was reopened and verified without
+submitting the form.
+
+Correction state: **STAGED / NOT YET REVALIDATED BY SUBMISSION**.
+
+- The Production group remains empty.
+- The workflow remains inactive with zero contacts in progress and one retained completed-history record.
+- The form retains the same one non-personal historical registration; no new submission, subscriber, assignment, automation run, email, campaign, audience or outbox item was created.
+- The approved consent wording, exact `/privacidad` destination, group mapping, provider evidence fields, single-opt-in setting, known missing-consent accessibility limitation and undistributed direct-provider-reachability status were not changed.
+- Production-scoped Vercel form configuration remains absent, public Production remains fail-closed with no website handoff, and direct PDF and legal routes remain healthy.
+- Source, deployment, indexing, sender, Email 1, workflow, group, Preview and unrelated Production resources were unchanged.
+
+This configuration check is not a substitute for the separately authorized
+one-contact corrective retest. The overall controlled Production result remains
+**FAIL / NO-GO FOR PUBLIC ACTIVATION** until that retest verifies the redirect
+after an affirmative provider-hosted submission.
+
 ## Configuration and rendering matrix
 
 | Runtime | Configuration | Result |
@@ -71,7 +94,7 @@ root-only path. The implementation does not hard-code or record a real form URL.
 
 - Confirm the activation starts from the merged support commit and a clean branch.
 - Reverify the exact staged group/form-to-workflow-to-Email-1 mapping, empty group, zero in-progress contacts, one retained completed history record, one prior controlled automated delivery, zero campaign/outbox sends and unchanged sender before touching configuration.
-- Correct and independently verify the hosted form redirect mapping before authorizing another submission.
+- Reconfirm the staged hosted-form redirect setting without submission before authorizing another submission; the setting is configured, but only a separately authorized corrective retest can validate the affirmative-submission path.
 - Confirm the Production-scoped form value is still absent and Preview/Development scopes remain unchanged.
 - Confirm rollback access, the last known-good deployment, and an authorized rollback operator are available before the test window.
 - Pass lint, build, `git diff --check`, sensitive-content scanning, the configuration matrix, desktop/390 px containment, route regressions, synchronization, and mergeability.
@@ -102,7 +125,7 @@ root-only path. The implementation does not hard-code or record a real form URL.
 
 1. Record owner authorization and the exact one-contact boundary, test window, success criteria, stop conditions, rollback operator, and post-test data disposition.
 2. Reverify source synchronization, scoped validation, staged provider mapping, zero baseline counts, unchanged sender, route health, and rollback access.
-3. Correct and verify the hosted-form redirect mapping without submitting the form, then obtain separate authorization for one corrective retest.
+3. Reconfirm the staged hosted-form redirect mapping without submitting the form, then obtain separate authorization for one corrective retest.
 4. Activate the staged automation only for that authorized retest; do not configure or expose the website handoff yet.
 5. Submit exactly one affirmative provider-hosted Production form using the newly authorized controlled contact and verify one assignment, one automation entry, one Email 1 delivery, the form redirect to `/gracias`, independent PDF access, privacy, unsubscribe and zero unexpected contacts or sends.
 6. If and only if the controlled test passes and the limitation acceptance is recorded, configure the Production-scoped website handoff value without changing Preview or Development.
@@ -130,8 +153,8 @@ deployment. Direct PDF delivery does not depend on the provider handoff, Email
 
 ## Next activation task boundary
 
-- Proposed branch: `fix/phase-0-production-form-redirect-retest`.
+- Proposed branch: `review/phase-0-production-form-redirect-retest`.
 - Permitted repository files: `BACKLOG.md`, `CHANGELOG.md`, this validation document, and the existing focused provider/legal readiness documents required to record evidence. Source changes require separate explicit authorization.
-- External changes permitted only by the next task's explicit authorization: the exact staged form redirect correction, one-contact corrective retest, temporary activation of the same workflow, and pre-authorized cleanup. Public website configuration and deployment remain out of scope until that retest passes.
+- External changes permitted only by the next task's explicit authorization: one-contact corrective retest, temporary activation of the same workflow, and pre-authorized cleanup. The staged redirect correction may be rechecked without submission but must not be altered unless a new defect is found and separately authorized. Public website configuration and deployment remain out of scope until that retest passes.
 - Required validations: baseline provider/Vercel scope inventory without values, lint, build, diff check, sensitive-content scan, configuration matrix, desktop/390 px containment, exact handoff/privacy/no-native-field assertions, `/gracias`/legal/direct-PDF regressions, zero-baseline and post-test provider counts, analytics dashboard, synchronization, and mergeability.
 - Merge gate: corrective controlled retest PASS, including the form redirect; no unexpected contact/send; limitation acceptance recorded; rollback verified; public smoke PASS; direct PDF and legal routes healthy; Preview unchanged; analytics dashboard verified; indexing decision explicitly recorded; owner approval for the 10-subscriber/72-hour rollout. Do not merge or expand rollout when any gate is unresolved.
