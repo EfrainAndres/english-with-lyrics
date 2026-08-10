@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CO",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const contentItems = [

@@ -2,6 +2,8 @@
 
 > Phase 0 update: MailerLite rights-request provider operations QA is **PASS** for one isolated Preview-only manual test contact. Production consent linking, lead capture, Email 1, delivery, automation, and rollout execution remain pending or inactive; the Production consent group/form is staged and inactive, direct PDF delivery remains active, and the approved initial indexing disposition is `noindex, nofollow` without authorizing any future indexing change.
 
+> Controlled-rollout indexing preparation: `/ebook-gratis` now declares temporary route-scoped `noindex, nofollow` metadata for the approved 10-subscriber / 72-hour Production rollout. This does not change global indexing, the homepage, future SEO strategy, or any other route. The change is not deployed to canonical Production by this branch, and the funnel remains fail-closed and inactive until the separate activation task.
+
 > Consent-linking preparation: the inert provider-hosted handoff is implemented without website-side personal-data collection. Production consent linking and all provider/Production activation remain pending separate owner approval.
 
 > Preview consent staging: an isolated provider-hosted group/form and branch-restricted Vercel Preview handoff are configured and validated without submitting the form, creating a subscriber, or sending email. Production and Development remain unchanged.

@@ -61,6 +61,7 @@ Production approved-mode content: PASS
 Production noindex, nofollow: PASS
 Production metadata privacy: PASS
 Production ebook and thank-you regression: PASS
+/ebook-gratis temporary rollout noindex, nofollow: PREPARED IN SOURCE / NOT DEPLOYED TO PRODUCTION
 /gracias availability: PASS
 Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
 Production indexing disposition: APPROVED INITIAL / `noindex, nofollow`
@@ -118,6 +119,13 @@ analytics-dashboard verification, operational stop-control verification,
 rollout execution/monitoring and the post-72-hour go/no-go remain separate
 pending gates. Initial indexing disposition is approved as `noindex, nofollow`
 without authorizing future indexing changes.
+
+The controlled-rollout preparation adds `noindex, nofollow` only to
+`/ebook-gratis` for the approved 10-subscriber / 72-hour window. It does not
+change global indexing, the homepage, `/gracias`, either legal route, PDF
+delivery, unrelated metadata, or future SEO strategy. This branch is not
+deployed to canonical Production and does not activate public lead capture, Email 1 delivery or the
+automation.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That
