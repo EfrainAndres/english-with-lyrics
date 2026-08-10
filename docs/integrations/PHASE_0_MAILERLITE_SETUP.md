@@ -240,9 +240,9 @@ If double opt-in is later enabled, the journey, consent docs, and automation ass
 ## Automation setup design
 
 - Production status: exactly one workflow STAGED / INACTIVE, mapped only to the staged Production group/form path and the attached Email 1 draft.
-- Production contacts in progress/completed: ZERO / TWO retained non-personal controlled-test history records.
-- Controlled affirmative submissions, group assignments, workflow entries and provider-recorded automated Production Email 1 sends across all authorized windows: THREE / THREE / TWO / TWO.
-- Inbox-verified automated Production Email 1 deliveries: ONE. The fresh-contact provider-recorded send has no matching inbox message and its received content/CTA evidence remains UNVERIFIED.
+- Production contacts in progress/completed: ZERO / THREE retained non-personal controlled-test history records.
+- Controlled affirmative submissions, group assignments, workflow entries and provider-recorded automated Production Email 1 sends across all authorized windows: FOUR / FOUR / THREE / THREE.
+- Inbox-verified automated Production Email 1 deliveries: TWO. The original and final deliveries pass received content/CTA verification; the intervening provider-recorded send remains unmatched historical evidence.
 - Test-email, campaign and transactional sends: ZERO / ZERO / ZERO; sent campaigns and outbox remain zero.
 - Preview equivalent remains isolated and unchanged.
 
@@ -379,8 +379,8 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
 - Preserve the original redirect failure and later staged correction as historical evidence. The corrected redirect has now passed in two separately authorized affirmative submissions.
 - Preserve the fresh-contact zero-entry/zero-send bounded-window snapshot, then retain the later correction: the contact reached Completed and MailerLite recorded one automated send, while inbox delivery remained absent.
-- For any future test, confirm activation history and monitor workflow Activity to a terminal status before pausing, unsubscribing or applying GDPR Forget. Treat delayed provider visibility after cleanup as a procedural timing risk, not proof of a provider defect.
-- Obtain new owner authorization for one fresh contact, temporary automation activation, exactly one automated Email 1 and cleanup because received content and CTA evidence remain missing.
+- Preserve the separately authorized final inbox-verification PASS: activation was confirmed before one submission, Activity reached a terminal state before pause/cleanup, one matching inbox delivery and approved content/CTA passed, functional unsubscribe generated no additional message, and GDPR Forget returned the group/contact search to zero.
+- For any future controlled window, continue to confirm activation history and monitor workflow Activity to a terminal status before pausing, unsubscribing or applying GDPR Forget. Treat delayed provider visibility after cleanup as a procedural timing risk, not proof of a provider defect.
 - Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for activation.
 - Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
 - Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.

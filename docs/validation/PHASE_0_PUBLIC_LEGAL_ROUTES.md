@@ -70,9 +70,9 @@ Rights-request provider operations QA: PASS
 Production Email 1: STAGED / INACTIVE
 Production email delivery: INACTIVE
 Production automation: STAGED / INACTIVE
-Production automation contacts in progress/completed: ZERO / TWO retained history records
-Provider-recorded controlled automated Production Email 1 sends: TWO
-Inbox-verified controlled automated Production Email 1 deliveries: ONE
+Production automation contacts in progress/completed: ZERO / THREE retained history records
+Provider-recorded controlled automated Production Email 1 sends: THREE
+Inbox-verified controlled automated Production Email 1 deliveries: TWO
 Production welcome email test/campaign/transactional sends: ZERO / ZERO / ZERO
 Production lead capture: INACTIVE
 Initial controlled Production test: FAIL — hosted-form redirect did not reach /gracias
@@ -80,7 +80,10 @@ Corrected hosted-form redirect: PASS by affirmative submission
 Fresh-contact bounded-window corrective snapshot: FAIL — group assignment ONE / workflow entry ZERO / Email 1 ZERO
 Delayed provider-state correction: Completed ONE / provider-recorded send ONE / matching inbox message ZERO
 Fresh-contact received content, CTA, footer/privacy and rendered unsubscribe: UNVERIFIED
-Any further inbox-verification retest and rollout: PENDING
+Final Production inbox-verification technical path: PASS
+Final test redirect / assignment / terminal completion / inbox delivery / content / CTA / unsubscribe / cleanup: PASS
+Additional fresh-contact retest: NOT REQUIRED
+Public activation and rollout: PENDING
 Direct PDF delivery: ACTIVE
 Controlled-test cleanup: PASS / EXECUTED
 Rollback: PREPARED / NOT EXECUTED
@@ -104,8 +107,8 @@ With absent, blank, malformed or unsupported Production configuration, the
 entire lead-capture surface is omitted. A valid future Production-scoped value
 can expose only the external provider handoff with the approved disclosure and
 exact `/privacidad` link; it cannot add native personal-data fields or affect
-the independent direct PDF path. Vercel configuration, a controlled Production
-test before public promotion, explicit activation acceptance of the tracked
+the independent direct PDF path. The controlled Production technical-path test
+now passes. Vercel configuration, explicit activation acceptance of the tracked
 provider-native accessibility/direct-reachability limitations, Email 1
 delivery, automation activation, analytics-dashboard verification, the
 indexing decision, and the 10-subscriber/72-hour rollout remain separate gates.
@@ -155,17 +158,15 @@ deleting only the new empty Production form and group.
 
 Exactly one Production Email 1 draft remains staged inside exactly one matching
 inactive workflow. The workflow uses only the isolated staged Production
-group/form path and has zero contacts in progress and two retained completed
+group/form path and has zero contacts in progress and three retained completed
 history records. The draft
 retains the approved Spanish subject, preheader, body, Production-scoped CTA,
 text-compatible fallback, privacy/footer and unsubscribe treatment with an
-existing verified sender that was not changed. Exactly one historical authorized
-automated Production Email 1 delivery is inbox-verified. MailerLite later recorded
-a second authorized automated send for the fresh contact, but the authorized inbox
-contains zero matching messages and zero unexpected additional messages. Its
-delivery, content, CTA, footer/privacy and rendered unsubscribe therefore remain
-UNVERIFIED; test, campaign and transactional messages remained zero. Real
-unsubscribe in the historical delivery and later manual unsubscribe plus GDPR Forget returned the contact
+existing verified sender that was not changed. The original and final authorized
+automated Production Email 1 deliveries are inbox-verified. MailerLite also retains
+the intervening provider-recorded send without a matching inbox message as
+historical evidence. Test, campaign and transactional messages remained zero. Real
+unsubscribe in the inbox-verified tests and GDPR Forget returned the contact
 search and Production group to zero without changing Preview or unrelated
 Production resources. This inactive state does not authorize final consent
 linking, lead capture, active email delivery, rollout or indexing. Direct PDF
@@ -180,11 +181,27 @@ exact workflow execution time relative to cleanup is INCONCLUSIVE and no provide
 defect is inferred. Future controlled procedure must confirm activation history
 and monitor workflow Activity to Completed, Failed or Canceled before pausing,
 unsubscribing or applying GDPR Forget. The delayed state after cleanup is a
-procedural timing risk. Because the inbox message and critical content/CTA evidence
-are absent, another fresh QA contact and exactly one separately authorized automated
-Email 1 remain required. Provider-failure simulation remains UNVERIFIED. Public
+procedural timing risk. The inbox message and critical content/CTA evidence
+remain absent for that historical attempt. Provider-failure simulation remains
+UNVERIFIED. Public
 activation and all remaining limitation, analytics, indexing and rollout gates
 remain blocked; direct PDF delivery and legal routes remain independent.
+
+The separate final Production inbox-verification test passed with a fresh
+contact that had zero prior subscriber, group-membership or workflow history.
+After the isolated workflow was activated and confirmed, exactly one affirmative
+submission redirected to `/gracias`, assigned the Production group, reached
+terminal Completed and produced one provider-recorded send with one matching
+inbox delivery. Approved content, CTA resolution, text-compatible structure,
+privacy/footer and functional unsubscribe without another message passed. The
+workflow was paused only after terminal status; GDPR Forget returned contact
+search and the group to zero. Final workflow state is zero in progress and three
+completed history records. Direct PDF and all legal routes remain healthy and
+independent. No public handoff, Vercel value, source, deployment, indexing,
+Preview or unrelated Production resource changed. No additional fresh-contact
+test is required for the controlled technical-path gate; public activation
+remains blocked by the separate limitation-acceptance, deliverability, analytics,
+indexing and rollout gates.
 
 Rollback is prepared and limited to deleting only the new attached Email 1
 draft and the new inactive workflow; the already staged group/form and all

@@ -5,9 +5,9 @@
 - Sequence status: Email 1 staged; Emails 2–4 remain planned only.
 - Content status: approved Email 1 verified in Preview and staged in exactly one inactive Production workflow.
 - Emails 2–4: Outline only.
-- Production Email 1 and workflow: STAGED / INACTIVE after two provider-recorded authorized automated sends; zero contacts are in progress and two non-personal completed history records are retained. One historical delivery is inbox-verified; the fresh-contact send has no matching inbox message.
+- Production Email 1 and workflow: STAGED / INACTIVE after three provider-recorded authorized automated sends; zero contacts are in progress and three non-personal completed history records are retained. The original and final deliveries are inbox-verified; the intervening delayed send remains unmatched historical evidence.
 - Production activation and delivery: INACTIVE.
-- Controlled Production funnel state: FAIL / NO-GO. The original test delivered one inbox-verified Email 1 but failed redirect. The corrected redirect now passes. The fresh-contact attempt later appeared as Completed with one MailerLite-recorded automated send; that provider state became visible only after the bounded-window counters and cleanup, but the authorized inbox contains no matching delayed message. Delivery, received content, CTA, footer/privacy and unsubscribe rendering therefore remain UNVERIFIED for that attempt. Another newly authorized fresh-contact/one-message retest is required before public linking.
+- Controlled Production funnel state: PASS FOR THE CONTROLLED TECHNICAL PATH / NOT PUBLICLY ACTIVATED. The original redirect failure, corrected retests and delayed unmatched send remain historical evidence. The final fresh-contact test verified activation before submission, redirect, isolated assignment, terminal completion, exactly one inbox delivery, approved content, CTA, text-compatible structure, privacy/footer, functional unsubscribe without another message, independent PDF access and cleanup. Public linking, active delivery, automation, limitation acceptance, analytics verification, indexing and rollout remain separate gates.
 
 ## Sequence overview
 

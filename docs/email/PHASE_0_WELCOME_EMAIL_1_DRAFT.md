@@ -4,7 +4,7 @@
 
 - Estado del contenido: APPROVED DRAFT / STAGED.
 - Estado de activación: INACTIVE.
-- Alcance: referencia canónica verificada en Preview y en exactamente una entrega automatizada controlada de Producción.
+- Alcance: referencia canónica verificada en Preview y en dos entregas automatizadas controladas de Producción recibidas en buzón; un tercer envío registrado por el proveedor permanece como evidencia histórica sin mensaje correspondiente.
 - Este borrador no autoriza vinculación pública, configuración de Vercel, otra entrega, otro suscriptor ni activación de Producción.
 - La entrega directa del PDF permanece ACTIVE e independiente del consentimiento promocional o de este correo.
 
@@ -226,9 +226,16 @@ aprobación separada de la responsable.
   momento exacto de ejecución ni un defecto. Se registra como riesgo de tiempo
   operativo: en otro intento se debe confirmar el historial de activación y
   vigilar Activity hasta un estado terminal antes de pausar o limpiar.
+- Prueba final de verificación de buzón: PASS. Un contacto nuevo sin historial
+  previo produjo una sola asignación, una entrada que llegó a Completed y un
+  único envío automatizado recibido. El asunto aprobado, preencabezado oculto,
+  cuerpo en español, CTA, estructura compatible con texto, privacidad/pie y
+  cancelación renderizada pasaron. La CTA llegó a `/gracias`; la cancelación
+  real no generó otro mensaje. La automatización se pausó solo después del
+  estado terminal y GDPR Forget devolvió la búsqueda y el grupo a cero.
 - El contacto controlado se dio de baja y se sometió a GDPR Forget. El grupo y
   la búsqueda de contactos volvieron a cero; el formulario y el workflow
-  retienen historial de registro no personal y dos completados no personales,
+  retienen historial de registro no personal y tres completados no personales,
   respectivamente.
 - No se vinculó el sitio público, no se agregó ningún valor a Vercel y no se
   realizó ningún despliegue. La entrega directa del PDF permanece independiente
@@ -239,8 +246,8 @@ aprobación separada de la responsable.
 
 Este registro posterior no modifica el alcance histórico de preparación y QA
 de Preview documentado a continuación. La vinculación final de consentimiento,
-la entrega activa, un diagnóstico y eventual retest del trigger, el despliegue
-controlado y la indexación de Producción siguen sin autorizarse.
+la entrega activa, el despliegue controlado y la indexación de Producción siguen
+sin autorizarse.
 
 Rollback preparado: eliminar únicamente el nuevo borrador de Email 1 adjunto y
 la nueva automatización inactiva. No alterar el grupo/formulario ya staged ni
