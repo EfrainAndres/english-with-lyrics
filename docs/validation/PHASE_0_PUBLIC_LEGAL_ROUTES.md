@@ -70,14 +70,17 @@ Rights-request provider operations QA: PASS
 Production Email 1: STAGED / INACTIVE
 Production email delivery: INACTIVE
 Production automation: STAGED / INACTIVE
-Production automation contacts in progress/completed: ZERO / ONE retained history record
-Controlled automated Production Email 1 deliveries: ONE
+Production automation contacts in progress/completed: ZERO / TWO retained history records
+Provider-recorded controlled automated Production Email 1 sends: TWO
+Inbox-verified controlled automated Production Email 1 deliveries: ONE
 Production welcome email test/campaign/transactional sends: ZERO / ZERO / ZERO
 Production lead capture: INACTIVE
 Initial controlled Production test: FAIL — hosted-form redirect did not reach /gracias
 Corrected hosted-form redirect: PASS by affirmative submission
-Fresh-contact end-to-end corrective retest: FAIL — group assignment ONE / workflow entry ZERO / Email 1 ZERO
-Provider-level automation-trigger diagnosis, any further retest and rollout: PENDING
+Fresh-contact bounded-window corrective snapshot: FAIL — group assignment ONE / workflow entry ZERO / Email 1 ZERO
+Delayed provider-state correction: Completed ONE / provider-recorded send ONE / matching inbox message ZERO
+Fresh-contact received content, CTA, footer/privacy and rendered unsubscribe: UNVERIFIED
+Any further inbox-verification retest and rollout: PENDING
 Direct PDF delivery: ACTIVE
 Controlled-test cleanup: PASS / EXECUTED
 Rollback: PREPARED / NOT EXECUTED
@@ -152,17 +155,36 @@ deleting only the new empty Production form and group.
 
 Exactly one Production Email 1 draft remains staged inside exactly one matching
 inactive workflow. The workflow uses only the isolated staged Production
-group/form path and has zero contacts in progress and one retained completed
-history record. The draft
+group/form path and has zero contacts in progress and two retained completed
+history records. The draft
 retains the approved Spanish subject, preheader, body, Production-scoped CTA,
 text-compatible fallback, privacy/footer and unsubscribe treatment with an
-existing verified sender that was not changed. Exactly one authorized automated
-Production Email 1 was delivered; test, campaign, transactional and additional
-messages remained zero. Real unsubscribe and GDPR Forget returned the contact
+existing verified sender that was not changed. Exactly one historical authorized
+automated Production Email 1 delivery is inbox-verified. MailerLite later recorded
+a second authorized automated send for the fresh contact, but the authorized inbox
+contains zero matching messages and zero unexpected additional messages. Its
+delivery, content, CTA, footer/privacy and rendered unsubscribe therefore remain
+UNVERIFIED; test, campaign and transactional messages remained zero. Real
+unsubscribe in the historical delivery and later manual unsubscribe plus GDPR Forget returned the contact
 search and Production group to zero without changing Preview or unrelated
 Production resources. This inactive state does not authorize final consent
 linking, lead capture, active email delivery, rollout or indexing. Direct PDF
 delivery remains active and independent.
+
+The fresh-contact zero-entry/zero-send result remains the historical bounded-window
+snapshot. Later read-only provider evidence showed that contact in Completed and
+one automated send, so the provider state supersedes only those two zero counters.
+Functional unsubscribe is not repeated or claimed because manual unsubscribe and
+GDPR Forget had completed before the delayed provider state became visible. The
+exact workflow execution time relative to cleanup is INCONCLUSIVE and no provider
+defect is inferred. Future controlled procedure must confirm activation history
+and monitor workflow Activity to Completed, Failed or Canceled before pausing,
+unsubscribing or applying GDPR Forget. The delayed state after cleanup is a
+procedural timing risk. Because the inbox message and critical content/CTA evidence
+are absent, another fresh QA contact and exactly one separately authorized automated
+Email 1 remain required. Provider-failure simulation remains UNVERIFIED. Public
+activation and all remaining limitation, analytics, indexing and rollout gates
+remain blocked; direct PDF delivery and legal routes remain independent.
 
 Rollback is prepared and limited to deleting only the new attached Email 1
 draft and the new inactive workflow; the already staged group/form and all

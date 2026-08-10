@@ -12,7 +12,7 @@
 
 > Controlled Production funnel test: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. Exactly one affirmative submission produced one target-group assignment, one workflow entry and one automated Email 1 delivery. Consent, content, CTA, direct PDF, privacy/footer, unsubscribe, isolation and cleanup passed; the form redirect failed because the provider-native success state rendered instead of `/gracias`. No second submission or additional message was attempted. The group returned to zero, the workflow is inactive with zero in progress and one completed history record, and one non-personal form registration is retained.
 
-> Corrective Production retest state: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. The corrected hosted-form redirect passed in two separately authorized affirmative submissions and both produced the intended isolated group assignment. The first reused the prior controlled identity; the second used a fresh controlled contact whose preflight showed zero subscriber and workflow history. Neither submission created a new workflow entry or Email 1 delivery. Both cleanup paths completed; the group and contact search are zero, the workflow is paused with zero in progress and its original one completed history record, and no additional message was sent. Provider-level automation-trigger diagnosis and new owner authorization are required before another retest.
+> Corrective Production retest state: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. The corrected hosted-form redirect passed in two separately authorized affirmative submissions and both produced the intended isolated group assignment. The first reused the prior controlled identity and did not re-enter. The fresh-contact window ended with zero workflow/send counters and completed cleanup, but later read-only evidence showed that the fresh contact reached Completed and MailerLite recorded one automated send. The authorized inbox contains zero matching messages and zero unexpected additional messages, so delayed delivery and received content/CTA evidence remain UNVERIFIED. The group and contact search are zero; the workflow is paused with zero in progress and two completed history records. New owner authorization is required before another retest.
 
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
@@ -279,6 +279,26 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 - [x] Public Production remained fail-closed with no website handoff; Vercel, source, deployment, indexing, Preview and unrelated Production resources remained unchanged.
 - [ ] Overall fresh-contact end-to-end result: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. Provider-level automation-trigger diagnosis and new owner authorization are required before another submission or message.
 
+## 9I. Delayed workflow-state and inbox reconciliation
+
+The section 9H zero-entry/zero-send result remains preserved as the factual
+bounded-window snapshot. A later read-only provider review superseded that
+snapshot without changing any resource.
+
+- [x] Fresh contact later appeared in Completed; workflow completed history increased from ONE to TWO.
+- [x] MailerLite later recorded ONE automated send for the fresh contact.
+- [ ] Delayed inbox delivery: FAIL / ZERO matching messages in the authorized inbox.
+- [x] Unexpected additional inbox messages: ZERO.
+- [ ] Approved delayed-message subject, hidden preheader, Spanish body, CTA, text-compatible content, privacy/footer and unsubscribe rendering: UNVERIFIED because the matching message is absent.
+- [ ] CTA resolution from the delayed message: UNVERIFIED. Production `/gracias` itself remains healthy.
+- [x] Direct PDF remains available and independent of consent and email.
+- [x] Functional unsubscribe is not repeated or claimed: the contact had already been manually unsubscribed and subjected to GDPR Forget before the delayed provider state became visible.
+- [ ] Exact workflow execution time relative to cleanup: INCONCLUSIVE. Visibility after cleanup does not prove execution after cleanup and does not establish a provider defect.
+- [x] Procedural timing risk retained: after activation, confirm activation history and monitor workflow Activity to Completed, Failed or Canceled before pausing, unsubscribing or applying GDPR Forget.
+- [ ] A third fresh QA contact and exactly one additional automated Email 1 remain required because critical received-content and CTA evidence is missing.
+- [ ] Provider-failure simulation remains UNVERIFIED.
+- [ ] Overall Production gate remains FAIL / NO-GO; lead capture, active delivery, automation, rollout and indexing remain inactive or pending.
+
 ## 10. Consent
 
 - [x] Repository preparation: approved checkbox copy documented unchanged and surfaced beside the inert provider-hosted Preview handoff.
@@ -388,9 +408,9 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 - [x] `/gracias` exists and passes recorded Preview and Production regression QA.
 - [x] Fail-closed website support exists: Production requires its dedicated valid configuration and otherwise renders no lead-capture surface.
 - [x] Production Email 1 remains exactly one STAGED / INACTIVE draft after one authorized automated controlled delivery.
-- [x] Production automation remains exactly one matching STAGED / INACTIVE workflow with zero contacts in progress and one retained completed history record.
+- [x] Production automation remains exactly one matching STAGED / INACTIVE workflow with zero contacts in progress and two retained completed history records.
 - [ ] Production-scoped handoff configuration added in Vercel during an authorized activation task.
-- [ ] Minimum controlled Production test passes before public promotion. Redirect and assignment now pass, but both post-correction attempts created zero new workflow entries and zero new Email 1 deliveries.
+- [ ] Minimum controlled Production test passes before public promotion. Redirect and assignment pass; the fresh attempt later reached Completed with one provider-recorded send, but matching inbox delivery and received content/CTA evidence remain UNVERIFIED.
 - [ ] Production email delivery activated.
 - [ ] Production lead capture activated.
 - [ ] Production accessibility/direct-provider-reachability limitation disposition explicitly accepted for activation or resolved.

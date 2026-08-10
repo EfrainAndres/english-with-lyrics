@@ -214,9 +214,22 @@ aprobación separada de la responsable.
   activo no creó una nueva entrada ni entregó otro Email 1, incluso con un
   contacto nuevo sin historial previo. Esos resultados se conservan por
   separado y no invalidan la única entrega histórica ni autorizan activación.
+- Corrección posterior: el resultado CERO / CERO anterior fue una fotografía
+  del período limitado de observación. MailerLite mostró después al contacto
+  nuevo como Completed y registró un envío automatizado. El buzón autorizado no
+  contiene un mensaje correspondiente ni mensajes adicionales inesperados, por
+  lo que entrega, asunto, preencabezado, cuerpo, CTA, alternativa de texto,
+  privacidad/pie y renderizado de cancelación siguen UNVERIFIED para ese intento.
+  La cancelación manual y GDPR Forget ya se habían completado; no se repitió ni
+  se afirma una segunda prueba funcional de cancelación.
+- Que el estado del proveedor apareciera después de la limpieza no demuestra el
+  momento exacto de ejecución ni un defecto. Se registra como riesgo de tiempo
+  operativo: en otro intento se debe confirmar el historial de activación y
+  vigilar Activity hasta un estado terminal antes de pausar o limpiar.
 - El contacto controlado se dio de baja y se sometió a GDPR Forget. El grupo y
   la búsqueda de contactos volvieron a cero; el formulario y el workflow
-  retienen un registro y un completado no personales, respectivamente.
+  retienen historial de registro no personal y dos completados no personales,
+  respectivamente.
 - No se vinculó el sitio público, no se agregó ningún valor a Vercel y no se
   realizó ningún despliegue. La entrega directa del PDF permanece independiente
   y ACTIVE.

@@ -240,8 +240,9 @@ If double opt-in is later enabled, the journey, consent docs, and automation ass
 ## Automation setup design
 
 - Production status: exactly one workflow STAGED / INACTIVE, mapped only to the staged Production group/form path and the attached Email 1 draft.
-- Production contacts in progress/completed: ZERO / ONE retained non-personal controlled-test history record.
-- Controlled affirmative submissions, group assignments, workflow entries and automated Production Email 1 deliveries across all authorized windows: THREE / THREE / ONE / ONE.
+- Production contacts in progress/completed: ZERO / TWO retained non-personal controlled-test history records.
+- Controlled affirmative submissions, group assignments, workflow entries and provider-recorded automated Production Email 1 sends across all authorized windows: THREE / THREE / TWO / TWO.
+- Inbox-verified automated Production Email 1 deliveries: ONE. The fresh-contact provider-recorded send has no matching inbox message and its received content/CTA evidence remains UNVERIFIED.
 - Test-email, campaign and transactional sends: ZERO / ZERO / ZERO; sent campaigns and outbox remain zero.
 - Preview equivalent remains isolated and unchanged.
 
@@ -377,8 +378,9 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 - Obtain explicit owner authorization for Production collection and the controlled rollout.
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
 - Preserve the original redirect failure and later staged correction as historical evidence. The corrected redirect has now passed in two separately authorized affirmative submissions.
-- Diagnose why both post-correction group assignments created zero new entries in the active Production workflow, including the fresh-contact attempt with no prior subscriber or workflow history. Do not submit or send during diagnosis.
-- After a provider-level cause and minimum correction are verified, obtain new owner authorization for any further Production retest, temporary automation activation, message delivery and cleanup.
+- Preserve the fresh-contact zero-entry/zero-send bounded-window snapshot, then retain the later correction: the contact reached Completed and MailerLite recorded one automated send, while inbox delivery remained absent.
+- For any future test, confirm activation history and monitor workflow Activity to a terminal status before pausing, unsubscribing or applying GDPR Forget. Treat delayed provider visibility after cleanup as a procedural timing risk, not proof of a provider defect.
+- Obtain new owner authorization for one fresh contact, temporary automation activation, exactly one automated Email 1 and cleanup because received content and CTA evidence remain missing.
 - Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for activation.
 - Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
 - Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
