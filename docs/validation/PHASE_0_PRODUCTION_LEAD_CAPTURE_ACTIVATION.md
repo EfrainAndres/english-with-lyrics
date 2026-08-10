@@ -16,9 +16,9 @@
 - Initial controlled Production test: FAIL because the provider-hosted form showed its native success state instead of redirecting to `/gracias`; no second submission occurred in that window.
 - Redirect configuration correction: STAGED / REVALIDATED BY AFFIRMATIVE SUBMISSION / PASS.
 - Final inbox-verification result: PASS FOR THE CONTROLLED TECHNICAL PATH. One fresh contact with zero history produced one redirect, assignment, terminal completion, provider-recorded send and matching inbox delivery; content/CTA, functional unsubscribe and cleanup passed.
-- Limited rollout risk disposition: ACCEPTED for Email 1 only, up to 10 subscribers and 72 hours, with active monitoring and immediate stop thresholds.
-- Initial indexing disposition: APPROVED as `noindex, nofollow`; no indexing setting changed in this task.
-- Public activation, analytics dashboard verification, Production handoff configuration/deployment, public no-submit smoke and rollout execution/monitoring: PENDING.
+- Limited rollout risk disposition: ACCEPTED only for the approved public Email 1 rollout, up to 10 subscribers and 72 hours, with active monitoring and immediate stop thresholds; no limitation is fixed, compliant, unrestricted or permanently accepted.
+- Initial indexing disposition: APPROVED as `noindex, nofollow`; no indexing setting changed in this task and no future indexing change is authorized.
+- Public activation, analytics dashboard verification, Production handoff configuration/deployment, public no-submit smoke, operational stop-control verification, rollout execution/monitoring and the post-72-hour go/no-go: PENDING.
 
 Merging the support code does not configure Vercel, expose the staged form on
 the public website, activate Email 1 or the automation, submit a form, create a
@@ -216,13 +216,13 @@ root-only path. The implementation does not hard-code or record a real form URL.
 
 ### Activation acceptance for staged limitations
 
-- The owner explicitly accepts the provider-native missing-consent feedback limitation, possible reachability of the undistributed direct provider form due to no native unpublish/deactivate state, and known deliverability risk only for the approved Email 1-only controlled rollout of up to 10 subscribers over 72 hours.
+- The owner explicitly accepts the provider-native missing-consent feedback limitation, possible reachability of the undistributed direct provider form due to no native unpublish/deactivate state, and known deliverability risk only for the approved public Email 1 rollout of up to 10 subscribers over 72 hours.
 - This disposition requires active monitoring and immediate intake stop for any unexpected email, consent/privacy issue, delivery failure, complaint or workflow error.
 - No limitation is represented as fixed, fully accessible, legally compliant, harmless, certified or irrelevant. This is neither unrestricted nor permanent approval and does not authorize expansion beyond the bounded rollout.
 
 ### Indexing decision
 
-- Owner-approved initial disposition: retain `noindex, nofollow`. This documentation record does not change indexing settings.
+- Owner-approved initial disposition: retain `noindex, nofollow`. This documentation record does not change indexing settings, make the disposition permanent, or authorize future indexing changes.
 
 ## Safe activation sequence
 

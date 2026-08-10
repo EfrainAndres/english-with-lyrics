@@ -1,6 +1,6 @@
 # Phase 0 Public Legal Routes
 
-> Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact; no Production resource or commercial-funnel capability was activated. Production consent linking, indexing, and controlled rollout remain pending; direct PDF delivery remains active.
+> Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact; no Production resource or commercial-funnel capability was activated. Production consent linking and controlled-rollout execution remain pending; direct PDF delivery remains active. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes.
 
 ## Status
 
@@ -19,7 +19,7 @@ Isolated provider-hosted Preview consent form: CONFIGURED
 Isolated provider-hosted Production consent group/form: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / ZERO SUBSCRIBERS
 Production provider form public-site or Vercel link: ABSENT
 Production provider form single opt-in: PASS
-Provider-native unpublish/deactivate state: NOT AVAILABLE — OWNER-ACCEPTED FOR STAGING ONLY
+Provider-native unpublish/deactivate state: NOT AVAILABLE — OWNER-ACCEPTED ONLY FOR THE APPROVED PUBLIC EMAIL 1 ROLLOUT OF UP TO 10 SUBSCRIBERS / 72 HOURS
 Direct provider URL distribution: NONE
 Branch-restricted Vercel Preview handoff: PASS
 Initial Preview staging validation submission: NOT PERFORMED — HISTORICAL PRE-QA STATE
@@ -31,7 +31,7 @@ Duplicate-safe behavior: PASS
 Email or automation side effects: NONE
 GDPR Forget cleanup and post-cleanup absence: PASS
 Missing-consent feedback accessibility: KNOWN MAILERLITE-NATIVE LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED
-Missing-consent feedback Production disposition: OWNER-ACCEPTED FOR INACTIVE STAGING ONLY / TRACKED
+Missing-consent feedback Production disposition: OWNER-ACCEPTED ONLY FOR THE APPROVED PUBLIC EMAIL 1 ROLLOUT OF UP TO 10 SUBSCRIBERS / 72 HOURS / TRACKED
 Provider-failure simulation: UNVERIFIED
 Preview test subscriber after cleanup: NONE
 Preview /ebook-gratis provider handoff and /privacidad link: PASS
@@ -83,7 +83,7 @@ Fresh-contact received content, CTA, footer/privacy and rendered unsubscribe: UN
 Final Production inbox-verification technical path: PASS
 Final test redirect / assignment / terminal completion / inbox delivery / content / CTA / unsubscribe / cleanup: PASS
 Additional fresh-contact retest: NOT REQUIRED
-Public activation and rollout: PENDING
+Public activation and rollout: PENDING — INCLUDING OPERATIONAL STOP-CONTROL VERIFICATION AND POST-72-HOUR GO/NO-GO
 Direct PDF delivery: ACTIVE
 Controlled-test cleanup: PASS / EXECUTED
 Rollback: PREPARED / NOT EXECUTED
@@ -109,12 +109,15 @@ can expose only the external provider handoff with the approved disclosure and
 exact `/privacidad` link; it cannot add native personal-data fields or affect
 the independent direct PDF path. The controlled Production technical-path test
 now passes. The owner accepts the tracked provider-native
-accessibility/direct-reachability and deliverability risks only for the Email
-1-only controlled rollout of up to 10 subscribers over 72 hours under active
-monitoring and immediate stop thresholds. Production handoff configuration and
-deployment, a public no-submit smoke check, analytics-dashboard verification
-and rollout execution/monitoring remain separate pending gates. Initial
-indexing disposition is approved as `noindex, nofollow`.
+accessibility/direct-reachability and deliverability risks only for the
+approved public Email 1 rollout of up to 10 subscribers over 72 hours under active
+monitoring and immediate stop thresholds. This does not make any limitation
+fixed, compliant, unrestricted or permanently accepted. Production handoff
+configuration and deployment, a public no-submit smoke check,
+analytics-dashboard verification, operational stop-control verification,
+rollout execution/monitoring and the post-72-hour go/no-go remain separate
+pending gates. Initial indexing disposition is approved as `noindex, nofollow`
+without authorizing future indexing changes.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That
@@ -204,9 +207,13 @@ completed history records. Direct PDF and all legal routes remain healthy and
 independent. No public handoff, Vercel value, source, deployment, indexing,
 Preview or unrelated Production resource changed. No additional fresh-contact
 test is required for the controlled technical-path gate. The limited rollout
-risk disposition is recorded; public activation remains blocked by analytics,
-Production handoff configuration/deployment, public no-submit smoke and rollout
-execution/monitoring. Retain `noindex, nofollow`.
+risk disposition is recorded only for the approved public Email 1 rollout of up
+to 10 subscribers over 72 hours; it does not make a limitation fixed,
+compliant, unrestricted or permanent. Public activation remains blocked by
+analytics, Production handoff configuration/deployment, public no-submit smoke,
+operational stop-control verification, rollout execution/monitoring and the
+post-72-hour go/no-go. Retain the approved initial `noindex, nofollow`
+disposition without authorizing future indexing changes.
 
 Rollback is prepared and limited to deleting only the new attached Email 1
 draft and the new inactive workflow; the already staged group/form and all

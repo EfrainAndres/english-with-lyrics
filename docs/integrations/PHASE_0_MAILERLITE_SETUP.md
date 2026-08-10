@@ -375,17 +375,17 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 
 ## Remaining operations before Production activation
 
-- Preserve the owner-approved Email 1-only boundary: up to 10 subscribers over 72 hours, active monitoring, no expansion without a separate go/no-go decision.
+- Preserve the owner-approved public Email 1-only boundary: up to 10 subscribers over 72 hours, active monitoring, no expansion without a separate post-72-hour go/no-go decision.
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
 - Preserve the original redirect failure and later staged correction as historical evidence. The corrected redirect has now passed in two separately authorized affirmative submissions.
 - Preserve the fresh-contact zero-entry/zero-send bounded-window snapshot, then retain the later correction: the contact reached Completed and MailerLite recorded one automated send, while inbox delivery remained absent.
 - Preserve the separately authorized final inbox-verification PASS: activation was confirmed before one submission, Activity reached a terminal state before pause/cleanup, one matching inbox delivery and approved content/CTA passed, functional unsubscribe generated no additional message, and GDPR Forget returned the group/contact search to zero.
 - For any future controlled window, continue to confirm activation history and monitor workflow Activity to a terminal status before pausing, unsubscribing or applying GDPR Forget. Treat delayed provider visibility after cleanup as a procedural timing risk, not proof of a provider defect.
-- Retain the limited risk disposition for missing-consent feedback, direct-provider reachability and known deliverability risk; it is not unrestricted or permanent approval.
+- Retain the limited public-rollout risk disposition for missing-consent feedback, direct-provider reachability and known deliverability risk; it does not make a limitation fixed or compliant and is not unrestricted or permanent approval.
 - Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
 - Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
-- Retain the approved initial `noindex, nofollow` indexing disposition.
-- After analytics, configuration/deployment and public no-submit smoke pass, begin the approved 10-subscriber rollout and monitor for 72 hours before expansion. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error.
+- Retain the approved initial `noindex, nofollow` indexing disposition without treating it as permanent or as authorization for future indexing changes.
+- After analytics, configuration/deployment, public no-submit smoke and operational stop-control verification pass, begin the approved 10-subscriber rollout and monitor for 72 hours. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error, then require a separate post-72-hour go/no-go before expansion.
 
 ## Fallback provider record
 

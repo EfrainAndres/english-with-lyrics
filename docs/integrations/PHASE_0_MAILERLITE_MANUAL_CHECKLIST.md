@@ -16,6 +16,8 @@
 
 > Final Production inbox-verification state: **PASS FOR THE CONTROLLED TECHNICAL PATH / NOT PUBLICLY ACTIVATED**. A fresh contact with zero subscriber, group-membership or workflow history completed exactly one affirmative submission after the isolated workflow was activated and confirmed. Redirect, group assignment, terminal workflow completion, one provider-recorded send, one matching inbox delivery, approved content/CTA, privacy/footer, functional unsubscribe without another message, direct PDF independence and cleanup passed. The group and contact search returned to zero; the workflow is paused with zero in progress and three completed history records. No public handoff, Vercel value, deployment, indexing, source, Preview or unrelated Production resource changed.
 
+> Current rollout-gate state: the owner risk acceptance applies only to the approved public Email 1 rollout of up to 10 subscribers over 72 hours and does not make any limitation fixed, compliant, unrestricted or permanent. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes. Analytics verification, Production handoff configuration/deployment, public no-submit smoke, operational stop-control verification, rollout execution/monitoring and the post-72-hour go/no-go remain pending. Provider-failure simulation remains **UNVERIFIED**.
+
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
 ## 1. Account
@@ -322,7 +324,7 @@ snapshot without changing any resource.
 - [x] Additional fresh-contact retest: NOT REQUIRED for the controlled technical path.
 - [ ] Provider-failure simulation remains UNVERIFIED.
 - [x] Limited rollout risk disposition: owner accepts the known missing-consent feedback, direct-provider-reachability and deliverability risks only for Email 1, up to 10 subscribers and 72 hours of active monitoring.
-- [ ] Public activation remains blocked pending analytics verification, Production handoff configuration/deployment, public no-submit smoke and controlled-rollout execution/monitoring. Initial indexing disposition is `noindex, nofollow`.
+- [ ] Public activation remains blocked pending analytics verification, Production handoff configuration/deployment, public no-submit smoke, operational stop-control verification, controlled-rollout execution/monitoring and the post-72-hour go/no-go. Initial indexing disposition is approved as `noindex, nofollow` without authorizing future indexing changes.
 
 ## 10. Consent
 
@@ -334,7 +336,7 @@ snapshot without changing any resource.
 - [x] Repository preparation: provider-hosted MailerLite form selected as the sole future consent system of record; the Next.js app has no personal-data form or submit path.
 - [x] Project-owner decision: functional consent blocking is accepted as PASS for the current Preview staging path despite the tracked provider-native missing-consent feedback limitation.
 - [x] Project-owner decision: the same provider-native limitation is accepted only for the isolated inactive Production staging state; resolution or explicit disposition remains required before public activation.
-- [x] Subsequent activation-level disposition: accepted only for the Email 1-only controlled rollout of up to 10 subscribers over 72 hours, together with the direct-provider-reachability and deliverability risks. No limitation is represented as fixed, fully accessible, legally compliant, harmless, certified or irrelevant; this is not unrestricted or permanent approval.
+- [x] Subsequent activation-level disposition: accepted only for the approved public Email 1 rollout of up to 10 subscribers over 72 hours, together with the direct-provider-reachability and deliverability risks. No limitation is represented as fixed, fully accessible, legally compliant, harmless, certified or irrelevant; this is not unrestricted or permanent approval.
 - [ ] Production consent linking: remains PENDING and requires separate configuration/deployment authority; the limited risk disposition does not itself link the form or activate collection.
 - [ ] Owner approval: link or activate the staged Production form/group, consent collection, or any delivery flow.
 

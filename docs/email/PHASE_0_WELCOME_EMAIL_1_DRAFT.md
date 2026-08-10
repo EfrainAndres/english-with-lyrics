@@ -250,7 +250,7 @@ aprobación separada de la responsable.
   del formulario alojado siguen registradas; este staging no las resuelve ni
   autoriza activación pública.
 - La responsable acepta esas limitaciones y el riesgo conocido de
-  entregabilidad únicamente para un rollout controlado de Email 1 de máximo 10
+  entregabilidad únicamente para el rollout público aprobado de Email 1 de máximo 10
   suscriptores durante 72 horas, con monitoreo activo. Esta aceptación no
   significa que estén corregidos, sean plenamente accesibles, legalmente
   conformes, inocuos, certificados o irrelevantes; tampoco es una aprobación
@@ -260,8 +260,11 @@ aprobación separada de la responsable.
 
 Este registro posterior no modifica el alcance histórico de preparación y QA
 de Preview documentado a continuación. La vinculación final de consentimiento,
-la entrega activa, el despliegue controlado y la indexación de Producción siguen
-sin autorizarse.
+la entrega activa, el despliegue controlado, la verificación operativa de los
+controles de parada, la ejecución del rollout y la decisión go/no-go posterior
+a las 72 horas siguen sin ejecutarse. La disposición inicial de indexación está
+aprobada como `noindex, nofollow`; no es permanente ni autoriza cambios futuros
+de indexación.
 
 Rollback preparado: eliminar únicamente el nuevo borrador de Email 1 adjunto y
 la nueva automatización inactiva. No alterar el grupo/formulario ya staged ni
