@@ -17,12 +17,13 @@
 - Redirect configuration correction: STAGED / REVALIDATED BY AFFIRMATIVE SUBMISSION / PASS.
 - Final inbox-verification result: PASS FOR THE CONTROLLED TECHNICAL PATH. One fresh contact with zero history produced one redirect, assignment, terminal completion, provider-recorded send and matching inbox delivery; content/CTA, functional unsubscribe and cleanup passed.
 - Limited rollout risk disposition: ACCEPTED only for the approved public Email 1 rollout, up to 10 subscribers and 72 hours, with active monitoring and immediate stop thresholds; no limitation is fixed, compliant, unrestricted or permanently accepted.
-- Initial indexing disposition: APPROVED as `noindex, nofollow`; no indexing setting changed in this task and no future indexing change is authorized.
+- Initial indexing disposition: APPROVED as `noindex, nofollow`; `/ebook-gratis` now has temporary route-scoped metadata prepared for the approved 10-subscriber / 72-hour rollout. This branch is not deployed to canonical Production and does not authorize permanent or future indexing changes.
 - Public activation, analytics dashboard verification, Production handoff configuration/deployment, public no-submit smoke, operational stop-control verification, rollout execution/monitoring and the post-72-hour go/no-go: PENDING.
 
-Merging the support code does not configure Vercel, expose the staged form on
-the public website, activate Email 1 or the automation, submit a form, create a
-subscriber, send an email, enable analytics, change indexing, or deploy.
+Merging the route-scoped indexing preparation does not configure Vercel, expose
+the staged form on the public website, activate Email 1 or the automation,
+submit a form, create a subscriber, send an email, enable analytics, or deploy.
+The funnel remains fail-closed and inactive until the separate activation task.
 
 ## Controlled Production test result
 
