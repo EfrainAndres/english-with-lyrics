@@ -13,7 +13,7 @@
 - DKIM: VERIFIED.
 - Sending-domain authentication: VERIFIED.
 - Production sending: INACTIVE.
-- Professional legal and provider review: COMPLETE; Production collection still requires explicit activation acceptance.
+- Professional legal and provider review: COMPLETE; owner risk disposition is accepted only for the Email 1-only monitored rollout of up to 10 subscribers over 72 hours.
 - Public lead capture: Not active.
 - Current direct ebook delivery: Active.
 
@@ -175,7 +175,7 @@ Requirements:
 - Uses the already available `/gracias` route only after the final redirect mapping is reverified during controlled activation.
 - Uses the approved public privacy-policy URL.
 - Triggers Email 1 only after complete Preview and production-readiness QA.
-- Remains unlinked from the website until all activation gates are cleared. The provider has no native unpublish state, so undistributed direct-provider reachability and the tracked missing-consent feedback limitation require explicit activation acceptance.
+- Remains unlinked from the website until all activation gates are cleared. The owner accepts the provider's missing-consent feedback and lack of native unpublish/deactivate state only for the limited Email 1 controlled rollout; neither limitation is represented as fixed, fully accessible, legally compliant, harmless, certified or irrelevant.
 
 ## Consent mapping
 
@@ -240,8 +240,10 @@ If double opt-in is later enabled, the journey, consent docs, and automation ass
 ## Automation setup design
 
 - Production status: exactly one workflow STAGED / INACTIVE, mapped only to the staged Production group/form path and the attached Email 1 draft.
-- Production contacts in progress/completed: ZERO / ZERO.
-- Production test, campaign and Production sends: ZERO / ZERO / ZERO.
+- Production contacts in progress/completed: ZERO / THREE retained non-personal controlled-test history records.
+- Controlled affirmative submissions, group assignments, workflow entries and provider-recorded automated Production Email 1 sends across all authorized windows: FOUR / FOUR / THREE / THREE.
+- Inbox-verified automated Production Email 1 deliveries: TWO. The original and final deliveries pass received content/CTA verification; the intervening provider-recorded send remains unmatched historical evidence.
+- Test-email, campaign and transactional sends: ZERO / ZERO / ZERO; sent campaigns and outbox remain zero.
 - Preview equivalent remains isolated and unchanged.
 
 Intended structure:
@@ -276,7 +278,7 @@ Email 1 is the only staged Production message. Emails 2–4 remain documentation
 - Preview subject must keep `[TEST]`.
 - Delivery continues to use a stable page link, not a PDF attachment.
 - Four-email timing outline is documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
-- Preview verification is complete; Production Email 1 is staged and unsent in the inactive Production workflow.
+- Preview verification is complete; Production Email 1 remains staged in the inactive Production workflow after three provider-recorded authorized controlled sends, of which two deliveries are inbox-verified. The final successful test boundary remains exactly one automated delivery.
 
 ### Emails 2-4
 
@@ -373,14 +375,17 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 
 ## Remaining operations before Production activation
 
-- Obtain explicit owner authorization for Production collection and the controlled rollout.
+- Preserve the owner-approved public Email 1-only boundary: up to 10 subscribers over 72 hours, active monitoring, no expansion without a separate post-72-hour go/no-go decision.
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
-- Run one minimum-boundary controlled Production submission before any public promotion and verify group assignment, `/gracias`, Email 1 delivery, unsubscribe, zero unexpected contacts/sends, and rollback controls.
-- Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for activation.
+- Preserve the original redirect failure and later staged correction as historical evidence. The corrected redirect has now passed in two separately authorized affirmative submissions.
+- Preserve the fresh-contact zero-entry/zero-send bounded-window snapshot, then retain the later correction: the contact reached Completed and MailerLite recorded one automated send, while inbox delivery remained absent.
+- Preserve the separately authorized final inbox-verification PASS: activation was confirmed before one submission, Activity reached a terminal state before pause/cleanup, one matching inbox delivery and approved content/CTA passed, functional unsubscribe generated no additional message, and GDPR Forget returned the group/contact search to zero.
+- For any future controlled window, continue to confirm activation history and monitor workflow Activity to a terminal status before pausing, unsubscribing or applying GDPR Forget. Treat delayed provider visibility after cleanup as a procedural timing risk, not proof of a provider defect.
+- Retain the limited public-rollout risk disposition for missing-consent feedback, direct-provider reachability and known deliverability risk; it does not make a limitation fixed or compliant and is not unrestricted or permanent approval.
 - Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
 - Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
-- Make the separate Production indexing decision; retain current `noindex` behavior until then.
-- Begin the approved 10-subscriber rollout and monitor for 72 hours before expansion.
+- Retain the approved initial `noindex, nofollow` indexing disposition without treating it as permanent or as authorization for future indexing changes.
+- After analytics, configuration/deployment, public no-submit smoke and operational stop-control verification pass, begin the approved 10-subscriber rollout and monitor for 72 hours. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error, then require a separate post-72-hour go/no-go before expansion.
 
 ## Fallback provider record
 

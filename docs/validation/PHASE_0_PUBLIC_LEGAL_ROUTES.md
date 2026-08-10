@@ -1,6 +1,6 @@
 # Phase 0 Public Legal Routes
 
-> Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact; no Production resource or commercial-funnel capability was activated. Production consent linking, indexing, and controlled rollout remain pending; direct PDF delivery remains active.
+> Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact; no Production resource or commercial-funnel capability was activated. Production consent linking and controlled-rollout execution remain pending; direct PDF delivery remains active. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes.
 
 ## Status
 
@@ -19,7 +19,7 @@ Isolated provider-hosted Preview consent form: CONFIGURED
 Isolated provider-hosted Production consent group/form: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / ZERO SUBSCRIBERS
 Production provider form public-site or Vercel link: ABSENT
 Production provider form single opt-in: PASS
-Provider-native unpublish/deactivate state: NOT AVAILABLE — OWNER-ACCEPTED FOR STAGING ONLY
+Provider-native unpublish/deactivate state: NOT AVAILABLE — OWNER-ACCEPTED ONLY FOR THE APPROVED PUBLIC EMAIL 1 ROLLOUT OF UP TO 10 SUBSCRIBERS / 72 HOURS
 Direct provider URL distribution: NONE
 Branch-restricted Vercel Preview handoff: PASS
 Initial Preview staging validation submission: NOT PERFORMED — HISTORICAL PRE-QA STATE
@@ -31,7 +31,7 @@ Duplicate-safe behavior: PASS
 Email or automation side effects: NONE
 GDPR Forget cleanup and post-cleanup absence: PASS
 Missing-consent feedback accessibility: KNOWN MAILERLITE-NATIVE LIMITATION — OWNER-ACCEPTED FOR PREVIEW STAGING / TRACKED
-Missing-consent feedback Production disposition: OWNER-ACCEPTED FOR INACTIVE STAGING ONLY / TRACKED
+Missing-consent feedback Production disposition: OWNER-ACCEPTED ONLY FOR THE APPROVED PUBLIC EMAIL 1 ROLLOUT OF UP TO 10 SUBSCRIBERS / 72 HOURS / TRACKED
 Provider-failure simulation: UNVERIFIED
 Preview test subscriber after cleanup: NONE
 Preview /ebook-gratis provider handoff and /privacidad link: PASS
@@ -63,18 +63,29 @@ Production metadata privacy: PASS
 Production ebook and thank-you regression: PASS
 /gracias availability: PASS
 Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
-Production indexing decision: PENDING
+Production indexing disposition: APPROVED INITIAL / `noindex, nofollow`
 Production MailerLite group/form: STAGED / INACTIVE
 Final Production consent linking: PENDING
 Rights-request provider operations QA: PASS
 Production Email 1: STAGED / INACTIVE
 Production email delivery: INACTIVE
 Production automation: STAGED / INACTIVE
-Production automation contacts in progress/completed: ZERO / ZERO
-Production welcome email test/campaign/Production sends: ZERO / ZERO / ZERO
+Production automation contacts in progress/completed: ZERO / THREE retained history records
+Provider-recorded controlled automated Production Email 1 sends: THREE
+Inbox-verified controlled automated Production Email 1 deliveries: TWO
+Production welcome email test/campaign/transactional sends: ZERO / ZERO / ZERO
 Production lead capture: INACTIVE
-Controlled rollout: PENDING
+Initial controlled Production test: FAIL — hosted-form redirect did not reach /gracias
+Corrected hosted-form redirect: PASS by affirmative submission
+Fresh-contact bounded-window corrective snapshot: FAIL — group assignment ONE / workflow entry ZERO / Email 1 ZERO
+Delayed provider-state correction: Completed ONE / provider-recorded send ONE / matching inbox message ZERO
+Fresh-contact received content, CTA, footer/privacy and rendered unsubscribe: UNVERIFIED
+Final Production inbox-verification technical path: PASS
+Final test redirect / assignment / terminal completion / inbox delivery / content / CTA / unsubscribe / cleanup: PASS
+Additional fresh-contact retest: NOT REQUIRED
+Public activation and rollout: PENDING — INCLUDING OPERATIONAL STOP-CONTROL VERIFICATION AND POST-72-HOUR GO/NO-GO
 Direct PDF delivery: ACTIVE
+Controlled-test cleanup: PASS / EXECUTED
 Rollback: PREPARED / NOT EXECUTED
 Project-owner canonical Production legal review: PASS
 Final Production legal-publication acceptance gate: PASS
@@ -88,19 +99,25 @@ consent collection, email delivery, Email 1, MailerLite automation, or the
 commercial funnel. It does not constitute certification or guaranteed
 compliance. Lead capture, Email 1, email
 delivery and automation remain inactive; direct PDF delivery remains the active
-delivery path. The published policies remain `noindex, nofollow` pending an
-explicit Production indexing decision.
+delivery path. The published policies retain the owner-approved initial
+`noindex, nofollow` disposition.
 
 The fail-closed Production handoff support also does not activate the funnel.
 With absent, blank, malformed or unsupported Production configuration, the
 entire lead-capture surface is omitted. A valid future Production-scoped value
 can expose only the external provider handoff with the approved disclosure and
 exact `/privacidad` link; it cannot add native personal-data fields or affect
-the independent direct PDF path. Vercel configuration, a controlled Production
-test before public promotion, explicit activation acceptance of the tracked
-provider-native accessibility/direct-reachability limitations, Email 1
-delivery, automation activation, analytics-dashboard verification, the
-indexing decision, and the 10-subscriber/72-hour rollout remain separate gates.
+the independent direct PDF path. The controlled Production technical-path test
+now passes. The owner accepts the tracked provider-native
+accessibility/direct-reachability and deliverability risks only for the
+approved public Email 1 rollout of up to 10 subscribers over 72 hours under active
+monitoring and immediate stop thresholds. This does not make any limitation
+fixed, compliant, unrestricted or permanently accepted. Production handoff
+configuration and deployment, a public no-submit smoke check,
+analytics-dashboard verification, operational stop-control verification,
+rollout execution/monitoring and the post-72-hour go/no-go remain separate
+pending gates. Initial indexing disposition is approved as `noindex, nofollow`
+without authorizing future indexing changes.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That
@@ -119,9 +136,10 @@ activation: final Production consent linking, group/form, lead capture, Email
 1, delivery, automation, controlled rollout and indexing retain their pending
 or inactive states, while direct PDF delivery remains active.
 
-Exactly one new isolated Production consent group and one matching
-provider-hosted form are staged and inactive from the website perspective with
-zero subscribers. The form
+Exactly one isolated Production consent group and one matching provider-hosted
+form remain staged and inactive from the website perspective with zero group
+subscribers after controlled cleanup. The form retains non-personal controlled
+registration history. The form
 uses the approved consent wording unchanged, requires email, keeps name
 optional, presents one unchecked provider-required affirmative control, and
 links to the exact `/privacidad` destination. Provider-native form/source and
@@ -131,8 +149,11 @@ Double opt-in is disabled and single opt-in persisted after reload. MailerLite
 offers no native unpublish/deactivate state for this hosted form; possible
 reachability through its undistributed direct provider URL is an owner-accepted
 staging limitation only and does not authorize public linking or activation.
-No form was submitted, campaign or automation connected, email sent, public
-website or Vercel configuration changed, or Production deployment performed.
+The one authorized controlled submission verified consent blocking, one group
+assignment, one workflow entry and one automated Email 1. The form redirect
+FAILED because the provider-native success state rendered instead of
+`/gracias`; no second submission was attempted. No campaign, public website or
+Vercel configuration change, or Production deployment was performed.
 The known missing-consent feedback limitation is accepted only for this
 inactive Production staging state and remains tracked; it is not described as
 fixed, fully accessible, compliant, certified, harmless, or approved for public
@@ -141,17 +162,58 @@ automation, controlled rollout and indexing retain their pending or inactive
 states; direct PDF delivery remains active. Rollback is prepared and limited to
 deleting only the new empty Production form and group.
 
-Exactly one Production Email 1 draft is now staged inside exactly one matching
-inactive workflow. The workflow uses only the original empty staged Production
-group/form path and has zero contacts in progress or completed. The draft
+Exactly one Production Email 1 draft remains staged inside exactly one matching
+inactive workflow. The workflow uses only the isolated staged Production
+group/form path and has zero contacts in progress and three retained completed
+history records. The draft
 retains the approved Spanish subject, preheader, body, Production-scoped CTA,
 text-compatible fallback, privacy/footer and unsubscribe treatment with an
-existing verified sender that was not changed. No subscriber, audience, form
-submission, test send, campaign send, Production send, public-site link,
-Vercel value or deployment was created, and existing Preview and Production
-resources were not changed. This inactive staging does not authorize final
-consent linking, lead capture, email delivery, rollout or indexing. Direct PDF
+existing verified sender that was not changed. The original and final authorized
+automated Production Email 1 deliveries are inbox-verified. MailerLite also retains
+the intervening provider-recorded send without a matching inbox message as
+historical evidence. Test, campaign and transactional messages remained zero. Real
+unsubscribe in the inbox-verified tests and GDPR Forget returned the contact
+search and Production group to zero without changing Preview or unrelated
+Production resources. This inactive state does not authorize final consent
+linking, lead capture, active email delivery, rollout or indexing. Direct PDF
 delivery remains active and independent.
+
+The fresh-contact zero-entry/zero-send result remains the historical bounded-window
+snapshot. Later read-only provider evidence showed that contact in Completed and
+one automated send, so the provider state supersedes only those two zero counters.
+Functional unsubscribe is not repeated or claimed because manual unsubscribe and
+GDPR Forget had completed before the delayed provider state became visible. The
+exact workflow execution time relative to cleanup is INCONCLUSIVE and no provider
+defect is inferred. Future controlled procedure must confirm activation history
+and monitor workflow Activity to Completed, Failed or Canceled before pausing,
+unsubscribing or applying GDPR Forget. The delayed state after cleanup is a
+procedural timing risk. The inbox message and critical content/CTA evidence
+remain absent for that historical attempt. Provider-failure simulation remains
+UNVERIFIED. Public
+activation and all remaining analytics, configuration/deployment, no-submit
+smoke and rollout-execution gates remain blocked; direct PDF delivery and legal
+routes remain independent.
+
+The separate final Production inbox-verification test passed with a fresh
+contact that had zero prior subscriber, group-membership or workflow history.
+After the isolated workflow was activated and confirmed, exactly one affirmative
+submission redirected to `/gracias`, assigned the Production group, reached
+terminal Completed and produced one provider-recorded send with one matching
+inbox delivery. Approved content, CTA resolution, text-compatible structure,
+privacy/footer and functional unsubscribe without another message passed. The
+workflow was paused only after terminal status; GDPR Forget returned contact
+search and the group to zero. Final workflow state is zero in progress and three
+completed history records. Direct PDF and all legal routes remain healthy and
+independent. No public handoff, Vercel value, source, deployment, indexing,
+Preview or unrelated Production resource changed. No additional fresh-contact
+test is required for the controlled technical-path gate. The limited rollout
+risk disposition is recorded only for the approved public Email 1 rollout of up
+to 10 subscribers over 72 hours; it does not make a limitation fixed,
+compliant, unrestricted or permanent. Public activation remains blocked by
+analytics, Production handoff configuration/deployment, public no-submit smoke,
+operational stop-control verification, rollout execution/monitoring and the
+post-72-hour go/no-go. Retain the approved initial `noindex, nofollow`
+disposition without authorizing future indexing changes.
 
 Rollback is prepared and limited to deleting only the new attached Email 1
 draft and the new inactive workflow; the already staged group/form and all
@@ -391,7 +453,7 @@ Completed by the project owner directly against the canonical Production origin 
 
 **Project-owner canonical Production legal review: PASS. Final Production legal-publication acceptance gate: PASS. Production legal policies: LIVE / ACCEPTED.**
 
-Passing the legal-publication acceptance gate does not activate lead capture, consent collection, email delivery, Email 1, MailerLite automation, or the commercial funnel. It does not constitute certification or guaranteed compliance. Production indexing decision, final consent linking, rights-request provider operations QA, and controlled rollout remain pending; `noindex, nofollow` is retained on both routes.
+Passing the legal-publication acceptance gate does not activate lead capture, consent collection, email delivery, Email 1, MailerLite automation, or the commercial funnel. It does not constitute certification or guaranteed compliance. Final consent linking and controlled rollout execution remain pending; rights-request provider operations QA passes, and the approved initial `noindex, nofollow` disposition is retained on both routes.
 
 No Production environment value, responsible-party private value, ephemeral deployment URL, screenshot, Vercel token, project identifier, provider identifier, telephone target or private address is stored in this repository.
 
@@ -450,7 +512,7 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 - Identification details when legally required.
 - City or jurisdiction information.
 - Effective date.
-- Explicit Production indexing decision; `noindex, nofollow` retained until then.
+- Approved initial Production indexing disposition retained as `noindex, nofollow`.
 - Approved footer/business address.
 - Public linking and activation of the staged Production MailerLite group/form.
 - Final Production consent control and policy linking.
@@ -492,7 +554,7 @@ Production legal policies: LIVE / ACCEPTED
 
 PR #64: APPROVED FOR MERGE — NOT MERGED
 
-Production indexing decision: PENDING
+Production indexing disposition: APPROVED INITIAL / `noindex, nofollow`
 
 Production consent decision: PENDING
 

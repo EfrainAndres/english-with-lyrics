@@ -2,15 +2,15 @@
 
 ## Estado y límites
 
-- Estado del contenido: DRAFT.
+- Estado del contenido: APPROVED DRAFT / STAGED.
 - Estado de activación: INACTIVE.
-- Alcance: preparación exclusivamente documental para una futura prueba de envío solo en Preview.
-- Este borrador no autoriza un formulario, grupo, automatización, entrega, remitente, suscriptor, configuración del proveedor ni activación de Producción.
+- Alcance: referencia canónica verificada en Preview y en dos entregas automatizadas controladas de Producción recibidas en buzón; un tercer envío registrado por el proveedor permanece como evidencia histórica sin mensaje correspondiente.
+- Este borrador no autoriza vinculación pública, configuración de Vercel, otra entrega, otro suscriptor ni activación de Producción.
 - La entrega directa del PDF permanece ACTIVE e independiente del consentimiento promocional o de este correo.
 
-Este documento es una referencia de contenido futuro. No modifica la
-configuración histórica de Preview ni los registros de QA controlado existentes
-en el repositorio.
+Este documento es la referencia canónica del contenido staged. Su verificación
+controlada no modifica la configuración histórica de Preview ni autoriza otra
+entrega o activación.
 
 ## Propósito
 
@@ -173,7 +173,10 @@ Producción:
 | Puerta | Estado |
 | --- | --- |
 | Vinculación de consentimiento de Producción | PENDING |
-| Decisión de indexación de Producción | PENDING |
+| Disposición inicial de indexación | APPROVED: `noindex, nofollow` |
+| Aceptación limitada de riesgos para rollout | PASS: solo Email 1 / máximo 10 suscriptores / 72 horas |
+| Verificación de analytics | PENDING |
+| Configuración, deployment y smoke público sin envío | PENDING |
 | Grupo/formulario de Producción | STAGED / INACTIVE desde la perspectiva del sitio |
 | Captura de leads de Producción | INACTIVE |
 | Email 1 de Producción | STAGED / INACTIVE |
@@ -192,27 +195,76 @@ aprobación separada de la responsable.
   automatización de Producción correspondiente; ambos permanecen STAGED /
   INACTIVE.
 - La automatización usa únicamente el grupo/formulario original de staging de
-  Producción, que permanece vacío, y registra cero contactos en curso o
-  completados.
+  Producción, cuyo grupo volvió a cero después del cleanup, y registra cero
+  contactos en curso y tres registros completados no personales retenidos.
 - El borrador conserva el asunto aprobado, el preencabezado, el cuerpo en
   español, la CTA con alcance de Producción, la estructura compatible con texto
   sin formato, el tratamiento de privacidad, el pie del proveedor y la
   cancelación de suscripción.
 - Se reutilizó un remitente existente verificado sin crear ni modificar una
   identidad de remitente.
-- Envíos de prueba, de campaña o de Producción: CERO. Destinatarios, audiencias,
-  suscriptores, envíos de formulario y conexiones adicionales: CERO.
+- La prueba controlada inicial (histórica) entregó exactamente un Email 1 automatizado después de
+  una sola asignación y una sola entrada al workflow. Envíos de prueba, de
+  campaña, transaccionales o adicionales: CERO.
+- El asunto aprobado, preencabezado oculto, cuerpo en español, CTA de
+  Producción, alternativa compatible con texto, privacidad/pie y cancelación
+  de suscripción recibidos: PASS. El CTA abrió `/gracias` y la cancelación real
+  funcionó sin generar otro mensaje.
+- El redirect del formulario alojado: FAIL. Se mostró el estado de éxito nativo
+  del proveedor en lugar de `/gracias`; no se realizó un segundo envío.
+- En los dos retests correctivos previos (históricos), el redirect corregido llegó
+  a `/gracias` y la asignación al grupo aislado funcionó. Durante la ventana
+  limitada, el workflow activo no mostró una nueva entrada ni otro Email 1. Esos
+  resultados se conservan por separado y no autorizan activación.
+- Corrección posterior: el resultado CERO / CERO anterior fue una fotografía
+  del período limitado de observación. MailerLite mostró después al contacto
+  nuevo como Completed y registró un envío automatizado. El buzón autorizado no
+  contiene un mensaje correspondiente ni mensajes adicionales inesperados, por
+  lo que entrega, asunto, preencabezado, cuerpo, CTA, alternativa de texto,
+  privacidad/pie y renderizado de cancelación siguen UNVERIFIED para ese intento.
+  La cancelación manual y GDPR Forget ya se habían completado; no se repitió ni
+  se afirma una segunda prueba funcional de cancelación.
+- Que el estado del proveedor apareciera después de la limpieza no demuestra el
+  momento exacto de ejecución ni un defecto. Se registra como riesgo de tiempo
+  operativo: en otro intento se debe confirmar el historial de activación y
+  vigilar Activity hasta un estado terminal antes de pausar o limpiar.
+- Prueba final de verificación de buzón: PASS. Un contacto nuevo sin historial
+  previo produjo una sola asignación, una entrada que llegó a Completed y un
+  único envío automatizado recibido. El asunto aprobado, preencabezado oculto,
+  cuerpo en español, CTA, estructura compatible con texto, privacidad/pie y
+  cancelación renderizada pasaron. La CTA llegó a `/gracias`; la cancelación
+  real no generó otro mensaje. La automatización se pausó solo después del
+  estado terminal y GDPR Forget devolvió la búsqueda y el grupo a cero.
+- El contacto controlado se dio de baja y se sometió a GDPR Forget. El grupo y
+  la búsqueda de contactos volvieron a cero; el formulario y el workflow
+  retienen historial de registro no personal y tres completados no personales,
+  respectivamente.
+- En total, MailerLite conserva tres envíos automatizados controlados; dos
+  entregas se verificaron en buzón y el envío interveniente sin mensaje
+  correspondiente permanece como evidencia histórica. La prueba final por sí
+  sola conservó su límite de exactamente una entrega.
 - No se vinculó el sitio público, no se agregó ningún valor a Vercel y no se
   realizó ningún despliegue. La entrega directa del PDF permanece independiente
   y ACTIVE.
 - Las limitaciones conocidas de feedback de consentimiento y de alcance directo
   del formulario alojado siguen registradas; este staging no las resuelve ni
   autoriza activación pública.
+- La responsable acepta esas limitaciones y el riesgo conocido de
+  entregabilidad únicamente para el rollout público aprobado de Email 1 de máximo 10
+  suscriptores durante 72 horas, con monitoreo activo. Esta aceptación no
+  significa que estén corregidos, sean plenamente accesibles, legalmente
+  conformes, inocuos, certificados o irrelevantes; tampoco es una aprobación
+  irrestricta o permanente. Se debe detener el ingreso de inmediato ante correo
+  inesperado, problema de consentimiento/privacidad, fallo de entrega, queja o
+  error del workflow.
 
 Este registro posterior no modifica el alcance histórico de preparación y QA
 de Preview documentado a continuación. La vinculación final de consentimiento,
-la entrega, el despliegue controlado y la indexación de Producción siguen sin
-autorizarse.
+la entrega activa, el despliegue controlado, la verificación operativa de los
+controles de parada, la ejecución del rollout y la decisión go/no-go posterior
+a las 72 horas siguen sin ejecutarse. La disposición inicial de indexación está
+aprobada como `noindex, nofollow`; no es permanente ni autoriza cambios futuros
+de indexación.
 
 Rollback preparado: eliminar únicamente el nuevo borrador de Email 1 adjunto y
 la nueva automatización inactiva. No alterar el grupo/formulario ya staged ni

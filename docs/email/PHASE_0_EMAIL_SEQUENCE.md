@@ -5,8 +5,9 @@
 - Sequence status: Email 1 staged; Emails 2–4 remain planned only.
 - Content status: approved Email 1 verified in Preview and staged in exactly one inactive Production workflow.
 - Emails 2–4: Outline only.
-- Production Email 1 and workflow: STAGED / INACTIVE / UNSENT, with zero contacts in progress or completed.
+- Production Email 1 and workflow: STAGED / INACTIVE after three provider-recorded authorized automated sends; zero contacts are in progress and three non-personal completed history records are retained. The original and final deliveries are inbox-verified; the intervening delayed send remains unmatched historical evidence.
 - Production activation and delivery: INACTIVE.
+- Controlled Production funnel state: PASS FOR THE CONTROLLED TECHNICAL PATH / NOT PUBLICLY ACTIVATED. The original redirect failure, corrected retests and delayed unmatched send remain historical evidence. The final fresh-contact test verified activation before submission, redirect, isolated assignment, terminal completion, exactly one inbox delivery, approved content, CTA, text-compatible structure, privacy/footer, functional unsubscribe without another message, independent PDF access and cleanup. The owner has accepted the known accessibility, direct-reachability and deliverability risks only for the approved public Email 1 rollout of up to 10 subscribers over 72 hours under active monitoring and immediate stop thresholds; no limitation is fixed, compliant, unrestricted or permanently accepted. Analytics verification, public linking/configuration, deployment, no-submit smoke, operational stop-control verification, rollout execution and the post-72-hour go/no-go remain separate pending gates. The approved initial indexing disposition remains `noindex, nofollow` and does not authorize future indexing changes.
 
 ## Sequence overview
 
@@ -113,4 +114,4 @@ Content direction:
 - Keep consent scope aligned with the approved Phase 0 model.
 - Keep Preview and Production automations separate.
 - The published legal routes, completed professional/provider reviews, verified sender, and available `/gracias` route are readiness evidence; they do not activate the sequence.
-- Do not activate the Production sequence until the separate owner authorization, controlled Production test, provider accessibility/direct-reachability acceptance, analytics-dashboard check, indexing decision, and 10-subscriber/72-hour rollout gates pass.
+- The final technical-path inbox-verification test and limited public-rollout risk disposition have passed; no additional technical-path retest or broader risk acceptance is implied. Do not activate the Production sequence until the analytics dashboard is verified, the approved initial `noindex, nofollow` disposition is reconfirmed without treating future indexing changes as authorized, Production handoff configuration and deployment are authorized, the public no-submit smoke passes, and operational stop controls are verified. During the 10-subscriber/72-hour rollout, stop immediately for any unexpected email, consent/privacy issue, delivery failure, complaint or workflow error; require a separate post-72-hour go/no-go before expansion.
