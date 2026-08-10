@@ -241,7 +241,7 @@ If double opt-in is later enabled, the journey, consent docs, and automation ass
 
 - Production status: exactly one workflow STAGED / INACTIVE, mapped only to the staged Production group/form path and the attached Email 1 draft.
 - Production contacts in progress/completed: ZERO / ONE retained non-personal controlled-test history record.
-- Controlled affirmative submissions, group assignments and automated Production Email 1 deliveries: ONE / ONE / ONE.
+- Controlled affirmative submissions, group assignments, workflow entries and automated Production Email 1 deliveries across all authorized windows: THREE / THREE / ONE / ONE.
 - Test-email, campaign and transactional sends: ZERO / ZERO / ZERO; sent campaigns and outbox remain zero.
 - Preview equivalent remains isolated and unchanged.
 
@@ -376,8 +376,9 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 
 - Obtain explicit owner authorization for Production collection and the controlled rollout.
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
-- Reconfirm the staged hosted-form redirect configuration without submission before opening a corrective test window. The success action is configured for the approved `/gracias` destination and verified without submission, but it is NOT YET REVALIDATED BY SUBMISSION; the first controlled-test failure remains historical evidence.
-- Obtain separate owner authorization for one corrective Production retest; verify the form redirect itself, one group assignment, one Email 1 delivery, unsubscribe, zero unexpected contacts/sends, cleanup and retained-history counters before public promotion.
+- Preserve the original redirect failure and later staged correction as historical evidence. The corrected redirect has now passed in two separately authorized affirmative submissions.
+- Diagnose why both post-correction group assignments created zero new entries in the active Production workflow, including the fresh-contact attempt with no prior subscriber or workflow history. Do not submit or send during diagnosis.
+- After a provider-level cause and minimum correction are verified, obtain new owner authorization for any further Production retest, temporary automation activation, message delivery and cleanup.
 - Explicitly accept or resolve the provider-native missing-consent feedback and undistributed direct-provider-reachability limitations for activation.
 - Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
 - Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.

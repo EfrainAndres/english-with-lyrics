@@ -209,6 +209,11 @@ aprobación separada de la responsable.
   funcionó sin generar otro mensaje.
 - El redirect del formulario alojado: FAIL. Se mostró el estado de éxito nativo
   del proveedor en lugar de `/gracias`; no se realizó un segundo envío.
+- En dos retests posteriores autorizados, el redirect corregido llegó a
+  `/gracias` y la asignación al grupo aislado funcionó. Sin embargo, el workflow
+  activo no creó una nueva entrada ni entregó otro Email 1, incluso con un
+  contacto nuevo sin historial previo. Esos resultados se conservan por
+  separado y no invalidan la única entrega histórica ni autorizan activación.
 - El contacto controlado se dio de baja y se sometió a GDPR Forget. El grupo y
   la búsqueda de contactos volvieron a cero; el formulario y el workflow
   retienen un registro y un completado no personales, respectivamente.
@@ -221,8 +226,8 @@ aprobación separada de la responsable.
 
 Este registro posterior no modifica el alcance histórico de preparación y QA
 de Preview documentado a continuación. La vinculación final de consentimiento,
-la entrega activa, el retest correctivo, el despliegue controlado y la
-indexación de Producción siguen sin autorizarse.
+la entrega activa, un diagnóstico y eventual retest del trigger, el despliegue
+controlado y la indexación de Producción siguen sin autorizarse.
 
 Rollback preparado: eliminar únicamente el nuevo borrador de Email 1 adjunto y
 la nueva automatización inactiva. No alterar el grupo/formulario ya staged ni

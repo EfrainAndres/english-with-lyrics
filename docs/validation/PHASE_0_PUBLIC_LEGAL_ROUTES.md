@@ -74,8 +74,10 @@ Production automation contacts in progress/completed: ZERO / ONE retained histor
 Controlled automated Production Email 1 deliveries: ONE
 Production welcome email test/campaign/transactional sends: ZERO / ZERO / ZERO
 Production lead capture: INACTIVE
-Controlled Production test: FAIL — hosted-form redirect did not reach /gracias
-Corrective controlled retest and rollout: PENDING
+Initial controlled Production test: FAIL — hosted-form redirect did not reach /gracias
+Corrected hosted-form redirect: PASS by affirmative submission
+Fresh-contact end-to-end corrective retest: FAIL — group assignment ONE / workflow entry ZERO / Email 1 ZERO
+Provider-level automation-trigger diagnosis, any further retest and rollout: PENDING
 Direct PDF delivery: ACTIVE
 Controlled-test cleanup: PASS / EXECUTED
 Rollback: PREPARED / NOT EXECUTED
@@ -124,8 +126,8 @@ or inactive states, while direct PDF delivery remains active.
 
 Exactly one isolated Production consent group and one matching provider-hosted
 form remain staged and inactive from the website perspective with zero group
-subscribers after controlled cleanup. The form retains one non-personal
-registration. The form
+subscribers after controlled cleanup. The form retains non-personal controlled
+registration history. The form
 uses the approved consent wording unchanged, requires email, keeps name
 optional, presents one unchecked provider-required affirmative control, and
 links to the exact `/privacidad` destination. Provider-native form/source and

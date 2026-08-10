@@ -12,6 +12,8 @@
 
 > Controlled Production funnel test: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. Exactly one affirmative submission produced one target-group assignment, one workflow entry and one automated Email 1 delivery. Consent, content, CTA, direct PDF, privacy/footer, unsubscribe, isolation and cleanup passed; the form redirect failed because the provider-native success state rendered instead of `/gracias`. No second submission or additional message was attempted. The group returned to zero, the workflow is inactive with zero in progress and one completed history record, and one non-personal form registration is retained.
 
+> Corrective Production retest state: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. The corrected hosted-form redirect passed in two separately authorized affirmative submissions and both produced the intended isolated group assignment. The first reused the prior controlled identity; the second used a fresh controlled contact whose preflight showed zero subscriber and workflow history. Neither submission created a new workflow entry or Email 1 delivery. Both cleanup paths completed; the group and contact search are zero, the workflow is paused with zero in progress and its original one completed history record, and no additional message was sent. Provider-level automation-trigger diagnosis and new owner authorization are required before another retest.
+
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
 ## 1. Account
@@ -116,13 +118,13 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: the privacy-policy destination has exact path `/privacidad`.
 - [x] Manual MailerLite dashboard action: the form/source identity records the approved-copy version; MailerLite remains responsible for capture channel/time, subscriber status, and unsubscribe/suppression state.
 - [x] Initial staging evidence: double opt-in was disabled, single opt-in persisted after reload, and no campaign, automation, email side effect or subscriber existed before the controlled window.
-- [x] Current boundary: the form remains staged and inactive from the website perspective, unlinked from the public website and absent from Vercel configuration; one controlled registration is retained in non-personal form history after cleanup.
+- [x] Current boundary: the form remains staged and inactive from the website perspective, unlinked from the public website and absent from Vercel configuration; non-personal controlled registration history is retained after cleanup and is not reset by GDPR Forget.
 - [x] Provider limitation: MailerLite offers no native unpublish/deactivate state for this hosted form; possible direct provider-URL reachability is owner-accepted for staging only, and the URL is not distributed.
 - [x] Project-owner decision: the known MailerLite-native missing-consent feedback limitation is accepted only for inactive Production staging and remains tracked; this is not an accessibility fix or activation approval.
 - [x] Rollback prepared: delete only the new empty Production form and the new empty Production group; do not alter Preview or existing resources.
 - [x] Manual MailerLite dashboard action: the single isolated Production consent form was drafted only within the current staging authorization.
 - [x] Manual MailerLite dashboard action: the Production form is assigned only to the new isolated Production staging group.
-- [x] Manual MailerLite dashboard action: Production form success action is configured for the approved `/gracias` redirect and reverified without submission. State: STAGED / NOT YET REVALIDATED BY SUBMISSION; the controlled-test failure remains historical evidence.
+- [x] Manual MailerLite dashboard action: Production form success action is configured for the approved `/gracias` redirect, reverified without submission and later revalidated by two affirmative submissions. State: STAGED / REDIRECT PASS; the original redirect failure and later zero-automation-entry retests remain historical evidence.
 - [x] Legal review: approved privacy-policy route available before activation.
 - [x] Staging control: Production form remains inactive and unlinked pending all activation blockers.
 
@@ -224,7 +226,7 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 - [x] Test-email, campaign, transactional and additional-message counts remained zero; sent campaigns and outbox remained zero.
 - [x] Preview isolation and public website, Vercel, source, deployment, analytics and indexing invariants remained unchanged.
 - [ ] Provider-failure simulation: UNVERIFIED because no safe provider-native simulation was available.
-- [ ] Overall controlled Production gate: FAIL / NO-GO. The later redirect configuration correction is staged but not yet revalidated by submission; a separately authorized one-contact retest must pass.
+- [ ] Overall controlled Production gate: FAIL / NO-GO. At this historical checkpoint the redirect correction had not yet been revalidated; the later records preserve its redirect PASS and the separate zero-automation-entry failures.
 
 ## 9E. Production redirect configuration correction
 
@@ -235,8 +237,47 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 - [x] Production group remains empty; the workflow remains inactive with zero contacts in progress and one retained completed-history record.
 - [x] No new form registration, subscriber, group assignment, automation run, email, campaign, audience, or outbox item was created.
 - [x] Public Production remains fail-closed with no website handoff or Production-scoped Vercel form configuration; direct PDF and legal routes remain healthy.
-- [ ] Redirect correction is **NOT YET REVALIDATED BY SUBMISSION**. A separately authorized one-contact corrective retest remains required.
-- [ ] Historical controlled-test result remains **FAIL / NO-GO FOR PUBLIC ACTIVATION** until that corrective retest passes.
+- [x] Redirect correction was subsequently revalidated by affirmative submission and reached `/gracias`; see the separate corrective-retest records below.
+- [ ] Historical controlled-test result remains **FAIL / NO-GO FOR PUBLIC ACTIVATION** because the later retests did not create a new automation entry or Email 1 delivery.
+
+## 9F. First corrective redirect retest and interrupted cleanup
+
+- [x] Historical redirect failure and staged correction remained preserved.
+- [x] One separately authorized affirmative submission reused the original controlled identity and redirected to `/gracias`.
+- [x] Exactly one intended Production group assignment occurred.
+- [ ] Automation entry and automated Email 1 delivery: FAIL / ZERO / ZERO while the workflow was active.
+- [x] Workflow paused after the bounded evaluation window; no second submission or message occurred.
+- [x] Cleanup was interrupted only by the browser connection and later resumed under cleanup-only authorization.
+- [x] Manual unsubscribe and GDPR Forget completed without generating another email; group and contact search returned to zero.
+- [x] Post-cleanup workflow state: PAUSED / ZERO IN PROGRESS / ONE prior completed history record.
+
+## 9G. Read-only corrective-retest diagnosis
+
+- [x] Workflow was active before the corrective submission and remained active through multiple post-submission checks.
+- [x] Trigger was exactly the isolated Production group-join event followed immediately by Email 1 and exit; no additional group, Preview group, visible filter, condition or delay was configured.
+- [x] Form-to-group mapping remained correct because the submission created the intended isolated Production assignment.
+- [x] The retained completed-history record belonged to the earlier successful controlled test and matched the reused controlled identity.
+- [ ] Exact provider-side suppression or re-entry reason: INCONCLUSIVE because the provider UI exposed no skipped-entry reason or explicit re-entry override.
+- [x] Minimum recommended diagnostic boundary was one fresh, newly authorized contact with zero subscriber and workflow history.
+
+## 9H. Fresh-contact end-to-end corrective retest
+
+- [x] Owner authorization covered exactly one fresh controlled contact, one affirmative submission, temporary activation, at most one automated Email 1 and cleanup.
+- [x] Preflight exact-contact search: ZERO subscriber records / ZERO active workflow history / ZERO completed workflow history.
+- [x] Aggregate provider baseline: Production group ZERO; workflow PAUSED / ZERO IN PROGRESS / ONE retained completed history record.
+- [x] The staged Production workflow was activated before submission and remained active for the bounded evaluation window.
+- [x] Exactly one affirmative provider-hosted submission completed without CAPTCHA, confirmation or verification-message requirement.
+- [x] Corrected provider-hosted form redirected to `/gracias`.
+- [x] Exactly one assignment to the isolated Production group; no Preview group assignment.
+- [ ] New automation entry: FAIL / ZERO.
+- [ ] Automated Email 1 delivery: FAIL / ZERO. Approved delivered content, CTA, footer/privacy and email-link unsubscribe behavior are UNVERIFIED for this attempt because no message existed.
+- [x] Direct PDF, `/gracias`, `/privacidad` and `/tratamiento-de-datos` regressions: PASS / HTTP 200 / independent of consent and email.
+- [x] Workflow paused immediately after the bounded zero-entry result.
+- [x] Manual provider unsubscribe required no email; GDPR Forget completed; contact search and Production group returned to ZERO.
+- [x] Post-test workflow state: PAUSED / ZERO IN PROGRESS / ONE retained completed history record.
+- [x] Test, campaign, transactional, verification, confirmation and additional-message counts: ZERO / ZERO / ZERO / ZERO / ZERO / ZERO.
+- [x] Public Production remained fail-closed with no website handoff; Vercel, source, deployment, indexing, Preview and unrelated Production resources remained unchanged.
+- [ ] Overall fresh-contact end-to-end result: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. Provider-level automation-trigger diagnosis and new owner authorization are required before another submission or message.
 
 ## 10. Consent
 
@@ -349,7 +390,7 @@ No rollback was required. This QA authorizes neither an audience send nor any Pr
 - [x] Production Email 1 remains exactly one STAGED / INACTIVE draft after one authorized automated controlled delivery.
 - [x] Production automation remains exactly one matching STAGED / INACTIVE workflow with zero contacts in progress and one retained completed history record.
 - [ ] Production-scoped handoff configuration added in Vercel during an authorized activation task.
-- [ ] Minimum controlled Production test passes before public promotion. The completed test is FAIL because the form redirect did not reach `/gracias`; a separate one-contact retest is required.
+- [ ] Minimum controlled Production test passes before public promotion. Redirect and assignment now pass, but both post-correction attempts created zero new workflow entries and zero new Email 1 deliveries.
 - [ ] Production email delivery activated.
 - [ ] Production lead capture activated.
 - [ ] Production accessibility/direct-provider-reachability limitation disposition explicitly accepted for activation or resolved.

@@ -7,7 +7,7 @@
 - Emails 2–4: Outline only.
 - Production Email 1 and workflow: STAGED / INACTIVE after one authorized automated controlled delivery; zero contacts are in progress and one non-personal completed history record is retained.
 - Production activation and delivery: INACTIVE.
-- Controlled Production funnel test: FAIL because the provider-hosted form did not redirect to `/gracias`; a separately authorized corrective retest remains required before public linking.
+- Controlled Production funnel state: FAIL / NO-GO. The original test delivered one Email 1 but failed redirect. The corrected redirect now passes, including with a fresh contact that had no prior history, but the active workflow created zero new entries and zero new Email 1 deliveries after the intended group assignment. Provider-level trigger diagnosis and new owner authorization are required before any further retest or public linking.
 
 ## Sequence overview
 
