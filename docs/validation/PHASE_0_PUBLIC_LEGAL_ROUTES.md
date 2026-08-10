@@ -108,10 +108,11 @@ entire lead-capture surface is omitted. A valid future Production-scoped value
 can expose only the external provider handoff with the approved disclosure and
 exact `/privacidad` link; it cannot add native personal-data fields or affect
 the independent direct PDF path. The controlled Production technical-path test
-now passes. Vercel configuration, explicit activation acceptance of the tracked
-provider-native accessibility/direct-reachability limitations, Email 1
-delivery, automation activation, analytics-dashboard verification, the
-indexing decision, and the 10-subscriber/72-hour rollout remain separate gates.
+now passes. Production handoff configuration and deployment, a public
+no-submit smoke check, explicit activation acceptance of the tracked
+provider-native accessibility/direct-reachability and deliverability
+limitations, analytics-dashboard verification, the noindex decision, and the
+10-subscriber/72-hour rollout remain separate gates.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That
@@ -201,7 +202,8 @@ independent. No public handoff, Vercel value, source, deployment, indexing,
 Preview or unrelated Production resource changed. No additional fresh-contact
 test is required for the controlled technical-path gate; public activation
 remains blocked by the separate limitation-acceptance, deliverability, analytics,
-indexing and rollout gates.
+noindex, Production handoff configuration/deployment, public no-submit smoke and
+rollout gates.
 
 Rollback is prepared and limited to deleting only the new attached Email 1
 draft and the new inactive workflow; the already staged group/form and all

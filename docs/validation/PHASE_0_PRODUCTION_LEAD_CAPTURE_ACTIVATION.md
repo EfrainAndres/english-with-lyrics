@@ -16,7 +16,7 @@
 - Initial controlled Production test: FAIL because the provider-hosted form showed its native success state instead of redirecting to `/gracias`; no second submission occurred in that window.
 - Redirect configuration correction: STAGED / REVALIDATED BY AFFIRMATIVE SUBMISSION / PASS.
 - Final inbox-verification result: PASS FOR THE CONTROLLED TECHNICAL PATH. One fresh contact with zero history produced one redirect, assignment, terminal completion, provider-recorded send and matching inbox delivery; content/CTA, functional unsubscribe and cleanup passed.
-- Public activation, limitation acceptance, analytics dashboard verification, indexing decision and rollout: PENDING.
+- Public activation; limitation and deliverability acceptance; analytics dashboard verification; noindex decision; Production handoff configuration, deployment and public no-submit smoke; and rollout: PENDING.
 
 Merging the support code does not configure Vercel, expose the staged form on
 the public website, activate Email 1 or the automation, submit a form, create a

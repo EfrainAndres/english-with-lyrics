@@ -193,14 +193,14 @@ aprobación separada de la responsable.
   INACTIVE.
 - La automatización usa únicamente el grupo/formulario original de staging de
   Producción, cuyo grupo volvió a cero después del cleanup, y registra cero
-  contactos en curso y un registro completado no personal.
+  contactos en curso y tres registros completados no personales retenidos.
 - El borrador conserva el asunto aprobado, el preencabezado, el cuerpo en
   español, la CTA con alcance de Producción, la estructura compatible con texto
   sin formato, el tratamiento de privacidad, el pie del proveedor y la
   cancelación de suscripción.
 - Se reutilizó un remitente existente verificado sin crear ni modificar una
   identidad de remitente.
-- La prueba controlada entregó exactamente un Email 1 automatizado después de
+- La prueba controlada inicial (histórica) entregó exactamente un Email 1 automatizado después de
   una sola asignación y una sola entrada al workflow. Envíos de prueba, de
   campaña, transaccionales o adicionales: CERO.
 - El asunto aprobado, preencabezado oculto, cuerpo en español, CTA de
@@ -209,11 +209,10 @@ aprobación separada de la responsable.
   funcionó sin generar otro mensaje.
 - El redirect del formulario alojado: FAIL. Se mostró el estado de éxito nativo
   del proveedor en lugar de `/gracias`; no se realizó un segundo envío.
-- En dos retests posteriores autorizados, el redirect corregido llegó a
-  `/gracias` y la asignación al grupo aislado funcionó. Sin embargo, el workflow
-  activo no creó una nueva entrada ni entregó otro Email 1, incluso con un
-  contacto nuevo sin historial previo. Esos resultados se conservan por
-  separado y no invalidan la única entrega histórica ni autorizan activación.
+- En los dos retests correctivos previos (históricos), el redirect corregido llegó
+  a `/gracias` y la asignación al grupo aislado funcionó. Durante la ventana
+  limitada, el workflow activo no mostró una nueva entrada ni otro Email 1. Esos
+  resultados se conservan por separado y no autorizan activación.
 - Corrección posterior: el resultado CERO / CERO anterior fue una fotografía
   del período limitado de observación. MailerLite mostró después al contacto
   nuevo como Completed y registró un envío automatizado. El buzón autorizado no
@@ -237,6 +236,10 @@ aprobación separada de la responsable.
   la búsqueda de contactos volvieron a cero; el formulario y el workflow
   retienen historial de registro no personal y tres completados no personales,
   respectivamente.
+- En total, MailerLite conserva tres envíos automatizados controlados; dos
+  entregas se verificaron en buzón y el envío interveniente sin mensaje
+  correspondiente permanece como evidencia histórica. La prueba final por sí
+  sola conservó su límite de exactamente una entrega.
 - No se vinculó el sitio público, no se agregó ningún valor a Vercel y no se
   realizó ningún despliegue. La entrega directa del PDF permanece independiente
   y ACTIVE.

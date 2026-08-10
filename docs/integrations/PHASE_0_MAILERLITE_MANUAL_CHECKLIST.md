@@ -158,10 +158,10 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: the attached draft uses the approved Spanish subject, preheader, body, Production-scoped CTA and text-compatible fallback.
 - [x] Manual MailerLite dashboard action: provider privacy/footer and unsubscribe treatment retained; no PDF attachment added and direct PDF access remains independent.
 - [x] Manual MailerLite dashboard action: an existing verified sender was reused without modifying a sender identity.
-- [x] Provider state after cleanup: workflow STAGED / INACTIVE with zero contacts in progress and one retained completed history record.
-- [x] Controlled send state: exactly one automated Production Email 1 was delivered; test-email, campaign and transactional sends remain zero.
-- [x] Isolation check: the one temporary subscriber, assignment and workflow entry used only the isolated Production path; Preview and unrelated Production resources remained unchanged.
-- [ ] Repository preparation: sequence timing documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
+- [x] Provider state after final cleanup: workflow STAGED / INACTIVE with zero contacts in progress and three retained completed history records.
+- [x] Controlled aggregate send state: three provider-recorded automated Production Email 1 sends and two inbox-verified deliveries; test-email, campaign and transactional sends remain zero.
+- [x] Isolation check: all authorized temporary submissions, assignments and workflow entries used only the isolated Production path; Preview and unrelated Production resources remained unchanged.
+- [x] Repository preparation: sequence timing documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
 - [x] Staging control: Production automation remains inactive until separate rollout approval.
 - [x] Rollback prepared: delete only the new attached Email 1 draft and the new inactive workflow; do not alter the already staged group/form or any existing resource.
 

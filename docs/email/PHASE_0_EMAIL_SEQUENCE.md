@@ -114,4 +114,4 @@ Content direction:
 - Keep consent scope aligned with the approved Phase 0 model.
 - Keep Preview and Production automations separate.
 - The published legal routes, completed professional/provider reviews, verified sender, and available `/gracias` route are readiness evidence; they do not activate the sequence.
-- Do not activate the Production sequence until a separately authorized corrective controlled retest passes the form redirect, provider accessibility/direct-reachability acceptance is recorded, the analytics dashboard is verified, the indexing decision is made, and the 10-subscriber/72-hour rollout gate is approved.
+- The final technical-path inbox-verification test has passed; no additional technical-path retest is required. Do not activate the Production sequence until provider accessibility/direct-reachability and deliverability acceptance are recorded, the analytics dashboard is verified, the noindex decision is made, Production handoff configuration, deployment and public no-submit smoke checks pass, and the 10-subscriber/72-hour rollout gate is approved.

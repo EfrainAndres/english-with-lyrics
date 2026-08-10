@@ -278,7 +278,7 @@ Email 1 is the only staged Production message. Emails 2–4 remain documentation
 - Preview subject must keep `[TEST]`.
 - Delivery continues to use a stable page link, not a PDF attachment.
 - Four-email timing outline is documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
-- Preview verification is complete; Production Email 1 remains staged in the inactive Production workflow after exactly one authorized automated controlled delivery.
+- Preview verification is complete; Production Email 1 remains staged in the inactive Production workflow after three provider-recorded authorized controlled sends, of which two deliveries are inbox-verified. The final successful test boundary remains exactly one automated delivery.
 
 ### Emails 2-4
 
