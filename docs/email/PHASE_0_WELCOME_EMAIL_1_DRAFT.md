@@ -173,7 +173,10 @@ Producción:
 | Puerta | Estado |
 | --- | --- |
 | Vinculación de consentimiento de Producción | PENDING |
-| Decisión de indexación de Producción | PENDING |
+| Disposición inicial de indexación | APPROVED: `noindex, nofollow` |
+| Aceptación limitada de riesgos para rollout | PASS: solo Email 1 / máximo 10 suscriptores / 72 horas |
+| Verificación de analytics | PENDING |
+| Configuración, deployment y smoke público sin envío | PENDING |
 | Grupo/formulario de Producción | STAGED / INACTIVE desde la perspectiva del sitio |
 | Captura de leads de Producción | INACTIVE |
 | Email 1 de Producción | STAGED / INACTIVE |
@@ -246,6 +249,14 @@ aprobación separada de la responsable.
 - Las limitaciones conocidas de feedback de consentimiento y de alcance directo
   del formulario alojado siguen registradas; este staging no las resuelve ni
   autoriza activación pública.
+- La responsable acepta esas limitaciones y el riesgo conocido de
+  entregabilidad únicamente para un rollout controlado de Email 1 de máximo 10
+  suscriptores durante 72 horas, con monitoreo activo. Esta aceptación no
+  significa que estén corregidos, sean plenamente accesibles, legalmente
+  conformes, inocuos, certificados o irrelevantes; tampoco es una aprobación
+  irrestricta o permanente. Se debe detener el ingreso de inmediato ante correo
+  inesperado, problema de consentimiento/privacidad, fallo de entrega, queja o
+  error del workflow.
 
 Este registro posterior no modifica el alcance histórico de preparación y QA
 de Preview documentado a continuación. La vinculación final de consentimiento,

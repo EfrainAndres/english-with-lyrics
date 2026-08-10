@@ -321,7 +321,8 @@ snapshot without changing any resource.
 - [x] Public Production remains fail-closed; Vercel, source, deployment, indexing, Preview and unrelated Production resources remain unchanged.
 - [x] Additional fresh-contact retest: NOT REQUIRED for the controlled technical path.
 - [ ] Provider-failure simulation remains UNVERIFIED.
-- [ ] Public activation remains blocked pending the limitation-acceptance, deliverability, analytics, indexing and controlled-rollout gates.
+- [x] Limited rollout risk disposition: owner accepts the known missing-consent feedback, direct-provider-reachability and deliverability risks only for Email 1, up to 10 subscribers and 72 hours of active monitoring.
+- [ ] Public activation remains blocked pending analytics verification, Production handoff configuration/deployment, public no-submit smoke and controlled-rollout execution/monitoring. Initial indexing disposition is `noindex, nofollow`.
 
 ## 10. Consent
 
@@ -333,7 +334,8 @@ snapshot without changing any resource.
 - [x] Repository preparation: provider-hosted MailerLite form selected as the sole future consent system of record; the Next.js app has no personal-data form or submit path.
 - [x] Project-owner decision: functional consent blocking is accepted as PASS for the current Preview staging path despite the tracked provider-native missing-consent feedback limitation.
 - [x] Project-owner decision: the same provider-native limitation is accepted only for the isolated inactive Production staging state; resolution or explicit disposition remains required before public activation.
-- [ ] Production consent linking: remains PENDING and requires separate approval; the Preview limitation acceptance does not authorize Production collection or activation.
+- [x] Subsequent activation-level disposition: accepted only for the Email 1-only controlled rollout of up to 10 subscribers over 72 hours, together with the direct-provider-reachability and deliverability risks. No limitation is represented as fixed, fully accessible, legally compliant, harmless, certified or irrelevant; this is not unrestricted or permanent approval.
+- [ ] Production consent linking: remains PENDING and requires separate configuration/deployment authority; the limited risk disposition does not itself link the form or activate collection.
 - [ ] Owner approval: link or activate the staged Production form/group, consent collection, or any delivery flow.
 
 ## 11. Privacy
@@ -426,8 +428,8 @@ snapshot without changing any resource.
 
 ## 15. Production approval
 
-- [ ] Owner input: controlled rollout approved.
-- [ ] Activation acceptance: production collection approved. Published legal routes and professional/provider reviews already pass, but the provider-native accessibility and direct-reachability limitations are accepted for staging only.
+- [x] Owner input: Email 1-only controlled rollout boundary approved for up to 10 subscribers over 72 hours; execution has not started.
+- [x] Activation risk disposition: missing-consent feedback accessibility, direct-provider reachability and known deliverability risks accepted only inside that monitored boundary.
 - [x] DNS action: sender-domain authentication confirmed for `singpronuncerepeat.com`.
 - [x] `/gracias` exists and passes recorded Preview and Production regression QA.
 - [x] Fail-closed website support exists: Production requires its dedicated valid configuration and otherwise renders no lead-capture surface.
@@ -437,10 +439,11 @@ snapshot without changing any resource.
 - [x] Minimum controlled Production technical-path test passes before public promotion. The final fresh-contact test verified redirect, assignment, terminal completion, one inbox delivery, approved content/CTA, functional unsubscribe and cleanup. Public promotion remains blocked by the separate gates below.
 - [ ] Production email delivery activated.
 - [ ] Production lead capture activated.
-- [ ] Production accessibility/direct-provider-reachability limitation disposition explicitly accepted for activation or resolved.
+- [x] Production accessibility/direct-provider-reachability and deliverability disposition recorded for the limited monitored rollout only.
 - [ ] Analytics dashboard verified without personal-data payloads, cookies or tracking parameters.
-- [ ] Production indexing decision made; current `noindex` behavior retained until then.
-- [ ] Ten-subscriber rollout authorized and monitored for 72 hours before expansion.
-- [ ] Controlled Production rollout approved.
+- [x] Initial Production indexing disposition approved as `noindex, nofollow`; no indexing setting changed in this task.
+- [ ] Ten-subscriber rollout executed and monitored for 72 hours before expansion.
+- [ ] Controlled Production rollout execution and post-72-hour go/no-go completed.
+- [ ] Immediate stop controls verified for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error.
 
 Preview Email 1 end-to-end verification was completed manually using controlled test addresses. The real MailerLite automation email reached the subscriber, opened the Preview thank-you page, provided PDF access, and supported a successful subscriber-specific unsubscribe. No subscriber addresses, IP addresses, screenshots, provider IDs, or Preview share tokens are stored in this repository.

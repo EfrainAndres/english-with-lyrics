@@ -16,7 +16,9 @@
 - Initial controlled Production test: FAIL because the provider-hosted form showed its native success state instead of redirecting to `/gracias`; no second submission occurred in that window.
 - Redirect configuration correction: STAGED / REVALIDATED BY AFFIRMATIVE SUBMISSION / PASS.
 - Final inbox-verification result: PASS FOR THE CONTROLLED TECHNICAL PATH. One fresh contact with zero history produced one redirect, assignment, terminal completion, provider-recorded send and matching inbox delivery; content/CTA, functional unsubscribe and cleanup passed.
-- Public activation; limitation and deliverability acceptance; analytics dashboard verification; noindex decision; Production handoff configuration, deployment and public no-submit smoke; and rollout: PENDING.
+- Limited rollout risk disposition: ACCEPTED for Email 1 only, up to 10 subscribers and 72 hours, with active monitoring and immediate stop thresholds.
+- Initial indexing disposition: APPROVED as `noindex, nofollow`; no indexing setting changed in this task.
+- Public activation, analytics dashboard verification, Production handoff configuration/deployment, public no-submit smoke and rollout execution/monitoring: PENDING.
 
 Merging the support code does not configure Vercel, expose the staged form on
 the public website, activate Email 1 or the automation, submit a form, create a
@@ -214,19 +216,19 @@ root-only path. The implementation does not hard-code or record a real form URL.
 
 ### Activation acceptance for staged limitations
 
-- The provider-native missing-consent feedback limitation and possible reachability of the undistributed direct provider form were accepted only for inactive staging.
-- Before activation, the owner must explicitly accept those limitations for the controlled Production boundary or require them to be resolved. Neither is represented as fixed, fully accessible, certified, or guaranteed compliant.
-- The open corporate Outlook placement limitation must be explicitly accepted, resolved, or kept as a documented rollout stop condition.
+- The owner explicitly accepts the provider-native missing-consent feedback limitation, possible reachability of the undistributed direct provider form due to no native unpublish/deactivate state, and known deliverability risk only for the approved Email 1-only controlled rollout of up to 10 subscribers over 72 hours.
+- This disposition requires active monitoring and immediate intake stop for any unexpected email, consent/privacy issue, delivery failure, complaint or workflow error.
+- No limitation is represented as fixed, fully accessible, legally compliant, harmless, certified or irrelevant. This is neither unrestricted nor permanent approval and does not authorize expansion beyond the bounded rollout.
 
 ### Indexing decision
 
-- Make an explicit, separate Production indexing decision. Current `noindex` behavior remains unchanged until that decision is authorized and implemented in its own scope.
+- Owner-approved initial disposition: retain `noindex, nofollow`. This documentation record does not change indexing settings.
 
 ## Safe activation sequence
 
 1. Record owner authorization for public activation and the 10-subscriber boundary, success criteria, stop conditions, rollback operator and data disposition.
 2. Reverify source synchronization, scoped validation, staged provider mapping, zero subscriber/in-progress counts, retained non-personal history, unchanged sender, route health and rollback access.
-3. Record explicit activation acceptance or resolution of the provider-native accessibility/direct-reachability and deliverability limitations; verify the analytics dashboard and make the separate indexing disposition.
+3. Reconfirm the bounded risk disposition, active monitoring owner and immediate stop controls; verify the analytics dashboard and retain the approved `noindex, nofollow` disposition.
 4. Configure only the Production-scoped website handoff value without changing Preview or Development; do not deploy it yet.
 5. Activate only the staged Production automation and reload to confirm its active state before public intake.
 6. Deploy the already merged fail-closed support with the authorized Production value, then run a no-submission public smoke check for the external handoff, adjacent `/privacidad` link, absence of native fields, route health and desktop/390 px containment.
@@ -256,4 +258,4 @@ deployment. Direct PDF delivery does not depend on the provider handoff, Email
 - Permitted repository files: `BACKLOG.md`, `CHANGELOG.md`, this validation document, and the existing focused provider/legal readiness documents required to record evidence. Source changes require separate explicit authorization.
 - External changes permitted by the next activation task: only the explicitly authorized Production handoff configuration, staged workflow activation, deployment, no-submission smoke check and bounded rollout. Preview and unrelated Production resources remain out of scope.
 - Required validations: baseline provider/Vercel scope inventory without values, lint, build, diff check, sensitive-content scan, configuration matrix, desktop/390 px containment, exact handoff/privacy/no-native-field assertions, `/gracias`/legal/direct-PDF regressions, zero-baseline and post-test provider counts, analytics dashboard, synchronization, and mergeability.
-- Merge gate: controlled technical-path PASS retained; limitation acceptance recorded; rollback verified; public smoke PASS; direct PDF and legal routes healthy; Preview unchanged; analytics dashboard verified; indexing decision explicitly recorded; owner approval for the 10-subscriber/72-hour rollout. Do not merge or expand rollout when any gate is unresolved.
+- Merge gate: controlled technical-path PASS and limited risk disposition retained; rollback verified; public smoke PASS; direct PDF and legal routes healthy; Preview unchanged; analytics dashboard verified; `noindex, nofollow` disposition retained; owner-approved 10-subscriber/72-hour boundary ready for monitored execution. Do not merge or expand rollout when any gate is unresolved.

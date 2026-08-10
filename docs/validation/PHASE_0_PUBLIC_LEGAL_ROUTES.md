@@ -63,7 +63,7 @@ Production metadata privacy: PASS
 Production ebook and thank-you regression: PASS
 /gracias availability: PASS
 Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
-Production indexing decision: PENDING
+Production indexing disposition: APPROVED INITIAL / `noindex, nofollow`
 Production MailerLite group/form: STAGED / INACTIVE
 Final Production consent linking: PENDING
 Rights-request provider operations QA: PASS
@@ -99,8 +99,8 @@ consent collection, email delivery, Email 1, MailerLite automation, or the
 commercial funnel. It does not constitute certification or guaranteed
 compliance. Lead capture, Email 1, email
 delivery and automation remain inactive; direct PDF delivery remains the active
-delivery path. The published policies remain `noindex, nofollow` pending an
-explicit Production indexing decision.
+delivery path. The published policies retain the owner-approved initial
+`noindex, nofollow` disposition.
 
 The fail-closed Production handoff support also does not activate the funnel.
 With absent, blank, malformed or unsupported Production configuration, the
@@ -108,11 +108,13 @@ entire lead-capture surface is omitted. A valid future Production-scoped value
 can expose only the external provider handoff with the approved disclosure and
 exact `/privacidad` link; it cannot add native personal-data fields or affect
 the independent direct PDF path. The controlled Production technical-path test
-now passes. Production handoff configuration and deployment, a public
-no-submit smoke check, explicit activation acceptance of the tracked
-provider-native accessibility/direct-reachability and deliverability
-limitations, analytics-dashboard verification, the noindex decision, and the
-10-subscriber/72-hour rollout remain separate gates.
+now passes. The owner accepts the tracked provider-native
+accessibility/direct-reachability and deliverability risks only for the Email
+1-only controlled rollout of up to 10 subscribers over 72 hours under active
+monitoring and immediate stop thresholds. Production handoff configuration and
+deployment, a public no-submit smoke check, analytics-dashboard verification
+and rollout execution/monitoring remain separate pending gates. Initial
+indexing disposition is approved as `noindex, nofollow`.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That
@@ -185,8 +187,9 @@ unsubscribing or applying GDPR Forget. The delayed state after cleanup is a
 procedural timing risk. The inbox message and critical content/CTA evidence
 remain absent for that historical attempt. Provider-failure simulation remains
 UNVERIFIED. Public
-activation and all remaining limitation, analytics, indexing and rollout gates
-remain blocked; direct PDF delivery and legal routes remain independent.
+activation and all remaining analytics, configuration/deployment, no-submit
+smoke and rollout-execution gates remain blocked; direct PDF delivery and legal
+routes remain independent.
 
 The separate final Production inbox-verification test passed with a fresh
 contact that had zero prior subscriber, group-membership or workflow history.
@@ -200,10 +203,10 @@ search and the group to zero. Final workflow state is zero in progress and three
 completed history records. Direct PDF and all legal routes remain healthy and
 independent. No public handoff, Vercel value, source, deployment, indexing,
 Preview or unrelated Production resource changed. No additional fresh-contact
-test is required for the controlled technical-path gate; public activation
-remains blocked by the separate limitation-acceptance, deliverability, analytics,
-noindex, Production handoff configuration/deployment, public no-submit smoke and
-rollout gates.
+test is required for the controlled technical-path gate. The limited rollout
+risk disposition is recorded; public activation remains blocked by analytics,
+Production handoff configuration/deployment, public no-submit smoke and rollout
+execution/monitoring. Retain `noindex, nofollow`.
 
 Rollback is prepared and limited to deleting only the new attached Email 1
 draft and the new inactive workflow; the already staged group/form and all
@@ -443,7 +446,7 @@ Completed by the project owner directly against the canonical Production origin 
 
 **Project-owner canonical Production legal review: PASS. Final Production legal-publication acceptance gate: PASS. Production legal policies: LIVE / ACCEPTED.**
 
-Passing the legal-publication acceptance gate does not activate lead capture, consent collection, email delivery, Email 1, MailerLite automation, or the commercial funnel. It does not constitute certification or guaranteed compliance. Production indexing decision, final consent linking, rights-request provider operations QA, and controlled rollout remain pending; `noindex, nofollow` is retained on both routes.
+Passing the legal-publication acceptance gate does not activate lead capture, consent collection, email delivery, Email 1, MailerLite automation, or the commercial funnel. It does not constitute certification or guaranteed compliance. Final consent linking and controlled rollout execution remain pending; rights-request provider operations QA passes, and the approved initial `noindex, nofollow` disposition is retained on both routes.
 
 No Production environment value, responsible-party private value, ephemeral deployment URL, screenshot, Vercel token, project identifier, provider identifier, telephone target or private address is stored in this repository.
 
@@ -502,7 +505,7 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 - Identification details when legally required.
 - City or jurisdiction information.
 - Effective date.
-- Explicit Production indexing decision; `noindex, nofollow` retained until then.
+- Approved initial Production indexing disposition retained as `noindex, nofollow`.
 - Approved footer/business address.
 - Public linking and activation of the staged Production MailerLite group/form.
 - Final Production consent control and policy linking.
@@ -544,7 +547,7 @@ Production legal policies: LIVE / ACCEPTED
 
 PR #64: APPROVED FOR MERGE — NOT MERGED
 
-Production indexing decision: PENDING
+Production indexing disposition: APPROVED INITIAL / `noindex, nofollow`
 
 Production consent decision: PENDING
 
