@@ -6,6 +6,8 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Improved the `/ebook-gratis` conversion journey on a feature branch without deploying it: clarified the benefit and Escríbelo como suena method, made the existing provider-hosted handoff the primary CTA, retained independent direct-PDF access as the secondary path, added three optimized previews rendered from the approved 32-page PDF, added audience expectations and an accurate FAQ, removed survey/first-group competition from the ebook and homepage journeys, and kept those unchanged destinations as optional post-download actions on `/gracias`. Removed the unsupported “built with students” homepage claim and related future-launch framing. No provider/Vercel/Analytics configuration, Production resource, legal text, indexing, deployment, native personal-data handling, tracking, cookie, or active-rollout operation changed.
+
 - Approved PR #77 for merge without merging after confirming the exact nine-document scope, active bounded rollout state, historical/superseded pre-activation records, non-automatic cleanup guidance, qualified limitations, stop controls, temporary `noindex, nofollow`, independent direct PDF delivery, and passing validation. Status: **APPROVED FOR MERGE — NOT MERGED**.
 
 - Reconciled the remaining historical-versus-current rollout records. Former inactive, unlinked, pending-activation and deletion-preparation language is now explicitly historical or a separately authorized cleanup decision; current Production remains **ACTIVE / IN PROGRESS** only within the monitored ten-subscriber / 72-hour boundary, with direct PDF independent and the post-rollout go/no-go pending.
