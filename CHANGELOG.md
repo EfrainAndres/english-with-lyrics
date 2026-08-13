@@ -6,6 +6,8 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Reclassified retained legal-route staging, smoke, regression, and legal-publication decision records as historical snapshots. Current Production rollout status remains **ACTIVE / IN PROGRESS** only within the monitored ten-subscriber / 72-hour boundary; current stop controls preserve real subscribers, consent evidence, and staged resources.
+
 - Corrected the active-rollout operating record: earlier reactivation and staging-deletion guidance is historical only. The current stop sequence is workflow pause first, Production handoff removal second, verified merged `main` fail-closed redeployment third, followed by route/legal/robots/direct-PDF verification while preserving real subscribers and consent evidence.
 
 - Reconciled historical staging, fail-closed, inactive and pre-activation wording with the current **ACTIVE / IN PROGRESS** Production controlled rollout. The Production handoff, workflow and Email 1 delivery path are active only inside the approved ten-subscriber / 72-hour monitored boundary; the opening zero-of-ten count remains an activation snapshot, Analytics remains ordinary-page-view only, temporary `/ebook-gratis` `noindex, nofollow` and independent direct PDF delivery remain retained, and the post-rollout go/no-go remains pending.

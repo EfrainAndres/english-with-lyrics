@@ -324,7 +324,10 @@ snapshot without changing any resource.
 - [x] Procedural timing risk retained: after activation, confirm activation history and monitor workflow Activity to Completed, Failed or Canceled before pausing, unsubscribing or applying GDPR Forget.
 - [ ] A third fresh QA contact and exactly one additional automated Email 1 remain required because critical received-content and CTA evidence is missing.
 - [ ] Provider-failure simulation remains UNVERIFIED.
-- [ ] Overall Production gate remains FAIL / NO-GO; lead capture, active delivery, automation, rollout and indexing remain inactive or pending.
+- [ ] Historical bounded-window gate: FAIL / NO-GO at that time; lead capture,
+  active delivery, automation, rollout, and indexing were then inactive or
+  pending. This snapshot is superseded by the current active controlled rollout
+  recorded at the top of this checklist.
 
 ## 9J. Final Production inbox-verification test
 
