@@ -6,6 +6,8 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Approved PR #77 for merge without merging after confirming the exact nine-document scope, active bounded rollout state, historical/superseded pre-activation records, non-automatic cleanup guidance, qualified limitations, stop controls, temporary `noindex, nofollow`, independent direct PDF delivery, and passing validation. Status: **APPROVED FOR MERGE — NOT MERGED**.
+
 - Reconciled the remaining historical-versus-current rollout records. Former inactive, unlinked, pending-activation and deletion-preparation language is now explicitly historical or a separately authorized cleanup decision; current Production remains **ACTIVE / IN PROGRESS** only within the monitored ten-subscriber / 72-hour boundary, with direct PDF independent and the post-rollout go/no-go pending.
 
 - Reclassified retained legal-route staging, smoke, regression, and legal-publication decision records as historical snapshots. Current Production rollout status remains **ACTIVE / IN PROGRESS** only within the monitored ten-subscriber / 72-hour boundary; current stop controls preserve real subscribers, consent evidence, and staged resources.
