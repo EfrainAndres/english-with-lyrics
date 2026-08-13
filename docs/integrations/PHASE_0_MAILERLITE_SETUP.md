@@ -6,6 +6,7 @@
 - Role: Selected Phase 0 email processor.
 - Environment: isolated Preview verification plus inactive Production staging.
 - Production activation: Blocked.
+- Incomplete activation attempt: ROLLED BACK / rollout not started.
 - Account creation: Manual.
 - Authenticated domain: `singpronuncerepeat.com`.
 - Domain verification: VERIFIED.
@@ -15,6 +16,7 @@
 - Production sending: INACTIVE.
 - Professional legal and provider review: COMPLETE; owner risk disposition is accepted only for the Email 1-only monitored rollout of up to 10 subscribers over 72 hours.
 - Public lead capture: Not active.
+- Analytics: ENABLED / VERIFIED / UNCHANGED.
 - Current direct ebook delivery: Active.
 
 This document defines the provider boundary for the approved soft-gated funnel. `/gracias` and direct PDF delivery are already available independently. The staged group/form, Email 1 and automation remain inactive, and this repository preparation does not activate lead capture or Production email sends.
@@ -375,6 +377,13 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 
 ## Remaining operations before Production activation
 
+The incomplete activation was rolled back after the mandatory canonical
+no-submit smoke was blocked by the review browser's access policy. The staged
+workflow is inactive, the Production handoff setting is absent, canonical
+Production is fail-closed, the Production group is zero, and no new automated
+send, delivery failure or complaint occurred. Analytics verification and
+stop-control execution pass; the 72-hour rollout did not start.
+
 - Preserve the owner-approved public Email 1-only boundary: up to 10 subscribers over 72 hours, active monitoring, no expansion without a separate post-72-hour go/no-go decision.
 - Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
 - Preserve the original redirect failure and later staged correction as historical evidence. The corrected redirect has now passed in two separately authorized affirmative submissions.
@@ -382,10 +391,10 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 - Preserve the separately authorized final inbox-verification PASS: activation was confirmed before one submission, Activity reached a terminal state before pause/cleanup, one matching inbox delivery and approved content/CTA passed, functional unsubscribe generated no additional message, and GDPR Forget returned the group/contact search to zero.
 - For any future controlled window, continue to confirm activation history and monitor workflow Activity to a terminal status before pausing, unsubscribing or applying GDPR Forget. Treat delayed provider visibility after cleanup as a procedural timing risk, not proof of a provider defect.
 - Retain the limited public-rollout risk disposition for missing-consent feedback, direct-provider reachability and known deliverability risk; it does not make a limitation fixed or compliant and is not unrestricted or permanent approval.
-- Keep the Production automation inactive until the controlled contact is ready; activate it only inside the authorized test window.
-- Verify the analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
+- Keep the Production automation inactive until a future public activation is authorized; activate it only inside that authorized window.
+- Retain the verified Analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
 - Retain the approved initial `noindex, nofollow` indexing disposition without treating it as permanent or as authorization for future indexing changes.
-- After analytics, configuration/deployment, public no-submit smoke and operational stop-control verification pass, begin the approved 10-subscriber rollout and monitor for 72 hours. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error, then require a separate post-72-hour go/no-go before expansion.
+- After a future configuration/deployment and complete public no-submit smoke pass, begin the approved 10-subscriber rollout and monitor for 72 hours. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error, then require a separate post-72-hour go/no-go before expansion. Analytics and operational stop-control execution already pass.
 
 ## Fallback provider record
 

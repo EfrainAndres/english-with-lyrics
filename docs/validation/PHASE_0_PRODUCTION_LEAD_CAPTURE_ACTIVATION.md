@@ -2,8 +2,8 @@
 
 ## Current state
 
-- Website support: PREPARED / FAIL-CLOSED / NOT ACTIVATED.
-- Production-scoped website configuration: ABSENT and unchanged by this task.
+- Website support: PREPARED / FAIL-CLOSED / EMERGENCY ROLLBACK VERIFIED.
+- Production-scoped website configuration: ABSENT after removal during emergency rollback; Preview and Development configuration remain unchanged.
 - Production group/form: exactly one isolated path STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE; the group has ZERO SUBSCRIBERS after cleanup and the form retains non-personal controlled registration history.
 - Production Email 1: exactly one draft STAGED / INACTIVE after THREE provider-recorded authorized automated sends, of which TWO deliveries are inbox-verified.
 - Production automation: exactly one matching workflow STAGED / INACTIVE / ZERO CONTACTS IN PROGRESS / THREE COMPLETED HISTORY RECORDS.
@@ -13,17 +13,61 @@
 - `/gracias`, `/privacidad`, and `/tratamiento-de-datos`: AVAILABLE.
 - Direct PDF delivery: ACTIVE / INDEPENDENT of consent and email.
 - Lead capture and email delivery: INACTIVE.
+- Analytics dashboard: ENABLED / VERIFIED / UNCHANGED by the rollback.
 - Initial controlled Production test: FAIL because the provider-hosted form showed its native success state instead of redirecting to `/gracias`; no second submission occurred in that window.
 - Redirect configuration correction: STAGED / REVALIDATED BY AFFIRMATIVE SUBMISSION / PASS.
 - Final inbox-verification result: PASS FOR THE CONTROLLED TECHNICAL PATH. One fresh contact with zero history produced one redirect, assignment, terminal completion, provider-recorded send and matching inbox delivery; content/CTA, functional unsubscribe and cleanup passed.
 - Limited rollout risk disposition: ACCEPTED only for the approved public Email 1 rollout, up to 10 subscribers and 72 hours, with active monitoring and immediate stop thresholds; no limitation is fixed, compliant, unrestricted or permanently accepted.
-- Initial indexing disposition: APPROVED as `noindex, nofollow`; `/ebook-gratis` now has temporary route-scoped metadata prepared for the approved 10-subscriber / 72-hour rollout. This branch is not deployed to canonical Production and does not authorize permanent or future indexing changes.
-- Public activation, analytics dashboard verification, Production handoff configuration/deployment, public no-submit smoke, operational stop-control verification, rollout execution/monitoring and the post-72-hour go/no-go: PENDING.
+- Initial indexing disposition: APPROVED as `noindex, nofollow`; `/ebook-gratis` serves the temporary route-scoped directive prepared for the approved 10-subscriber / 72-hour rollout. This does not authorize permanent or future indexing changes.
+- Incomplete activation attempt: ROLLED BACK / NO SUCCESSFUL ROLLOUT START. The required public no-submit smoke was blocked before it could pass.
+- Operational stop-control verification: PASS BY EXECUTION. Workflow pause, Production handoff removal and fail-closed redeployment were completed in the documented order.
+- Future public activation, a complete public no-submit smoke, rollout execution/monitoring and the post-72-hour go/no-go: PENDING. The 72-hour window did not begin.
 
 Merging the route-scoped indexing preparation does not configure Vercel, expose
 the staged form on the public website, activate Email 1 or the automation,
 submit a form, create a subscriber, send an email, enable analytics, or deploy.
 The funnel remains fail-closed and inactive until the separate activation task.
+
+## Incomplete activation and emergency rollback
+
+Overall result: **ROLLBACK PASS / CONTROLLED ROLLOUT NOT STARTED**.
+
+The authorized activation preflight passed with the isolated Production group
+at zero subscribers, the workflow inactive with zero contacts in progress and
+three retained completed-history records, the approved form and Email 1 path
+unchanged, canonical Production fail-closed, direct PDF and legal routes
+healthy, and Analytics already enabled. The workflow was then activated, the
+handoff configuration was added only to Production, and verified merged `main`
+was redeployed successfully.
+
+The mandatory canonical no-submit smoke could not be completed because the
+review browser's access policy blocked the canonical site after deployment.
+This was a verification-surface blocker, not evidence of a website defect. The
+rollout was not declared started and no successful activation result is
+claimed.
+
+Emergency rollback was executed in the required order:
+
+1. The staged Production workflow was paused and reloaded.
+2. Only the Production-scoped handoff configuration was removed.
+3. Verified merged `main` was redeployed to restore fail-closed behavior.
+
+Post-rollback evidence:
+
+- Workflow: INACTIVE / ZERO QUEUED OR IN PROGRESS / THREE retained completed-history records.
+- Production group: ZERO subscribers.
+- New automated sends / delivery failures / complaints during the exposure: ZERO / ZERO / ZERO.
+- Aggregate provider-recorded automated sends remain THREE; no history was deleted.
+- Production handoff configuration: ABSENT; Preview and Development remain unchanged.
+- Canonical `/ebook-gratis`: FAIL-CLOSED with no provider handoff, no native form fields and direct PDF links available.
+- `/`, `/ebook-gratis`, `/gracias`, `/privacidad`, `/tratamiento-de-datos` and the direct PDF: HEALTHY.
+- `/ebook-gratis`, `/gracias`, `/privacidad` and `/tratamiento-de-datos`: `noindex, nofollow` RETAINED.
+- Analytics: ENABLED / UNCHANGED.
+- Test contacts, campaigns, manual/test/transactional emails and additional provider resources: ZERO.
+
+Every real subscriber and consent record would have been preserved. No real
+subscriber existed in the isolated Production group at the post-exposure
+review, so no contact operation was performed.
 
 ## Controlled Production test result
 
