@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
+import { SiteFooter } from "@/components/SiteFooter";
 import {
   ebookDownloadFilename,
   ebookDownloadPath,
@@ -254,6 +255,8 @@ export default async function GraciasPage({
           </div>
         </div>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }
