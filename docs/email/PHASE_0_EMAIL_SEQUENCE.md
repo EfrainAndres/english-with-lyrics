@@ -2,12 +2,13 @@
 
 ## Status
 
-- Sequence status: Email 1 staged; Emails 2–4 remain planned only.
-- Content status: approved Email 1 verified in Preview and staged in exactly one inactive Production workflow.
+- Sequence status: Email 1 active only for the controlled rollout; Emails 2–4 remain planned and inactive.
+- Content status: approved Email 1 verified in Preview and active only inside the one Production workflow used by the controlled rollout.
 - Emails 2–4: Outline only.
-- Production Email 1 and workflow: STAGED / INACTIVE after three provider-recorded authorized automated sends; zero contacts are in progress and three non-personal completed history records are retained. The original and final deliveries are inbox-verified; the intervening delayed send remains unmatched historical evidence.
-- Production activation and delivery: INACTIVE.
-- Controlled Production funnel state: PASS FOR THE CONTROLLED TECHNICAL PATH / NOT PUBLICLY ACTIVATED. The original redirect failure, corrected retests and delayed unmatched send remain historical evidence. The final fresh-contact test verified activation before submission, redirect, isolated assignment, terminal completion, exactly one inbox delivery, approved content, CTA, text-compatible structure, privacy/footer, functional unsubscribe without another message, independent PDF access and cleanup. The owner has accepted the known accessibility, direct-reachability and deliverability risks only for the approved public Email 1 rollout of up to 10 subscribers over 72 hours under active monitoring and immediate stop thresholds; no limitation is fixed, compliant, unrestricted or permanently accepted. Analytics verification and stop-control execution pass, but an incomplete public activation was rolled back before the required canonical no-submit smoke could pass. The workflow is inactive, Production handoff configuration is absent, canonical Production is fail-closed, and rollout execution plus the post-72-hour go/no-go remain pending. The approved initial indexing disposition remains `noindex, nofollow` and does not authorize future indexing changes.
+- Production Email 1 and workflow: ACTIVE / CONTROLLED ROLLOUT; zero contacts were in progress and three non-personal completed history records were retained at activation. The historical provider-recorded send total remains three, with two inbox-verified deliveries.
+- Production activation and delivery: ACTIVE / IN PROGRESS for Email 1 only, up to ten real subscribers over 72 hours.
+- Current rollout retry: canonical no-submit smoke PASS; Production-only handoff ACTIVE; opening count ZERO OF TEN; Analytics ENABLED; direct PDF ACTIVE / INDEPENDENT; post-72-hour go/no-go PENDING. No test contact or non-public email was created.
+- Historical controlled-test state: PASS FOR THE CONTROLLED TECHNICAL PATH. The original redirect failure, corrected retests, delayed unmatched send, completed cleanup, and earlier rolled-back activation remain historical evidence. Current state is the separate ACTIVE / IN PROGRESS rollout retry above. The owner accepts the known accessibility, direct-reachability, and deliverability risks only for Email 1, up to ten subscribers, and 72 hours under active monitoring and immediate stop thresholds; no limitation is fixed, compliant, unrestricted, or permanently accepted. The approved initial indexing disposition remains `noindex, nofollow` and does not authorize future indexing changes.
 
 ## Sequence overview
 

@@ -18,7 +18,9 @@
 
 > Emergency rollback: **PASS / ROLLOUT NOT STARTED**. An authorized activation reached active workflow, Production-only handoff configuration and a Ready deployment, but the mandatory canonical no-submit smoke was blocked by the review browser's access policy. Rollback paused the workflow, removed only the Production handoff setting and redeployed verified merged `main`. The group is zero; workflow state is inactive / zero in progress / three retained completed; new automated sends, failures and complaints are zero; canonical Production is fail-closed; Analytics remains enabled and unchanged.
 
-> Current rollout-gate state: the owner risk acceptance applies only to the approved public Email 1 rollout of up to 10 subscribers over 72 hours and does not make any limitation fixed, compliant, unrestricted or permanent. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes. Analytics verification and operational stop-control execution pass. Production handoff configuration is absent after rollback; a future activation, complete public no-submit smoke, rollout execution/monitoring and the post-72-hour go/no-go remain pending. Provider-failure simulation remains **UNVERIFIED**.
+> Controlled rollout retry: **ACTIVE / IN PROGRESS**. Preflight, workflow activation, Production-only handoff configuration, merged-main redeployment, canonical desktop/390 px no-submit smoke, Analytics verification, and stop-control availability all pass. The opening Production group count is zero of ten; workflow activity is active / zero in progress / three retained completed records. No test contact or non-public email was created. The post-72-hour go/no-go remains pending, and provider-failure simulation remains **UNVERIFIED**.
+
+> Current rollout-gate state: the owner risk acceptance applies only to the approved public Email 1 rollout of up to 10 subscribers over 72 hours and does not make any limitation fixed, compliant, unrestricted or permanent. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes. Monitor subscriber count, workflow activity, sends, failures, complaints, and delivery outcomes at least daily and immediately near the cap. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint, or workflow error.
 
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
@@ -327,7 +329,7 @@ snapshot without changing any resource.
 - [ ] Provider-failure simulation remains UNVERIFIED.
 - [x] Limited rollout risk disposition: owner accepts the known missing-consent feedback, direct-provider-reachability and deliverability risks only for Email 1, up to 10 subscribers and 72 hours of active monitoring.
 - [x] Analytics verification and operational stop-control execution: PASS; Analytics remained enabled and unchanged, and the emergency rollback executed pause, Production handoff removal and fail-closed redeployment in order.
-- [ ] Public activation remains blocked pending a future authorized Production handoff configuration/deployment, complete public no-submit smoke, controlled-rollout execution/monitoring and the post-72-hour go/no-go. Initial indexing disposition is approved as `noindex, nofollow` without authorizing future indexing changes.
+- [x] Production handoff configuration/deployment and complete public no-submit smoke: PASS for the rollout retry. Controlled-rollout monitoring and the post-72-hour go/no-go remain pending. Initial indexing disposition remains `noindex, nofollow` without authorizing future indexing changes.
 
 ## 10. Consent
 
@@ -433,22 +435,22 @@ snapshot without changing any resource.
 
 ## 15. Production approval
 
-- [x] Owner input: Email 1-only controlled rollout boundary approved for up to 10 subscribers over 72 hours; execution has not started.
+- [x] Owner input: Email 1-only controlled rollout boundary approved for up to 10 subscribers over 72 hours; execution is ACTIVE / IN PROGRESS.
 - [x] Activation risk disposition: missing-consent feedback accessibility, direct-provider reachability and known deliverability risks accepted only inside that monitored boundary.
 - [x] DNS action: sender-domain authentication confirmed for `singpronuncerepeat.com`.
 - [x] `/gracias` exists and passes recorded Preview and Production regression QA.
 - [x] Fail-closed website support exists: Production requires its dedicated valid configuration and otherwise renders no lead-capture surface.
-- [x] Production Email 1 remains exactly one STAGED / INACTIVE draft after three provider-recorded authorized automated sends; two deliveries are inbox-verified.
-- [x] Production automation remains exactly one matching STAGED / INACTIVE workflow with zero contacts in progress and three retained completed history records.
-- [ ] Production-scoped handoff configuration added in Vercel during an authorized activation task.
+- [x] Production Email 1 remains exactly one unchanged ACTIVE / CONTROLLED ROLLOUT draft after three historical provider-recorded authorized automated sends; two deliveries are inbox-verified.
+- [x] Production automation remains exactly one matching ACTIVE / CONTROLLED ROLLOUT workflow with zero contacts in progress at activation and three retained completed history records.
+- [x] Production-scoped handoff configuration added only in Production during the authorized rollout retry.
 - [x] Minimum controlled Production technical-path test passes before public promotion. The final fresh-contact test verified redirect, assignment, terminal completion, one inbox delivery, approved content/CTA, functional unsubscribe and cleanup. Public promotion remains blocked by the separate gates below.
-- [ ] Production email delivery activated.
-- [ ] Production lead capture activated.
+- [x] Production email delivery activated for Email 1 only inside the controlled rollout.
+- [x] Production lead capture activated only inside the controlled rollout.
 - [x] Production accessibility/direct-provider-reachability and deliverability disposition recorded for the limited monitored rollout only.
-- [ ] Analytics dashboard verified without personal-data payloads, cookies or tracking parameters.
+- [x] Analytics dashboard verified without personal-data payloads, cookies or tracking parameters.
 - [x] Initial Production indexing disposition approved as `noindex, nofollow`; no indexing setting changed in this task.
 - [ ] Ten-subscriber rollout executed and monitored for 72 hours before expansion.
 - [ ] Controlled Production rollout execution and post-72-hour go/no-go completed.
-- [ ] Immediate stop controls verified for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error.
+- [x] Immediate stop controls verified for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error.
 
 Preview Email 1 end-to-end verification was completed manually using controlled test addresses. The real MailerLite automation email reached the subscriber, opened the Preview thank-you page, provided PDF access, and supported a successful subscriber-specific unsubscribe. No subscriber addresses, IP addresses, screenshots, provider IDs, or Preview share tokens are stored in this repository.

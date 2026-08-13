@@ -3,9 +3,9 @@
 ## Estado y límites
 
 - Estado del contenido: APPROVED DRAFT / STAGED.
-- Estado de activación: INACTIVE.
+- Estado de activación: ACTIVE / EMAIL 1-ONLY CONTROLLED ROLLOUT.
 - Alcance: referencia canónica verificada en Preview y en dos entregas automatizadas controladas de Producción recibidas en buzón; un tercer envío registrado por el proveedor permanece como evidencia histórica sin mensaje correspondiente.
-- Este borrador no autoriza vinculación pública, configuración de Vercel, otra entrega, otro suscriptor ni activación de Producción.
+- La activación vigente está limitada al handoff de Producción ya autorizado, Email 1, un máximo de diez suscriptores reales y 72 horas; no autoriza otra secuencia, campaña, prueba, configuración o expansión.
 - La entrega directa del PDF permanece ACTIVE e independiente del consentimiento promocional o de este correo.
 
 Este documento es la referencia canónica del contenido staged. Su verificación
@@ -172,18 +172,18 @@ Producción:
 
 | Puerta | Estado |
 | --- | --- |
-| Vinculación de consentimiento de Producción | PENDING |
+| Vinculación de consentimiento de Producción | ACTIVE / CONTROLLED ROLLOUT |
 | Disposición inicial de indexación | APPROVED: `noindex, nofollow` |
 | Aceptación limitada de riesgos para rollout | PASS: solo Email 1 / máximo 10 suscriptores / 72 horas |
 | Verificación de analytics | PASS / ENABLED / UNCHANGED |
-| Configuración, deployment y smoke público sin envío | INCOMPLETE / ROLLED BACK; smoke completo PENDING |
+| Configuración, deployment y smoke público sin envío | PASS FOR CONTROLLED ROLLOUT RETRY |
 | Control operacional de parada | PASS BY EXECUTION |
-| Grupo/formulario de Producción | STAGED / INACTIVE desde la perspectiva del sitio |
-| Captura de leads de Producción | INACTIVE |
-| Email 1 de Producción | STAGED / INACTIVE |
-| Entrega de correo de Producción | INACTIVE |
-| Automatización de Producción | STAGED / INACTIVE |
-| Despliegue controlado | NOT STARTED / rollback fail-closed PASS |
+| Grupo/formulario de Producción | ACTIVE / CONTROLLED ROLLOUT; cero de diez al inicio |
+| Captura de leads de Producción | ACTIVE / CONTROLLED ROLLOUT |
+| Email 1 de Producción | ACTIVE / CONTROLLED ROLLOUT |
+| Entrega de correo de Producción | ACTIVE / EMAIL 1 ONLY |
+| Automatización de Producción | ACTIVE / CONTROLLED ROLLOUT; cero en progreso al inicio |
+| Despliegue controlado | ACTIVE / IN PROGRESS; 72 horas |
 | Entrega directa del PDF | ACTIVE |
 
 La configuración del proveedor y cada envío de Preview o Producción requieren

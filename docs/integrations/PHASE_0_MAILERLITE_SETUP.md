@@ -4,22 +4,22 @@
 
 - Provider: MailerLite.
 - Role: Selected Phase 0 email processor.
-- Environment: isolated Preview verification plus inactive Production staging.
-- Production activation: Blocked.
-- Incomplete activation attempt: ROLLED BACK / rollout not started.
+- Environment: isolated Preview verification plus active, bounded Production rollout.
+- Production activation: ACTIVE / CONTROLLED ROLLOUT.
+- Historical incomplete activation attempt: ROLLED BACK / rollout not started.
 - Account creation: Manual.
 - Authenticated domain: `singpronuncerepeat.com`.
 - Domain verification: VERIFIED.
 - SPF: VERIFIED.
 - DKIM: VERIFIED.
 - Sending-domain authentication: VERIFIED.
-- Production sending: INACTIVE.
+- Production sending: ACTIVE / EMAIL 1 ONLY / CONTROLLED ROLLOUT.
 - Professional legal and provider review: COMPLETE; owner risk disposition is accepted only for the Email 1-only monitored rollout of up to 10 subscribers over 72 hours.
-- Public lead capture: Not active.
+- Public lead capture: ACTIVE / CONTROLLED ROLLOUT / ZERO OF TEN AT ACTIVATION.
 - Analytics: ENABLED / VERIFIED / UNCHANGED.
 - Current direct ebook delivery: Active.
 
-This document defines the provider boundary for the approved soft-gated funnel. `/gracias` and direct PDF delivery are already available independently. The staged group/form, Email 1 and automation remain inactive, and this repository preparation does not activate lead capture or Production email sends.
+This document defines the provider boundary for the approved soft-gated funnel. `/gracias` and direct PDF delivery remain independently available. The one isolated Production group/form, Email 1 workflow, and website handoff are active only for the owner-authorized Email 1 rollout of up to ten real subscribers over 72 hours; no broader activation is implied.
 
 MailerLite sending-domain authentication has been completed for `singpronuncerepeat.com`. Hostinger remains the authoritative DNS provider. Hostinger and MailerLite coexist in a single apex SPF record; only one record beginning with `v=spf1` should exist at the apex. Hostinger and MailerLite DKIM records coexist using different selectors. Hostinger MX, DMARC, autoconfig, autodiscover, Vercel web DNS, and the canonical web domain remain preserved.
 
@@ -375,26 +375,25 @@ Reasoning: the approved initial architecture is provider-hosted or embedded form
 - Preview-only MailerLite variables must not be copied into Local as active defaults.
 - No MailerLite API calls exist in this branch.
 
-## Remaining operations before Production activation
+## Active controlled rollout operations
 
-The incomplete activation was rolled back after the mandatory canonical
-no-submit smoke was blocked by the review browser's access policy. The staged
-workflow is inactive, the Production handoff setting is absent, canonical
-Production is fail-closed, the Production group is zero, and no new automated
-send, delivery failure or complaint occurred. Analytics verification and
-stop-control execution pass; the 72-hour rollout did not start.
+The earlier incomplete activation and emergency rollback remain historical.
+The current retry passed workflow activation, Production-only handoff
+configuration, merged-main deployment, canonical desktop/390 px no-submit
+smoke, Analytics verification, and stop-control availability. The opening group
+and workflow-in-progress counts were zero; the 72-hour rollout is active.
 
 - Preserve the owner-approved public Email 1-only boundary: up to 10 subscribers over 72 hours, active monitoring, no expansion without a separate post-72-hour go/no-go decision.
-- Configure only the Production-scoped handoff value, then verify configuration-scope isolation without recording the value.
+- Retain only the Production-scoped handoff value and preserve Preview/Development isolation without recording the value.
 - Preserve the original redirect failure and later staged correction as historical evidence. The corrected redirect has now passed in two separately authorized affirmative submissions.
 - Preserve the fresh-contact zero-entry/zero-send bounded-window snapshot, then retain the later correction: the contact reached Completed and MailerLite recorded one automated send, while inbox delivery remained absent.
 - Preserve the separately authorized final inbox-verification PASS: activation was confirmed before one submission, Activity reached a terminal state before pause/cleanup, one matching inbox delivery and approved content/CTA passed, functional unsubscribe generated no additional message, and GDPR Forget returned the group/contact search to zero.
 - For any future controlled window, continue to confirm activation history and monitor workflow Activity to a terminal status before pausing, unsubscribing or applying GDPR Forget. Treat delayed provider visibility after cleanup as a procedural timing risk, not proof of a provider defect.
 - Retain the limited public-rollout risk disposition for missing-consent feedback, direct-provider reachability and known deliverability risk; it does not make a limitation fixed or compliant and is not unrestricted or permanent approval.
-- Keep the Production automation inactive until a future public activation is authorized; activate it only inside that authorized window.
+- Keep the Production automation active only inside this authorized rollout window.
 - Retain the verified Analytics dashboard without adding personal-data payloads, cookies or tracking parameters.
 - Retain the approved initial `noindex, nofollow` indexing disposition without treating it as permanent or as authorization for future indexing changes.
-- After a future configuration/deployment and complete public no-submit smoke pass, begin the approved 10-subscriber rollout and monitor for 72 hours. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error, then require a separate post-72-hour go/no-go before expansion. Analytics and operational stop-control execution already pass.
+- Monitor the active rollout for 72 hours and stop immediately at ten subscribers or for unexpected email, consent/privacy issue, delivery failure, complaint or workflow error. Require a separate post-72-hour go/no-go before expansion.
 
 ## Fallback provider record
 
