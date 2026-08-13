@@ -115,4 +115,14 @@ Content direction:
 - Keep consent scope aligned with the approved Phase 0 model.
 - Keep Preview and Production automations separate.
 - The published legal routes, completed professional/provider reviews, verified sender, and available `/gracias` route are readiness evidence; they do not activate the sequence.
-- The final technical-path inbox-verification test and limited public-rollout risk disposition have passed; no additional technical-path retest or broader risk acceptance is implied. Analytics and stop-control execution now pass, but the incomplete activation was rolled back. Do not reactivate the Production sequence until the approved initial `noindex, nofollow` disposition is reconfirmed without treating future indexing changes as authorized, a new Production handoff configuration/deployment is authorized, and the complete public no-submit smoke passes. During the 10-subscriber/72-hour rollout, stop immediately for any unexpected email, consent/privacy issue, delivery failure, complaint or workflow error; require a separate post-72-hour go/no-go before expansion.
+- Historical rollback-era guidance: after the earlier incomplete activation, the
+  Production sequence was not to be reactivated until its then-pending
+  configuration, no-submit smoke, and indexing checks passed. That instruction
+  is superseded by the current authorized **ACTIVE / IN PROGRESS** rollout.
+  During the active 10-subscriber / 72-hour boundary, do not disable the
+  rollout absent the operational cap or a stop condition. At ten subscribers or
+  for unexpected email, consent/privacy issue, delivery failure, complaint, or
+  workflow error, pause the workflow first, remove the Production handoff
+  configuration second, redeploy verified merged `main` fail-closed third, and
+  then verify routes, legal policies, robots directives, and direct PDF.
+  Require a separate post-72-hour go/no-go before any expansion.

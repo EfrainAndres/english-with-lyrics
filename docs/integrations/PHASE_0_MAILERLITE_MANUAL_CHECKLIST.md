@@ -117,7 +117,11 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: temporary Preview success message configured.
 - [ ] Repository preparation: Preview form URL placeholder ready in `.env.example`.
 
-## 7. Production form
+## 7. Historical Production-form staging record
+
+The following inactive, unlinked, and deletion-preparation entries describe the
+pre-rollout staging state only. They are superseded for current operations by
+the active controlled rollout recorded above.
 
 - [x] Owner authorization: create exactly one new isolated Production group and one matching provider-hosted form for inactive staging only.
 - [x] Manual MailerLite dashboard action: exactly one matching Production consent-staging form created and assigned only to the new empty isolated group.
@@ -126,15 +130,21 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: the privacy-policy destination has exact path `/privacidad`.
 - [x] Manual MailerLite dashboard action: the form/source identity records the approved-copy version; MailerLite remains responsible for capture channel/time, subscriber status, and unsubscribe/suppression state.
 - [x] Initial staging evidence: double opt-in was disabled, single opt-in persisted after reload, and no campaign, automation, email side effect or subscriber existed before the controlled window.
-- [x] Current boundary: the form remains staged and inactive from the website perspective, unlinked from the public website and absent from Vercel configuration; non-personal controlled registration history is retained after cleanup and is not reset by GDPR Forget.
+- [x] Historical staging boundary: the form was staged and inactive from the
+  website perspective, unlinked from the public website and absent from Vercel
+  configuration; non-personal controlled registration history was retained
+  after cleanup and was not reset by GDPR Forget.
 - [x] Provider limitation: MailerLite offers no native unpublish/deactivate state for this hosted form; possible direct provider-URL reachability is owner-accepted for staging only, and the URL is not distributed.
 - [x] Project-owner decision: the known MailerLite-native missing-consent feedback limitation is accepted only for inactive Production staging and remains tracked; this is not an accessibility fix or activation approval.
-- [x] Rollback prepared: delete only the new empty Production form and the new empty Production group; do not alter Preview or existing resources.
+- [x] Historical empty-staging cleanup plan: deletion of the then-empty
+  Production form and group was considered only after a separate rollback
+  decision. It is not part of the current public-rollout stop procedure.
 - [x] Manual MailerLite dashboard action: the single isolated Production consent form was drafted only within the current staging authorization.
 - [x] Manual MailerLite dashboard action: the Production form is assigned only to the new isolated Production staging group.
 - [x] Manual MailerLite dashboard action: Production form success action is configured for the approved `/gracias` redirect, reverified without submission and later revalidated by two affirmative submissions. State: STAGED / REDIRECT PASS; the original redirect failure and later zero-automation-entry retests remain historical evidence.
 - [x] Legal review: approved privacy-policy route available before activation.
-- [x] Staging control: Production form remains inactive and unlinked pending all activation blockers.
+- [x] Historical staging control: the Production form remained inactive and
+  unlinked pending the then-unresolved activation blockers.
 
 ## 8. Preview automation
 
@@ -156,7 +166,11 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: PDF attachment omitted.
 - [x] Manual MailerLite dashboard action: Preview automation does not reference Production URLs or IDs.
 
-## 9. Production automation
+## 9. Historical Production-automation staging record
+
+The following inactive-workflow and deletion-preparation entries are retained
+as pre-rollout evidence. The current Production workflow is active only inside
+the approved monitored rollout boundary.
 
 - [x] Manual MailerLite dashboard action: exactly one isolated Production workflow created within the staging authorization.
 - [x] Manual MailerLite dashboard action: trigger uses only the original empty staged Production group/form path.
@@ -164,12 +178,17 @@ Use this checklist to separate repository preparation from dashboard work, owner
 - [x] Manual MailerLite dashboard action: the attached draft uses the approved Spanish subject, preheader, body, Production-scoped CTA and text-compatible fallback.
 - [x] Manual MailerLite dashboard action: provider privacy/footer and unsubscribe treatment retained; no PDF attachment added and direct PDF access remains independent.
 - [x] Manual MailerLite dashboard action: an existing verified sender was reused without modifying a sender identity.
-- [x] Provider state after final cleanup: workflow STAGED / INACTIVE with zero contacts in progress and three retained completed history records.
+- [x] Historical provider state after final cleanup: workflow STAGED / INACTIVE
+  with zero contacts in progress and three retained completed history records.
 - [x] Controlled aggregate send state: three provider-recorded automated Production Email 1 sends and two inbox-verified deliveries; test-email, campaign and transactional sends remain zero.
 - [x] Isolation check: all authorized temporary submissions, assignments and workflow entries used only the isolated Production path; Preview and unrelated Production resources remained unchanged.
 - [x] Repository preparation: sequence timing documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
-- [x] Staging control: Production automation remains inactive until separate rollout approval.
-- [x] Rollback prepared: delete only the new attached Email 1 draft and the new inactive workflow; do not alter the already staged group/form or any existing resource.
+- [x] Historical staging control: Production automation remained inactive until
+  separate rollout approval.
+- [x] Historical empty-staging cleanup plan: deletion of the attached Email 1
+  draft and inactive workflow required a separate post-rollback decision. It is
+  not part of the current public-rollout stop procedure, which preserves all
+  staged resources, real subscribers, and consent evidence.
 
 ## 9A. Isolated Preview welcome-email draft
 

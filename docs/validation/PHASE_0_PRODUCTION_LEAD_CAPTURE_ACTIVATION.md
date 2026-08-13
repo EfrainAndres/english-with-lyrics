@@ -292,7 +292,11 @@ root-only path. The implementation does not hard-code or record a real form URL.
 
 - Owner-approved initial disposition: retain `noindex, nofollow`. This documentation record does not change indexing settings, make the disposition permanent, or authorize future indexing changes.
 
-## Safe activation sequence
+## Historical pre-rollout activation sequence
+
+The following activation plan is retained as evidence of the completed
+pre-rollout process. It is not an instruction to reactivate or otherwise alter
+the current active rollout.
 
 1. Record owner authorization for public activation and the 10-subscriber boundary, success criteria, stop conditions, rollback operator and data disposition.
 2. Reverify source synchronization, scoped validation, staged provider mapping, zero subscriber/in-progress counts, retained non-personal history, unchanged sender, route health and rollback access.
@@ -306,19 +310,25 @@ There is no assumption that a configuration change affects an existing
 deployment automatically; the authorized activation plan must include the
 required deployment and the corresponding rollback deployment.
 
-## Rollback sequence
+## Current stop and rollback sequence
 
-1. Stop public intake first by removing the Production-scoped handoff value and deploying the last approved fail-closed source state.
-2. Confirm the Production lead-capture surface is absent while `/gracias`, legal routes and direct PDF delivery remain healthy.
-3. Deactivate the Production automation to prevent new enrollment or delivery.
-4. Confirm contact and send counters have stopped changing and record only non-personal aggregate results.
-5. Apply the pre-authorized disposition to the controlled test contact using provider operations; do not alter unrelated Preview or Production contacts or resources.
-6. Keep the staged group/form, Email 1 and workflow for diagnosis unless separate deletion authority is granted. Resource deletion is not required for website rollback.
-7. Reverify Preview isolation, route health, direct PDF independence, analytics/indexing unchanged state, and clean repository synchronization.
+At ten real subscribers or any immediate stop condition—unexpected email,
+consent/privacy issue, delivery failure, complaint, or workflow error—execute
+only this order:
 
-Removing or invalidating the Production-scoped value fails closed at the next
-deployment. Direct PDF delivery does not depend on the provider handoff, Email
-1, automation, or subscriber state and is therefore the continuous fallback.
+1. Pause the Production workflow first.
+2. Remove only the Production-scoped handoff configuration second.
+3. Redeploy verified merged `main` to fail closed third.
+4. Verify canonical ebook behavior, all public routes, legal policies, robots
+   directives, and direct PDF delivery afterward.
+
+Preserve the staged form, group, Email 1, workflow, retained history, every
+real subscriber, and all consent evidence. Do not unsubscribe, forget, delete,
+or otherwise alter real subscribers during rollback. Any deletion of empty
+staging resources requires separate post-rollback authorization and is never
+part of the immediate stop procedure. Direct PDF delivery does not depend on
+the provider handoff, Email 1, automation, or subscriber state and therefore
+remains the continuous fallback.
 
 ## Next activation task boundary
 

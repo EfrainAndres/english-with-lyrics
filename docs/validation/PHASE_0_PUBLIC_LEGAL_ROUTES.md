@@ -240,9 +240,15 @@ no-submit smoke pass for the rollout retry. Active monitoring and the
 post-72-hour go/no-go remain pending. Retain the approved initial `noindex,
 nofollow` disposition without authorizing future indexing changes.
 
-Rollback is prepared and limited to deleting only the new attached Email 1
-draft and the new inactive workflow; the already staged group/form and all
-existing resources remain outside that rollback.
+Current public-rollout rollback preserves the staged form, group, Email 1,
+workflow, retained history, every real subscriber, and all consent evidence.
+At the cap or a stop condition, pause the workflow first, remove only the
+Production handoff configuration second, redeploy verified merged `main`
+fail-closed third, then verify canonical ebook behavior, routes, legal
+policies, robots directives, and direct PDF. Do not delete, unsubscribe,
+Forget, or otherwise alter real subscribers during rollback. Deletion of empty
+staging resources is a separate post-rollback cleanup decision requiring
+separate authorization; it is never an automatic immediate rollback action.
 
 ## Historical draft audit summary
 
