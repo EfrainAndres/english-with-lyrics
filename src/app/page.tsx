@@ -4,10 +4,7 @@ import { Section } from "@/components/Section";
 import {
   dataProcessingPath,
   ebookPagePath,
-  firstGroupFormUrl,
-  getLinkProps,
   privacyPath,
-  surveyFormUrl,
 } from "@/lib/links";
 
 const benefits = [
@@ -69,24 +66,6 @@ const methodHighlights = [
 ];
 
 const learningModes = ["Inglés", "Pronunciación", "Español"];
-
-const validationActions = [
-  {
-    title: "Responder la encuesta",
-    text: "Abre una encuesta breve sobre tu nivel, tus bloqueos al escuchar y las canciones que te gustaría practicar.",
-    href: surveyFormUrl,
-    cta: "Responder la encuesta",
-    id: "survey-placeholder",
-    accent: "border-purple/35 bg-purple/10 text-purple",
-  },
-  {
-    title: "Quiero saber del primer grupo",
-    text: "Abre un formulario corto para recibir información cuando preparemos el primer grupo de práctica.",
-    href: firstGroupFormUrl,
-    cta: "Quiero saber del primer grupo",
-    accent: "border-cream/35 bg-cream/10 text-cream",
-  },
-];
 
 function AudioBars() {
   return (
@@ -443,81 +422,6 @@ export default function Home() {
                 <p className="font-bold leading-7">{item}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </Section>
-
-      <Section
-        id="first-group"
-        title="Únete al primer grupo"
-        intro="La guía gratis ya está disponible. Ahora preparamos un grupo pequeño para practicar con canciones seleccionadas y avanzar con acompañamiento paso a paso."
-      >
-        <div className="grid gap-5 lg:grid-cols-3">
-          {[
-            "Elige canciones que te motiven a practicar.",
-            "Recibe acceso temprano cuando abramos cupos.",
-            "Comparte tu nivel y tus mayores bloqueos al escuchar.",
-          ].map((item) => (
-            <article className="border border-white/10 bg-white/5 p-6" key={item}>
-              <p className="font-heading text-2xl font-black leading-8">
-                {item}
-              </p>
-            </article>
-          ))}
-        </div>
-        <p className="mt-6 max-w-3xl text-sm font-bold leading-6 text-soft">
-          Estamos validando interés antes de abrir cupos. Cuando el formato,
-          precio en COP y condiciones estén claros, compartiremos todos los
-          detalles.
-        </p>
-      </Section>
-
-      <Section
-        id="waitlist"
-        tone="paper"
-        title="Sigue aprendiendo con nosotros"
-        intro="La guía gratuita ya está disponible. Puedes responder la encuesta para ayudar a elegir las próximas canciones o pedir información sobre el primer grupo de práctica."
-      >
-        <div className="border border-white/10 bg-panel p-5 shadow-soft sm:p-6">
-          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-            <div className="border-l-4 border-purple pl-5">
-              <h3 className="font-heading text-3xl font-black">
-                Construido con estudiantes reales.
-              </h3>
-              <p className="mt-4 leading-8 text-soft">
-                Usamos formularios externos para medir interés sin crear una
-                cuenta ni guardar datos dentro de esta página.
-              </p>
-              <p className="mt-4 text-sm font-bold text-cream">
-                Encuesta y primer grupo se registran por formularios cortos de Tally.
-              </p>
-            </div>
-
-            <div className="grid gap-3">
-              {validationActions.map((action) => (
-                <article
-                  className="border border-white/10 bg-white/5 p-4"
-                  id={action.id}
-                  key={action.title}
-                >
-                  <div
-                    className={`mb-3 inline-flex rounded-full border px-3 py-1 text-xs font-black uppercase ${action.accent}`}
-                  >
-                    Validación
-                  </div>
-                  <h3 className="font-heading text-2xl font-black">
-                    {action.title}
-                  </h3>
-                  <p className="mt-2 leading-7 text-soft">{action.text}</p>
-                  <a
-                    className="mt-4 inline-flex min-h-11 items-center rounded-md border border-cream bg-cream px-4 text-sm font-black text-ink transition hover:border-pink hover:bg-pink hover:text-ink focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-panel"
-                    {...getLinkProps(action.href)}
-                  >
-                    {action.cta}
-                  </a>
-                </article>
-              ))}
-            </div>
           </div>
         </div>
       </Section>

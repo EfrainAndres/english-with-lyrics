@@ -102,7 +102,7 @@ function getPageCopy(
     description:
       "Puedes descargar la guía gratuita y comenzar con una práctica corta.",
     notice:
-      "Acceso directo disponible: esta página sigue siendo pública pero no promocionada mientras el funnel de registro en Production permanece inactivo.",
+      "Acceso directo disponible: puedes descargar la guía aquí aunque el correo no llegue. La descarga no depende de la suscripción.",
     emailNotice: null,
   };
 }
@@ -201,40 +201,57 @@ export default async function GraciasPage({
       </section>
 
       <section className="bg-night px-5 py-14 sm:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-[1fr_1fr]">
-          <article className="border border-white/10 bg-white/5 p-6">
-            <p className="text-sm font-bold uppercase text-pink">
-              Ayúdame a mejorar la próxima versión
-            </p>
-            <p className="mt-4 leading-8 text-soft">
-              Responde una encuesta corta para contarme qué canciones,
-              prácticas y recursos te gustaría encontrar después.
-            </p>
-            <CTAButton className="mt-6" href={surveyFormUrl} variant="secondary">
-              Responder encuesta
-            </CTAButton>
-          </article>
+        <div className="mx-auto max-w-4xl">
+          <p className="text-sm font-bold uppercase text-purple">
+            Después de descargar la guía
+          </p>
+          <h2 className="mt-3 font-heading text-3xl font-black">
+            Próximos pasos opcionales
+          </h2>
+          <p className="mt-4 max-w-3xl leading-8 text-soft">
+            La guía ya está disponible. Si quieres, puedes compartir tu opinión
+            o consultar el primer grupo; ninguna de estas acciones es necesaria
+            para descargarla.
+          </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
+            <article className="border border-white/10 bg-white/5 p-6">
+              <p className="text-sm font-bold uppercase text-pink">
+                Acción opcional
+              </p>
+              <p className="mt-4 leading-8 text-soft">
+                Responde una encuesta corta para contarnos qué canciones,
+                prácticas y recursos te gustaría encontrar después.
+              </p>
+              <CTAButton
+                className="mt-6"
+                href={surveyFormUrl}
+                variant="secondary"
+              >
+                Responder encuesta
+              </CTAButton>
+            </article>
 
-          <article className="border border-white/10 bg-white/5 p-6">
-            <p className="text-sm font-bold uppercase text-cream">
-              ¿Te interesa practicar con acompañamiento?
-            </p>
-            <p className="mt-4 leading-8 text-soft">
-              Puedes registrarte de forma opcional para conocer el primer grupo
-              de práctica y ayudarnos a validar el siguiente paso del proyecto.
-            </p>
-            <CTAButton
-              className="mt-6"
-              href={firstGroupFormUrl}
-              variant="light"
-            >
-              Conocer el primer grupo
-            </CTAButton>
-            <p className="mt-4 text-sm leading-7 text-soft">
-              Más adelante podrás conocer nuevas prácticas y materiales
-              avanzados.
-            </p>
-          </article>
+            <article className="border border-white/10 bg-white/5 p-6">
+              <p className="text-sm font-bold uppercase text-cream">
+                Acción opcional
+              </p>
+              <p className="mt-4 leading-8 text-soft">
+                Puedes registrarte de forma opcional para conocer el primer grupo
+                de práctica y ayudarnos a validar el siguiente paso del proyecto.
+              </p>
+              <CTAButton
+                className="mt-6"
+                href={firstGroupFormUrl}
+                variant="light"
+              >
+                Conocer el primer grupo
+              </CTAButton>
+              <p className="mt-4 text-sm leading-7 text-soft">
+                Este formulario conserva su destino aprobado y es independiente
+                de la entrega de la guía.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
     </main>

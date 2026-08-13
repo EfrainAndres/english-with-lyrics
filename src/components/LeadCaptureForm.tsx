@@ -25,6 +25,7 @@ export function LeadCaptureForm() {
     <section
       aria-labelledby="lead-capture-title"
       className="bg-panel px-5 py-14 sm:px-8 lg:py-20"
+      id="recibir-guia"
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid min-w-0 gap-8 overflow-hidden border border-white/10 bg-white/5 p-6 lg:grid-cols-[1.05fr_0.95fr] lg:p-8">
@@ -84,7 +85,7 @@ export function LeadCaptureForm() {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Abrir formulario para recibir mi guía
+                  Recibir mi guía gratis
                 </a>
                 <div
                   className="mt-4 space-y-3 break-words text-sm leading-7 text-soft"

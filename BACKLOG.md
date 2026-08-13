@@ -246,7 +246,7 @@ Priority: High.
 - [x] Configure exactly one Production Email 1 draft attached only to the new inactive workflow. Result: STAGED / INACTIVE after three provider-recorded authorized automated sends; two deliveries are inbox-verified and the approved Spanish content, preheader, Production-scoped CTA, text-compatible fallback, privacy footer and unsubscribe treatment are verified.
 - [ ] Activate the Production sequence only after approval.
 - [x] Document controlled consumer inbox-placement results and the open corporate Outlook limitation.
-- [ ] Restructure landing conversion hierarchy around the new lead form.
+- [x] Restructure `/ebook-gratis` conversion hierarchy around the provider-hosted handoff. Result: benefit-led hero, handoff-first CTA, independent secondary PDF access, real ebook preview, expectation-setting and FAQ; survey and first-group actions remain optional on `/gracias`. This branch does not deploy or alter the active controlled rollout.
 - [ ] Add exact funnel-event analytics when approved tooling exists.
 - [x] Test provider export, correction, unsubscribe, and deletion in isolated Preview QA; keep suppression/reactivation behavior as a separate tracked follow-up.
 - [ ] Configure the MailerLite Preview redirect to `/gracias`.
