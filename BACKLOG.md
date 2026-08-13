@@ -147,11 +147,11 @@ Priority: High.
 - [x] Complete owner rendered review of both routes in `approved` mode. Result: PASS on desktop and 390 px for both routes; no horizontal overflow.
 - [x] Complete protected Preview review of both routes in `approved` mode. Result: PASS; approved-mode Preview readiness gate passes and PR #63 is approved for merge.
 - [x] Record the approved initial Production indexing disposition. Result: retain `noindex, nofollow`; no indexing setting changed in this documentation task.
-- [ ] Complete final Production consent linking.
+- [x] Historical pre-activation milestone: complete final Production consent linking. Result: superseded by the current authorized controlled rollout; it does not imply that monitoring or the post-72-hour go/no-go is complete.
 - [x] Stage and validate an isolated provider-hosted consent form through a branch-restricted Preview handoff without activating or altering Production.
 - [x] Complete controlled functional QA of the isolated provider-hosted Preview consent form. Result: PASS for consent blocking, invalid-email handling, one affirmative submission, duplicate safety, zero email/automation side effects, GDPR Forget cleanup, Production absence and direct-PDF independence.
 - [x] Record project-owner acceptance of the MailerLite-native missing-consent feedback limitation for the current Preview staging path only.
-- [ ] Re-evaluate or resolve the missing visible and programmatically associated consent-error feedback before any Production activation; keep this as a tracked provider follow-up.
+- [x] Historical pre-activation requirement: re-evaluate or resolve the missing visible and programmatically associated consent-error feedback before any Production activation. Result: the owner accepted the documented limitation only within the current limited, monitored rollout; it remains a tracked provider follow-up and does not make the limitation fixed, compliant, unrestricted, or permanent.
 - [ ] Verify the provider-failure state if MailerLite exposes a safe native simulation; current status: UNVERIFIED.
 - [x] Complete Production environment configuration. Result: PASS; ten `LEGAL_*` variables set for the Production scope only and verified by name and scope; no values stored in the repository.
 - [x] Publish the approved legal policies in Production and run canonical smoke QA. Result: PASS; both routes HTTP 200 in approved mode, `noindex, nofollow` retained, containment PASS on desktop and 390 px with no horizontal overflow.
@@ -169,6 +169,12 @@ Priority: High.
 - [x] Define the non-secret environment-variable contract for provider-hosted forms.
 - [x] Create the provider readiness document.
 - [x] Create the MailerLite manual setup checklist.
+> Historical pre-activation provider and funnel checklist: the inactive,
+> unlinked, zero-send, and pending-activation statuses in the following
+> preparation entries are preserved evidence. They are superseded for current
+> Production reporting by the active controlled rollout at the top of this
+> document; active monitoring and the post-72-hour go/no-go remain pending.
+
 - [ ] Verify current official plan details for the selected email provider.
 - [x] Complete MailerLite account approval and sender setup. Result: existing sender VERIFIED and reused unchanged for staged Production Email 1; Production sending remains inactive.
 - [x] Complete MailerLite DPA review within the professional provider review. Result: no changes requested.
@@ -337,7 +343,7 @@ Product decision: the current 21-page ebook is a useful implementation base, but
 - [ ] Integrate the approved ebook into the future Production funnel.
 - [ ] Complete controlled Production rollout.
 
-Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; link/QR source gate: PASS. Design prototype: APPROVED; design prototype gate: PASS. Full 32-page design implementation: COMPLETE and APPROVED; full design gate: PASS. Production PDF generation: COMPLETE. Production-PDF candidate: APPROVED — 32 pages. Agent PDF QA: PASS. Production PDF gate: PASS. PR #61 merge: PASS at `0f3517478f2d1742d1292ab3f586e896789c9dfe`. Approved 32-page public replacement: LIVE under the unchanged filename. Candidate-to-public-to-Production identity: PASS. Approved 16-annotation inventory and root-domain canonical annotation: PASS; active `/ebook-gratis` annotation count: 0 — APPROVED / EXPECTED. Production deployment, post-merge smoke test and project-owner canonical Production review: PASS. Production replacement gate: PASS. Mandatory improved-ebook deliverable: COMPLETE. Rollback plan: VERIFIED / PREPARED — NOT EXECUTED. Direct PDF delivery: ACTIVE. Production lead capture: INACTIVE. Production Email 1: INACTIVE. Production automation: INACTIVE. Full commercial launch/funnel: NOT YET COMPLETE. See `docs/validation/PHASE_0_EBOOK_PDF_QA.md` and `docs/validation/PHASE_0_EBOOK_PDF_DELIVERY.md` for the active replacement record.
+Historical pre-rollout ebook-release status: Architecture approval status: APPROVED (revised 32-page target). Improved 32-page learner copy: APPROVED; owner copy gate: PASS. Qualified pronunciation review: COMPLETE; pronunciation gate: PASS. Educational lesson destinations: VERIFIED 3 of 3; original song destinations: VERIFIED 3 of 3; required destinations: RESOLVED 9 of 9; link/QR source gate: PASS. Design prototype: APPROVED; design prototype gate: PASS. Full 32-page design implementation: COMPLETE and APPROVED; full design gate: PASS. Production PDF generation: COMPLETE. Production-PDF candidate: APPROVED — 32 pages. Agent PDF QA: PASS. Production PDF gate: PASS. PR #61 merge: PASS at `0f3517478f2d1742d1292ab3f586e896789c9dfe`. Approved 32-page public replacement: LIVE under the unchanged filename. Candidate-to-public-to-Production identity: PASS. Approved 16-annotation inventory and root-domain canonical annotation: PASS; active `/ebook-gratis` annotation count: 0 — APPROVED / EXPECTED. Production deployment, post-merge smoke test and project-owner canonical Production review: PASS. Production replacement gate: PASS. Mandatory improved-ebook deliverable: COMPLETE. Rollback plan: VERIFIED / PREPARED — NOT EXECUTED. Direct PDF delivery: ACTIVE. The then-inactive lead capture, Email 1, and automation statements are superseded by the current controlled rollout; the broader commercial launch remains incomplete. See `docs/validation/PHASE_0_EBOOK_PDF_QA.md` and `docs/validation/PHASE_0_EBOOK_PDF_DELIVERY.md` for the active replacement record.
 
 ### Ebook Draft
 

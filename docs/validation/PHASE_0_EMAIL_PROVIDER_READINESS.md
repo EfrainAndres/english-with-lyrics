@@ -76,7 +76,7 @@ Historical final Production inbox-verification test: **PASS FOR THE CONTROLLED T
 
 Preview Email 1 configuration staging: PASS. Exactly one clearly identified regular Preview-only draft was created with the approved Spanish subject, preheader, body, Preview CTA, text-compatible fallback and draft-specific provider footer. It reuses an existing sender on the authenticated domain without changing sender configuration. Recipients remain empty, the draft is unsent and unpublished, sent and outbox counts remain zero for this staging, and no group, segment, subscriber or automation is connected. No campaign, test, Preview or transactional email was sent, no form was submitted, and no existing Preview, Production or Development resource was changed.
 
-The accepted MailerLite-native consent-feedback limitation remains tracked only for Preview staging. This standalone draft does not activate Email 1, delivery, lead capture, automation, Production or controlled rollout. Rollback is prepared and limited to deleting only this isolated draft.
+The accepted MailerLite-native consent-feedback limitation remains tracked only for Preview staging. This standalone draft does not activate Email 1, delivery, lead capture, automation, Production or controlled rollout. Historical Preview-staging guidance treated deletion of this isolated draft only as a separately authorized cleanup decision, never an automatic rollback action.
 
 Provider readiness: READY FOR CONTROLLED PREVIEW
 

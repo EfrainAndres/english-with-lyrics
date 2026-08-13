@@ -6,9 +6,9 @@
 
 > Subsequent controlled provider-hosted form QA: **PASS** for functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, Production absence, and direct-PDF independence. The provider-hosted checkbox's missing-consent feedback lacks a visible or programmatically associated error message. The project owner accepts this MailerLite-native limitation for the current Preview staging path only; it remains a tracked follow-up and does not authorize Production activation. Provider-failure simulation remains **UNVERIFIED** because no safe provider-native simulation was available.
 
-> Initial Production consent staging: **STAGED / INACTIVE from the website perspective** for exactly one new isolated Production group and one matching provider-hosted form. Before the controlled test, the group had zero subscribers and no submission or email side effect. Current post-test state is recorded below. MailerLite has no native unpublish/deactivate state for this hosted form, so possible reachability through its undistributed direct provider URL is an owner-accepted staging limitation. This does not activate Production consent linking or collection.
+> Historical pre-activation Production consent staging: **STAGED / INACTIVE from the website perspective** for exactly one new isolated Production group and one matching provider-hosted form. Before the controlled test, the group had zero subscribers and no submission or email side effect. This is preserved staging evidence and is superseded by the current **ACTIVE / IN PROGRESS** controlled Production rollout: handoff, workflow and Email 1 operate only within the monitored maximum of 10 real subscribers over 72 hours. MailerLite has no native unpublish/deactivate state for this hosted form, so possible reachability through its undistributed direct provider URL remains a qualified limitation; it does not authorize an unrestricted rollout.
 
-> Initial Production welcome staging: **STAGED / INACTIVE** for exactly one Email 1 draft attached to exactly one matching inactive workflow. Before the controlled test, the workflow used only the empty staged Production group/form path and had zero enrolled or completed contacts and sends. Current post-test history is recorded below. Lead capture and email delivery remain inactive.
+> Historical pre-activation Production welcome staging: **STAGED / INACTIVE** for exactly one Email 1 draft attached to exactly one matching inactive workflow. Before the controlled test, the workflow used only the empty staged Production group/form path and had zero enrolled or completed contacts and sends. This preserved evidence is superseded by the current **ACTIVE / IN PROGRESS** controlled Production rollout, where lead capture and Email 1 delivery are active only within the monitored maximum of 10 real subscribers over 72 hours.
 
 > Controlled Production funnel test: **FAIL / NO-GO FOR PUBLIC ACTIVATION**. Exactly one affirmative submission produced one target-group assignment, one workflow entry and one automated Email 1 delivery. Consent, content, CTA, direct PDF, privacy/footer, unsubscribe, isolation and cleanup passed; the form redirect failed because the provider-native success state rendered instead of `/gracias`. No second submission or additional message was attempted. The group returned to zero, the workflow is inactive with zero in progress and one completed history record, and one non-personal form registration is retained.
 
@@ -21,6 +21,13 @@
 > Controlled rollout retry: **ACTIVE / IN PROGRESS**. Preflight, workflow activation, Production-only handoff configuration, merged-main redeployment, canonical desktop/390 px no-submit smoke, Analytics verification, and stop-control availability all pass. The opening Production group count is zero of ten; workflow activity is active / zero in progress / three retained completed records. No test contact or non-public email was created. The post-72-hour go/no-go remains pending, and provider-failure simulation remains **UNVERIFIED**.
 
 > Current rollout-gate state: the owner risk acceptance applies only to the approved public Email 1 rollout of up to 10 subscribers over 72 hours and does not make any limitation fixed, compliant, unrestricted or permanent. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes. Monitor subscriber count, workflow activity, sends, failures, complaints, and delivery outcomes at least daily and immediately near the cap. Stop immediately for unexpected email, consent/privacy issue, delivery failure, complaint, or workflow error.
+
+> Historical-status clarification: every prior controlled-test, retest and
+> emergency-rollback paragraph above is retained as pre-activation evidence.
+> Its paused, inactive, fail-closed, unlinked, zero-count, or pending language
+> is superseded for current Production operations by the active controlled
+> rollout and must not be read as an instruction to stop it absent a documented
+> stop condition.
 
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
@@ -203,7 +210,13 @@ the approved monitored rollout boundary.
 - [ ] Future controlled Preview-only send test requires separate owner approval.
 - [ ] MailerLite-native missing-consent feedback limitation remains tracked for Preview staging and does not authorize Production.
 
-Rollback is limited to deleting this exact isolated draft and rechecking zero new drafts, recipients and sends. Do not alter any existing form, group, automation, sender or Production resource.
+Historical Preview-staging guidance: any deletion of this exact isolated draft
+requires a separate, authorized cleanup decision; it is not an automatic
+rollback action. That decision would recheck zero new drafts, recipients and
+sends without altering any existing form, group, automation, sender or
+Production resource. The current Production rollout rollback preserves all
+staged Production resources, historical records, real subscribers, and consent
+evidence.
 
 ## 9B. Controlled Preview test-send QA
 
@@ -236,6 +249,12 @@ The blocked attempt in section 9B remains historical. The owner subsequently aut
 No rollback was required. This QA authorizes neither an audience send nor any Production activation.
 
 ## 9D. Controlled Production funnel test
+
+Sections 9D through 9J are historical controlled-test evidence. Any inactive,
+paused, fail-closed, unlinked, or pending statement in those sections describes
+the state at that test checkpoint and is superseded by the current active
+rollout; it does not change the active 10-subscriber / 72-hour boundary,
+monitoring obligation, stop conditions, or post-rollout go/no-go gate.
 
 - [x] Owner authorization covered exactly one affirmative submission, one Production group assignment, temporary activation of the staged workflow, one automated Email 1 and cleanup.
 - [x] Aggregate preflight: group/form path empty, workflow inactive with zero in progress/completed, and test/campaign/Production sends zero.

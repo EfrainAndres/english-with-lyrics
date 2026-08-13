@@ -310,9 +310,13 @@ evidencia de consentimiento.
 Este staging no activa Email 1, entrega, captura de leads, automatización ni
 despliegue controlado. Un futuro envío de prueba requiere autorización separada.
 
-Rollback preparado: eliminar únicamente este borrador aislado y volver a
-confirmar cero borradores nuevos, cero destinatarios y cero envíos, sin tocar
-ningún formulario, grupo, automatización, remitente ni recurso de Producción.
+Guía histórica de staging de Preview: una eventual eliminación de este borrador
+aislado requería una decisión de limpieza separada y autorizada; no era una
+acción automática de rollback. Debía volver a confirmarse cero borradores
+nuevos, cero destinatarios y cero envíos, sin tocar ningún formulario, grupo,
+automatización, remitente ni recurso de Producción. El rollback vigente del
+rollout de Producción preserva todos los recursos staged, registros históricos,
+suscriptores reales y evidencia de consentimiento.
 
 ## Resultado del intento controlado de envío de prueba
 

@@ -163,21 +163,35 @@ Requirements:
 - Must not use Production group IDs.
 - Must not be promoted publicly.
 - Accepts only controlled test addresses during QA.
-- Test contacts should be periodically deleted.
+- Any cleanup of isolated test contacts requires separate authorization; it is
+  not an automatic or periodic deletion action.
 
-### Production form
+### Historical pre-activation Production form
+
+The inactive, unlinked and zero-subscriber state below is preserved
+pre-activation design evidence. It is superseded for current-state reporting by
+the **ACTIVE / IN PROGRESS** Production rollout, whose public handoff, workflow
+and Email 1 operate only within the monitored maximum of 10 real subscribers
+over 72 hours.
 
 - Internal proposed name: `SPR - Production - Ebook Lead Form`
-- Status: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / UNLINKED / ZERO SUBSCRIBERS.
+- Historical status: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / UNLINKED / ZERO SUBSCRIBERS.
 
 Requirements:
 
 - Assigned to `SPR - Production - Ebook Leads`.
 - Uses approved consent copy.
-- Uses the already available `/gracias` route only after the final redirect mapping is reverified during controlled activation.
+- Historically, used the already available `/gracias` route only after the
+  final redirect mapping was reverified during controlled activation.
 - Uses the approved public privacy-policy URL.
-- Triggers Email 1 only after complete Preview and production-readiness QA.
-- Remains unlinked from the website until all activation gates are cleared. The owner accepts the provider's missing-consent feedback and lack of native unpublish/deactivate state only for the limited Email 1 controlled rollout; neither limitation is represented as fixed, fully accessible, legally compliant, harmless, certified or irrelevant.
+- Historically, Email 1 would trigger only after complete Preview and
+  production-readiness QA; the current authorized rollout is limited to the
+  monitored boundary stated above.
+- Historically, remained unlinked from the website until all activation gates
+  were cleared. The owner accepts the provider's missing-consent feedback and
+  lack of native unpublish/deactivate state only for the limited Email 1
+  controlled rollout; neither limitation is represented as fixed, fully
+  accessible, legally compliant, harmless, certified or irrelevant.
 
 ## Consent mapping
 
