@@ -61,7 +61,7 @@ Production approved-mode content: PASS
 Production noindex, nofollow: PASS
 Production metadata privacy: PASS
 Production ebook and thank-you regression: PASS
-/ebook-gratis temporary rollout noindex, nofollow: PREPARED IN SOURCE / NOT DEPLOYED TO PRODUCTION
+/ebook-gratis temporary rollout noindex, nofollow: DEPLOYED / RETAINED AFTER ROLLBACK
 /gracias availability: PASS
 Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
 Production indexing disposition: APPROVED INITIAL / `noindex, nofollow`
@@ -84,10 +84,13 @@ Fresh-contact received content, CTA, footer/privacy and rendered unsubscribe: UN
 Final Production inbox-verification technical path: PASS
 Final test redirect / assignment / terminal completion / inbox delivery / content / CTA / unsubscribe / cleanup: PASS
 Additional fresh-contact retest: NOT REQUIRED
-Public activation and rollout: PENDING — INCLUDING OPERATIONAL STOP-CONTROL VERIFICATION AND POST-72-HOUR GO/NO-GO
+Public activation and rollout: INCOMPLETE ATTEMPT ROLLED BACK / NOT STARTED
+Operational stop-control verification: PASS BY EXECUTION
+Future complete public no-submit smoke and 72-hour rollout: PENDING
+Post-72-hour go/no-go: PENDING AFTER A FUTURE SUCCESSFUL ROLLOUT
 Direct PDF delivery: ACTIVE
 Controlled-test cleanup: PASS / EXECUTED
-Rollback: PREPARED / NOT EXECUTED
+Emergency rollback: PASS / EXECUTED
 Project-owner canonical Production legal review: PASS
 Final Production legal-publication acceptance gate: PASS
 Production legal policies: LIVE / ACCEPTED
@@ -113,19 +116,32 @@ now passes. The owner accepts the tracked provider-native
 accessibility/direct-reachability and deliverability risks only for the
 approved public Email 1 rollout of up to 10 subscribers over 72 hours under active
 monitoring and immediate stop thresholds. This does not make any limitation
-fixed, compliant, unrestricted or permanently accepted. Production handoff
-configuration and deployment, a public no-submit smoke check,
-analytics-dashboard verification, operational stop-control verification,
-rollout execution/monitoring and the post-72-hour go/no-go remain separate
-pending gates. Initial indexing disposition is approved as `noindex, nofollow`
-without authorizing future indexing changes.
+fixed, compliant, unrestricted or permanently accepted. Analytics verification
+and operational stop-control execution pass. The incomplete activation was
+rolled back, the Production handoff configuration is absent and canonical
+Production is fail-closed. A future activation, complete public no-submit
+smoke, rollout execution/monitoring and the post-72-hour go/no-go remain
+separate pending gates. Initial indexing disposition is approved as `noindex,
+nofollow` without authorizing future indexing changes.
 
 The controlled-rollout preparation adds `noindex, nofollow` only to
 `/ebook-gratis` for the approved 10-subscriber / 72-hour window. It does not
 change global indexing, the homepage, `/gracias`, either legal route, PDF
-delivery, unrelated metadata, or future SEO strategy. This branch is not
-deployed to canonical Production and does not activate public lead capture, Email 1 delivery or the
-automation.
+delivery, unrelated metadata, or future SEO strategy. The route-scoped metadata
+is deployed, but the incomplete activation was rolled back and canonical
+Production is fail-closed. The workflow is inactive, the Production handoff
+configuration is absent, and no successful rollout start is claimed.
+
+The emergency rollback paused the staged workflow, removed only the
+Production-scoped handoff configuration and redeployed verified merged `main`.
+All listed public routes and the direct PDF returned healthy responses after
+rollback. `/ebook-gratis`, `/gracias` and both legal routes retained `noindex,
+nofollow`; the homepage remained outside that route-scoped directive. The
+Production group remained at zero subscribers, workflow contacts remained zero
+in progress with three historical completions, and no new automated send,
+delivery failure or complaint occurred. Analytics remained enabled and
+unchanged. The blocked pre-rollback smoke was caused by the review browser's
+access policy, so the controlled rollout was not declared started.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That
@@ -217,11 +233,13 @@ Preview or unrelated Production resource changed. No additional fresh-contact
 test is required for the controlled technical-path gate. The limited rollout
 risk disposition is recorded only for the approved public Email 1 rollout of up
 to 10 subscribers over 72 hours; it does not make a limitation fixed,
-compliant, unrestricted or permanent. Public activation remains blocked by
-analytics, Production handoff configuration/deployment, public no-submit smoke,
-operational stop-control verification, rollout execution/monitoring and the
-post-72-hour go/no-go. Retain the approved initial `noindex, nofollow`
-disposition without authorizing future indexing changes.
+compliant, unrestricted or permanent. Analytics verification and operational
+stop-control execution pass, but the incomplete activation was rolled back and
+the Production handoff configuration is absent. Public activation remains
+blocked by a future activation deployment, complete public no-submit smoke,
+rollout execution/monitoring and the post-72-hour go/no-go. Retain the approved
+initial `noindex, nofollow` disposition without authorizing future indexing
+changes.
 
 Rollback is prepared and limited to deleting only the new attached Email 1
 draft and the new inactive workflow; the already staged group/form and all

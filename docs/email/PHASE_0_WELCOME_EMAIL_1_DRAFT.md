@@ -175,14 +175,15 @@ Producción:
 | Vinculación de consentimiento de Producción | PENDING |
 | Disposición inicial de indexación | APPROVED: `noindex, nofollow` |
 | Aceptación limitada de riesgos para rollout | PASS: solo Email 1 / máximo 10 suscriptores / 72 horas |
-| Verificación de analytics | PENDING |
-| Configuración, deployment y smoke público sin envío | PENDING |
+| Verificación de analytics | PASS / ENABLED / UNCHANGED |
+| Configuración, deployment y smoke público sin envío | INCOMPLETE / ROLLED BACK; smoke completo PENDING |
+| Control operacional de parada | PASS BY EXECUTION |
 | Grupo/formulario de Producción | STAGED / INACTIVE desde la perspectiva del sitio |
 | Captura de leads de Producción | INACTIVE |
 | Email 1 de Producción | STAGED / INACTIVE |
 | Entrega de correo de Producción | INACTIVE |
 | Automatización de Producción | STAGED / INACTIVE |
-| Despliegue controlado | PENDING |
+| Despliegue controlado | NOT STARTED / rollback fail-closed PASS |
 | Entrega directa del PDF | ACTIVE |
 
 La configuración del proveedor y cada envío de Preview o Producción requieren

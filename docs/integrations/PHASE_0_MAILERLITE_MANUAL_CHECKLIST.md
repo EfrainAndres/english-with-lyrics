@@ -16,7 +16,9 @@
 
 > Final Production inbox-verification state: **PASS FOR THE CONTROLLED TECHNICAL PATH / NOT PUBLICLY ACTIVATED**. A fresh contact with zero subscriber, group-membership or workflow history completed exactly one affirmative submission after the isolated workflow was activated and confirmed. Redirect, group assignment, terminal workflow completion, one provider-recorded send, one matching inbox delivery, approved content/CTA, privacy/footer, functional unsubscribe without another message, direct PDF independence and cleanup passed. The group and contact search returned to zero; the workflow is paused with zero in progress and three completed history records. No public handoff, Vercel value, deployment, indexing, source, Preview or unrelated Production resource changed.
 
-> Current rollout-gate state: the owner risk acceptance applies only to the approved public Email 1 rollout of up to 10 subscribers over 72 hours and does not make any limitation fixed, compliant, unrestricted or permanent. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes. Analytics verification, Production handoff configuration/deployment, public no-submit smoke, operational stop-control verification, rollout execution/monitoring and the post-72-hour go/no-go remain pending. Provider-failure simulation remains **UNVERIFIED**.
+> Emergency rollback: **PASS / ROLLOUT NOT STARTED**. An authorized activation reached active workflow, Production-only handoff configuration and a Ready deployment, but the mandatory canonical no-submit smoke was blocked by the review browser's access policy. Rollback paused the workflow, removed only the Production handoff setting and redeployed verified merged `main`. The group is zero; workflow state is inactive / zero in progress / three retained completed; new automated sends, failures and complaints are zero; canonical Production is fail-closed; Analytics remains enabled and unchanged.
+
+> Current rollout-gate state: the owner risk acceptance applies only to the approved public Email 1 rollout of up to 10 subscribers over 72 hours and does not make any limitation fixed, compliant, unrestricted or permanent. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes. Analytics verification and operational stop-control execution pass. Production handoff configuration is absent after rollback; a future activation, complete public no-submit smoke, rollout execution/monitoring and the post-72-hour go/no-go remain pending. Provider-failure simulation remains **UNVERIFIED**.
 
 Use this checklist to separate repository preparation from dashboard work, owner input, legal review, DNS work, and later implementation. Do not check an item without evidence.
 
@@ -324,7 +326,8 @@ snapshot without changing any resource.
 - [x] Additional fresh-contact retest: NOT REQUIRED for the controlled technical path.
 - [ ] Provider-failure simulation remains UNVERIFIED.
 - [x] Limited rollout risk disposition: owner accepts the known missing-consent feedback, direct-provider-reachability and deliverability risks only for Email 1, up to 10 subscribers and 72 hours of active monitoring.
-- [ ] Public activation remains blocked pending analytics verification, Production handoff configuration/deployment, public no-submit smoke, operational stop-control verification, controlled-rollout execution/monitoring and the post-72-hour go/no-go. Initial indexing disposition is approved as `noindex, nofollow` without authorizing future indexing changes.
+- [x] Analytics verification and operational stop-control execution: PASS; Analytics remained enabled and unchanged, and the emergency rollback executed pause, Production handoff removal and fail-closed redeployment in order.
+- [ ] Public activation remains blocked pending a future authorized Production handoff configuration/deployment, complete public no-submit smoke, controlled-rollout execution/monitoring and the post-72-hour go/no-go. Initial indexing disposition is approved as `noindex, nofollow` without authorizing future indexing changes.
 
 ## 10. Consent
 
