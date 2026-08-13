@@ -1,11 +1,8 @@
 import Image from "next/image";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
-import {
-  dataProcessingPath,
-  ebookPagePath,
-  privacyPath,
-} from "@/lib/links";
+import { SiteFooter } from "@/components/SiteFooter";
+import { ebookPagePath } from "@/lib/links";
 
 const benefits = [
   {
@@ -440,36 +437,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
-            <BrandLogo className="shrink-0" />
-            <p className="mt-1 text-sm text-soft">
-              Método Escríbelo como suena.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center gap-4 text-sm font-black">
-            <a
-              className="text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href={privacyPath}
-            >
-              Privacidad
-            </a>
-            <a
-              className="text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href={dataProcessingPath}
-            >
-              Tratamiento de datos
-            </a>
-            <a
-              className="text-cream hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href={ebookPagePath}
-            >
-              Descargar guía gratis
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

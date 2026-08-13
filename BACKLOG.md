@@ -247,7 +247,8 @@ Priority: High.
 - [ ] Activate the Production sequence only after approval.
 - [x] Document controlled consumer inbox-placement results and the open corporate Outlook limitation.
 - [x] Restructure `/ebook-gratis` conversion hierarchy around the provider-hosted handoff. Result: benefit-led hero, handoff-first CTA, independent secondary PDF access, real ebook preview, expectation-setting and FAQ; survey and first-group actions remain optional on `/gracias`. This branch does not deploy or alter the active controlled rollout.
-- [ ] Add exact funnel-event analytics when approved tooling exists.
+- [ ] Add exact funnel-event analytics when approved tooling exists. The current Vercel Hobby plan does not provide dashboard-visible custom events; keep this separate from the active controlled rollout.
+- [x] Add a consistent trust-and-contact footer using only the already public privacy-contact channel and existing legal routes. Result: factual educational/PDF language, descriptive privacy/data-policy/contact links, and unchanged rollout or provider behavior.
 - [x] Test provider export, correction, unsubscribe, and deletion in isolated Preview QA; keep suppression/reactivation behavior as a separate tracked follow-up.
 - [ ] Configure the MailerLite Preview redirect to `/gracias`.
 - [x] Run deployed Preview QA.

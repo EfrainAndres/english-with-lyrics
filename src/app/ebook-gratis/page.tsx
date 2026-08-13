@@ -3,14 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
 import { LeadCaptureForm } from "@/components/LeadCaptureForm";
+import { SiteFooter } from "@/components/SiteFooter";
 import { getLeadFormConfig } from "@/lib/lead-form-config";
 import {
-  dataProcessingPath,
   ebookDownloadFilename,
   ebookDownloadPath,
   ebookFileSizeKB,
   ebookPageCount,
-  privacyPath,
 } from "@/lib/links";
 
 export const metadata: Metadata = {
@@ -447,37 +446,7 @@ export default function EbookGratisPage() {
         </div>
       </section>
 
-      {/* ── Footer ─────────────────────────────────────────────────────────── */}
-      <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
-            <BrandLogo className="shrink-0" height="4rem" />
-            <p className="text-sm text-soft">Método Escríbelo como suena.</p>
-          </div>
-          <div className="flex flex-wrap items-center gap-4 text-sm font-black">
-            <Link
-              className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href={privacyPath}
-            >
-              Privacidad
-            </Link>
-            <Link
-              className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href={dataProcessingPath}
-            >
-              Tratamiento de datos
-            </Link>
-            <a
-              className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href={ebookDownloadPath}
-              download={ebookDownloadFilename}
-              aria-label="Descargar guía gratis en PDF"
-            >
-              Descargar guía gratis
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
