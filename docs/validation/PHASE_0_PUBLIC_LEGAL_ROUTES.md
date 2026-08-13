@@ -1,6 +1,6 @@
 # Phase 0 Public Legal Routes
 
-> Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact; no Production resource or commercial-funnel capability was activated. Production consent linking and controlled-rollout execution remain pending; direct PDF delivery remains active. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes.
+> Rights-request provider operations QA remains **PASS**. The separate Production Email 1-only controlled rollout retry is **ACTIVE / IN PROGRESS** at zero of ten subscribers at activation; direct PDF delivery remains active and independent. The approved initial indexing disposition is `noindex, nofollow` and does not authorize future indexing changes.
 
 ## Status
 
@@ -14,10 +14,10 @@ Approved-mode source implementation: COMPLETE
 Approved-mode local QA: PASS
 Application privacy-link preparation: PASS
 Provider-hosted consent-linking inert code preparation: PASS
-Production website handoff support: PREPARED / FAIL-CLOSED / NOT CONFIGURED
+Production website handoff support: ACTIVE / CONTROLLED ROLLOUT / SMOKE PASS
 Isolated provider-hosted Preview consent form: CONFIGURED
-Isolated provider-hosted Production consent group/form: STAGED / INACTIVE FROM THE WEBSITE PERSPECTIVE / ZERO SUBSCRIBERS
-Production provider form public-site or Vercel link: ABSENT
+Isolated provider-hosted Production consent group/form: ACTIVE / CONTROLLED ROLLOUT / ZERO OF TEN AT ACTIVATION
+Production provider form public-site or Vercel link: PRESENT ONLY IN PRODUCTION
 Production provider form single opt-in: PASS
 Provider-native unpublish/deactivate state: NOT AVAILABLE — OWNER-ACCEPTED ONLY FOR THE APPROVED PUBLIC EMAIL 1 ROLLOUT OF UP TO 10 SUBSCRIBERS / 72 HOURS
 Direct provider URL distribution: NONE
@@ -65,17 +65,17 @@ Production ebook and thank-you regression: PASS
 /gracias availability: PASS
 Reverse /tratamiento-de-datos to /privacidad link: NOT PRESENT — approved, pre-existing behavior, not a blocker
 Production indexing disposition: APPROVED INITIAL / `noindex, nofollow`
-Production MailerLite group/form: STAGED / INACTIVE
-Final Production consent linking: PENDING
+Production MailerLite group/form: ACTIVE / CONTROLLED ROLLOUT / ZERO OF TEN AT ACTIVATION
+Final Production consent linking: ACTIVE / CONTROLLED ROLLOUT
 Rights-request provider operations QA: PASS
-Production Email 1: STAGED / INACTIVE
-Production email delivery: INACTIVE
-Production automation: STAGED / INACTIVE
+Production Email 1: ACTIVE / CONTROLLED ROLLOUT
+Production email delivery: ACTIVE / EMAIL 1 ONLY
+Production automation: ACTIVE / CONTROLLED ROLLOUT
 Production automation contacts in progress/completed: ZERO / THREE retained history records
 Provider-recorded controlled automated Production Email 1 sends: THREE
 Inbox-verified controlled automated Production Email 1 deliveries: TWO
 Production welcome email test/campaign/transactional sends: ZERO / ZERO / ZERO
-Production lead capture: INACTIVE
+Production lead capture: ACTIVE / CONTROLLED ROLLOUT
 Initial controlled Production test: FAIL — hosted-form redirect did not reach /gracias
 Corrected hosted-form redirect: PASS by affirmative submission
 Fresh-contact bounded-window corrective snapshot: FAIL — group assignment ONE / workflow entry ZERO / Email 1 ZERO
@@ -84,10 +84,11 @@ Fresh-contact received content, CTA, footer/privacy and rendered unsubscribe: UN
 Final Production inbox-verification technical path: PASS
 Final test redirect / assignment / terminal completion / inbox delivery / content / CTA / unsubscribe / cleanup: PASS
 Additional fresh-contact retest: NOT REQUIRED
-Public activation and rollout: INCOMPLETE ATTEMPT ROLLED BACK / NOT STARTED
+Public activation and rollout: ACTIVE / IN PROGRESS / RETRY SMOKE PASS
 Operational stop-control verification: PASS BY EXECUTION
-Future complete public no-submit smoke and 72-hour rollout: PENDING
-Post-72-hour go/no-go: PENDING AFTER A FUTURE SUCCESSFUL ROLLOUT
+Canonical public no-submit smoke: PASS / DESKTOP AND 390 PX
+Active 72-hour monitoring: IN PROGRESS / ZERO OF TEN AT ACTIVATION
+Post-72-hour go/no-go: PENDING
 Direct PDF delivery: ACTIVE
 Controlled-test cleanup: PASS / EXECUTED
 Emergency rollback: PASS / EXECUTED
@@ -98,39 +99,40 @@ PR #64 merge: PASS
 Consent gate: BLOCKED
 ```
 
-Passing the legal-publication acceptance gate does not activate lead capture,
-consent collection, email delivery, Email 1, MailerLite automation, or the
-commercial funnel. It does not constitute certification or guaranteed
-compliance. Lead capture, Email 1, email
-delivery and automation remain inactive; direct PDF delivery remains the active
-delivery path. The published policies retain the owner-approved initial
-`noindex, nofollow` disposition.
+Historical legal-publication-gate note: when this gate was recorded, it did not
+activate lead capture, consent collection, email delivery, Email 1, MailerLite
+automation, or the commercial funnel. It did not constitute certification or
+guaranteed compliance. The then-inactive delivery and automation state is
+superseded for current operations by the active rollout cross-reference above.
+The published policies retain the owner-approved initial `noindex, nofollow`
+disposition.
 
-The fail-closed Production handoff support also does not activate the funnel.
-With absent, blank, malformed or unsupported Production configuration, the
-entire lead-capture surface is omitted. A valid future Production-scoped value
-can expose only the external provider handoff with the approved disclosure and
-exact `/privacidad` link; it cannot add native personal-data fields or affect
-the independent direct PDF path. The controlled Production technical-path test
-now passes. The owner accepts the tracked provider-native
+Historical fail-closed support note: before the authorized rollout, the
+Production handoff support did not activate the funnel. With absent, blank,
+malformed or unsupported Production configuration, the entire lead-capture
+surface was omitted. A valid Production-scoped value can expose only the
+external provider handoff with the approved disclosure and exact `/privacidad`
+link; it cannot add native personal-data fields or affect the independent
+direct PDF path. The controlled Production technical-path test now passes. The
+owner accepts the tracked provider-native
 accessibility/direct-reachability and deliverability risks only for the
 approved public Email 1 rollout of up to 10 subscribers over 72 hours under active
 monitoring and immediate stop thresholds. This does not make any limitation
 fixed, compliant, unrestricted or permanently accepted. Analytics verification
-and operational stop-control execution pass. The incomplete activation was
-rolled back, the Production handoff configuration is absent and canonical
-Production is fail-closed. A future activation, complete public no-submit
-smoke, rollout execution/monitoring and the post-72-hour go/no-go remain
-separate pending gates. Initial indexing disposition is approved as `noindex,
-nofollow` without authorizing future indexing changes.
+and operational stop-control availability pass. The earlier incomplete
+activation and rollback remain historical; the current rollout retry has an
+active Production-only handoff, active workflow, and a passing canonical
+no-submit smoke. Active monitoring and the post-72-hour go/no-go remain pending.
+Initial indexing disposition is approved as `noindex, nofollow` without
+authorizing future indexing changes.
 
 The controlled-rollout preparation adds `noindex, nofollow` only to
 `/ebook-gratis` for the approved 10-subscriber / 72-hour window. It does not
 change global indexing, the homepage, `/gracias`, either legal route, PDF
 delivery, unrelated metadata, or future SEO strategy. The route-scoped metadata
-is deployed, but the incomplete activation was rolled back and canonical
-Production is fail-closed. The workflow is inactive, the Production handoff
-configuration is absent, and no successful rollout start is claimed.
+is deployed. The current controlled rollout retry is ACTIVE / IN PROGRESS with
+the Production-only handoff and workflow active, zero of ten subscribers at
+activation, and no broader or permanent indexing approval.
 
 The emergency rollback paused the staged workflow, removed only the
 Production-scoped handoff configuration and redeployed verified merged `main`.
@@ -142,6 +144,19 @@ in progress with three historical completions, and no new automated send,
 delivery failure or complaint occurred. Analytics remained enabled and
 unchanged. The blocked pre-rollback smoke was caused by the review browser's
 access policy, so the controlled rollout was not declared started.
+
+**Current rollout cross-reference:** the controlled Production rollout is
+**ACTIVE / IN PROGRESS**. The public handoff, matching workflow, and Email 1
+path operate only within the monitored ten-subscriber / 72-hour boundary; the
+active-rollout records govern all current operational controls and statuses.
+`noindex, nofollow` remains temporary for that rollout, and direct PDF delivery
+remains active and independent.
+
+## Historical pre-activation staging and test evidence
+
+The following inactive, unlinked, fail-closed, pending, and deletion-preparation
+statements are pre-activation snapshots. They are preserved as evidence and are
+superseded for current-state reporting by the active controlled rollout above.
 
 The isolated provider-hosted consent form and its branch-restricted Preview
 handoff were initially configured and validated without a submission. That
@@ -155,13 +170,14 @@ error message. The project owner accepts this known MailerLite-native
 limitation for the current Preview staging path only; it remains tracked and is
 not described as fixed, fully accessible, legally compliant, certified, or
 irrelevant. Provider-failure simulation remains UNVERIFIED because no safe
-provider-native simulation was available. This staging is not Production
-activation: final Production consent linking, group/form, lead capture, Email
-1, delivery, automation, controlled rollout and indexing retain their pending
-or inactive states, while direct PDF delivery remains active.
+provider-native simulation was available. At this historical staging snapshot,
+Production activation had not occurred: final Production consent linking,
+group/form, lead capture, Email 1, delivery, automation, controlled rollout and
+indexing were pending or inactive, while direct PDF delivery remained active.
 
-Exactly one isolated Production consent group and one matching provider-hosted
-form remain staged and inactive from the website perspective with zero group
+At this historical staging snapshot, exactly one isolated Production consent
+group and one matching provider-hosted form remained staged and inactive from
+the website perspective with zero group
 subscribers after controlled cleanup. The form retains non-personal controlled
 registration history. The form
 uses the approved consent wording unchanged, requires email, keeps name
@@ -179,15 +195,17 @@ FAILED because the provider-native success state rendered instead of
 `/gracias`; no second submission was attempted. No campaign, public website or
 Vercel configuration change, or Production deployment was performed.
 The known missing-consent feedback limitation is accepted only for this
-inactive Production staging state and remains tracked; it is not described as
-fixed, fully accessible, compliant, certified, harmless, or approved for public
-activation. Final Production consent linking, lead capture, Email 1, delivery,
-automation, controlled rollout and indexing retain their pending or inactive
-states; direct PDF delivery remains active. Rollback is prepared and limited to
-deleting only the new empty Production form and group.
+historical inactive Production staging state and remains tracked; it is not
+described as fixed, fully accessible, compliant, certified, harmless, or
+approved for public activation. At that time, final Production consent linking,
+lead capture, Email 1, delivery, automation, controlled rollout and indexing
+were pending or inactive, while direct PDF delivery remained active. The
+then-proposed deletion of the empty Production form and group was a historical
+post-rollback cleanup option, never an automatic immediate rollback action.
 
-Exactly one Production Email 1 draft remains staged inside exactly one matching
-inactive workflow. The workflow uses only the isolated staged Production
+At this historical staging snapshot, exactly one Production Email 1 draft
+remained staged inside exactly one matching inactive workflow. The workflow
+used only the isolated staged Production
 group/form path and has zero contacts in progress and three retained completed
 history records. The draft
 retains the approved Spanish subject, preheader, body, Production-scoped CTA,
@@ -198,9 +216,9 @@ the intervening provider-recorded send without a matching inbox message as
 historical evidence. Test, campaign and transactional messages remained zero. Real
 unsubscribe in the inbox-verified tests and GDPR Forget returned the contact
 search and Production group to zero without changing Preview or unrelated
-Production resources. This inactive state does not authorize final consent
-linking, lead capture, active email delivery, rollout or indexing. Direct PDF
-delivery remains active and independent.
+Production resources. This historical inactive state did not authorize final
+consent linking, lead capture, active email delivery, rollout or indexing.
+Direct PDF delivery remained active and independent.
 
 The fresh-contact zero-entry/zero-send result remains the historical bounded-window
 snapshot. Later read-only provider evidence showed that contact in Completed and
@@ -213,10 +231,10 @@ and monitor workflow Activity to Completed, Failed or Canceled before pausing,
 unsubscribing or applying GDPR Forget. The delayed state after cleanup is a
 procedural timing risk. The inbox message and critical content/CTA evidence
 remain absent for that historical attempt. Provider-failure simulation remains
-UNVERIFIED. Public
-activation and all remaining analytics, configuration/deployment, no-submit
-smoke and rollout-execution gates remain blocked; direct PDF delivery and legal
-routes remain independent.
+UNVERIFIED. At that historical bounded-window snapshot, public activation and
+the then-remaining analytics, configuration/deployment, no-submit smoke, and
+rollout-execution gates remained blocked; direct PDF delivery and legal routes
+remained independent.
 
 The separate final Production inbox-verification test passed with a fresh
 contact that had zero prior subscriber, group-membership or workflow history.
@@ -233,17 +251,21 @@ Preview or unrelated Production resource changed. No additional fresh-contact
 test is required for the controlled technical-path gate. The limited rollout
 risk disposition is recorded only for the approved public Email 1 rollout of up
 to 10 subscribers over 72 hours; it does not make a limitation fixed,
-compliant, unrestricted or permanent. Analytics verification and operational
-stop-control execution pass, but the incomplete activation was rolled back and
-the Production handoff configuration is absent. Public activation remains
-blocked by a future activation deployment, complete public no-submit smoke,
-rollout execution/monitoring and the post-72-hour go/no-go. Retain the approved
-initial `noindex, nofollow` disposition without authorizing future indexing
-changes.
+compliant, unrestricted or permanent. Analytics verification, stop-control
+availability, Production-only handoff, merged-main deployment, and canonical
+no-submit smoke pass for the rollout retry. Active monitoring and the
+post-72-hour go/no-go remain pending. Retain the approved initial `noindex,
+nofollow` disposition without authorizing future indexing changes.
 
-Rollback is prepared and limited to deleting only the new attached Email 1
-draft and the new inactive workflow; the already staged group/form and all
-existing resources remain outside that rollback.
+Current public-rollout rollback preserves the staged form, group, Email 1,
+workflow, retained history, every real subscriber, and all consent evidence.
+At the cap or a stop condition, pause the workflow first, remove only the
+Production handoff configuration second, redeploy verified merged `main`
+fail-closed third, then verify canonical ebook behavior, routes, legal
+policies, robots directives, and direct PDF. Do not delete, unsubscribe,
+Forget, or otherwise alter real subscribers during rollback. Deletion of empty
+staging resources is a separate post-rollback cleanup decision requiring
+separate authorization; it is never an automatic immediate rollback action.
 
 ## Historical draft audit summary
 
@@ -279,7 +301,10 @@ Privacy-contact channel:
 - Public contact address: `privacidad@singpronuncerepeat.com`.
 - The public privacy-contact mailbox is operational and was tested manually. Responsible-party details, effective date, final policy approval, professional legal review, and Production lead-capture authorization remain pending.
 
-## Rendering matrix
+## Historical rendering matrix
+
+This configuration matrix records the pre-activation implementation state. Its
+Production-not-configured row is not the current rollout configuration state.
 
 | Environment | Configuration complete | Rendered state | Indexing |
 |---|---:|---|---|
@@ -296,7 +321,7 @@ invalid values fail safely to `pending`. The deprecated
 review truthfully but cannot activate publication. `robots: noindex, nofollow`
 remains hardcoded in both routes, so indexing stays a separate explicit decision.
 
-## Current local readiness QA
+## Historical local readiness QA
 
 - `pending`: PASS on both routes; full policy and personal fields absent.
 - `draft`: PASS on both routes; complete policy, visible draft notice and draft wording retained.
@@ -312,7 +337,10 @@ remains hardcoded in both routes, so indexing stays a separate explicit decision
 - `noindex, nofollow`: PASS in all three modes.
 - Synthetic values and temporary renders: not stored in the repository.
 
-## Owner approved-mode protected Preview review
+## Historical owner approved-mode protected Preview review
+
+This protected-Preview record predates the active Production rollout. Its
+inactive and pending Production statements are historical evidence only.
 
 Completed by the project owner on the branch-specific protected Preview deployment for this branch. This review supersedes nothing in the historical draft-mode records above; it is a separate review of the `approved` rendering.
 
@@ -353,7 +381,7 @@ Application-surface regression:
 - `/gracias` regression: PASS.
 - Forms submitted during review: NONE.
 
-Production containment during the review:
+Historical Production containment during the review:
 
 - Production environment configuration changed during owner review: NO.
 - Production legal publication: NOT STARTED.
@@ -367,7 +395,11 @@ Production containment during the review:
 
 No ephemeral Preview URL, screenshot, responsible-party value, environment-variable value or provider identifier from this review is stored in the repository.
 
-## Canonical Production legal publication and smoke QA
+## Historical canonical Production legal publication and smoke QA
+
+This legal-publication smoke record predates the active controlled rollout.
+Its form-absence and inactive Production-funnel statements are historical
+snapshots, not current rollout instructions or status.
 
 Executed against the canonical Production origin `https://singpronuncerepeat.com` only. No branch Preview deployment was treated as Production evidence.
 
@@ -422,7 +454,7 @@ Containment:
 | `/privacidad` | PASS | PASS | NONE | 0 |
 | `/tratamiento-de-datos` | PASS | PASS | NONE | 0 |
 
-Regression:
+Historical regression snapshot:
 
 - `/ebook-gratis` internal privacy link: exact destination `/privacidad`.
 - Application form on Production: ABSENT.
@@ -443,7 +475,10 @@ Rollback:
 - Production held no `LEGAL_*` variables beforehand, so rollback is deterministic: removing the ten `LEGAL_*` names returns Production to the safe `pending` state. The procedure depends on no stored secret.
 - Rollback status: PREPARED / NOT EXECUTED. All checks passed, so the approved Production configuration remains active.
 
-## Project-owner canonical Production review
+## Historical project-owner canonical Production review
+
+This legal-review record predates the active controlled rollout. Its inactive
+and pending funnel statements remain preserved as historical evidence only.
 
 Completed by the project owner directly against the canonical Production origin `https://singpronuncerepeat.com` after the agent-run smoke QA above passed.
 
@@ -532,7 +567,10 @@ Local smoke checks previously performed in this branch, prior to deployed Previe
 
 Deployed Preview QA was completed manually. No personal data, screenshots, ephemeral Preview URLs, provider IDs, fake legal details, or private contact information are stored in the repository.
 
-## Remaining Production gates
+## Historical remaining Production gates
+
+This gate list predates the active controlled rollout. It is retained as a
+historical snapshot and does not override the current rollout cross-reference.
 
 - Responsible-party name.
 - Identification details when legally required.
@@ -551,7 +589,11 @@ Deployed Preview QA was completed manually. No personal data, screenshots, ephem
 - Production lead capture.
 - Controlled rollout.
 
-## Decision
+## Historical legal-publication decision
+
+This decision snapshot predates the active controlled rollout. Its pending and
+inactive funnel wording is superseded for current operations by the rollout
+cross-reference above.
 
 ```text
 Preview decision: PASS
