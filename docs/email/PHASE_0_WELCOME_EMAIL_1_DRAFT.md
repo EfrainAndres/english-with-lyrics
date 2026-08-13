@@ -19,9 +19,9 @@ en el formulario alojado por el proveedor, proponer un primer paso de práctica
 tranquilo y dirigirla a la experiencia existente de la guía. La guía ya está
 disponible directamente: este correo no es necesario para recibirla.
 
-El futuro formulario alojado por el proveedor permanece como sistema de registro
-del consentimiento. Este borrador de correo no crea, almacena, transmite ni
-afirma registrar evidencia de consentimiento.
+El formulario alojado por el proveedor es el sistema de registro del
+consentimiento dentro del rollout vigente. Este borrador de correo no crea,
+almacena, transmite ni afirma registrar evidencia de consentimiento.
 
 ## Opciones de asunto y preencabezado
 
@@ -189,12 +189,21 @@ Producción:
 La configuración del proveedor y cada envío de Preview o Producción requieren
 aprobación separada de la responsable.
 
-## Estado de staging en MailerLite Producción
+## Registro histórico de staging y pruebas en MailerLite Producción
+
+Este apartado conserva la evidencia anterior de staging, pruebas y rollback.
+No describe el estado actual: el rollout controlado vigente está **ACTIVE / IN
+PROGRESS** solo para Email 1, hasta diez suscriptores reales durante 72 horas,
+con el handoff, workflow y ruta de entrega activos únicamente dentro de ese
+límite monitoreado. El conteo de cero de diez es la fotografía de apertura, no
+un conteo actual. Analytics permanece habilitado solo para vistas de página
+ordinarias, `/ebook-gratis` conserva `noindex, nofollow` temporal y el PDF
+directo continúa activo e independiente.
 
 - Preparación de configuración: PASS.
 - Se creó exactamente un borrador de Email 1 dentro de exactamente una nueva
-  automatización de Producción correspondiente; ambos permanecen STAGED /
-  INACTIVE.
+  automatización de Producción correspondiente; ambos permanecían STAGED /
+  INACTIVE antes de la activación actual.
 - La automatización usa únicamente el grupo/formulario original de staging de
   Producción, cuyo grupo volvió a cero después del cleanup, y registra cero
   contactos en curso y tres registros completados no personales retenidos.
@@ -244,9 +253,11 @@ aprobación separada de la responsable.
   entregas se verificaron en buzón y el envío interveniente sin mensaje
   correspondiente permanece como evidencia histórica. La prueba final por sí
   sola conservó su límite de exactamente una entrega.
-- No se vinculó el sitio público, no se agregó ningún valor a Vercel y no se
-  realizó ningún despliegue. La entrega directa del PDF permanece independiente
-  y ACTIVE.
+- En esas ventanas históricas no se vinculó el sitio público, no se agregó
+  ningún valor a Vercel y no se realizó ningún despliegue. La activación actual
+  posterior sí tiene el handoff, workflow y ruta de Email 1 activos únicamente
+  dentro del límite monitoreado. La entrega directa del PDF permanece
+  independiente y ACTIVE.
 - Las limitaciones conocidas de feedback de consentimiento y de alcance directo
   del formulario alojado siguen registradas; este staging no las resuelve ni
   autoriza activación pública.
@@ -259,17 +270,20 @@ aprobación separada de la responsable.
   inesperado, problema de consentimiento/privacidad, fallo de entrega, queja o
   error del workflow.
 
-Este registro posterior no modifica el alcance histórico de preparación y QA
-de Preview documentado a continuación. La vinculación final de consentimiento,
-la entrega activa, el despliegue controlado, la verificación operativa de los
-controles de parada, la ejecución del rollout y la decisión go/no-go posterior
-a las 72 horas siguen sin ejecutarse. La disposición inicial de indexación está
-aprobada como `noindex, nofollow`; no es permanente ni autoriza cambios futuros
-de indexación.
+Este registro no modifica el alcance histórico de preparación y QA de Preview
+documentado a continuación. La activación actual no completa ni amplía el
+rollout: se mantiene **ACTIVE / IN PROGRESS** solo para Email 1, hasta diez
+suscriptores reales durante 72 horas. La decisión go/no-go posterior a las 72
+horas permanece pendiente. La disposición inicial de indexación está aprobada
+como `noindex, nofollow`; no es permanente ni autoriza cambios futuros de
+indexación.
 
-Rollback preparado: eliminar únicamente el nuevo borrador de Email 1 adjunto y
-la nueva automatización inactiva. No alterar el grupo/formulario ya staged ni
-ningún recurso existente de Preview o Producción.
+Rollback operativo vigente: ante diez suscriptores o correo inesperado,
+problema de consentimiento/privacidad, fallo de entrega, queja o error del
+workflow, pausar primero el workflow, retirar segundo la configuración de
+handoff de Producción y redeplegar tercero `main` fail-closed; después verificar
+rutas, políticas, robots y PDF directo, sin eliminar suscriptores reales ni su
+evidencia de consentimiento.
 
 ## Estado de staging en MailerLite Preview
 

@@ -239,9 +239,15 @@ Keep disabled initially unless:
 
 If double opt-in is later enabled, the journey, consent docs, and automation assumptions must be updated together.
 
-## Automation setup design
+## Historical automation setup design
 
-- Production status: exactly one workflow STAGED / INACTIVE, mapped only to the staged Production group/form path and the attached Email 1 draft.
+The following staged/inactive automation record is retained as pre-rollout
+evidence. It does not describe the current Production state, which is active
+only within the approved Email-1, ten-subscriber, 72-hour rollout boundary.
+
+- Production status before activation: exactly one workflow STAGED / INACTIVE,
+  mapped only to the staged Production group/form path and the attached Email 1
+  draft.
 - Production contacts in progress/completed: ZERO / THREE retained non-personal controlled-test history records.
 - Controlled affirmative submissions, group assignments, workflow entries and provider-recorded automated Production Email 1 sends across all authorized windows: FOUR / FOUR / THREE / THREE.
 - Inbox-verified automated Production Email 1 deliveries: TWO. The original and final deliveries pass received content/CTA verification; the intervening provider-recorded send remains unmatched historical evidence.
@@ -261,7 +267,10 @@ Trigger: subscriber joins group
 → Email 4
 ```
 
-Email 1 is the only staged Production message. Emails 2–4 remain documentation-only outlines. No repository merge may activate the Production automation.
+Email 1 was the only staged Production message before activation. It is now the
+only active Production message inside the controlled rollout; Emails 2–4 remain
+documentation-only outlines. No repository merge by itself may activate or
+expand the Production automation.
 
 ### Email 1 requirements
 
@@ -280,7 +289,11 @@ Email 1 is the only staged Production message. Emails 2–4 remain documentation
 - Preview subject must keep `[TEST]`.
 - Delivery continues to use a stable page link, not a PDF attachment.
 - Four-email timing outline is documented in `docs/email/PHASE_0_EMAIL_SEQUENCE.md`.
-- Preview verification is complete; Production Email 1 remains staged in the inactive Production workflow after three provider-recorded authorized controlled sends, of which two deliveries are inbox-verified. The final successful test boundary remains exactly one automated delivery.
+- Historical pre-rollout verification is complete: Production Email 1 was
+  staged in the inactive workflow after three provider-recorded authorized
+  controlled sends, of which two deliveries are inbox-verified. The final
+  successful test boundary remains exactly one automated delivery. Current
+  production use is limited to the active monitored rollout above.
 
 ### Emails 2-4
 
@@ -312,11 +325,11 @@ Email 1 is the only staged Production message. Emails 2–4 remain documentation
 - Mobile rendering checked.
 - Spam/Junk placement and unsubscribe behavior were reviewed in controlled Preview QA.
 
-### Blocking rules
+### Historical pre-rollout blocking rules
 
 - Do not modify DNS automatically from this repository.
 - Do not claim sender verification or production sending is complete unless the owner confirms it.
-- Sender-domain authentication is verified for controlled testing only; keep production activation blocked until regression and rollout gates pass.
+- Before the authorized rollout, sender-domain authentication was verified for controlled testing only and Production activation remained blocked until the regression and rollout gates passed. That pre-rollout state is historical; the current rollout remains limited and monitored.
 - Temporary account-level testing may exist, but a free personal mailbox is not an acceptable final production sender setup.
 
 ## Environment isolation
@@ -325,7 +338,7 @@ Email 1 is the only staged Production message. Emails 2–4 remain documentation
 |---|---|---|---|---|---|
 | Local | Mock or disabled | None | None | Off | No |
 | Preview | Preview TEST form | Preview group | Preview TEST automation | Non-production only or off | Controlled test addresses only |
-| Production | Staged form; website handoff fail-closed and unconfigured | Staged empty group | Staged inactive automation | Off until separate verification | No until approval and controlled test |
+| Production | Active provider-hosted handoff only within the controlled rollout | Isolated group; zero of ten at activation | Matching workflow active only within the controlled rollout | Enabled; ordinary page views only | Real subscribers only within the ten-subscriber / 72-hour boundary |
 
 Rules:
 
@@ -355,7 +368,7 @@ NEXT_PUBLIC_PRIVACY_POLICY_URL=
 - `NEXT_PUBLIC_MAILERLITE_PREVIEW_FORM_URL`
   Preview-safe provider form URL for QA only. Must never point to a Production form.
 - `NEXT_PUBLIC_MAILERLITE_PRODUCTION_FORM_URL`
-  Production-only provider form URL. Keep empty until the separate controlled activation task is authorized. Missing, blank or invalid values render no Production lead-capture surface.
+  Production-only provider form URL. It is configured only for the authorized controlled rollout; missing, blank or invalid values render no Production lead-capture surface. Removing it is the second rollback action after pausing the workflow.
 - `NEXT_PUBLIC_PRIVACY_POLICY_URL`
   Future public privacy-policy route required before any production collection.
 
