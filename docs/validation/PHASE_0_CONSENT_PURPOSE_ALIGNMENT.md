@@ -37,17 +37,24 @@ evaluation, disclosure and authorization when applicable.
 ## Legal-review boundary
 
 The professional legal-review PASS dated 2026-07-20 remains historical evidence
-for the package reviewed at that time. It does not cover the revised policy and
-handoff wording in this change. The owner decision authorizes preparation of the
-proposal; professional legal review of the revision remains **PENDING**. The
-revised wording must not be described as legally approved, certified or
-guaranteed compliant.
+for the package reviewed at that time. It does not supply the approval provenance
+for the revised policy and handoff wording in this change.
+
+For this revision, the project owner explicitly confirmed that a professional
+reviewed and approved the revised consent-policy wording in PR #81. Status:
+**OWNER-CONFIRMED PROFESSIONAL APPROVAL**. The owner's confirmation is the only
+approval provenance recorded here. No reviewer name, credentials, review date,
+certificate or supporting document is asserted or stored. The approval does not
+constitute certification or a guarantee of compliance.
 
 The effective and last-updated dates used by the public legal routes come from
-the existing server-only legal configuration. This repository-only task does
-not change those values. They must be reviewed and updated through the authorized
-legal-publication process before any later Production publication of the revised
-policy text.
+the existing server-only legal configuration and identify the version actually
+published. The current configured dates remain associated with the earlier live
+version and are structurally valid under the existing ISO-date convention. This
+unmerged PR does not change or restate them. At Production publication, the
+authorized legal-publication process must set the effective and last-updated
+dates for the revision to its actual publication/effective date; no professional
+review date is inferred from that release date.
 
 ## Operational boundary
 
@@ -97,12 +104,20 @@ Baseline and branch:
 - Local `main` and `origin/main` matched at implementation start.
 - Branch: `feat/phase-0-consent-purpose-alignment`.
 
-Validation results are recorded here before publication of the Draft PR:
+Validation results for the reviewed PR are recorded here:
 
 - Lint: PASS.
 - Build with synthetic legal values and a synthetic safe provider URL: PASS.
 - Consent wording agreement: PASS; checkbox, handoff, privacy policy,
   data-treatment policy and canonical copy record cover the same two purposes.
+- Approval provenance: PASS; owner-confirmed professional approval is recorded
+  separately from the historical 2026-07-20 PASS, without a reviewer identity,
+  credentials, review date, certificate or supporting document.
+- Publication-date convention: PASS; both canonical legal routes currently show
+  the same structurally valid ISO effective/last-updated date for the earlier
+  published version. PR #81 does not alter or relabel that date before
+  publication; the release process must apply the revision's actual effective
+  and last-updated dates when it is published.
 - Configured handoff: PASS; exactly one external CTA with
   `noopener noreferrer`, exact `/privacidad` navigation, zero native forms or
   personal-data fields and zero PDF links on `/ebook-gratis`.

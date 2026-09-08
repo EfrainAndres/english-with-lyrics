@@ -285,11 +285,14 @@ Acceptance criteria:
 Privacy publication readiness status: legal-owner architecture, prior
 internal/owner review, the 2026-07-20 professional Colombian legal review and
 provider contractual/DPA review are complete for the earlier package. The
-2026-09-08 consent-purpose wording is an owner decision awaiting professional
-legal review and does not inherit that PASS. The legal routes, `/gracias`,
-direct PDF and initial `noindex, nofollow` disposition remain unchanged in
-source. The last rollout record remains historical; current provider, workflow,
-Email 1 and monitoring status require separate verification. See:
+2026-09-08 consent-purpose wording has separate owner-confirmed professional
+approval for PR #81 and does not inherit the provenance of that earlier PASS.
+The revision remains unpublished until the authorized merge/publication process,
+including its effective and last-updated date update. The legal routes,
+`/gracias`, direct PDF and initial `noindex, nofollow` disposition remain
+unchanged in source. The last rollout record remains historical; current
+provider, workflow, Email 1 and monitoring status require separate verification.
+See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`

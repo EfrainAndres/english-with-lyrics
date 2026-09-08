@@ -12,8 +12,11 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
   existing checkbox copy, privacy destination, fail-closed behavior, Email 1
   provider content, `/gracias`, public PDF, robots directives and external
   services remain unchanged. The previous professional legal-review PASS is
-  preserved as historical evidence; the revised wording is pending professional
-  legal review, and current provider/rollout status requires separate
+  preserved as historical evidence; the revised wording has separate
+  owner-confirmed professional approval without a claimed reviewer identity,
+  review date, certificate or guarantee of compliance. It remains unpublished
+  until the authorized merge/publication process updates the effective and
+  last-updated dates. Current provider/rollout status requires separate
   verification beyond the former 72-hour window.
 
 - Approved PR #80 for merge without merging after confirming its exact nine-path scope; configured provider-handoff-only acquisition; absent, blank, malformed and unsupported fail-closed behavior without a PDF fallback; homepage/footer routing through `/ebook-gratis`; preserved `/gracias` download/open and optional actions; unchanged PDF identity, Email 1 provider body, legal policies, robots directives, provider/Vercel/Analytics configuration and active rollout; no native personal-data handling, storage, cookies, tracking, API or access-control claim; healthy routes; responsive keyboard accessibility; and passing lint, build, diff, sensitive-content, Vercel, synchronization and mergeability checks. Status: **APPROVED FOR MERGE — NOT MERGED**.

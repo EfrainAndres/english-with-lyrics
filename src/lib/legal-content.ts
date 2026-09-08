@@ -89,7 +89,7 @@ export function getPrivacyPolicySections(config: LegalConfiguration): LegalSecti
       heading: "Modelo de consentimiento",
       paragraphs: [
         "El proyecto usa una autorización previa, expresa e informada, materializada mediante una única casilla obligatoria y desmarcada por defecto, texto claro sobre la entrega de la guía y las comunicaciones educativas relacionadas, y la posibilidad de retirar la autorización en cualquier momento.",
-        "Phase 0 propone un modelo de opt-in simple para reducir fricción y dar acceso inmediato a la guía. Esta es una decisión de producto, no una conclusión jurídica; la redacción revisada requiere confirmación legal profesional antes de publicarse.",
+        "Phase 0 usa un modelo de opt-in simple para reducir fricción y dar acceso inmediato a la guía. Según confirmación expresa de la responsable, este texto fue revisado y aprobado profesionalmente; esto no constituye una certificación ni una garantía de cumplimiento.",
       ],
     },
     {
@@ -268,7 +268,7 @@ export function getDataProcessingPolicySections(config: LegalConfiguration): Leg
       heading: "Autorización",
       paragraphs: [
         "El modelo propuesto exige una única casilla de autorización obligatoria y desmarcada por defecto, texto específico que cubre conjuntamente la guía y el contenido educativo relacionado, un enlace visible a la política de privacidad, y una acción afirmativa antes del envío.",
-        "El opt-in simple es la decisión inicial de producto. La suficiencia de esta redacción revisada está pendiente de revisión legal profesional.",
+        "El opt-in simple es la decisión de producto. Según confirmación expresa de la responsable, este texto fue revisado y aprobado profesionalmente; esto no constituye una certificación ni una garantía de cumplimiento.",
       ],
     },
     {

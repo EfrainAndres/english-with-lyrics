@@ -3,8 +3,11 @@
 > Scope update — 2026-09-08: the PASS recorded below applies only to the package
 > reviewed on 2026-07-20. The owner's later decision to use one required,
 > initially unchecked authorization for both guide delivery and related
-> educational communications, together with the revised policy and handoff
-> wording, is awaiting professional legal review and must not inherit this PASS.
+> educational communications has separate approval provenance: the owner
+> explicitly confirmed that a professional reviewed and approved the revised
+> policy and handoff wording in PR #81. No reviewer identity, credentials, review
+> date, certificate or supporting document is asserted here. The earlier PASS
+> remains unchanged as historical evidence.
 
 ## Scope and confidentiality
 

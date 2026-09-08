@@ -27,7 +27,8 @@ export type LegalConfiguration = {
   privacyContactEmail: string | null;
   /**
    * @deprecated Historical compatibility flag for the earlier reviewed package.
-   * It does not attest that later wording revisions received professional review.
+   * It does not independently encode the scope or provenance of later reviews.
+   * Current review status belongs in the applicable validation record.
    */
   professionalReviewCompleted: true;
 };

@@ -420,7 +420,7 @@ export default function TratamientoDeDatosPage() {
           <h2 id="processing-review">19. Estado de la política</h2>
           <p>
             {isApproved
-              ? "Esta publicación no constituye una certificación ni una garantía de cumplimiento. La redacción actual sobre la autorización conjunta para la guía y el contenido educativo relacionado refleja una decisión de la responsable y está pendiente de revisión jurídica profesional. La página continúa excluida de indexación."
+              ? "Según confirmación expresa de la responsable, la redacción actual sobre la autorización conjunta para la guía y el contenido educativo relacionado fue revisada y aprobada profesionalmente. Esta publicación no constituye una certificación ni una garantía de cumplimiento. La página continúa excluida de indexación."
               : "El contenido está pendiente de aprobación final de la responsable, revisión interna estructurada y revisión jurídica profesional en Colombia. No se presenta como política final ni como certificación de cumplimiento, y permanece excluido de indexación."}
           </p>
         </section>
