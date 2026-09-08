@@ -101,5 +101,32 @@ Route and artifact smoke:
 - Changed-path sensitive-content scan: PASS; no private-key, credential, API-key, password, secret, or token pattern found.
 - Application scan: PASS; no native form/input, local/session storage, cookie, fetch/XHR/beacon, server action, API route, or tracking-parameter addition found.
 
-Vercel Preview checks are recorded after the Draft PR creates its branch-scoped
-deployment. No manual deployment or canonical Production operation is performed.
+Vercel Preview:
+
+- Draft PR: `https://github.com/EfrainAndres/english-with-lyrics/pull/80`.
+- GitHub Vercel check and Vercel Preview Comments check: SUCCESS.
+- Branch-scoped deployment `dpl_4qkoRJ47c2ynU1UN4AKNSahTbHkQ`: target
+  `preview`, status `Ready`.
+- Deployment URL:
+  `https://english-with-lyrics-13r85t6c3-efrain-vergara-s-projects.vercel.app`.
+- Deployment protection redirected unauthenticated command-line requests to the
+  Vercel login page. The already authenticated review browser reached the branch
+  deployment directly; no protection barrier was bypassed.
+- Real configured `/ebook-gratis` at exact 390 px: one provider-hosted MailerLite
+  CTA with safe external-link attributes, approved consent copy, exact privacy
+  route, zero PDF links, zero native forms/fields, retained `noindex, nofollow`,
+  and no horizontal overflow.
+- Branch Preview `/` at 390 px: all four ebook links route to `/ebook-gratis`,
+  zero PDF links, no horizontal overflow, and no route-specific robots change.
+- Branch Preview `/gracias?source=ebook` at 390 px: two PDF actions, Email 1 copy,
+  survey and first-group actions, retained `noindex, nofollow`, and no horizontal
+  overflow.
+- Branch Preview `/privacidad` and `/tratamiento-de-datos` at 390 px: healthy,
+  retained `noindex, nofollow`, and no horizontal overflow.
+- Branch Preview direct PDF URL: loaded in the browser with title `Aprende inglés
+  con 3 canciones — Sing Pronunce Repeat`.
+- Branch Preview at 1440 px: `/ebook-gratis` has one provider CTA, zero PDF links,
+  no horizontal overflow, and a visible 2 px solid keyboard-focus outline.
+- Provider form submissions, subscriber changes, email sends, workflow actions,
+  configuration changes, manual deployments, and canonical Production operations:
+  ZERO.
