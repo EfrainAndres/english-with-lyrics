@@ -123,4 +123,5 @@ Validation results are recorded here before publication of the Draft PR:
 - `git diff --check`: PASS.
 - Changed-path sensitive-value scan: PASS; no new secret, credential, token,
   private key, provider identifier or personal owner value.
-- Vercel Preview checks: PENDING.
+- Draft PR #81 Vercel and Vercel Preview Comments checks: PASS. No Preview URL,
+  deployment identifier or provider configuration value is retained here.
