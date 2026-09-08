@@ -6,6 +6,17 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Published and verified the professionally reviewed PR #81 consent-purpose
+  revision on canonical Production. The merged source commit was deployed,
+  `LEGAL_EFFECTIVE_DATE` was preserved as the policy's original effective date,
+  only Production `LEGAL_LAST_UPDATED_DATE` was set to the actual 2026-09-08
+  publication date, and the same verified merge commit was rebuilt. Canonical
+  legal copy, configured handoff, desktop/390 px containment, route health,
+  robots and PDF identity pass. The public MailerLite form remains reachable with
+  the exact combined checkbox but retains a stale `INACTIVE` title; authenticated
+  workflow, queue and aggregate status could not be read, and no documented
+  closure or later authorization makes the historical 72-hour rollout current.
+
 - Aligned the proposed public privacy, data-treatment and MailerLite-handoff
   wording with the owner's decision to use one required, initially unchecked
   authorization for guide delivery and related educational communications. The
