@@ -150,4 +150,5 @@ does not approve broader public promotion.
 - Documentation scope: PASS; no source, PDF, robots or dependency file changed.
 - Sensitive-value review: PASS; the documentation diff contains no provider or
   deployment identifier, private endpoint, credential, secret or personal data.
-- Draft-PR Preview checks: pending until this record is pushed.
+- Draft PR #82 Vercel and Vercel Preview Comments checks: PASS. No Preview URL
+  or deployment identifier is retained in this record.
