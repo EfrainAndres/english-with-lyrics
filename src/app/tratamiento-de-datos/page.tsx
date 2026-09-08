@@ -50,8 +50,9 @@ function PendingPolicyNotice() {
         no se publican datos personales de contacto.
       </p>
       <p className="mt-4 leading-7 text-zinc-300">
-        La captura de leads, el Email 1 y la automatización de correo de
-        Producción permanecen inactivos.
+        Cuando el formulario de la guía esté disponible, el registro y la
+        autorización se gestionarán en el formulario externo de MailerLite. Este
+        sitio no almacena directamente los datos ingresados allí.
       </p>
     </PolicyShell>
   );
@@ -95,7 +96,7 @@ export default function TratamientoDeDatosPage() {
       ) : null}
       <p className="mt-6 leading-7 text-zinc-300">
         {isApproved
-          ? "Este documento define el flujo operativo de tratamiento de datos para Sing Pronunce Repeat, también identificado públicamente como English with Lyrics. Las revisiones de la responsable, interna estructurada, jurídica profesional en Colombia y contractual y de DPA de proveedores están completas y no solicitaron cambios sustantivos. Su publicación no constituye una certificación ni una garantía de cumplimiento, y no activa la captura de leads, el Email 1 ni la automatización de Producción."
+          ? "Este documento define el flujo operativo de tratamiento de datos para Sing Pronunce Repeat, también identificado públicamente como English with Lyrics. Su publicación no constituye una certificación ni una garantía de cumplimiento, y no activa por sí sola el formulario ni el envío de correos."
           : "Este documento define un flujo operativo preliminar para Sing Pronunce Repeat, también identificado públicamente como English with Lyrics. Sus compromisos están sujetos a revisión jurídica profesional y no activan la captura de leads ni el correo de Producción."}
       </p>
 
@@ -105,9 +106,9 @@ export default function TratamientoDeDatosPage() {
           <p>
             La política cubre los datos tratados para entregar recursos
             educativos, administrar consentimientos y suscripciones, atender
-            solicitudes de privacidad y, cuando exista aprobación, enviar
-            comunicaciones relacionadas con Sing Pronunce Repeat y el método
-            Escríbelo como suena.
+            solicitudes de privacidad y enviar comunicaciones educativas
+            relacionadas con Sing Pronunce Repeat y el método Escríbelo como
+            suena conforme a la autorización descrita en esta política.
           </p>
         </section>
 
@@ -202,22 +203,28 @@ export default function TratamientoDeDatosPage() {
         <section aria-labelledby="processing-channels">
           <h2 id="processing-channels">6. Canales de recolección</h2>
           <p>
-            Los canales previstos son formularios externos de Tally, futuros
-            formularios de suscripción operados con MailerLite, comunicaciones
-            recibidas en el buzón profesional y registros técnicos generados por
-            la aplicación y los proveedores. La captura de Producción permanece
-            inactiva.
+            Los canales son los formularios externos opcionales de Tally, el
+            formulario de suscripción operado por MailerLite cuando esté
+            disponible, las comunicaciones recibidas en el buzón profesional y
+            los registros técnicos generados por la aplicación y los proveedores.
           </p>
         </section>
 
         <section aria-labelledby="processing-purposes">
           <h2 id="processing-purposes">7. Finalidades del tratamiento</h2>
           <p>
-            Entregar el recurso solicitado; gestionar autorizaciones,
-            suscripciones, bajas y solicitudes; mantener seguridad y continuidad
-            operativa; y, con autorización específica, enviar contenido
-            educativo, ejercicios, noticias, encuestas e invitaciones relacionadas
-            con Sing Pronunce Repeat.
+            La única casilla del formulario autoriza conjuntamente entregar la
+            guía gratuita solicitada y enviar contenido educativo relacionado con
+            Sing Pronunce Repeat, como prácticas, ejercicios y novedades del
+            proyecto. También permite gestionar la suscripción, las bajas y las
+            solicitudes necesarias para prestar el servicio. En este momento, el
+            registro da lugar únicamente al primer correo.
+          </p>
+          <p>
+            Esta autorización no cubre finalidades ajenas a la guía o al contenido
+            educativo relacionado. Cualquier finalidad nueva o no relacionada
+            requerirá evaluación, un aviso específico y, cuando corresponda, otra
+            autorización.
           </p>
         </section>
 
@@ -254,7 +261,7 @@ export default function TratamientoDeDatosPage() {
             necesaria, conservar evidencia mínima, atender derechos, procurar
             exactitud y seguridad, limitar accesos y exigir a los proveedores las
             salvaguardas que correspondan. {isApproved
-              ? "La revisión jurídica profesional de estos deberes está completa y no solicitó cambios."
+              ? "Estos deberes se aplican a los servicios utilizados para las finalidades informadas."
               : "La definición jurídica final permanece pendiente de revisión profesional."}
           </p>
         </section>
@@ -262,10 +269,14 @@ export default function TratamientoDeDatosPage() {
         <section aria-labelledby="processing-consent">
           <h2 id="processing-consent">10. Autorización y evidencia</h2>
           <p>
-            La autorización deberá ser previa, expresa e informada cuando resulte
-            aplicable. El sistema deberá conservar evidencia mínima de la versión
-            del texto aceptado, la fecha, el canal y el estado de suscripción. La
-            vinculación final del consentimiento de Producción está pendiente.
+            La autorización debe ser previa, expresa e informada. Se obtiene con
+            una única casilla obligatoria y desmarcada por defecto que cubre la
+            entrega de la guía gratuita y las comunicaciones educativas
+            relacionadas. El sistema debe conservar evidencia mínima de la versión
+            del texto aceptado, la fecha, el canal y el estado de suscripción.
+            Todo correo enviado bajo esta autorización debe permitir cancelar la
+            suscripción; la autorización también puede retirarse mediante el
+            canal de privacidad.
           </p>
         </section>
 
@@ -305,7 +316,7 @@ export default function TratamientoDeDatosPage() {
           </p>
           <p>
             {isApproved
-              ? "Estas reglas formaron parte de la revisión jurídica profesional completada y no recibieron solicitudes de cambio."
+              ? "Estas reglas definen el procedimiento aplicable para atender las solicitudes."
               : "Estas reglas son un borrador operativo pendiente de revisión jurídica profesional."}
           </p>
         </section>
@@ -334,13 +345,12 @@ export default function TratamientoDeDatosPage() {
             <li><strong>Vercel:</strong> alojamiento, páginas, PDF y registros técnicos.</li>
             <li><strong>Hostinger:</strong> dominio, DNS, buzones y comunicaciones de privacidad.</li>
             <li><strong>Tally:</strong> encuestas y formularios externos voluntarios.</li>
-            <li><strong>MailerLite:</strong> suscriptores, consentimiento, grupos, automatización, entrega, aperturas, clics y bajas cuando Producción sea activada.</li>
+            <li><strong>MailerLite:</strong> suscriptores, consentimiento, grupos, automatización, entrega, aperturas, clics y bajas cuando el formulario y el envío estén disponibles.</li>
           </ul>
           <p>
             Algunos servicios pueden implicar procesamiento fuera de Colombia. {isApproved
-              ? "La revisión contractual, de DPA y de transferencia o transmisión para los proveedores está completa y no solicitó cambios."
-              : "La clasificación contractual y de transferencia o transmisión para cada proveedor está pendiente de revisión profesional."}{" "}
-            MailerLite no captura leads ni envía correos de Producción en esta fase.
+              ? "MailerLite presta estas funciones únicamente cuando el formulario y el envío están disponibles."
+              : "La clasificación contractual y de transferencia o transmisión para cada proveedor está pendiente de revisión profesional."}
           </p>
         </section>
 
@@ -410,7 +420,7 @@ export default function TratamientoDeDatosPage() {
           <h2 id="processing-review">19. Estado de la política</h2>
           <p>
             {isApproved
-              ? "La revisión previa de la responsable, la revisión interna estructurada, la revisión jurídica profesional en Colombia y la revisión contractual y de DPA de proveedores están completas; no se solicitaron cambios sustantivos. La publicación no constituye una certificación ni una garantía de cumplimiento. La captura de leads, el Email 1 y la automatización de Producción permanecen inactivos, y la página continúa excluida de indexación."
+              ? "Esta publicación no constituye una certificación ni una garantía de cumplimiento. La redacción actual sobre la autorización conjunta para la guía y el contenido educativo relacionado refleja una decisión de la responsable y está pendiente de revisión jurídica profesional. La página continúa excluida de indexación."
               : "El contenido está pendiente de aprobación final de la responsable, revisión interna estructurada y revisión jurídica profesional en Colombia. No se presenta como política final ni como certificación de cumplimiento, y permanece excluido de indexación."}
           </p>
         </section>

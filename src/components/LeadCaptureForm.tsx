@@ -4,9 +4,9 @@ import { privacyPath } from "@/lib/links";
 const approvedConsentCopy =
   "Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronunce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.";
 const previewProviderCopy =
-  "Este enlace abre el formulario verificado de MailerLite para Preview. MailerLite mantiene el correo, el nombre opcional, el consentimiento, la validación y la automatización de prueba.";
+  "Este enlace abre el formulario verificado de MailerLite para Preview. MailerLite mantiene el correo, el nombre opcional, la autorización, la validación y la entrega del primer correo de prueba.";
 const productionProviderCopy =
-  "Este acceso abre el formulario verificado alojado por MailerLite. MailerLite mantiene el correo, el nombre opcional, el consentimiento, la validación y el flujo de bienvenida.";
+  "Este acceso abre el formulario alojado por MailerLite. MailerLite gestiona el correo, el nombre opcional, la autorización, la validación del registro y la entrega del primer correo.";
 
 export function LeadCaptureForm() {
   const config = getLeadFormConfig();
@@ -89,16 +89,18 @@ export function LeadCaptureForm() {
                   id="provider-hosted-consent-details"
                 >
                   <p>
-                    MailerLite mostrará una casilla obligatoria y desmarcada por
-                    defecto con este texto aprobado:
+                    MailerLite mostrará una única casilla obligatoria y desmarcada
+                    por defecto con este texto:
                   </p>
                   <blockquote className="border-l-2 border-purple pl-4 text-paper">
                     {approvedConsentCopy}
                   </blockquote>
                   <p>
-                    Usaremos tu correo para enviarte la guía, prácticas educativas
-                    y novedades relacionadas con el proyecto. No vendemos tus datos
-                    ni los compartimos con anunciantes. {" "}
+                    Al marcarla, autorizas que usemos tu correo para entregarte la
+                    guía y enviarte prácticas educativas y novedades relacionadas
+                    con el proyecto. En este momento, el recorrido incluye solo el
+                    primer correo. No vendemos tus datos ni los compartimos con
+                    anunciantes. {" "}
                     <a
                       className="font-bold text-cream underline decoration-cream/50 underline-offset-4 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
                       href={privacyPath}
@@ -133,9 +135,11 @@ export function LeadCaptureForm() {
             )}
             {!isHandoffEnabled ? (
               <p className="mt-4 break-words text-sm leading-7 text-soft">
-                El consentimiento explícito se gestionará únicamente dentro del
-                formulario alojado por MailerLite; este sitio no lo recopila ni lo
-                registra. {" "}
+                Cuando el formulario esté disponible, MailerLite gestionará una
+                única autorización para entregarte la guía y enviarte contenido
+                educativo relacionado. La casilla será obligatoria y estará
+                desmarcada por defecto; este sitio no recopila ni registra esa
+                autorización. {" "}
                 <a
                   className="font-bold text-cream underline decoration-cream/50 underline-offset-4 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
                   href={privacyPath}

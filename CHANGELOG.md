@@ -6,6 +6,16 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Aligned the proposed public privacy, data-treatment and MailerLite-handoff
+  wording with the owner's decision to use one required, initially unchecked
+  authorization for guide delivery and related educational communications. The
+  existing checkbox copy, privacy destination, fail-closed behavior, Email 1
+  provider content, `/gracias`, public PDF, robots directives and external
+  services remain unchanged. The previous professional legal-review PASS is
+  preserved as historical evidence; the revised wording is pending professional
+  legal review, and current provider/rollout status requires separate
+  verification beyond the former 72-hour window.
+
 - Approved PR #80 for merge without merging after confirming its exact nine-path scope; configured provider-handoff-only acquisition; absent, blank, malformed and unsupported fail-closed behavior without a PDF fallback; homepage/footer routing through `/ebook-gratis`; preserved `/gracias` download/open and optional actions; unchanged PDF identity, Email 1 provider body, legal policies, robots directives, provider/Vercel/Analytics configuration and active rollout; no native personal-data handling, storage, cookies, tracking, API or access-control claim; healthy routes; responsive keyboard accessibility; and passing lint, build, diff, sensitive-content, Vercel, synchronization and mergeability checks. Status: **APPROVED FOR MERGE — NOT MERGED**.
 
 - Implemented the approved soft-gated ebook acquisition journey on `feat/phase-0-ebook-soft-gated-download`: removed visible direct-PDF links from `/ebook-gratis` and the shared footer, kept homepage acquisition links routed through `/ebook-gratis`, made the existing provider-hosted handoff the only visible acquisition action, added a truthful fail-closed unavailable state with no PDF fallback, and preserved immediate PDF download/open access plus optional next actions on `/gracias`. The public PDF artifact, provider resources/content, Vercel configuration, workflow, Email 1 delivery, Analytics, legal policies, robots directives, rollout limits and canonical Production remain unchanged.

@@ -25,7 +25,10 @@ export type LegalConfiguration = {
   responsiblePartyCity: string | null;
   /** @deprecated Compatibility alias for the previous legal-content API. */
   privacyContactEmail: string | null;
-  /** @deprecated Compatibility flag; publication remains status-controlled. */
+  /**
+   * @deprecated Historical compatibility flag for the earlier reviewed package.
+   * It does not attest that later wording revisions received professional review.
+   */
   professionalReviewCompleted: true;
 };
 

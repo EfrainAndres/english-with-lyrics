@@ -51,9 +51,9 @@ function PendingPrivacyNotice() {
         una política definitiva.
       </p>
       <p className="mt-4 leading-7 text-zinc-300">
-        La entrega directa del ebook continúa disponible. La captura de leads,
-        el Email 1 y la automatización de correo de Producción permanecen
-        inactivos.
+        Cuando el formulario de la guía esté disponible, el registro y la
+        autorización se gestionarán en el formulario externo de MailerLite. Este
+        sitio no almacena directamente los datos ingresados allí.
       </p>
     </LegalPageShell>
   );
@@ -101,7 +101,7 @@ export default function PrivacidadPage() {
         relacionados con Sing Pronunce Repeat, también identificado públicamente
         como English with Lyrics, y con el método Escríbelo como suena. No
         constituye una certificación de cumplimiento ni activa la captura de
-        datos o el envío de correos en Producción.
+        datos ni el envío de correos por sí sola.
       </p>
 
       <div className="mt-10 space-y-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_li]:leading-7 [&_p]:mt-3 [&_p]:leading-7 [&_p]:text-zinc-300 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_ul]:text-zinc-300">
@@ -161,14 +161,25 @@ export default function PrivacidadPage() {
         <section aria-labelledby="privacy-purposes">
           <h2 id="privacy-purposes">3. Finalidades</h2>
           <p>
-            La finalidad inmediata es entregar el recurso educativo solicitado.
-            Cuando exista una autorización separada, también podrán enviarse
-            contenidos educativos, ejercicios, novedades, encuestas e
-            invitaciones relacionadas con Sing Pronunce Repeat.
+            Al marcar la única casilla del formulario, la persona autoriza el uso
+            de su correo para entregar la guía gratuita solicitada y enviar
+            comunicaciones educativas relacionadas con Sing Pronunce Repeat,
+            como prácticas, ejercicios y novedades del proyecto. La casilla es
+            obligatoria para completar el registro y permanece desmarcada hasta
+            que la persona la selecciona.
           </p>
           <p>
-            La captura de leads, el Email 1 y la automatización de correo de
-            Producción no están activos en esta fase.
+            En este momento, el registro da lugar únicamente al primer correo. La
+            autorización no cubre finalidades ajenas a la guía o al contenido
+            educativo relacionado. Cualquier finalidad nueva o no relacionada
+            requerirá evaluación, un aviso específico y, cuando corresponda, otra
+            autorización.
+          </p>
+          <p>
+            Todo correo enviado bajo esta autorización incluirá una opción para
+            cancelar la suscripción. La persona también puede retirar su
+            autorización o ejercer los derechos indicados en esta política
+            mediante el canal de privacidad.
           </p>
         </section>
 
@@ -203,10 +214,8 @@ export default function PrivacidadPage() {
             será proporcional; no se exigirá por defecto una copia del documento
             de identidad. {isApproved ? (
               <>
-                El procedimiento operativo y sus plazos formaron parte de la
-                revisión jurídica profesional completada. La prueba operativa de
-                los derechos permanece pendiente antes de activar la captura de
-                leads en Producción.
+                El procedimiento operativo y sus plazos se describen en la
+                Política de tratamiento de datos personales.
               </>
             ) : (
               <>
@@ -295,12 +304,12 @@ export default function PrivacidadPage() {
             <li>
               <strong>MailerLite:</strong> gestión de suscriptores,
               consentimiento, grupos, automatización, entrega, aperturas, clics y
-              bajas cuando el flujo de Producción sea aprobado y activado.
+              bajas cuando el formulario y el envío estén disponibles.
             </li>
           </ul>
           <p>
             {isApproved
-              ? "La revisión jurídica, contractual y de DPA de las relaciones con proveedores está completa y no solicitó cambios. La validación operativa de los proveedores permanece pendiente antes de activar el flujo de Producción."
+              ? "MailerLite presta estas funciones únicamente cuando el formulario y el envío están disponibles."
               : "La clasificación jurídica y contractual definitiva de cada relación con proveedores continúa pendiente de revisión profesional."}
           </p>
         </section>
@@ -315,7 +324,7 @@ export default function PrivacidadPage() {
           </p>
           <p>
             {isApproved
-              ? "La revisión de la responsable, la revisión interna estructurada, la revisión jurídica profesional en Colombia y la revisión contractual y de DPA de proveedores están completas; no se solicitaron cambios sustantivos. La publicación no constituye una certificación ni una garantía de cumplimiento. La captura de leads, el Email 1 y la automatización de Producción permanecen inactivos. La página continúa excluida de indexación."
+              ? "Esta publicación no constituye una certificación ni una garantía de cumplimiento. La redacción actual sobre la autorización conjunta para la guía y el contenido educativo relacionado refleja una decisión de la responsable y está pendiente de revisión jurídica profesional. La página continúa excluida de indexación."
               : "Este texto permanece pendiente de aprobación final de la responsable, revisión interna estructurada y revisión jurídica profesional en Colombia. La página continúa excluida de indexación."}
           </p>
         </section>
