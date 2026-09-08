@@ -75,7 +75,8 @@ Before real COP payments:
 ## Phase 0 Privacy And Consent
 
 - Production lead capture requires explicit authorization for the stated delivery and educational-communication purposes.
-- The consent checkbox must be required, specific, and unchecked by default.
+- One consent checkbox covers guide delivery and related educational communications; it must be required, specific, and unchecked by default.
+- Unrelated purposes require their own evaluation, disclosure, and authorization when applicable.
 - An approved public privacy policy must be available before production capture begins.
 - Collect only the minimum needed for the first conversion: email, optional first name, consent evidence, and limited non-sensitive attribution.
 - Complete due diligence for the selected email provider, including current terms, DPA, consent evidence, unsubscribe, deletion, processing locations, and sub-processors.

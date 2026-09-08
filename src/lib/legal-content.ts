@@ -47,14 +47,14 @@ export function getPrivacyPolicySections(config: LegalConfiguration): LegalSecti
       ],
     },
     {
-      heading: "Datos actualmente tratados",
+      heading: "Tratamiento mediante proveedores",
       paragraphs: [
-        "Sing Pronunce Repeat / English with Lyrics todavía no recolecta datos de registro en Producción. La única captura activa ocurre en un ambiente de Preview controlado, usado exclusivamente para pruebas internas del proveedor de correo.",
+        "Cuando el formulario externo está disponible, MailerLite gestiona los datos de registro y la evidencia de autorización. La disponibilidad operativa del proveedor se verifica por separado de esta política.",
       ],
       list: [
         "Aplicación Next.js: sin base de datos propia de leads, sin almacenamiento del lado de la aplicación de los envíos del formulario, sin autenticación y sin creación de cuentas.",
-        "MailerLite en Preview controlado: correo requerido, nombre opcional, consentimiento explícito requerido, opt-in simple, grupo y automatización exclusivos de Preview, y baja disponible.",
-        "Producción: la captura de leads permanece desactivada, la automatización de correo permanece inactiva y la entrega directa del ebook continúa disponible.",
+        "MailerLite: correo requerido, nombre opcional, consentimiento explícito requerido, opt-in simple y baja disponible cuando el formulario y el envío están operativos.",
+        "La entrega directa del ebook en /gracias y la URL pública estable del PDF permanecen independientes del correo.",
       ],
     },
     {
@@ -80,15 +80,16 @@ export function getPrivacyPolicySections(config: LegalConfiguration): LegalSecti
     {
       heading: "Finalidades",
       paragraphs: [
-        "Cuando el embudo de registro esté activo, los datos se tratarían para: procesar la solicitud del ebook, entregar la guía y el correo de confirmación, atender solicitudes de soporte, enviar comunicaciones educativas relacionadas con el método, invitar a encuestas opcionales, y analizar preferencias de manera agregada para mejorar el contenido.",
+        "Una única autorización afirmativa cubre procesar la solicitud, entregar la guía y enviar comunicaciones educativas relacionadas con el método. La implementación documentada actualmente contempla únicamente el primer correo.",
+        "Las encuestas y otros formularios opcionales conservan sus propios avisos y no quedan incluidos automáticamente en esta autorización.",
         "No se usa ni se usará una finalidad abierta como \"cualquier propósito comercial\". Una finalidad nueva o materialmente distinta requeriría evaluación, aviso actualizado y, cuando corresponda, una nueva autorización.",
       ],
     },
     {
       heading: "Modelo de consentimiento",
       paragraphs: [
-        "El proyecto propone apoyarse en una autorización previa, expresa e informada, materializada mediante una casilla obligatoria y desmarcada por defecto, texto claro sobre la entrega de la guía y las comunicaciones educativas, y la posibilidad de retirar la autorización en cualquier momento.",
-        "Phase 0 propone un modelo de opt-in simple para reducir fricción y dar acceso inmediato a la guía. Esta es una decisión de producto, no una conclusión jurídica; la base aplicable y la suficiencia de la evidencia de consentimiento requieren confirmación legal profesional antes de activar Producción.",
+        "El proyecto usa una autorización previa, expresa e informada, materializada mediante una única casilla obligatoria y desmarcada por defecto, texto claro sobre la entrega de la guía y las comunicaciones educativas relacionadas, y la posibilidad de retirar la autorización en cualquier momento.",
+        "Phase 0 usa un modelo de opt-in simple para reducir fricción y dar acceso inmediato a la guía. Según confirmación expresa de la responsable, este texto fue revisado y aprobado profesionalmente; esto no constituye una certificación ni una garantía de cumplimiento.",
       ],
     },
     {
@@ -260,14 +261,14 @@ export function getDataProcessingPolicySections(config: LegalConfiguration): Leg
     {
       heading: "Finalidades",
       paragraphs: [
-        "Entrega y soporte del ebook; comunicaciones educativas relacionadas con el método; investigación de producto en forma agregada; y analítica operativa para medir el funcionamiento del embudo. Una finalidad nueva requeriría evaluación y, cuando corresponda, aviso o autorización adicional.",
+        "La única casilla autoriza la entrega y soporte del ebook y las comunicaciones educativas relacionadas con el método. La investigación de producto mediante formularios opcionales y la analítica operativa conservan sus avisos y bases aplicables; no quedan incluidas automáticamente en esa autorización. Una finalidad nueva requeriría evaluación y, cuando corresponda, aviso o autorización adicional.",
       ],
     },
     {
       heading: "Autorización",
       paragraphs: [
-        "El modelo propuesto exige una casilla de autorización obligatoria y desmarcada por defecto, texto específico sobre la guía y el contenido educativo relacionado, un enlace visible a la política de privacidad, y una acción afirmativa antes del envío.",
-        "El opt-in simple es la decisión inicial de producto. La suficiencia de esta forma de registro debe verificarse con el proveedor seleccionado y con revisión legal profesional antes de Producción.",
+        "El modelo propuesto exige una única casilla de autorización obligatoria y desmarcada por defecto, texto específico que cubre conjuntamente la guía y el contenido educativo relacionado, un enlace visible a la política de privacidad, y una acción afirmativa antes del envío.",
+        "El opt-in simple es la decisión de producto. Según confirmación expresa de la responsable, este texto fue revisado y aprobado profesionalmente; esto no constituye una certificación ni una garantía de cumplimiento.",
       ],
     },
     {

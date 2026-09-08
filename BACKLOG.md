@@ -1,20 +1,33 @@
 # English with Lyrics Backlog
 
-> Phase 0 update: the Production Email 1-only controlled rollout retry is **ACTIVE / IN PROGRESS** with zero of ten real subscribers at activation. The provider-hosted handoff, workflow, Email 1 delivery path, and Analytics are active only within the approved 72-hour boundary; direct PDF delivery remains active and independent, and `noindex, nofollow` remains the approved initial disposition without authorizing any future indexing change.
+> Phase 0 status boundary: the last recorded Production Email 1-only controlled
+> rollout checkpoint was **ACTIVE / IN PROGRESS** with zero of ten real
+> subscribers at activation. Current provider and rollout state requires separate
+> verification; this repository-only task does not assume the authorized 72-hour
+> window remains active. Direct PDF delivery and the retained `noindex, nofollow`
+> decision are unchanged by this consent-purpose alignment.
 
 > Controlled-rollout indexing state: `/ebook-gratis` retains temporary route-scoped `noindex, nofollow` metadata for the approved 10-subscriber / 72-hour Production rollout. This does not change global indexing, the homepage, future SEO strategy, or any other route.
 
 > Historical emergency rollback record: an earlier authorized Production activation reached active workflow, Production-only handoff configuration and a Ready deployment, but the mandatory canonical no-submit smoke was blocked by the review browser's access policy. That rollout was not declared started. The workflow was paused first, the Production handoff configuration was removed second, and verified merged `main` was redeployed third. This record remains historical evidence and is superseded for current-state reporting by the passing rollout retry below.
 
-> Controlled Production rollout retry: **ACTIVE / IN PROGRESS**. The retry started from merged `main` after PR #76. Preflight confirmed an empty isolated Production group, inactive workflow with zero queued/in-progress and three retained completed records, unchanged Email 1 and form mapping/content, fail-closed canonical Production, independent PDF/legal routes, retained `noindex, nofollow`, and enabled Analytics. The workflow was activated first, the existing handoff configuration was added only to Production second, and merged `main` was redeployed third. The mandatory canonical no-submit smoke passed at desktop and 390 px with exactly one safe external handoff, the approved disclosure and exact `/privacidad` link, no native personal-data form or fields, healthy routes/PDF, and unchanged robots behavior. The opening count is zero of ten real subscribers; no test contact, manual/test/campaign/transactional email, or provider resource was created.
+> Historical controlled Production rollout retry: **ACTIVE / IN PROGRESS AT THE
+> RECORDED CHECKPOINT**. The retry started from merged `main` after PR #76. Its
+> preflight, activation order, no-submit smoke and opening zero-of-ten snapshot
+> remain historical evidence; they do not establish current provider state after
+> the authorized window.
 
-> Consent-linking state: the provider-hosted handoff is publicly active only for the approved controlled rollout and remains free of website-side personal-data collection. It must be removed immediately with the documented rollback if the operational cap or any stop condition is reached.
+> Consent-linking state: the website supports a provider-hosted handoff without
+> website-side personal-data collection. Whether that handoff and its provider
+> workflow remain operational requires separate verification. The documented
+> rollback applies whenever an authorized active window reaches its cap or a stop
+> condition.
 
 > Preview consent staging: an isolated provider-hosted group/form and branch-restricted Vercel Preview handoff are configured and validated without submitting the form, creating a subscriber, or sending email. Production and Development remain unchanged.
 
 > Controlled Preview consent QA: functional consent blocking, invalid-email validation, one affirmative submission, privacy-safe duplicate handling, zero email/automation side effects, GDPR Forget cleanup, Production absence, and direct-PDF independence are **PASS**. MailerLite's missing-consent feedback has no visible or programmatically associated error message; the project owner accepts this provider-native limitation for the current Preview staging path only, and it remains a tracked follow-up. Provider-failure simulation is **UNVERIFIED**. This decision does not authorize Production activation.
 
-> Production consent state: exactly one isolated MailerLite Production group and one matching provider-hosted form are **ACTIVE / CONTROLLED ROLLOUT** through the Production-only website handoff. The group was empty at activation, single opt-in remains configured, and retained non-personal controlled history is unchanged. The owner accepts the direct-provider-reachability, missing-consent feedback accessibility, and deliverability risks only for Email 1, up to ten subscribers, and 72 hours under active monitoring. This does not make any limitation fixed, compliant, unrestricted, or permanent. Direct PDF delivery remains **ACTIVE / INDEPENDENT**.
+> Historical Production consent checkpoint: exactly one isolated MailerLite Production group and one matching provider-hosted form were recorded as **ACTIVE / CONTROLLED ROLLOUT** through the Production-only website handoff. The group was empty at activation, single opt-in was configured, and retained non-personal controlled history was unchanged. The owner accepted the direct-provider-reachability, missing-consent feedback accessibility, and deliverability risks only for Email 1, up to ten subscribers, and 72 hours under active monitoring. That window is not presumed to remain open: current provider and workflow status require separate verification. This does not make any limitation fixed, compliant, unrestricted, or permanent. Direct PDF delivery remains **ACTIVE / INDEPENDENT**.
 
 > Historical checkpoint only: the following controlled-test paragraph records the pre-rollout state and is superseded for current status by the active retry above.
 
@@ -269,11 +282,22 @@ Acceptance criteria:
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.
 
-Privacy publication readiness status: legal-owner architecture, internal/owner draft review, professional Colombian legal review and provider contractual/DPA review are complete; no substantive changes were requested. The approved policies, legal routes, `/gracias`, direct PDF, and initial `noindex, nofollow` disposition remain active and verified without authorizing future indexing changes. Exactly one isolated Production group/form, Email 1, and matching automation are ACTIVE only for the controlled rollout retry; the opening group count and workflow in-progress count were zero, with three retained completed history records and three historical automated sends. The mandatory canonical no-submit smoke, Analytics verification, and stop-control availability pass. Active monitoring of the ten-subscriber/72-hour boundary and the post-rollout go/no-go remain pending. Direct PDF delivery remains ACTIVE and independent. See:
+Privacy publication readiness status: legal-owner architecture, prior
+internal/owner review, the 2026-07-20 professional Colombian legal review and
+provider contractual/DPA review are complete for the earlier package. The
+2026-09-08 consent-purpose wording has separate owner-confirmed professional
+approval for PR #81 and does not inherit the provenance of that earlier PASS.
+The revision remains unpublished until the authorized merge/publication process,
+including its effective and last-updated date update. The legal routes,
+`/gracias`, direct PDF and initial `noindex, nofollow` disposition remain
+unchanged in source. The last rollout record remains historical; current
+provider, workflow, Email 1 and monitoring status require separate verification.
+See:
 
 - `docs/legal/PHASE_0_PRIVACY_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_DATA_PROCESSING_POLICY_DRAFT.md`
 - `docs/legal/PHASE_0_CONSENT_COPY.md`
+- `docs/validation/PHASE_0_CONSENT_PURPOSE_ALIGNMENT.md`
 - `docs/legal/PHASE_0_DATA_INVENTORY_AND_RETENTION.md`
 - `docs/legal/PHASE_0_PRIVACY_IMPLEMENTATION_CHECKLIST.md`
 - `docs/architecture/PHASE_0_PRIVACY_DECISIONS.md`

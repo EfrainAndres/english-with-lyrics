@@ -1,5 +1,14 @@
 # Phase 0 Legal-Owner Configuration Validation
 
+> Scope update — 2026-09-08: the legal-publication PASS below is historical for
+> the wording reviewed and published before the current consent-purpose
+> alignment. The owner explicitly confirmed that a professional reviewed and
+> approved the revised wording in PR #81; no reviewer identity, credentials,
+> review date, certificate or supporting document is asserted. Provider and
+> rollout status were not reverified in this repository-only task; active/inactive
+> entries below remain dated evidence, not a current-state assertion beyond their
+> authorized window.
+
 > Rights-request provider operations QA: **PASS** for one isolated Preview-only MailerLite test contact. Provider consultation, transient JSON export without retention, non-personal correction, manual unsubscribe, GDPR Forget and post-operation absence were verified without activating Production resources.
 
 ## Current Status

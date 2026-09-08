@@ -2,28 +2,44 @@
 
 ## Estado
 
-- Estado: Fuente de copy aprobada para la futura implementacion de Produccion.
-- Publicacion legal en Produccion: PENDIENTE.
+- Estado: Copy de casilla existente, mantenido sin cambios; alineacion de
+  politicas y disclosure aprobada por la responsable.
+- Publicacion legal anterior: COMPLETA; las revisiones de redaccion de PR #81
+  aun no estan publicadas.
 - Modelo: Single opt-in explicito.
-- Revision juridica profesional colombiana: PASS.
+- Revision juridica profesional colombiana anterior: PASS para el paquete
+  revisado el 2026-07-20.
+- Revision profesional de esta alineacion: APROBADA SEGUN CONFIRMACION EXPRESA
+  DE LA RESPONSABLE. No se registra identidad, credenciales, fecha de revision,
+  certificado ni documento de soporte.
 - Revision contractual y de DPA del proveedor: PASS.
 - Cambios solicitados: NINGUNO.
 - Ruta publica de privacidad aprobada: `/privacidad`.
 - URL canonica: `https://singpronuncerepeat.com/privacidad`.
 - Casilla explicita: OBLIGATORIA Y DESMARCADA POR DEFECTO.
 - Superficie de enlace de privacidad de la aplicacion: PREPARADA.
-- Implementacion de consentimiento en MailerLite Produccion: PENDIENTE.
-- Captura de leads en Produccion: INACTIVA.
-- Arquitectura aprobada: formulario alojado por MailerLite como unico sistema futuro de registro del consentimiento.
-- Preparacion inerte de la aplicacion: COMPLETA; la aplicacion solo presenta un enlace accesible en Preview cuando la configuracion existente lo habilita y no recopila, transmite ni conserva datos personales.
-- Copy aprobado: SIN CAMBIOS; la casilla obligatoria y desmarcada, su validacion y la evidencia pertenecen al formulario del proveedor.
-- Activacion de proveedor o Produccion: requiere aprobacion separada de la responsable.
+- Configuracion operativa actual de MailerLite y del rollout: NO REVERIFICADA EN
+  ESTA TAREA; el ultimo registro de 72 horas se conserva como evidencia historica
+  y no se presume vigente.
+- Arquitectura aprobada: formulario alojado por MailerLite como unico sistema de
+  registro del consentimiento cuando el handoff esta disponible.
+- Aplicacion: presenta el enlace externo solo cuando la configuracion valida lo
+  habilita y no recopila, transmite ni conserva datos personales del formulario.
+- Copy de casilla: SIN CAMBIOS; la casilla obligatoria y desmarcada, su validacion
+  y la evidencia pertenecen al formulario del proveedor.
+- Cambios de proveedor o activacion: requieren su propia autorizacion y
+  verificacion operativa.
 
 ## Casilla principal recomendada
 
 La casilla debe ser obligatoria y estar desmarcada por defecto.
 
 > Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronunce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.
+
+Esta unica accion afirmativa cubre conjuntamente la entrega de la guia gratuita
+y las comunicaciones educativas relacionadas. No cubre publicidad, productos ni
+otros fines no relacionados; cualquier finalidad distinta requiere evaluacion,
+aviso y, cuando corresponda, otra autorizacion.
 
 Inmediatamente junto a la casilla o debajo:
 
@@ -37,7 +53,13 @@ interno, a Preview ni a un dominio tecnico.
 
 > Usaremos tu correo para enviarte la guía, prácticas educativas y novedades relacionadas con el proyecto. No vendemos tus datos ni los compartimos con anunciantes.
 
-La afirmacion es compatible con la arquitectura propuesta porque distingue anunciantes de los proveedores que tratan datos para operar el servicio. La politica explica que MailerLite, Vercel, Tally u otros encargados aprobados pueden tratar informacion. La revision profesional y del proveedor no solicito cambios. La verificacion operativa de la configuracion real permanece pendiente antes de activar Produccion.
+La afirmacion distingue anunciantes de los proveedores que tratan datos para
+operar el servicio. La politica explica que MailerLite, Vercel y Tally pueden
+tratar informacion dentro de sus funciones documentadas. La revision profesional
+del paquete anterior y la revision contractual del proveedor no solicitaron
+cambios. La responsable confirmo por separado que un profesional reviso y aprobo
+la alineacion actual de finalidades; esto no constituye certificacion ni garantia
+de cumplimiento. La configuracion operativa real debe verificarse por separado.
 
 ## Variantes para formularios y estados
 
@@ -169,8 +191,10 @@ Revisar la decision si aparecen:
 - Entrada en jurisdicciones adicionales.
 
 La decision de producto no sustituye la evaluacion juridica. La revision
-profesional de Phase 0 esta completa y no solicito cambios; cualquier cambio de
-alcance requiere una nueva evaluacion.
+profesional de Phase 0 completada el 2026-07-20 conserva su alcance historico.
+Para la alineacion de finalidades de PR #81, la responsable confirmo que un
+profesional reviso y aprobo la redaccion; no se atribuye esa aprobacion al PASS
+anterior ni se inventa una fecha de revision.
 
 ## Consideracion de usuarios jovenes
 
@@ -185,12 +209,13 @@ El lenguaje debe ser comprensible, sin urgencia manipulativa. El formulario inic
 | Condicion personal o empresarial | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Detalle de ubicacion | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
 | Fecha efectiva de la politica | `[PENDING_OWNER_INPUT]` | Bloqueador de produccion |
-| Ruta de privacidad | `/privacidad` / `https://singpronuncerepeat.com/privacidad` | Aprobada; publicacion de Produccion pendiente |
+| Ruta de privacidad | `/privacidad` / `https://singpronuncerepeat.com/privacidad` | Ruta publica existente; revision de PR #81 aun no publicada |
 | Procedimiento de contacto | Revision profesional PASS | Operaciones de derechos pendientes de QA |
 | Entidad contratante, DPA, lugares y subencargados | Revision de proveedor PASS | Configuracion operativa de Produccion pendiente |
 | Evaluacion de transferencia o transmision | Revision profesional y de proveedor PASS | Sin cambios solicitados |
 | Duraciones de conservacion | Revision profesional PASS | Sin cambios solicitados |
 | Enfoque para menores | Revision profesional PASS | Sin cambios solicitados |
 | Plazos de respuesta | Revision profesional PASS | Sin cambios solicitados |
-| Aprobacion profesional del copy | PASS | Sin cambios solicitados |
+| Aprobacion profesional del paquete anterior | PASS | Revision historica del 2026-07-20 |
+| Alineacion de finalidades de PR #81 | `OWNER_CONFIRMED_PROFESSIONAL_APPROVAL` | Aprobacion separada; sin identidad, credenciales, fecha, certificado ni soporte afirmados |
 | Ajustes menores de tono sin cambiar finalidad | N/A | Refinamiento documental no bloqueante |

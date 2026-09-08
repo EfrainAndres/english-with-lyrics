@@ -1,5 +1,14 @@
 # Phase 0 Professional Legal-Review Outcome
 
+> Scope update — 2026-09-08: the PASS recorded below applies only to the package
+> reviewed on 2026-07-20. The owner's later decision to use one required,
+> initially unchecked authorization for both guide delivery and related
+> educational communications has separate approval provenance: the owner
+> explicitly confirmed that a professional reviewed and approved the revised
+> policy and handoff wording in PR #81. No reviewer identity, credentials, review
+> date, certificate or supporting document is asserted here. The earlier PASS
+> remains unchanged as historical evidence.
+
 ## Scope and confidentiality
 
 This document records only the high-level outcome confirmed by the project owner after Colombian legal counsel reviewed the complete Phase 0 legal and provider package. Counsel identity, correspondence, advice, contracts and supporting evidence remain private.
@@ -20,7 +29,7 @@ Internal structured review: PASS
 Owner rendered-copy review: APPROVED
 ```
 
-The professional review covered:
+The professional review covered the package as it existed on 2026-07-20:
 
 - Privacy policy.
 - Personal-data treatment policy.
