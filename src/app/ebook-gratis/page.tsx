@@ -1,28 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CTAButton } from "@/components/CTAButton";
 import { LeadCaptureForm } from "@/components/LeadCaptureForm";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getLeadFormConfig } from "@/lib/lead-form-config";
-import {
-  ebookDownloadFilename,
-  ebookDownloadPath,
-  ebookFileSizeKB,
-  ebookPageCount,
-} from "@/lib/links";
+import { ebookFileSizeKB, ebookPageCount } from "@/lib/links";
 
 export const metadata: Metadata = {
-  title: "Guía gratis disponible",
+  title: "Recibe tu guía gratis",
   description:
-    "Descarga gratis la guía de práctica de Sing Pronunce Repeat / English with Lyrics. 3 canciones, 9 frases, pronunciación con Escríbelo como suena y ejercicios originales.",
+    "Recibe por correo la guía gratuita de Sing Pronunce Repeat / English with Lyrics y descárgala inmediatamente después del registro.",
   alternates: {
     canonical: "/ebook-gratis",
   },
   openGraph: {
-    title: "Guía gratis disponible | Sing Pronunce Repeat",
+    title: "Recibe tu guía gratis | Sing Pronunce Repeat",
     description:
-      "Descarga gratis la guía de práctica de Sing Pronunce Repeat / English with Lyrics. 3 canciones, 9 frases, pronunciación con Escríbelo como suena y ejercicios originales.",
+      "Recibe por correo la guía gratuita de Sing Pronunce Repeat / English with Lyrics y descárgala inmediatamente después del registro.",
     url: "/ebook-gratis",
     siteName: "Sing Pronunce Repeat",
     type: "website",
@@ -111,7 +104,7 @@ const faqItems = [
   {
     question: "¿Cómo recibo o descargo la guía?",
     answer:
-      "Puedes abrir el formulario externo para recibirla por correo o descargar el PDF directamente desde esta página. El correo no es obligatorio para acceder al PDF.",
+      "Abre el formulario externo de MailerLite y completa el registro con tu consentimiento. Al finalizar, podrás descargar la guía inmediatamente en la página de agradecimiento y también la recibirás por correo.",
   },
   {
     question: "¿Funciona en el celular?",
@@ -164,9 +157,6 @@ function AudioBars() {
 }
 
 export default function EbookGratisPage() {
-  const leadFormConfig = getLeadFormConfig();
-  const isLeadHandoffEnabled = leadFormConfig.status === "enabled";
-
   return (
     <main className="min-h-screen bg-ink text-paper">
       {/* ── Navigation ─────────────────────────────────────────────────── */}
@@ -210,26 +200,10 @@ export default function EbookGratisPage() {
               Escucha primero, usa la guía como puente y vuelve siempre a la
               canción oficial.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              {isLeadHandoffEnabled ? (
-                <CTAButton href="#recibir-guia">
-                  Recibir mi guía gratis
-                </CTAButton>
-              ) : null}
-              <CTAButton
-                href={ebookDownloadPath}
-                download={ebookDownloadFilename}
-                variant={isLeadHandoffEnabled ? "secondary" : "primary"}
-                aria-label="Descargar la guía directamente en PDF"
-              >
-                Descargar PDF directamente
-              </CTAButton>
-            </div>
             <p className="mt-5 max-w-2xl text-sm font-bold leading-6 text-soft">
-              El PDF directo es una alternativa independiente: no necesitas
-              registrarte ni recibir un correo para descargarlo. PDF ·{" "}
-              {ebookPageCount} páginas · Español · Formato A5 ·{" "}
-              {ebookFileSizeKB} KB aprox.
+              Regístrate en el formulario externo para recibir la guía por correo
+              y descargarla inmediatamente al finalizar. PDF · {ebookPageCount}
+              {" "}páginas · Español · Formato A5 · {ebookFileSizeKB} KB aprox.
             </p>
           </div>
 

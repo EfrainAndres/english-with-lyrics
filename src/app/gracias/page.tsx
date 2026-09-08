@@ -84,7 +84,7 @@ function getPageCopy(
       notice:
         "Ambiente de pruebas: esta página es pública pero no promocionada y solo sirve para validar el flujo Preview.",
       emailNotice:
-        "También puedes recibir un correo de prueba. Revisa la bandeja principal y spam mientras validamos la entregabilidad.",
+        "La guía también se envía por correo después del registro de prueba. No tienes que esperar ese mensaje para descargarla aquí.",
     };
   }
 
@@ -104,7 +104,8 @@ function getPageCopy(
       "Puedes descargar la guía gratuita y comenzar con una práctica corta.",
     notice:
       "Acceso directo disponible: puedes descargar la guía aquí aunque el correo no llegue. La descarga no depende de la suscripción.",
-    emailNotice: null,
+    emailNotice:
+      "Después del registro, también enviamos la guía por correo. No tienes que esperar ese mensaje para descargarla aquí.",
   };
 }
 

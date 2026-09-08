@@ -1,8 +1,7 @@
 import Link from "next/link";
 import {
   dataProcessingPath,
-  ebookDownloadFilename,
-  ebookDownloadPath,
+  ebookPagePath,
   privacyPath,
 } from "@/lib/links";
 
@@ -21,7 +20,7 @@ export function SiteFooter() {
           </p>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-soft">
             Recurso educativo con fragmentos cortos: no incluye letras completas.
-            El PDF sigue disponible de forma independiente, sin registro.
+            Conoce la guía gratuita y el método antes de registrarte.
           </p>
         </div>
 
@@ -52,13 +51,12 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a
+              <Link
                 className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-                download={ebookDownloadFilename}
-                href={ebookDownloadPath}
+                href={ebookPagePath}
               >
-                Abrir guía gratuita en PDF
-              </a>
+                Conocer la guía gratuita
+              </Link>
             </li>
           </ul>
         </nav>

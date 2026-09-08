@@ -4,19 +4,12 @@ import { privacyPath } from "@/lib/links";
 const approvedConsentCopy =
   "Acepto recibir por correo la guía gratuita y contenido educativo relacionado con Sing Pronunce Repeat / English with Lyrics. Puedo cancelar la suscripción en cualquier momento.";
 const previewProviderCopy =
-  "Este acceso controlado abre el formulario verificado de MailerLite para Preview. MailerLite mantiene el correo, el nombre opcional, el consentimiento, la validación y la automatización de prueba.";
+  "Este enlace abre el formulario verificado de MailerLite para Preview. MailerLite mantiene el correo, el nombre opcional, el consentimiento, la validación y la automatización de prueba.";
 const productionProviderCopy =
   "Este acceso abre el formulario verificado alojado por MailerLite. MailerLite mantiene el correo, el nombre opcional, el consentimiento, la validación y el flujo de bienvenida.";
 
 export function LeadCaptureForm() {
   const config = getLeadFormConfig();
-
-  if (
-    config.environment === "production" &&
-    config.status !== "enabled"
-  ) {
-    return null;
-  }
 
   const isHandoffEnabled = config.status === "enabled";
   const isPreview = config.environment === "preview";
@@ -78,6 +71,10 @@ export function LeadCaptureForm() {
                 <p className="mt-3 leading-7 text-soft">
                   {isPreview ? previewProviderCopy : productionProviderCopy}
                 </p>
+                <p className="mt-3 leading-7 text-paper">
+                  Al completar el registro, podrás descargar la guía de inmediato
+                  en la página de agradecimiento y también la recibirás por correo.
+                </p>
                 <a
                   aria-describedby="provider-hosted-consent-details"
                   className="mt-6 inline-flex min-h-12 max-w-full items-center justify-center rounded-md bg-pink px-5 py-3 text-center text-sm font-black text-ink transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
@@ -116,8 +113,9 @@ export function LeadCaptureForm() {
                     de la suscripción y el estado de supresión.
                   </p>
                   <p>
-                    La descarga directa del PDF permanece disponible por separado
-                    y nunca depende de aceptar comunicaciones promocionales.
+                    Después del registro, la página de agradecimiento permite
+                    descargar la guía de inmediato; no tienes que esperar a que
+                    llegue el correo.
                   </p>
                 </div>
               </>
@@ -128,9 +126,8 @@ export function LeadCaptureForm() {
                 </p>
                 <p className="mt-3 leading-7 text-soft">{config.reason}</p>
                 <p className="mt-4 text-sm leading-7 text-soft">
-                  El flujo con MailerLite se mantiene aislado hasta que exista
-                  un deployment Preview válido y, más adelante, rutas públicas
-                  de privacidad y el flujo `/gracias`.
+                  No podemos abrir el formulario para entregar la guía en este
+                  momento. Inténtalo de nuevo más tarde.
                 </p>
               </>
             )}

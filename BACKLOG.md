@@ -249,6 +249,7 @@ Priority: High.
 - [x] Restructure `/ebook-gratis` conversion hierarchy around the provider-hosted handoff. Result: benefit-led hero, handoff-first CTA, independent secondary PDF access, real ebook preview, expectation-setting and FAQ; survey and first-group actions remain optional on `/gracias`. This branch does not deploy or alter the active controlled rollout.
 - [ ] Add exact funnel-event analytics when approved tooling exists. The current Vercel Hobby plan does not provide dashboard-visible custom events; keep this separate from the active controlled rollout.
 - [x] Add a consistent trust-and-contact footer using only the already public privacy-contact channel and existing legal routes. Result: factual educational/PDF language, descriptive privacy/data-policy/contact links, and unchanged rollout or provider behavior.
+- [x] Implement the approved soft-gated ebook acquisition flow on a feature branch. Result: public acquisition surfaces route visitors to `/ebook-gratis`, the provider-hosted handoff is the only visible way to obtain the guide there, missing or invalid configuration fails closed without a direct-PDF fallback, and `/gracias` retains immediate PDF download/open actions after registration. The stable public PDF artifact remains unchanged and technically reachable if its URL is independently known; this is a conversion gate, not access control.
 - [x] Test provider export, correction, unsubscribe, and deletion in isolated Preview QA; keep suppression/reactivation behavior as a separate tracked follow-up.
 - [ ] Configure the MailerLite Preview redirect to `/gracias`.
 - [x] Run deployed Preview QA.
@@ -263,7 +264,7 @@ Priority: High.
 
 Acceptance criteria:
 
-- Direct delivery remains active until the replacement funnel passes QA.
+- The stable PDF artifact remains active while visible public acquisition uses the provider-hosted consent handoff and fails closed when its configuration is absent or invalid.
 - No production leads are collected before privacy and consent are approved.
 - Production and Preview data remain isolated.
 - No implementation branch marks the lead funnel live before controlled rollout approval.

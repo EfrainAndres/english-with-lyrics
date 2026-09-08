@@ -209,7 +209,7 @@ export default function Home() {
               className="inline-flex min-h-10 items-center rounded-md bg-pink px-4 text-sm font-black text-ink transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
               href={ebookPagePath}
             >
-              Descargar guía gratis
+              Recibir guía gratis
             </a>
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton href={ebookPagePath}>Descargar guía gratis</CTAButton>
+              <CTAButton href={ebookPagePath}>Recibir guía gratis</CTAButton>
               <CTAButton href="#demo" variant="secondary">
                 Ver cómo funciona
               </CTAButton>
@@ -372,7 +372,7 @@ export default function Home() {
               href={ebookPagePath}
               variant="light"
             >
-              Descargar guía gratis
+              Recibir guía gratis
             </CTAButton>
           </div>
         </div>
