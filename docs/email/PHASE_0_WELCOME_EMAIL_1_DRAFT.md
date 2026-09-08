@@ -6,18 +6,27 @@
 - Estado de activación: ACTIVE / EMAIL 1-ONLY CONTROLLED ROLLOUT.
 - Alcance: referencia canónica verificada en Preview y en dos entregas automatizadas controladas de Producción recibidas en buzón; un tercer envío registrado por el proveedor permanece como evidencia histórica sin mensaje correspondiente.
 - La activación vigente está limitada al handoff de Producción ya autorizado, Email 1, un máximo de diez suscriptores reales y 72 horas; no autoriza otra secuencia, campaña, prueba, configuración o expansión.
-- La entrega directa del PDF permanece ACTIVE e independiente del consentimiento promocional o de este correo.
+- El archivo PDF público permanece ACTIVE y técnicamente accesible si se conoce su
+  URL estable, pero las superficies públicas de adquisición ya no muestran ese
+  enlace antes del registro. `/gracias` conserva la descarga inmediata.
 
 Este documento es la referencia canónica del contenido staged. Su verificación
 controlada no modifica la configuración histórica de Preview ni autoriza otra
 entrega o activación.
 
+El cuerpo aprobado de Email 1 no requiere cambios para esta decisión: llega
+después del registro, enlaza de nuevo a `/gracias` y dice correctamente que el
+correo no es necesario para volver a abrir la guía desde esa experiencia. No se
+modificó el contenido configurado en MailerLite.
+
 ## Propósito
 
 Dar la bienvenida a una persona suscrita que ya otorgó consentimiento afirmativo
 en el formulario alojado por el proveedor, proponer un primer paso de práctica
-tranquilo y dirigirla a la experiencia existente de la guía. La guía ya está
-disponible directamente: este correo no es necesario para recibirla.
+tranquilo y dirigirla a la experiencia existente de la guía. Después del
+registro, la persona puede descargarla de inmediato en `/gracias` y también
+recibe Email 1; no tiene que esperar el correo para usar la descarga de esa
+página.
 
 El formulario alojado por el proveedor es el sistema de registro del
 consentimiento dentro del rollout vigente. Este borrador de correo no crea,
@@ -111,9 +120,11 @@ este documento.
   de agradecimiento con alcance del entorno, `/gracias?source=email`.
 - Para una futura prueba solo en Preview, usar únicamente la ruta de Preview
   aprobada; nunca dirigir un correo de Preview a Producción.
-- El PDF directo permanece disponible de manera independiente en
-  `/ebook-gratis` y no debe depender del consentimiento, de hacer clic en la
-  CTA ni de recibir este correo.
+- `/gracias` conserva las acciones inmediatas para descargar o abrir el PDF; Email
+  1 vuelve a esa misma experiencia y no es necesario para descargar desde allí.
+- El archivo estático conserva su URL pública estable y puede seguir disponible si
+  se conoce independientemente, sin presentarse como alternativa visible en
+  `/ebook-gratis`, la homepage o el footer compartido.
 - No adjuntar el PDF, usar un enlace firmado o con vencimiento, ni incluir datos
   personales en el destino redactado.
 - No codificar una URL del entorno, un identificador del proveedor ni un valor
@@ -155,8 +166,8 @@ Producción:
   que el correo sea necesario para acceder a la guía.
 - El botón y la alternativa de texto sin formato abren la ruta de agradecimiento
   de Preview aprobada.
-- El acceso directo al PDF permanece disponible antes y después de la prueba sin
-  un requisito de consentimiento o correo.
+- `/gracias` conserva el acceso directo al PDF después del registro, sin requerir
+  la recepción o apertura de Email 1.
 - El mensaje renderizado se entiende con navegación por teclado y conserva su
   significado esencial en texto sin formato y en una vista móvil estrecha.
 - El pie del proveedor incluye un tratamiento funcional de cancelación de
