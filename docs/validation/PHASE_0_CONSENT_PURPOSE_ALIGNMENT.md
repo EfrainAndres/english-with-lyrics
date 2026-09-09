@@ -1,5 +1,18 @@
 # Phase 0 Consent-Purpose Alignment
 
+## Post-merge publication status
+
+PR #81 was merged as `a03b192e241c2ccedc02fd8b3e7358b6c382b653` and the
+approved revision reached canonical Production on 2026-09-08. The original
+effective date was preserved and only the last-updated date was changed through
+the existing Production legal configuration before rebuilding the verified merge
+commit. Canonical smoke, responsive containment, robots and PDF identity pass.
+
+The publication record and current operational boundary are documented in
+`docs/validation/PHASE_0_CONSENT_PRODUCTION_PUBLICATION.md`. MailerLite internal
+status remains unverified because no authenticated read-only provider surface
+was available; the old 72-hour authorization is not treated as current.
+
 ## Decision and scope
 
 On 2026-09-08, the project owner selected one required consent checkbox,
@@ -49,11 +62,10 @@ constitute certification or a guarantee of compliance.
 
 The effective and last-updated dates used by the public legal routes come from
 the existing server-only legal configuration and identify the version actually
-published. The current configured dates remain associated with the earlier live
-version and are structurally valid under the existing ISO-date convention. This
-unmerged PR does not change or restate them. At Production publication, the
-authorized legal-publication process must set the effective and last-updated
-dates for the revision to its actual publication/effective date; no professional
+published. Before merge, the configured dates remained associated with the
+earlier live version. At publication, the original effective date was preserved
+because the approved revision did not require a new one, while the last-updated
+date was set to the actual 2026-09-08 Production publication date. No professional
 review date is inferred from that release date.
 
 ## Operational boundary
@@ -113,11 +125,9 @@ Validation results for the reviewed PR are recorded here:
 - Approval provenance: PASS; owner-confirmed professional approval is recorded
   separately from the historical 2026-07-20 PASS, without a reviewer identity,
   credentials, review date, certificate or supporting document.
-- Publication-date convention: PASS; both canonical legal routes currently show
-  the same structurally valid ISO effective/last-updated date for the earlier
-  published version. PR #81 does not alter or relabel that date before
-  publication; the release process must apply the revision's actual effective
-  and last-updated dates when it is published.
+- Publication-date convention: PASS; both canonical legal routes show the
+  preserved original effective date and the 2026-09-08 last-updated date for the
+  published revision.
 - Configured handoff: PASS; exactly one external CTA with
   `noopener noreferrer`, exact `/privacidad` navigation, zero native forms or
   personal-data fields and zero PDF links on `/ebook-gratis`.
