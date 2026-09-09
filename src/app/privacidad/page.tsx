@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LegalPolicyNavigation } from "@/components/legal/legal-policy-navigation";
 import { getLegalRenderState, legalConfiguration } from "@/lib/legal-config";
 
 export const metadata: Metadata = {
@@ -20,7 +21,8 @@ function LegalPageShell({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <main className="min-h-screen bg-[#0b0911] px-4 py-10 text-zinc-100 sm:px-6 lg:px-8">
       <article className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl sm:p-10">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">
+        <LegalPolicyNavigation />
+        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">
           Sing Pronunce Repeat · Privacidad
         </p>
         {children}
@@ -104,7 +106,7 @@ export default function PrivacidadPage() {
         datos ni el envío de correos por sí sola.
       </p>
 
-      <div className="mt-10 space-y-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_li]:leading-7 [&_p]:mt-3 [&_p]:leading-7 [&_p]:text-zinc-300 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_ul]:text-zinc-300">
+      <div className="mt-10 space-y-10 [&_h2]:scroll-mt-6 [&_h2]:text-2xl [&_h2]:font-semibold [&_li]:leading-7 [&_p]:mt-3 [&_p]:leading-7 [&_p]:text-zinc-300 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_ul]:text-zinc-300">
         <section aria-labelledby="privacy-responsible">
           <h2 id="privacy-responsible">1. Persona responsable y contacto</h2>
           <dl className="mt-4 grid gap-3 rounded-2xl bg-black/20 p-5 sm:grid-cols-[12rem_1fr]">

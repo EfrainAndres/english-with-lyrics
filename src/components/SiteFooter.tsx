@@ -6,8 +6,16 @@ import {
 } from "@/lib/links";
 
 const publicPrivacyContactHref = "mailto:privacidad@singpronuncerepeat.com";
+const footerLinkClasses =
+  "inline-flex min-h-11 items-center py-2 text-cream transition hover:text-pink focus:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2 focus-visible:ring-offset-ink";
 
-export function SiteFooter() {
+export function SiteFooter({
+  context = "default",
+}: {
+  context?: "default" | "guide-ready";
+}) {
+  const guideIsReady = context === "guide-ready";
+
   return (
     <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
       <div className="mx-auto grid max-w-6xl gap-6 border-t border-white/10 pt-7 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
@@ -16,19 +24,21 @@ export function SiteFooter() {
             Sing Pronunce Repeat
           </p>
           <p className="mt-1 text-sm text-soft">
-            English with Lyrics · Método Escríbelo como suena.
+            English with Lyrics es el nombre complementario de esta propuesta
+            educativa. Método: Escríbelo como suena.
           </p>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-soft">
-            Recurso educativo con fragmentos cortos: no incluye letras completas.
-            Conoce la guía gratuita y el método antes de registrarte.
+            {guideIsReady
+              ? "Tu guía ya está disponible. Puedes volver a consultar qué incluye y usar estos enlaces para privacidad o derechos sobre tus datos."
+              : "Recurso educativo con fragmentos cortos: no incluye letras completas. Conoce la guía gratuita y el método antes de registrarte."}
           </p>
         </div>
 
-        <nav aria-label="Enlaces de confianza y contacto">
+        <nav aria-label="Privacidad, derechos y guía">
           <ul className="flex flex-col gap-3 text-sm font-black sm:items-end">
             <li>
               <Link
-                className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+                className={footerLinkClasses}
                 href={privacyPath}
               >
                 Política de privacidad
@@ -36,7 +46,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link
-                className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+                className={footerLinkClasses}
                 href={dataProcessingPath}
               >
                 Tratamiento de datos personales
@@ -44,18 +54,20 @@ export function SiteFooter() {
             </li>
             <li>
               <a
-                className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+                className={footerLinkClasses}
                 href={publicPrivacyContactHref}
               >
-                Contacto de privacidad
+                Canal para privacidad y derechos
               </a>
             </li>
             <li>
               <Link
-                className="text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
+                className={footerLinkClasses}
                 href={ebookPagePath}
               >
-                Conocer la guía gratuita
+                {guideIsReady
+                  ? "Ver qué incluye la guía"
+                  : "Conocer la guía gratuita"}
               </Link>
             </li>
           </ul>

@@ -238,8 +238,8 @@ export default async function GraciasPage({
                 Acción opcional
               </p>
               <p className="mt-4 leading-8 text-soft">
-                Puedes registrarte de forma opcional para conocer el primer grupo
-                de práctica y ayudarnos a validar el siguiente paso del proyecto.
+                Puedes abrir un formulario opcional para conocer el primer grupo
+                de práctica y consultar cómo participar.
               </p>
               <CTAButton
                 className="mt-6"
@@ -249,15 +249,15 @@ export default async function GraciasPage({
                 Conocer el primer grupo
               </CTAButton>
               <p className="mt-4 text-sm leading-7 text-soft">
-                Este formulario conserva su destino aprobado y es independiente
-                de la entrega de la guía.
+                Es un formulario separado: completarlo no afecta tu acceso a la
+                guía.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter context="guide-ready" />
     </main>
   );
 }
