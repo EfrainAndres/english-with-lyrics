@@ -95,5 +95,6 @@ recorded here.
   provider destinations; and PDF bytes remain unchanged. No new collection,
   tracking, sensitive value, provider-status claim, delivery guarantee,
   multi-email sequence or rollout authorization was introduced.
-- Review outcome: **APPROVED FOR MERGE — NOT MERGED**, subject to the required
-  final PR checks passing on the pushed review HEAD.
+- Final Vercel and Vercel Preview Comments checks passed on the pushed review
+  integration. No Preview URL or deployment identifier is retained here.
+- Review outcome: **APPROVED FOR MERGE — NOT MERGED**.
