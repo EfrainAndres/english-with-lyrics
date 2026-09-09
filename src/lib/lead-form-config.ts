@@ -19,8 +19,7 @@ export type LeadFormConfig =
 
 const disabledReasons: Record<"development" | "production", string> = {
   development: "El registro real está desactivado durante el desarrollo local.",
-  production:
-    "El registro de leads sigue desactivado en Production en esta fase.",
+  production: "El formulario de registro no está disponible en este momento.",
 };
 
 const missingPreviewReason =
@@ -28,7 +27,7 @@ const missingPreviewReason =
 const invalidPreviewReason =
   "La configuración del formulario de pruebas no es válida.";
 const invalidProductionReason =
-  "La configuración del formulario de Production no es válida.";
+  "No podemos abrir el formulario de registro en este momento.";
 
 function hasPublicDnsHostname(hostname: string) {
   const normalizedHostname = hostname.toLowerCase();

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { CTAButton } from "@/components/CTAButton";
 import { LeadCaptureForm } from "@/components/LeadCaptureForm";
 import { SiteFooter } from "@/components/SiteFooter";
+import { getLeadFormConfig } from "@/lib/lead-form-config";
 import { ebookFileSizeKB, ebookPageCount } from "@/lib/links";
 
 export const metadata: Metadata = {
@@ -157,6 +159,9 @@ function AudioBars() {
 }
 
 export default function EbookGratisPage() {
+  const leadFormConfig = getLeadFormConfig();
+  const isHandoffEnabled = leadFormConfig.status === "enabled";
+
   return (
     <main className="min-h-screen bg-ink text-paper">
       {/* ── Navigation ─────────────────────────────────────────────────── */}
@@ -196,6 +201,20 @@ export default function EbookGratisPage() {
               familiares para darte un punto de partida y acercarte al audio
               real, sin IPA ni promesas de pronunciación perfecta.
             </p>
+            {isHandoffEnabled ? (
+              <div className="mt-7 max-w-2xl">
+                <CTAButton
+                  className="w-full sm:w-fit"
+                  href="#recibir-guia"
+                >
+                  Recibir mi guía gratis
+                </CTAButton>
+                <p className="mt-3 text-sm font-bold leading-6 text-soft">
+                  Primero verás cómo usamos tus datos y después podrás abrir el
+                  formulario de registro.
+                </p>
+              </div>
+            ) : null}
             <p className="mt-4 max-w-2xl text-lg font-black text-cream">
               Escucha primero, usa la guía como puente y vuelve siempre a la
               canción oficial.
@@ -235,7 +254,7 @@ export default function EbookGratisPage() {
         </div>
       </section>
 
-      <LeadCaptureForm />
+      <LeadCaptureForm config={leadFormConfig} />
 
       {/* ── Real ebook preview ─────────────────────────────────────────── */}
       <section className="bg-midnight px-5 py-14 sm:px-8 lg:py-20">

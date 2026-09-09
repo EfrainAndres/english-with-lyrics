@@ -78,15 +78,6 @@ function AudioBars() {
   );
 }
 
-function PlayMarker() {
-  return (
-    <span
-      aria-hidden="true"
-      className="inline-block h-0 w-0 border-y-[7px] border-l-[11px] border-y-transparent border-l-cream"
-    />
-  );
-}
-
 function BrandLogo({
   className = "",
   height = "4rem",
@@ -118,9 +109,9 @@ function MicroLessonCard() {
             Escríbelo como suena
           </h2>
         </div>
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-pink">
-          <PlayMarker />
-        </div>
+        <p className="shrink-0 border border-cream/35 bg-cream/10 px-3 py-2 text-xs font-black uppercase text-cream">
+          Ejemplo visual
+        </p>
       </div>
 
       <div className="p-5">
@@ -228,6 +219,11 @@ export default function Home() {
               Aprende inglés con tus canciones favoritas, pronunciación fácil y
               traducción natural.
             </p>
+            <p className="mt-4 max-w-2xl leading-7 text-soft">
+              Sing Pronunce Repeat es el proyecto educativo; English with Lyrics
+              es el nombre complementario de su propuesta para aprender con
+              canciones.
+            </p>
             <p className="mt-4 max-w-xl text-lg font-black text-cream">
               Con el método Escríbelo como suena.
             </p>
@@ -259,9 +255,9 @@ export default function Home() {
 
       <Section
         id="demo"
-        eyebrow="Microlección demo"
+        eyebrow="Ejemplo visual"
         title="Una frase pequeña puede desbloquear mejor la escucha."
-        intro="La experiencia se siente como una guía de escucha: ves la frase, la forma fácil de pronunciarla y la traducción natural antes de practicar."
+        intro="Así se organiza una práctica: ves la frase, una guía sencilla de pronunciación y la traducción natural antes de comparar con el audio oficial."
       >
         <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="border-l-4 border-pink bg-white/5 p-6">
@@ -299,7 +295,7 @@ export default function Home() {
 
       <Section
         title="Cómo funciona en 3 pasos"
-        intro="La primera experiencia será corta, clara y medible para validar si el método realmente ayuda."
+        intro="Cada práctica sigue tres pasos sencillos para que escuches, repitas y entiendas una frase corta."
       >
         <div className="grid gap-5 md:grid-cols-3">
           {lessonSteps.map((step, index) => (

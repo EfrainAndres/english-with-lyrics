@@ -6,6 +6,17 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Addressed the remaining repository-side Production user-journey audit
+  findings: `/ebook-gratis` now exposes a configuration-aware first-screen CTA
+  that moves focus to the existing disclosure, the provider handoff explicitly
+  announces its MailerLite/new-tab transition, both legal pages offer clear
+  return navigation, and the long data policy has a keyboard-accessible anchored
+  table of contents. The static lesson card is identified as a visual example,
+  `/gracias` uses guide-ready footer language, footer touch/focus areas are
+  improved, and public nonlegal copy avoids unnecessary internal terminology.
+  The soft gate, approved consent and substantive legal text, robots directives,
+  PDF artifact and provider configuration remain unchanged.
+
 - Published and verified the professionally reviewed PR #81 consent-purpose
   revision on canonical Production. The merged source commit was deployed,
   `LEGAL_EFFECTIVE_DATE` was preserved as the policy's original effective date,
