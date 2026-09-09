@@ -92,17 +92,24 @@ Native limitations retained rather than worked around:
 - Missing-consent error accessibility remains **UNVERIFIED** because this task
   prohibited submission. It is not recorded as fixed.
 
-## Current authenticated operational observation
+## Authenticated operational observation and baseline
 
-Observed on 2026-09-09 in the authenticated provider interface:
+Current status and the new counting baseline were observed through an
+authenticated, read-only provider session. No subscriber-level value is stored
+in this record.
 
 | Observation | Current result and scope |
 | --- | --- |
+| Baseline timestamp | 2026-09-09 14:12:10 UTC-05:00 (`America/Bogota`) |
 | Target workflow state | ACTIVE; no state change made |
 | In progress | 0 |
 | Separate queued counter | Not exposed in the inspected view |
 | Completed workflow activity | 3 retained records in the workflow summary; not a release-window count |
 | Target group subscribers | 1 point-in-time aggregate subscriber |
+| Form Analytics range | 2026-08-07 through 2026-09-09; the end is the observation date, not a closing date |
+| Form-analytics baseline | 5 registrations collected from form creation through the baseline observation |
+| New registrations after baseline | 0 |
+| Review milestone | 10 new accumulated registrations; form-analytics total 15 |
 | Reporting period | Last 30 days, explicitly selected |
 | Sends | 3 |
 | Hard delivery failures | 0 |
@@ -118,20 +125,56 @@ incident has ever occurred. No inbox was checked. Stale internal group/workflow
 names remain an operational naming follow-up and do not describe the actual
 active workflow state.
 
-## Operational decision still required
+### Counting method
 
-Repository evidence still contains no completed post-72-hour go/no-go, explicit
-closure or subsequent authorization that makes the historical bounded rollout
-current. This task did not authorize activation, suspension, extension or
-broader promotion.
+Use the existing canonical form's Analytics view, not the current group size or
+workflow-completion total:
 
-Before broader promotion, the owner must explicitly choose and document either:
+1. Select the fixed start date 2026-08-07, when this form was created, and extend
+   the end of the reporting range to the day of each manual observation.
+2. Read `Subscribers collected` and subtract the fixed baseline of 5. The result
+   is the cumulative number of provider-recorded form registrations after the
+   baseline timestamp.
+3. Do not decrement that result for a later unsubscribe or removal. The provider
+   currently retains five collected registrations while the target group has
+   only one current subscriber, which confirms that the collected-registration
+   aggregate is distinct from current membership.
+4. When the result reaches 10 (an Analytics total of 15), report the milestone
+   and request the owner's continuation decision. Do not pause intake or the
+   workflow automatically.
 
-1. a new bounded operating window, cap, monitoring owner and stop criteria that
-   account for the current active workflow and remaining native provider
-   accessibility/deliverability limitations; or
-2. closure of public intake and the workflow through the separately authorized
-   stop process.
+This method excludes all subscribers and registrations that existed at the
+baseline, and removals cannot reset its cumulative delta. The aggregate does not
+prove that every registration belongs to a distinct person; subscriber-level
+deduplication for removed contacts is not available from this read-only view.
+If form Analytics is reset or its counting semantics change, this baseline is no
+longer sufficient and must be re-established with owner-approved evidence.
+
+## Owner-authorized operating decision
+
+The owner authorizes the existing public intake and workflow to continue without
+a scheduled closing date. This is the current decision and supersedes an
+intervening seven-day closure instruction, which must not be executed. The
+earlier ten-subscriber / 72-hour windows remain historical evidence and are not
+rewritten as though they had never existed.
+
+- Monitoring is manual and assigned to the owner. No background monitor,
+  automatic counter, automatic cap or scheduled shutdown exists.
+- Ten new accumulated registrations are an evaluation milestone, not a stop
+  instruction and not authorization for broader promotion.
+- Reaching the milestone requires reporting the result and requesting the
+  owner's continuation decision. It does not authorize pausing either resource.
+- Existing subscribers are outside the new-registration count. Unsubscribes or
+  removals after the baseline do not reduce or reset it.
+- The existing incident-response procedure remains in force for any unexpected
+  email, consent/privacy issue, delivery failure, complaint or workflow error:
+  preserve subscribers and consent evidence, pause the workflow first, remove
+  the Production handoff second, and return the verified application to its
+  fail-closed state through the separately authorized deployment procedure.
+
+This documentation update records the decision only. It changes no provider
+state and executes neither the superseded seven-day closure instruction nor an
+incident response; if an incident occurs, the retained procedure above applies.
 
 ## Validation and change boundaries
 

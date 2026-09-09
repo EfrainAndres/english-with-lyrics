@@ -17,9 +17,16 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
   behavior. The native editor offered no supported logo block, retained
   sub-44-pixel physical controls and did not expose programmatic Spanish field
   names; missing-consent feedback remains unverified because no form was
-  submitted. Current authenticated aggregate observations and the still-pending
-  post-rollout operational decision are recorded without treating historical
-  counts as new release measurements or authorizing broader promotion.
+  submitted. Current authenticated aggregate observations are recorded without
+  treating historical counts as new release measurements. The owner's newer
+  operating decision supersedes both the historical 72-hour boundary and an
+  intervening seven-day closure instruction: public intake and the workflow
+  remain operating without a scheduled closing date, with manual owner
+  monitoring from a five-registration historical baseline and review after ten
+  new accumulated registrations. The milestone reports status and requests a
+  continuation decision; it does not automatically pause anything. Existing
+  subscribers are excluded, later unsubscribes/removals do not reset the count,
+  and the existing incident-response triggers remain in force.
 
 - Addressed the remaining repository-side Production user-journey audit
   findings: `/ebook-gratis` now exposes a configuration-aware first-screen CTA
