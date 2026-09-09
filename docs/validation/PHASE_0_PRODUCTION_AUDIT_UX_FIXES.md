@@ -69,3 +69,5 @@ publication record was reviewed and marked ready without being merged here.
 - Robots, substantive legal-copy diff, collection/tracking and sensitive-value
   checks: PASS.
 - `git diff --check`: PASS.
+- Draft PR #83 Vercel and Vercel Preview Comments checks: PASS. No Preview URL
+  or deployment identifier is retained in this record.
