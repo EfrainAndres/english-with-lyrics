@@ -6,6 +6,21 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Verified that canonical Production serves the merged PR #83 source and that
+  its ebook CTA, provider-transition notice, legal navigation, static example,
+  thank-you footer, soft gate, robots behavior and PDF artifact pass desktop and
+  exact 390 px smoke checks. Updated only the existing canonical MailerLite
+  form's presentation: removed the stale public staging/inactive title, added
+  persistent Spanish field labels, and improved native color, type and consent
+  legibility settings while preserving consent, required/optional fields,
+  privacy link, single opt-in, group, redirect, URL, workflow and Email 1
+  behavior. The native editor offered no supported logo block, retained
+  sub-44-pixel physical controls and did not expose programmatic Spanish field
+  names; missing-consent feedback remains unverified because no form was
+  submitted. Current authenticated aggregate observations and the still-pending
+  post-rollout operational decision are recorded without treating historical
+  counts as new release measurements or authorizing broader promotion.
+
 - Addressed the remaining repository-side Production user-journey audit
   findings: `/ebook-gratis` now exposes a configuration-aware first-screen CTA
   that moves focus to the existing disclosure, the provider handoff explicitly
