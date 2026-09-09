@@ -3,11 +3,13 @@
 ## Scope and baseline
 
 This record covers the repository-side user-journey fixes requested after the
-canonical Production audit. The branch starts from verified `origin/main` at
-`a03b192e241c2ccedc02fd8b3e7358b6c382b653`, the merge commit for PR #81.
-
-No PR #82 commit is included in this implementation branch. That separate
-publication record was reviewed and marked ready without being merged here.
+canonical Production audit. The feature work started from verified
+`origin/main` at `a03b192e241c2ccedc02fd8b3e7358b6c382b653`, the merge commit
+for PR #81. During final review, the branch was synchronized with
+`origin/main` at `36145de0d3ddb58d3007109a074050b87295e4aa`, which includes the
+merged PR #82 publication record. That base integration changed no source or
+public artifact; the PR #83 comparison remains limited to the eleven paths
+recorded here.
 
 ## Findings resolved
 
@@ -71,3 +73,27 @@ publication record was reviewed and marked ready without being merged here.
 - `git diff --check`: PASS.
 - Draft PR #83 Vercel and Vercel Preview Comments checks: PASS. No Preview URL
   or deployment identifier is retained in this record.
+
+## Final PR review
+
+- The complete eleven-path diff was reviewed after synchronizing with the
+  current `origin/main`; the only integration conflict was the changelog, and
+  both independent entries were preserved.
+- `src/lib/lead-form-config.ts` retains the existing URL validator, environment
+  selection and fail-closed branches. Only user-facing Production failure copy
+  changed. Missing evidence from the prior review remains applicable because
+  the source and public artifact tree are unchanged; fresh blank, malformed and
+  unsupported-HTTP Production-style builds also expose neither registration
+  action nor PDF fallback.
+- A fresh configured Production-style build and route smoke passed. Desktop and
+  exact 390 x 844 inspection reconfirmed the first-screen CTA, destination
+  focus/scroll, new-tab disclosure, static visual example, guide-ready thank-you
+  state, legal return navigation, all 19 table-of-contents destinations and no
+  horizontal overflow.
+- The approved consent sentence matches its repository sources exactly. Legal
+  dates, purposes, rights and substantive wording; robots and Analytics code;
+  provider destinations; and PDF bytes remain unchanged. No new collection,
+  tracking, sensitive value, provider-status claim, delivery guarantee,
+  multi-email sequence or rollout authorization was introduced.
+- Review outcome: **APPROVED FOR MERGE — NOT MERGED**, subject to the required
+  final PR checks passing on the pushed review HEAD.
