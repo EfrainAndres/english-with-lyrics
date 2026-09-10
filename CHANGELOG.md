@@ -6,6 +6,12 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Replaced website header and footer logos with the owner's supplied gradient
+  brand lockups: horizontal on larger screens and compact on mobile. Shared
+  responsive rendering preserves proportions and uses lightweight local WebP
+  assets. Existing ebook/PDF artwork, favicons, consent, provider configuration,
+  analytics and indexing are unchanged.
+
 - Verified that canonical Production serves the merged PR #83 source and that
   its ebook CTA, provider-transition notice, legal navigation, static example,
   thank-you footer, soft gate, robots behavior and PDF artifact pass desktop and
