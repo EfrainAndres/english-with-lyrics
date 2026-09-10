@@ -38,6 +38,23 @@ stretching. The home header can wrap on very narrow screens.
 
 ## Publication boundary
 
+## PR #85 final review
+
+- Implementation head `a0f7451`: full ten-path diff reviewed against current
+  main, with no blocking findings or unrelated changes.
+- Authenticated Vercel Preview: desktop home and exact 390 px home,
+  ebook and thank-you inspected. Header/footer artwork, intrinsic proportions,
+  legibility and navigation passed; mobile routes had no horizontal overflow.
+- Preview acquisition still has no direct PDF links; thank-you retains two.
+  No provider form was submitted. Preview-specific thank-you copy is expected.
+- Existing successful build/lint and four-width local regression evidence
+  remains applicable: review adds documentation only, not application changes.
+- The unauthenticated browser attempt reached Vercel SSO, not the website;
+  the authenticated session resolved that review-access limitation.
+- APPROVED FOR MERGE — NOT MERGED. Canonical verification remains post-merge.
+
+### Production status
+
 Production publication is pending merge and canonical deployment
 verification. No manual deployment or external operating-state change
 was performed. Existing ebook artwork, original brand assets and favicons
