@@ -54,19 +54,22 @@ translation. Metadata verification is not a playback test on every device.
 ## Publication and review status
 
 - Agent candidate structural/content/link/QR/visual QA: PASS.
-- Owner review of this candidate: PENDING.
-- Public replacement: NOT STARTED; unchanged filename reserved for later replacement.
-- Published/repository-public artifact SHA-256 remains
+- Owner review of this candidate: PASS, expressly confirmed in this task.
+  This does not invent a separate manual QR-scan or device-playback test.
+- Repository public replacement: STAGED at the unchanged filename.
+- Candidate and repository-public SHA-256:
+  `d640f06349d4c49ea20bed5b84d8e831d2ab41c9fb8fc4cac46b473d120f7563`.
+- The approved candidate was copied byte-for-byte, not regenerated.
+- Preview delivery verification: PENDING.
+- Canonical Production remains on the previous artifact until merge/deployment:
   `45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09`.
-- Candidate and public artifact are intentionally DIFFERENT until approval.
-- No public PDF replacement, Production deployment, MailerLite operation,
+- No canonical Production PDF replacement, manual deployment, MailerLite operation,
   form submission, email, workflow, website source, logo or indexing change.
 - Opening links in a new tab is controlled by the PDF viewer/device; no
   universal new-tab guarantee or PDF JavaScript was added.
 - Previous publication and manual-QR approvals remain historical evidence,
-  not owner approval of this revised PDF.
+  separate from this owner's explicit review approval.
 
-After owner review, stage the identical candidate at the existing public
-filename on this same branch, verify Preview delivery, then merge and confirm
-the canonical served hash. Preserve the previous published artifact in Git for
-rollback. Do not regenerate between owner approval and public replacement.
+Remaining: verify Preview delivery, then owner merge and canonical served-hash
+verification. The previous published artifact is preserved in Git at baseline
+`7f45a55` for rollback. Do not regenerate the approved PDF.

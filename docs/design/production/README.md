@@ -1,7 +1,8 @@
 # Production Source — Phase 0 Ebook
 
 This folder contains the production source and a revised channel-link PDF
-candidate. The published PDF has not yet been replaced.
+candidate, now approved by the owner and staged at the repository public path.
+The canonical Production PDF has not yet been replaced.
 
 ## Current revision: channel-only song links
 
@@ -11,8 +12,10 @@ QR assets already point to those same lessons and remain unchanged.
 
 - Candidate SHA-256: `d640f06349d4c49ea20bed5b84d8e831d2ab41c9fb8fc4cac46b473d120f7563`.
 - Candidate size: 1,315,226 bytes; 32 A5 pages; 16 annotations.
-- Public artifact: unchanged at `45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09`.
-- Owner review and public replacement: PENDING; no Production deployment.
+- Repository public artifact: byte-identical to the approved candidate.
+- Canonical Production: still the previous artifact until merge/deployment.
+- Owner review: PASS. Repository replacement: STAGED. Preview delivery: PENDING.
+- No manual Production deployment or provider change.
 - Current evidence: `../../validation/PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`.
 
 ## Historical publication record (previous artifact)

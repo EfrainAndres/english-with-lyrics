@@ -3,8 +3,9 @@
 ## Current revision notice
 
 The revised channel-only candidate is covered by
-`PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`; owner review/public replacement
-remain pending. All sections below describe the previous artifact and its
+`PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`; owner review is PASS and the
+byte-identical repository public replacement is STAGED. Preview delivery and
+canonical publication remain pending. All sections below describe the previous artifact and its
 historical approvals, not approval of the new candidate or current funnel state.
 
 ## 1. Active review subject
