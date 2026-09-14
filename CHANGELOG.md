@@ -10,8 +10,10 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
   first section is now the registration disclosure and its single provider
   action. Removed the redundant in-page hero/scroll CTA while preserving the
   external MailerLite action, new-tab notice, consent disclosure, unavailable
-  fail-closed state, PDF boundaries and provider configuration. The owner
-  approved the rendered journey for merge.
+  fail-closed state, PDF boundaries and provider configuration. The homepage
+  hero now presents the brand, offer and CTA without repeating the practice
+  card reserved for the later Demo section. The earlier journey review is
+  preserved; this visual refinement awaits Preview review.
 
 - Prepared a 32-page ebook candidate replacing the three secondary
   original-song video links with the matching Sing Pronunce Repeat channel

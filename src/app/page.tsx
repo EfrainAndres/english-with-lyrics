@@ -178,27 +178,27 @@ export default function Home() {
       </nav>
 
       <section id="top" className="bg-ink px-5 py-12 sm:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
+        <div className="mx-auto max-w-4xl text-center">
           <div>
             <p className="inline-flex rounded-full border border-purple/35 bg-purple/10 px-4 py-2 text-sm font-black text-purple">
               English with Lyrics
             </p>
-            <h1 className="mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
+            <h1 className="mx-auto mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
               Sing. Pronounce. Repeat.
             </h1>
-            <p className="mt-6 max-w-2xl text-xl leading-9 text-soft">
+            <p className="mx-auto mt-6 max-w-2xl text-xl leading-9 text-soft">
               Aprende inglés con tus canciones favoritas, pronunciación fácil y
               traducción natural.
             </p>
-            <p className="mt-4 max-w-2xl leading-7 text-soft">
+            <p className="mx-auto mt-4 max-w-2xl leading-7 text-soft">
               Sing Pronunce Repeat es el proyecto educativo; English with Lyrics
               es el nombre complementario de su propuesta para aprender con
               canciones.
             </p>
-            <p className="mt-4 max-w-xl text-lg font-black text-cream">
+            <p className="mx-auto mt-4 max-w-xl text-lg font-black text-cream">
               Con el método Escríbelo como suena.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
               {learningModes.map((mode) => (
                 <span
                   className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-black text-paper"
@@ -208,19 +208,17 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <CTAButton href={ebookPagePath}>Recibir guía gratis</CTAButton>
               <CTAButton href="#demo" variant="secondary">
                 Ver cómo funciona
               </CTAButton>
             </div>
-            <p className="mt-5 max-w-xl text-sm font-bold leading-6 text-soft">
+            <p className="mx-auto mt-5 max-w-xl text-sm font-bold leading-6 text-soft">
               Guía gratuita disponible — 3 canciones, 9 prácticas de
               pronunciación, ejercicios originales y reto de tres días.
             </p>
           </div>
-
-          <MicroLessonCard />
         </div>
       </section>
 

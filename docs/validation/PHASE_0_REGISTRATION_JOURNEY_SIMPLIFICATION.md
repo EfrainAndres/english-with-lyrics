@@ -44,5 +44,9 @@ legal copy, PDF bytes or rollout operation.
 - Technical review: PASS. The removed hero introduced no alternate provider
   action or acquisition-page PDF route; document heading structure remains
   valid.
-- PR #87: APPROVED FOR MERGE. Canonical Production remains unchanged until
-  merge and its normal deployment complete.
+- The subsequent visual refinement removes the duplicate practice card from the
+  homepage hero, centers its brand/offer/CTA content and reserves that card for
+  the Demo section. It does not alter the registration journey.
+- The visual refinement requires a new Preview review before PR #87 can be
+  approved for merge again. Canonical Production remains unchanged until merge
+  and its normal deployment complete.
