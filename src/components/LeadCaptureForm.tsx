@@ -25,12 +25,12 @@ export function LeadCaptureForm({ config }: { config: LeadFormConfig }) {
             <p className="text-sm font-bold uppercase text-pink">
               Guía gratuita para hispanohablantes
             </p>
-            <h2
+            <h1
               id="lead-capture-title"
               className="mt-3 font-heading text-3xl font-black sm:text-4xl"
             >
               Recibe la guía para practicar inglés con canciones
-            </h2>
+            </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-soft">
               Aprende con pronunciación escrita como suena, traducción natural,
               vocabulario y ejercicios sencillos.

@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BrandLogo } from "@/components/BrandLogo";
 import Link from "next/link";
-import { CTAButton } from "@/components/CTAButton";
 import { LeadCaptureForm } from "@/components/LeadCaptureForm";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getLeadFormConfig } from "@/lib/lead-form-config";
-import { ebookFileSizeKB, ebookPageCount } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Recibe tu guía gratis",
@@ -126,23 +124,8 @@ const faqItems = [
 ];
 
 
-function AudioBars() {
-  return (
-    <div className="flex h-12 items-end gap-1" aria-hidden="true">
-      {[24, 40, 18, 48, 28, 36, 22, 44, 30, 20, 34].map((height, index) => (
-        <span
-          className="w-2 rounded-full bg-cream"
-          key={`${height}-${index}`}
-          style={{ height }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export default function EbookGratisPage() {
   const leadFormConfig = getLeadFormConfig();
-  const isHandoffEnabled = leadFormConfig.status === "enabled";
 
   return (
     <main className="min-h-screen bg-ink text-paper">
@@ -163,75 +146,6 @@ export default function EbookGratisPage() {
           </Link>
         </div>
       </nav>
-
-      {/* ── Hero / CTA hierarchy ───────────────────────────────────────── */}
-      <section className="bg-ink px-5 py-12 sm:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.75fr]">
-          <div>
-            <p className="inline-flex rounded-full border border-purple/35 bg-purple/10 px-4 py-2 text-sm font-black text-purple">
-              Guía gratuita para hispanohablantes
-            </p>
-            <h1 className="mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
-              Aprende a entender y pronunciar inglés con canciones
-            </h1>
-            <p className="mt-6 max-w-2xl text-xl leading-9 text-soft">
-              Practica 9 frases cortas con significados naturales, vocabulario
-              útil y ejercicios originales. Escríbelo como suena usa letras
-              familiares para darte un punto de partida y acercarte al audio
-              real, sin IPA ni promesas de pronunciación perfecta.
-            </p>
-            {isHandoffEnabled ? (
-              <div className="mt-7 max-w-2xl">
-                <CTAButton
-                  className="w-full sm:w-fit"
-                  href="#recibir-guia"
-                >
-                  Recibir mi guía gratis
-                </CTAButton>
-                <p className="mt-3 text-sm font-bold leading-6 text-soft">
-                  Primero verás cómo usamos tus datos y después podrás abrir el
-                  formulario de registro.
-                </p>
-              </div>
-            ) : null}
-            <p className="mt-4 max-w-2xl text-lg font-black text-cream">
-              Escucha primero, usa la guía como puente y vuelve siempre a la
-              canción oficial.
-            </p>
-            <p className="mt-5 max-w-2xl text-sm font-bold leading-6 text-soft">
-              Regístrate en el formulario externo para recibir la guía por correo
-              y descargarla inmediatamente al finalizar. PDF · {ebookPageCount}
-              {" "}páginas · Español · Formato A5 · {ebookFileSizeKB} KB aprox.
-            </p>
-          </div>
-
-          <aside className="border border-pink/25 bg-panel p-6 shadow-neon">
-            <p className="text-sm font-black uppercase text-pink">
-              Incluye
-            </p>
-            <h2 className="mt-3 font-heading text-4xl font-black">
-              Escucha, repite, entiende
-            </h2>
-            <p className="mt-4 leading-8 text-soft">
-              3 canciones seleccionadas, 9 prácticas de pronunciación, vocabulario
-              útil y ejercicios para practicar en cualquier momento.
-            </p>
-            <div className="mt-6">
-              <AudioBars />
-            </div>
-            <div className="mt-6 grid gap-3">
-              {["Inglés", "Pronunciación", "Español"].map((item) => (
-                <div
-                  className="border border-white/10 bg-white/5 px-4 py-3 text-sm font-black text-soft"
-                  key={item}
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-          </aside>
-        </div>
-      </section>
 
       <LeadCaptureForm config={leadFormConfig} />
 
