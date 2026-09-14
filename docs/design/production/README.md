@@ -1,10 +1,28 @@
 # Production Source — Phase 0 Ebook
 
-This folder contains the approved production HTML/CSS source and the current
-production-PDF candidate for the Sing Pronunce Repeat / English with Lyrics
-Phase 0 ebook.
+This folder contains the production source and a revised channel-link PDF
+candidate. The published PDF has not yet been replaced.
 
-## Status
+## Current revision: channel-only song links
+
+The owner's replacement request changes the three secondary original-video
+links to their corresponding Sing Pronunce Repeat lessons. The existing song
+QR assets already point to those same lessons and remain unchanged.
+
+- Candidate SHA-256: `d640f06349d4c49ea20bed5b84d8e831d2ab41c9fb8fc4cac46b473d120f7563`.
+- Candidate size: 1,315,226 bytes; 32 A5 pages; 16 annotations.
+- Public artifact: unchanged at `45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09`.
+- Owner review and public replacement: PENDING; no Production deployment.
+- Current evidence: `../../validation/PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`.
+
+## Historical publication record (previous artifact)
+
+Everything below records the earlier publication and its then-current funnel
+state; it is not approval of this candidate or a current operational snapshot.
+The current candidate is described above. Later operating decisions, including
+the ongoing registration milestone, are outside this PDF-only revision.
+
+### Historical status
 
 ```text
 Approved HTML/CSS source: COMPLETE AND UNCHANGED

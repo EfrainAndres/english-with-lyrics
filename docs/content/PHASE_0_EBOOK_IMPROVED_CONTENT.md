@@ -2,6 +2,12 @@
 
 <!-- INTERNAL PRODUCTION STATUS — remove from published PDF -->
 
+<!-- Current channel-link revision: see
+docs/validation/PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md.
+The following original design-entry gate and 21-page publication statements
+are historical. They do not describe the current published 32-page artifact
+or approve the revised channel-only candidate. -->
+
 ```text
 Document role: improved 32-page content source
 Architecture: APPROVED
@@ -29,7 +35,7 @@ for the currently delivered 21-page direct-delivery PDF.
 - The nine approved English fragments are preserved unchanged (ATY-01/02/03,
   SLY-01/02/03, TR-01/02/03).
 - Pronunciation bridges follow docs/content/PHASE_0_EBOOK_PRONUNCIATION_STANDARD.md.
-- Verified educational-lesson links, secondary official listening references,
+- Verified educational-lesson links, secondary links to the same channel videos,
   the continuation destination, the survey and the canonical domain are
   recorded here for the approved link and QR phase.
 - Internal notes appear inside HTML comments and must never render as learner copy.
@@ -84,7 +90,7 @@ Esta es una guía corta para practicar inglés con canciones de una forma clara 
 
 **Incluye**
 
-- 3 canciones con enlaces oficiales de escucha.
+- 3 canciones con enlaces a las clases del canal.
 - 9 prácticas cortas de pronunciación y vocabulario.
 - Significados naturales en español y ejercicios para usar lo aprendido.
 
@@ -196,7 +202,7 @@ Los sonidos de apoyo son temporales y conviene reducirlos con el tiempo. Escucha
 
 Sigue estos cinco pasos con cada fragmento:
 
-1. **Escucha** — Oye la canción en su enlace oficial antes de leer. Solo escucha.
+1. **Escucha** — Abre la clase del canal antes de leer. Escucha el fragmento.
 2. **Lee la guía** — Revisa el fragmento, su pronunciación y su significado natural.
 3. **Comprende** — Fíjate en el vocabulario útil y en el ejemplo fuera de la canción.
 4. **Repite** — Dilo en voz alta usando Escríbelo como suena y compara con el audio oficial.
@@ -239,7 +245,7 @@ Al terminar las tres, harás un **reto de tres días** para repasar con calma y 
 
 <!-- Status: MODIFIED. Source: current page 4. Progress: "Canción 1 de 3 · 0%".
      Primary lesson link: https://www.youtube.com/watch?v=si9YeTd8z1E + matching QR.
-     Secondary official listening link: https://www.youtube.com/watch?v=rtOvBOTyX00. -->
+     Secondary channel link: https://www.youtube.com/watch?v=si9YeTd8z1E. -->
 
 [DESIGN: song divider + difficulty meter + link/QR]
 
@@ -256,7 +262,7 @@ Esta canción tiene un tempo lento y una pronunciación muy clara. Es una buena 
 
 → **Mira la clase completa con pronunciación y traducción:** `https://www.youtube.com/watch?v=si9YeTd8z1E`
 
-Escucha también la canción original: `https://www.youtube.com/watch?v=rtOvBOTyX00`
+Abrir el video del canal: `https://www.youtube.com/watch?v=si9YeTd8z1E`
 
 La clase te guía con pronunciación y traducción. El audio original sigue siendo la referencia final para escuchar y ajustar.
 
@@ -388,7 +394,7 @@ ______________________________
 
 <!-- Status: MODIFIED. Source: current page 9. Progress: "Canción 2 de 3 · 33% acumulado".
      Primary lesson link: https://www.youtube.com/watch?v=HetOzN4RtTY + matching QR.
-     Secondary official listening link: https://www.youtube.com/watch?v=7pOr3dBFAeY. -->
+     Secondary channel link: https://www.youtube.com/watch?v=HetOzN4RtTY. -->
 
 [DESIGN: song divider + difficulty meter + accent note + link/QR]
 
@@ -407,7 +413,7 @@ Un clásico del rock con partes lentas ideales para practicar. Tiene más energ�
 
 → **Mira la clase completa con pronunciación y traducción:** `https://www.youtube.com/watch?v=HetOzN4RtTY`
 
-Escucha también la canción original: `https://www.youtube.com/watch?v=7pOr3dBFAeY`
+Abrir el video del canal: `https://www.youtube.com/watch?v=HetOzN4RtTY`
 
 La clase te guía con pronunciación y traducción. El audio original sigue siendo la referencia final para escuchar y ajustar.
 
@@ -538,7 +544,7 @@ La clase te guía con pronunciación y traducción. El audio original sigue sien
 
 <!-- Status: MODIFIED. Source: current page 14. Progress: "Canción 3 de 3 · 66% acumulado".
      Primary lesson link: https://www.youtube.com/watch?v=OYJRuJ18_Rg + matching QR.
-     Secondary official listening link: https://www.youtube.com/watch?v=fV4DiAyExN0. -->
+     Secondary channel link: https://www.youtube.com/watch?v=OYJRuJ18_Rg. -->
 
 [DESIGN: song divider + difficulty meter + link/QR]
 
@@ -555,7 +561,7 @@ Esta canción tiene una pronunciación del inglés americano muy clara y un ritm
 
 → **Mira la clase completa con pronunciación y traducción:** `https://www.youtube.com/watch?v=OYJRuJ18_Rg`
 
-Escucha también la canción original: `https://www.youtube.com/watch?v=fV4DiAyExN0`
+Abrir el video del canal: `https://www.youtube.com/watch?v=OYJRuJ18_Rg`
 
 La clase te guía con pronunciación y traducción. El audio original sigue siendo la referencia final para escuchar y ajustar.
 
@@ -754,7 +760,7 @@ Primero intenta recordar cada expresión **sin mirar** las páginas anteriores. 
 
 *Tiempo estimado: 10 a 15 minutos.*
 
-1. Escucha cada una de las tres canciones en su enlace oficial (páginas 7, 12 y 17).
+1. Escucha los fragmentos de las tres canciones en las clases del canal (páginas 7, 12 y 17).
 2. Mientras escuchas, identifica los fragmentos que practicaste.
 3. Después, vuelve a leer los significados naturales de cada fragmento.
 4. Anota un sonido que todavía te resulte difícil.

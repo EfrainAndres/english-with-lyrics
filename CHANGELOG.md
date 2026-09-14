@@ -6,6 +6,13 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Prepared a 32-page ebook candidate replacing the three secondary
+  original-song video links with the matching Sing Pronunce Repeat channel
+  lessons. Updated related learner navigation wording and the exporter's
+  exact destination inventory; all five QR assets already target the correct
+  destinations and remain unchanged. Public PDF replacement and owner review
+  are pending; no website, provider, email or Production configuration changed.
+
 - Replaced website header and footer logos with the owner's supplied gradient
   brand lockups: horizontal on larger screens and compact on mobile. Shared
   responsive rendering preserves proportions and uses lightweight local WebP

@@ -1,5 +1,13 @@
 # Phase 0 Ebook Link and QR Verification
 
+## Current revision notice
+
+The channel-only replacement candidate is reviewed in
+`PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`. Its three secondary song links
+now target the matching lessons; all five QR assets and payloads are unchanged.
+The following inventory and approval records are historical for the previous
+artifact, which remains published until the replacement is approved.
+
 ## 1. Scope
 
 This record verifies the approved external destinations for the improved 32-page ebook, records deterministic QR source assets, preserves the completed source-asset scan gate, and records the generated PDF candidate handoff. Song QR codes open the matching Sing Pronunce Repeat educational lessons; original official videos remain secondary listening references. It does not authorize public PDF replacement or change Production configuration.
