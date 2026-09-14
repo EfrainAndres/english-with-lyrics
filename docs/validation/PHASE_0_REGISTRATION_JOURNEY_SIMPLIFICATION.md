@@ -44,9 +44,11 @@ legal copy, PDF bytes or rollout operation.
 - Technical review: PASS. The removed hero introduced no alternate provider
   action or acquisition-page PDF route; document heading structure remains
   valid.
-- The subsequent visual refinement removes the duplicate practice card from the
-  homepage hero, centers its brand/offer/CTA content and reserves that card for
-  the Demo section. It does not alter the registration journey.
+- The subsequent visual refinement retains the practice card in the homepage
+  hero, where it provides the visual anchor for the offer. Demo instead
+  presents the three learning steps in an editorial sequence, and the former
+  second three-step section is removed to avoid repeating the same explanation.
+  It does not alter the registration journey.
 - The visual refinement requires a new Preview review before PR #87 can be
   approved for merge again. Canonical Production remains unchanged until merge
   and its normal deployment complete.

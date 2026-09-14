@@ -178,27 +178,27 @@ export default function Home() {
       </nav>
 
       <section id="top" className="bg-ink px-5 py-12 sm:px-8 lg:py-20">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="inline-flex rounded-full border border-purple/35 bg-purple/10 px-4 py-2 text-sm font-black text-purple">
               English with Lyrics
             </p>
-            <h1 className="mx-auto mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 max-w-4xl font-heading text-5xl font-black leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
               Sing. Pronounce. Repeat.
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-xl leading-9 text-soft">
+            <p className="mt-6 max-w-2xl text-xl leading-9 text-soft">
               Aprende inglés con tus canciones favoritas, pronunciación fácil y
               traducción natural.
             </p>
-            <p className="mx-auto mt-4 max-w-2xl leading-7 text-soft">
+            <p className="mt-4 max-w-2xl leading-7 text-soft">
               Sing Pronunce Repeat es el proyecto educativo; English with Lyrics
               es el nombre complementario de su propuesta para aprender con
               canciones.
             </p>
-            <p className="mx-auto mt-4 max-w-xl text-lg font-black text-cream">
+            <p className="mt-4 max-w-xl text-lg font-black text-cream">
               Con el método Escríbelo como suena.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               {learningModes.map((mode) => (
                 <span
                   className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-black text-paper"
@@ -208,17 +208,19 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CTAButton href={ebookPagePath}>Recibir guía gratis</CTAButton>
               <CTAButton href="#demo" variant="secondary">
                 Ver cómo funciona
               </CTAButton>
             </div>
-            <p className="mx-auto mt-5 max-w-xl text-sm font-bold leading-6 text-soft">
+            <p className="mt-5 max-w-xl text-sm font-bold leading-6 text-soft">
               Guía gratuita disponible — 3 canciones, 9 prácticas de
               pronunciación, ejercicios originales y reto de tres días.
             </p>
           </div>
+
+          <MicroLessonCard />
         </div>
       </section>
 
@@ -228,7 +230,7 @@ export default function Home() {
         title="Una frase pequeña puede desbloquear mejor la escucha."
         intro="Así se organiza una práctica: ves la frase, una guía sencilla de pronunciación y la traducción natural antes de comparar con el audio oficial."
       >
-        <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="border-l-4 border-pink bg-white/5 p-6">
             <p className="font-heading text-3xl font-black">
               Lees una frase. Convertimos el sonido en una guía simple. Luego
@@ -239,7 +241,24 @@ export default function Home() {
               reemplazar letras completas ni plataformas oficiales de música.
             </p>
           </div>
-          <MicroLessonCard />
+          <ol className="divide-y divide-white/10 border-y border-white/10">
+            {lessonSteps.map((step, index) => (
+              <li className="flex gap-5 py-5 first:pt-0 last:pb-0" key={step.title}>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple text-sm font-black text-ink">
+                  {index + 1}
+                </span>
+                <div>
+                  <p className="text-sm font-black uppercase text-pink">
+                    {step.label}
+                  </p>
+                  <h3 className="mt-1 font-heading text-2xl font-black">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 leading-7 text-soft">{step.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </Section>
 
@@ -257,31 +276,6 @@ export default function Home() {
                 {benefit.title}
               </h3>
               <p className="mt-4 leading-8 text-soft">{benefit.text}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        title="Cómo funciona en 3 pasos"
-        intro="Cada práctica sigue tres pasos sencillos para que escuches, repitas y entiendas una frase corta."
-      >
-        <div className="grid gap-5 md:grid-cols-3">
-          {lessonSteps.map((step, index) => (
-            <article
-              className="relative border border-white/10 bg-white/5 p-6"
-              key={step.title}
-            >
-              <p className="flex h-10 w-10 items-center justify-center rounded-full bg-purple text-sm font-black text-ink">
-                {index + 1}
-              </p>
-              <p className="mt-6 text-sm font-black uppercase text-pink">
-                {step.label}
-              </p>
-              <h3 className="mt-2 font-heading text-2xl font-black">
-                {step.title}
-              </h3>
-              <p className="mt-4 leading-8 text-soft">{step.text}</p>
             </article>
           ))}
         </div>
