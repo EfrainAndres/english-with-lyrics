@@ -52,6 +52,10 @@ legal copy, PDF bytes or rollout operation.
 - Public guide instructions now distinguish the channel classes linked inside
   the PDF from official sources for complete songs. This is copy alignment only:
   the approved PDF, its links and QR inventory remain unchanged.
-- The visual refinement requires a new Preview review before PR #87 can be
-  approved for merge again. Canonical Production remains unchanged until merge
-  and its normal deployment complete.
+- Owner Preview review: PASS. The Hero retains its visual anchor, while Demo
+  has one distinct editorial explanation of the method.
+- Technical review: PASS. There is one homepage practice card, one three-step
+  explanation, no new provider or PDF action, and no change to the registration
+  route.
+- PR #88: APPROVED FOR MERGE. Canonical Production remains unchanged until
+  merge and its normal deployment complete.

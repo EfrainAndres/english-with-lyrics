@@ -13,7 +13,7 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
   fail-closed state, PDF boundaries and provider configuration. The homepage
   hero retains its original practice-card visual while Demo now explains the
   three learning steps without repeating that card. The earlier journey review
-  is preserved; this visual refinement awaits Preview review.
+  is preserved; the owner approved this visual refinement for merge.
 
 - Aligned public ebook guidance with the approved PDF destinations: the guide
   links to the project's channel classes, while complete songs remain available
