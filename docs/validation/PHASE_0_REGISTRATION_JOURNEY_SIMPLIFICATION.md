@@ -36,3 +36,13 @@ introductory hero and its scroll-only CTA were removed.
 This is a conversion-navigation refinement only. It does not change MailerLite,
 Vercel configuration, deployment state, workflow, Email 1, consent decisions,
 legal copy, PDF bytes or rollout operation.
+
+## Final review
+
+- Owner rendered review: PASS. The approved journey is `/` to
+  `/ebook-gratis`, followed by the single provider-hosted registration action.
+- Technical review: PASS. The removed hero introduced no alternate provider
+  action or acquisition-page PDF route; document heading structure remains
+  valid.
+- PR #87: APPROVED FOR MERGE. Canonical Production remains unchanged until
+  merge and its normal deployment complete.
