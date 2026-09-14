@@ -6,11 +6,11 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
-- Simplified the homepage-to-registration journey: every primary homepage
-  `Recibir guía gratis` action now lands directly on the existing
-  `/ebook-gratis#recibir-guia` disclosure and provider-action section. The
+- Simplified the registration journey: homepage CTAs open `/ebook-gratis`, whose
+  first section is now the registration disclosure and its single provider
+  action. Removed the redundant in-page hero/scroll CTA while preserving the
   external MailerLite action, new-tab notice, consent disclosure, unavailable
-  fail-closed state, PDF boundaries and provider configuration remain unchanged.
+  fail-closed state, PDF boundaries and provider configuration.
 
 - Prepared a 32-page ebook candidate replacing the three secondary
   original-song video links with the matching Sing Pronunce Repeat channel

@@ -2,15 +2,15 @@
 
 ## Goal
 
-Remove the homepage visitor's redundant in-page CTA step without bypassing the
-existing provider disclosure or consent context.
+Remove the redundant in-page CTA step without bypassing the existing provider
+disclosure or consent context.
 
 ## Change
 
-All primary `Recibir guía gratis` actions on `/` now use
-`/ebook-gratis#recibir-guia`. A visitor arriving from the homepage lands
-directly at the existing registration disclosure section, where the single
-provider-hosted `Recibir mi guía gratis` action remains available.
+Primary `Recibir guía gratis` actions on `/` open `/ebook-gratis`. The page now
+starts with the registration disclosure section, where the single
+provider-hosted `Recibir mi guía gratis` action remains available. The former
+introductory hero and its scroll-only CTA were removed.
 
 ## Preserved behavior
 
@@ -25,8 +25,9 @@ provider-hosted `Recibir mi guía gratis` action remains available.
 
 ## Validation
 
-- Homepage CTA destinations resolve to the registration-section fragment.
-- Keyboard navigation and fragment focus retain the existing section behavior.
+- Homepage CTA destinations resolve to `/ebook-gratis` without a fragment.
+- The registration page retains one document H1 and one provider action when
+  the handoff is enabled.
 - Desktop and 390 px containment are reviewed with no horizontal overflow.
 - Lint, production build and `git diff --check` pass before review.
 

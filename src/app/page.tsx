@@ -4,8 +4,6 @@ import { Section } from "@/components/Section";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ebookPagePath } from "@/lib/links";
 
-const ebookRegistrationPath = `${ebookPagePath}#recibir-guia`;
-
 const benefits = [
   {
     title: "Pronunciación sin símbolos raros",
@@ -171,7 +169,7 @@ export default function Home() {
             </div>
             <a
               className="inline-flex min-h-10 items-center rounded-md bg-pink px-4 text-sm font-black text-ink transition hover:bg-cream hover:text-ink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
-              href={ebookRegistrationPath}
+              href={ebookPagePath}
             >
               Recibir guía gratis
             </a>
@@ -211,9 +209,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton href={ebookRegistrationPath}>
-                Recibir guía gratis
-              </CTAButton>
+              <CTAButton href={ebookPagePath}>Recibir guía gratis</CTAButton>
               <CTAButton href="#demo" variant="secondary">
                 Ver cómo funciona
               </CTAButton>
@@ -340,7 +336,7 @@ export default function Home() {
             ))}
             <CTAButton
               className="mt-2 w-full sm:w-fit"
-              href={ebookRegistrationPath}
+              href={ebookPagePath}
               variant="light"
             >
               Recibir guía gratis
