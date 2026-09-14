@@ -6,6 +6,12 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
 
 ### Changed
 
+- Simplified the homepage-to-registration journey: every primary homepage
+  `Recibir guía gratis` action now lands directly on the existing
+  `/ebook-gratis#recibir-guia` disclosure and provider-action section. The
+  external MailerLite action, new-tab notice, consent disclosure, unavailable
+  fail-closed state, PDF boundaries and provider configuration remain unchanged.
+
 - Prepared a 32-page ebook candidate replacing the three secondary
   original-song video links with the matching Sing Pronunce Repeat channel
   lessons. Updated related learner navigation wording and the exporter's
