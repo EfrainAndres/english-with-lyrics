@@ -49,6 +49,9 @@ legal copy, PDF bytes or rollout operation.
   presents the three learning steps in an editorial sequence, and the former
   second three-step section is removed to avoid repeating the same explanation.
   It does not alter the registration journey.
+- Public guide instructions now distinguish the channel classes linked inside
+  the PDF from official sources for complete songs. This is copy alignment only:
+  the approved PDF, its links and QR inventory remain unchanged.
 - The visual refinement requires a new Preview review before PR #87 can be
   approved for merge again. Canonical Production remains unchanged until merge
   and its normal deployment complete.

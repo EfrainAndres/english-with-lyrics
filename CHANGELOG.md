@@ -15,6 +15,11 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
   three learning steps without repeating that card. The earlier journey review
   is preserved; this visual refinement awaits Preview review.
 
+- Aligned public ebook guidance with the approved PDF destinations: the guide
+  links to the project's channel classes, while complete songs remain available
+  from their official sources. PDF bytes and its destination inventory are
+  unchanged.
+
 - Prepared a 32-page ebook candidate replacing the three secondary
   original-song video links with the matching Sing Pronunce Repeat channel
   lessons. Updated related learner navigation wording and the exporter's
