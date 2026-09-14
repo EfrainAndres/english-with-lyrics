@@ -1,5 +1,13 @@
 # Phase 0 Ebook Production-PDF QA
 
+## Current revision notice
+
+The revised channel-only candidate is covered by
+`PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`; owner review is PASS and the
+byte-identical repository public replacement and Preview delivery are PASS.
+Canonical publication remains post-merge. All sections below describe the previous artifact and its
+historical approvals, not approval of the new candidate or current funnel state.
+
 ## 1. Active review subject
 
 This record covers the approved 32-page production-PDF candidate through its

@@ -183,9 +183,6 @@ required_values = [
     'https://www.youtube.com/watch?v=si9YeTd8z1E',
     'https://www.youtube.com/watch?v=HetOzN4RtTY',
     'https://www.youtube.com/watch?v=OYJRuJ18_Rg',
-    'https://www.youtube.com/watch?v=rtOvBOTyX00',
-    'https://www.youtube.com/watch?v=7pOr3dBFAeY',
-    'https://www.youtube.com/watch?v=fV4DiAyExN0',
     'https://tally.so/r/D4a6NE',
     'https://tally.so/r/eqzgbe',
     'https://singpronuncerepeat.com/privacidad',
@@ -201,6 +198,9 @@ if missing:
     raise SystemExit(f'HTML preflight failed — missing approved values: {missing}')
 
 for forbidden in (
+    'rtOvBOTyX00',
+    '7pOr3dBFAeY',
+    'fV4DiAyExN0',
     '{{',
     '[DESIGN:',
     'INTERNAL:',
@@ -412,12 +412,9 @@ def normalize(uri):
 
 uri_values = [normalize(uri) for uri in uri_values]
 expected_uris = Counter({
-    'https://www.youtube.com/watch?v=si9YeTd8z1E': 2,
-    'https://www.youtube.com/watch?v=HetOzN4RtTY': 2,
-    'https://www.youtube.com/watch?v=OYJRuJ18_Rg': 2,
-    'https://www.youtube.com/watch?v=rtOvBOTyX00': 1,
-    'https://www.youtube.com/watch?v=7pOr3dBFAeY': 1,
-    'https://www.youtube.com/watch?v=fV4DiAyExN0': 1,
+    'https://www.youtube.com/watch?v=si9YeTd8z1E': 3,
+    'https://www.youtube.com/watch?v=HetOzN4RtTY': 3,
+    'https://www.youtube.com/watch?v=OYJRuJ18_Rg': 3,
     'https://tally.so/r/D4a6NE': 2,
     'https://tally.so/r/eqzgbe': 2,
     'https://singpronuncerepeat.com/privacidad': 2,
