@@ -11,8 +11,8 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
   lessons. Updated related learner navigation wording and the exporter's
   exact destination inventory; all five QR assets already target the correct
   destinations and remain unchanged. The owner approved the revised candidate;
-  its byte-identical public replacement is staged on the same branch pending
-  Preview verification and merge. No website source, provider, email or
+  its byte-identical repository and Preview public replacement passed delivery
+  verification and is approved for merge. No website source, provider, email or
   Production configuration changed.
 
 - Replaced website header and footer logos with the owner's supplied gradient

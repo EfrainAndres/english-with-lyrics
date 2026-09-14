@@ -6,8 +6,9 @@ The channel-only replacement candidate is reviewed in
 `PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`. Its three secondary song links
 now target the matching lessons; all five QR assets and payloads are unchanged.
 The owner has approved the revised candidate, now staged at the repository
-public path. The following inventory and approval records are historical for
-the previous artifact, which remains in Production until merge/deployment.
+public path, with Preview delivery verified. The following inventory and
+approval records are historical for the previous artifact, which remains in
+Production until merge/deployment.
 
 ## 1. Scope
 

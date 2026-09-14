@@ -60,7 +60,13 @@ translation. Metadata verification is not a playback test on every device.
 - Candidate and repository-public SHA-256:
   `d640f06349d4c49ea20bed5b84d8e831d2ab41c9fb8fc4cac46b473d120f7563`.
 - The approved candidate was copied byte-for-byte, not regenerated.
-- Preview delivery verification: PENDING.
+- Preview delivery verification: PASS. The protected Preview served the stable
+  public filename as `application/pdf`, 1,315,226 bytes, with the exact
+  candidate/repository SHA-256 above; its PDF metadata and 32 A5-page
+  structure also match.
+- Owner approved the rendered candidate after review.
+- Preview route review: PASS for the thank-you PDF actions; no form was
+  submitted and no provider state changed.
 - Canonical Production remains on the previous artifact until merge/deployment:
   `45c909c44482d3062126ac7fcf1e214e2433bd8ad542fe038c45bc8ea971fd09`.
 - No canonical Production PDF replacement, manual deployment, MailerLite operation,
@@ -70,6 +76,6 @@ translation. Metadata verification is not a playback test on every device.
 - Previous publication and manual-QR approvals remain historical evidence,
   separate from this owner's explicit review approval.
 
-Remaining: verify Preview delivery, then owner merge and canonical served-hash
+PR #86: APPROVED FOR MERGE. Remaining: owner merge and canonical served-hash
 verification. The previous published artifact is preserved in Git at baseline
 `7f45a55` for rollback. Do not regenerate the approved PDF.

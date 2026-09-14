@@ -14,7 +14,8 @@ QR assets already point to those same lessons and remain unchanged.
 - Candidate size: 1,315,226 bytes; 32 A5 pages; 16 annotations.
 - Repository public artifact: byte-identical to the approved candidate.
 - Canonical Production: still the previous artifact until merge/deployment.
-- Owner review: PASS. Repository replacement: STAGED. Preview delivery: PENDING.
+- Owner review: PASS. Repository replacement and Preview delivery: PASS.
+- PR #86 is approved for merge; canonical publication remains post-merge.
 - No manual Production deployment or provider change.
 - Current evidence: `../../validation/PHASE_0_EBOOK_CHANNEL_LINK_REPLACEMENT.md`.
 
