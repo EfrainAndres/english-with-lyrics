@@ -1,27 +1,9 @@
-import Image from "next/image";
+import { BrandLogo } from "@/components/BrandLogo";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LegalSection } from "@/lib/legal-content";
 import { ebookPagePath } from "@/lib/links";
 
-function BrandLogo({
-  className = "",
-  height = "4.5rem",
-}: {
-  className?: string;
-  height?: string;
-}) {
-  return (
-    <Image
-      alt="Sing Pronunce Repeat / English with Lyrics logo"
-      className={className}
-      height={515}
-      src="/brand/logo-claro.svg"
-      style={{ height, width: "auto" }}
-      width={401}
-    />
-  );
-}
 
 type LegalPageLayoutProps = {
   eyebrow: string;
@@ -46,7 +28,7 @@ export function LegalPageLayout({
             className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
             href="/"
           >
-            <BrandLogo className="shrink-0" height="clamp(3.25rem, 6vw, 5rem)" />
+            <BrandLogo priority />
           </Link>
           <Link
             className="text-sm font-black text-cream transition hover:text-pink focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
@@ -111,8 +93,8 @@ export function LegalPageLayout({
 
       <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
-            <BrandLogo className="shrink-0" height="4rem" />
+          <div className="flex flex-wrap items-center gap-4">
+            <BrandLogo />
             <p className="text-sm text-soft">Método Escríbelo como suena.</p>
           </div>
           <div className="flex items-center gap-4 text-sm font-black">

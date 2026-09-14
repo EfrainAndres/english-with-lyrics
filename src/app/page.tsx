@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { BrandLogo } from "@/components/BrandLogo";
 import { CTAButton } from "@/components/CTAButton";
 import { Section } from "@/components/Section";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -78,24 +78,6 @@ function AudioBars() {
   );
 }
 
-function BrandLogo({
-  className = "",
-  height = "4rem",
-}: {
-  className?: string;
-  height?: string;
-}) {
-  return (
-    <Image
-      alt="Sing Pronunce Repeat / English with Lyrics logo"
-      className={className}
-      height={515}
-      src="/brand/logo-claro.svg"
-      style={{ height, width: "auto" }}
-      width={401}
-    />
-  );
-}
 
 function MicroLessonCard() {
   return (
@@ -166,23 +148,12 @@ export default function Home() {
   return (
     <main>
       <nav className="sticky top-0 z-20 border-b border-white/15 bg-ink px-5 py-2 shadow-[0_1px_0_rgba(255,255,255,0.04)] sm:px-8">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 sm:flex-nowrap">
           <a
             className="flex shrink-0 items-center gap-3 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-ink"
             href="#top"
           >
-            <BrandLogo
-              className="shrink-0"
-              height="clamp(3.5rem, 7vw, 5.5rem)"
-            />
-            <span className="hidden lg:block">
-              <span className="block font-heading text-xl font-black leading-5 text-paper">
-                Sing Pronunce Repeat
-              </span>
-              <span className="mt-1 block text-xs font-bold uppercase text-soft">
-                English with Lyrics
-              </span>
-            </span>
+            <BrandLogo priority />
           </a>
           <div className="flex items-center gap-3">
             <div className="hidden items-center gap-5 text-sm font-bold text-soft md:flex">

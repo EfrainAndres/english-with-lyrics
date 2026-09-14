@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 import {
   dataProcessingPath,
   ebookPagePath,
@@ -20,9 +21,7 @@ export function SiteFooter({
     <footer className="bg-ink px-5 py-8 text-paper sm:px-8">
       <div className="mx-auto grid max-w-6xl gap-6 border-t border-white/10 pt-7 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
         <div className="min-w-0">
-          <p className="font-heading text-xl font-black">
-            Sing Pronunce Repeat
-          </p>
+          <BrandLogo />
           <p className="mt-1 text-sm text-soft">
             English with Lyrics es el nombre complementario de esta propuesta
             educativa. Método: Escríbelo como suena.
