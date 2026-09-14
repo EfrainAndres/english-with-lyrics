@@ -44,5 +44,18 @@ legal copy, PDF bytes or rollout operation.
 - Technical review: PASS. The removed hero introduced no alternate provider
   action or acquisition-page PDF route; document heading structure remains
   valid.
-- PR #87: APPROVED FOR MERGE. Canonical Production remains unchanged until
+- The subsequent visual refinement retains the practice card in the homepage
+  hero, where it provides the visual anchor for the offer. Demo instead
+  presents the three learning steps in an editorial sequence, and the former
+  second three-step section is removed to avoid repeating the same explanation.
+  It does not alter the registration journey.
+- Public guide instructions now distinguish the channel classes linked inside
+  the PDF from official sources for complete songs. This is copy alignment only:
+  the approved PDF, its links and QR inventory remain unchanged.
+- Owner Preview review: PASS. The Hero retains its visual anchor, while Demo
+  has one distinct editorial explanation of the method.
+- Technical review: PASS. There is one homepage practice card, one three-step
+  explanation, no new provider or PDF action, and no change to the registration
+  route.
+- PR #88: APPROVED FOR MERGE. Canonical Production remains unchanged until
   merge and its normal deployment complete.

@@ -53,7 +53,7 @@ const contentItems = [
 
 const howToUse = [
   "Descarga la guía y ábrela en cualquier dispositivo.",
-  "Abre los enlaces oficiales de cada canción dentro de la guía.",
+  "Abre las clases del canal enlazadas dentro de la guía.",
   "Escucha el fragmento, lee la guía y repítelo en voz alta.",
   "Completa los ejercicios escritos y el reto de tres días.",
   "Vuelve a las prácticas que más te cuesten y compáralas con el audio oficial.",
@@ -95,7 +95,7 @@ const faqItems = [
   {
     question: "¿La guía incluye las letras completas?",
     answer:
-      "No. Usa únicamente fragmentos educativos cortos, explicaciones originales y enlaces a las fuentes oficiales. No sustituye una plataforma de letras o música.",
+      "No. Usa únicamente fragmentos educativos cortos, explicaciones originales y enlaces a las clases del canal. Para escuchar una canción completa, usa su fuente oficial. La guía no sustituye una plataforma de letras o música.",
   },
   {
     question: "¿Para qué nivel está pensada?",
@@ -119,7 +119,7 @@ const faqItems = [
   {
     question: "¿Qué significa Escríbelo como suena?",
     answer:
-      "Es una guía de lectura con letras familiares para hispanohablantes. Sirve como puente hacia el audio real: no usa IPA, no pretende ser exacta o perfecta y siempre debe compararse con la canción oficial.",
+      "Es una guía de lectura con letras familiares para hispanohablantes. Sirve como puente hacia el audio real: no usa IPA, no pretende ser exacta o perfecta y siempre debe compararse con la canción completa en su fuente oficial.",
   },
 ];
 
