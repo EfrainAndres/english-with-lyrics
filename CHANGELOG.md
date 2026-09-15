@@ -20,6 +20,11 @@ All notable changes to Sing Pronunce Repeat / English with Lyrics will be docume
   from their official sources. PDF bytes and its destination inventory are
   unchanged.
 
+- Corrected the remaining ebook content-note wording found during post-merge
+  verification, so it also distinguishes channel classes from complete songs'
+  official sources. The owner approved the wording for merge. No PDF, provider
+  or route behavior changed.
+
 - Prepared a 32-page ebook candidate replacing the three secondary
   original-song video links with the matching Sing Pronunce Repeat channel
   lessons. Updated related learner navigation wording and the exporter's

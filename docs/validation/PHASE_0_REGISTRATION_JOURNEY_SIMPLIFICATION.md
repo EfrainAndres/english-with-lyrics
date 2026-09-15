@@ -59,3 +59,11 @@ legal copy, PDF bytes or rollout operation.
   route.
 - PR #88: APPROVED FOR MERGE. Canonical Production remains unchanged until
   merge and its normal deployment complete.
+- Post-merge verification found one residual sentence in the legal content note
+  that still described official sources as the PDF's linked destinations. The
+  minimal follow-up corrects that wording only.
+- Owner Preview review: PASS. The corrected note distinguishes channel classes
+  from official complete-song sources without changing the surrounding legal
+  boundary.
+- PR #89: APPROVED FOR MERGE. Canonical Production remains unchanged until
+  merge and its normal deployment complete.

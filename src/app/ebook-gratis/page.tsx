@@ -326,8 +326,9 @@ export default function EbookGratisPage() {
           <p className="mt-3 leading-7 text-soft">
             Esta guía usa fragmentos educativos cortos y explicaciones propias.
             No reproduce letras completas ni reemplaza plataformas oficiales de
-            música o video. Escucha cada canción a través de las fuentes
-            oficiales enlazadas dentro de la guía.
+            música o video. Las clases del canal enlazadas dentro de la guía
+            sirven para practicar; para escuchar una canción completa, usa su
+            fuente oficial.
           </p>
         </div>
       </section>
